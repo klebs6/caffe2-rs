@@ -1,0 +1,12 @@
+#!/usr/bin/env raku
+use v6;
+use Data::Dump::Tree;
+use JSON::Infer;
+
+my $in = qqx/make json --quiet/;
+
+my $obj = JSON::Infer.new();
+
+my $ret = $obj.infer(json => $in, class-name => 'Cargo::Build');
+
+say $ret.make-class; # Print the class definition

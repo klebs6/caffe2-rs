@@ -1,0 +1,160 @@
+#!/usr/bin/env raku
+
+use rust-crate-parse;
+use file-sort-uniq;
+use grust-use-declaration-grammar;
+use grust-crate-grammar;
+use cargo-workspace;
+use Config::TOML;
+use JSON::Fast;
+use caffe-workspace;
+use Data::Dump::Tree;
+
+sub get-use-statement-leafs(@files) {
+
+    my @use-declarations = @files>>.&get-use-declarations-for-file;
+
+    @use-declarations.map({
+        |$_.get-concrete-leafs()
+    })
+    ==> sort()
+    ==> unique()
+}
+
+sub check-for-leaf-declaration(:$file, :$leaf) returns Bool {
+
+    my @item-names = get-naked-crate-items-for-file($file)>>.maybe-item-name;
+
+    $leaf (elem) @item-names.Set
+}
+
+sub find-leaf-home(:$leaf-crate, :$leaf) {
+
+    my @crates = get-caffe-crates().grep: {
+        $_ !~~ $leaf-crate
+    };
+
+    my @homes = gather for @crates -> $crate {
+
+        for get-crate-files($crate) -> $file {
+
+            if check-for-leaf-declaration(:$file, :$leaf) {
+                take $crate.Str;
+            }
+        }
+    }.sort.unique;
+
+    die if not @homes.elems eq 1;
+
+    @homes[0]
+}
+
+sub debug($s) {
+
+    if True {
+        say $s;
+    }
+}
+
+sub get-declarations-for-crate($crate) {
+
+    my @files = get-crate-files($crate);
+
+    my @decls = do for @files -> $file {
+
+        my @crate-snippets = split-into-crate-snippets(:$file).map({
+
+            Crate::Grammar.parse($_)
+
+        }).grep: {
+            $_ !~~ Nil
+        };
+
+        my @items = do for @crate-snippets -> $snippet {
+            my $parsed   = Crate::Grammar.parse($snippet, actions => Crate::Grammar::Actions.new);
+            my $made     = $parsed.made;
+            my @variants = $made.crate-items>>.item-variant;
+            |@variants
+        };
+
+        |@items>>.maybe-item-name.grep: { $_ !~~ Nil }
+    };
+
+    say "crate: $crate";
+    ddt @decls;
+
+    @decls
+}
+
+sub create-declaration-map(@crates, Str :$mapfile, Str :$done-crates-file) {
+
+    my Set $done-crates = uniq-from-file(file => $done-crates-file);
+
+    for @crates.grep: { not $_ (elem) $done-crates } -> $crate {
+
+        my Pair $mapping 
+        = $crate => get-declarations-for-crate($crate);
+
+        $mapfile.IO.spurt: "\n" ~ to-json($mapping), :append;
+
+        $done-crates-file.IO.spurt: "\n" ~ $crate, :append;
+    }
+}
+
+sub get-dependencies(@leafs, @decl-map) {
+
+    gather for @leafs -> $leaf {
+        for @decl-map {
+            my $crate = $_.keys[0];
+            my @decls = $_{$crate}.List;
+            if $leaf (elem) @decls.Set {
+                take $crate;
+            }
+        }
+    }.sort.unique
+}
+
+sub MAIN {
+
+    my @crates  = get-caffe-crates();
+
+    my $mapfile          = "declaration-map.txt";
+
+    my $done-crates-file = "done-crate-names.txt";
+
+    if False {
+        create-declaration-map(
+            @crates, 
+            :$mapfile, 
+            :$done-crates-file
+        );
+    }
+
+    my @decl-map = from-json($mapfile.IO.slurp);
+
+    for @crates -> $crate {
+
+        my @files = get-crate-files($crate);
+
+        my @leafs = get-use-statement-leafs(@files);
+
+        my @deps 
+        = get-dependencies(@leafs, @decl-map)
+        .grep: { $_ !~~ $crate };
+
+        say "-------------";
+        say $crate;
+        ddt @deps;
+
+        for @deps -> $dep {
+
+            say "writing neighbor dependency between $crate, and $dep";
+
+            add-neighbor-dependency(
+                src   => $dep, 
+                dst   => $crate, 
+                write => True,
+            );
+        }
+    }
+}

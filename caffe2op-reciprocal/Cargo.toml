@@ -1,0 +1,10 @@
+[dependencies.caffe2-context]
+path = "../caffe2-context"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[package]
+edition = "2021"
+name = "caffe2op-reciprocal"
+version = "0.1.0"

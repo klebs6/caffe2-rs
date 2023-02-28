@@ -1,0 +1,15 @@
+[package]
+name = "caffe2-c10"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-derive]
+path = "../caffe2-derive"
+
+[dependencies]
+structopt = "*"
+

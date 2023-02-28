@@ -1,0 +1,34 @@
+[dependencies.caffe2-common]
+path = "../caffe2-common"
+[dependencies.caffe2-c10]
+path = "../caffe2-c10"
+[dependencies.caffe2-context]
+path = "../caffe2-context"
+[dependencies.caffe2-event]
+path = "../caffe2-event"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-tensor]
+path = "../caffe2-tensor"
+[dependencies.caffe2-types]
+path = "../caffe2-types"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[dependencies.caffe2op-concatsplit]
+path = "../caffe2op-concatsplit"
+[dependencies.caffe2op-conv]
+path = "../caffe2op-conv"
+[dependencies.caffe2op-elementwise]
+path = "../caffe2op-elementwise"
+[dependencies.caffe2op-expand]
+path = "../caffe2op-expand"
+[dependencies.caffe2op-pow]
+path = "../caffe2op-pow"
+[dependencies.caffe2op-utility]
+path = "../caffe2op-utility"
+[package]
+edition = "2021"
+name = "caffe2-ideep"
+version = "0.1.0"

@@ -1,0 +1,30 @@
+#!/usr/bin/env raku
+use v6;
+
+sub process($name, @targs) {
+
+    my $generic_tag = @targs.elems ?? "\<{@targs.join(",")}\>" !! "";
+
+    my $stub = qq:to/END/;
+    pub struct {$name}Op{$generic_tag} \{
+        //USE_OPERATOR_CONTEXT_FUNCTIONS;
+        context: Operator<Context>,
+    \}
+    END
+    say $stub
+
+}
+
+multi sub MAIN($name) {
+    process($name, []);
+}
+
+multi sub MAIN($name, $targ1) {
+    process($name, [$targ1]);
+
+}
+multi sub MAIN($name, $targ1, $targ2) {
+    process($name, [$targ1, $targ2]);
+
+}
+

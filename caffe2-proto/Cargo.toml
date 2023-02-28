@@ -1,0 +1,8 @@
+
+[dependencies]
+protobuf = "2.24.1"
+
+[package]
+edition = "2021"
+name = "caffe2-proto"
+version = "0.1.0"

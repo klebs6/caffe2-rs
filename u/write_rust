@@ -1,0 +1,122 @@
+#!/usr/bin/env raku
+use v6;
+use Data::Dump::Tree;
+
+my $dst = "src/";
+
+my $c10              = "pytorch/c10";
+my $aten             = "pytorch/aten";
+
+my $ops              = "pytorch/caffe2/operators";
+my $core             = "pytorch/caffe2/core";
+my $nomnigraph       = "pytorch/caffe2/core/nomnigraph/include/nomnigraph";
+my $nomnigraph_repr  = "pytorch/caffe2/core/nomnigraph/Representations";
+my $nomnigraph_tests = "pytorch/caffe2/core/nomnigraph/tests";
+my $hip              = "pytorch/caffe2/core/hip";
+my $server_quantize  = "pytorch/caffe2/quantization/server";
+my $sgd              = "pytorch/caffe2/sgd";
+my $queue            = "pytorch/caffe2/queue";
+my $serialize        = "pytorch/caffe2/serialize";
+my $transforms       = "pytorch/caffe2/transforms";
+my $utils            = "pytorch/caffe2/utils";
+my $video            = "pytorch/caffe2/video";
+my $predictor        = "pytorch/caffe2/predictor";
+my $perfkernels      = "pytorch/caffe2/perfkernels";
+my $opt              = "pytorch/caffe2/opt";
+my $ideep            = "pytorch/caffe2/ideep";
+my $image            = "pytorch/caffe2/image";
+my $observers        = "pytorch/caffe2/observers";
+
+my %fmap = %();
+
+sub process($d, $prefix, $recurse) {
+    for $d.IO.dir {
+        if $_.f {
+
+            my $filename = $_;
+
+            my $name = $prefix ~ "_" ~ $_.basename.split(".")[0].lc;
+            my $ext  = $_.basename.split(".")[1];
+            if $name.substr(*-3) eq "_op" {
+                $name = $name.substr(0,*-3);
+            }
+
+            if $name ~~ /'video_video_'$<tag>=(.*)/ {
+                $name = "video_$/<tag>";
+            }
+
+            if $name ~~ /'image_image_'$<tag>=(.*)/ {
+                $name = "image_$/<tag>";
+            }
+
+            if $name ~~ /'predictor_predictor_'$<tag>=(.*)/ {
+                $name = "predictor_$/<tag>";
+            }
+
+            if $name ~~ /'op_op_'$<tag>=(.*)/ {
+                $name = "op_$/<tag>";
+            }
+
+            given $ext {
+                when "cpp" | "h" | "cc" {
+                    %fmap{$name}{$ext} = $filename;
+                }
+            }
+
+        } elsif $_.d {
+            if $recurse {
+                my $dirname = $prefix ~ "_" ~ $_.basename.split(".")[0].lc;
+                process($_, $dirname, $recurse);
+            }
+
+        }
+
+    }
+}
+
+sub write_rust {
+    =begin comment
+    process($ops              , "op"              , True);
+    process($core             , "core"            , False);
+    process($nomnigraph       , "nomnigraph"      , True);
+    process($nomnigraph_repr  , "nomnigraph"      , False);
+    process($nomnigraph_tests , "nomnigraph"      , False);
+    process($hip              , "hip"             , True);
+    process($server_quantize  , "server_quantize" , True);
+    process($sgd              , "sgd"             , True);
+    process($queue            , "queue"           , True);
+    process($serialize        , "serialize"       , True);
+    process($transforms       , "txform"          , True);
+    process($utils            , "util"            , True);
+    process($video            , "video"           , True);
+    process($predictor        , "predictor"       , True);
+    process($perfkernels      , "perfkernels"     , True);
+    process($opt              , "opt"             , True);
+    process($ideep            , "ideep"           , True);
+    process($image            , "image"           , True);
+    process($observers        , "observer"        , True);
+    process($c10              , "c10"              , True);
+    =end comment
+
+    process($aten            , "aten"              , True);
+
+
+    my @names = %fmap.keys.sort;
+
+    for @names {
+
+        my $rname = $dst ~ $_ ~ ".rs";
+
+        my %map = %fmap{$_};
+
+        if %map<h>:exists {
+            shell "/bin/cat {%map<h>} >> $rname";
+        }
+
+        if %map<cc>:exists {
+            shell "/bin/cat {%map<cc>} >> $rname";
+        }
+    }
+}
+
+write_rust;

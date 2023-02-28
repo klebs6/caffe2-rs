@@ -1,0 +1,10 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-c10]
+path = "../caffe2-c10"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[package]
+edition = "2021"
+name = "caffe2-event"
+version = "0.1.0"

@@ -1,0 +1,571 @@
+#!/usr/bin/env raku
+use v6;
+#use Grammar::Tracer;
+#use Grammar::ErrorReporting;
+
+#grammar SchemaGrammar does Grammar::ErrorReporting {
+grammar SchemaGrammar {
+
+    rule TOP {
+        <.ws>
+        <operator-schema-header>
+        <operator-schema-item>+
+        ';'
+    }
+
+    rule name {
+        <[A..Z a..z 0..9 _ :]>+
+    }
+
+    rule operator-schema-header {
+        'OPERATOR_SCHEMA' '(' <name> ')'
+    }
+
+    rule operator-schema-item {
+        | <schema-item-num-inputs>
+        | <schema-item-num-outputs>
+        | <schema-item-num-inputs-outputs>
+        | <schema-item-identical-type-and-shape>
+        | <schema-item-identical-type-and-shape-of-input>
+        | <schema-item-identical-type-and-shape-of-input-dim>
+        | <schema-item-identical-type-and-shape-of-multiple-inputs>
+        | <schema-item-scalar-type>
+        | <schema-item-inputs-can-cross-devices>
+        | <schema-item-device-inference-function>
+        | <schema-item-cost-inference-function>
+        | <schema-item-tensor-inference-function>
+        | <schema-item-allow-inplace>
+        | <schema-item-inherit-onnx-schema>
+        | <schema-item-allow-one-to-one-inplace>
+        | <schema-item-disallow-input-fillers>
+        | <schema-item-input>
+        | <schema-item-output>
+        | <schema-item-arg>
+        | <schema-item-arg-is-test>
+        | <schema-item-private>
+        | <schema-item-enforce-one-to-one-inplace>
+        | <schema-item-enforce-inplace>
+        | <schema-item-same-number-of-output>
+        | <schema-item-value-length-input-filters>
+        | <schema-item-value-key-length-input-fillers>
+        | <schema-item-weighted-value-key-length-input-fillers>
+    }
+
+    rule schema-item-identical-type-and-shape {
+        '.IdenticalTypeAndShape()'
+    }
+
+    rule schema-item-private {
+        '.Private()'
+    }
+
+    rule schema-item-same-number-of-output {
+        '.SameNumberOfOutput()'
+    }
+
+    rule schema-item-enforce-one-to-one-inplace {
+        '.EnforceOneToOneInplace()'
+    }
+
+    rule schema-item-enforce-inplace {
+        '.EnforceInplace' <tag-body> 
+    }
+
+    rule schema-item-allow-one-to-one-inplace {
+        '.AllowOneToOneInplace()'
+    }
+
+    rule schema-item-disallow-input-fillers {
+        '.DisallowInputFillers()'
+    }
+
+    rule schema-item-identical-type-and-shape-of-input {
+        '.IdenticalTypeAndShapeOfInput' '(' <value> ')'
+    }
+
+    rule schema-item-identical-type-and-shape-of-input-dim {
+        '.IdenticalTypeAndShapeOfInputDim' '(' <integer-list> ')'
+    }
+
+    rule schema-item-identical-type-and-shape-of-multiple-inputs {
+        '.IdenticalTypeAndShapeOfMultipleInputs' '(' <tag-body> ')'
+    }
+
+    rule schema-item-scalar-type {
+        '.ScalarType' '(' <value> ')'
+    }
+
+    rule value {
+        <.name>
+    }
+
+    rule parent {
+        <.quoted-string>
+    }
+
+    rule schema-item-inherit-onnx-schema {
+        '.InheritOnnxSchema' '(' <parent>? ')'
+    }
+
+    rule schema-item-inputs-can-cross-devices {
+        '.InputsCanCrossDevices()'
+    }
+
+    rule schema-item-device-inference-function {
+        '.DeviceInferenceFunction' 
+        <tag-body>
+    }
+
+    rule schema-item-value-length-input-filters {
+        '.ValueLengthInputFillers' 
+        <tag-body>
+    }
+
+    rule schema-item-value-key-length-input-fillers {
+        '.ValueKeyLengthInputFillers' 
+        <tag-body>
+    }
+
+    rule schema-item-weighted-value-key-length-input-fillers {
+        '.WeightedValueKeyLengthInputFillers' 
+        <tag-body>
+    }
+
+    rule schema-item-cost-inference-function {
+        '.CostInferenceFunction' 
+        <tag-body>
+    }
+
+    rule schema-item-tensor-inference-function {
+        '.TensorInferenceFunction' 
+        <tag-body>
+    }
+
+    rule schema-item-allow-inplace {
+        '.AllowInplace' 
+        <tag-body>
+    }
+
+    token tag-body {
+        '(' <-[()]>* ')' || '('[ <-[()]>* <~~> <-[()]>* ]* ')'
+    }
+    
+    rule integer {
+        <[0..9]>*
+    }
+
+    rule integer-list {
+         <integer>* %% ',' 
+    }
+
+    rule name-list {
+         | '{' [ <name>* %% ',' ] '}'
+         |     [ <name>* %% ',' ]
+    }
+
+    rule schema-item-num-inputs {
+        '.' 'NumInputs' '(' <name-list> ')'
+    }
+    rule schema-item-num-inputs-outputs {
+        '.' 'NumInputsOutputs' 
+        <tag-body>
+    }
+
+    rule schema-item-num-outputs {
+        '.' 'NumOutputs' '(' <name-list> ')'
+    }
+
+    token index { 
+        <.integer>
+    }
+
+    rule tag {
+        <.quoted-string>
+    }
+
+    rule description {
+        <quoted-string>+
+    }
+
+    token quoted-string-body {
+        <-[ " ]> *
+    }
+
+    token quoted-string {
+         '"' <quoted-string-body> '"'
+    }
+
+    rule schema-item-input {
+        '.' 'Input' '(' <index> ',' <tag> ',' <description> ')'
+    }
+
+    rule schema-item-output {
+        '.' 'Output' '(' <index> ',' <tag> ',' <description> ')'
+    }
+
+    rule schema-item-arg {
+        '.' 'Arg' '(' <tag> ',' <description> ')'
+    }
+    rule schema-item-arg-is-test {
+        '.' 'ArgIsTest' '(' <description> ')'
+    }
+}
+
+class OperatorSchema {
+
+    has $.name is required;
+    has $.num-inputs is required;
+}
+
+sub pull-names-from-schema($parsed, $tag) {
+    my $list = $parsed<operator-schema-item>>>.{$tag}.grep(*.defined);
+    my @names = $list[0]<name-list><name>.List;
+    my $txt = @names.elems > 1 ?? "({@names.join(',')})" !! @names[0] ;
+    $txt
+}
+
+sub extract-description($description) {
+    my @strings = $description<quoted-string>>>.<quoted-string-body>;
+    "\"{@strings.join("\n")}\""
+}
+
+sub do-items(@items, $schema-name, $macro-name) {
+
+    if @items.elems > 0 {
+
+
+        my $txt = do for @items.kv -> $idx, $elem {
+            my $maybe-tag = $elem<tag>:exists ?? "{$elem<tag>}, " !! "";
+            my $description = extract-description($elem<description>);
+            "$idx => ({$maybe-tag}{$description}),"
+        }>>.indent(4).join("\n");
+
+        "$macro-name![$schema-name, 
+$txt
+]\n"
+
+    } else {
+        "\n"
+    }
+}
+
+sub get-schema-name($parsed) {
+    $parsed<operator-schema-header><name>.Str
+}
+
+sub pull-defined-schema-items($parsed, $schema-item-name) {
+    $parsed<operator-schema-item>>>.{"schema-item-" ~ $schema-item-name}.grep(*.defined)
+}
+
+sub write-num-inputs($parsed, $schema-name) {
+
+    my @num-inputs = pull-defined-schema-items( $parsed, "num-inputs");
+
+    if @num-inputs { 
+        my $txt = pull-names-from-schema($parsed, "schema-item-num-inputs");
+        say "num_inputs![$schema-name, $txt];\n"
+    }
+}
+
+sub write-num-outputs($parsed, $schema-name) {
+
+    my @num-outputs = pull-defined-schema-items( $parsed, "num-outputs");
+
+    if @num-outputs { 
+        my $txt = pull-names-from-schema($parsed, "schema-item-num-outputs");
+        say "num_outputs![$schema-name, $txt];\n"
+    }
+}
+
+sub write-num-inputs-outputs($parsed, $schema-name) {
+
+    my @items = pull-defined-schema-items( $parsed, "num-inputs-outputs");
+
+    if @items { 
+        my $tag = @items[0]<tag-body>.Str;
+        say "num_inputs_outputs![$schema-name, $tag];\n";
+    }
+}
+
+sub write-inputs($parsed, $schema-name) {
+
+    my @inputs = pull-defined-schema-items( $parsed, "input");
+
+    if @inputs {
+        say do-items(@inputs, $schema-name, "inputs")
+    }
+}
+
+sub write-outputs($parsed, $schema-name) {
+
+    my @outputs = pull-defined-schema-items( $parsed, "output");
+
+    if @outputs {
+        say do-items(@outputs, $schema-name, "outputs")
+    }
+}
+
+sub write-private($parsed, $schema-name) {
+
+    my @private = pull-defined-schema-items( $parsed, "private");
+
+    if @private {
+        say "private_operator![$schema-name]";
+    }
+}
+
+sub write-args($parsed, $schema-name) {
+
+    my @args = pull-defined-schema-items( $parsed, "arg");
+
+    if @args {
+        say do-items(@args, $schema-name, "args")
+    }
+
+    #--------------------
+    @args = pull-defined-schema-items( $parsed, "arg-is-test");
+
+    if @args {
+        say do-items(@args, $schema-name, "args_are_test")
+    }
+}
+
+sub write-same-number-of-output($parsed, $schema-name) {
+
+    my @same-number-of-output = 
+    pull-defined-schema-items( $parsed, "same-number-of-output");
+
+    if @same-number-of-output {
+        say "same_number_of_output![$schema-name];\n";
+    }
+}
+
+sub write-enforce-one-to-one-inplace($parsed, $schema-name) {
+
+    my @same-number-of-output = 
+    pull-defined-schema-items( $parsed, "enforce-one-to-one-inplace");
+
+    if @same-number-of-output {
+        say "enforce_one_to_one_inplace![$schema-name];\n";
+    }
+}
+
+sub write-enforce-inplace($parsed, $schema-name) {
+
+    my @inplace = 
+    pull-defined-schema-items( $parsed, "enforce-inplace");
+
+    if @inplace {
+        my $tag = @inplace[0]<tag-body>.Str;
+        say "enforce_inplace![$schema-name, $tag];\n";
+    }
+}
+
+sub write-value-length-input-fillers($parsed, $schema-name) {
+
+    my @items = 
+    pull-defined-schema-items( $parsed, "value-length-input-fillers");
+
+    if @items {
+        my $tag = @items[0]<tag-body>.Str;
+        say "value_length_input_fillers![$schema-name, $tag];\n";
+    }
+}
+
+sub write-value-key-length-input-fillers($parsed, $schema-name) {
+
+    my @items = 
+    pull-defined-schema-items( $parsed, "value-key-length-input-fillers");
+
+    if @items {
+        my $tag = @items[0]<tag-body>.Str;
+        say "value_key_length_input_fillers![$schema-name, $tag];\n";
+    }
+}
+
+sub write-weighted-value-key-length-input-fillers($parsed, $schema-name) {
+
+    my @items = 
+    pull-defined-schema-items( $parsed, "weighted-value-key-length-input-fillers");
+
+    if @items {
+        my $tag = @items[0]<tag-body>.Str;
+        say "weighted_value_key_length_input_fillers![$schema-name, $tag];\n";
+    }
+}
+
+sub write-identical-type-and-shape($parsed, $schema-name) {
+
+    my @identical-type-and-shape = 
+    pull-defined-schema-items( $parsed, "identical-type-and-shape");
+
+    my @identical-type-and-shape-of-input = 
+    pull-defined-schema-items( $parsed, "identical-type-and-shape-of-input");
+
+    my @identical-type-and-shape-of-input-dim = 
+    pull-defined-schema-items( $parsed, "identical-type-and-shape-of-input-dim");
+
+    my @identical-type-and-shape-of-multiple-inputs = 
+    pull-defined-schema-items( $parsed, "identical-type-and-shape-of-multiple-inputs");
+
+    if @identical-type-and-shape.elems {
+        say "identical_type_and_shape![$schema-name];\n";
+    }
+
+    if @identical-type-and-shape-of-input.elems {
+        my $x = @identical-type-and-shape-of-input[0]<value>.Str;
+        say "identical_type_and_shape_of_input![$schema-name, $x];\n";
+    }
+
+    if @identical-type-and-shape-of-input-dim.elems {
+        my $x = @identical-type-and-shape-of-input-dim[0]<integer-list>.Str;
+        say "identical_type_and_shape_of_input_dim![$schema-name, $x];\n";
+    }
+
+    if @identical-type-and-shape-of-multiple-inputs.elems {
+        my $x = @identical-type-and-shape-of-multiple-inputs[0]<tag-body>.Str;
+        say "identical_type_and_shape_of_multiple_inputs![$schema-name, $x];\n";
+    }
+}
+
+sub write-inputs-can-cross-devices($parsed, $schema-name) {
+    my @inputs-can-cross-devices = 
+    pull-defined-schema-items($parsed, "inputs-can-cross-devices");
+
+    if @inputs-can-cross-devices.elems {
+        say "inputs_can_cross_devices![$schema-name];\n";
+    }
+}
+
+sub write-allow-one-to-one-inplace($parsed, $schema-name) {
+
+    my @allow-one-to-one-inplace = 
+    pull-defined-schema-items($parsed, "allow-one-to-one-inplace");
+
+    if @allow-one-to-one-inplace.elems {
+        say "allow_one_to_one_inplace![$schema-name];\n";
+    }
+}
+
+sub write-disallow-input-fillers($parsed, $schema-name) {
+
+    my @disallow-input-fillers = 
+    pull-defined-schema-items($parsed, "disallow-input-fillers");
+
+    if @disallow-input-fillers.elems {
+        say "disallow_input_fillers![$schema-name];\n";
+    }
+}
+
+sub write-device-inference-function($parsed, $schema-name) {
+    my @device-inference-function = 
+    pull-defined-schema-items($parsed, "device-inference-function");
+
+    if @device-inference-function.elems {
+        my $f = @device-inference-function[0];
+
+        my $body = $f<tag-body>.Str;
+        say "device_inference_function![$schema-name, /* $body */ ]\n";
+    }
+}
+
+sub write-cost-inference-function($parsed, $schema-name) {
+
+    my @cost-inference-function = 
+    pull-defined-schema-items($parsed, "cost-inference-function");
+
+    if @cost-inference-function.elems {
+        my $f = @cost-inference-function[0];
+
+        my $body = $f<tag-body>.Str;
+        say "cost_inference_function![$schema-name, /* $body */ ]\n";
+    }
+}
+
+sub write-tensor-inference-function($parsed, $schema-name) {
+
+    my @tensor-inference-function = 
+    pull-defined-schema-items($parsed, "tensor-inference-function");
+
+    if @tensor-inference-function.elems {
+        my $f = @tensor-inference-function[0];
+
+        my $body = $f<tag-body>.Str;
+        say "tensor_inference_function![$schema-name, /* $body */]\n";
+    }
+}
+
+sub write-allow-inplace($parsed, $schema-name) {
+
+    my @allow-inplace = 
+    pull-defined-schema-items( $parsed, "allow-inplace");
+
+    if @allow-inplace.elems {
+        my $f = @allow-inplace[0];
+
+        my $body = $f<tag-body>.Str;
+        say "allow_inplace![$schema-name, $body ]\n";
+    }
+}
+
+sub write-inherit-onnx-schema($parsed, $schema-name) {
+
+    my @inherit-onnx-schema = 
+    pull-defined-schema-items($parsed, "inherit-onnx-schema");
+
+    if @inherit-onnx-schema.elems {
+
+        my $parent = @inherit-onnx-schema[0]<parent>;
+
+        if $parent {
+            say "inherit_onnx_schema![$schema-name, $parent];\n";
+
+        } else {
+
+            say "inherit_onnx_schema![$schema-name];\n";
+        }
+    }
+}
+
+sub write-scalar-type($parsed, $schema-name) {
+    my @scalar-type = 
+    pull-defined-schema-items($parsed, "scalar-type");
+
+    if @scalar-type.elems {
+        my $x = @scalar-type[0]<value>.Str;
+        say "scalar_type![$schema-name, $x];\n";
+    }
+}
+
+sub write-operator-schema-macros($parsed) {
+
+    my $schema-name = get-schema-name($parsed);
+
+    write-num-inputs($parsed, $schema-name);
+    write-num-outputs($parsed, $schema-name);
+    write-num-inputs-outputs($parsed, $schema-name);
+    write-inputs($parsed, $schema-name);
+    write-outputs($parsed, $schema-name);
+    write-args($parsed, $schema-name);
+    write-same-number-of-output($parsed, $schema-name);
+    write-enforce-one-to-one-inplace($parsed, $schema-name);
+    write-enforce-inplace($parsed, $schema-name);
+    write-identical-type-and-shape($parsed, $schema-name);
+    write-inputs-can-cross-devices($parsed, $schema-name);
+    write-allow-one-to-one-inplace($parsed, $schema-name);
+    write-disallow-input-fillers($parsed, $schema-name);
+    write-device-inference-function($parsed, $schema-name);
+    write-cost-inference-function($parsed, $schema-name);
+    write-tensor-inference-function($parsed, $schema-name);
+    write-allow-inplace($parsed, $schema-name);
+    write-inherit-onnx-schema($parsed, $schema-name);
+    write-scalar-type($parsed, $schema-name);
+    write-private($parsed, $schema-name);
+    write-value-length-input-fillers($parsed, $schema-name);
+    write-value-key-length-input-fillers($parsed, $schema-name);
+    write-weighted-value-key-length-input-fillers($parsed, $schema-name);
+}
+
+my $in = $*IN.slurp;
+my $parsed = SchemaGrammar.parse($in);
+write-operator-schema-macros($parsed);

@@ -1,0 +1,28 @@
+#!/usr/bin/env raku
+use v6;
+#use Grammar::Tracer;
+
+grammar FixOpMember {
+    rule TOP {
+        <.ws> <name> ':' 'Operator' '<' <context> '>' ','?
+    }
+    rule name {
+        <.ident>
+    }
+    rule context {
+        <.ident>
+    }
+    rule ident {
+        <[A..Z a..z _]>+
+    }
+}
+
+say FixOpMember.parse($*IN.slurp, actions => class {
+    method TOP($/) {
+        make qq:to/END/;
+        storage: OperatorStorage,
+        context: {$/<context>.Str},
+        END
+    }
+}).made.indent(4).chop;
+

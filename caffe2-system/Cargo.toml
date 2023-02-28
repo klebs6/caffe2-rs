@@ -1,0 +1,8 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-traits]
+path = "../caffe2-traits"
+[package]
+edition = "2021"
+name = "caffe2-system"
+version = "0.1.0"

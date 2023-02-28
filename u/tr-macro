@@ -1,0 +1,9 @@
+#!/usr/bin/env raku
+use v6;
+my $in = $*IN.slurp;
+my $idx = $in.index("(");
+my $ridx = $in.rindex(")");
+my $macro-name = $in.substr(0..$idx-1);
+my $macro-body = $in.substr($idx+1..$ridx-1);
+say "{$macro-name.lc}!\{
+    {$macro-body.chomp.trim}\}";

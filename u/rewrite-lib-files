@@ -1,0 +1,60 @@
+#!/usr/bin/env raku
+
+use Data::Dump::Tree;
+
+use caffe-workspace;
+use grust-crate-grammar;
+use grust-macros;
+
+sub extract-exportlist(:$libfile) {
+
+    my @items   
+    = get-crate-items(file => $libfile).List[0];
+
+    gather for @items {
+        if $_.item-variant ~~ MacroInvocation {
+            take $_.text.chomp;
+        }
+    }.sort.unique
+}
+
+sub proper-libfile-text(:$libfile) {
+
+    my @exports = extract-exportlist(:$libfile);
+
+    qq:to/END/
+    #![feature(test)]
+    extern crate test;
+
+    #[macro_use] mod imports;
+    use imports::*;
+
+    {@exports.join("\n")}
+    END
+}
+
+sub rewrite-libfile(Str :$crate, Bool :$write = False) {
+
+    my $libfile 
+    = $crate ~ "/src/lib.rs";
+
+    my $new-libfile-text
+    = proper-libfile-text(:$libfile);
+
+    if $write {
+
+        say "rewriting $libfile";
+        $libfile.IO.spurt: $new-libfile-text;
+
+    } else {
+        say "-------------------[will rewrite $libfile]";
+        say $new-libfile-text;
+    }
+}
+
+sub MAIN(Bool :$write = False) {
+
+    get-caffe-crates().map: {
+        rewrite-libfile(crate => ~$_, :$write)
+    };
+}

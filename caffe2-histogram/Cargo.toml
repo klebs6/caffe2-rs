@@ -1,0 +1,10 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-serverquantize]
+path = "../caffe2-serverquantize"
+[package]
+edition = "2021"
+name = "caffe2-histogram"
+version = "0.1.0"

@@ -1,0 +1,10 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2op-reduce]
+path = "../caffe2op-reduce"
+[package]
+edition = "2021"
+name = "caffe2op-loss"
+version = "0.1.0"

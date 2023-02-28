@@ -1,0 +1,24 @@
+[dependencies.caffe2-context]
+path = "../caffe2-context"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-tensor]
+path = "../caffe2-tensor"
+[dependencies.caffe2-types]
+path = "../caffe2-types"
+[dependencies.caffe2op-conv]
+path = "../caffe2op-conv"
+[dependencies.caffe2op-reshape]
+path = "../caffe2op-reshape"
+[dependencies.caffe2op-slice]
+path = "../caffe2op-slice"
+[dependencies.caffe2op-transpose]
+path = "../caffe2op-transpose"
+[package]
+edition = "2021"
+name = "caffe2op-i8quantized"
+version = "0.1.0"

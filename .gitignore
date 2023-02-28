@@ -1,0 +1,8 @@
+/target
+Cargo.lock
+*/target/**
+/vendor
+/pytorch
+/fbgemm
+/u/.precomp
+.cpp/**

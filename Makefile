@@ -1,0 +1,293 @@
+.PHONY: build vendor
+
+HACK_CLANG := env LD_LIBRARY_PATH=/usr/local/opt/llvm/lib/ 
+#HACK_CLANG := 
+RUSTFLAGS := -Awarnings
+#CARGO     := cargo -Z extra-link-arg 
+CARGO     := env CARGO_MSG_LIMIT=15 \
+			 CARGO_BUILD_JOBS=12 \
+			 NUM_JOBS=12 \
+			 cargo 
+
+#ACTIVE := caffe2-aten
+#ACTIVE := caffe2-c10
+
+#ACTIVE := caffe2-blob
+#ACTIVE := caffe2-common
+#ACTIVE := caffe2-context
+#ACTIVE := caffe2-db
+#ACTIVE := caffe2-env
+#ACTIVE := caffe2-event
+#ACTIVE := caffe2-export
+#ACTIVE := caffe2-graph
+#ACTIVE := caffe2-histogram
+#ACTIVE := caffe2-ideep
+#ACTIVE := caffe2-image
+#ACTIVE := caffe2-init
+#ACTIVE := caffe2-mem
+#ACTIVE := caffe2-miopen
+#ACTIVE := caffe2-module
+#ACTIVE := caffe2-nomnigraph
+#ACTIVE := caffe2-operator
+#ACTIVE := caffe2-opt
+#ACTIVE := caffe2-output
+#ACTIVE := caffe2-perfkernels
+#ACTIVE := caffe2-plan
+#ACTIVE := caffe2-predictor
+#ACTIVE := caffe2-prof
+#ACTIVE := caffe2-proto
+#ACTIVE := caffe2-qtensor
+#ACTIVE := caffe2-quant
+#ACTIVE := caffe2-queue
+#ACTIVE := caffe2-random
+#ACTIVE := caffe2-register
+#ACTIVE := caffe2-registry
+#ACTIVE := caffe2-serde
+#ACTIVE := caffe2-serverquantize
+#ACTIVE := caffe2-sgd
+#ACTIVE := caffe2-stats
+#ACTIVE := caffe2-store
+#ACTIVE := caffe2-system
+#ACTIVE := caffe2-tensor
+#ACTIVE := caffe2-test
+#ACTIVE := caffe2-timer
+#ACTIVE := caffe2-trace
+#ACTIVE := caffe2-traits
+#ACTIVE := caffe2-transform
+#ACTIVE := caffe2-txform
+#ACTIVE := caffe2-types
+#ACTIVE := caffe2-util
+#ACTIVE := caffe2-version
+#ACTIVE := caffe2-video
+#ACTIVE := caffe2op-abs
+#ACTIVE := caffe2op-accum
+#ACTIVE := caffe2op-accuracy
+#ACTIVE := caffe2op-acos
+#ACTIVE := caffe2op-activation
+#ACTIVE := caffe2op-affine
+#ACTIVE := caffe2op-alias
+#ACTIVE := caffe2op-apmeter
+#ACTIVE := caffe2op-args
+#ACTIVE := caffe2op-asin
+#ACTIVE := caffe2op-assert
+#ACTIVE := caffe2op-asyncnet
+#ACTIVE := caffe2op-atan
+#ACTIVE := caffe2op-atomics
+#ACTIVE := caffe2op-batch
+#ACTIVE := caffe2op-bbox
+#ACTIVE := caffe2op-bisect
+#ACTIVE := caffe2op-bucketize
+#ACTIVE := caffe2op-cast
+#ACTIVE := caffe2op-cbrt
+#ACTIVE := caffe2op-ceil
+#ACTIVE := caffe2op-channelbackprop
+#ACTIVE := caffe2op-channelshuffle
+#ACTIVE := caffe2op-channelstats
+#ACTIVE := caffe2op-clip
+#ACTIVE := caffe2op-collect
+#ACTIVE := caffe2op-communicator
+#ACTIVE := caffe2op-concatsplit
+#ACTIVE := caffe2op-conditional
+#ACTIVE := caffe2op-conv
+#ACTIVE := caffe2op-copy
+#ACTIVE := caffe2op-cos
+#ACTIVE := caffe2op-cosh
+#ACTIVE := caffe2op-counter
+#ACTIVE := caffe2op-couple
+#ACTIVE := caffe2op-crash
+#ACTIVE := caffe2op-crfviterbi
+#ACTIVE := caffe2op-crossentropy
+#ACTIVE := caffe2op-ctc
+#ACTIVE := caffe2op-cube
+#ACTIVE := caffe2op-dataset
+#ACTIVE := caffe2op-deform
+#ACTIVE := caffe2op-densevec
+#ACTIVE := caffe2op-dequant
+#ACTIVE := caffe2op-distance
+#ACTIVE := caffe2op-do
+#ACTIVE := caffe2op-dropout
+#ACTIVE := caffe2op-elementwise
+#ACTIVE := caffe2op-elu
+#ACTIVE := caffe2op-enforce
+#ACTIVE := caffe2op-erf
+#ACTIVE := caffe2op-exp
+#ACTIVE := caffe2op-expand
+#ACTIVE := caffe2op-fallbackgpu
+#ACTIVE := caffe2op-featuremaps
+#ACTIVE := caffe2op-feed
+#ACTIVE := caffe2op-fillbytestr
+#ACTIVE := caffe2op-filler
+#ACTIVE := caffe2op-filltensor
+#ACTIVE := caffe2op-find
+#ACTIVE := caffe2op-finddup
+#ACTIVE := caffe2op-flatten
+#ACTIVE := caffe2op-floor
+#ACTIVE := caffe2op-free
+#ACTIVE := caffe2op-fullyconnected
+#ACTIVE := caffe2op-fusedrowwise
+#ACTIVE := caffe2op-gather
+#ACTIVE := caffe2op-gelu
+#ACTIVE := caffe2op-generateproposals
+#ACTIVE := caffe2op-glu
+#ACTIVE := caffe2op-groupnorm
+#ACTIVE := caffe2op-gru
+#ACTIVE := caffe2op-halffloat
+#ACTIVE := caffe2op-hardsigmoid
+#ACTIVE := caffe2op-heatmap
+#ACTIVE := caffe2op-histogram
+#ACTIVE := caffe2op-hsoftmax
+#ACTIVE := caffe2op-i8quantized
+#ACTIVE := caffe2op-if
+#ACTIVE := caffe2op-im2col
+#ACTIVE := caffe2op-index
+#ACTIVE := caffe2op-indexhash
+#ACTIVE := caffe2op-inference
+#ACTIVE := caffe2op-instancenorm
+#ACTIVE := caffe2op-integralimage
+#ACTIVE := caffe2op-isempty
+#ACTIVE := caffe2op-jsd
+#ACTIVE := caffe2op-keysplit
+#ACTIVE := caffe2op-lastnwindow
+#ACTIVE := caffe2op-layernorm
+#ACTIVE := caffe2op-leakyrelu
+#ACTIVE := caffe2op-lengthspad
+#ACTIVE := caffe2op-lengthsplit
+#ACTIVE := caffe2op-lengthsreduce
+#ACTIVE := caffe2op-lengthstile
+#ACTIVE := caffe2op-lengthstop
+#ACTIVE := caffe2op-listwisel2r
+#ACTIVE := caffe2op-loadsave
+#ACTIVE := caffe2op-locallyconnected
+#ACTIVE := caffe2op-localresponsenormalization
+#ACTIVE := caffe2op-log
+#ACTIVE := caffe2op-logit
+#ACTIVE := caffe2op-loss
+#ACTIVE := caffe2op-lpnorm
+#ACTIVE := caffe2op-lppool
+#ACTIVE := caffe2op-lstm
+#ACTIVE := caffe2op-map
+#ACTIVE := caffe2op-marginrank
+#ACTIVE := caffe2op-mask
+#ACTIVE := caffe2op-matmul
+#ACTIVE := caffe2op-maxpool
+#ACTIVE := caffe2op-mean
+#ACTIVE := caffe2op-mergeid
+#ACTIVE := caffe2op-minmax
+#ACTIVE := caffe2op-mish
+#ACTIVE := caffe2op-mod
+#ACTIVE := caffe2op-moments
+#ACTIVE := caffe2op-multiclass
+#ACTIVE := caffe2op-nanreplace
+#ACTIVE := caffe2op-negative
+#ACTIVE := caffe2op-negativegradient
+#ACTIVE := caffe2op-ngram
+#ACTIVE := caffe2op-nmsbox
+#ACTIVE := caffe2op-normalize
+#ACTIVE := caffe2op-numpytile
+#ACTIVE := caffe2op-onehot
+#ACTIVE := caffe2op-onnxwhile
+#ACTIVE := caffe2op-orderswitch
+#ACTIVE := caffe2op-packrnnseq
+#ACTIVE := caffe2op-packsegments
+#ACTIVE := caffe2op-pad
+#ACTIVE := caffe2op-partition
+#ACTIVE := caffe2op-percentile
+#ACTIVE := caffe2op-perplexity
+#ACTIVE := caffe2op-plt
+#ACTIVE := caffe2op-pool
+#ACTIVE := caffe2op-pow
+#ACTIVE := caffe2op-prefetch
+#ACTIVE := caffe2op-prelu
+#ACTIVE := caffe2op-prepend
+#ACTIVE := caffe2op-quantdecode
+#ACTIVE := caffe2op-quantile
+#ACTIVE := caffe2op-rankloss
+#ACTIVE := caffe2op-reciprocal
+#ACTIVE := caffe2op-reduce
+#ACTIVE := caffe2op-relu
+#ACTIVE := caffe2op-remove
+#ACTIVE := caffe2op-reservoir
+#ACTIVE := caffe2op-reshape
+#ACTIVE := caffe2op-resize
+#ACTIVE := caffe2op-reversepacked
+#ACTIVE := caffe2op-rmac
+#ACTIVE := caffe2op-rms
+#ACTIVE := caffe2op-rnn
+#ACTIVE := caffe2op-roialign
+#ACTIVE := caffe2op-roipool
+#ACTIVE := caffe2op-rowmul
+#ACTIVE := caffe2op-rsqrt
+#ACTIVE := caffe2op-scale
+#ACTIVE := caffe2op-scope
+#ACTIVE := caffe2op-segmentreduction
+#ACTIVE := caffe2op-selfbinning
+#ACTIVE := caffe2op-selu
+#ACTIVE := caffe2op-sequence
+#ACTIVE := caffe2op-shape
+#ACTIVE := caffe2op-sigmoid
+#ACTIVE := caffe2op-sin
+#ACTIVE := caffe2op-sinh
+#ACTIVE := caffe2op-sinusoid
+#ACTIVE := caffe2op-slice
+#ACTIVE := caffe2op-softmax
+#ACTIVE := caffe2op-softplus
+#ACTIVE := caffe2op-softsign
+#ACTIVE := caffe2op-spacebatch
+#ACTIVE := caffe2op-sparsedropout
+#ACTIVE := caffe2op-sparselpreg
+#ACTIVE := caffe2op-sparsenormalize
+#ACTIVE := caffe2op-sparsetodense
+#ACTIVE := caffe2op-spatialbatchnorm
+#ACTIVE := caffe2op-spatialsoftmax
+#ACTIVE := caffe2op-sqr
+#ACTIVE := caffe2op-sqrt
+#ACTIVE := caffe2op-stats
+#ACTIVE := caffe2op-stopgradient
+#ACTIVE := caffe2op-string
+#ACTIVE := caffe2op-stump
+#ACTIVE := caffe2op-stylizer
+#ACTIVE := caffe2op-summarize
+#ACTIVE := caffe2op-swish
+#ACTIVE := caffe2op-tan
+#ACTIVE := caffe2op-tanh
+#ACTIVE := caffe2op-tensorprotos
+#ACTIVE := caffe2op-textfile
+#ACTIVE := caffe2op-thresholdedrelu
+#ACTIVE := caffe2op-tile
+#ACTIVE := caffe2op-topk
+#ACTIVE := caffe2op-transpose
+#ACTIVE := caffe2op-tt
+#ACTIVE := caffe2op-unique
+#ACTIVE := caffe2op-unsafecoalesce
+#ACTIVE := caffe2op-upsample
+#ACTIVE := caffe2op-utility
+#ACTIVE := caffe2op-variablepad
+#ACTIVE := caffe2op-weightedmultisample
+#ACTIVE := caffe2op-weightedsample
+#ACTIVE := caffe2op-while
+#ACTIVE := caffe2op-zerog
+
+BUILD := lbuild
+
+default: all
+
+all:
+	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) 
+
+build:
+	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) -p $(ACTIVE)
+
+vendor:
+	RUSTFLAGS=$(RUSTFLAGS) $(CARGO) vendor
+
+json:
+	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) build --quiet --message-format=json 2> /dev/null | jq --slurp
+
+gen_protos: 
+	protoc --rust_out ./src/  ./pytorch/caffe2/proto/caffe2.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/prof_dag.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/predictor_consts.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/metanet.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/hsm.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/torch.proto 
+	protoc --rust_out ./src/ ./pytorch/caffe2/proto/caffe2_legacy.proto

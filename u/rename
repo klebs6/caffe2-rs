@@ -1,0 +1,14 @@
+#!/usr/bin/env raku
+
+my $srcdir = "caffe2-aten/src/";
+
+for $srcdir.IO.dir {
+
+    my $src = $_;
+
+    my $bn = $_.IO.basename.subst(:g, "-","_");
+
+    my $dst = $srcdir ~ $bn;
+
+    say "mv $src $dst";
+}

@@ -1,0 +1,12 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[dependencies.caffe2op-prefetch]
+path = "../caffe2op-prefetch"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[package]
+edition = "2021"
+name = "caffe2op-tensorprotos"
+version = "0.1.0"

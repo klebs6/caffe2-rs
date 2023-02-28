@@ -1,0 +1,58 @@
+#!/usr/bin/env raku
+
+use Config::TOML;
+
+my @files = ".".IO.dir.grep({
+    $_ ~~ /caffe2*/
+}).sort.grep: {
+    $_ !~~ /caffe2\-imports/
+};
+
+sub proxy-imports-with-shim {
+
+    for @files {
+
+        next if $_.Str ~~ "caffe2-imports";
+
+        my $toml = $_ ~ "/Cargo.toml";
+
+        my $data = %(); #from-toml($toml.IO.slurp);
+
+        $data<dependencies> = %();
+        $data<dependencies><caffe2-imports> = %(
+            path => "../caffe2-imports"
+        );
+
+        $data<package><edition> = "2021";
+        $data<package><name>    = $_.Str;
+        $data<package><version> = "0.1.0";
+
+        $toml.IO.spurt: to-toml($data);
+    }
+}
+
+sub write-imports-file-to-reflect-current-best-practice {
+
+    my $use = "pub use caffe2_imports::*;";
+
+    for @files {
+        my $imp = $_.Str ~ "/src/imports.rs";
+        $imp.IO.spurt: $use;
+    }
+}
+
+write-imports-file-to-reflect-current-best-practice();
+
+sub filter {
+
+    my $bad = '#[macro_use] extern crate lazy_static;
+#[macro_use] extern crate static_assertions;';
+
+    my $good = '';
+
+    for @files {
+        my $lib  = $_.Str ~ "/src/lib.rs";
+        my $text = $lib.IO.slurp.subst($bad,$good);;
+        $lib.IO.spurt: $text;
+    }
+}

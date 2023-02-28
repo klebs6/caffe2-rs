@@ -1,0 +1,10 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+#[dependencies.caffe2-aten]
+#path = "../caffe2-aten"
+[package]
+edition = "2021"
+name = "caffe2-types"
+version = "0.1.0"

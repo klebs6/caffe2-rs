@@ -1,0 +1,1930 @@
+#!/usr/bin/env raku
+use cargo-workspace;
+
+use Config::TOML;
+
+my $mothership = "caffe2-mothership";
+
+my @workspace-crates = <
+caffe2-proto
+caffe2-blob
+caffe2-version
+caffe2-common
+caffe2-context
+caffe2-db
+caffe2-random
+caffe2-event
+caffe2-export
+caffe2-graph
+caffe2-init
+caffe2-serde
+caffe2-mem
+caffe2-module
+caffe2-net
+caffe2-observer
+caffe2-operator
+caffe2-plan
+caffe2-prof
+caffe2-qtensor
+caffe2-trace
+caffe2-stats
+caffe2-tensor
+caffe2-test
+caffe2-timer
+caffe2-transform
+caffe2-types
+caffe2-workspace
+caffe2-env
+caffe2-miopen
+caffe2-histogram
+caffe2-ideep
+caffe2-image
+caffe2-traits
+caffe2-nomnigraph
+caffe2op-abs
+caffe2op-accum
+caffe2op-accuracy
+caffe2op-acos
+caffe2op-activation
+caffe2op-affine
+caffe2op-alias
+caffe2op-apmeter
+caffe2op-args
+caffe2op-asin
+caffe2op-assert
+caffe2op-asyncnet
+caffe2op-atan
+caffe2op-atomics
+caffe2op-batch
+caffe2op-bbox
+caffe2op-bisect
+caffe2op-mask
+caffe2op-nmsbox
+caffe2op-bucketize
+caffe2op-dequant
+caffe2op-cast
+caffe2op-cbrt
+caffe2op-ceil
+caffe2op-channelbackprop
+caffe2op-channelshuffle
+caffe2op-channelstats
+caffe2op-clip
+caffe2op-collect
+caffe2op-communicator
+caffe2op-concatsplit
+caffe2op-conditional
+caffe2op-conv
+caffe2op-copy
+caffe2op-cos
+caffe2op-cosh
+caffe2op-counter
+caffe2op-crash
+caffe2op-scope
+caffe2op-crfviterbi
+caffe2op-crossentropy
+caffe2op-ctc
+caffe2op-cube
+caffe2op-couple
+caffe2op-dataset
+caffe2op-deform
+caffe2op-densevec
+caffe2op-distance
+caffe2op-do
+caffe2op-dropout
+caffe2op-elementwise
+caffe2op-elu
+caffe2op-enforce
+caffe2op-erf
+caffe2op-exp
+caffe2op-expand
+caffe2op-inference
+caffe2op-featuremaps
+caffe2op-feed
+caffe2op-filler
+caffe2op-find
+caffe2op-finddup
+caffe2op-flatten
+caffe2op-topk
+caffe2op-floor
+caffe2op-free
+caffe2op-fullyconnected
+caffe2op-fusedrowwise
+caffe2op-gather
+caffe2op-gelu
+caffe2op-generateproposals
+caffe2op-fillbytestr
+caffe2op-filltensor
+caffe2op-glu
+caffe2op-groupnorm
+caffe2op-gru
+caffe2op-hsoftmax
+caffe2op-halffloat
+caffe2op-hardsigmoid
+caffe2op-heatmap
+caffe2op-histogram
+caffe2op-if
+caffe2op-im2col
+caffe2op-indexhash
+caffe2op-index
+caffe2op-instancenorm
+caffe2op-integralimage
+caffe2op-isempty
+caffe2op-jsd
+caffe2op-keysplit
+caffe2op-lastnwindow
+caffe2op-layernorm
+caffe2op-leakyrelu
+caffe2op-lengthsplit
+caffe2op-lengthspad
+caffe2op-lengthsreduce
+caffe2op-lengthstile
+caffe2op-lengthstop
+caffe2op-listwisel2r
+caffe2op-loadsave
+caffe2op-localresponsenormalization
+caffe2op-locallyconnected
+caffe2op-log
+caffe2op-logit
+caffe2op-loss
+caffe2op-lppool
+caffe2op-lpnorm
+caffe2op-lstm
+caffe2op-map
+caffe2op-marginrank
+caffe2op-matmul
+caffe2op-maxpool
+caffe2op-mean
+caffe2op-mergeid
+caffe2op-minmax
+caffe2op-mish
+caffe2op-mod
+caffe2op-moments
+caffe2op-multiclass
+caffe2op-negativegradient
+caffe2op-negative
+caffe2op-ngram
+caffe2op-normalize
+caffe2op-numpytile
+caffe2op-onehot
+caffe2op-onnxwhile
+caffe2op-fallbackgpu
+caffe2op-orderswitch
+caffe2op-packrnnseq
+caffe2op-packsegments
+caffe2op-pad
+caffe2op-partition
+caffe2op-percentile
+caffe2op-perplexity
+caffe2op-plt
+caffe2op-pool
+caffe2op-pow
+caffe2op-prefetch
+caffe2op-prelu
+caffe2op-prepend
+caffe2op-quantdecode
+caffe2op-quantile
+caffe2op-i8quantized
+caffe2op-rankloss
+caffe2op-reciprocal
+caffe2op-reduce
+caffe2op-relu
+caffe2op-remove
+caffe2op-nanreplace
+caffe2op-reservoir
+caffe2op-reshape
+caffe2op-resize
+caffe2op-reversepacked
+caffe2op-rmac
+caffe2op-rms
+caffe2op-rnn
+caffe2op-roialign
+caffe2op-roipool
+caffe2op-rowmul
+caffe2op-rsqrt
+caffe2op-scale
+caffe2op-segmentreduction
+caffe2op-selfbinning
+caffe2op-selu
+caffe2op-sequence
+caffe2op-shape
+caffe2op-sigmoid
+caffe2op-sin
+caffe2op-sinh
+caffe2op-sinusoid
+caffe2op-slice
+caffe2op-softmax
+caffe2op-softplus
+caffe2op-softsign
+caffe2op-spacebatch
+caffe2op-sparsedropout
+caffe2op-sparselpreg
+caffe2op-sparsenormalize
+caffe2op-sparsetodense
+caffe2op-spatialbatchnorm
+caffe2op-spatialsoftmax
+caffe2op-sqr
+caffe2op-sqrt
+caffe2op-stats
+caffe2op-stopgradient
+caffe2op-string
+caffe2op-stump
+caffe2op-stylizer
+caffe2op-summarize
+caffe2op-swish
+caffe2op-tan
+caffe2op-tanh
+caffe2op-tensorprotos
+caffe2op-textfile
+caffe2op-thresholdedrelu
+caffe2op-tile
+caffe2op-topk
+caffe2op-transpose
+caffe2op-tt
+caffe2op-unique
+caffe2op-unsafecoalesce
+caffe2op-upsample
+caffe2op-utility
+caffe2op-variablepad
+caffe2op-weightedmultisample
+caffe2op-weightedsample
+caffe2op-while
+caffe2op-workspace
+caffe2op-zerog
+caffe2op-info
+caffe2-opt
+caffe2-output
+caffe2-perfkernels
+caffe2-predictor
+caffe2-prof
+caffe2-quant
+caffe2-queue
+caffe2-register
+caffe2-registry
+caffe2-serverquantize
+caffe2-sgd
+caffe2-store
+caffe2-system
+caffe2-txform
+caffe2-util
+caffe2-video
+>;
+
+my @workspace-cratemap = [
+    caffe2-proto => <
+        caffe2.rs
+        caffe2_legacy.rs
+    >,
+    caffe2-blob => <
+        core_blob.rs
+        core_blob_gpu_test.rs
+        core_blob_stats.rs
+        core_blob_test.rs
+    >,
+    caffe2-version => <
+        core_cudnn_wrappers.rs
+        core_macros.rs
+    >,
+    caffe2-common => <
+        core_common.rs
+        core_common_cudnn.rs
+        core_common_gpu.rs
+        core_common_test.rs
+    >,
+    caffe2-context => <
+        core_context.rs
+        core_context_base.rs
+        core_context_gpu.rs
+        core_context_gpu_test.rs
+        core_context_test.rs
+    >,
+    caffe2-db => <
+        core_db.rs
+    >,
+    caffe2-random => <
+        core_distributions_stubs.rs
+    >,
+    caffe2-event => <
+        core_event.rs
+        core_event_cpu.rs
+        core_event_gpu.rs
+        core_event_gpu_test.rs
+        core_event_test.rs
+    >,
+    caffe2-export => <
+        core_export_c10_op_to_caffe2.rs
+        core_export_caffe2_op_to_c10.rs
+    >,
+    caffe2-graph => <
+        core_graph.rs
+        core_graph_test.rs
+        graph.rs
+    >,
+    caffe2-init => <
+        core_init.rs
+        core_init_denormals.rs
+        core_init_intrinsics_check.rs
+        core_init_omp.rs
+        core_init_test.rs
+    >,
+    caffe2-serde => <
+        core_int8_serialization.rs
+        tensor_deserializer.rs
+        tensor_serializer.rs
+        core_serialization_test.rs
+        serialization.rs
+        serialize_crc.rs
+        serialize_crc_alt.rs
+        serialize_file_adapter.rs
+        serialize_inline_container.rs
+        serialize_inline_container_test.rs
+        serialize_istream_adapter.rs
+        serialize_read_adapter_interface.rs
+        serialize_versions.rs
+    >,
+    caffe2-mem => <
+        core_memonger.rs
+    >,
+    caffe2-module => <
+        core_module.rs
+        core_module_test.rs
+    >,
+    caffe2-net => <
+        core_net.rs
+        core_net_async_base.rs
+        core_net_async_scheduling.rs
+        core_net_async_task.rs
+        core_net_async_task_future.rs
+        core_net_async_task_graph.rs
+        core_net_async_tracing.rs
+        core_net_async_tracing_test.rs
+        core_net_dag_utils.rs
+        core_net_dag_utils_test.rs
+        core_net_gpu_test.rs
+        core_net_parallel.rs
+        core_net_simple.rs
+        core_net_simple_refcount.rs
+        core_net_simple_refcount_test.rs
+        core_net_test.rs
+    >,
+    caffe2-observer => <
+        core_observer.rs
+        core_observer_test.rs
+        observer_operator_attaching_net_observer.rs
+        observer_profile_observer.rs
+        observer_runcnt_observer.rs
+        observer_time_observer.rs
+        observer_time_observer_test.rs
+    >,
+    caffe2-operator => <
+        core_operator.rs
+        core_operator_gpu_test.rs
+        core_operator_gradient.rs
+        core_operator_schema.rs
+        core_operator_schema_test.rs
+        core_operator_test.rs
+    >,
+    caffe2-plan => <
+        core_plan_executor.rs
+        core_plan_executor_test.rs
+    >,
+    caffe2-prof => <
+        core_prof_dag_counters.rs
+    >,
+    caffe2-qtensor => <
+        core_qtensor.rs
+        core_qtensor_serialization.rs
+    >,
+    caffe2-trace => <
+        core_static_tracepoint.rs
+        core_static_tracepoint_elfx86.rs
+    >,
+    caffe2-stats => <
+        core_stats.rs
+        core_stats_test.rs
+    >,
+    caffe2-tensor => <
+        core_tensor.rs
+        core_tensor_int8.rs
+    >,
+    caffe2-test => <
+        core_test_utils.rs
+    >,
+    caffe2-timer => <
+        core_timer.rs
+        core_timer_test.rs
+    >,
+    caffe2-transform => <
+        core_transform.rs
+        core_transform_test.rs
+    >,
+    caffe2-types => <
+        core_types.rs
+    >,
+    caffe2-workspace => <
+        core_workspace.rs
+        core_workspace_test.rs
+    >,
+    caffe2-env => <
+        env.rs
+    >,
+    caffe2-miopen => <
+        hip_common_miopen.rs
+        hip_miopen_wrapper.rs
+        op_hip_activation_ops_miopen.rs
+        op_rnn_hip_recurrent_op_miopen.rs
+    >,
+    caffe2-histogram => <
+        histogram_net_observer.rs
+        histogram_observer.rs
+        output_column_max_histogram_net_observer.rs
+        output_column_max_histogram_observer.rs
+    >,
+    caffe2-ideep => <
+        ideep_ideep_utils.rs
+        ideep_operators_adam.rs
+        ideep_operators_channel_shuffle.rs
+        ideep_operators_concat_split.rs
+        ideep_operators_conv.rs
+        ideep_operators_conv_pool_base.rs
+        ideep_operators_conv_transpose.rs
+        ideep_operators_conv_transpose_unpool_base.rs
+        ideep_operators_dropout.rs
+        ideep_operators_elementwise_sum.rs
+        ideep_operators_expand_squeeze_dims.rs
+        ideep_operators_fully_connected.rs
+        ideep_operators_local_response_normalization.rs
+        ideep_operators_momentum_sgd.rs
+        ideep_operators_operator_fallback_ideep.rs
+        ideep_operators_order_switch_ops.rs
+        ideep_operators_pool.rs
+        ideep_operators_quantization_int8_add.rs
+        ideep_operators_quantization_int8_conv.rs
+        ideep_operators_quantization_int8_dequantize.rs
+        ideep_operators_quantization_int8_fully_connected.rs
+        ideep_operators_quantization_int8_given_tensor_fill.rs
+        ideep_operators_quantization_int8_pool.rs
+        ideep_operators_quantization_int8_quantize.rs
+        ideep_operators_quantization_int8_relu.rs
+        ideep_operators_queue_ops.rs
+        ideep_operators_relu.rs
+        ideep_operators_reshape.rs
+        ideep_operators_shape.rs
+        ideep_operators_sigmoid.rs
+        ideep_operators_spatial_batch_norm.rs
+        ideep_operators_transpose.rs
+        ideep_operators_utility_ops.rs
+        ideep_utils_ideep_context.rs
+        ideep_utils_ideep_operator.rs
+        ideep_utils_ideep_register.rs
+    >,
+    caffe2-image => <
+        image_input.rs
+    >,
+    caffe2-traits => <
+        type_traits.rs
+    >,
+    caffe2-nomnigraph => <
+        nomnigraph_algorithmstest.rs
+        nomnigraph_binarymatchimpltest.rs
+        nomnigraph_converters_dot.rs
+        nomnigraph_generated_opclasses.rs
+        nomnigraph_graph_algorithms.rs
+        nomnigraph_graph_binarymatchimpl.rs
+        nomnigraph_graph_graph.rs
+        nomnigraph_graph_tarjansimpl.rs
+        nomnigraph_graph_toposort.rs
+        nomnigraph_graphtest.rs
+        nomnigraph_matchtest.rs
+        nomnigraph_neuralnet.rs
+        nomnigraph_neuralnettest.rs
+        nomnigraph_representations_compiler.rs
+        nomnigraph_representations_controlflow.rs
+        nomnigraph_representations_neuralnet.rs
+        nomnigraph_subgraphmatchertest.rs
+        nomnigraph_support_common.rs
+        nomnigraph_tarjansimpltest.rs
+        nomnigraph_test_util.rs
+        nomnigraph_toposorttest.rs
+        nomnigraph_transformations_match.rs
+        nomnigraph_transformations_subgraphmatcher.rs
+    >,
+    caffe2op-abs => <
+        op_abs.rs
+
+    >,
+    caffe2op-accum => <
+        op_accumulate.rs
+
+    >,
+    caffe2op-accuracy => <
+        op_accuracy.rs
+
+    >,
+    caffe2op-acos => <
+        op_acos.rs
+
+    >,
+    caffe2op-activation => <
+        op_activation_ops_cudnn.rs
+
+    >,
+    caffe2op-affine => <
+        op_affine_channel.rs
+
+    >,
+    caffe2op-alias => <
+        op_alias_with_name.rs
+
+    >,
+    caffe2op-apmeter => <
+        op_apmeter.rs
+
+    >,
+    caffe2op-args => <
+        op_arg_ops.rs
+
+    >,
+    caffe2op-asin => <
+        op_asin.rs
+
+    >,
+    caffe2op-assert => <
+        op_assert.rs
+
+    >,
+    caffe2op-asyncnet => <
+        op_async_net_barrier.rs
+
+    >,
+    caffe2op-atan => <
+        op_atan.rs
+
+    >,
+    caffe2op-atomics => <
+        op_atomic_ops.rs
+
+    >,
+    caffe2op-batch => <
+        op_batch_box_cox.rs
+        op_batch_bucketize.rs
+        op_batch_gather_ops.rs
+        op_batch_matmul.rs
+        op_batch_matmul_op_gpu_test.rs
+        op_batch_matmul_op_test.rs
+        op_batch_moments.rs
+        op_batch_permutation.rs
+        op_batch_permutation_op_gpu_test.rs
+        op_batch_sparse_to_dense.rs
+
+    >,
+    caffe2op-bbox => <
+        op_bbox_transform.rs
+
+    >,
+    caffe2op-bisect => <
+        op_bisect_percentile.rs
+
+    >,
+    caffe2op-mask => <
+        op_boolean_mask_ops.rs
+        op_boolean_unmask_ops.rs
+        op_boolean_unmask_ops_test.rs
+
+    >,
+    caffe2op-nmsbox => <
+        op_box_with_nms_limit.rs
+
+    >,
+    caffe2op-bucketize => <
+        op_bucketize.rs
+
+    >,
+    caffe2op-dequant => <
+        op_byte_weight_dequant.rs
+
+    >,
+    caffe2op-cast => <
+        op_cast.rs
+
+    >,
+    caffe2op-cbrt => <
+        op_cbrt.rs
+
+    >,
+    caffe2op-ceil => <
+        op_ceil.rs
+
+    >,
+    caffe2op-channelbackprop => <
+        op_channel_backprop_stats.rs
+
+    >,
+    caffe2op-channelshuffle => <
+        op_channel_shuffle.rs
+
+    >,
+    caffe2op-channelstats => <
+        op_channel_stats.rs
+
+    >,
+    caffe2op-clip => <
+        op_clip.rs
+
+    >,
+    caffe2op-collect => <
+        op_collect_and_distribute_fpn_rpn_proposals.rs
+
+    >,
+    caffe2op-communicator => <
+        op_communicator.rs
+
+    >,
+    caffe2op-concatsplit => <
+        op_concat_split.rs
+
+    >,
+    caffe2op-conditional => <
+        op_conditional.rs
+
+    >,
+    caffe2op-conv => <
+        op_conv.rs
+        op_conv_gradient.rs
+        op_conv_op_cache_cudnn.rs
+        op_conv_op_cache_cudnn_test.rs
+        op_conv_op_cudnn.rs
+        op_conv_op_eigen.rs
+        op_conv_op_gpu.rs
+        op_conv_op_impl.rs
+        op_conv_op_shared.rs
+        op_conv_pool_op_base.rs
+        op_conv_transpose.rs
+        op_conv_transpose_gradient.rs
+        op_conv_transpose_op_cudnn.rs
+        op_conv_transpose_op_impl.rs
+        op_conv_transpose_op_mobile.rs
+        op_conv_transpose_op_mobile_impl.rs
+        op_conv_transpose_op_mobile_test.rs
+        op_conv_transpose_unpool_op_base.rs
+
+    >,
+    caffe2op-copy => <
+        op_copy.rs
+        op_copy_rows_to_tensor.rs
+
+    >,
+    caffe2op-cos => <
+        op_cos.rs
+        op_cosine_embedding_criterion.rs
+
+    >,
+    caffe2op-cosh => <
+        op_cosh.rs
+
+    >,
+    caffe2op-counter => <
+        op_counter_ops.rs
+
+    >,
+    caffe2op-crash => <
+        op_crash.rs
+
+    >,
+    caffe2op-scope => <
+        op_create_scope.rs
+
+    >,
+    caffe2op-crfviterbi => <
+        op_crf_viterbi.rs
+
+    >,
+    caffe2op-crossentropy => <
+        op_cross_entropy.rs
+
+    >,
+    caffe2op-ctc => <
+        op_ctc_beam_search_decoder.rs
+        op_ctc_greedy_decoder.rs
+
+    >,
+    caffe2op-cube => <
+        op_cube.rs
+
+    >,
+    caffe2op-couple => <
+        op_data_couple.rs
+
+    >,
+    caffe2op-dataset => <
+        op_dataset_ops.rs
+
+    >,
+    caffe2op-deform => <
+        op_deform_conv.rs
+
+    >,
+    caffe2op-densevec => <
+        op_dense_vector_to_id_list.rs
+
+    >,
+    caffe2op-distance => <
+        op_distance.rs
+
+    >,
+    caffe2op-do => <
+        op_do.rs
+
+    >,
+    caffe2op-dropout => <
+        op_dropout.rs
+
+    >,
+    caffe2op-elementwise => <
+        op_elementwise_add.rs
+        op_elementwise_div.rs
+        op_elementwise_div_gradient.rs
+        op_elementwise_linear.rs
+        op_elementwise_logical_ops.rs
+        op_elementwise_mul.rs
+        op_elementwise_op_gpu_test.rs
+        op_elementwise_op_test.rs
+        op_elementwise_ops.rs
+        op_elementwise_ops_schema.rs
+        op_elementwise_ops_utils.rs
+        op_elementwise_sub.rs
+        op_elementwise_sum.rs
+
+    >,
+    caffe2op-elu => <
+        op_elu.rs
+        op_elu_op_cudnn.rs
+
+    >,
+    caffe2op-enforce => <
+        op_enforce_finite.rs
+        op_ensure_clipped.rs
+        op_ensure_cpu_output.rs
+
+    >,
+    caffe2op-erf => <
+        op_erf.rs
+
+    >,
+    caffe2op-exp => <
+        op_exp.rs
+
+    >,
+    caffe2op-expand => <
+        op_expand.rs
+        op_expand_squeeze_dims.rs
+
+    >,
+    caffe2op-inference => <
+        op_fc_inference.rs
+
+    >,
+    caffe2op-featuremaps => <
+        op_feature_maps_ops.rs
+
+    >,
+    caffe2op-feed => <
+        op_feed_blob.rs
+
+    >,
+    caffe2op-filler => <
+        op_filler.rs
+
+    >,
+    caffe2op-find => <
+        op_find.rs
+
+    >,
+    caffe2op-finddup => <
+        op_find_duplicate_elements.rs
+
+    >,
+    caffe2op-flatten => <
+        op_flatten.rs
+
+    >,
+    caffe2op-topk => <
+        op_flexible_top_k.rs
+
+    >,
+    caffe2op-floor => <
+        op_floor.rs
+
+    >,
+    caffe2op-free => <
+        op_free.rs
+
+    >,
+    caffe2op-fullyconnected => <
+        op_fully_connected.rs
+        op_fully_connected_op_gpu.rs
+
+    >,
+    caffe2op-fusedrowwise => <
+        op_fused_rowwise_8bit_conversion_ops.rs
+        op_fused_rowwise_nbit_conversion_ops.rs
+        op_fused_rowwise_nbitfake_conversion_ops.rs
+        op_fused_rowwise_random_quantization_ops.rs
+
+    >,
+    caffe2op-gather => <
+        op_gather.rs
+        op_gather_fused_8bit_rowwise.rs
+        op_gather_ranges_to_dense.rs
+
+    >,
+    caffe2op-gelu => <
+        op_gelu.rs
+
+    >,
+    caffe2op-generateproposals => <
+        op_generate_proposals.rs
+        op_generate_proposals_op_gpu_test.rs
+        op_generate_proposals_op_test.rs
+        op_generate_proposals_op_util_boxes.rs
+        op_generate_proposals_op_util_boxes_test.rs
+        op_generate_proposals_op_util_nms.rs
+        op_generate_proposals_op_util_nms_gpu.rs
+        op_generate_proposals_op_util_nms_gpu_test.rs
+        op_generate_proposals_op_util_nms_test.rs
+
+    >,
+    caffe2op-fillbytestr => <
+        op_given_tensor_byte_string_to_uint8_fill.rs
+
+    >,
+    caffe2op-filltensor => <
+        op_given_tensor_fill.rs
+
+    >,
+    caffe2op-glu => <
+        op_glu.rs
+
+    >,
+    caffe2op-groupnorm => <
+        op_group_norm.rs
+
+    >,
+    caffe2op-gru => <
+        op_gru_unit.rs
+
+    >,
+    caffe2op-hsoftmax => <
+        op_h_softmax.rs
+
+    >,
+    caffe2op-halffloat => <
+        op_half_float_ops.rs
+        op_half_float_ops_test.rs
+
+    >,
+    caffe2op-hardsigmoid => <
+        op_hard_sigmoid.rs
+
+    >,
+    caffe2op-heatmap => <
+        op_heatmap_max_keypoint.rs
+
+    >,
+    caffe2op-histogram => <
+        op_histogram.rs
+
+    >,
+    caffe2op-if => <
+        op_if.rs
+
+    >,
+    caffe2op-im2col => <
+        op_im2col.rs
+
+    >,
+    caffe2op-indexhash => <
+        op_index_hash_ops.rs
+
+    >,
+    caffe2op-index => <
+        op_index_ops.rs
+
+    >,
+    caffe2op-instancenorm => <
+        op_instance_norm.rs
+
+    >,
+    caffe2op-integralimage => <
+        op_integral_image.rs
+
+    >,
+    caffe2op-isempty => <
+        op_is_empty.rs
+
+    >,
+    caffe2op-jsd => <
+        op_jsd.rs
+
+    >,
+    caffe2op-keysplit => <
+        op_key_split_ops.rs
+
+    >,
+    caffe2op-lastnwindow => <
+        op_last_n_window_collector.rs
+
+    >,
+    caffe2op-layernorm => <
+        op_layer_norm.rs
+
+    >,
+    caffe2op-leakyrelu => <
+        op_leaky_relu.rs
+
+    >,
+    caffe2op-lengthsplit => <
+        op_length_split.rs
+
+    >,
+    caffe2op-lengthspad => <
+        op_lengths_pad.rs
+
+    >,
+    caffe2op-lengthsreduce => <
+        op_lengths_reducer_fused_8bit_rowwise_ops.rs
+        op_lengths_reducer_fused_nbit_rowwise_ops.rs
+        op_lengths_reducer_ops.rs
+        op_lengths_reducer_rowwise_8bit_ops.rs
+
+    >,
+    caffe2op-lengthstile => <
+        op_lengths_tile.rs
+
+    >,
+    caffe2op-lengthstop => <
+        op_lengths_top_k.rs
+
+    >,
+    caffe2op-listwisel2r => <
+        op_listwise_l2r.rs
+
+    >,
+    caffe2op-loadsave => <
+        op_load_save.rs
+        op_load_save_op_util.rs
+
+    >,
+    caffe2op-localresponsenormalization => <
+        op_local_response_normalization.rs
+        op_local_response_normalization_op_cudnn.rs
+
+    >,
+    caffe2op-locallyconnected => <
+        op_locally_connected.rs
+        op_locally_connected_op_impl.rs
+        op_locally_connected_op_util.rs
+
+    >,
+    caffe2op-log => <
+        op_log.rs
+
+    >,
+    caffe2op-logit => <
+        op_logit.rs
+
+    >,
+    caffe2op-loss => <
+        op_loss.rs
+
+    >,
+    caffe2op-lppool => <
+        op_lp_pool.rs
+
+    >,
+    caffe2op-lpnorm => <
+        op_lpnorm.rs
+
+    >,
+    caffe2op-lstm => <
+        op_inference_lstm.rs
+        op_lstm_unit.rs
+        op_lstm_utils.rs
+
+    >,
+    caffe2op-map => <
+        op_map_ops.rs
+
+    >,
+    caffe2op-marginrank => <
+        op_margin_ranking_criterion.rs
+
+    >,
+    caffe2op-matmul => <
+        op_matmul.rs
+
+    >,
+    caffe2op-maxpool => <
+        op_max_pool_with_index_gpu.rs
+
+    >,
+    caffe2op-mean => <
+        op_mean.rs
+
+    >,
+    caffe2op-mergeid => <
+        op_merge_id_lists.rs
+
+    >,
+    caffe2op-minmax => <
+        op_minmax_ops.rs
+
+    >,
+    caffe2op-mish => <
+        op_mish.rs
+
+    >,
+    caffe2op-mod => <
+        op_mod.rs
+
+    >,
+    caffe2op-moments => <
+        op_moments.rs
+
+    >,
+    caffe2op-multiclass => <
+        op_multi_class_accuracy.rs
+
+    >,
+    caffe2op-negativegradient => <
+        op_negate_gradient.rs
+
+    >,
+    caffe2op-negative => <
+        op_negative.rs
+
+    >,
+    caffe2op-ngram => <
+        op_ngram_ops.rs
+
+    >,
+    caffe2op-normalize => <
+        op_norm_planar_yuv.rs
+        op_normalize.rs
+        op_normalize_l1.rs
+
+    >,
+    caffe2op-numpytile => <
+        op_numpy_tile.rs
+
+    >,
+    caffe2op-onehot => <
+        op_one_hot_ops.rs
+
+    >,
+    caffe2op-onnxwhile => <
+        op_onnx_while.rs
+
+    >,
+    caffe2op-fallbackgpu => <
+        op_operator_fallback_gpu.rs
+        op_operator_fallback_gpu_test.rs
+
+    >,
+    caffe2op-orderswitch => <
+        op_order_switch_ops.rs
+        op_order_switch_ops_cudnn.rs
+
+    >,
+    caffe2op-packrnnseq => <
+        op_pack_rnn_sequence.rs
+
+    >,
+    caffe2op-packsegments => <
+        op_pack_segments.rs
+
+    >,
+    caffe2op-pad => <
+        op_pad.rs
+
+    >,
+    caffe2op-partition => <
+        op_partition_ops.rs
+
+    >,
+    caffe2op-percentile => <
+        op_percentile.rs
+
+    >,
+    caffe2op-perplexity => <
+        op_perplexity.rs
+
+    >,
+    caffe2op-plt => <
+        op_piecewise_linear_transform.rs
+
+    >,
+    caffe2op-pool => <
+        op_pool.rs
+        op_pool_gradient.rs
+        op_pool_op_cudnn.rs
+        op_pool_op_util.rs
+
+    >,
+    caffe2op-pow => <
+        op_pow.rs
+
+    >,
+    caffe2op-prefetch => <
+        op_prefetch.rs
+
+    >,
+    caffe2op-prelu => <
+        op_prelu.rs
+
+    >,
+    caffe2op-prepend => <
+        op_prepend_dim.rs
+
+    >,
+    caffe2op-quantdecode => <
+        op_quant_decode.rs
+
+    >,
+    caffe2op-quantile => <
+        op_quantile.rs
+
+    >,
+    caffe2op-i8quantized => <
+        op_quantized_int8_add.rs
+        op_quantized_int8_average_pool.rs
+        op_quantized_int8_channel_shuffle.rs
+        op_quantized_int8_concat.rs
+        op_quantized_int8_conv.rs
+        op_quantized_int8_conv_transpose.rs
+        op_quantized_int8_dequantize.rs
+        op_quantized_int8_fc.rs
+        op_quantized_int8_flatten.rs
+        op_quantized_int8_given_tensor_fill.rs
+        op_quantized_int8_leaky_relu.rs
+        op_quantized_int8_max_pool.rs
+        op_quantized_int8_quantize.rs
+        op_quantized_int8_relu.rs
+        op_quantized_int8_reshape.rs
+        op_quantized_int8_resize_nearest.rs
+        op_quantized_int8_roi_align.rs
+        op_quantized_int8_roi_align_op_test.rs
+        op_quantized_int8_sigmoid.rs
+        op_quantized_int8_slice.rs
+        op_quantized_int8_softmax.rs
+        op_quantized_int8_test.rs
+        op_quantized_int8_test_utils.rs
+        op_quantized_int8_transpose.rs
+        op_quantized_int8_utils.rs
+
+    >,
+    caffe2op-rankloss => <
+        op_rank_loss.rs
+
+    >,
+    caffe2op-reciprocal => <
+        op_reciprocal.rs
+
+    >,
+    caffe2op-reduce => <
+        op_reduce_front_back_max_ops.rs
+        op_reduce_front_back_mean_ops.rs
+        op_reduce_front_back_sum_mean_ops.rs
+        op_reduce_front_back_sum_ops.rs
+        op_reduce_ops.rs
+        op_reducer_functors.rs
+        op_reduction_ops.rs
+
+    >,
+    caffe2op-relu => <
+        op_relu.rs
+        op_relu_n.rs
+
+    >,
+    caffe2op-remove => <
+        op_remove_data_blocks.rs
+
+    >,
+    caffe2op-nanreplace => <
+        op_replace_nan.rs
+
+    >,
+    caffe2op-reservoir => <
+        op_reservoir_sampling.rs
+
+    >,
+    caffe2op-reshape => <
+        op_reshape.rs
+        op_reshape_op_gpu_test.rs
+
+    >,
+    caffe2op-resize => <
+        op_resize.rs
+        op_resize_3d.rs
+
+    >,
+    caffe2op-reversepacked => <
+        op_reverse_packed_segs.rs
+
+    >,
+    caffe2op-rmac => <
+        op_rmac_regions.rs
+
+    >,
+    caffe2op-rms => <
+        op_rms_norm.rs
+
+    >,
+    caffe2op-rnn => <
+        op_rnn_recurrent_network.rs
+        op_rnn_recurrent_network_blob_fetcher.rs
+        op_rnn_recurrent_network_executor.rs
+        op_rnn_recurrent_network_executor_gpu.rs
+        op_rnn_recurrent_network_executor_incl.rs
+        op_rnn_recurrent_op_cudnn.rs
+
+    >,
+    caffe2op-roialign => <
+        op_roi_align.rs
+        op_roi_align_gradient.rs
+        op_roi_align_op_gpu_test.rs
+        op_roi_align_rotated.rs
+        op_roi_align_rotated_gradient.rs
+
+    >,
+    caffe2op-roipool => <
+        op_roi_pool.rs
+
+    >,
+    caffe2op-rowmul => <
+        op_rowmul.rs
+
+    >,
+    caffe2op-rsqrt => <
+        op_rsqrt.rs
+
+    >,
+    caffe2op-scale => <
+        op_scale.rs
+        op_scale_blobs.rs
+
+    >,
+    caffe2op-segmentreduction => <
+        op_segment_reduction.rs
+
+    >,
+    caffe2op-selfbinning => <
+        op_self_binning_histogram.rs
+
+    >,
+    caffe2op-selu => <
+        op_selu.rs
+
+    >,
+    caffe2op-sequence => <
+        op_sequence_ops.rs
+
+    >,
+    caffe2op-shape => <
+        op_shape.rs
+
+    >,
+    caffe2op-sigmoid => <
+        op_sigmoid.rs
+        op_sigmoid_gradient.rs
+
+    >,
+    caffe2op-sin => <
+        op_sin.rs
+
+    >,
+    caffe2op-sinh => <
+
+    >,
+    caffe2op-sinusoid => <
+        op_sinusoid_position_encoding.rs
+
+    >,
+    caffe2op-slice => <
+        op_slice.rs
+
+    >,
+    caffe2op-softmax => <
+        op_softmax.rs
+        op_softmax_op_cudnn.rs
+        op_softmax_utils.rs
+        op_softmax_with_loss.rs
+
+    >,
+    caffe2op-softplus => <
+        op_softplus.rs
+
+    >,
+    caffe2op-softsign => <
+        op_softsign.rs
+
+    >,
+    caffe2op-spacebatch => <
+        op_space_batch.rs
+
+    >,
+    caffe2op-sparsedropout => <
+        op_sparse_dropout_with_replacement.rs
+
+    >,
+    caffe2op-sparselpreg => <
+        op_sparse_lp_regularizer.rs
+
+    >,
+    caffe2op-sparsenormalize => <
+        op_sparse_normalize.rs
+
+    >,
+    caffe2op-sparsetodense => <
+        op_sparse_to_dense.rs
+        op_sparse_to_dense_mask.rs
+
+    >,
+    caffe2op-spatialbatchnorm => <
+        op_spatial_batch_norm.rs
+
+    >,
+    caffe2op-spatialsoftmax => <
+        op_spatial_softmax_with_loss.rs
+
+    >,
+    caffe2op-sqr => <
+        op_sqr.rs
+
+    >,
+    caffe2op-sqrt => <
+        op_sqrt.rs
+        op_square_root_divide.rs
+
+    >,
+    caffe2op-stats => <
+        op_stats_ops.rs
+        op_stats_put_ops.rs
+
+    >,
+    caffe2op-stopgradient => <
+        op_stop_gradient.rs
+
+    >,
+    caffe2op-string => <
+        op_string_ops.rs
+        op_string_ops_test.rs
+
+    >,
+    caffe2op-stump => <
+        op_stump_func.rs
+
+    >,
+    caffe2op-stylizer => <
+        op_stylizer_ops.rs
+
+    >,
+    caffe2op-summarize => <
+        op_summarize.rs
+
+    >,
+    caffe2op-swish => <
+        op_swish.rs
+
+    >,
+    caffe2op-tan => <
+        op_tan.rs
+
+    >,
+    caffe2op-tanh => <
+        op_tanh.rs
+        op_tanh_gradient.rs
+
+    >,
+    caffe2op-tensorprotos => <
+        op_tensor_protos_db_input.rs
+
+    >,
+    caffe2op-textfile => <
+        op_text_file_reader.rs
+        op_text_file_reader_utils.rs
+        op_text_file_reader_utils_test.rs
+
+    >,
+    caffe2op-thresholdedrelu => <
+        op_thresholded_relu.rs
+
+    >,
+    caffe2op-tile => <
+        op_tile.rs
+
+    >,
+    caffe2op-topk => <
+        op_top_k.rs
+
+    >,
+    caffe2op-transpose => <
+        op_transpose.rs
+        op_transpose_op_cudnn.rs
+
+    >,
+    caffe2op-tt => <
+        op_tt_linear.rs
+
+    >,
+    caffe2op-unique => <
+        op_unique_ops.rs
+
+    >,
+    caffe2op-unsafecoalesce => <
+        op_unsafe_coalesce.rs
+
+    >,
+    caffe2op-upsample => <
+        op_upsample.rs
+
+    >,
+    caffe2op-utility => <
+        op_utility_ops.rs
+        op_utility_ops_gpu_test.rs
+        op_utility_ops_test.rs
+        op_utils_cudnn.rs
+
+    >,
+    caffe2op-variablepad => <
+        op_variable_length_sequence_padding.rs
+
+    >,
+    caffe2op-weightedmultisample => <
+        op_weighted_multi_sampling.rs
+
+    >,
+    caffe2op-weightedsample => <
+        op_weighted_sample.rs
+
+    >,
+    caffe2op-while => <
+        op_while.rs
+
+    >,
+    caffe2op-workspace => <
+        op_workspace_ops.rs
+
+    >,
+    caffe2op-zerog => <
+        op_zero_gradient.rs
+
+    >,
+    caffe2op-info => <
+        tensor_info.rs
+        operator_info.rs
+    >,
+    caffe2-opt => <
+        opt_annotations.rs
+        opt_backend_cutting.rs
+        opt_backend_cutting_test.rs
+        opt_backend_transformer_base.rs
+        opt_bound_shape_inference_test.rs
+        opt_bound_shape_inferencer.rs
+        opt_converter.rs
+        opt_converter_nomigraph_test.rs
+        opt_custom_cc_amrc.rs
+        opt_custom_concat_elim.rs
+        opt_custom_concat_elim_test.rs
+        opt_custom_converter.rs
+        opt_custom_converter_test.rs
+        opt_custom_freeze_quantization_params.rs
+        opt_custom_in_batch_broadcast.rs
+        opt_custom_in_batch_broadcast_test.rs
+        opt_custom_pointwise_elim.rs
+        opt_dead_code_elim.rs
+        opt_dead_code_elim_test.rs
+        opt_device.rs
+        opt_device_test.rs
+        opt_distributed.rs
+        opt_distributed_converter.rs
+        opt_distributed_test.rs
+        opt_fakefp16_transform.rs
+        opt_fusion.rs
+        opt_glow_net_transform.rs
+        opt_mobile.rs
+        opt_mobile_test.rs
+        opt_nql_ast.rs
+        opt_nql_graphmatcher.rs
+        opt_nql_tests_graphmatchertest.rs
+        opt_onnx_convert.rs
+        opt_onnxifi.rs
+        opt_onnxifi_transformer.rs
+        opt_optimize_ideep.rs
+        opt_optimizer.rs
+        opt_passes.rs
+        opt_shape_info.rs
+        opt_split_slss_test.rs
+        opt_tvm_transformer.rs
+
+    >,
+    caffe2-output => <
+        output_min_max_net_observer.rs
+        output_min_max_observer.rs
+
+    >,
+    caffe2-perfkernels => <
+        perfkernels_adagrad.rs
+        perfkernels_adagrad_avx2.rs
+        perfkernels_common.rs
+        perfkernels_cvtsh_ss_bugfix.rs
+        perfkernels_embedding_lookup.rs
+        perfkernels_embedding_lookup_avx2.rs
+        perfkernels_embedding_lookup_fused_8bit_rowwise_avx2.rs
+        perfkernels_embedding_lookup_fused_8bit_rowwise_idx_avx2.rs
+        perfkernels_embedding_lookup_idx.rs
+        perfkernels_embedding_lookup_idx_avx2.rs
+        perfkernels_fused_8bit_rowwise_embedding_lookup.rs
+        perfkernels_fused_8bit_rowwise_embedding_lookup_idx.rs
+        perfkernels_fused_nbit_rowwise_conversion.rs
+        perfkernels_lstm_unit_cpu-impl.rs
+        perfkernels_lstm_unit_cpu.rs
+        perfkernels_lstm_unit_cpu_avx2.rs
+        perfkernels_lstm_unit_cpu_common.rs
+        perfkernels_math.rs
+        perfkernels_math_cpu_avx2.rs
+        perfkernels_math_cpu_base.rs
+        perfkernels_typed_axpy.rs
+        perfkernels_typed_axpy_avx.rs
+        perfkernels_typed_axpy_avx2.rs
+
+    >,
+    caffe2-predictor => <
+        predictor_config.rs
+        predictor_consts.rs
+        predictor_emulator_benchmark.rs
+        predictor_emulator_data_filler.rs
+        predictor_emulator_data_filler_test.rs
+        predictor_emulator_emulator.rs
+        predictor_emulator_net_supplier.rs
+        predictor_emulator_output_formatter.rs
+        predictor_emulator_profiler.rs
+        predictor_emulator_std_output_formatter.rs
+        predictor_emulator_time_profiler.rs
+        predictor_emulator_utils.rs
+        predictor_inferencegraph.rs
+        predictor_predictor.rs
+        predictor_test.rs
+        predictor_threadlocalptr.rs
+        predictor_transforms.rs
+        predictor_utils.rs
+
+    >,
+    caffe2-prof => <
+        prof_dag.rs
+
+    >,
+    caffe2-quant => <
+        quant_utils.rs
+
+    >,
+    caffe2-queue => <
+        queue_blobs_queue.rs
+        queue_blobs_queue_db.rs
+        queue_queue_ops.rs
+        queue_rebatching_queue.rs
+        queue_rebatching_queue_ops.rs
+
+    >,
+    caffe2-register => <
+        register_quantization_params_net_observer.rs
+        register_quantization_params_with_histogram_net_observer.rs
+
+    >,
+    caffe2-registry => <
+        registry.rs
+
+    >,
+    caffe2-serverquantize => <
+        server_quantize_activation_distribution_observer.rs
+        server_quantize_batch_matmul_dnnlowp.rs
+        server_quantize_batch_permutation_dnnlowp.rs
+        server_quantize_caffe2_dnnlowp_utils.rs
+        server_quantize_channel_shuffle_dnnlowp.rs
+        server_quantize_compute_equalization_scale.rs
+        server_quantize_concat_dnnlowp.rs
+        server_quantize_conv_dnnlowp.rs
+        server_quantize_conv_dnnlowp_acc16.rs
+        server_quantize_conv_pool_dnnlowp_op_base.rs
+        server_quantize_conv_relu.rs
+        server_quantize_dequantize_dnnlowp.rs
+        server_quantize_dnnlowp.rs
+        server_quantize_dnnlowp_partition.rs
+        server_quantize_dynamic_histogram.rs
+        server_quantize_dynamic_histogram_test.rs
+        server_quantize_elementwise_add_dnnlowp.rs
+        server_quantize_elementwise_dnnlowp.rs
+        server_quantize_elementwise_linear_dnnlowp.rs
+        server_quantize_elementwise_mul_dnnlowp.rs
+        server_quantize_elementwise_sum_benchmark.rs
+        server_quantize_elementwise_sum_dnnlowp.rs
+        server_quantize_elementwise_sum_dnnlowp_op_avx2.rs
+        server_quantize_elementwise_sum_relu.rs
+        server_quantize_fb_fc_packed.rs
+        server_quantize_fbgemm_fp16_pack.rs
+        server_quantize_fbgemm_pack.rs
+        server_quantize_fbgemm_pack_blob.rs
+        server_quantize_fbgemm_pack_matrix_cache.rs
+        server_quantize_fc_fake_lowp_test.rs
+        server_quantize_fully_connected_dnnlowp.rs
+        server_quantize_fully_connected_dnnlowp_acc16.rs
+        server_quantize_fully_connected_fake_lowp.rs
+        server_quantize_fully_connected_fake_lowp_op_avx2.rs
+        server_quantize_group_norm_dnnlowp.rs
+        server_quantize_group_norm_dnnlowp_op_avx2.rs
+        server_quantize_im2col_dnnlowp.rs
+        server_quantize_int8_gen_quant_params.rs
+        server_quantize_int8_gen_quant_params_min_max.rs
+        server_quantize_int8_quant_scheme_blob_fill.rs
+        server_quantize_kl_minimization.rs
+        server_quantize_kl_minimization_example.rs
+        server_quantize_l1_minimization_example.rs
+        server_quantize_l2_minimization.rs
+        server_quantize_l2_minimization_approx_example.rs
+        server_quantize_l2_minimization_example.rs
+        server_quantize_l2_minimization_test.rs
+        server_quantize_lstm_unit_dnnlowp.rs
+        server_quantize_mmio.rs
+        server_quantize_norm_minimization.rs
+        server_quantize_norm_minimization_avx2.rs
+        server_quantize_op_wrapper.rs
+        server_quantize_p99_example.rs
+        server_quantize_pool_dnnlowp.rs
+        server_quantize_pool_dnnlowp_op_avx2.rs
+        server_quantize_quantization_error_minimization.rs
+        server_quantize_quantize_dnnlowp.rs
+        server_quantize_relu_dnnlowp.rs
+        server_quantize_relu_dnnlowp_op_avx2.rs
+        server_quantize_requantization_test.rs
+        server_quantize_resize_nearest_3d_dnnlowp.rs
+        server_quantize_resize_nearest_dnnlowp.rs
+        server_quantize_sigmoid.rs
+        server_quantize_sigmoid_dnnlowp.rs
+        server_quantize_sigmoid_test.rs
+        server_quantize_spatial_batch_norm_dnnlowp.rs
+        server_quantize_spatial_batch_norm_dnnlowp_op_avx2.rs
+        server_quantize_spatial_batch_norm_relu.rs
+        server_quantize_tanh.rs
+        server_quantize_tanh_dnnlowp.rs
+        server_quantize_tanh_test.rs
+        server_quantize_transpose.rs
+        server_quantize_utility_dnnlowp_ops.rs
+    >,
+    caffe2-sgd => <
+        sgd_adadelta.rs
+        sgd_adagrad.rs
+        sgd_adagrad_fused.rs
+        sgd_adam.rs
+        sgd_clip_tensor.rs
+        sgd_fp16_momentum_sgd.rs
+        sgd_fp32_momentum_sgd.rs
+        sgd_ftrl.rs
+        sgd_gftrl.rs
+        sgd_iter.rs
+        sgd_lars.rs
+        sgd_learning_rate.rs
+        sgd_learning_rate_adaption.rs
+        sgd_learning_rate_functors.rs
+        sgd_math_lp.rs
+        sgd_momentum_sgd.rs
+        sgd_rmsprop.rs
+        sgd_rowwise_adagrad_fused.rs
+        sgd_rowwise_counter.rs
+        sgd_storm.rs
+        sgd_weight_scale.rs
+        sgd_wngrad.rs
+        sgd_yellowfin.rs
+    >,
+    caffe2-store => <
+        store_interleaved.rs
+    >,
+    caffe2-system => <
+        system.rs
+    >,
+    caffe2-txform => <
+        txform_common_subexpression_elimination.rs
+        txform_common_subexpression_elimination_test.rs
+        txform_conv_to_nnpack_transform.rs
+        txform_conv_to_nnpack_transform_test.rs
+        txform_pattern_net_transform.rs
+        txform_pattern_net_transform_test.rs
+        txform_single_op_transform.rs
+    >,
+    caffe2-util => <
+        util_bench_utils.rs
+        util_cast.rs
+        util_cast_test.rs
+        util_conversions.rs
+        util_cpu_neon.rs
+        util_cpuid.rs
+        util_cpuid_test.rs
+        util_eigen_utils.rs
+        util_fatal_signal_asan_no_sig_test.rs
+        util_filler.rs
+        util_fixed_divisor.rs
+        util_fixed_divisor_test.rs
+        util_hip_math_blas_gpu_test.rs
+        util_math-detail.rs
+        util_math.rs
+        util_math_broadcast.rs
+        util_math_cpu.rs
+        util_math_elementwise.rs
+        util_math_gpu_test.rs
+        util_math_half_utils.rs
+        util_math_reduce.rs
+        util_math_test.rs
+        util_math_transpose.rs
+        util_math_utils.rs
+        util_murmur_hash3.rs
+        util_proto_utils.rs
+        util_proto_utils_test.rs
+        util_proto_wrap.rs
+        util_signal_handler.rs
+        util_smart_tensor_printer.rs
+        util_smart_tensor_printer_test.rs
+        util_string_utils.rs
+        util_threadpool_pthreadpool-cpp.rs
+        util_threadpool_pthreadpool.rs
+        util_threadpool_pthreadpool_impl.rs
+        util_threadpool_thread_pool_guard.rs
+        util_threadpool_threadpool.rs
+        util_threadpool_workerspool.rs
+        util_zmq_helper.rs
+        align.rs
+        const_assert.rs
+        core_dispatch.rs
+        core_parallel_net_test.rs
+        gradient_maker.rs
+        hsm.rs
+        make_signed.rs
+        metanet.rs
+        named.rs
+        op_cc_bmm_bg.rs
+        op_no_default_engine.rs
+        sum_into.rs
+        test.rs
+        torch.rs
+        unknown.rs
+    >,
+    caffe2-video => <
+        video_decoder.rs
+        video_input.rs
+        video_io.rs
+        video_optical_flow.rs
+    >,
+];
+
+sub create-workspace-crate($crate-name) {
+
+    $crate-name.IO.mkdir unless $crate-name.IO.e;
+
+    my $toml = $crate-name ~ "/Cargo.toml";
+
+    shell "cargo init --lib", :cwd($crate-name) unless $toml.IO.e;
+}
+
+sub move-files-to-crates {
+
+    for @workspace-cratemap -> $item {
+
+        my $crate = $item.kv[0] ~ "/src/";
+
+        my @files = $item.kv[1].List.map: {
+            "src/" ~ $_
+        };
+
+        for @files {
+            if $_.IO.e {
+                shell "mv $_ $crate";
+            }
+        }
+    }
+}
+
+sub write-crates {
+    for @workspace-crates {
+        add-starter-lib-file-for-crate($_);
+
+        glob-import-from-crates($_, [
+            "lazy_static", 
+            "static_assertions", 
+            "bitcoin_derive",
+            "std::collections",
+            "std::rc",
+            "std::cell",
+            "std::sync",
+            "std::ops",
+        ]);
+
+        batch-add-dependencies-to-cargo-toml(
+            [$_], 
+            deps => ["lazy_static", "static_assertions"],
+            ver => "*",
+            write => True,
+        );
+    }
+}
+
+sub add-crate-files-to-lib {
+    for @workspace-crates {
+
+        my $lib   = $_ ~ "/src/lib.rs";
+        my $libtxt = $lib.IO.slurp.subst(/^^\/\/\N+/, "", :g);
+        $lib.IO.spurt: $libtxt ~ "\n";
+
+        my @files = ($_ ~ "/src/")[0].IO.dir.grep: {
+            my $a = $_ ~~ /imports.rs/;
+            my $b = $_ ~~ /lib.rs/;
+            not [$a, $b].any
+        };
+
+        for @files {
+            my $use = 'x!{' ~ $_.basename.split(".")[0] ~ '}' ~ "\n";
+            $lib.IO.spurt: $use, :append;
+        }
+    }
+}
+
+sub add-other-imports {
+
+    my $orig = "src/imports.rs".IO.slurp;
+
+    for @workspace-crates {
+        my $imp   = $_ ~ "/src/imports.rs";
+        $imp.IO.spurt: $orig, :append;
+    }
+}
+
+sub write-additional-deps {
+
+    my $deps = q:to/END/;
+    [dependencies]
+    paste             = "*"
+    nalgebra          = "*"
+    ndarray           = "*"
+    rayon             = "*"
+    protobuf          = "*"
+    byteorder         = "*"
+    smallvec          = "*"
+    mersenne_twister  = "*"
+    mt19937           = "*"
+
+    #opencv            = "*"
+    opencv = "0.53"
+
+    cblas             = "*"
+    cblas-sys         = "*"
+    zmq               = "*"
+    lazy_static       = "*"
+    half              = "*"
+    atomic            = "*"
+    libc              = "*"
+    static_assertions = "*"
+    cudnn             = "*"
+    cudnn-sys         = "*"
+    parking_lot       = "*"
+    rand              = "*"
+    statrs            = "*"
+    num-traits        = "*"
+    zmq-sys           = "*"
+    threadpool        = "*"
+    hip-sys           = { git = "https://github.com/charles-r-earp/hip-sys" }
+    miopen-sys        = { git = "https://github.com/charles-r-earp/miopen-sys" }
+    #ffmpeg-sys       = { version = "4", features = ["build"] }
+
+    #intel-mkl-sys = "*"
+    fftw-sys = { version = "0.4", features = ["intel-mkl"] }
+    test-context  = "*"
+    num           = "*"
+    enhanced_enum = "*"
+
+    END
+
+    for @workspace-crates {
+        my $toml = $_ ~ "/Cargo.toml";
+        $toml.IO.spurt: "\n" ~ $deps, :append;
+    }
+}
+
+sub quote($s) {
+    "\"$s\""
+}
+
+sub write-toplevel-workspace {
+    my $text = qq:to/END/;
+    [workspace]
+    members = [
+    {@workspace-crates>>.&quote.join(",\n").indent(4)}
+    ]
+    END
+    spurt "Cargo.toml", $text;
+}

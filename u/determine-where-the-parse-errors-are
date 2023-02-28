@@ -1,0 +1,41 @@
+#!/usr/bin/env raku
+
+use grust-crate-grammar;
+use Data::Dump::Tree;
+use Terminal::ANSIColor;
+use caffe-workspace;
+use cargo-workspace;
+use global-subparse;
+use rust-crate-parse;
+use file-sort-uniq;
+
+sub MAIN {
+
+    my $errfile  = "errorfile";
+    my $goodfile = "goodfile";
+
+    LEAVE do {
+        sort-unique(file => $goodfile);
+    }
+
+    if $errfile.IO.e {
+        $errfile.IO.unlink;
+    }
+
+    my $goodset  = uniq-from-file(file => $goodfile);
+
+    say "good crates (already parse):\n{$goodset.List.sort.join("\n")}";
+
+    my @crates = get-caffe-crates().grep: {
+        my $good = ~$_ (elem) $goodset;
+        not $good
+    };
+
+    for @crates -> $crate {
+
+        my $found-error 
+        = determine-rust-crate-parse-errors(:$crate,:$errfile,:$goodfile);
+
+        die "found parse error(s) in $crate" if $found-error;
+    }
+}

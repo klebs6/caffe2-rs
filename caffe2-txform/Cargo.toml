@@ -1,0 +1,12 @@
+[dependencies.caffe2-graph]
+path = "../caffe2-graph"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-transform]
+path = "../caffe2-transform"
+[package]
+edition = "2021"
+name = "caffe2-txform"
+version = "0.1.0"

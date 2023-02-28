@@ -1,0 +1,8 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-timer]
+path = "../caffe2-timer"
+[package]
+edition = "2021"
+name = "caffe2-prof"
+version = "0.1.0"

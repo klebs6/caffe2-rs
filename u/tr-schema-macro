@@ -1,0 +1,168 @@
+#!/usr/bin/env raku
+use v6;
+
+#use Grammar::Tracer;
+
+role BasicTokens {
+
+    rule set-of-pairs {
+        '('? '{' [ <pair>+ %% ',' ] '}' ')'? 
+    }
+
+    rule pair {
+        '{' <a=identifier> ',' <b=identifier> '}'
+    }
+
+    token identifier {
+        <[A..Z a..z 0..9 _]>+
+    }
+
+    token const { 'const' }
+
+    token ref   { '&' }
+
+    rule comma { ',' }
+}
+
+role CppLambda does BasicTokens {
+
+    rule block-commented-lambda {
+        '/*' <cpp-lambda> '*/'
+    }
+
+    rule cpp-lambda {
+        :ratchet
+        <lambda-capture-list> <lambda-arg-list> <lambda-body>
+    }
+    rule lambda-capture-list {
+        '[' [<lambda-capture>* %% <comma>] ']'
+    }
+    rule lambda-capture {
+        <const>?
+        <identifier>
+        <ref>?
+    }
+    rule lambda-arg-list {
+        '(' [<lambda-arg>* %% <comma>] ')'
+    }
+    rule lambda-arg {
+        <type=identifier> <name=identifier>
+    }
+    rule lambda-body {
+        '{' .*? '}'
+    }
+}
+
+sub chop-brackets($text, $left = '{', $right = '}') {
+    my $result = $text ~~ /$left (.*) $right/;
+    $result[0].Str.chomp.trim
+}
+
+sub test-cpp-lambda {
+
+    #use Grammar::Tracer;
+
+    my @examples = [
+        '[](int in, int out) { return in == out + 1; }',
+        '[](int in, int out) { 
+            in += 1;
+            return in == out + 1; 
+        }'
+    ];
+
+    grammar Test does CppLambda {
+        rule TOP {
+            <.ws> <cpp-lambda>
+        }
+    }
+
+    for @examples {
+        say chop-brackets(Test.parse($_)<cpp-lambda><lambda-body>.Str);
+    }
+    #say Test.parse($example);
+}
+
+role AllowInplace does BasicTokens does CppLambda {
+
+    token allow-inplace-sigil {
+        | 'allow_inplace'
+        | 'enforce_inplace'
+    }
+
+    rule allow-inplace {
+        <.ws> <allow-inplace-sigil> '!' '{' 
+        <operator-name=identifier> ',' 
+        <allow-inplace-initializer> 
+        '}'
+    }
+
+    rule allow-inplace-initializer {
+        | <set-of-pairs>
+        | <block-commented-lambda>
+        | <cpp-lambda>
+    }
+}
+
+role AllowInplaceActions {
+
+    method allow-inplace($/) {
+        make $/<allow-inplace-sigil>.Str ~ "!" 
+        ~ "\{"
+        ~ $/<operator-name>.Str 
+        ~ ", " ~ $/<allow-inplace-initializer>.made 
+        ~ "}"
+    }
+
+    method allow-inplace-initializer($/) {
+        make $/{$/.keys[0]}.made
+    }
+
+    method set-of-pairs($/) {
+        my @pairs = do for $/<pair> {
+            "({$_<a>.Str}, {$_<b>.Str})"
+        };
+
+        make "vec![{@pairs.join(", ")}]"
+    }
+
+    method block-commented-lambda($/) {
+        make $/<cpp-lambda>.made
+    }
+
+    method cpp-lambda($/) {
+        make "/*" ~ $/.Str ~ "*/"
+    }
+}
+
+grammar SchemaMacroGrammar does AllowInplace {
+
+    rule TOP {
+        | <allow-inplace>
+    }
+}
+
+class SchemaMacroActions does AllowInplaceActions {
+    method TOP($/) {
+        make $/<allow-inplace>.made
+    }
+}
+
+sub translate-schema-macro {
+
+    my $input = $*IN.slurp;
+
+    my $parsed = SchemaMacroGrammar.parse(
+        $input, 
+        actions => SchemaMacroActions
+    );
+
+    say $parsed.made;
+}
+
+sub MAIN(:$test = False) {
+    if $test {
+        test-cpp-lambda();
+    } else {
+        translate-schema-macro();
+    }
+}

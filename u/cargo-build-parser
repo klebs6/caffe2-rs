@@ -1,0 +1,372 @@
+#!/usr/bin/env raku
+use v6;
+
+use Data::Dump::Tree;
+use JSON::Name;
+use JSON::Class;
+
+use lib "./u";
+use condense-use;
+
+class CargoBuild does JSON::Class {
+    class Target does JSON::Class {
+        has Bool $.test;
+        has Str $.name;
+        has Str $.src_path;
+        has Str $.edition;
+        has Bool $.doc;
+        has Bool $.doctest;
+        has  @.kind;
+        has  @.crate_types;
+    }
+    class Profile does JSON::Class {
+        has Str $.opt_level;
+        has Bool $.overflow_checks;
+        has Int $.debuginfo;
+        has Bool $.debug_assertions;
+        has Bool $.test;
+    }
+    class Code does JSON::Class {
+        has Str $.code;
+        has Str $.explanation;
+    }
+    class Text does JSON::Class {
+        has Str $.text;
+        has Int $.highlight_end;
+        has Int $.highlight_start;
+    }
+    class DefSiteSpan does JSON::Class {
+        class Text does JSON::Class {
+            has Str $.text;
+            has Int $.highlight_end;
+            has Int $.highlight_start;
+        }
+        has Any $.suggestion_applicability;
+        has Int $.line_start;
+        has Int $.column_end;
+        has Str $.file_name;
+        has Int $.column_start;
+        has Any $.label;
+        has Int $.byte_start;
+        has Any $.suggested_replacement;
+        has Text @.text;
+        has Int $.line_end;
+        has Bool $.is_primary;
+        has Any $.expansion;
+        has Int $.byte_end;
+    }
+    class Span does JSON::Class {
+        class Text does JSON::Class {
+            has Int $.highlight_start;
+            has Str $.text;
+            has Int $.highlight_end;
+        }
+        has Int $.byte_end;
+        has Int $.byte_start;
+        has Bool $.is_primary;
+        has Str $.file_name;
+        has Int $.column_start;
+        has Int $.line_start;
+        has Any $.suggested_replacement;
+        has Int $.column_end;
+        has Text @.text;
+        has Any $.suggestion_applicability;
+        has Any $.label;
+        has Any $.expansion;
+        has Int $.line_end;
+    }
+    class Expansion does JSON::Class {
+        class Text does JSON::Class {
+            has Str $.text;
+            has Int $.highlight_end;
+            has Int $.highlight_start;
+        }
+        class DefSiteSpan does JSON::Class {
+            class Text does JSON::Class {
+                has Str $.text;
+                has Int $.highlight_end;
+                has Int $.highlight_start;
+            }
+            has Any $.suggestion_applicability;
+            has Int $.line_start;
+            has Int $.column_end;
+            has Str $.file_name;
+            has Int $.column_start;
+            has Any $.label;
+            has Int $.byte_start;
+            has Any $.suggested_replacement;
+            has Text @.text;
+            has Int $.line_end;
+            has Bool $.is_primary;
+            has Any $.expansion;
+            has Int $.byte_end;
+        }
+        class Span does JSON::Class {
+            class Text does JSON::Class {
+                has Int $.highlight_start;
+                has Str $.text;
+                has Int $.highlight_end;
+            }
+            has Int $.byte_end;
+            has Int $.byte_start;
+            has Bool $.is_primary;
+            has Str $.file_name;
+            has Int $.column_start;
+            has Int $.line_start;
+            has Any $.suggested_replacement;
+            has Int $.column_end;
+            has Text @.text;
+            has Any $.suggestion_applicability;
+            has Any $.label;
+            has Any $.expansion;
+            has Int $.line_end;
+        }
+        has DefSiteSpan $.def_site_span;
+        has Span $.span;
+        has Str $.macro_decl_name;
+    }
+    class Children does JSON::Class {
+        has Any $.rendered;
+        has Str $.message;
+        has Str $.level;
+        has  @.children;
+        has Any $.code;
+        has  @.spans;
+    }
+    class Message does JSON::Class {
+        class Code does JSON::Class {
+            has Str $.code;
+            has Str $.explanation;
+        }
+        class Text does JSON::Class {
+            has Str $.text;
+            has Int $.highlight_end;
+            has Int $.highlight_start;
+        }
+        class DefSiteSpan does JSON::Class {
+            class Text does JSON::Class {
+                has Str $.text;
+                has Int $.highlight_end;
+                has Int $.highlight_start;
+            }
+            has Any $.suggestion_applicability;
+            has Int $.line_start;
+            has Int $.column_end;
+            has Str $.file_name;
+            has Int $.column_start;
+            has Any $.label;
+            has Int $.byte_start;
+            has Any $.suggested_replacement;
+            has Text @.text;
+            has Int $.line_end;
+            has Bool $.is_primary;
+            has Any $.expansion;
+            has Int $.byte_end;
+        }
+        class Span does JSON::Class {
+            class Text does JSON::Class {
+                has Int $.highlight_start;
+                has Str $.text;
+                has Int $.highlight_end;
+            }
+            has Int $.byte_end;
+            has Int $.byte_start;
+            has Bool $.is_primary;
+            has Str $.file_name;
+            has Int $.column_start;
+            has Int $.line_start;
+            has Any $.suggested_replacement;
+            has Int $.column_end;
+            has Text @.text;
+            has Any $.suggestion_applicability;
+            has Any $.label;
+            has Any $.expansion;
+            has Int $.line_end;
+        }
+        class Expansion does JSON::Class {
+            class Text does JSON::Class {
+                has Str $.text;
+                has Int $.highlight_end;
+                has Int $.highlight_start;
+            }
+            class DefSiteSpan does JSON::Class {
+                class Text does JSON::Class {
+                    has Str $.text;
+                    has Int $.highlight_end;
+                    has Int $.highlight_start;
+                }
+                has Any $.suggestion_applicability;
+                has Int $.line_start;
+                has Int $.column_end;
+                has Str $.file_name;
+                has Int $.column_start;
+                has Any $.label;
+                has Int $.byte_start;
+                has Any $.suggested_replacement;
+                has Text @.text;
+                has Int $.line_end;
+                has Bool $.is_primary;
+                has Any $.expansion;
+                has Int $.byte_end;
+            }
+            class Span does JSON::Class {
+                class Text does JSON::Class {
+                    has Int $.highlight_start;
+                    has Str $.text;
+                    has Int $.highlight_end;
+                }
+                has Int $.byte_end;
+                has Int $.byte_start;
+                has Bool $.is_primary;
+                has Str $.file_name;
+                has Int $.column_start;
+                has Int $.line_start;
+                has Any $.suggested_replacement;
+                has Int $.column_end;
+                has Text @.text;
+                has Any $.suggestion_applicability;
+                has Any $.label;
+                has Any $.expansion;
+                has Int $.line_end;
+            }
+            has DefSiteSpan $.def_site_span;
+            has Span $.span;
+            has Str $.macro_decl_name;
+        }
+        class Children does JSON::Class {
+            has Any $.rendered;
+            has Str $.message;
+            has Str $.level;
+            has  @.children;
+            has Any $.code;
+            has  @.spans;
+        }
+        has Code $.code;
+        has Span @.spans;
+        has Str $.rendered;
+        has Children @.children;
+        has Str $.level;
+        has Str $.message;
+    }
+    has  @.linked_paths;
+    has  @.linked_libs;
+    has Str $.manifest_path;
+    has Str $.reason;
+    has Str $.package_id;
+    has Target $.target;
+    has  @.cfgs;
+    has Any $.executable;
+    has Bool $.fresh;
+    has  @.features;
+    has  @.filenames;
+    has Str $.out_dir;
+    has Profile $.profile;
+    has  @.env;
+    has Bool $.success;
+    has Message $.message;
+}
+
+sub get-json-item($idx, $in) {
+
+    my $proc = run 'jq', ".[$idx]", :in, :out; $proc.in.say($in); $proc.in.close;
+
+     $proc.out.slurp(close => True).chomp
+
+}
+
+sub get-json-len($in) {
+
+    my $proc = run 'jq', "length", :in, :out; $proc.in.say($in); $proc.in.close;
+
+    $proc.out.slurp(close => True).chomp.Int
+}
+
+sub MAIN {
+
+    my $input = qqx/make json --quiet/;
+
+    my $start = 0;
+
+    my $len = get-json-len($input);
+
+    my $channel = Channel.new;
+
+    my $p = start {
+        react {
+            whenever $channel {
+                say $_;
+            }
+        }
+    }
+
+    my @results = race for $start..($start + $len) {
+        #$channel.send($_);
+        my $json  = get-json-item($_, $input);
+        my $obj   = CargoBuild.from-json($json);
+
+        CATCH {
+            default {
+                $*ERR.say: .message;
+                $*ERR.say: $obj;
+            }
+        }
+
+
+        my $kind = token {
+            | 'type'
+            | 'trait'
+        };
+
+        my $kind-name = token {
+            \` [\w ** 2..*] \`
+        };
+
+        if not so $obj.success {
+
+            if so $obj.message { 
+                my $digest = $obj.message.message;
+                if $digest ~~ rule { cannot find $kind $kind-name in this scope } {
+                    if $obj.message.children[0].spans.elems eq 1 {
+                        (
+                            $obj.message.children[0].spans[0]<file_name>,
+                            $obj.message.children[0].spans[0]<suggested_replacement>.chomp.trim
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    $channel.close;
+
+    await $p;
+
+    my %edits;
+
+    for @results {
+        %edits{$_[0]}.push: $_[1];
+    }
+
+    for %edits.keys {
+
+        my $filename = $_;
+
+        my $set = SetHash.new;
+
+        for %edits{$_} {
+            $set.set($_);
+        }
+
+        my @uses = do for $set.keys {
+            if $_.grep(rx:s/use crate/) {
+                $_
+            }
+        };
+
+        if @uses.elems > 0 {
+            say "------------------------------";
+            say $filename;
+            say condense-use(@uses.join("\n"));
+        }
+    }
+}

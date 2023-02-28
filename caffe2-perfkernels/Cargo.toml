@@ -1,0 +1,6 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[package]
+edition = "2021"
+name = "caffe2-perfkernels"
+version = "0.1.0"

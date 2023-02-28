@@ -1,0 +1,12 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-serde]
+path = "../caffe2-serde"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[package]
+edition = "2021"
+name = "caffe2op-map"
+version = "0.1.0"

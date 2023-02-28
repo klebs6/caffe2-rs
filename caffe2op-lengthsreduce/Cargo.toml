@@ -1,0 +1,16 @@
+[dependencies.caffe2-blob]
+path = "../caffe2-blob"
+[dependencies.caffe2-context]
+path = "../caffe2-context"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2op-reduce]
+path = "../caffe2op-reduce"
+[dependencies.caffe2op-segmentreduction]
+path = "../caffe2op-segmentreduction"
+[package]
+edition = "2021"
+name = "caffe2op-lengthsreduce"
+version = "0.1.0"

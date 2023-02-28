@@ -1,0 +1,68 @@
+[package]
+name = "caffe2-imports"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.caffe2-proto]
+path = "../caffe2-proto"
+
+[dependencies.caffe2-derive]
+path = "../caffe2-derive"
+
+[dependencies]
+paste             = "*"
+pyo3              = "*"
+aligned           = "*"
+bitflags          = "*"
+nalgebra          = "*"
+ndarray           = "*"
+rayon             = "*"
+structopt         = "*"
+crossbeam         = "*"
+structopt-derive  = "*"
+hashbrown         = "*"
+pod               = "*"
+protobuf          = "2.24.1"
+byteorder         = "*"
+derive-error      = "*"
+smallvec          = "*"
+mersenne_twister  = "*"
+mt19937           = "*"
+
+hex               = "*"
+hex-literal       = "*"
+
+#opencv            = "*"
+#opencv = "0.53"
+opencv = "*"
+
+cblas                 = "*"
+stdext                = "*"
+cblas-sys             = "*"
+zmq                   = "*"
+lazy_static           = "*"
+half                  = "*"
+atomic                = "*"
+libc                  = "*"
+static_assertions     = "*"
+cudnn                 = "*"
+intrusive-collections = "*"
+cudnn-sys             = "*"
+parking_lot           = "*"
+rand                  = "*"
+statrs                = "*"
+num-traits            = "*"
+num-complex           = "*"
+zmq-sys               = "*"
+threadpool            = "*"
+hip-sys               = { git     = "https://github.com/charles-r-earp/hip-sys" }
+miopen-sys            = { git     = "https://github.com/charles-r-earp/miopen-sys" }
+#ffmpeg-sys           = { version = "4", features = ["build"] }
+
+#intel-mkl-sys = "*"
+fftw-sys = { version = "0.4", features = ["intel-mkl"] }
+test-context  = "*"
+num           = "*"
+enhanced_enum = "*"

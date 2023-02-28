@@ -1,0 +1,13 @@
+#!/usr/bin/env raku
+use v6;
+
+my $file = @*ARGS[0].IO;
+my $input = $file.slurp;
+
+$input ~~ s:g/c10_define/define/;
+$input ~~ s:g/c10_declare/declare/;
+$input ~~ s:g/c10_export/export/;
+$input ~~ s:g/c10_declare/declare/;
+$input ~~ s:g/c10_register/register/;
+
+spurt $file, $input;

@@ -1,0 +1,73 @@
+#!/usr/bin/env raku
+use v6;
+
+grammar IOTagsGrammar {
+    rule TOP {
+        <.ws>
+        <input-tags>?
+        <output-tags>?
+    }
+    rule name {
+        <[A..Z a..z 0..9 _]>+
+    }
+    rule name-list {
+         <name>* %% ',' 
+    }
+    rule input-tags {
+        'INPUT_TAGS' '(' <name-list> ')' ';'
+    }
+    rule output-tags {
+        'OUTPUT_TAGS' '(' <name-list> ')' ';'
+    }
+}
+
+sub convert-name-list-to-rust-case($name-list) {
+    do for $name-list<name> -> $name {
+        convert-name-to-rust-case($name.Str)
+    }
+}
+
+sub convert-name-to-rust-case($name) {
+    $name.split("_")>>.lc>>.tc.join("")
+}
+
+sub output-tags-enum($name, $name-list) {
+    my @names = convert-name-list-to-rust-case($name-list);
+
+    qq:to/END/;
+    pub enum {$name}Outputs \{
+    {@names.join(",\n").indent(4)}
+
+    \}
+    END
+}
+
+sub MAIN(:$name) {
+
+    my $in = $*IN.slurp;
+    my $parsed = IOTagsGrammar.parse($in);
+
+    my @inputs  = $parsed<input-tags>:exists  ?? convert-name-list-to-rust-case($parsed<input-tags><name-list>) !! [];
+    my @outputs = $parsed<output-tags>:exists ?? convert-name-list-to-rust-case($parsed<output-tags><name-list>) !! [];
+
+    my $inputs = @inputs.elems > 0 ?? qq:to/END/.chomp.trim !! "";
+    Inputs \{
+    {@inputs.join(",\n").indent(8)}
+        \}
+    END
+
+    my $outputs = @outputs.elems > 0 ?? qq:to/END/.chomp.trim !! "";
+    Outputs \{
+    {@outputs.join(",\n").indent(8)}
+        \}
+    END
+
+    say qq:to/END/;
+    io_tags![
+        $name:
+        $inputs,
+        $outputs
+    ]
+    END
+}
+

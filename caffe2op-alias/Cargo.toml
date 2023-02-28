@@ -1,0 +1,8 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[package]
+edition = "2021"
+name = "caffe2op-alias"
+version = "0.1.0"

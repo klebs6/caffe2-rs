@@ -1,0 +1,161 @@
+#!/usr/bin/env raku
+use v6;
+
+grammar IOTagsGrammar {
+
+    rule TOP {
+        | <iotags-macro>
+        | <regular-enums>
+    }
+
+    rule regular-enums {
+        <regular-enum>+
+    }
+
+    token pub { 'pub' }
+    
+    rule regular-enum {
+        <pub>? 'enum' <enum-name> '{'
+            <ident-list>
+        '}'
+    }
+
+    rule enum-name {
+        <.ident>
+    }
+
+    rule iotags-macro {
+        <header> '{' <body> '}'
+    }
+
+    rule ident { <[A..Z a..z _ 0..9]>+ }
+
+    rule header {
+        'io_tags!'
+    }
+
+    rule body {
+        <opname> ':'
+        [<inputs> ',']?
+        <outputs>?
+    }
+
+    rule opname {
+        <.ident>
+    }
+
+    rule inputs {
+        'Inputs' '{' <ident-list> '}'
+
+    }
+
+    rule outputs {
+        'Outputs' '{' <ident-list> '}'
+
+    }
+
+    rule ident-list {
+        <ident>+ %% ','
+    }
+}
+
+class Actions {
+
+    method TOP($/) {
+        make $/{$/.keys[0]}.made
+    }
+
+    method regular-enums($/) {
+        make $/<regular-enum>>>.made.join("\n")
+    }
+
+    method regular-enum($/) {
+
+        my $name = $/<enum-name>.Str;
+
+        my $result;
+
+        if $name.grep(/Inputs/) {
+            $result = qq:to/END/;
+            input_tags!\{
+                {$name.split("Inputs")[0]} \{
+            {$/<ident-list>.made}
+                \}
+            \}
+            END
+        }
+
+        if $name.grep(/Outputs/) {
+            $result = qq:to/END/;
+            output_tags!\{
+                {$name.split("Outputs")[0]} \{
+            {$/<ident-list>.made}
+                \}
+            \}
+            END
+        }
+
+        make $result;
+    }
+
+    method iotags-macro($/) {
+
+        make $/<body><opname>;
+
+        my $result = "";
+
+        if $/<body><inputs>:exists {
+            $result = $/<body><inputs>.made;
+        }
+
+        if $/<body><outputs>:exists {
+            $result = $result ~ "\n{$/<body><outputs>.made}";
+        }
+
+        make $result;
+
+    }
+
+    method opname($/) {
+        $*OPNAME = $/.Str;
+    }
+
+    method inputs($/) {
+        make qq:to/END/;
+        input_tags!\{
+            $*OPNAME \{
+        {$/<ident-list>.made}
+            \}
+        \}
+        END
+    }
+
+    method ident-list($/) {
+        make $/<ident>>>.Str.join(",\n").trim.indent(8).chomp
+    }
+
+    method ident($/) {
+        $/.Str
+    }
+
+    method outputs($/) {
+        make qq:to/END/;
+        output_tags!\{
+            $*OPNAME \{
+        {$/<ident-list>.made}
+            \}
+        \}
+        END
+    }
+}
+
+sub MAIN {
+
+    my $*OPNAME;
+
+    my $parsed = IOTagsGrammar.parse(
+        $*IN.slurp, 
+        actions => Actions.new).made;
+
+        say $parsed;
+}

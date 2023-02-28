@@ -1,0 +1,22 @@
+[dependencies.caffe2-context]
+path = "../caffe2-context"
+[dependencies.caffe2-c10]
+path = "../caffe2-c10"
+[dependencies.caffe2-threadpool]
+path = "../caffe2-threadpool"
+[dependencies.caffe2-event]
+path = "../caffe2-event"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-prof]
+path = "../caffe2-prof"
+[dependencies.caffe2-timer]
+path = "../caffe2-timer"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[dependencies.caffe2-tensor]
+path = "../caffe2-tensor"
+[package]
+edition = "2021"
+name = "caffe2-operator"
+version = "0.1.0"

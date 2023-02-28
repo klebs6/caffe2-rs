@@ -1,0 +1,14 @@
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
+[dependencies.caffe2-tensor]
+path = "../caffe2-tensor"
+[dependencies.caffe2-types]
+path = "../caffe2-types"
+[dependencies.caffe2op-conv]
+path = "../caffe2op-conv"
+[package]
+edition = "2021"
+name = "caffe2op-locallyconnected"
+version = "0.1.0"

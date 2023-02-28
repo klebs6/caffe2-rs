@@ -1,0 +1,10 @@
+[dependencies.caffe2-graph]
+path = "../caffe2-graph"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[package]
+edition = "2021"
+name = "caffe2-nomnigraph"
+version = "0.1.0"
