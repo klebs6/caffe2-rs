@@ -35,4 +35,4 @@ As for caffe2* rust, all credit to the original caffe* and torch programmers.
 
 Best,
 
-- tom
+- Tom
