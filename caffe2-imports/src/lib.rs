@@ -21,6 +21,8 @@ pub struct Unknown {}
 pub type TypeMeta = Unknown;
 pub type Blob = Unknown;
 
+pub use rand::StdRng;
+pub use statrs::distribution::Uniform;
 
 #[macro_use]
 extern crate derive_error;

@@ -1,4 +1,5 @@
 [dependencies.caffe2-imports]
+version = "0.1.3-alpha.0"
 path = "../caffe2-imports"
 [package]
 authors = [ "klebs <none>" ]

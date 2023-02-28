@@ -105,10 +105,10 @@ pub struct FloatToFusedRandRowwiseQuantizedOp<T,Context> {
     vsl_stream:    VSLStreamStatePtr,
 
     #[cfg(not(fused_rowwise_random_quantization_use_mkl))]
-    dis:           rand::distributions::Uniform<f32>,
+    dis:           Uniform,
 
     #[cfg(not(fused_rowwise_random_quantization_use_mkl))]
-    gen:           rand::rngs::StdRng,
+    gen:           StdRng,
 
     phantom:       PhantomData<T>,
 }
