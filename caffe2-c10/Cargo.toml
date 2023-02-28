@@ -1,5 +1,5 @@
 [dependencies]
-structopt = "*"
+structopt = "0.3.26"
 [dependencies.caffe2-derive]
 version = "0.1.3-alpha.0"
 path = "../caffe2-derive"
