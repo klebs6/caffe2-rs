@@ -131,7 +131,7 @@ impl miopenTypeWrapper for miopenTypeWrapperF32 {
 
 impl miopenTypeWrapperF32 {
 
-    const type_: miopenDataType_t = miopenDataType_t::miopenFloat;
+    //const type_: miopenDataType_t = miopenDataType_t::miopenFloat;
     
     #[inline] pub fn k_one() -> *mut ScalingParamType {
         
@@ -162,7 +162,7 @@ impl miopenTypeWrapper for miopenTypeWrapperHalf {
 
 impl miopenTypeWrapperHalf {
 
-    const type_: miopenDataType_t = miopenHalf;
+    //const type_: miopenDataType_t = miopenHalf;
     
     #[inline] pub fn k_one() -> *mut ScalingParamType {
         

@@ -51,12 +51,12 @@ path = "../caffe2-proto"
 [dependencies.fftw-sys]
 features = [ "intel-mkl" ]
 version = "0.4"
-[dependencies.hip-sys]
-git = "https://github.com/charles-r-earp/hip-sys"
-version = "0.1.1"
-[dependencies.miopen-sys]
-git = "https://github.com/charles-r-earp/miopen-sys"
-version = "0.0.1"
+#[dependencies.hip-sys]
+#git = "https://github.com/charles-r-earp/hip-sys"
+#version = "0.1.1"
+#[dependencies.miopen-sys]
+#git = "https://github.com/charles-r-earp/miopen-sys"
+#version = "0.0.1"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"

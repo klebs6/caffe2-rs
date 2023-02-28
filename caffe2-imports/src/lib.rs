@@ -123,6 +123,7 @@ pub use structopt::*;
 pub use structopt_derive::*;
 pub use pod::Pod;
 
+/*
 pub use miopen_sys::{
     miopenDataType_t,
     miopenDataType_t::miopenHalf,
@@ -132,16 +133,29 @@ pub use miopen_sys::{
     miopenRNNDescriptor_t,
     miopenActivationDescriptor_t,
 };
+*/
+pub type miopenDataType_t             = Unknown;
+pub type miopenHalf                   = Unknown;
+pub type miopenHandle_t               = Unknown;
+pub type miopenStatus_t               = Unknown;
+pub type miopenTensorDescriptor_t     = Unknown;
+pub type miopenRNNDescriptor_t        = Unknown;
+pub type miopenActivationDescriptor_t = Unknown;
 
 pub use opencv::core as cv;
 pub use core::cmp::Ordering;
 pub use zmq_sys::zmq_msg_t;
 
+/*
 pub use hip_sys::hipblas::{
     hipEvent_t,
     hipStream_t,
     hipCtx_t,
 };
+*/
+pub type hipEvent_t = Unknown;
+pub type hipStream_t = Unknown;
+pub type hipCtx_t = Unknown;
 
 pub use bitflags::*;
 
