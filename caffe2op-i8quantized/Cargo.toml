@@ -21,4 +21,4 @@ path = "../caffe2op-transpose"
 [package]
 edition = "2021"
 name = "caffe2op-i8quantized"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

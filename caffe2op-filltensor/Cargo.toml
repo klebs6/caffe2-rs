@@ -9,4 +9,4 @@ path = "../caffe2op-filler"
 [package]
 edition = "2021"
 name = "caffe2op-filltensor"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

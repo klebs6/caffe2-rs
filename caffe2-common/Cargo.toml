@@ -7,4 +7,4 @@ path = "../caffe2-types"
 [package]
 edition = "2021"
 name = "caffe2-common"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

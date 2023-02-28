@@ -49,4 +49,4 @@ path = "../caffe2op-utility"
 [package]
 edition = "2021"
 name = "caffe2-serverquantize"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

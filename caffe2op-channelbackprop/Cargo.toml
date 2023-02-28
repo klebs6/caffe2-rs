@@ -9,4 +9,4 @@ path = "../caffe2-tensor"
 [package]
 edition = "2021"
 name = "caffe2op-channelbackprop"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

@@ -5,4 +5,4 @@ path = "../caffe2-operator"
 [package]
 edition = "2021"
 name = "caffe2op-mergeid"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

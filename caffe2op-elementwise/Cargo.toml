@@ -17,4 +17,4 @@ path = "../caffe2op-pow"
 [package]
 edition = "2021"
 name = "caffe2op-elementwise"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

@@ -11,4 +11,4 @@ path = "../caffe2op-reduce"
 [package]
 edition = "2021"
 name = "caffe2op-segmentreduction"
-version = "0.1.0"
+version = "0.1.1-alpha.0"

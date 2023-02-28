@@ -3,4 +3,4 @@ path = "../caffe2-imports"
 [package]
 edition = "2021"
 name = "caffe2op-communicator"
-version = "0.1.0"
+version = "0.1.1-alpha.0"
