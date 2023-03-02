@@ -24,7 +24,7 @@ crate::ix!();
   | the image data and the output is computed.
   |
   */
-#[USE_DEFORMABLE_CONV_BASE_FUNCTIONS(T, Context)]
+#[USE_DEFORMABLE_CONV_BASE_FUNCTIONS("T", "Context")]
 pub struct DeformConvOp<T, Context> {
 
     base: DeformConvOpBase<T, Context>,

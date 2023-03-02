@@ -1,7 +1,7 @@
 crate::ix!();
 
 ///--------------------------------------------------
-#[USE_DEFORMABLE_CONV_BASE_FUNCTIONS(T, Context)]
+#[USE_DEFORMABLE_CONV_BASE_FUNCTIONS("T", "Context")]
 pub struct DeformConvGradientOp<T,Context> {
 
     base: DeformConvOpBase<T, Context>,
