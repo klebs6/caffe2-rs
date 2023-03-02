@@ -1,4 +1,3 @@
-
 caffe2op-accuracy is a Rust crate that defines an
 operator used for evaluating the accuracy of
 machine learning models. This operator computes
@@ -15,5 +14,3 @@ true label data to compute a score.
 The crate also includes other symbols related to
 managing the inputs and outputs of the operator,
 such as slots and scoring.
-
-

@@ -279,7 +279,7 @@ sub ensure-correct-toml($file, $readme) {
 
     if $readme.IO.e {
 
-        %toml<package><readme> = $readme;
+        %toml<package><readme> = "README.md";
 
     } else {
 

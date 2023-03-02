@@ -11,7 +11,7 @@ documentation = "https://docs.rs/caffe2op-alias"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2op-alias"
-readme = "caffe2op-alias/README.md"
+readme = "README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]
