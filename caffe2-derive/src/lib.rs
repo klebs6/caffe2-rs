@@ -25,6 +25,11 @@ pub fn USE_OPERATOR_FUNCTIONS(attr: TokenStream, item: TokenStream) -> TokenStre
 }
 
 #[proc_macro_attribute]
+pub fn USE_DEFORMABLE_CONV_BASE_FUNCTIONS(attr: TokenStream, item: TokenStream) -> TokenStream {
+    item
+}
+
+#[proc_macro_attribute]
 pub fn __ubsan_ignore_undefined__(attr: TokenStream, item: TokenStream) -> TokenStream {
     item
 }
