@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_clip}
+x!{clip}
+x!{clip_gradient}
+x!{get_gradient}
+x!{test_clip}

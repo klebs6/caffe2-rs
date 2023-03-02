@@ -1,21 +1,21 @@
 [dependencies.caffe2-context]
-version = "0.1.3-alpha.0"
 path = "../caffe2-context"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-db]
-version = "0.1.3-alpha.0"
 path = "../caffe2-db"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-imports]
-version = "0.1.3-alpha.0"
 path = "../caffe2-imports"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-operator]
-version = "0.1.3-alpha.0"
 path = "../caffe2-operator"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-tensor]
-version = "0.1.3-alpha.0"
 path = "../caffe2-tensor"
-[dependencies.caffe2-util]
 version = "0.1.3-alpha.0"
+[dependencies.caffe2-util]
 path = "../caffe2-util"
+version = "0.1.3-alpha.0"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
@@ -23,7 +23,7 @@ documentation = "https://docs.rs/caffe2-predictor"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-predictor"
-readme = "../README"
+readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]

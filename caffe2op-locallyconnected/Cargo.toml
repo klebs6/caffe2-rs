@@ -1,18 +1,18 @@
 [dependencies.caffe2-imports]
-version = "0.1.3-alpha.0"
 path = "../caffe2-imports"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-operator]
-version = "0.1.3-alpha.0"
 path = "../caffe2-operator"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-tensor]
-version = "0.1.3-alpha.0"
 path = "../caffe2-tensor"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-types]
-version = "0.1.3-alpha.0"
 path = "../caffe2-types"
-[dependencies.caffe2op-conv]
 version = "0.1.3-alpha.0"
+[dependencies.caffe2op-conv]
 path = "../caffe2op-conv"
+version = "0.1.3-alpha.0"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
@@ -20,7 +20,7 @@ documentation = "https://docs.rs/caffe2op-locallyconnected"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2op-locallyconnected"
-readme = "../README"
+readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]

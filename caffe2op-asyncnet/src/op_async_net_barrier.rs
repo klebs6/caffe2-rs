@@ -6,7 +6,7 @@ crate::ix!();
  | will schedule certian operations earlier than
  | others.
  |
- | Exaple where this operator can work well - mixture
+ | Examjple where this operator can work well - mixture
  | of data-parallel and model- parallel training,
  | where one wants to force that all copies are
  | started before data-parallel part starts.
@@ -51,7 +51,7 @@ impl AsyncBarrierOp {
       | async_scheduling will schedule certian
       | operations earlier than others.
       |
-      | Exaple where this operator can work
+      | Example where this operator can work
       | well - mixture of data-parallel and model
       | parallel training, where one wants to force
       | that all copies are started before

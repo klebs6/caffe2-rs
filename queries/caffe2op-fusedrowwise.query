@@ -1,0 +1,177 @@
+hello! 
+
+I am writing a rust crate called caffe2op-fusedrowwise. 
+
+It defines a mathematical operator used in DSP
+and machine learning computations.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the followin format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Below are listed some symbols, defined
+or accessed from within this crate.
+
+it is not guaranteed these tokens originate in
+the crate, but many of them do. 
+
+please be careful not to mention those that
+seem only loosely related by name.
+
+It is better to mention fewer tokens, as long
+as they are the ones you identify as most
+likely to reside in this crate.
+
+If there are any mathematical ideas identified
+by these tokens, please describe them
+alongside the relevant mathematical equations. 
+
+Last thing: please don't mention the word "token".
+
+thanks!
+
+please format your response for the Markdown .md file format.
+
+here are the tokens:
+
+Advances
+BRNG
+Bytes
+Chen
+Chunpeng
+Cong
+DataFloat
+DataFusedQuantized
+De
+FUSED
+Feng
+FloatToFusedRandRowwiseQuantized
+FloatToFusedRandRowwiseQuantizedOp
+FusedRandRowwiseQuantizedToFloat
+FusedRandRowwiseQuantizedToFloatOp
+Hai
+Information
+Li
+METHOD
+QUANTIZED
+RANDOM
+Refer
+STD
+StdRng
+TernGrad
+Ternary
+Terngrad
+VSL
+VSLStreamStatePtr
+Wang
+Wei
+Wen
+Xu
+Yan
+Yandan
+Yiran
+closest
+communication
+deep
+determining
+discrete
+drawing
+pp
+proved
+quantizes
+subarray
+suppose
+targeted
+unbiased
+unittest
+vsRngUniform
+vsl
+vslDeleteStream
+vslNewStream
+vslStream
+xxx
+
+BitRowwiseQuantizedHalfScaleBias
+BitRowwiseQuantizedHalfScaleBiasToFloat
+BitRowwiseQuantizedHalfScaleBiasToHalfFloat
+BitRowwiseQuantizedOp
+BitRowwiseQuantizedToFloatOp
+BitRowwiseQuantizedToHalfFloat
+CONVERT
+ConvertFn
+ConvertFnType
+DataFloat
+DataFusedScaleBiasInt
+De
+FUSED
+Tsb
+TypeForScaleAndBias
+alongside
+convertfp
+determining
+multiplying
+phantomCFN
+phantomTypeForScaleAndBias
+preceding
+quantizes
+un
+
+BitRowwiseQuantizedOp
+BitRowwiseQuantizedToHalf
+ConvertFn
+DataFloat
+DataFusedScaleBias
+De
+ELEM
+FUSED
+FloatToFusedNBitRowwiseQuantizedOp
+FusedNBitRowwiseQuantizedToFloatOp
+GREEDY
+Greedy
+RATE
+Round
+Xmax
+Xmin
+alongside
+convertfp
+corner
+dequantization
+determining
+multiplying
+phantomCFN
+quantizes
+un
+
+Affine
+BitFakeRowwiseQuantized
+ConvertFn
+ConvertFnType
+DIRECTION
+DataFloat
+DataFusedScaleBiasInt
+FUSED
+FloatToFusedNBitFakeRowwiseQuantizedOp
+GREEDY
+Greedy
+RATE
+Round
+Xmax
+Xmin
+Xq
+convertfp
+kValue
+loss
+optima
+phantomCFN
+potentiall
+solution
+thr
+xmax
+xmin
+xq

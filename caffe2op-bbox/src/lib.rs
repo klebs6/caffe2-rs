@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_bbox_transform}
+x!{bbox_transform}
+x!{bbox_transform_cpu}

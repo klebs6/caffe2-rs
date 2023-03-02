@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_cast}
+x!{cast}
+x!{cast_cpu}
+x!{cast_gradient}
+x!{cast_helper}

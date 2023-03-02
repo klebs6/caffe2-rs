@@ -1,0 +1,240 @@
+hello! 
+
+I am writing a rust crate called caffe2op-elementwise. 
+
+It defines a mathematical operator used in DSP
+and machine learning computations.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the followin format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Below are listed some symbols, defined
+or accessed from within this crate.
+
+it is not guaranteed these tokens originate in
+the crate, but many of them do. 
+
+please be careful not to mention those that
+seem only loosely related by name.
+
+It is better to mention fewer tokens, as long
+as they are the ones you identify as most
+likely to reside in this crate.
+
+If there are any mathematical ideas identified
+by these tokens, please describe them
+alongside the relevant mathematical equations. 
+
+Last thing: please don't mention the word "token".
+
+thanks!
+
+please format your response for the Markdown .md file format.
+
+here are the tokens:
+
+BitwiseDocGenerator
+ComparisonDocGenerator
+ComputeBinaryBroadcastForwardDims
+ElementwiseOpShapeInference
+FillUsing
+Links
+LogicalDocGenerator
+SetDoc
+booleans
+expansion
+kAndExample
+kBroadcastDoc
+kEQExample
+kGEExample
+kGTExample
+kLEExample
+kLTExample
+kNEExample
+kOrExample
+kXorExample
+mutually
+
+FeedBlob
+FetchBlob
+IsMemberOf
+IsMemberOfOp
+IsMemberOfValueHolder
+Links
+MEMBER
+ResetWorkspace
+Strictly
+TestableTypes
+WhereOp
+astype
+booleans
+membership
+
+CostInferenceForSum
+ElementwiseSumOp
+FeedBlob
+FetchBlob
+Links
+ResetWorkspace
+astype
+
+ComputeMulGradient
+ElementwiseGradientOpShapeInference
+ElementwiseOpShapeInference
+FeedBlob
+FetchBlob
+FillUsing
+GetMulGradient
+MathDocGenerator
+PointwiseCostInference
+ResetWorkspace
+TGrad
+dA
+dC
+kMulExample
+
+Adata
+Binary
+BinaryElementwiseGradientWithArgsOp
+BinaryElementwiseWithArgsGradientOp
+BinaryElementwiseWithArgsOp
+BinaryFunctorWithDefaultCtor
+Bitwise
+BoolTypes
+ComputeBinaryBroadcastForwardDims
+FeedBlob
+FetchBlob
+FunctorName
+Functors
+GradientTypeMap
+HCWH
+InputTypes
+IntBoolTypes
+IntTypes
+Link
+Links
+Logical
+Negated
+NotFunctor
+OutputTypeMap
+ResetWorkspace
+RunWithBroadcastBack
+RunWithBroadcastFront
+SRLHelper
+SumReduceLike
+SumReduceLikeOp
+TGrad
+TypeMap
+Unary
+UnaryElementwiseWithArgsOp
+UnaryFunctorWithDefaultCtor
+astype
+consideration
+dA
+dC
+discrete
+functors
+ge
+lt
+phantomGradientTypeMap
+phantomIT
+phantomOTM
+srl
+
+DefineOperator
+ElementwiseCPUTest
+ElementwiseTest
+FillTensor
+elementwiseAnd
+elementwiseEQ
+elementwiseNot
+elementwiseOr
+elementwiseXor
+
+ComputeBinaryBroadcastBackwardDims
+ComputeBinaryBroadcastForwardDims
+ElementwiseGradientOpShapeInference
+ElementwiseOpShapeInference
+FeedBlob
+FetchBlob
+GetSubGradient
+PointwiseCostInference
+ResetWorkspace
+SubGradient
+TGrad
+dA
+dC
+
+ElementwiseGPUTest
+cudaMemcpyHostToDevice
+elementwiseAnd
+elementwiseNot
+elementwiseOr
+elementwiseXor
+
+Calculated
+Collect
+Describes
+ElementwiseLinearGradient
+ElementwiseLinearGradientOp
+FeedBlob
+FetchBlob
+GetElementwiseLinearGradient
+Links
+NxD
+ResetWorkspace
+astype
+factors
+ij
+operated
+phantomE
+products
+
+crbegin
+crend
+
+BinaryElementwiseDivGradientWithArgsGradientOp
+BinaryElementwiseWithArgsGradientOp
+BinaryFunctorWithDefaultCtor
+DivGradient
+GetDivGradient
+dA
+dC
+
+ComputeDivGradient
+DivGradient
+ElementwiseGradientOpShapeInference
+ElementwiseOpShapeInference
+FeedBlob
+FetchBlob
+FillUsing
+MathDocGenerator
+PointwiseCostInference
+ResetWorkspace
+TGrad
+dA
+dC
+kDivExample
+
+ComputeBinaryBroadcastBackwardDims
+ComputeBinaryBroadcastForwardDims
+ElementwiseGradientOpShapeInference
+ElementwiseOpShapeInference
+FeedBlob
+FetchBlob
+FillUsing
+GetAddGradient
+MathDocGenerator
+PointwiseCostInference
+ResetWorkspace
+TGrad
+dA
+dC
+kAddExample

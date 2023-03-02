@@ -1,75 +1,75 @@
 [dependencies.caffe2-c10]
-version = "0.1.3-alpha.0"
 path = "../caffe2-c10"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-context]
-version = "0.1.3-alpha.0"
 path = "../caffe2-context"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-imports]
-version = "0.1.3-alpha.0"
 path = "../caffe2-imports"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-math]
-version = "0.1.3-alpha.0"
 path = "../caffe2-math"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-operator]
-version = "0.1.3-alpha.0"
 path = "../caffe2-operator"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-quant]
-version = "0.1.3-alpha.0"
 path = "../caffe2-quant"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-tensor]
-version = "0.1.3-alpha.0"
 path = "../caffe2-tensor"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-types]
-version = "0.1.3-alpha.0"
 path = "../caffe2-types"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2-util]
-version = "0.1.3-alpha.0"
 path = "../caffe2-util"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-batch]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-batch"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-channelshuffle]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-channelshuffle"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-concatsplit]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-concatsplit"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-conv]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-conv"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-copy]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-copy"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-elementwise]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-elementwise"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-fullyconnected]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-fullyconnected"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-gather]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-gather"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-groupnorm]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-groupnorm"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-lstm]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-lstm"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-pool]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-pool"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-pow]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-pow"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-resize]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-resize"
+version = "0.1.3-alpha.0"
 [dependencies.caffe2op-spatialbatchnorm]
-version = "0.1.3-alpha.0"
 path = "../caffe2op-spatialbatchnorm"
-[dependencies.caffe2op-utility]
 version = "0.1.3-alpha.0"
+[dependencies.caffe2op-utility]
 path = "../caffe2op-utility"
+version = "0.1.3-alpha.0"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
@@ -77,7 +77,7 @@ documentation = "https://docs.rs/caffe2-serverquantize"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-serverquantize"
-readme = "../README"
+readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]

@@ -1,6 +1,6 @@
 [dependencies.caffe2-imports]
-version = "0.1.3-alpha.0"
 path = "../caffe2-imports"
+version = "0.1.3-alpha.0"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
@@ -8,7 +8,7 @@ documentation = "https://docs.rs/caffe2-random"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-random"
-readme = "../README"
+readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]

@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_channel_backprop_stats}
+x!{channel_backprop_stats}
+x!{channel_backprop_stats_cpu}

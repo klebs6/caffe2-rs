@@ -1,0 +1,250 @@
+hello! 
+
+I am writing a rust crate called caffe2op-utility. 
+
+It defines a mathematical operator used in DSP
+and machine learning computations.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the followin format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Below are listed some symbols, defined
+or accessed from within this crate.
+
+it is not guaranteed these tokens originate in
+the crate, but many of them do. 
+
+please be careful not to mention those that
+seem only loosely related by name.
+
+It is better to mention fewer tokens, as long
+as they are the ones you identify as most
+likely to reside in this crate.
+
+If there are any mathematical ideas identified
+by these tokens, please describe them
+alongside the relevant mathematical equations. 
+
+Last thing: please don't mention the word "token".
+
+thanks!
+
+please format your response for the Markdown .md file format.
+
+here are the tokens:
+
+NoDefaultEngineOp
+ZEROMQ
+communication
+
+AddConstInput
+OldShape
+UtilityOpGPUTest
+XNew
+XNewTensor
+testReshapeWithScalar
+
+AddConstInput
+OldShape
+UtilityOpTest
+XNew
+XNewTensor
+testReshapeWithScalar
+
+AccHist
+AccumulateHistogram
+AccumulateHistogramOp
+Accumulated
+AliasOp
+Aliasing
+AxpyFixedSize
+Collect
+CostInferenceForWeightedSum
+CurHist
+DoRunOnDevice
+DoScatterAssign
+EnsureDense
+EnsureDenseOp
+FailOp
+FeedBlob
+FetchBlob
+FlattenToVec
+FlattenToVecOp
+GetAliasGradient
+GetEnsureDenseGradient
+GetFlattenToVecGradient
+GetNanCheckGradient
+GetRunner
+GetSumGradient
+GetWeightedSumGradient
+HIST
+HasElements
+HasElementsOp
+ITEMS
+Identity
+IsEmpty
+IsNaN
+IsNanOp
+LengthsToOffsets
+LengthsToOffsetsOp
+LengthsToRanges
+LengthsToRangesOp
+LengthsToSegmentIds
+LengthsToSegmentIdsOp
+LengthsToShape
+LengthsToShapeOp
+LengthsToWeights
+LengthsToWeightsOp
+Link
+Links
+LogFatal
+LogFatalOp
+Manual
+NanCheck
+NanCheckOp
+NeedsAllInputShapes
+Nx
+OPTIONAL
+PointwiseCostInference
+PrintOp
+Produces
+RANGES
+RangeOp
+Ranges
+ResetWorkspace
+RootFolder
+RunnerMap
+RunnerType
+SLICES
+ScaleFixedSize
+Scatter
+ScatterOp
+ScatterWeightedSumOp
+SegmentIdsToLengthWeights
+SegmentIdsToLengths
+SegmentIdsToLengthsOp
+SegmentIdsToRanges
+SegmentIdsToRangesOp
+Segments
+SizeOp
+Slices
+SparseToDense
+Succeed
+SumInt
+ThrowChildThreadException
+ThrowChildThreadExceptionOp
+ThrowExceptionOp
+Transfers
+UPDATES
+Updates
+WallClockTime
+WallClockTimeOp
+WeightedSumGradient
+WeightedSumGradientOp
+WeightedSumOp
+WeightedSumShapeInference
+Writes
+XIn
+absent
+affected
+allFinite
+argsHelper
+assumption
+astype
+asynchrony
+batchSize
+blockSize
+calculates
+collapsing
+consequences
+consideration
+deliberately
+describing
+devtalk
+dimentions
+discussed
+dw
+examples
+finite
+fixing
+flatten
+flattens
+gathered
+gathers
+getWeight
+implications
+independently
+indexarray
+indexed
+indicesType
+introduces
+kPrintFileExtension
+linux
+nInputs
+normalization
+numpy
+opposite
+outputData
+outputLengths
+outputLengthsPtr
+outputOffsetBytes
+outputRawData
+packaged
+randint
+randn
+rangeLength
+rangeSizeBytes
+rangeStart
+rangesData
+rank
+rawData
+readScalarInput
+recovered
+reshapes
+runners
+scatter
+situations
+sliced
+slicesData
+slicesType
+smart
+spacing
+strip
+thes
+topic
+undesired
+weighti
+zeroth
+
+ALGO
+ALGS
+ArrayOfcudnnConvolutionAlgoPerf
+BWD
+BYTES
+CNN
+CONVOLUTION
+CudnnConvOpBase
+CudnnConvTransposeOpBase
+DGRAD
+Earlier
+Easier
+FWD
+ForceAlgoType
+Perf
+WGRAD
+algos
+beneficial
+dnnperf
+exhaustive
+implications
+kCONV
+kNUM
+tensorcore
+treated

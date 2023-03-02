@@ -269,7 +269,7 @@ my %descriptions = %(
     "caffe2op-zerog"                      => "xxx",
 );
 
-sub ensure-correct-toml($file) {
+sub ensure-correct-toml($file, $readme) {
 
     say "ensuring correct data inside $file";
 
@@ -277,8 +277,16 @@ sub ensure-correct-toml($file) {
 
     my $name = %toml<package><name>;
 
+    if $readme.IO.e {
+
+        %toml<package><readme> = $readme;
+
+    } else {
+
+        %toml<package><readme> = "../README.md";
+    }
+
     %toml<package><description>   = %descriptions{$name};
-    %toml<package><readme>        = "../README";
     %toml<package><repository>    = "https://github.com/kleb6/caffe2-rs";
     %toml<package><documentation> = "https://docs.rs/$name";
 
@@ -288,6 +296,7 @@ sub ensure-correct-toml($file) {
 for %descriptions.keys.sort -> $crate {
 
     my $toml = $crate ~ "/Cargo.toml";
+    my $readme = $crate ~ "/README.md";
 
-    ensure-correct-toml($toml);
+    ensure-correct-toml($toml,$readme);
 }

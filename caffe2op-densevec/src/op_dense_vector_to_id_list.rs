@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage
-};
-
 /**
   | DenseVectorToIdList: Convert a blob
   | with dense feature into a ID_LIST.

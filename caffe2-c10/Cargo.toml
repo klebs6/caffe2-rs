@@ -1,11 +1,11 @@
 [dependencies]
 structopt = "0.3.26"
 [dependencies.caffe2-derive]
-version = "0.1.3-alpha.0"
 path = "../caffe2-derive"
-[dependencies.caffe2-imports]
 version = "0.1.3-alpha.0"
+[dependencies.caffe2-imports]
 path = "../caffe2-imports"
+version = "0.1.3-alpha.0"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
@@ -13,7 +13,7 @@ documentation = "https://docs.rs/caffe2-c10"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-c10"
-readme = "../README"
+readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]
