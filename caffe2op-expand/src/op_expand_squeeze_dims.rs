@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    OperatorStorage,
-    OperatorDef,
-};
-
 #[test] fn expand_dims_op_example() {
 
     todo!();
@@ -54,9 +48,8 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/expand_squeeze_dims_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ExpandDimsOp<Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     dims:    Vec<i32>,
@@ -219,9 +212,8 @@ impl<Context> ExpandDimsOp<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/expand_squeeze_dims_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SqueezeOp<Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     dims:    Vec<i32>,

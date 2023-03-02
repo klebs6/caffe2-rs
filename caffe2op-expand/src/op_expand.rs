@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    OperatorStorage,
-    GradientMakerBase,
-};
-
 /**
   | Broadcast the input tensor to a materialized
   | new tensor using given shape.
@@ -27,9 +21,9 @@ use crate::{
   | to 1).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ExpandOp<InputTypes, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:   OperatorStorage,
     context:   Context,
     phantomIT: PhantomData<InputTypes>,
@@ -112,9 +106,9 @@ impl<InputTypes,Context> ExpandOp<InputTypes,Context> {
 }
 
 ///-----------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ExpandGradientOp<InputTypes, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:   OperatorStorage,
     context:   Context,
     phantomIT: PhantomData<InputTypes>,
