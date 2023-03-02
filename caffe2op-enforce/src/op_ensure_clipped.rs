@@ -1,7 +1,5 @@
 crate::ix!();
 
-use crate::*;
-
 /**
   | Given a tensor, apply clip after gradient
   | is applied; when the param is sparse
@@ -9,9 +7,8 @@ use crate::*;
   | in-place is required
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct EnsureClippedOp<T, Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

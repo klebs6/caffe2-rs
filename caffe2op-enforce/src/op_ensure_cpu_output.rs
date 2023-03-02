@@ -1,7 +1,5 @@
 crate::ix!();
 
-use crate::*;
-
 /**
   | This Op always create TensorCPU output,
   | and may involves cross-device MemCpy.
@@ -12,10 +10,8 @@ use crate::*;
   | input.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct EnsureCPUOutputOp<Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-
     storage: OperatorStorage,
     context: Context,
 }

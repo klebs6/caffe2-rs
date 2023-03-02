@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    OperatorDef,
-};
-
 #[test] fn exp_functor_example() {
 
     todo!();

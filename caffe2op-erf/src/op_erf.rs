@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext,
-    OperatorDef,
-    GradientMakerBase
-};
-
 pub struct ErfFunctor<Context> {
     phantom: PhantomData<Context>,
 }
