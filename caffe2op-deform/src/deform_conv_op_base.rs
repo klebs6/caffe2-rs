@@ -1,7 +1,7 @@
 crate::ix!();
 
 ///--------------------------------------------------
-#[USE_CONV_POOL_BASE_FUNCTIONS = "Context"]
+#[USE_CONV_POOL_BASE_FUNCTIONS("Context")]
 pub struct DeformConvOpBase<T, Context> {
     base: ConvPoolOpBase<Context>,
 
