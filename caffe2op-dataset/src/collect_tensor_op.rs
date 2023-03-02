@@ -18,9 +18,9 @@ crate::ix!();
   | output vectors.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CollectTensorOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -123,4 +123,3 @@ impl<Context> CollectTensorOp<Context> {
         */
     }
 }
-

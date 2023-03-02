@@ -6,3 +6,4 @@ Cargo.lock
 /fbgemm
 /u/.precomp
 .cpp/**
+.DS_Store

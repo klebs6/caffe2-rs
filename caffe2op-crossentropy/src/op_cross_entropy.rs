@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    CPUContext,
-    OperatorDef,
-    OperatorStorage,
-};
-
 /**
   | This operator computes the cross entropy
   | between a $NxD$ dimensional input data

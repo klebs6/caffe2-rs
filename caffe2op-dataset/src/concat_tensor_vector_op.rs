@@ -5,8 +5,8 @@ crate::ix!();
   | along the first dimension.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConcatTensorVectorOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

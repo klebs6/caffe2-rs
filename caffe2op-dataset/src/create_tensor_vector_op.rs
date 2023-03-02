@@ -2,8 +2,8 @@ crate::ix!();
 
 ///------------------------------------------
 ///Create a std::unique_ptr<std::vector<Tensor> >
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CreateTensorVectorOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
