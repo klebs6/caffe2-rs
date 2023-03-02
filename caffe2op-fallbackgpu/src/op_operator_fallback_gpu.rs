@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SkipIndices,
-    Blob,
-    Workspace,
-    SkipOutputCopy,
-    OperatorDef,
-    CUDAContext,
-    OperatorStorage
-};
-
 /**
  | @brief A templated class to allow one to wrap
  | a CPU operator as a CUDA operator.
@@ -52,9 +42,9 @@ use crate::{
  |     REGISTER_CUDA_OPERATOR(MyMagic,
  |                            GPUFallbackOpEx<SkipIndices<0>>);
  */
+#[USE_OPERATOR_FUNCTIONS("CUDAContext")]
 pub struct GPUFallbackOpEx<SkipOutputCopy> {
 
-    //USE_OPERATOR_FUNCTIONS(CUDAContext);
     storage:               OperatorStorage,
     context:               CUDAContext,
 

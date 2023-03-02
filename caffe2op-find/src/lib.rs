@@ -5,3 +5,4 @@ extern crate test;
 use imports::*;
 
 x!{op_find}
+x!{op_find_duplicate_elements}

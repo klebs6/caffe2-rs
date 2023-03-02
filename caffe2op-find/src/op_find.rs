@@ -11,10 +11,10 @@ crate::ix!();
   | the index when values are not found.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_DISPATCH_HELPER]
 pub struct FindOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    //USE_DISPATCH_HELPER;
     storage: OperatorStorage,
     context: Context,
 

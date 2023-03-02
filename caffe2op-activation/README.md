@@ -40,130 +40,113 @@ Certainly, here are some commonly used activation
 functions in machine learning along with their
 mathematical representations:
 
---------------------------
-1. Sigmoid Function: 
+### 1. Sigmoid Function: 
 
 f(x) = 1 / (1 + e^(-x))
 
---------------------------
-2. Rectified Linear Unit (ReLU) Function: 
+The sigmoid function is an activation function
+that takes a real-valued number as input and
+returns a value between 0 and 1. It is defined by
+the equation f(x) = 1 / (1 + e^(-x)). The function
+has a characteristic S-shaped curve, and its
+output is used to represent a probability-like
+value for the input. The function is commonly used
+in binary classification tasks, where the output
+represents the probability of belonging to one of
+two classes.
+
+### 2. Rectified Linear Unit (ReLU) Function: 
 
 f(x) = max(0, x)
 
---------------------------
-3. Leaky ReLU Function: 
+The ReLU function is an activation function that
+sets all negative values of the input to zero and
+leaves all non-negative values unchanged. It is
+defined by the equation f(x) = max(0, x). This
+function is commonly used in deep neural networks
+because it is computationally efficient and does
+not suffer from the "vanishing gradient" problem
+that other activation functions can experience.
+
+### 3. Leaky ReLU Function: 
 
 f(x) = max(0.01x, x)
 
---------------------------
-4. Parametric ReLU Function: 
+The leaky ReLU function is similar to the ReLU
+function but with a small slope for negative
+values. It is defined by the equation f(x)
+= max(0.01x, x). This function is used to overcome
+the "dying ReLU" problem that can occur when the
+ReLU function outputs zero for a large number of
+inputs.
+
+### 4. Parametric ReLU Function: 
 
 f(x) = max(alpha*x, x), 
 where alpha is a learnable parameter
 
---------------------------
-5. Exponential Linear Unit (ELU) Function: 
+The parametric ReLU function is a variant of the
+ReLU function that includes a learnable parameter
+alpha. It is defined by the equation f(x)
+= max(alpha*x, x), where alpha is a learnable
+parameter. This function can help improve the
+performance of deep neural networks.
+
+### 5. Exponential Linear Unit (ELU) Function: 
 
 f(x) = x if x >= 0, 
 f(x) = alpha*(e^x - 1) if x < 0, 
 where alpha is a hyperparameter
 
---------------------------
-6. Softplus Function: 
+The ELU function is similar to the ReLU function
+but with a smoother transition around zero. It is
+defined by the equation f(x) = x if x >= 0, f(x)
+= alpha*(e^x - 1) if x < 0, where alpha is
+a hyperparameter. This function is designed to
+address the vanishing gradient problem and can
+improve the performance of deep neural networks.
+
+### 6. Softplus Function: 
 
 f(x) = log(1 + e^x)
 
---------------------------
-7. Hyperbolic Tangent (Tanh) Function: 
+The softplus function is a smooth approximation of
+the ReLU function. It is defined by the equation
+f(x) = log(1 + e^x). 
+
+This function is used in deep neural networks as
+an alternative to the ReLU function because it is
+differentiable at zero and provides a smoother
+gradient.
+
+### 7. Hyperbolic Tangent (Tanh) Function: 
 
 f(x) = (e^x - e^(-x)) / (e^x + e^(-x))
 
---------------------------
-8. Swish Function: 
+The hyperbolic tangent function is an activation
+function that maps the input to a value between -1
+and 1. 
+
+It is defined by the equation 
+f(x) = (e^x - e^(-x)) / (e^x + e^(-x)). 
+
+This function is commonly used in recurrent neural
+networks (RNNs) because it is sensitive to the
+magnitude of the input and can be used to control
+the flow of information through the network.
+
+### 8. Swish Function: 
 f(x) = x * sigmoid(x)
 
+The Swish function is a relatively new activation
+function that is similar to the sigmoid function
+but has a learnable parameter beta. It is defined
+by the equation f(x) = x * sigmoid(beta*x). This
+function has been shown to outperform other
+activation functions on a variety of deep learning
+tasks.
+
+## Note
 There are many other activation functions that can
 be used depending on the problem at hand, but
 these are some of the most commonly used ones.
-
-4> could you describe these in more detial please?
-
-Sure, I'd be happy to provide more detail about
-each of these activation functions:
-
-1. Sigmoid Function: The sigmoid function is an
-   activation function that takes a real-valued
-   number as input and returns a value between
-   0 and 1. It is defined by the equation f(x)
-   = 1 / (1 + e^(-x)). The function has
-   a characteristic S-shaped curve, and its output
-   is used to represent a probability-like value
-   for the input. The function is commonly used in
-   binary classification tasks, where the output
-   represents the probability of belonging to one
-   of two classes.
-
-2. Rectified Linear Unit (ReLU) Function: The ReLU
-   function is an activation function that sets
-   all negative values of the input to zero and
-   leaves all non-negative values unchanged. It is
-   defined by the equation f(x) = max(0, x). This
-   function is commonly used in deep neural
-   networks because it is computationally
-   efficient and does not suffer from the
-   "vanishing gradient" problem that other
-   activation functions can experience.
-
-3. Leaky ReLU Function: The leaky ReLU function is
-   similar to the ReLU function but with a small
-   slope for negative values. It is defined by the
-   equation f(x) = max(0.01x, x). This function is
-   used to overcome the "dying ReLU" problem that
-   can occur when the ReLU function outputs zero
-   for a large number of inputs.
-
-4. Parametric ReLU Function: The parametric ReLU
-   function is a variant of the ReLU function that
-   includes a learnable parameter alpha. It is
-   defined by the equation f(x) = max(alpha*x, x),
-   where alpha is a learnable parameter. This
-   function can help improve the performance of
-   deep neural networks.
-
-5. Exponential Linear Unit (ELU) Function: The ELU
-   function is similar to the ReLU function but
-   with a smoother transition around zero. It is
-   defined by the equation f(x) = x if x >= 0,
-   f(x) = alpha*(e^x - 1) if x < 0, where alpha is
-   a hyperparameter. This function is designed to
-   address the vanishing gradient problem and can
-   improve the performance of deep neural
-   networks.
-
-6. Softplus Function: The softplus function is
-   a smooth approximation of the ReLU function. It
-   is defined by the equation f(x) = log(1
-   + e^x). This function is used in deep neural
-   networks as an alternative to the ReLU function
-   because it is differentiable at zero and
-   provides a smoother gradient.
-
-7. Hyperbolic Tangent (Tanh) Function: The
-   hyperbolic tangent function is an activation
-   function that maps the input to a value between
-   -1 and 1. It is defined by the equation f(x)
-   = (e^x - e^(-x)) / (e^x + e^(-x)). This
-   function is commonly used in recurrent neural
-   networks (RNNs) because it is sensitive to the
-   magnitude of the input and can be used to
-   control the flow of information through the
-   network.
-
-8. Swish Function: The Swish function is
-   a relatively new activation function that is
-   similar to the sigmoid function but has
-   a learnable parameter beta. It is defined by
-   the equation f(x) = x * sigmoid(beta*x). This
-   function has been shown to outperform other
-   activation functions on a variety of deep
-   learning tasks.

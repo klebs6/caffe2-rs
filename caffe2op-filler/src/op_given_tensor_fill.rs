@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    FillerOp,
-    Workspace,
-    Tensor,
-};
-
 /**
   | This op fills an output tensor with the
   | data specified by the *value* and *dtype*

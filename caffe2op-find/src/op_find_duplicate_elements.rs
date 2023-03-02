@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-};
-
 /**
   | The *FindDuplicateElements* op takes
   | a single 1-D tensor *data* as input and
@@ -21,10 +17,10 @@ use crate::{
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/find_duplicate_elements_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_DISPATCH_HELPER]
 pub struct FindDuplicateElementsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    //USE_DISPATCH_HELPER;
     storage: OperatorStorage,
     context: Context,
 }

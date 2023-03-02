@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-};
-
 /**
   | FeedBlobs the content of the blobs.
   | The input and output blobs should be

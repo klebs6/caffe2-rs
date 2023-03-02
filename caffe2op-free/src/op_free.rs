@@ -1,22 +1,16 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-};
-
-/**
-  | FreeOp frees the content of the output
-  | blob. We allow it to take in input blobs
-  | purely for the reason that it can "wait"
-  | on the input blobs to be produced by some
-  | of the earlier operators before a free
-  | is called.
-  | 
-  | Frees the content of the blobs. The input
-  | and output blobs should be one-to-one
-  | inplace.
-  |
-  */
+/// FreeOp frees the content of the output
+/// blob. We allow it to take in input blobs
+/// purely for the reason that it can "wait"
+/// on the input blobs to be produced by some
+/// of the earlier operators before a free
+/// is called.
+/// 
+/// Frees the content of the blobs. The input
+/// and output blobs should be one-to-one
+/// inplace.
+/// 
 pub struct FreeOp<Context> {
     storage: OperatorStorage,
     context: Context,

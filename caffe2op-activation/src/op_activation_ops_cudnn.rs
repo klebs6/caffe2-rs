@@ -1,20 +1,9 @@
 crate::ix!();
 
-use crate::{
-    CudnnTensorDescriptor,
-    CudnnActivationDescriptor,
-    CudnnWrapper,
-    OperatorStorage,
-    CudnnDataType,
-    CUDAContext,
-};
-
+#[USE_OPERATOR_FUNCTIONS("CUDAContext")]
 pub struct CudnnActivationOpBase {
-
-    //USE_OPERATOR_FUNCTIONS(CUDAContext);
-    storage: OperatorStorage,
-    context: CUDAContext,
-
+    storage:       OperatorStorage,
+    context:       CUDAContext,
     cudnn_wrapper: CudnnWrapper,
     data_desc:     CudnnTensorDescriptor,
     act_desc:      CudnnActivationDescriptor,
@@ -67,10 +56,8 @@ impl Drop for CudnnActivationOpBase {
     }
 }
 
+#[USE_OPERATOR_FUNCTIONS("CUDAContext")]
 pub struct CudnnActivationOp<CudnnActivationMode> {
-
-    //USE_OPERATOR_FUNCTIONS(CUDAContext);
-
     base: CudnnActivationOpBase,
     phantom: PhantomData<CudnnActivationMode>,
 }
@@ -120,8 +107,8 @@ impl<CudnnActivationMode> CudnnActivationOp<CudnnActivationMode> {
     }
 }
 
+#[USE_OPERATOR_FUNCTIONS("CUDAContext")]
 pub struct CudnnActivationGradientOp<CudnnActivationMode> {
-    //USE_OPERATOR_FUNCTIONS(CUDAContext);
     base:    CudnnActivationOpBase,
     phantom: PhantomData<CudnnActivationMode>,
 }

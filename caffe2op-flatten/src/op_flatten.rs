@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    GradientMakerBase,
-    TensorShape,
-    OperatorStorage,
-};
-
 /**
  | Flattens the input tensor into a 2D matrix. If input tensor has shape
  | $(d_0, d_1, ..., d_n)$ then the output will have shape
