@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    CPUContext
-};
-
 #[test] fn div_op_example() {
 
     todo!();
@@ -38,9 +33,8 @@ use crate::{
     */
 }
 
-
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DivFunctor<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     //.FillUsing(MathDocGenerator("division", kDivExample))

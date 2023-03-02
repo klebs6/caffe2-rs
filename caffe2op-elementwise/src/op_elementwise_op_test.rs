@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    OperatorDef
-};
-
-
 pub fn copy_vector_cpu_context_bool(N: i32, x: *const bool, y: *mut bool) {
     todo!();
     /*

@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef
-};
-
-
 pub fn copy_vector_cuda_context(N: i32, x: *const bool, y: *mut bool) {
     todo!();
     /*

@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext,
-    GradientMakerBase,
-    OperatorDef,
-};
-
 #[test] fn mul_op_example() {
 
     todo!();

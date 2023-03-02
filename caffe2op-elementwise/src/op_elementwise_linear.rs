@@ -76,9 +76,9 @@ crate::ix!();
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/elementwise_linear_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ElementwiseLinearOp<T, Context, Engine> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:  OperatorStorage,
     context:  Context,
     axis:     i32,
@@ -156,11 +156,10 @@ impl ElementwiseLinearOp<f32, CPUContext, DefaultEngine> {
     }
 }
 
-
 ///--------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ElementwiseLinearGradientOp<T, Context, Engine> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:  OperatorStorage,
     context:  Context,
     axis:     i32,

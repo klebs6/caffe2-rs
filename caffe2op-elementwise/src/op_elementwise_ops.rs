@@ -1,22 +1,14 @@
 crate::ix!();
 
-use crate::{
-    SameTypeAsInput,
-    CPUContext,
-    OperatorStorage,
-    TensorTypes,
-    Tensor
-};
-
 pub type NumericTypes = TensorTypes<(i32, i64, f32, f64)>;
 pub type IntTypes     = TensorTypes<(i32, i64)>;
 pub type BoolTypes    = TensorTypes<(bool)>;
 pub type IntBoolTypes = TensorTypes<(i32, i64, bool)>; // discrete types
 
 ///-------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct UnaryElementwiseWithArgsOp<InputTypes, Context, Functor, OutputTypeMap=SameTypeAsInput> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:    OperatorStorage,
     context:    Context,
 
@@ -98,9 +90,9 @@ pub type UnaryElementwiseOp<InputTypes, Context, Functor, OutputTypeMap> =
 UnaryElementwiseWithArgsOp<InputTypes, Context, UnaryFunctorWithDefaultCtor<Functor>, OutputTypeMap>;
 
 ///-------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BinaryElementwiseWithArgsOp<InputTypes, Context, Functor, OutputTypeMap> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:          OperatorStorage,
     context:          Context,
 
@@ -219,9 +211,9 @@ impl<InputTypes,Context,Functor,OutputTypeMap> BinaryElementwiseWithArgsOp<Input
 }
 
 ///--------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BinaryElementwiseWithArgsGradientOp<InputTypes, Context, Functor, OutputTypeMap, GradientTypeMap> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                OperatorStorage,
     context:                Context,
 
@@ -653,9 +645,9 @@ declare_forward_only_binary_functor!{BitwiseXor}
  | the gradient in cases where the forward op is in
  | broadcast mode.
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SumReduceLikeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

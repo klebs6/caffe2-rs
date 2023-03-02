@@ -66,3 +66,13 @@ pub fn noreturn(attr: TokenStream, item: TokenStream) -> TokenStream {
 pub fn C10_HOST_CONSTEXPR(attr: TokenStream, item: TokenStream) -> TokenStream {
     item
 }
+
+#[proc_macro_attribute]
+pub fn USE_DEFORMABLE_CONV_BASE_FUNCTIONS(attr: TokenStream, item: TokenStream) -> TokenStream {
+    item
+}
+
+#[proc_macro_attribute]
+pub fn USE_CONV_POOL_BASE_FUNCTIONS(attr: TokenStream, item: TokenStream) -> TokenStream {
+    item
+}

@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-};
-
-
 #[test] fn elementwise_sum_example1() {
 
     todo!();

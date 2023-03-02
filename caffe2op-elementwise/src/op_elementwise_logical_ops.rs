@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    TensorTypes,
-};
-
 /**
   | Operator Where takes three input data
   | (Tensor, Tensor, Tensor) and produces one output
@@ -12,10 +7,10 @@ use crate::{
   | elementwise.
   |
   */
+#[USE_OPERATOR_FUNCTIONS(Context)]
+#[USE_DISPATCH_HELPER]
 pub struct WhereOp<Context> {
 
-    //USE_OPERATOR_FUNCTIONS(Context);
-    //USE_DISPATCH_HELPER;
     storage: OperatorStorage,
     context: Context,
 
@@ -183,10 +178,10 @@ impl IsMemberOfValueHolder {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/elementwise_logical_ops.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_DISPATCH_HELPER]
 pub struct IsMemberOfOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    //USE_DISPATCH_HELPER;
     storage: OperatorStorage,
     context: Context,
 
