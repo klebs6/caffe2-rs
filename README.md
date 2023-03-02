@@ -16,7 +16,7 @@ roughly in place. The translation task is now
 parallelized. To ensure functionality, the unit
 tests from the C++ codebase have been included.
 
-In the near future, this library could serve as
+In the near future, this library could possibly serve as
 a reference model for PyTorch, as well as a tool
 for the Rust ecosystem. The project owes its DNA
 to the original authors of the Caffe2 C++ library,
