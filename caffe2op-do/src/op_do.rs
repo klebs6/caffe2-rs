@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    OperatorDef,
-    NetDef
-};
-
 /**
   | 'Do' control operator, executes a subnet
   | in a separate workspace.
@@ -20,9 +13,9 @@ use crate::{
   | corresponding outer blob indices.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DoOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:               OperatorStorage,
     context:               Context,
 
