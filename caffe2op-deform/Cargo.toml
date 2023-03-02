@@ -17,7 +17,7 @@ documentation = "https://docs.rs/caffe2op-deform"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2op-deform"
-readme = "../README.md"
+readme = "README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.3-alpha.0"
 [package.metadata]
