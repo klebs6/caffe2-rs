@@ -1,14 +1,7 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    OperatorDef
-};
-
+#[USE_OPERATOR_FUNCTIONS(Context)]
 pub struct ByteWeightDequantOp<Context> {
-
-    //USE_OPERATOR_FUNCTIONS(Context);
 
     storage: OperatorStorage,
     context: Context,
@@ -68,5 +61,3 @@ register_cpu_operator!{
 num_inputs!{ByteWeightDequant, 1}
 
 num_outputs!{ByteWeightDequant, 1}
-
-

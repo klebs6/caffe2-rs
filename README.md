@@ -30,9 +30,8 @@ please take a look at the [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
-Caffe2-rs is licensed under the Apache License,
-Version 2.0. See [LICENSE](LICENSE) for the full
-license text.
+Caffe2-rs has a BSD-style license, as found in the
+[LICENSE](LICENSE) file.
 
 ## Acknowledgments
 

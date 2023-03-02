@@ -1,8 +1,8 @@
 crate::ix!();
 
 ///--------------------------------------------------
+#[USE_CONV_POOL_BASE_FUNCTIONS(Context)]
 pub struct DeformConvOpBase<T, Context> {
-    //USE_CONV_POOL_BASE_FUNCTIONS(Context);
     base: ConvPoolOpBase<Context>,
 
     deformable_group: i32,

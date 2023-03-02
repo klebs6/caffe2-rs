@@ -23,9 +23,9 @@ crate::ix!();
   | in each row.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DenseVectorToIdListOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
