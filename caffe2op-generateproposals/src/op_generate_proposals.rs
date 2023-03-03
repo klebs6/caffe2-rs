@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Array3f,
-    ERArrXXf,
-    EArrXf,
-    OperatorStorage,
-    Tensor,
-    CPUContext,
-    TensorCPU,
-};
-
 /**
   | A sub tensor view
   | 

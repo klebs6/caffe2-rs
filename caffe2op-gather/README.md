@@ -326,4 +326,123 @@ important to optimize the implementation of the
 operator for the target hardware in order to
 achieve the best performance.
 
+1> are there certain chip architectures which are
+better for the gather operation than others? which
+are they and why?
+
+Yes, there are certain chip architectures that are
+better suited for the gather operation than
+others. The most notable architectures for
+efficient gather operations are those with SIMD
+(Single Instruction, Multiple Data) instructions
+and vector processing units.
+
+SIMD instructions allow a single instruction to
+operate on multiple data elements
+simultaneously. This is particularly useful for
+gather operations, which involve gathering data
+from multiple memory locations into a single
+location. SIMD instructions can perform this
+operation in a single instruction, rather than
+requiring multiple instructions for each data
+element.
+
+Vector processing units are specialized hardware
+units that can perform SIMD instructions in
+parallel. This allows for even more efficient
+gather operations, as multiple gather operations
+can be performed simultaneously.
+
+Examples of chip architectures that are
+well-suited for gather operations include Intel's
+AVX-512 and ARM's NEON instruction set
+architectures. These architectures feature wide
+SIMD registers and vector processing units, which
+make them ideal for applications that involve
+large-scale data processing, such as scientific
+computing and machine learning.
+
+Overall, architectures that support SIMD
+instructions and vector processing units are
+better suited for gather operations due to their
+ability to efficiently process large amounts of
+data in parallel.
+
+2> does it make sense to apply an activation
+function during a gather?
+
+Applying an activation function during a gather
+operation may or may not make sense depending on
+the specific use case and the type of activation
+function being used.
+
+In general, the purpose of a gather operation is
+to collect data from multiple memory locations
+into a single location. The collected data is then
+typically used as input to a subsequent operation,
+such as a neural network layer. Activation
+functions are typically applied to the output of
+these subsequent operations, not during the gather
+operation itself.
+
+That being said, there may be some specific use
+cases where applying an activation function during
+a gather operation could make sense. For example,
+if the gathered data needs to be transformed or
+normalized before being used as input to
+a subsequent operation, an activation function
+could potentially be used for this purpose.
+
+However, it's worth noting that applying an
+activation function during a gather operation
+could also potentially introduce additional
+computational overhead, particularly if the gather
+operation is being performed on a large amount of
+data. Therefore, it's important to carefully
+consider the specific use case and the potential
+benefits and drawbacks of applying an activation
+function during a gather operation before making
+a decision.
+
+3> what is an example of a case when it would be
+worthwhile?
+
+One example of a case where it might be worthwhile
+to apply an activation function during a gather
+operation is when performing batch normalization
+in a neural network.
+
+Batch normalization is a technique used to
+normalize the inputs to a neural network layer,
+which can improve the stability and convergence of
+the network during training. One common way to
+perform batch normalization is to subtract the
+mean and divide by the standard deviation of the
+inputs. These values are typically calculated
+across a batch of training examples.
+
+When performing batch normalization, the mean and
+standard deviation values must be gathered from
+the inputs across the batch. One approach is to
+use a gather operation to collect the relevant
+inputs from each training example, and then
+calculate the mean and standard deviation from the
+gathered data.
+
+In this case, it might be worthwhile to apply an
+activation function, such as the ReLU function,
+during the gather operation. This could help to
+remove any negative values from the gathered
+inputs, which could improve the accuracy of the
+mean and standard deviation calculations.
+
+Of course, the specific choice of activation
+function would depend on the nature of the data
+being gathered and the requirements of the
+subsequent operation. But in general, applying an
+activation function during a gather operation
+could be useful in cases where the gathered data
+needs to be transformed or normalized before being
+used as input to a subsequent operation.
+
 

@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-};
-
 #[inline] pub fn add_lin_spaced_input(
     shape:    &Vec<i64>,
     min_val:  f32,
