@@ -15,134 +15,30 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-BitRowwiseOp
-BitRowwiseOpIndices
-EmbeddingSpMDMKernelSignature
-GenerateEmbeddingSpMDM
-JITed
-MaybeWeights
-SparseLengthsFused
-confusing
-operating
-weird
-
-AbstractSparseLengthsDef
-Aggregated
-BackwardOp
-BitsRowwiseOp
-CORE
+SparseLengthsFused8BitRowwiseOp
+SparseLengthsFused8BitRowwiseOpIndices
 CPUSparseLengthsReductionOp
 CPUSparseLengthsReductionOpTags
-Calcuate
-EmbeddingSpMDMKernelSignature
-Firstly
-FloatToRowwiseQuantized
-ForwardOp
-GatherAllRows
-GenerateEmbeddingSpMDM
-GetGradient
-GetSlice
 GetTTSparseLengthsGradient
-GradientNeedIndices
-InputTypes
-MaybeWeight
-MeanReducerDef
-PopulateSchema
-Ranks
-Secondly
 SparseLengthsMeanDef
 SparseLengthsMeanOp
-SparseLengthsPositionalWeightedSum
 SparseLengthsSumDef
 SparseLengthsSumOp
 SparseLengthsWeightedSumDef
 SparseLengthsWeightedSumOp
-SparseWeightedSum
-SumReducerDef
-TT
-TTSparseLengthsSum
-TTSparseLengthsSumGradient
 TTSparseLengthsSumGradientOp
 TTSparseLengthsSumOp
-Variation
-WeightedSumReducerDef
-bag
-branches
-bs
-compressing
-confusing
-consumption
-cumprod
-dCore
-emb
-factorization
-factorized
-functinality
-huge
-ind
-indicesInput
-iwth
-kNumInputs
-lengthsum
-negligible
-perfkernel
-phantomE
-phantomIT
-plugged
-rank
-ranks
-reconstructing
-relatively
-seg
-significantly
-sums
-termed
-tgt
-trained
-twofold
-voc
-weightInput
-weird
-
-CompressedIndicesMapping
-ELEM
-EmbeddingSpMDMKernelSignature
-EmbeddingSpMDMRowWiseSparseKernelSignature
-GenerateEmbeddingSpMDM
-GenerateEmbeddingSpMDMNBit
-GenerateEmbeddingSpMDMNBitRowWiseSparse
-GenerateEmbeddingSpMDMRowWiseSparse
-IsMean
-LUT
-MaybeWeights
-NoWeightsNoMean
-RATE
-SLS
 SparseLengthsConfig
 SparseLengthsFusedNBitRowwiseOp
 SparseLengthsFusedNBitRowwiseOpTags
@@ -150,38 +46,8 @@ SparseLengthsNBitRowwiseSparseOp
 SparseLengthsNBitRowwiseSparseOpTags
 SparseLengthsSumSparseLookupOp
 SparseLengthsSumSparseLookupOpTags
-Uncompressed
-WithWeights
-WithoutWeights
-YesMeanNoWeights
-YesWeightsNoMean
-confusing
-indicator
-operating
-weird
-
-BitQuantizedToFloat
-BitQuantizedToFloatOp
-BitsOp
-BitsRowwise
-BitsRowwiseOp
-BitsRowwiseOpIdx
-DataFloat
-DataUint
-FloatToRowwiseQuantized
-MaybeWeights
-OutDataT
-ScaleBias
-SparseLengthsWeightedMean
-Variation
-branches
-dataToReduceSize
-ij
-indicesInput
-kEqualityThreshold
-losses
-perfkernel
-phantomOutDataT
-reshaped
-restores
-weirdness
+FloatToRowwiseQuantized8BitsOp
+Rowwise8BitQuantizedToFloatOp
+SparseLengths8BitsRowwiseOp
+SparseLengths8BitsRowwiseOpIdx
+is

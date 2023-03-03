@@ -15,163 +15,26 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-Advances
-BRNG
-Bytes
-Chen
-Chunpeng
-Cong
-DataFloat
-DataFusedQuantized
-De
-FUSED
-Feng
-FloatToFusedRandRowwiseQuantized
 FloatToFusedRandRowwiseQuantizedOp
-FusedRandRowwiseQuantizedToFloat
 FusedRandRowwiseQuantizedToFloatOp
-Hai
-Information
-Li
-METHOD
-QUANTIZED
-RANDOM
-Refer
-STD
-StdRng
-TernGrad
-Ternary
-Terngrad
-VSL
-VSLStreamStatePtr
-Wang
-Wei
-Wen
-Xu
-Yan
-Yandan
-Yiran
-closest
-communication
-deep
-determining
-discrete
-drawing
-pp
-proved
-quantizes
-subarray
-suppose
-targeted
-unbiased
-unittest
-vsRngUniform
-vsl
-vslDeleteStream
-vslNewStream
-vslStream
-xxx
-
-BitRowwiseQuantizedHalfScaleBias
-BitRowwiseQuantizedHalfScaleBiasToFloat
-BitRowwiseQuantizedHalfScaleBiasToHalfFloat
-BitRowwiseQuantizedOp
-BitRowwiseQuantizedToFloatOp
-BitRowwiseQuantizedToHalfFloat
-CONVERT
-ConvertFn
+drop
 ConvertFnType
-DataFloat
-DataFusedScaleBiasInt
-De
-FUSED
-Tsb
-TypeForScaleAndBias
-alongside
-convertfp
-determining
-multiplying
-phantomCFN
-phantomTypeForScaleAndBias
-preceding
-quantizes
-un
-
-BitRowwiseQuantizedOp
-BitRowwiseQuantizedToHalf
-ConvertFn
-DataFloat
-DataFusedScaleBias
-De
-ELEM
-FUSED
+FloatToFused8BitRowwiseQuantizedOp
+Fused8BitRowwiseQuantizedToFloatCPUOp
+Fused8BitRowwiseQuantizedToFloatOp
 FloatToFusedNBitRowwiseQuantizedOp
 FusedNBitRowwiseQuantizedToFloatOp
-GREEDY
-Greedy
-RATE
-Round
-Xmax
-Xmin
-alongside
-convertfp
-corner
-dequantization
-determining
-multiplying
-phantomCFN
-quantizes
-un
-
-Affine
-BitFakeRowwiseQuantized
-ConvertFn
 ConvertFnType
-DIRECTION
-DataFloat
-DataFusedScaleBiasInt
-FUSED
 FloatToFusedNBitFakeRowwiseQuantizedOp
-GREEDY
-Greedy
-RATE
-Round
-Xmax
-Xmin
-Xq
-convertfp
-kValue
-loss
-optima
-phantomCFN
-potentiall
-solution
-thr
-xmax
-xmin
-xq
+is

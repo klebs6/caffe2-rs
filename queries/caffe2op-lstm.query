@@ -15,86 +15,41 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-CellT
-CellTM
-GatesGrad
 GetLSTMUnitGradient
-HiddenT
-HiddenTM
-LSTMUnitGradient
 LSTMUnitGradientOp
-LstmUnitCpu
-LstmUnitGradientCpu
-NxD
-SeqLengths
-TxNxD
-inputOffset
+LSTMUnitOp
 lSTMUnit
-peephole
-shifted
-
 BidirHiddenType
 CellParams
 FullBidirectionalLSTMLayer
-FullBidirectionalLSTMLayerTypes
 FullLSTMLayer
-HiddenType
+InferenceLSTMOp
 LSTMCell
 LayerOutput
 OutputType
 ParamType
 TensorTuple
-WeightType
-bidir
-cellgate
-cells
-chunked
-cy
-forgetgate
-fw
-gates
-hh
-hiddens
-hy
-ingate
-initParams
-outgate
-rev
-stacked
-unpair
-unstacked
-
-Adopted
-Flattens
-Gathers
-Odd
-expandedTensorList
-hiddens
-iota
-unpair
-vals
+invoke
+reverse
+add
+cat
+chunk
+linear
+matmul
+mul
+sigmoid
+stack
+tanh
+transpose
+unbind

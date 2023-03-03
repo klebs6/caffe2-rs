@@ -15,120 +15,31 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-BufferedTokenizer
-CreateTextFileReader
 CreateTextFileReaderOp
-Expects
-Fields
-FileReader
-TAB
 TextFileReaderInstance
-TextFileReaderRead
 TextFileReaderReadOp
-Token
-Tokenizer
-azzolini
-batchSize
-datas
-delims
-escape
-fieldByteSizes
-fieldMetas
-fieldTypes
-fileReader
-globalMutex
-metas
-numFields
-numPasses
-rowsRead
-safeness
-startDelimId
-strtof
-threaded
-tokenizer
-
-BufferedTokenizer
-CharRange
+convert
+is
 ChunkProvider
-Escapes
-FileReader
-StringProvider
-TextFileReaderUtilsTest
-Token
-TokenizeTest
-TokenizedString
-Tokenizer
-bt
-charIdx
-chunkProvider
-endDelim
-endIdx
-expectedToken
-fileTokenizer
-fr
-lastDelim
-nTest
-nlabel
-numPasses
-outFile
-seps
-startDelimId
-subsplits
-tex
-tmpname
-tokenized
-tokenizer
-xbf
-
 BufferedTokenizer
 CharRange
 FileReader
-StringProvider
 Token
 TokenizedString
 Tokenizer
-character
-characters
-currentStart
-delimTable
-delims
-escape
-escaped
-lastDelim
-leftover
-lseek
-modifiedStrings
-newDelimId
-numPasses
-numRead
-reseting
-startDelimId
-toBeSkipped
-tokenIndex
-tokenized
-tokenizer
+drop
+invoke
+next
+reset
+tokens

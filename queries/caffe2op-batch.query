@@ -15,216 +15,46 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-BatchDenseToSparse
-BatchSparseToDense
 GetBatchSparseToDenseGradient
-
 BatchPermutationOp
-
-BOUNDARIES
-BatchBucketize
 BatchBucketizeOp
-Boundaries
-border
-bucketize
-bucketized
-bucktized
-
-Funcname
-OriginalFunc
-PackV
-Pow
-UnpackV
-ia
-packv
-unpackv
-vdPackV
-vdPow
-vdUnpackV
-vsPackV
-vsPow
-vsUnpackV
-
-TensorInferenceForBatchMatMul
-nElemA
-nElemB
-nElemY
-
-BoxCoxMixedLambda
-BoxCoxNaive
-BoxCoxNonzeroLambda
-BoxCoxZeroLambda
-CachedBuffers
-GetBuffers
-LAMBDA
-Lambda
-PackV
-Pow
-TileArrayIntoVector
-TileIndicesInPlace
-Truncate
-TypedCachedBuffers
-UnpackV
-accumulator
-cox
-ln
-nonzero
-nonzeros
-replicating
-tile
-treatment
-
-AG
-BG
-GetArgument
+as
+OpSchema
+BatchBoxCoxOp
+as
 GetBatchMatMulGradient
-dA
-
-
-Buffers
 CachedBuffers
-GetBuffers
 TypedCachedBuffers
-accumulator
-
-AddConstInput
-BatchMatMulOpGPUBroadcastTest
-BatchMatMulOpGPUNormalTest
 BatchMatMulOpGPUTest
-
 BatchGatherOp
+BatchMatMulOp
+ConcatBatchMatMulBatchGatherOp
+Engine
+T
 TInd
-indexed
-rank
-
-Ai
-Bi
-CostInferenceForBatchMatMul
-TensorInferenceForBatchMatMul
-Yi
-behaves
-numpy
-rank
-
-TInd
-adj
-ndata
-
-tile
-
-BatchDenseToSparseOp
-
 BatchMomentsOp
-
-BatchMoments
-BatchMomentsOp
-ComputeBatchMomentsNCHW
-ComputeBatchMomentsNHWC
-
-BatchPermutationGradient
 BatchPermutationGradientOp
-BatchPermutationOp
+BatchPermutationOpFloatCPU
 GetBatchPermutationGradient
-aka
-gradInput
-gradOutput
-
-BatchPermutationOp
-deviceA
-deviceB
-
-BatchSparseToDense
 BatchSparseToDenseOp
-FillInDenseValues
-VALUES
-lens
-shaper
-unavailable
-
-AddConstInput
-BatchMatMulOpBroadcastTest
-BatchMatMulOpNormalTest
+as
 BatchMatMulOpTest
-
-BatchGatherGradient
 BatchGatherGradientOp
-BatchGatherOp
 GetBatchGatherGradient
-Outer
-TInd
-acheck
-gathered
-gathers
-implementing
-indexarray
-
-BatchDenseToSparse
+in
 BatchDenseToSparseOp
-BatchSparseToDenseOp
-FillInSparseValues
-forms
-
-BatchDenseToSparse
-BatchSparseToDense
+as
 GetBatchDenseToSparseGradient
-
 BatchMomentsGradientOp
-dmu
-dvar
-gradientNCHW
-gradientNHWC
-
-BatchSparseToDense
-BatchSparseToDenseOp
-
-AddInput
-BatchPermutationGradient
-BatchPermutationOp
-BatchPermutationTest
-CHECKCPUGPUEqualGenericDimension
-CheckCPUGPUEqual
-CreateAndRun
-CreateAndRunGradient
-CudaGPU
-Prepare
-cpugpuequal
-elapsed
-inputCPU
-inputGPU
-iota
-isApprox
-outResult
-
-BatchMoments
-BatchMomentsGradient
-BatchMomentsGradientOp
-ComputeBatchMomentsGradientNCHW
-ComputeBatchMomentsGradientNHWC
 GetBatchMomentsGradient
-dmu
-dvar

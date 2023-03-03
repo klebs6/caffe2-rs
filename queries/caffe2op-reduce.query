@@ -15,173 +15,57 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-Axes
-ComputeReduceMinMaxGradient
-FeedBlob
-FetchBlob
 GetReduceGradient
-InputTypes
-Links
+L1Reducer
+L2Reducer
 MaxReducer
+MeanReducer
 MinReducer
 ReduceGradientOp
-ReduceMaxGradient
-ReduceMeanGradient
-ReduceMinGradient
-ReduceShapeInference
-ReduceSumGradient
-Reduced
-ResetWorkspace
-astype
-iota
-keepdims
-phantomIT
-randint
-rank
-resulting
-
-FIRSTDIMS
-NORMALIZE
+ReduceOp
+SumReducer
+backward
+forward
 SumReduceDimsGradientOp
 SumReduceDimsOp
-dXdata
-dYdata
-former
-
-FIRSTDIMS
-FeedBlob
-FetchBlob
+of
 GetReduceBackMaxGradient
 GetReduceFrontMaxGradient
-Links
 MaxReduceDimsGradientOp
 MaxReduceDimsOp
-REDUCTION
-ReduceBackMax
-ReduceBackMaxGradient
-ReduceFrontMax
-ReduceFrontMaxGradient
-Reduces
-ResetWorkspace
-astype
-dXdata
-dYdata
-randint
-
-FeedBlob
-FetchBlob
 GetReduceBackMeanGradient
 GetReduceFrontMeanGradient
-Links
-REDUCTION
-ReduceBackMean
-ReduceBackMeanGradient
-ReduceFrontMean
-ReduceFrontMeanGradient
-Reduces
-ResetWorkspace
-SumReduceDimsGradientOp
-SumReduceDimsOp
-astype
-columnwise
-dXdata
-dYdata
-randint
-
-FeedBlob
-FetchBlob
 GetReduceBackSumGradient
 GetReduceFrontSumGradient
-Links
-REDUCTION
-ReduceBackSum
-ReduceBackSumGradient
-ReduceFrontSum
-ReduceFrontSumGradient
-Reduces
-ResetWorkspace
-SumReduceDimsGradientOp
-SumReduceDimsOp
-astype
-columnwise
-dXdata
-dYdata
-randint
-
-BxM
-BxMxN
-BxN
-Collect
-ColumnMaxGradient
-ColwiseMaxGradient
-DTOR
-FeedBlob
-FetchBlob
+compute
 GetColwiseMaxGradient
 GetRowwiseMaxGradient
 GetSumElementsGradient
-Links
 MaxReductionGradientOp
 MaxReductionOp
-ResetWorkspace
-RowwiseMaxGradient
-SIMPLE
-SumElements
-SumElementsGradient
 SumElementsGradientOp
-SumElementsInt
 SumElementsIntOp
 SumElementsOp
-SumSqrElements
 SumSqrElementsOp
-Sums
-astype
-columnwise
-dXdata
-dYdata
-matricies
-maximums
-randint
-simulating
-
-AxpyFixedSize
+must
 BaseReducer
 BaseReducerGradient
 BaseReducerGradientMeta
 BaseReducerMeta
-FixedDispatch
-Incremental
-InputCount
-LogMeanExp
 LogMeanExpRangeReducer
 LogMeanExpRangeReducerDef
 LogMeanExpRangeReducerGradient
-LogSumExp
 LogSumExpRangeReducer
 LogSumExpRangeReducerDef
 LogSumExpRangeReducerGradient
@@ -194,34 +78,20 @@ MaxReducerGradient
 MeanRangeReducer
 MeanRangeReducerDef
 MeanRangeReducerGradient
+MeanReducer
 MeanReducerDef
 MeanReducerGradient
-Produce
-ReducerGradient
-ScaleFixedSize
 SumRangeReducer
 SumRangeReducerDef
 SumRangeReducerGradient
+SumReducer
 SumReducerDef
 SumReducerGradient
-Summation
 WeightedSumReducer
 WeightedSumReducerDef
 WeightedSumReducerGradient
 WeightedSumReducerGradientMeta
 WeightedSumReducerMeta
-computeMeta
-exponentials
-imitates
-isize
-leverage
-mustn
-numAuxInputsWithGrads
-observeInput
-occurs
-phantomCPUContext
-propagation
-reducers
-smartly
-summation
-summed
+finish
+invoke
+process

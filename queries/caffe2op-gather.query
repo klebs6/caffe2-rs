@@ -15,109 +15,21 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
-Below are listed some symbols, defined
-or accessed from within this crate.
+Below are listed some tokens from this crate. 
 
-it is not guaranteed these tokens originate in
-the crate, but many of them do. 
-
-please be careful not to mention those that
-seem only loosely related by name.
-
-It is better to mention fewer tokens, as long
-as they are the ones you identify as most
-likely to reside in this crate.
-
-If there are any mathematical ideas identified
-by these tokens, please describe them
-alongside the relevant mathematical equations. 
-
-Last thing: please don't mention the word "token".
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations.
 
 thanks!
 
-please format your response for the Markdown .md file format.
+please format your response in the Markdown file format.
 
 here are the tokens:
-
-BatchGatherGradient
-DataDimsVec
-FeedBlob
-FetchBlob
+GatherOp
 GetGatherGradient
-IndexDimsVec
-Links
-ResetWorkspace
-ScatterUpdate
-SparseToDense
-SpartseToDense
-Succeed
-TBD
-argsHelper
-astype
-axisArg
-behaviour
-combining
-concatenation
-correctness
-cover
-dataIdx
-efficiency
-flatten
-gathered
-gathers
-hasn
-indexarray
-indexed
-indicesIdx
-inds
-intenionally
-misleading
-othewise
-rank
-replicates
-reshaping
-resizes
-revisit
-woild
-workflows
-wrapping
-
-BitRowwiseOp
-GatherFused
-gathered
-operating
-rank
-
+GatherFused8BitRowwiseOp
+GatherRangesToDenseCPUOp
 GatherRangesToDenseOp
-NumOuptuts
-RANGES
-Ranges
-Ratio
-alarm
-alarming
-batchSize
-counted
-decideding
-deciding
-emptyRanges
-examples
-exceeded
-gathered
-maxEmptyRatio
-maxMismatchedRatio
-minObservation
-mismatchedRanges
-missmatch
-observations
-outputRawData
-rangeLength
-rangeStart
-rangesData
-rangesDataOffset
-rank
-rawData
-sumarizing
-tolerable
-totalRanges
-triggered
+drop
+int64
