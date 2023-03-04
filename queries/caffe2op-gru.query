@@ -27,6 +27,6 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GRUUnitGradientOp
-GRUUnitOp
 GetGRUUnitGradient
+GRUUnitOp
 sigmoid

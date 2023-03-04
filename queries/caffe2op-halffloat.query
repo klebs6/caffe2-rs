@@ -27,8 +27,8 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 Float16ConstantFillOp
+GetFloatToHalfGradient
 Float16UniformFillOp
 FloatToHalfOp
-GetFloatToHalfGradient
-GetHalfToFloatGradient
 HalfToFloatOp
+GetHalfToFloatGradient

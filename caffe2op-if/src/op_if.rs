@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    OperatorStorage,
-    NetBase,
-    OperatorDef,
-};
-
 /**
   | 'If' control operator, first input
   | is a scalar boolean blob that stores

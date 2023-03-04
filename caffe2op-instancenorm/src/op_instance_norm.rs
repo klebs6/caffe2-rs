@@ -1,14 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Tensor,
-    CPUContext,
-    StorageOrder,
-    GradientMakerBase,
-    OperatorDef,
-};
-
 #[test] fn instance_norm_op_example() {
 
     todo!();

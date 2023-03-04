@@ -133,7 +133,6 @@ members = [
     "caffe2op-im2col",
     "caffe2op-index",
     "caffe2op-indexhash",
-    "caffe2op-inference",
     "caffe2op-instancenorm",
     "caffe2op-integralimage",
     "caffe2op-isempty",
