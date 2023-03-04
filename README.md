@@ -16,7 +16,7 @@ roughly in place. The translation task is now
 parallelized. To ensure functionality, the unit
 tests from the C++ codebase have been included.
 
-In the near future, this library could possibly serve as
+In the near future, this library could serve as
 a reference model for PyTorch, as well as a tool
 for the Rust ecosystem. The project owes its DNA
 to the original authors of the Caffe2 C++ library,
@@ -31,7 +31,7 @@ please take a look at the [contribution guidelines](CONTRIBUTING.md).
 New as of 3/1/2023 -- discord server `caffe2-rs`
 launched!
 
-https://discord.gg/29pDjzHu
+https://discord.gg/CdHsMHJGX8
 
 ## License
 
