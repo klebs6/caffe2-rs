@@ -26,7 +26,26 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+register_cuda_operator
+register_cuda_operator_with_engine
+run_fully_connected_gradient_op_on_cudadevice
+run_fully_connected_op_on_cudadevice
+run_on_cuda_device
 FullyConnectedGradientOp
 FullyConnectedOp
 GetFCGradient
+cost_inference_function
+do_run_with_type
+fully_connected_op_example
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function
 OpSchema
+cost_inference_for_fc
+cost_inference_for_fcgradient
+fCGradient_shape_inference
+fc_shape_inference

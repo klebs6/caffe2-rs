@@ -27,3 +27,7 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 NumpyTileOp
+do_tile
+inherit_onnx_schema
+register_cpu_operator
+run_on_device

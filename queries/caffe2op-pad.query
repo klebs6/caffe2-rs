@@ -30,3 +30,12 @@ GetPadImageGradient
 PadImageGradientOp
 PadImageOp
 PadMode
+get_gradient_defs
+pad_tensor_inference
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device_with_orderNCHW
+run_on_device_with_orderNHWC
+string_to_pad_mode
+tensor_inference_function

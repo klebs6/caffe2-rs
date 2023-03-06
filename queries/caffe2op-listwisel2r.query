@@ -29,3 +29,11 @@ here are the tokens:
 GetLambdaRankNdcgGradient
 LambdaRankNdcgGradientOp
 LambdaRankNdcgOp
+compute_discounts
+get_gradient_defs
+lambda_rank_ndcg_session
+register_cpu_operator
+register_gradient
+resize_inv_log_itensor
+run_f32_on_cpu_device
+run_on_device

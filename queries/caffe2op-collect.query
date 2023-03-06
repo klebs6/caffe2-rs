@@ -29,3 +29,12 @@ here are the tokens:
 CollectAndDistributeFpnRpnProposalsOp
 CollectRpnProposalsOp
 DistributeFpnProposalsOp
+boxes_area
+export_caffe2_op_to_c10_cpu
+map_ro_is_to_fpn_levels
+register_cpu_operator
+rows_where_roi_level_equals
+run_on_cpu_device
+run_on_device
+should_not_do_gradient
+sort_and_limit_ro_is_by_scores

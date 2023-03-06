@@ -27,8 +27,18 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 HardSigmoidGradientFunctor
+allow_inplace
 HardSigmoidFunctor
+allow_inplace
+cost_inference_function
+identical_type_and_shape
+inherit_onnx_schema
 OpSchema
+cost_inference_for_hard_sigmoid
+hard_sigmoid_example
 forward
 GetHardSigmoidGradient
+get_gradient_defs
+register_gradient
 invoke
+register_cpu_operator

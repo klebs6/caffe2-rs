@@ -29,3 +29,16 @@ here are the tokens:
 ChannelShuffleGradientOp
 ChannelShuffleOp
 GetChannelShuffleGradient
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_channel_shuffleNCHW
+run_channel_shuffleNHWC
+run_on_device
+run_on_device_with_orderNCHW
+run_on_device_with_orderNHWC
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc

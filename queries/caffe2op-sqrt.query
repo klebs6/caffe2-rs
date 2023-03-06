@@ -28,6 +28,21 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetSquareRootDivideGradient
 SquareRootDivideOp
+allow_inplace
+do_run_with_type
+do_run_with_type2
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device
+square_root_divide_op
 GetSqrtGradient
 SqrtFunctor
+allow_inplace
+get_gradient_defs
+identical_type_and_shape
 invoke
+register_cpu_operator
+register_cuda_operator
+register_gradient
+sqrt_op_example

@@ -27,4 +27,7 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 BBoxTransformOpFloatCPU
+run_on_device
 BBoxTransformOp
+register_cpu_operator
+should_not_do_gradient

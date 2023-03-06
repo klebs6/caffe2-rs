@@ -30,4 +30,10 @@ GetSinhGradient
 SinhFunctor
 SinhGradientFunctor
 forward
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+register_cpu_operator
+register_gradient
+sinh_op_example

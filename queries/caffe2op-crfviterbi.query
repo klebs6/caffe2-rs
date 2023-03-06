@@ -28,3 +28,8 @@ please format your response in the Markdown file format.
 here are the tokens:
 SwapBestPathOp
 ViterbiPathOp
+add_col_to_mat
+gather_row
+no_gradient
+register_cpu_operator
+run_on_device

@@ -27,3 +27,8 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 PercentileOp
+declare_export_caffe2_op_to_c10
+export_caffe2_op_to_c10_cpu
+no_gradient
+register_cpu_operator
+run_on_device

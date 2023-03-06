@@ -2,11 +2,7 @@
 use File::Find;
 use Data::Dump::Tree;
 
-my @crates = ".".IO.dir>>.grep({ /caffe2op*/ }).grep({ .so });
-
-.say for @crates;
-
-grammar MyTokens {
+grammar RustLine {
     rule TOP {
         .* <line> .*
     }
@@ -14,7 +10,7 @@ grammar MyTokens {
     proto rule line { * }
 
     rule line:sym<macro> { 
-        ^^ <name> '!'
+        ^ <name> '!'
     }
 
     rule line:sym<decl>   { 
@@ -24,7 +20,7 @@ grammar MyTokens {
     token kw_tag { <kw_struct> | <kw_type> | <kw_enum> | <kw_fn> }
 
     token name {
-        <[A..Z a..z 0..9]>+
+        <[A..Z a..z 0..9 _]>+
     }
 
     token kw_pub    { 'pub'    } 
@@ -34,7 +30,7 @@ grammar MyTokens {
     token kw_fn     { 'fn'     } 
 }
 
-class MyTokens::Actions {
+class RustLine::Actions {
     method TOP($/) {
         make $<line>.made
     }
@@ -54,7 +50,7 @@ sub extract-defs-from-text($text) {
 
     gather for @lines {
 
-        my $match = MyTokens.parse($_, actions => MyTokens::Actions.new);
+        my $match = RustLine.parse($_, actions => RustLine::Actions.new);
 
         if so $match {
             take $match.made;
@@ -62,7 +58,7 @@ sub extract-defs-from-text($text) {
     }
 }
 
-race for @crates -> $crate {
+sub process-crate($crate) {
 
     my $outfile = "queries/$crate.query".IO;
 
@@ -115,5 +111,21 @@ race for @crates -> $crate {
     }
 
     say "crate $crate -- done";
+
 }
 
+sub MAIN(Bool :$all = False, Str :$name = "caffe2op-isempty") {
+
+    my @crates = ".".IO.dir>>.grep({ /caffe2op*/ }).grep({ .so });
+
+    if $all {
+
+        race for @crates -> $crate {
+            process-crate($crate)
+        }
+
+        exit;
+    }
+
+    process-crate($name);
+}

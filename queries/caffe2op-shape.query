@@ -27,3 +27,9 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 ShapeOp
+register_cpu_operator
+register_cuda_operator
+run_on_device
+shape_op_example
+should_not_do_gradient
+tensor_inference_function

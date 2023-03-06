@@ -27,6 +27,14 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 DeformConvOpBase
+deformable_col2im
+deformable_col2im_coord
+deformable_im2col
 DeformConvOp
+run_on_device_with_orderNCHW
+tensor_inference_function
 GetDeformConvGradient
+get_gradient_defs
+register_gradient
 DeformConvGradientOp
+run_on_device_with_orderNCHW

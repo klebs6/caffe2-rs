@@ -28,7 +28,17 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetTanhGradient
 forwardf32
+get_gradient_defs
+register_cpu_operator
+register_cudnn_operator
+register_gradient
 TanhFunctor
 TanhGradientFunctor
+allow_inplace
 forward
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+invoke_f32
+register_cpu_operator
+tanh_op_example

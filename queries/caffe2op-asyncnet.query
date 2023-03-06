@@ -28,3 +28,10 @@ please format your response in the Markdown file format.
 here are the tokens:
 AsyncBarrierOp
 AsyncNetBarrierOp
+allow_one_to_one_inplace
+async_barrier_op_dev_infer
+device_inference_function
+identical_type_and_shape
+register_cpu_operator
+run_on_device
+should_not_do_gradient

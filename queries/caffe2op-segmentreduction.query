@@ -28,6 +28,7 @@ please format your response in the Markdown file format.
 here are the tokens:
 AbstractLengthsDef
 AbstractLengthsGradientOp
+AbstractLengthsGradientOp_InputTags
 AbstractLengthsOp
 AbstractLengthsOpInputTags
 AbstractLengthsWithMainInputAndForwardOutputGradientOp
@@ -61,5 +62,22 @@ LengthsMaxCPUOp
 LengthsOpGetGradient
 OpDef
 SegmentOpGetGradient
+_InputTags
+cost_inference_for_sparse_lengths
+declare_export_caffe2_op_to_c10
+do_run_with_type
+do_run_with_value
 doesn
 equal
+export_caffe2_op_to_c10_cpu
+format_doc
+get_block_ptr
+get_gradient_defs
+lengths_max_extra_op_example
+lengths_mean_extra_op_example
+lengths_sum_extra_op
+lengths_weighted_sum_extra_op_example
+populate_schema
+register_cpu_operator
+register_segment_def
+run_on_device

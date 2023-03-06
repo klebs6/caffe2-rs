@@ -1,22 +1,14 @@
-crate::ix!();
-
-use crate::{
-    Tensor,
-    GradientMakerBase,
-    CPUContext,
-    OperatorStorage,
-    OperatorDef,
-};
-
 /*
-| template <typename T> 
-| using EigenMatrixMapRowMajor 
-| = Eigen::Map< Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>>;
-|
-| template <typename T> 
-| using ConstEigenMatrixMapRowMajor 
-| = Eigen::Map< const Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>>;
-*/
+   | template <typename T> 
+   | using EigenMatrixMapRowMajor 
+   | = Eigen::Map< Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>>;
+   |
+   | template <typename T> 
+   | using ConstEigenMatrixMapRowMajor 
+   | = Eigen::Map< const Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>>;
+   */
+
+crate::ix!();
 
 /**
   | Computes an integral image, which contains
@@ -27,12 +19,10 @@ use crate::{
   | with other detection and tracking techniques.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct IntegralImageOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-
     storage: OperatorStorage,
     context: Context,
-
     phantom: PhantomData<T>,
 }
 

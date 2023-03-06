@@ -29,3 +29,15 @@ here are the tokens:
 GetTileGradient
 TileGradientOp
 TileOp
+do_run_with_type
+do_run_with_type_string
+do_tile
+do_tile_gradient
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_operator
+register_gradient
+run_on_cpu_device
+run_on_device
+tensor_inference_function
+tile_op_example

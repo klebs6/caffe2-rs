@@ -29,6 +29,15 @@ here are the tokens:
 CopyRowsToTensorGradientOp
 CopyRowsToTensorOp
 GetCopyRowsToTensorGradient
+allow_inplace
+do_run_with_type
+enforce_inplace
+get_gradient_defs
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function
 CopyCPUToGPUOp
 CopyFromCPUInputOp
 CopyGPUToCPUOp
@@ -37,3 +46,11 @@ CopyOp
 GetCPUToGPUGradient
 GetCopyGradient
 GetGPUToCPUGradient
+copy_op_example
+device_inference_function
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
+register_cpu_operator
+register_gradient
+run_on_device

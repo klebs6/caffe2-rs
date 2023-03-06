@@ -29,5 +29,16 @@ here are the tokens:
 CreateScopeOp
 HasScopeOp
 WorkspaceStack
+caffe_known_type
+check_bindings_match
+check_stack
 clear
 empty
+pop_gradient_workspace
+push_forward_workspace
+push_forward_workspace_with_bindings
+register_cpu_operator
+reuse_last_forward_workspace
+reuse_last_forward_workspace_with_bindings
+run_on_device
+should_not_do_gradient

@@ -28,5 +28,18 @@ please format your response in the Markdown file format.
 here are the tokens:
 BRGNCHWCToPackedInt8BGRAStylizerDeprocessOp
 PackedInt8BGRANHWCToNCHWCStylizerPreprocessOp
+add_mean_and_clamp
 clamp
+clamped_cast
+convert_narrow_and_pack
+init_noise_cpu_neon
+init_noisecpu
+register_cpu_operator
+register_ideep_operator
+run_batch
+run_cpu
+run_cpu_neon
+run_on_device
 runcpu
+to_f32_v4_x4
+to_v4_f32

@@ -30,4 +30,10 @@ GetPoolGradient
 LpPoolFunctor
 LpPoolGradientOp
 LpPoolOp
+get_gradient_defs
+lp_pool_op_example
 of
+register_cpu_operator
+register_gradient
+run_f32_on_cpu_device_with_order_nchw
+run_f32_on_cpu_device_with_order_nhwc

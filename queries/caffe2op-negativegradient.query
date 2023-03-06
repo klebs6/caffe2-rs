@@ -28,3 +28,9 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetNegateGradientGradient
 NegateGradientOp
+allow_inplace
+get_gradient_defs
+register_cpu_operator
+register_cuda_operator
+register_gradient
+run_on_device

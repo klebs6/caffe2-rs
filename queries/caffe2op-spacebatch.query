@@ -31,3 +31,11 @@ GetBatchToSpaceGradient
 GetSpaceToBatchGradient
 SpaceBatchOpBase
 SpaceToBatchOp
+batch_to_space
+batch_to_space_op_example
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device
+space_to_batch
+space_to_batch_op_example

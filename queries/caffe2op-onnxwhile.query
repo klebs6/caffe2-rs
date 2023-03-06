@@ -28,6 +28,12 @@ please format your response in the Markdown file format.
 here are the tokens:
 ONNXWhileOp
 OnnxWhileOpLocalScope
+allow_inplace
+do_run_with_type
 iteration
+lcd_tensor
 net
+register_cpu_operator
+run_on_device
+set_iteration
 workspace

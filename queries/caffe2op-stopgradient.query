@@ -27,3 +27,9 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 StopGradientOp
+allow_inplace
+identical_type_and_shape
+no_gradient
+register_cpu_operator
+register_cuda_operator
+run_on_device

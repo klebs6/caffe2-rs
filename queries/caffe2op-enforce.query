@@ -27,5 +27,22 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 EnforceFiniteOp
+do_run_with_type
+enforce_on_cpu
+log_blob_finiteness
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 EnsureClippedOp
+allow_inplace
+do_run_with_type
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 EnsureCPUOutputOp
+copy_with_context
+device_inference_function
+identical_type_and_shape
+no_gradient
+register_cpu_operator
+run_on_device

@@ -28,8 +28,20 @@ please format your response in the Markdown file format.
 here are the tokens:
 CudnnLRNGradientOp
 CudnnLRNOp
+do_run_with_type
 drop
+register_cudnn_operator
+run_on_device
 GetLRNGradient
 LRNGradientOp
 LRNOp
 LRNOpBase
+get_gradient_defs
+inherit_onnx_schema
+lrn_op_example
+register_cpu_operator
+register_gradient
+run_f32_on_cpu_device_with_orderNCHW
+run_on_device
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc

@@ -29,3 +29,10 @@ here are the tokens:
 GetPrependDimGradient
 MergeDimOp
 PrependDimOp
+allow_inplace
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_operator
+register_cuda_operator
+register_gradient
+run_on_device

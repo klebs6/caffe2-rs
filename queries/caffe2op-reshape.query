@@ -28,3 +28,17 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetReshapeGradient
 ReshapeOp
+allow_inplace
+do_run_with_type
+do_run_with_type_impl
+get_gradient_defs
+inherit_onnx_schema
+int64_t
+register_cpu_operator
+register_cuda_operator
+register_gradient
+reshape_op_example
+run_on_device
+tensor_inference_function
+ReshapeOpGPUTest_testReshapeWithScalar
+declare_string

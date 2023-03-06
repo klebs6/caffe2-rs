@@ -27,5 +27,9 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 TensorProtosDBInput
+copy_prefetched
 drop
+no_gradient
 prefetch
+register_cpu_operator
+register_cuda_operator

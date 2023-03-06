@@ -27,12 +27,23 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 DataType
+do_run_cpu_with_type
+do_run_with_dst_type
+register_cpu_operator
+set_body
 CastHelper
 call
 CastOp
 DataType
+cast_op_example
+do_run_with_type
 field
 in
+inherit_onnx_schema
+run_on_device
 specified
+tensor_inference_function
 GetCastGradient
+get_gradient_defs
 int
+register_gradient

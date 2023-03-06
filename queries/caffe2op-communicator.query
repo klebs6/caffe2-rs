@@ -26,4 +26,9 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+allow_inplace
+enforce_inplace
 int
+register_cpu_operator
+register_cuda_operator
+should_not_do_gradient

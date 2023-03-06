@@ -27,5 +27,12 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GetSqrGradient
+get_gradient_defs
+register_gradient
+sqr_functor_example
 SqrFunctor
+allow_inplace
+identical_type_and_shape
 invoke
+register_cpu_operator
+register_cuda_operator

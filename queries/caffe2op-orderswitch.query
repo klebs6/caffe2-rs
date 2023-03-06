@@ -30,7 +30,17 @@ GetNCHW2NHWCGradient
 GetNHWC2NCHWGradient
 NCHW2NHWCOp
 NHWC2NCHWOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function
 CudnnNCHW2NHWCOp
 CudnnNHWC2NCHWOp
 CudnnOrderSwithOpBase
+do_run_with_type
 drop
+register_cuda_operator
+register_cudnn_operator
+run_on_device
+set_tensor_descriptor

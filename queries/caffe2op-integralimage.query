@@ -29,3 +29,7 @@ here are the tokens:
 GetIntegralImageGradient
 IntegralImageGradientOp
 IntegralImageOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_f32_on_cpu_device

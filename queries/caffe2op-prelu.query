@@ -29,3 +29,12 @@ here are the tokens:
 GetPReluGradient
 PReluGradientOp
 PReluOp
+allow_inplace
+get_gradient_defs
+inherit_onnx_schema
+prelu_op_example
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_neon_prelu
+run_on_device

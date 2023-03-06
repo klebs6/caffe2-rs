@@ -27,3 +27,7 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 AliasWithNameOp
+allow_inplace
+identical_type_and_shape
+register_cpu_operator
+run_on_device

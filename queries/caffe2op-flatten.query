@@ -28,3 +28,11 @@ please format your response in the Markdown file format.
 here are the tokens:
 FlattenOp
 GetFlattenGradient
+flatten_op_example
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_for_flatten
+tensor_inference_function

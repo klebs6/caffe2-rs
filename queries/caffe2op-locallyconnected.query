@@ -29,5 +29,16 @@ here are the tokens:
 GetLocallyConnectedGradient
 LocallyConnectedGradientOp
 LocallyConnectedOp
+get_gradient_defs
+register_cpu_operator
+register_cuda_operator
+register_gradient
+tensor_inference_function
 CUDAConvNetShapeParams
 ShapeParams
+set_column_buffer_shape
+set_ybuffer_shape
+run_on_device_with_order_nchw
+run_on_device_with_order_nchw_impl
+run_on_device_with_order_nhwc
+run_on_device_with_order_nhwc_impl

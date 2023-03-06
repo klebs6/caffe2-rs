@@ -29,3 +29,8 @@ here are the tokens:
 AveragedLoss
 AveragedLossGradient
 GetAveragedLossGradient
+averaged_loss_op_example
+get_gradient_defs
+register_cpu_operator
+register_gradient
+scalar_type

@@ -34,5 +34,15 @@ StrEquals
 StringElementwiseOp
 StringJoinOp
 Suffix
+do_run_with_type
 invoke
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 StringJoinOpTest
+StringJoinOpTest_testFloat1DJoin
+StringJoinOpTest_testFloat2DJoin
+StringJoinOpTest_testLong2DJoin
+StringJoinOpTest_testString1DJoin
+StringJoinOpTest_testString2DJoin
+run_op

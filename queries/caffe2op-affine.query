@@ -29,3 +29,14 @@ here are the tokens:
 AffineChannelGradientOp
 AffineChannelOp
 GetAffineChannelGradient
+affine_channel_scale_bias_backwardNCHW
+affine_channel_scale_bias_backwardNHWC
+allow_inplace
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device
+run_on_device_with_orderNCHW
+run_on_device_with_orderNHWC
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc

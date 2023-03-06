@@ -29,4 +29,10 @@ here are the tokens:
 ArgMaxReducer
 ArgMinReducer
 ArgOp
+do_run_with_type
+infer_tensor
 invoke
+register_cpu_operator
+run_on_device
+should_not_do_gradient
+tensor_inference_function

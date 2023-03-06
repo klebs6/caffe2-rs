@@ -26,6 +26,17 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+clip_op_example
 ClipOp
+allow_inplace
+identical_type_and_shape
+inherit_onnx_schema
 GetClipGradient
+get_gradient_defs
+register_gradient
 ClipGradientOp
+allow_inplace
+register_cpu_gradient_operator
+register_cpu_operator
+run_on_deviceA
+run_on_deviceB

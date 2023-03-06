@@ -26,7 +26,19 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+im2col_tensor_inference_function
 GetIm2ColGradient
+get_gradient_defs
+register_gradient
 Im2ColOp
+register_cpu_operator
+register_cuda_operator
+run_on_device
+tensor_inference_function
 GetCol2ImGradient
+get_gradient_defs
+register_cpu_operator
+register_cuda_operator
+register_gradient
 Col2ImOp
+run_on_device

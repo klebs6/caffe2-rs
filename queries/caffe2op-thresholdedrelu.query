@@ -29,3 +29,10 @@ here are the tokens:
 GetThresholdedReluGradient
 ThresholdedReluGradientOp
 ThresholdedReluOp
+allow_inplace
+cost_inference_function
+get_gradient_defs
+identical_type_and_shape
+register_cpu_operator
+register_gradient
+run_on_device

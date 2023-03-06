@@ -29,3 +29,10 @@ here are the tokens:
 GetMeanGradient
 MeanGradientOp
 MeanOp
+allow_inplace
+do_run_with_type
+get_gradient_defs
+mean_op_example
+register_cpu_operator
+register_gradient
+run_on_device

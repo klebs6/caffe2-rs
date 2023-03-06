@@ -28,3 +28,7 @@ please format your response in the Markdown file format.
 here are the tokens:
 BucketizeInt
 BucketizeOp
+no_gradient
+register_cpu_operator
+tensor_inference_function
+run_on_device

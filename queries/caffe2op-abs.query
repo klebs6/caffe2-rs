@@ -30,4 +30,10 @@ AbsFunctor
 AbsGradientFunctor
 GetAbsGradient
 forward
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+op_abs_example
+register_cpu_operator
+register_gradient

@@ -27,3 +27,8 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 BisectPercentileOp
+no_gradient
+register_cpu_operator
+binary_search
+compute_percentile
+run_on_device

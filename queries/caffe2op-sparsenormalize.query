@@ -27,3 +27,9 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 SparseNormalizeOp
+do_run_with_type
+enforce_one_to_one_inplace
+float_16to_float_ref
+register_cpu_operator
+run_on_device
+should_not_do_gradient

@@ -27,16 +27,33 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 ResetCounterOp
+run_on_device
+caffe_known_type
+register_blob_deserializer
+register_blob_serializer
+register_cpu_operator
+register_cuda_operator
+should_not_do_gradient
 CounterSerializer
 serialize
 Counter
+check_if_done
+count_down
+count_up
 reset
 retrieve
 CounterDeserializer
 deserialize
 CreateCounterOp
+run_on_device
 CountUpOp
+run_on_device
 RetrieveCountOp
+run_on_device
+scalar_type
 CountDownOp
+run_on_device
 CheckCounterDoneOp
+run_on_device
+count_op_example
 std

@@ -27,3 +27,7 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 AccuracyOp
+register_cpu_operator
+run_on_device
+scalar_type
+should_not_do_gradient

@@ -29,5 +29,11 @@ here are the tokens:
 GetReciprocalGradient
 ReciprocalFunctor
 ReciprocalGradientFunctor
+allow_inplace
 forward
+get_gradient_defs
+identical_type_and_shape
 invoke
+reciprocal_functor_example
+register_cpu_operator
+register_gradient

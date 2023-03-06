@@ -29,5 +29,11 @@ here are the tokens:
 CubeGradientFunctor
 GetCubeGradient
 forward
+get_gradient_defs
+identical_type_and_shape
+register_cpu_operator
+register_gradient
 CubeFunctor
+identical_type_and_shape
 invoke
+register_cpu_operator

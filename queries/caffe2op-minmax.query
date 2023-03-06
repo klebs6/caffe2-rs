@@ -33,3 +33,11 @@ MaxOp
 MinGradientOp
 MinOp
 SelectGradientOpBase
+allow_inplace
+get_gradient_defs
+inherit_onnx_schema
+max_op_example
+min_op_example
+register_cpu_operator
+register_gradient
+run_on_device

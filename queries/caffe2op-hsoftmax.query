@@ -27,12 +27,26 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 HSoftmaxOpBase
+get_hierarchy_for_labels
+klog_threshold
+extract_nodes
 pruning
+run_on_device
 HSoftmaxSearchOp
+should_not_do_gradient
 HuffmanTreeHierarchyNode
 HuffmanTreeHierarchyNodeComparator
 invoke
+run_forward_single
+run_on_device
 HuffmanTreeHierarchyOp
+run_on_device
+should_not_do_gradient
+run_backward_single
+run_on_device
 GetHSoftmaxGradient
 HSoftmaxGradientOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
 HSoftmaxOp

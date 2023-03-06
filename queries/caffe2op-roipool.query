@@ -29,3 +29,8 @@ here are the tokens:
 GetRoIPoolGradient
 RoIPoolGradientOp
 RoIPoolOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function

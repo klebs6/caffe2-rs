@@ -27,7 +27,20 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 NormalizeL1Op
+do_normalize
+register_cpu_operator
+run_on_device
 NormalizePlanarYUVOp
+allow_inplace
+register_cpu_operator
+run_on_device
 GetNormalizeGradient
 NormalizeGradientOp
 NormalizeOp
+do_normalize
+get_gradient_defs
+identical_type_and_shape
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device

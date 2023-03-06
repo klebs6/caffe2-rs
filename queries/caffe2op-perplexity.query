@@ -27,3 +27,6 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 PerplexityOp
+register_cpu_operator
+run_f32_on_cpu_device
+should_not_do_gradient

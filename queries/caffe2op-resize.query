@@ -27,10 +27,37 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 ResizeNearest3DOp
+declare_export_caffe2_op_to_c10
 GetResizeNearest3DGradient
+get_gradient_defs
+register_gradient
 ResizeNearestGradientOp
+register_gradient
 ResizeNearest3DGradientOp
+resize_nearest_nchw2x
 ResizeNearestOpFloatCPU
+export_caffe2_op_to_c10_cpu
+register_cpu_operator
+register_ideep_operator
+run_on_device
+run_on_device_with_ordernchw
+run_on_device_with_ordernhwc
+register_cpu_gradient_operator
+run_on_device
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc
 ResizeNearest3DOpFloatCPU
+export_caffe2_op_to_c10_cpu
+register_cpu_operator
+register_ideep_operator
+run_on_device
+run_on_device_with_ordernchw
 GetResizeNearestGradient
+get_gradient_defs
 ResizeNearestOp
+declare_export_caffe2_op_to_c10
+inherit_onnx_schema
+register_cpu_gradient_operator
+run_on_device
+run_on_device_with_ordernchw
+resize_nearest_3dnchw2x

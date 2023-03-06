@@ -29,3 +29,13 @@ here are the tokens:
 GetSliceGradient
 SliceGradientOp
 SliceOp
+do_run_with_type
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device
+slice_impl
+slice_op_example
+tensor_inference_function

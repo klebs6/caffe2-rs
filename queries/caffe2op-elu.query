@@ -28,8 +28,19 @@ please format your response in the Markdown file format.
 here are the tokens:
 CudnnActivationGradientOpELU
 CudnnActivationOpELU
+do_run_with_type
+register_cudnn_operator
+run_on_device
 EluFunctor
 EluGradientFunctor
 GetEluGradient
+allow_inplace
+elu_functor_example
 forward
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient

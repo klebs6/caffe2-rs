@@ -29,9 +29,15 @@ here are the tokens:
 CreateTextFileReaderOp
 TextFileReaderInstance
 TextFileReaderReadOp
+caffe_known_type
 convert
 is
+no_gradient
+register_cpu_operator
+run_on_device
+scalar_type
 ChunkProvider
+TextFileReaderUtilsTest_TokenizeTest
 BufferedTokenizer
 CharRange
 FileReader
@@ -39,7 +45,9 @@ Token
 TokenizedString
 Tokenizer
 drop
+end_delim
 invoke
+last_delim
 next
 reset
 tokens

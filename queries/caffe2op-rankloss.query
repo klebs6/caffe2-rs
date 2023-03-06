@@ -30,3 +30,8 @@ GetPairWiseLossGradient
 PairWiseLossGradientOp
 PairWiseLossOp
 for
+get_gradient_defs
+log_logit
+register_cpu_operator
+register_gradient
+run_on_device

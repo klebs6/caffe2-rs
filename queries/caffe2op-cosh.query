@@ -29,5 +29,11 @@ here are the tokens:
 CoshFunctor
 CoshGradientFunctor
 GetCoshGradient
+cosh_op_example
 forward
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+register_cpu_operator
+register_gradient

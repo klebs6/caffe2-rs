@@ -32,4 +32,13 @@ GetAddPaddingGradient
 GetRemovePaddingGradient
 PadEmptySamplesOp
 RemovePaddingOp
+add_padding_op_example
 bool
+do_run_with_type
+gather_padding
+get_gradient_defs
+make_padding
+register_cpu_operator
+register_gradient
+remove_padding_op_example
+run_on_device

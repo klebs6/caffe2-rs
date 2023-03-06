@@ -29,3 +29,9 @@ here are the tokens:
 GetLpNormGradient
 LpNormGradientOp
 LpNormOp
+get_gradient_defs
+lp_norm_example
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function

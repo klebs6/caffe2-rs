@@ -35,6 +35,15 @@ MapType32To32
 MapType32To64
 MapType64To32
 MapType64To64
+caffe_known_type
 deserialize
+do_run_with_other_type2
+do_run_with_type
+do_run_with_type2
 in
+register_blob_deserializer
+register_blob_serializer
+register_cpu_operator
+run_on_device
+scalar_type
 serialize

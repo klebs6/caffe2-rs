@@ -28,4 +28,12 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetLogGradient
 LogFunctor
+allow_inplace
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+log_op_example
+register_cpu_operator
+register_cuda_operator
+register_gradient

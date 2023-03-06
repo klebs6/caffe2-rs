@@ -27,3 +27,5 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 ByteWeightDequantOp
+register_cpu_operator
+run_on_device

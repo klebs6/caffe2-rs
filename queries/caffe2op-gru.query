@@ -27,6 +27,14 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GRUUnitGradientOp
+gru_unit_gradient
+register_cpu_operator
+run_on_device
 GetGRUUnitGradient
+get_gradient_defs
+register_gradient
 GRUUnitOp
+gru_unit
+run_on_device
+host_tanh
 sigmoid

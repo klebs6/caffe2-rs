@@ -27,6 +27,13 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 IncrementByOneOp
+OperatorFallbackTest_GPUIncrementByOneOp
+OperatorFallbackTest_IncrementByOneOp
+allow_inplace
+register_cpu_operator
+register_cuda_operator
+run_on_device
 GPUFallbackOp
 GPUFallbackOpEx
+run_on_device
 who

@@ -29,8 +29,17 @@ here are the tokens:
 CosFunctor
 CosGradientFunctor
 GetCosGradient
+cos_op_example
 forward
+get_gradient_defs
+identical_type_and_shape
 invoke
+register_cpu_operator
+register_gradient
 CosineEmbeddingCriterionGradientOp
 CosineEmbeddingCriterionOp
 GetCosineEmbeddingCriterionGradient
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device

@@ -31,4 +31,12 @@ GetGatherByKeyGradient
 LengthsPartitionOp
 PartitionOp
 PartitionOpBase
+apply_partition
 consistency
+do_run_with_type
+get_gradient_defs
+modulo_partition
+no_gradient
+register_cpu_operator
+register_gradient
+run_on_device

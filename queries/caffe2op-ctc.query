@@ -26,5 +26,14 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+get_tensor_data_ptr
 CTCBeamSearchDecoderOp
+inherit_onnx_schema
+register_cpu_operator
+should_not_do_gradient
+run_on_device
+run_on_device
 CTCGreedyDecoderOp
+inherit_onnx_schema
+register_cpu_operator
+should_not_do_gradient

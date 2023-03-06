@@ -30,4 +30,9 @@ BernoulliJSDGradientOp
 BernoulliJSDOp
 GetBernoulliJSDGradient
 entropy
+get_gradient_defs
+klog_threshold
 logit
+register_cpu_operator
+register_gradient
+run_on_device

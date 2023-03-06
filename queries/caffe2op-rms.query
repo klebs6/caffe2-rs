@@ -29,3 +29,11 @@ here are the tokens:
 GetRMSNormGradient
 RMSNormGradientOp
 RMSNormOp
+do_run_with_type
+gamma_beta_backward
+get_gradient_defs
+register_cpu_operator
+register_gradient
+rms_norm_backward
+run_on_device
+tensor_inference_function

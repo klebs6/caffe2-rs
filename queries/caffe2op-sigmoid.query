@@ -28,6 +28,15 @@ please format your response in the Markdown file format.
 here are the tokens:
 SigmoidFunctor
 SigmoidGradientFunctor
+allow_inplace
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+register_cpu_operator
+sigmoid_functor_example
 GetSigmoidGradient
 forward
+get_gradient_defs
+register_cpu_operator
+register_cudnn_operator
+register_gradient

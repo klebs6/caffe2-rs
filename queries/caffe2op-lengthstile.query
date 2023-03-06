@@ -28,3 +28,9 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetLengthsTileGradient
 LengthsTileOp
+get_gradient_defs
+lengths_tile_op_example
+register_cpu_operator
+register_gradient
+run_on_cpu_device
+run_on_device

@@ -27,9 +27,26 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 CudnnDropoutOp
+do_run_with_type
 drop
+run_on_device
+scratch_blob_name
+register_cpu_operator
+run_on_device
+dropout_op_example
 CudnnDropoutGradientOp
+do_run_with_type
 drop
+register_cudnn_operator
+run_on_device
 DropoutGradientOp
 GetDropoutGradient
+allow_inplace
+get_gradient_defs
+register_cpu_gradient_operator
+register_gradient
 DropoutOp
+allow_inplace
+inherit_onnx_schema
+tensor_inference_function
+run_on_device

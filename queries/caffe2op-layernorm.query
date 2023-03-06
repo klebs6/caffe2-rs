@@ -29,3 +29,15 @@ here are the tokens:
 GetLayerNormGradient
 LayerNormGradientOp
 LayerNormOp
+compute_fused_params
+compute_internal_gradients
+compute_sigma_and_fused_params
+do_run_with_type
+gamma_beta_backward
+get_gradient_defs
+layer_norm_backward
+layer_norm_forward
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function

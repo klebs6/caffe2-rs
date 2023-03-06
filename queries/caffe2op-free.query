@@ -27,3 +27,8 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 FreeOp
+enforce_one_to_one_inplace
+register_cpu_operator
+register_cuda_operator
+run_on_device
+should_not_do_gradient

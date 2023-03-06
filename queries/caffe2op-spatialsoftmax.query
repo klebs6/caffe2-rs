@@ -29,3 +29,8 @@ here are the tokens:
 GetSoftmaxWithLossGradient
 SpatialSoftmaxWithLossGradientOp
 SpatialSoftmaxWithLossOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device_f32_cpu_context
+tensor_inference_function

@@ -28,6 +28,13 @@ please format your response in the Markdown file format.
 here are the tokens:
 BooleanUnmaskOp
 as
+boolean_unmask_op_example1
+boolean_unmask_op_example2
+boolean_unmask_op_example3
+boolean_unmask_op_example4
+no_gradient
+register_cpu_operator
+run_on_device
 BooleanMaskLengthsOp
 BooleanMaskOp
 BooleanMaskOpGradient
@@ -41,4 +48,17 @@ UpperDiagFunctor
 UpperFunctor
 WindowFunctor
 as
+boolean_mask_lengths_op_example
+boolean_mask_op_example
+do_run_with_type
+get_gradient_defs
 invoke
+mask_with_functor
+no_gradient
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+repeated_mask_with_functor
+run_on_cpu_device
+run_on_device
+BooleanUnmaskTest_Test

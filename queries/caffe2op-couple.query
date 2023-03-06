@@ -27,3 +27,6 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 DataCoupleOp
+enforce_one_to_one_inplace
+register_cpu_operator
+run_on_device

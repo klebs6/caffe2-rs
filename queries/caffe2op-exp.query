@@ -27,5 +27,13 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GetExpGradient
+get_gradient_defs
+register_cuda_operator
+register_gradient
 ExpFunctor
+allow_inplace
+identical_type_and_shape
+inherit_onnx_schema
 invoke
+register_cpu_operator
+exp_functor_example

@@ -29,4 +29,7 @@ here are the tokens:
 CudnnActivationGradientOp
 CudnnActivationOp
 CudnnActivationOpBase
+do_run_with_type
 drop
+run_on_device
+set_tensor_descriptor

@@ -31,3 +31,10 @@ QuantDecodeGradientOp
 QuantDecodeOp
 QuantDecodeRunTy
 decode
+decode_general
+get_gradient_defs
+quant_decode_gradient_op_example
+register_cpu_gradient_operator
+register_cpu_operator
+register_gradient
+run_on_device

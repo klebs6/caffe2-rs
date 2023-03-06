@@ -29,7 +29,11 @@ here are the tokens:
 Erf
 ErfGradient
 GetErfGradient
+get_gradient_defs
+identical_type_and_shape
+register_gradient
 ErfFunctor
 ErfGradientFunctor
 call
 forward
+register_cpu_operator

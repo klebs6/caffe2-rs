@@ -29,3 +29,7 @@ here are the tokens:
 GetRowMulGradient
 ReduceTailSumOp
 RowMulOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device

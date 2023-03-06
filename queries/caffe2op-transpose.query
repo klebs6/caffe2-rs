@@ -27,6 +27,22 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 CudnnTransposeOp
+do_run_with_type
+do_run_with_type_int
 drop
+is_cu_dnnvalid_tensor
+is_float_type
+register_cudnn_operator
+run_on_device
+set_tensor_descriptor
 GetTransposeGradient
 TransposeOp
+do_run_with_type
+get_gradient_defs
+inherit_onnx_schema
+register_cpu_operator
+register_gradient
+run_on_device
+tensor_inference_function
+transpose_impl
+transpose_op_example

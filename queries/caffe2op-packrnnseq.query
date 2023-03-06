@@ -29,3 +29,8 @@ here are the tokens:
 GetPackRNNSequenceGradient
 GetUnpackRNNSequenceGradient
 PackRNNSequenceOpBase
+do_run_with_type
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device

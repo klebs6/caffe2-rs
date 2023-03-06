@@ -28,3 +28,9 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetReversePackedSegsGradient
 ReversePackedSegsOp
+do_run_with_length_type
+do_run_with_type
+get_gradient_defs
+register_cpu_operator
+register_gradient
+run_on_device

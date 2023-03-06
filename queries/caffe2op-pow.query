@@ -31,4 +31,13 @@ FactorThisShitOut
 GetPowGradient
 PowOp
 SameTypeAsInput
+allow_inplace
+do_run_with_type
+get_gradient_defs
+pow_op_example
+register_cpu_operator
+register_gradient
 run
+run_on_device
+run_with_broadcast
+run_with_broadcast2

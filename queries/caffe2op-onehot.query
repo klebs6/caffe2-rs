@@ -31,3 +31,15 @@ BatchOneHotOp
 OneHotOp
 OpSchema
 SegmentOneHotOp
+cost_inference_for_batch_one_hot
+cost_inference_function
+do_one_hot_op
+do_run_with_type
+int64_t
+no_gradient
+one_hot_op_example
+register_cpu_operator
+run_on_device
+tensor_inference_for_batch_one_hot
+tensor_inference_for_bucket_batch_one_hot
+tensor_inference_function

@@ -27,3 +27,8 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 DoOp
+allow_inplace
+check_and_get_outer_names
+register_cpu_operator
+register_cuda_operator
+run_on_device

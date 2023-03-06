@@ -27,8 +27,31 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 Float16ConstantFillOp
+register_cpu_operator
+run_on_device
+tensor_inference_function
+run_on_device
+register_cpu_operator
+run_on_device
+Float16_SimpleTest
+Float16_UniformDistributionTest
 GetFloatToHalfGradient
+get_gradient_defs
+no_gradient
+register_gradient
+register_cpu_operator
+run_on_device
 Float16UniformFillOp
+no_gradient
+register_cpu_operator
+tensor_inference_function
 FloatToHalfOp
+tensor_inference_function
 HalfToFloatOp
+tensor_inference_function
+float16_filler_tensor_inference
+float_16to_float_ref
+float_to_float16_ref
 GetHalfToFloatGradient
+get_gradient_defs
+register_gradient

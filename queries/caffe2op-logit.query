@@ -30,4 +30,10 @@ GetLogitGradient
 LogitFunctor
 LogitGradientOp
 LogitOp
+allow_inplace
+get_gradient_defs
+identical_type_and_shape
 invoke
+register_cpu_operator
+register_gradient
+run_on_device

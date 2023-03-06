@@ -28,3 +28,10 @@ please format your response in the Markdown file format.
 here are the tokens:
 GetMatMulGradient
 MatMulOp
+get_gradient_defs
+mat_mul_op_example
+register_cpu_operator
+register_cuda_operator
+register_gradient
+run_on_device
+tensor_inference_function

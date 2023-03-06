@@ -30,4 +30,8 @@ AsinFunctor
 AsinGradientFunctor
 GetAsinGradient
 forward
+get_gradient_defs
+identical_type_and_shape
 invoke
+register_cpu_operator
+register_gradient

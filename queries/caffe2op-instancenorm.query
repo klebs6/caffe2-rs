@@ -26,6 +26,25 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetInstanceNormGradient
+instance_norm_backwardNCHW
+compute_internal_gradientsNHWC
+instance_norm_backwardNHWC
+instance_norm_forwardNHWC
+compute_moments
+register_cpu_operator
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc
+run_f32_on_cpu_device_with_order_nchw
+run_on_device_with_order_nhwc
+gamma_beta_backward
 InstanceNormGradientOp
+register_gradient
+run_on_device
+GetInstanceNormGradient
+get_gradient_defs
+instance_norm_op_example
 InstanceNormOp
+allow_inplace
+register_cpu_operator
+run_on_device
+compute_fused_params

@@ -28,3 +28,7 @@ please format your response in the Markdown file format.
 here are the tokens:
 StumpFuncIndexOp
 StumpFuncOp
+no_gradient
+register_cpu_operator
+run_on_device
+tensor_inference_function

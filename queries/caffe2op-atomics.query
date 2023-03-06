@@ -27,7 +27,25 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 ConditionalSetAtomicBoolOp
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 CreateMutexOp
+register_cpu_operator
+register_ideep_operator
+run_on_device
+scalar_type
+should_not_do_gradient
 CreateAtomicBoolOp
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 CheckAtomicBoolOp
+register_cpu_operator
+run_on_device
+should_not_do_gradient
 AtomicFetchAddOp
+allow_inplace
+register_cpu_operator
+run_on_device
+should_not_do_gradient

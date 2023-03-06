@@ -27,3 +27,7 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 DenseVectorToIdListOp
+do_run_with_type
+no_gradient
+register_cpu_operator
+run_on_device

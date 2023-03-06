@@ -29,3 +29,11 @@ here are the tokens:
 GetSoftplusGradient
 SoftplusGradientOp
 SoftplusOp
+allow_inplace
+get_gradient_defs
+identical_type_and_shape
+inherit_onnx_schema
+register_cpu_operator
+register_gradient
+run_on_device
+softplus_example
