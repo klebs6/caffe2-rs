@@ -29,6 +29,64 @@ relevance scores are typically binary, indicating
 whether an item is relevant or not, but can also
 be ordinal or continuous.
 
+62> could you describe ndcg in mathematical detail?
+
+Yes, I can describe NDCG in mathematical detail.
+
+Normalized Discounted Cumulative Gain (NDCG) is
+a widely used evaluation metric in information
+retrieval and machine learning to measure the
+quality of search results or recommendations. The
+basic idea behind NDCG is to measure how well the
+ranked list of items corresponds to the user's
+preferences.
+
+Suppose we have a set of `N` items, and a ranked
+list of `k` items `\{r_1, r_2, \ldots, r_k\}`,
+where `r_i` is the `i`th item in the list. We can
+also assign each item a relevance score `rel_i`,
+which indicates how relevant the item is to the
+user's query. The relevance score can be binary
+(e.g., 0 or 1), or it can be a graded score (e.g.,
+1 to 5).
+
+The Discounted Cumulative Gain (DCG) measures the
+usefulness of the ranked list by summing the
+relevance scores of the items, with a discount
+factor that decreases as the position in the list
+increases. The formula for DCG is:
+
+```
+DCG_k = \sum_{i=1}^k \frac{2^{rel_i}-1}{\log_2(i+1)}
+```
+
+where `rel_i` is the relevance score of the `i`th
+item in the list, and `\log_2(i+1)` is the
+logarithm of the position `i` in the list, plus
+one. The `2^{rel_i}-1` term in the numerator
+ensures that higher relevance scores contribute
+more to the DCG than lower relevance scores.
+
+The Normalized Discounted Cumulative Gain (NDCG)
+normalizes the DCG by the maximum possible DCG for
+the given list of items, which is obtained by
+sorting the items by their relevance scores. The
+formula for NDCG is:
+
+```
+NDCG_k = \frac{DCG_k}{IDCG_k}
+```
+
+where `IDCG_k` is the ideal DCG for the first `k`
+items, computed by sorting the items by their
+relevance scores and computing the DCG for the
+same list size `k`.
+
+Note that NDCG is a number between 0 and 1, with
+higher values indicating better quality of the
+ranked list.
+
+
 ## LambdaRankNdcgOp
 
 The `LambdaRankNdcgOp` operator computes the
@@ -90,7 +148,7 @@ a cost function, which measures the discrepancy
 between the predicted scores and the true scores
 of the items being ranked. 
 
-The cost function $C$ is defined as:
+The cost function `C` is defined as:
 
 ```
 C = ∑_{i=1}^{N} ∑_{j=1}^{N} λ_{ij}[y_i > y_j] ⋅ (1/(1+e^{s(y_i-y_j)}) - 1/(1+e^{s(f_i-f_j)}))
@@ -98,9 +156,9 @@ C = ∑_{i=1}^{N} ∑_{j=1}^{N} λ_{ij}[y_i > y_j] ⋅ (1/(1+e^{s(y_i-y_j)}) - 1
 
 where:
 
-- `y_i` is the true score of item $i$
+- `y_i` is the true score of item `i`
 
-- `f_i` is the predicted score of item $i$
+- `f_i` is the predicted score of item `i`
 
 - `s` is a scaling factor that determines the
   sensitivity of the ranking to small differences
@@ -115,18 +173,18 @@ The weight `\lambda_{ij}` is defined as:
 λ_{ij} = 1/(1+e^{s(y_i-y_j)}) ⋅ [(1/log_2(1+j)) - (1/log_2(1+i))]
 ```
 
-where $i$ and $j$ are indices of items being
-compared, and $j < i$. The weight $\lambda_{ij}$
+where `i` and `j` are indices of items being
+compared, and `j < i`. The weight `\lambda_{ij}`
 depends on the difference between the true scores
 of the items being compared, and on their ranks in
 the list. The goal of the algorithm is to find the
-predicted scores $f_i$ that minimize the cost
-function $C$.
+predicted scores `f_i` that minimize the cost
+function `C`.
 
 The LambdaRank algorithm can be implemented using
 gradient descent, which involves computing the
 gradient of the cost function with respect to the
-predicted scores $f_i$. The gradient of the cost
+predicted scores `f_i`. The gradient of the cost
 function can be computed using backpropagation,
 which involves computing the gradient of the NDCG
 metric.
@@ -181,8 +239,8 @@ considerations.
 
 One of the main pitfalls of LambdaRank is that it
 can be sensitive to the choice of parameters,
-particularly the scaling factor $s$. Choosing an
-appropriate value for $s$ can be challenging, as
+particularly the scaling factor `s`. Choosing an
+appropriate value for `s` can be challenging, as
 it depends on the specific problem and data
 set. Additionally, the algorithm can be
 computationally expensive, particularly for large
@@ -215,7 +273,7 @@ used to determine the curvature of the objective
 function, which helps in finding the optimal
 solution. In the case of the lambda rank
 algorithm, the objective function is the cost
-function $C$ that we want to minimize.
+function `C` that we want to minimize.
 
 By using the second derivative of the cost
 function (i.e., the Hessian matrix), we can
