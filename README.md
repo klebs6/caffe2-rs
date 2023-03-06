@@ -38,11 +38,77 @@ https://discord.gg/CdHsMHJGX8
 Caffe2-rs has a BSD-style license, as found in the
 [LICENSE](LICENSE) file.
 
+## README Disclaimer
+The README files for each crate are being
+generated via a varying length, medium depth
+conversation with chatgpt.
+
+I'm not sure what everybody else thinks about
+this, but it seems pretty awesome to me.
+
+In certain circumstances I have been able to drill
+down into some depth to find out what the bot
+knows about the different algorithms.
+
+The only thing to watch out for is this: the
+README files are only *probabilistically correct*
+
+I repeat: you can't rely on them totally. 
+
+They serve more as guidelines, than hard and fast
+rules.
+
+Sometimes, I left information from these
+conversations in the README even though I *knew*
+it wasn't entirely accurate. (although it may be
+accurate one day)
+
+For example, sometimes, the bot generated example
+usage code based on its knowledge of just a few
+symbols from the crate.  There is probably no way
+this generated code works out of the box.   As of
+March 6, 2023, I haven't tried all of it.
+
+To me, at least, this information is still useful. 
+
+This is because it represents the bot's best guess
+on how this crate might be used.  
+
+It is useful to me to know how the bot might try
+and want to use the crate, even if the APIs it is
+asking for dont actually exist yet (for example).  
+
+In another example, sometimes I ask the bot to do
+some numerical simulations to calculate
+performance behavior.  Please don't blindly trust
+these numbers.  I'm not totally sure they're
+correct even though they look like a pretty good
+start.
+
+In other words, please take the information in the
+README files only for what it actually is, and
+what it actually represents.  
+
+Please consider them a guideline and not
+a contract.
+
+I provide this information in case it is
+interesting, and so you yourself don't have to
+spend the sleep wake cycles asking the bot if you
+don't want to.
+
+Nothin but love,
+
+-klebs
+
+BTW if you find glaring errors in these files, plz
+feel free to correct them.  Correcting the
+possible mistakes is totally welcome.
+
+
 ## Acknowledgments
 
 The author of this project would like to thank the
 original authors of the Caffe2 C++ library for
 their work, as well as the Rust community for
 their support.
-
-

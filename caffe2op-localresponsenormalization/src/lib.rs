@@ -4,5 +4,12 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_local_response_normalization_op_cudnn}
-x!{op_local_response_normalization}
+x!{cudnn_lrn}
+x!{cudnn_lrn_gradient}
+x!{get_gradient}
+x!{lrn}
+x!{lrn_base}
+x!{lrn_cpu}
+x!{lrn_gradient}
+x!{lrn_gradient_cpu}
+x!{test_lrn}

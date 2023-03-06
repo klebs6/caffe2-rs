@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_log}
+x!{log}
+x!{get_gradient}
+x!{test_log}

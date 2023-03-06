@@ -4,6 +4,10 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_locally_connected_op_impl}
-x!{op_locally_connected_op_util}
-x!{op_locally_connected}
+x!{get_gradient}
+x!{locally_connected}
+x!{locally_connected_gradient}
+x!{register}
+x!{set_column_buffer_shape}
+x!{set_ybuffer_shape}
+x!{shape_params}

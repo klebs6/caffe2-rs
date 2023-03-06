@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    OperatorDef,
-    SumElementsOp,
-    SumElementsGradientOp,
-};
-
 /**
   | The *AveragedLoss* op takes a single
   | 1-D input tensor *input* and returns
