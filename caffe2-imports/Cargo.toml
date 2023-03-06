@@ -48,9 +48,6 @@ version = "0.1.4-alpha.0"
 [dependencies.caffe2-proto]
 path = "../caffe2-proto"
 version = "0.1.4-alpha.0"
-#[dependencies.fftw-sys]
-#features = [ "intel-mkl" ]
-#version = "0.4"
 [package]
 authors = [ "klebs <none>" ]
 description = "xxx"
