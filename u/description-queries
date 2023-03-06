@@ -84,7 +84,7 @@ sub process-crate($crate) {
 
     Please describe the mathematical ideas
     identified by this information alongside the
-    relevant mathematical equations.
+    relevant mathematical equations in unicode.
 
     thanks!
 

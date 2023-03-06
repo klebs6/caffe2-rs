@@ -22,8 +22,7 @@ crate::ix!();
   |
   */
 pub struct AveragedLoss<T, Context> {
-    base: SumElementsOp<T, Context>,
-
+    base:    SumElementsOp<T, Context>,
     phantom: PhantomData<T>,
 }
 
@@ -51,4 +50,3 @@ impl<T, Context> AveragedLoss<T, Context> {
         */
     }
 }
-
