@@ -4,4 +4,10 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_listwise_l2r}
+x!{argsort}
+x!{get_gradient}
+x!{lambda_rank}
+x!{lambda_rank_cpu}
+x!{lambda_rank_gradient}
+x!{lambda_rank_gradient_cpu}
+x!{macros}
