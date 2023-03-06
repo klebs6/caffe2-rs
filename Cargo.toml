@@ -160,7 +160,6 @@ members = [
     "caffe2op-marginrank",
     "caffe2op-mask",
     "caffe2op-matmul",
-    "caffe2op-maxpool",
     "caffe2op-mean",
     "caffe2op-mergeid",
     "caffe2op-minmax",

@@ -19,4 +19,3 @@ impl<'a> GetGradientDefs for GetLRNGradient<'a> {
 }
 
 register_gradient!{LRN, GetLRNGradient}
-

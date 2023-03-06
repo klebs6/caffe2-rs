@@ -1,15 +1,8 @@
 crate::ix!();
 
-use crate::{
-    ConvPoolOpBase,
-    CUDAContext,
-    OperatorDef,
-    Workspace
-};
-
+#[USE_CONV_POOL_BASE_FUNCTIONS("CUDAContext")]
 pub struct MaxPoolWithIndexOp {
 
-    //USE_CONV_POOL_BASE_FUNCTIONS(CUDAContext);
     base: ConvPoolOpBase<CUDAContext>,
 
     /*
@@ -30,9 +23,9 @@ impl MaxPoolWithIndexOp {
     }
 }
 
+#[USE_CONV_POOL_BASE_FUNCTIONS("CUDAContext")]
 pub struct MaxPoolWithIndexGradientOp {
 
-    //USE_CONV_POOL_BASE_FUNCTIONS(CUDAContext);
     base: ConvPoolOpBase<CUDAContext>,
 
     /*
