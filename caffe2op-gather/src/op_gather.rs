@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    GradientMakerBase,
-    OperatorStorage,
-    OperatorDef
-};
-
-///---------------------------------
 #[test] fn gather_op_example() {
 
     todo!();

@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_glu}
+x!{glu}
+x!{glu_cpu}
+x!{run_on_device}
+x!{sigmoid}

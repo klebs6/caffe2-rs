@@ -5,3 +5,4 @@ extern crate test;
 use imports::*;
 
 x!{op_if}
+x!{run_on_device}

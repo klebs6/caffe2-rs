@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_index_hash_ops}
+x!{index_hash}
+x!{run_on_device}

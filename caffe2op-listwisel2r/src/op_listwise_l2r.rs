@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Tensor,
-    OperatorDef,
-    OperatorStorage,
-    GradientMakerBase,
-    CPUContext,
-};
-
 /**
   | It implements the LambdaRank as appeared
   | in Wu,
@@ -21,11 +13,10 @@ use crate::{
   | the NDCG.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LambdaRankNdcgOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
-    context: Context,
-
+    storage:                  OperatorStorage,
+    context:                  Context,
     use_ndcg_as_loss:         bool,
     use_idcg_normalization:   bool,
     use_exp_gain:             bool,
@@ -35,8 +26,7 @@ pub struct LambdaRankNdcgOp<T,Context> {
     ideal_idx:                Tensor,
     lambda:                   Tensor,
     inv_log_i:                Tensor,
-
-    phantom: PhantomData<T>,
+    phantom:                  PhantomData<T>,
 }
 
 num_inputs!{LambdaRankNdcg, 3}

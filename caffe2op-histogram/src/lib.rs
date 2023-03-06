@@ -5,3 +5,4 @@ extern crate test;
 use imports::*;
 
 x!{histogram}
+x!{run_on_device}
