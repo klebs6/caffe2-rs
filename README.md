@@ -106,8 +106,8 @@ feel free to correct them.  Correcting the
 possible mistakes is totally welcome.
 
 
-Also note: as of 3/06/2023 I am currently still in the 
-process of documenting and reorganizing some details.  
+## Also note: 
+As of 3/06/2023 I am currently still in the process of documenting and reorganizing some details.  
 If you are already checking this crate out, first of all, you are awesome, hello! 
 but second of all, please know that the structure of this workspace is somewhat in flux.
 
