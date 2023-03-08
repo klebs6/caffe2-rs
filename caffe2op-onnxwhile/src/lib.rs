@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_onnx_while}
+x!{local_scope}
+x!{onnx_while}
+x!{run_on_device}

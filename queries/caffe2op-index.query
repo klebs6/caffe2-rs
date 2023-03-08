@@ -19,47 +19,59 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-Index
-IndexBase
-IndexCreateOp
 IndexDeserializer
-IndexFreezeOp
-IndexGetOp
-IndexKeyTypes
-IndexLoadOp
-IndexSerializer
-IndexSizeOp
-IndexStoreOp
-caffe_known_type
-can
 cannot
 deserialize
 do_load
-do_run_with_type
+IndexSerializer
+can
 do_store
-enforce_inplace
-freeze
-frozen_get
-get
+serialize
+IndexCreateOp
+run_on_device
+scalar_type
+IndexGetOp
+do_run_with_type
 given
-is_frozen
-load
-max_elements
+run_on_device
+scalar_type
+IndexKeyTypes
+caffe_known_type
 no_gradient
 register_blob_deserializer
 register_blob_serializer
 register_cpu_operator
+should_not_do_gradient
+Index
+frozen_get
+get
+load
+store
+IndexSizeOp
+run_on_device
+IndexFreezeOp
+enforce_inplace
 run_on_device
 scalar_type
-serialize
-should_not_do_gradient
+IndexStoreOp
+do_run_with_type
+run_on_device
+IndexLoadOp
+do_run_with_type
+enforce_inplace
+given
+run_on_device
+scalar_type
+IndexBase
+freeze
+is_frozen
+max_elements
 size
-store
 typemeta

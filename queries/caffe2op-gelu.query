@@ -19,7 +19,7 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
@@ -27,16 +27,17 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GeluFunctor
+GeluOp
+identical_type_and_shape
+register_cpu_operator
 GeluGradientFunctor
 GeluGradientOp
-GeluOp
+register_cpu_operator
+invoke
+forward
 GetGeluGradient
+get_gradient_defs
+register_gradient
 OpSchema
 cost_inference_for_gelu
 cost_inference_function
-forward
-get_gradient_defs
-identical_type_and_shape
-invoke
-register_cpu_operator
-register_gradient

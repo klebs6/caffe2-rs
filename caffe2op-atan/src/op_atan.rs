@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    CPUContext,
-    OperatorDef
-};
-
 /**
   | Calculates the arctangent of the given
   | input tensor, element-wise.

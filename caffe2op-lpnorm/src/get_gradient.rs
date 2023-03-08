@@ -1,7 +1,6 @@
 crate::ix!();
 
 pub struct GetLpNormGradient<'a> {
-
     base: GradientMakerStorage<'a>,
 }
 
@@ -21,4 +20,3 @@ impl<'a> GetGradientDefs for GetLpNormGradient<'a> {
 }
 
 register_gradient!{LpNorm, GetLpNormGradient}
-

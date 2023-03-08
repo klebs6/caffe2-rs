@@ -19,55 +19,61 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetLSTMUnitGradient
+lstm_impl
 LSTMUnitGradientOp
+do_run_with_type
+register_cpu_operator
+run_on_device
+chunk
+linear
+LayerOutput
+cat
+FullBidirectionalLSTMLayer
+invoke
+reverse
+gather_params
+lstm_unit_gradient
+unbind
+lSTMUnit
+InferenceLSTMOp
+no_gradient
+register_cpu_operator
+run_on_device
+matmul
+LSTMCell
+invoke
+add
+mul
+apply_layer_stack
+pair_vec
+unpair_vec
+GetLSTMUnitGradient
+get_gradient_defs
+register_gradient
+stack
+CellParams
+init_params
+linear_hh
+linear_ih
 LSTMUnitOp
 do_run_with_type
-get_gradient_defs
-lSTMUnit
-lstm_unit_gradient
 register_cpu_operator
-register_gradient
 run_on_device
 BidirHiddenType
-CellParams
-FullBidirectionalLSTMLayer
-FullLSTMLayer
-InferenceLSTMOp
-LSTMCell
-LayerOutput
 OutputType
 ParamType
 TensorTuple
-apply_layer_stack
-gather_params
-init_params
+invoke
+FullLSTMLayer
 invoke
 invoke_vec
-linear_hh
-linear_ih
-lstm_impl
-no_gradient
-register_cpu_operator
-reverse
-run_on_device
-add
-cat
-chunk
-linear
-matmul
-mul
-pair_vec
-sigmoid
-stack
-tanh
 transpose
-unbind
-unpair_vec
+sigmoid
+tanh

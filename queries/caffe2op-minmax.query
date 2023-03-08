@@ -19,7 +19,7 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
@@ -27,17 +27,26 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GetMaxGradient
-GetMinGradient
 MaxGradientOp
-MaxOp
-MinGradientOp
-MinOp
-SelectGradientOpBase
-allow_inplace
 get_gradient_defs
-inherit_onnx_schema
-max_op_example
-min_op_example
 register_cpu_operator
 register_gradient
+max_op_example
+MaxOp
+allow_inplace
+inherit_onnx_schema
+register_cpu_operator
+run_on_device
+GetMinGradient
+MinGradientOp
+get_gradient_defs
+register_cpu_operator
+register_gradient
+min_op_example
+SelectGradientOpBase
+run_on_device
+MinOp
+allow_inplace
+inherit_onnx_schema
+register_cpu_operator
 run_on_device

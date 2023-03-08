@@ -19,31 +19,33 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetGroupNormGradient
-GroupNormGradientOp
+run_on_device_with_orderNCHW
+run_on_device_with_order_nhwc
 GroupNormOp
-compute_fused_params
+register_cpu_operator
+gamma_beta_backward
+run_on_device
+run_on_device_with_orderNCHW
+run_on_device_with_orderNHWC
+run_on_device
 compute_gradient_fused_params
 compute_internal_gradients
 compute_internal_gradients_f32_nchw
 compute_internal_gradients_f32_nhwc
-gamma_beta_backward
-get_gradient_defs
-group_norm_backward_f32_nhwc
-group_norm_backward_i32_nchw
+compute_fused_params
 group_norm_forwardNCHW
 group_norm_forwardNHWC
-register_cpu_operator
-register_gradient
 run_f32_on_cpu_device_with_orderNHWC
-run_on_device
-run_on_device_with_orderNCHW
-run_on_device_with_orderNHWC
-run_on_device_with_order_nhwc
+GroupNormGradientOp
+GetGroupNormGradient
+get_gradient_defs
+register_gradient
+group_norm_backward_f32_nhwc
+group_norm_backward_i32_nchw

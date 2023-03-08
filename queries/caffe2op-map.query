@@ -19,31 +19,38 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-CreateMapOp
-KeyValueToMapOp
-MapDeserializer
 MapSerializer
-MapToKeyValueOp
+serialize
+CreateMapOp
+do_run_with_other_type2
+do_run_with_type
+do_run_with_type2
+in
+run_on_device
 MapType32To32
 MapType32To64
 MapType64To32
 MapType64To64
 caffe_known_type
-deserialize
+register_blob_deserializer
+register_blob_serializer
+register_cpu_operator
+scalar_type
+KeyValueToMapOp
 do_run_with_other_type2
 do_run_with_type
 do_run_with_type2
 in
-register_blob_deserializer
-register_blob_serializer
-register_cpu_operator
 run_on_device
-scalar_type
-serialize
+MapToKeyValueOp
+do_run_with_type
+run_on_device
+MapDeserializer
+deserialize

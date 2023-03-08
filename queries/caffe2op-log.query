@@ -19,21 +19,21 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetLogGradient
+log_op_example
 LogFunctor
 allow_inplace
-get_gradient_defs
 identical_type_and_shape
 inherit_onnx_schema
 invoke
-log_op_example
 register_cpu_operator
+GetLogGradient
+get_gradient_defs
 register_cuda_operator
 register_gradient

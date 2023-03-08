@@ -19,46 +19,63 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-BooleanUnmaskOp
-as
+do_run_with_type
+run_on_cpu_device
+run_on_device
+BooleanUnmaskTest_Test
+boolean_mask_lengths_op_example
+boolean_mask_op_example
 boolean_unmask_op_example1
 boolean_unmask_op_example2
 boolean_unmask_op_example3
 boolean_unmask_op_example4
-no_gradient
-register_cpu_operator
-run_on_device
-BooleanMaskLengthsOp
-BooleanMaskOp
 BooleanMaskOpGradient
-GetBooleanMaskGradient
-GetSequenceMaskGradient
-LowerDiagFunctor
-LowerFunctor
-SequenceFunctor
-SequenceMaskOp
-UpperDiagFunctor
-UpperFunctor
-WindowFunctor
-as
-boolean_mask_lengths_op_example
-boolean_mask_op_example
-do_run_with_type
-get_gradient_defs
-invoke
-mask_with_functor
 no_gradient
 register_cpu_gradient_operator
 register_cpu_operator
-register_gradient
-repeated_mask_with_functor
-run_on_cpu_device
 run_on_device
-BooleanUnmaskTest_Test
+UpperDiagFunctor
+UpperFunctor
+invoke
+GetBooleanMaskGradient
+get_gradient_defs
+register_gradient
+GetSequenceMaskGradient
+get_gradient_defs
+register_gradient
+BooleanUnmaskOp
+as
+no_gradient
+register_cpu_operator
+BooleanMaskLengthsOp
+as
+do_run_with_type
+run_on_device
+SequenceMaskOp
+register_cpu_operator
+repeated_mask_with_functor
+register_cpu_operator
+run_on_cpu_device
+BooleanUnmaskOp
+as
+no_gradient
+register_cpu_operator
+run_on_device
+SequenceFunctor
+invoke
+do_run_with_type
+BooleanMaskOp
+as
+LowerDiagFunctor
+LowerFunctor
+invoke
+WindowFunctor
+invoke
+mask_with_functor

@@ -19,14 +19,14 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
+run_on_device
 MultiClassAccuracyOp
 register_cpu_operator
-run_on_device
 should_not_do_gradient

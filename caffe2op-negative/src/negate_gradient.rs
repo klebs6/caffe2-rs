@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    GradientMakerBase,
-    OperatorDef,
-};
-
 /**
   | NegagteGradient operator in forward
   | pass simply copies input to the output,
@@ -13,9 +7,8 @@ use crate::{
   | of the output gradient
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct NegateGradientOp<Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }

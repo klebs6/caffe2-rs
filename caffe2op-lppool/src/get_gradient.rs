@@ -20,4 +20,3 @@ impl<'a> GetGradientDefs for GetPoolGradient<'a> {
 }
 
 register_gradient!{LpPool, GetPoolGradient}
-

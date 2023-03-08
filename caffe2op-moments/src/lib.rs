@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_moments}
+x!{get_gradient}
+x!{moments_gradient}
+x!{moments}

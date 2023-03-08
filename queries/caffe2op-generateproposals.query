@@ -19,76 +19,48 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-Scalar
-bbox_ctrwh_to_xyxy
-bbox_transform
-bbox_transform_rotated
-bbox_transform_upright
-bbox_xyxy_to_ctrwh
-clip_boxes
-clip_boxes_rotated
-clip_boxes_upright
-filter_boxes
-filter_boxes_rotated
-filter_boxes_upright
-GenerateProposalsTest_TestRealDownSampledGPU
-GenerateProposalsTest_TestRealDownSampledRotatedAngle0GPU
-GenerateProposalsTest_TestRealDownSampledRotatedGPU
-UtilsBoxesTest_ClipRotatedBoxes
-UtilsBoxesTest_TestBboxTransformRandom
-UtilsBoxesTest_TestBboxTransformRotated
-UtilsBoxesTest_TestBboxTransformRotatedNormalized
+get_sub_tensor_view
 ConstTensorView
-GenerateProposalsOp
-compute_all_anchors
-compute_sorted_anchors
-compute_start_index
 data
 dim
 dims
-export_caffe2_op_to_c10_cpu
-get_sub_tensor_view
 ndim
-proposals_for_one_image
-register_cpu_operator
-run_on_device
-should_not_do_gradient
 size
+nms_cpu
+soft_nms_cpu
+Scalar
+filter_boxes_rotated
+nms_cpu_rotated
+compute_sorted_anchors
+soft_nms_cpu_rotated
+bbox_transform_upright
 UtilsNMSTest_RotatedBBoxOverlaps
 UtilsNMSTest_TestNMS
 UtilsNMSTest_TestNMS1
 UtilsNMSTest_TestNMSRotatedAngle0
 UtilsNMSTest_TestSoftNMS
 UtilsNMSTest_TestSoftNMSRotatedAngle0
-RotatedBox
-nms_gpu
-nms_gpu_rotated
-nms_gpu_upright
-RotatedRect
-bbox_intersection_rotated
-bbox_overlaps_rotated
-bbox_to_rotated_rect
-convex_hull_graham
-cross_2d
-get_vertices
-nms_cpu
-nms_cpu_rotated
-nms_cpu_upright
-nms_cpu_with_indices
-polygon_area
+soft_nms_cpu_with_indices
 rotated_rect_intersection
 rotated_rect_intersection_pts
-soft_nms_cpu
-soft_nms_cpu_rotated
-soft_nms_cpu_upright
-soft_nms_cpu_with_indices
+clip_boxes_rotated
+GenerateProposalsOp
+export_caffe2_op_to_c10_cpu
+register_cpu_operator
+should_not_do_gradient
+bbox_ctrwh_to_xyxy
+bbox_xyxy_to_ctrwh
+UtilsBoxesTest_ClipRotatedBoxes
+UtilsBoxesTest_TestBboxTransformRandom
+UtilsBoxesTest_TestBboxTransformRotated
+UtilsBoxesTest_TestBboxTransformRotatedNormalized
 UtilsNMSTest_GPUEqualsCPUCorrectnessTest
 UtilsNMSTest_TestNMSGPU
 UtilsNMSTest_TestNMSGPURotatedAngle0
@@ -96,6 +68,10 @@ UtilsNMSTest_TestPerfNMS
 UtilsNMSTest_TestPerfRotatedNMS
 generate_random_boxes
 generate_random_rotated_boxes
+bbox_intersection_rotated
+bbox_overlaps_rotated
+filter_boxes_upright
+nms_cpu_upright
 GenerateProposalsTest_TestComputeAllAnchors
 GenerateProposalsTest_TestComputeAllAnchorsRotated
 GenerateProposalsTest_TestComputeSortedAnchors
@@ -104,3 +80,27 @@ GenerateProposalsTest_TestEmpty
 GenerateProposalsTest_TestRealDownSampled
 GenerateProposalsTest_TestRealDownSampledRotated
 GenerateProposalsTest_TestRealDownSampledRotatedAngle0
+proposals_for_one_image
+RotatedBox
+nms_gpu
+nms_gpu_rotated
+nms_gpu_upright
+filter_boxes
+bbox_transform
+nms_cpu_with_indices
+bbox_transform_rotated
+soft_nms_cpu_upright
+clip_boxes_upright
+compute_all_anchors
+clip_boxes
+RotatedRect
+bbox_to_rotated_rect
+get_vertices
+GenerateProposalsTest_TestRealDownSampledGPU
+GenerateProposalsTest_TestRealDownSampledRotatedAngle0GPU
+GenerateProposalsTest_TestRealDownSampledRotatedGPU
+cross_2d
+polygon_area
+compute_start_index
+convex_hull_graham
+run_on_device

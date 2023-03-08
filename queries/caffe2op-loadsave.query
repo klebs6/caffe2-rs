@@ -19,38 +19,43 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-BlobState
+LoadOp
+extract
+extract_all
+extract_from
+load_op_example
+of
+run_on_device
+tensor_inference_function
+set_current_device
+set_current_device
+get_blob_options
+SaveOp
+run_on_device
+save_op_example
+no_gradient
+register_cpu_operator
+register_cuda_operator
+should_not_do_gradient
+format_string
 build_blob_name_from_db_key
 prepare_blob
 process_blob
 update_blob_states
 validate_blob_states
-CheckpointOp
-DBExistsOp
-LoadOp
-SaveOp
-db_exists_op_example
-extract
-extract_all
-extract_from
-format_string
-get_blob_options
-int
-load_op_example
+BlobState
 load_tensor_inference
-no_gradient
+CheckpointOp
+int
 of
-register_cpu_operator
-register_cuda_operator
 run_on_device
-save_op_example
-set_current_device
-should_not_do_gradient
-tensor_inference_function
+DBExistsOp
+db_exists_op_example
+run_on_device

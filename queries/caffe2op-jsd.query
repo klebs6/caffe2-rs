@@ -19,7 +19,7 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
@@ -27,12 +27,14 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 BernoulliJSDGradientOp
-BernoulliJSDOp
-GetBernoulliJSDGradient
-entropy
-get_gradient_defs
-klog_threshold
-logit
 register_cpu_operator
 register_gradient
 run_on_device
+BernoulliJSDOp
+register_cpu_operator
+entropy
+klog_threshold
+logit
+run_on_device
+GetBernoulliJSDGradient
+get_gradient_defs

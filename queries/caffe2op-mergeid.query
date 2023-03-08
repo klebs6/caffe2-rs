@@ -19,15 +19,15 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-MergeIdListsOp
 do_run_with_type
+run_on_device
+MergeIdListsOp
 no_gradient
 register_cpu_operator
-run_on_device

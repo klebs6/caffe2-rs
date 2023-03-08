@@ -19,19 +19,20 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetLpNormGradient
-LpNormGradientOp
 LpNormOp
-get_gradient_defs
-lp_norm_example
-register_cpu_operator
-register_gradient
-run_on_device
 tensor_inference_function
+register_cpu_operator
+run_on_device
+lp_norm_example
+run_on_device
+LpNormGradientOp
+GetLpNormGradient
+get_gradient_defs
+register_gradient

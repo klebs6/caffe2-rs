@@ -19,29 +19,33 @@ Below are listed some tokens from this crate.
 
 Please describe the mathematical ideas
 identified by this information alongside the
-relevant mathematical equations.
+relevant mathematical equations in unicode.
 
 thanks!
 
 please format your response in the Markdown file format.
 
 here are the tokens:
-CudnnLRNGradientOp
+LRNOpBase
+run_on_device
 CudnnLRNOp
+do_run_with_type
+drop
+run_on_device
+LRNOp
+inherit_onnx_schema
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc
+lrn_op_example
+register_cpu_operator
+run_f32_on_cpu_device_with_orderNCHW
+run_on_device_with_order_nhwc
+LRNGradientOp
+GetLRNGradient
+get_gradient_defs
+register_gradient
+CudnnLRNGradientOp
 do_run_with_type
 drop
 register_cudnn_operator
 run_on_device
-GetLRNGradient
-LRNGradientOp
-LRNOp
-LRNOpBase
-get_gradient_defs
-inherit_onnx_schema
-lrn_op_example
-register_cpu_operator
-register_gradient
-run_f32_on_cpu_device_with_orderNCHW
-run_on_device
-run_on_device_with_order_nchw
-run_on_device_with_order_nhwc
