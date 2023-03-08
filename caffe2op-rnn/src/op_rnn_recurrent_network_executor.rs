@@ -597,6 +597,7 @@ impl ThreadedRecurrentNetworkExecutor {
 }
 
 impl Drop for ThreadedRecurrentNetworkExecutor {
+
     fn drop(&mut self) {
         todo!();
         /* 

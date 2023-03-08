@@ -1,14 +1,7 @@
 crate::ix!();
 
-use crate::{
-    RecurrentNetworkExecutorBase,
-    ArgumentHelper,
-    NetDef,
-    CudaEvent,
-};
-
 pub struct CUDARecurrentNetworkExecutor {
-    base: RecurrentNetworkExecutorBase,
+    base:                      RecurrentNetworkExecutorBase,
     events:                    Vec<CudaEvent>,
     has_timestep_parallelism:  bool, // default = false
     max_cuda_streams:          i32, // default = 2
