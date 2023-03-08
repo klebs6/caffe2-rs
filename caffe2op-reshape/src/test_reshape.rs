@@ -1,8 +1,30 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-};
+#[test] fn reshape_op_example() {
+
+    /*
+    workspace.ResetWorkspace()
+
+    op = core.CreateOperator(
+        "Reshape",
+        ["data"],
+        ["reshaped", "old_shape"],
+        shape=(3,2)
+    )
+
+    workspace.FeedBlob("data", (np.random.randint(100, size=(6))))
+    print("data:", workspace.FetchBlob("data"))
+    workspace.RunOperatorOnce(op)
+    print("reshaped:", workspace.FetchBlob("reshaped"))
+    print("old_shape:", workspace.FetchBlob("old_shape"))
+
+    data: [86 60 85 96  7 37]
+    reshaped: [[86 60]
+              [85 96]
+              [ 7 37]]
+    old_shape: [6]
+    */
+}
 
 declare_string!{caffe_test_root}
 

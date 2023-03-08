@@ -4,5 +4,9 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_reshape_op_gpu_test}
-x!{op_reshape}
+x!{config}
+x!{get_gradient}
+x!{inference}
+x!{reshape}
+x!{run_on_device}
+x!{test_reshape}
