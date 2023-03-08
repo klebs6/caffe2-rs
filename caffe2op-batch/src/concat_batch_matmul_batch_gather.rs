@@ -4,9 +4,9 @@ type T      = f32;
 type TInd   = i32;
 type Engine = DefaultEngine;
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConcatBatchMatMulBatchGatherOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

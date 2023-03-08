@@ -35,8 +35,8 @@ crate::ix!();
   | scaling)
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SquareRootDivideOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_DISPATCH_HELPER
     storage: OperatorStorage,
     context: Context,

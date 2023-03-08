@@ -13,7 +13,9 @@ Given an input feature map X of size (N, C, H, W),
 the Lp Pooling Operator computes the output Y of
 size (N, C, H', W') as follows:
 
+```
 Y[i, j, h, w] = (1/k) * ∑_(p,q ∈ P_i) (|X[i, j, p, q]|^p)^(1/p)
+```
 
 where P_i is the set of indices for the pooling
 region at position (i, j), k is the number of
@@ -82,7 +84,9 @@ and a pooling window of size (H_k, W_k), the Lp
 pooling operation computes a pooled feature map
 Y of size (N, C, H_out, W_out), where:
 
+```
 Y(n, c, i, j) = (1/H_k*W_k * sum_(x=i to i+H_k-1) sum_(y=j to j+W_k-1) abs(X(n, c, x, y))^p)^(1/p)
+```
 
 where p is a user-defined parameter that
 determines the degree of pooling. When p=1, the L1

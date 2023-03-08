@@ -26,9 +26,9 @@ use crate::{
   | total dimensions in the embedding.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SinusoidPositionEncodingOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 

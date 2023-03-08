@@ -18,9 +18,9 @@ use crate::{
   | in general.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct UniqueOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:              OperatorStorage,
     context:              Context,
     order:                Vec<i32>,

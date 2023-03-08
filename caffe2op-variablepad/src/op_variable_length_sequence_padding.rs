@@ -42,8 +42,8 @@ use crate::{
   | (i,j,k)).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct VariableLengthSequencePaddingOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<T>,

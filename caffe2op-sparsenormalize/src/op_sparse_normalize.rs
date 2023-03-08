@@ -5,9 +5,9 @@ use crate::{
     CPUContext,
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseNormalizeOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:       OperatorStorage,
     context:       Context,
 

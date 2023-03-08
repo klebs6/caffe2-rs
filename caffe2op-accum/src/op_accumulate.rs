@@ -25,9 +25,9 @@ use crate::{
   | tensor and gamma is the multiplier argument.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AccumulateOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
     storage: OperatorStorage,
     context: Context,

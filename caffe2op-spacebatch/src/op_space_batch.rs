@@ -115,8 +115,8 @@ use crate::{
 
 
 ///-----------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SpaceBatchOpBase<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -195,8 +195,8 @@ impl<Context> SpaceBatchOpBase<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/space_batch_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SpaceToBatchOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     base: SpaceBatchOpBase<Context>,
 }
@@ -281,8 +281,8 @@ impl<Context> SpaceToBatchOp<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/space_batch_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchToSpaceOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     base: SpaceBatchOpBase<Context>,
 }
 

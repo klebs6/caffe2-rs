@@ -1,7 +1,7 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchMomentsOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     order:   StorageOrder,

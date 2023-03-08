@@ -724,9 +724,9 @@ impl SpatialBNGradientOp<CPUContext> {
 }
 
 ///------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SpatialBNGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

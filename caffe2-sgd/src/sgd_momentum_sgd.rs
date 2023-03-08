@@ -26,6 +26,7 @@ use crate::{
  | actually performs the parameter update (and is
  | thus faster).
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MomentumSGDOp<T, Context> {
     context:  Context,
     momentum: T, // default = 0.9
@@ -33,7 +34,6 @@ pub struct MomentumSGDOp<T, Context> {
 }
 
 impl<T,Context> Operator for MomentumSGDOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
 }
 
@@ -132,6 +132,7 @@ impl<T,Context> MomentumSGDOp<T,Context> {
  | a new gradient but does not perform the parameter
  | update.
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MomentumSGDUpdateOp<T, Context> {
     context:  Context,
     momentum: T, // default = 0.9
@@ -139,7 +140,6 @@ pub struct MomentumSGDUpdateOp<T, Context> {
 }
 
 impl<T,Context> Operator for MomentumSGDUpdateOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
 }
 
@@ -234,8 +234,8 @@ impl<T,Context> MomentumSGDUpdateOp<T,Context> {
   | and outputs should be the same blobs).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseMomentumSGDUpdateOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

@@ -31,9 +31,9 @@ crate::ix!();
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/given_tensor_fill_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GivenTensorFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base:    FillerOp<Context>,
 
     body:    fn(output: *mut Tensor) -> bool,

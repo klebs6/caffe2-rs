@@ -48,13 +48,13 @@ use crate::{
   | with 0.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct IterOp<Context> {
     context: Context,
 
 }
 
 impl<Context> Operator for IterOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 
@@ -114,13 +114,13 @@ pub struct AtomicIterOpStats {
     */
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AtomicIterOp<Context> {
     context: Context,
     stats: AtomicIterOpStats,
 }
 
 impl<Context> Operator for AtomicIterOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 }
 
 num_inputs!{AtomicIter, 2}

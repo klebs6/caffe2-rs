@@ -19,9 +19,9 @@ use crate::{
   | Output case #2: Y (test mode)
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RoIPoolOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:        OperatorStorage,
     context:        Context,
 
@@ -228,9 +228,9 @@ impl RoIPoolOp<f32,CPUContext> {
 }
 
 ///-----------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RoIPoolGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:        OperatorStorage,
     context:        Context,
 

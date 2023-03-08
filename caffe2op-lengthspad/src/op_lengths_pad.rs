@@ -33,9 +33,9 @@ use crate::{
 |     [-1.0, -1.0],
 |   ]
 */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsPadOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

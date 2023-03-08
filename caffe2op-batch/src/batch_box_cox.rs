@@ -11,9 +11,9 @@ crate::ix!();
  |     ((x + lambda2)^lambda1 - 1)/lambda1, if lambda1 != 0
  |
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchBoxCoxOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
     storage: OperatorStorage,
     context: Context,

@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_reverse_packed_segs}
+x!{reverse_packed_segs}
+x!{run_on_device}
+x!{get_gradient}

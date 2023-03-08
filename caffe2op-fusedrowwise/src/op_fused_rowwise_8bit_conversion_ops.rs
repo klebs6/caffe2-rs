@@ -34,9 +34,9 @@ pub type ConvertFnType<T> = fn(
   | columns.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FloatToFused8BitRowwiseQuantizedOp<T, TypeForScaleAndBias, ConvertFn, const HAS_CONVERT: bool, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                    OperatorStorage,
     context:                    Context,
 
@@ -162,9 +162,9 @@ output_tags!{
 }
 
 ///------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Fused8BitRowwiseQuantizedToFloatOp<T, TypeForScaleAndBias, ConvertFn, const HAS_CONVERT: bool, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                    OperatorStorage,
     context:                    Context,
 

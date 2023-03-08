@@ -145,8 +145,8 @@ impl<Context> StormOp<Context> {
   | as in the dense case.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseStormOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

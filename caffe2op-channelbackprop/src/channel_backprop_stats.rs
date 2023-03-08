@@ -22,9 +22,9 @@ crate::ix!();
   | the larger batch size
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ChannelBackpropStatsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

@@ -36,9 +36,9 @@ crate::ix!();
   | three possible values (i.e. 0, 1, 2).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchBucketizeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

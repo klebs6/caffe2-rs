@@ -18,9 +18,9 @@ use crate::{
   | for nan or inf
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct NanCheckOp<Context, W: Write> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:        OperatorStorage,
     context:        Context,
 
@@ -122,9 +122,9 @@ impl GetGradientDefs for GetNanCheckGradient {
   | or not.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct IsNanOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -180,9 +180,9 @@ impl<Context> IsNanOp<Context> {
   | Time since epoch in nanoseconds.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WallClockTimeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -232,9 +232,9 @@ pub const kPrintFileExtension: &'static str = ".log";
   | to stderr or to a file.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct PrintOp<Context, W: Write> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     //USE_DISPATCH_HELPER;
     storage:           OperatorStorage,
     context:           Context,
@@ -370,8 +370,8 @@ impl<Context, W: Write> PrintOp<Context,W> {
   | computation before you use it explicitly.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AliasOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -434,8 +434,8 @@ impl<Context> AliasOp<Context> {
   |     DATA - same tensor as input.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct EnsureDenseOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -523,8 +523,8 @@ impl<Context> EnsureDenseOp<Context> {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/utility_ops.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FlattenToVecOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -585,8 +585,8 @@ impl<Context> FlattenToVecOp<Context> {
   | reshapes it like input(1).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ResizeLikeOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -640,8 +640,8 @@ impl<Context> ResizeLikeOp<Context> {
 }
 
 ///-----------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SumOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -762,8 +762,8 @@ impl<Context> SumOp<Context> {
   | the output, but not other X_i.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightedSumOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -870,8 +870,8 @@ impl<Context> WeightedSumOp<Context> {
 }
 
 ///-----------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightedSumGradientOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     grad_on_w: bool,
@@ -1081,9 +1081,9 @@ impl<Context> WeightedSumGradientOp<Context> {
   | of INDICES access
   |
   */
+  #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ScatterWeightedSumOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_DISPATCH_HELPER
     storage:        OperatorStorage,
     context:        Context,
@@ -1279,8 +1279,8 @@ type RunnerMap  = HashMap<(TensorProto_DataType, TensorProto_DataType), RunnerTy
   | of access to INDICES.
   |
   */
+  #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ScatterAssignOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     
     storage: OperatorStorage,
     context: Context,
@@ -1471,9 +1471,9 @@ impl<Context> ScatterAssignOp<Context> {
   | of access to INDICES.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ScatterOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: CPUContext,
     axis:    i32,
@@ -1691,9 +1691,9 @@ impl<Context> ScatterOp<Context> {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/utility_ops.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsToSegmentIdsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -1752,9 +1752,9 @@ impl<Context> LengthsToSegmentIdsOp<Context> {
   | into `[[0, 1], [1, 3], [4, 0], [4, 2]]`.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsToRangesOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -1829,9 +1829,9 @@ impl<Context> LengthsToRangesOp<Context> {
   | into `[0, 1, 4, 4]`.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsToOffsetsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:             OperatorStorage,
     context:             Context,
     include_last_offset: bool,
@@ -1929,8 +1929,8 @@ impl<Context> LengthsToOffsetsOp<Context> {
   | input is absent).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SegmentIdsToLengthsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     
     storage: OperatorStorage,
     context: Context,
@@ -2030,8 +2030,8 @@ impl<Context> SegmentIdsToLengthsOp<Context> {
   | + 1.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SegmentIdsToRangesOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -2113,8 +2113,8 @@ impl<Context> SegmentIdsToRangesOp<Context> {
   | by lengths. i.e 1/pow(length, power)
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsToWeightsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     power:   f32,
@@ -2221,8 +2221,8 @@ impl<Context> LengthsToWeightsOp<Context> {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/utility_ops.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HasElementsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -2355,8 +2355,8 @@ impl<Context> HasElementsOp<Context> {
   | Return the size of a tensor
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SizeOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -2449,9 +2449,9 @@ impl<Context> SizeOp<Context> {
   | returns a shape to be passed to Reshape
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsToShapeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -2536,9 +2536,9 @@ impl<Context> LengthsToShapeOp<Context> {
   | ranges into a 1-D tensor OUTPUT.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GatherRangesOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 }
@@ -2691,9 +2691,9 @@ impl<Context> GatherRangesOp<Context> {
   | OUTPUT, use `Gather`.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsGatherOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -2822,9 +2822,9 @@ impl<Context> LengthsGatherOp<Context> {
   | respectively.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AccumulateHistogramOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:            OperatorStorage,
     context:            Context,
 
@@ -2979,9 +2979,9 @@ impl<T,Context> AccumulateHistogramOp<T,Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/utility_ops.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RangeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

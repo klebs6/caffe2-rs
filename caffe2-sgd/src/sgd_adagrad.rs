@@ -99,16 +99,13 @@ use crate::{
  | Optionally returns effective_lr and update as
  | well. 
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AdagradOp<Context> {
     storage:      OperatorStorage,
     context:      Context,
     epsilon:      f32,
     decay:        f32,
     weight_decay: f32,
-}
-
-impl<Context> Operator for AdagradOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 }
 
 should_not_do_gradient!{Adagrad}
@@ -549,6 +546,7 @@ output_tags!{
   | into the rows of param.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RowWiseSparseAdagradOp<Context> {
 
     context:      Context,
@@ -563,11 +561,6 @@ pub struct RowWiseSparseAdagradOp<Context> {
   std::int64_t last_block_size_{-1};
 #endif
   */
-
-}
-
-impl<Context> Operator for RowWiseSparseAdagradOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

@@ -36,9 +36,9 @@ use crate::{
   | ranges) filled with default_value.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GatherRangesToDenseOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

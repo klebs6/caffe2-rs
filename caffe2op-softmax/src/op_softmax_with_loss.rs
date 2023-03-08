@@ -64,9 +64,9 @@ crate::ix!();
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/softmax_with_loss_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SoftmaxWithLossOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:               OperatorStorage,
     context:               Context,
 
@@ -173,9 +173,9 @@ impl<T,Context> SoftmaxWithLossOp<T,Context> {
 }
 
 ///----------------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SoftmaxWithLossGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

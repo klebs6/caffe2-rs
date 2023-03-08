@@ -36,8 +36,8 @@ pub const kEqualityThreshold: f32 = 1e-10;
   | (with losses).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FloatToRowwiseQuantized8BitsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -140,8 +140,8 @@ impl<Context> FloatToRowwiseQuantized8BitsOp<Context> {
   | (m_1, m_2, ..., m_n).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Rowwise8BitQuantizedToFloatOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -220,9 +220,9 @@ impl<Context> Rowwise8BitQuantizedToFloatOp<Context> {
 
 ///---------------------------
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseLengths8BitsRowwiseOp<Context, const USE_WEIGHTS: bool, const USE_MEAN: bool, OutDataT> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 

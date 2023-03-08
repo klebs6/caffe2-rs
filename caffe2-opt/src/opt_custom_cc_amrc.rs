@@ -8,8 +8,8 @@ use crate::{
 };
 
 ///---------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConcatAddMulReplaceNaNClipOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,

@@ -1,7 +1,7 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SoftmaxOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 
@@ -45,8 +45,8 @@ impl<T,Context> SoftmaxOp<T,Context> {
 }
 
 ///---------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SoftmaxGradientOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

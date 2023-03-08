@@ -15,8 +15,8 @@ crate::ix!();
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/clip_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ClipOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     min:     T,

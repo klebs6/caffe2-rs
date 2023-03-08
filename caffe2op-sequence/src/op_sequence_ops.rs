@@ -15,9 +15,9 @@ use crate::{
   | w.r.t the padding tensors.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GatherPaddingOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:                    OperatorStorage,
     context:                    Context,
 
@@ -200,9 +200,9 @@ impl<Context> GatherPaddingOp<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/sequence_ops.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RemovePaddingOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:                    OperatorStorage,
     context:                    Context,
 
@@ -344,9 +344,9 @@ impl<Context> RemovePaddingOp<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/sequence_ops.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AddPaddingOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:                    OperatorStorage,
     context:                    Context,
 
@@ -489,8 +489,8 @@ impl<Context> AddPaddingOp<Context> {
   | PadEmptySamples is thread safe.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct PadEmptySamplesOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,

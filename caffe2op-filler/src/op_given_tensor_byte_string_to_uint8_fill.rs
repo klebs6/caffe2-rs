@@ -50,8 +50,8 @@ crate::ix!();
   | size penalty.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GivenTensorByteStringToUInt8FillOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
 
     values: Tensor,

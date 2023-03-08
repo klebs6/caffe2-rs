@@ -203,9 +203,9 @@ impl WorkspaceStack {
   | by Do operator to store local blobs
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CreateScopeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }
@@ -246,9 +246,9 @@ num_outputs!{CreateScope, 1}
   | scopes left
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HasScopeOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

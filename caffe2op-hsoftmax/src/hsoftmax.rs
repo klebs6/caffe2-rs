@@ -30,9 +30,9 @@ crate::ix!();
   | gradients for all samples in the batch.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HSoftmaxOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base:    HSoftmaxOpBase<T, Context>,
 
     phantom: PhantomData<T>,

@@ -23,9 +23,9 @@ use crate::{
   | prediction.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AccuracyOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
     storage: OperatorStorage,
     context: Context,

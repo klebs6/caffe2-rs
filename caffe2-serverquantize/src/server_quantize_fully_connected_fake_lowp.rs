@@ -102,8 +102,8 @@ use crate::{
   | TransposeWeight = true>
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FullyConnectedFakeLowpFPOp<Context, Engine, const TransposeWeight: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,
@@ -284,8 +284,8 @@ impl<Context,Engine,const TransposeWeight: bool> FullyConnectedFakeLowpFPOp<Cont
 
 
 ///-----------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FullyConnectedGradientFakeLowpFPOp<Context,Engine,const TransposeWeight: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

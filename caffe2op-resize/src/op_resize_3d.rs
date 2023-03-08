@@ -20,15 +20,14 @@ declare_export_caffe2_op_to_c10!{ResizeNearest3D}
   | scale are 2
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ResizeNearest3DOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
-    context: Context,
-
-    temporal_scale:  T,
-    height_scale:    T,
-    width_scale:     T,
-    order:           StorageOrder,
+    storage:        OperatorStorage,
+    context:        Context,
+    temporal_scale: T,
+    height_scale:   T,
+    width_scale:    T,
+    order:          StorageOrder,
 
     /*
       | Input: X,

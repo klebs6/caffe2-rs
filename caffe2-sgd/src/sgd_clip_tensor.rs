@@ -18,13 +18,13 @@ use crate::{
   the final threshold will become threshold * additional_threshold.
   This op could be used for gradient clipping.
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ClipTensorByScalingOp<Context> {
     context: Context,
     threshold:  f32,
 }
 
 impl<Context> Operator for ClipTensorByScalingOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

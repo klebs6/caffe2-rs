@@ -33,8 +33,8 @@ crate::ix!();
   | Reference: facebookresearch/Detectron/detectron/ops/collect_and_distribute_fpn_rpn_proposals.py
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CollectAndDistributeFpnRpnProposalsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -271,8 +271,8 @@ impl CollectAndDistributeFpnRpnProposalsOp<CPUContext> {
     }
 }
 ///-----------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CollectRpnProposalsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -397,9 +397,9 @@ impl<Context> CollectRpnProposalsOp<Context> {
     }
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DistributeFpnProposalsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

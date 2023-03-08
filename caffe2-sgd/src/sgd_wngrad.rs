@@ -114,6 +114,7 @@ use crate::{
  |
  | Optionally returns effective_lr and update as well.
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WngradOp<T, Context> {
     storage: OperatorStorage,
     context: Context,
@@ -139,7 +140,6 @@ output_tags!{
 }
 
 impl<T,Context> Operator for WngradOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 }
 
 register_cpu_operator!{

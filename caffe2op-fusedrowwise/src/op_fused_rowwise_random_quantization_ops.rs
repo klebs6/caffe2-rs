@@ -90,9 +90,9 @@ crate::ix!();
   | 1508-1518. 2017.
   |
   */
+  #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FloatToFusedRandRowwiseQuantizedOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:       OperatorStorage,
     context:       Context,
 
@@ -293,9 +293,9 @@ impl<T, Context> Drop for FloatToFusedRandRowwiseQuantizedOp<T, Context> {
   | operator for details.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FusedRandRowwiseQuantizedToFloatOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

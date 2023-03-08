@@ -34,6 +34,7 @@ use crate::{
   | local_lr = max(local_lr, lr_min)
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LarsOp<T,Context> {
     context:         Context,
     offset:          T,
@@ -43,7 +44,6 @@ pub struct LarsOp<T,Context> {
 }
 
 impl<T,Context> Operator for LarsOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

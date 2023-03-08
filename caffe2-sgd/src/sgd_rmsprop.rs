@@ -71,6 +71,7 @@ impl RmsPropUpdate for CPUContext {
  |
  | Returns (grad_o, mean_squares_o, mom_o).
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RmsPropOp<T,Context> {
     context:  Context,
     decay:    T,// {0.9};
@@ -79,7 +80,6 @@ pub struct RmsPropOp<T,Context> {
 }
 
 impl<T,Context> Operator for RmsPropOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

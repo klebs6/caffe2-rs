@@ -14,8 +14,8 @@ use crate::{
   | scaled element-wise.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ScaleOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     scale:  f32,

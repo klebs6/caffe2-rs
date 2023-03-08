@@ -1,8 +1,8 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ChannelShuffleOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -43,8 +43,8 @@ impl<T,Context> ChannelShuffleOp<T,Context> {
     }
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ChannelShuffleGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

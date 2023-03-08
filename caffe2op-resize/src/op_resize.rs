@@ -16,12 +16,10 @@ declare_export_caffe2_op_to_c10!{ResizeNearest}
   | * height_scale)
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ResizeNearestOp<T,Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:       OperatorStorage,
     context:       Context,
-
     width_scale:   T,
     height_scale:  T,
     order:         StorageOrder,

@@ -71,9 +71,9 @@ impl<TData> BaseInputAccessor<TData> {
   | = BaseInputAccessor<T>>
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractSortedSegmentRangeOp<T,SIndex,Context,RangeReducer,InputAccessor> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:             OperatorStorage,
     context:             Context,
 
@@ -158,9 +158,9 @@ AbstractSortedSegmentRangeOp<T,SIndex,Context,RangeReducer,InputAccessor> {
 }
 
 ///------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractSortedSegmentRangeGradientOp<T,SIndex,Context,RangeReducerGradient> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_SIMPLE_CTOR_DTOR(AbstractSortedSegmentRangeGradientOp);
     storage:                     OperatorStorage,
     context:                     Context,
@@ -382,8 +382,8 @@ impl<'a> GetGradientDefs for GetSortedSegmentRangeGradient<'a> {
   | = BaseInputAccessor<T>>
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractReduceFrontOrBackOp<T,Context,Reducer,const FirstDim: bool,InputAccessor> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,
@@ -471,8 +471,8 @@ AbstractReduceFrontOrBackOp<T,Context,R,FirstDim,InputAccessor> {
   | bool FirstDim = true>
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractReduceFrontOrBackGradientOp<T,Context,ReducerGradient,const FirstDim: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -781,9 +781,9 @@ impl<'a> GetGradientDefs for GetReduceBackGradient<'a> {
  |  bool SparseFused = true,
  |  class InputAccessor = BaseInputAccessor<T>>
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractSortedSegmentOp<T,SIndex,Context,Reducer,const SparseFused: bool,InputAccessor> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage:         OperatorStorage,
     context:         Context,
@@ -939,9 +939,9 @@ AbstractSortedSegmentOp<T,SIndex,Context,R,SparseFused,InputAccessor> {
   | whether sparse lookup is fused or not
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractSortedSegmentGradientOp<T,SIndex,Context,ReducerGradient: HasOriginalInputs> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:                OperatorStorage,
     context:                Context,
     phantom:                PhantomData<T>,
@@ -1312,8 +1312,8 @@ impl<T,SIndex,Context,ReducerDef> AbstractSparseSortedSegmentDef<T,SIndex,Contex
  |  bool SparseFused = true,
  |  class InputAccessor = BaseInputAccessor<T>>
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractUnsortedSegmentOp<T,SIndex,Context,Reducer,const SparseFused: bool,InputAccessor> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,
@@ -1492,9 +1492,9 @@ AbstractUnsortedSegmentOp<T,SIndex,Context,R,SparseFused,InputAccessor> {
   | whether sparse lookup is fused or not
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractUnsortedSegmentGradientOp<T,SIndex,Context,ReducerGradient> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:        OperatorStorage,
     context:        Context,
 
@@ -1822,9 +1822,9 @@ impl<T,SIndex,Context,ReducerDef> AbstractSparseUnsortedSegmentDef<T,SIndex,Cont
  | version.
  */
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractLengthsOp<TData,TLengths,Context,R: Reducer,const SparseFused: bool,InputAccessor> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:         OperatorStorage,
     context:         Context,
     input_accessor:  InputAccessor,
@@ -1988,8 +1988,8 @@ AbstractLengthsOp<TData,TLengths,Context,R,SparseFused,InputAccessor> {
   | bool GradientNeedIndices = false>
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractLengthsGradientOp<T,TLengths,Context,ReducerGradient,const GradientNeedIndices: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage:                OperatorStorage,
     context:                Context,
@@ -2096,8 +2096,8 @@ AbstractLengthsGradientOp<T,TLengths,Context,ReducerGradient,GradientNeedIndices
  | bool SparseFused = true,
  | bool GradientNeedIndices = false>
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractLengthsWithMainInputGradientOp<Tembedding,T,TLengths,Context,ReducerGradient,const SparseFused: bool,const GradientNeedIndices: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,
@@ -2229,8 +2229,8 @@ AbstractLengthsWithMainInputGradientOp<Tembedding,T,TLengths,Context,ReducerGrad
   | forward op.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractLengthsWithMainInputAndForwardOutputGradientOp<T,TLengths,Context,ReducerGradient> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,

@@ -35,9 +35,9 @@ use crate::{
   | -output[j, ...] = 0 if j not in indices
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseToDenseOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_DISPATCH_HELPER
     storage:           OperatorStorage,
     context:           Context,

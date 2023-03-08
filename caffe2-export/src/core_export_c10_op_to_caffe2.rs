@@ -30,8 +30,8 @@ use crate::{
   |
   */
 #[cfg(all(not(caffe2_is_xplat_build), not(c10_mobile)))]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct C10OperatorWrapper<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

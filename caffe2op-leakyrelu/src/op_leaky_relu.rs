@@ -58,9 +58,9 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/leaky_relu_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LeakyReluOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -122,8 +122,8 @@ impl LeakyReluOp<f32, CPUContext> {
 }
 
 ///--------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LeakyReluGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

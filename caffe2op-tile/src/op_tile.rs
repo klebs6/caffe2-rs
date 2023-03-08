@@ -28,9 +28,9 @@ use crate::{
   | axis.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TileOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -341,9 +341,9 @@ impl TileOp<CPUContext> {
 }
 
 ///-----------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TileGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     tiles:   i32,

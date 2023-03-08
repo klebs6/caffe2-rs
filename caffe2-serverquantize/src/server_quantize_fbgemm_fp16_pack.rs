@@ -15,8 +15,8 @@ use crate::{
     bool TransposeWeight = true,
     typename TPacked = fbgemm::float16>
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FbGemmPackOp<Context,Engine,const TransposeWeight: bool,TPacked> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

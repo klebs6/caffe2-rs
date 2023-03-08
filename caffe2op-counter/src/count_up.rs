@@ -8,8 +8,8 @@ crate::ix!();
   | the Context
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CountUpOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<T>,

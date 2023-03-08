@@ -322,8 +322,8 @@ CPUSparseLengthsReductionOp<T,InputTypes,USE_WEIGHT,USE_MEAN,USE_POSITIONAL_WEIG
 }
 
 ///------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TTSparseLengthsSumOp<T,Context,Engine> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     factor_i:  Vec<i32>,
@@ -583,8 +583,8 @@ impl<T,Context,Engine> TTSparseLengthsSumOp<T,Context,Engine> {
 }
 
 ///-----------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TTSparseLengthsSumGradientOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,

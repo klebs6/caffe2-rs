@@ -35,9 +35,9 @@ use crate::{
   | are aliased, so use with caution.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct UnsafeCoalesceOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

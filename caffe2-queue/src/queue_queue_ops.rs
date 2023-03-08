@@ -9,9 +9,9 @@ use crate::{
     Blob,
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CreateBlobsQueueOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
 
     ws:    *mut Workspace, // default = nullptr
@@ -62,9 +62,9 @@ impl<Context> CreateBlobsQueueOp<Context> {
 }
 
 ///---------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct EnqueueBlobsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
 }
 
@@ -100,9 +100,9 @@ impl<Context> EnqueueBlobsOp<Context> {
 }
 
 ///Dequeue the blobs from queue.
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DequeueBlobsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
 
     timeout_secs:  f32,
@@ -157,9 +157,9 @@ impl<Context> DequeueBlobsOp<Context> {
 }
 
 ///-------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CloseBlobsQueueOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
 }
 
@@ -201,9 +201,9 @@ impl<Context> CloseBlobsQueueOp<Context> {
   | blobs.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SafeEnqueueBlobsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-
     storage: OperatorStorage,
     context: Context,
 }
@@ -275,8 +275,8 @@ impl<Context> SafeEnqueueBlobsOp<Context> {
   | blobs.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SafeDequeueBlobsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -423,8 +423,8 @@ impl<Context> SafeDequeueBlobsOp<Context> {
   | blobs.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightedSampleDequeueBlobsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

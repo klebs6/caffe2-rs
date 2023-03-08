@@ -47,8 +47,8 @@ crate::ix!();
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/ceil_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CeilOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

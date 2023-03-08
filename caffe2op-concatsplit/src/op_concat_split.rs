@@ -57,9 +57,9 @@ pub const kSplitOpInputSize: i32 = 2;
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/concat_split_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SplitOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
 
     axis:     i32,
@@ -279,10 +279,10 @@ impl<Context> SplitOp<Context> {
   | Each part of length `sum(lengths[i*k:i*k+k))`
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SplitByLengthsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
 
     axis:                         i32,
@@ -533,10 +533,10 @@ impl<Context> SplitByLengthsOp<Context> {
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/concat_split_op.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConcatOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
 
     axis:     i32,

@@ -9,8 +9,8 @@ use crate::{
   | name as operator argument.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AliasWithNameOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

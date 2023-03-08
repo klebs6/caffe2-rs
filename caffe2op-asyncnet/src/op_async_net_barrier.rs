@@ -11,8 +11,8 @@ crate::ix!();
  | where one wants to force that all copies are
  | started before data-parallel part starts.
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AsyncNetBarrierOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

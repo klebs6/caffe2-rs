@@ -48,8 +48,8 @@ use crate::{
   | process.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ShapeOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     axes:    Vec<i32>,

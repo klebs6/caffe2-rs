@@ -6,10 +6,10 @@ crate::ix!();
   | one-to-one inplace.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FeedBlobOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
     value:   String,
 }

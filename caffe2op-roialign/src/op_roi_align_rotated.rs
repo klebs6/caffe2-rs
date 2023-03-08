@@ -15,9 +15,9 @@ declare_export_caffe2_op_to_c10![RoIAlignRotated];
   | Based on https://arxiv.org/abs/1703.01086.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RoIAlignRotatedOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 

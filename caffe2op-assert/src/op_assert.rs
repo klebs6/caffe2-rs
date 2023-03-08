@@ -54,10 +54,10 @@ use crate::{
 | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/assert_op.cc
 |
 */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AssertOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage:    OperatorStorage,
     context:    Context,
 
     cmp_tensor: Tensor, //{CPU};

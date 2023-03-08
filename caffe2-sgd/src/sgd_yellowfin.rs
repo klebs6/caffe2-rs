@@ -40,6 +40,7 @@ use crate::{
   | of moving average.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct YellowFinOp<T, Context> {
 
     storage: OperatorStorage,
@@ -443,11 +444,6 @@ impl<T,CpuContext> YellowFinOp<T,CpuContext> {
             }                                                                          \
         */
     }
-}
-
-impl<T,Context> Operator for YellowFinOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-
 }
 
 register_cpu_operator!{

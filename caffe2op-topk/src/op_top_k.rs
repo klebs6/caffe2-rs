@@ -102,10 +102,10 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/top_k.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TopKOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
     k:       i32,
     axis:    i32,
@@ -245,10 +245,10 @@ impl<T,Context> TopKOp<T,Context> {
 }
 
 ///--------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TopKGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage: OperatorStorage,
     context: Context,
     axis:    i32,
     phantom: PhantomData<T>,

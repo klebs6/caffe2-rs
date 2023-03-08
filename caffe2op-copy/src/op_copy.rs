@@ -49,8 +49,8 @@ use crate::{
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/copy_op.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CopyOp<Context, DstContext, SrcContext> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     phantomA: PhantomData<SrcContext>,

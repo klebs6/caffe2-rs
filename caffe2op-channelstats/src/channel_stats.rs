@@ -13,8 +13,8 @@ crate::ix!();
   | size over which SpatialBN is applied.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ChannelStatsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

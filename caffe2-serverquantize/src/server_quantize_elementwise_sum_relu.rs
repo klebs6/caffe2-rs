@@ -6,8 +6,8 @@ use crate::{
     Workspace
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SumReluOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     base: SumOp<Context>,
 }
 

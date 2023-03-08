@@ -10,9 +10,9 @@ crate::ix!();
   | through it.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct StopGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

@@ -11,9 +11,9 @@ use crate::{
   | as used in Mask R-CNN.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RoIAlignOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 

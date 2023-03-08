@@ -10,8 +10,8 @@ crate::ix!();
  | In case of A and B being two dimensional, it
  | behaves like normal matrix multiplication.
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchMatMulOp<Context, Engine> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     trans_a:   bool,

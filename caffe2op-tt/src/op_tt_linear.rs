@@ -36,9 +36,9 @@ use crate::{
   | speed of the computation.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TTLinearOp<T,Context,Engine> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:         OperatorStorage,
     context:         Context,
 
@@ -231,9 +231,9 @@ impl<T,Context,Engine> TTLinearOp<T,Context,Engine> {
   | of TT-layer's forward pass.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TTLinearGradientOp<T,Context,Engine> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:         OperatorStorage,
     context:         Context,
 

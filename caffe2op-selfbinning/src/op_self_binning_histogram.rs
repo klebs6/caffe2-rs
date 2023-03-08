@@ -20,10 +20,10 @@ use crate::{
   | operator.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SelfBinningHistogramOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage:         OperatorStorage,
     context:         Context,
 
     num_bins:        i32,

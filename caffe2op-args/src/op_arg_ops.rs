@@ -8,9 +8,9 @@ use crate::{
     TensorShape
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ArgOp<Context, Reducer> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

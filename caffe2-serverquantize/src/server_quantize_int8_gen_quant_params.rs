@@ -47,8 +47,8 @@ impl Int8QuantParamsBlob {
   | the input data and quant scheme
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Int8GenQuantParamsOp<Context,Engine> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<Engine>,

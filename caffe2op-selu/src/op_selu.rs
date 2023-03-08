@@ -63,8 +63,8 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/selu_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SeluOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
     storage: OperatorStorage,
     context: Context,
@@ -129,9 +129,9 @@ impl<T,Context> SeluOp<T,Context> {
   | function.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SeluGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

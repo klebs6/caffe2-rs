@@ -30,13 +30,13 @@ impl<T> GFtrlParams<T> {
 }
 
 ///--------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GFtrlOp<T,Context> {
     context: Context,
     params:  GFtrlParams<T>,
 }
 
 impl<T,Context> Operator for GFtrlOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 }
 
 impl<T,Context> GFtrlOp<T,Context> {

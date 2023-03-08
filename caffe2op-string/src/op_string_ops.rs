@@ -55,8 +55,8 @@ ScalarFunctor,
     TypeMap>;
 
 ///-----------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct StringJoinOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

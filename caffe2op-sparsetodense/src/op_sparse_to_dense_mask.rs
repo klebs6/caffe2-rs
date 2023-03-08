@@ -8,9 +8,9 @@ use crate::{
 
 declare_export_caffe2_op_to_c10!{SparseToDenseMask}
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseToDenseMaskBase<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:         OperatorStorage,
     context:         Context,
 
@@ -103,9 +103,9 @@ impl<Context> SparseToDenseMaskBase<Context> {
   | of size `len(lengths) X len(mask)`.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseToDenseMaskOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     base:                  SparseToDenseMaskBase<Context>,
 
     return_presence_mask:  bool,
@@ -333,9 +333,9 @@ impl<Context> SparseToDenseMaskOp<Context> {
   | not been implemented.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseToDenseMaskGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     base: SparseToDenseMaskBase<Context>,
 }
 

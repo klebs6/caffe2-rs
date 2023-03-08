@@ -51,9 +51,9 @@ use crate::{
   | into one multi-feature tensor.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeDenseFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:     OperatorStorage,
     context:     Context,
     feature_ids: Vec<i64>,
@@ -151,8 +151,8 @@ impl<Context> MergeDenseFeatureTensorsOp<Context> {
   | tensor.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeSingleScalarFeatureTensorsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -256,9 +256,9 @@ impl<Context> MergeSingleScalarFeatureTensorsOp<Context> {
   | tensors
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeSingleScalarFeatureTensorsGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:            OperatorStorage,
     context:            Context,
     num_feature_inputs: i32,
@@ -367,9 +367,9 @@ impl GetGradientDefs for GetMergeSingleScalarFeatureTensorsGradient {
   | tensor.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeSingleListFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 
@@ -547,9 +547,9 @@ outputs!{MergeSingleListFeatureTensorsGradient,
 }
 
 ///-------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeSingleListOrMapFeatureTensorsGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:               OperatorStorage,
     context:               Context,
     num_tensors_per_input: i32,//2
@@ -629,9 +629,9 @@ impl<Context> MergeSingleListOrMapFeatureTensorsGradientOp<Context> {
   | tensor.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeSingleMapFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 
@@ -832,9 +832,9 @@ impl GetGradientDefs for GetMergeSingleMapFeatureTensorsGradient {
   | with scalar features into one.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeMultiScalarFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 
@@ -941,9 +941,9 @@ impl<Context> MergeMultiScalarFeatureTensorsOp<Context> {
   | with scalar features into many.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeMultiScalarFeatureTensorsGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 
@@ -1067,9 +1067,9 @@ impl GetGradientDefs for GetMergeMultiScalarFeatureTensorsGradient {
   | with list features into one.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeMultiListFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
     k_num_tensors_per_input: i32, // = 4;
@@ -1252,9 +1252,9 @@ impl GetGradientDefs for GetMergeMultiListFeatureTensorsGradient {
   | with map features into one.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeMultiMapFeatureTensorsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 
@@ -1455,9 +1455,9 @@ outputs!{MergeMultiMapFeatureTensorsGradient,
 }
 
 ///------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MergeMultiListOrMapFeatureTensorsGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:                 OperatorStorage,
     context:                 Context,
 

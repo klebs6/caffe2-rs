@@ -45,9 +45,9 @@ crate::ix!();
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/cross_entropy_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LabelCrossEntropyOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -119,8 +119,8 @@ impl LabelCrossEntropyOp<f32, CPUContext> {
 }
 
 ///------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LabelCrossEntropyGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -216,9 +216,9 @@ register_gradient!{LabelCrossEntropy, GetLabelCrossEntropyGradient}
   | probabilities for binary classification
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MakeTwoClassOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -281,9 +281,9 @@ impl MakeTwoClassOp<f32, CPUContext> {
 
 
 ///------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MakeTwoClassGradientOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -350,8 +350,8 @@ register_cpu_operator!{MakeTwoClassGradient, MakeTwoClassGradientOp<f32, CPUCont
   | of losses for each example.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SigmoidCrossEntropyWithLogitsOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -446,8 +446,8 @@ impl<T, Context> SigmoidCrossEntropyWithLogitsOp<T, Context> {
 }
 
 ///------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SigmoidCrossEntropyWithLogitsGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -551,8 +551,8 @@ impl GetGradientDefs for GetSigmoidCrossEntropyWithLogitsGradient {
   | of losses for each example.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightedSigmoidCrossEntropyWithLogitsOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -619,8 +619,8 @@ impl WeightedSigmoidCrossEntropyWithLogitsOp<f32, CPUContext> {
 
 
 ///------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightedSigmoidCrossEntropyWithLogitsGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -763,9 +763,9 @@ impl GetGradientDefs for GetWeightedSigmoidCrossEntropyWithLogitsGradient {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/cross_entropy_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CrossEntropyOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 
@@ -845,8 +845,8 @@ impl CrossEntropyOp<f32, CPUContext> {
 }
 
 ///------------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CrossEntropyGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

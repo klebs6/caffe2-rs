@@ -43,10 +43,10 @@ use crate::{
   | first.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FlexibleTopKOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
 
     phantom: PhantomData<T>,
@@ -153,10 +153,10 @@ impl<T, Context> FlexibleTopKOp<T, Context> {
 }
 
 ///---------------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FlexibleTopKGradientOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    storage: OperatorStorage,
     context: Context,
 
     phantom: PhantomData<T>,

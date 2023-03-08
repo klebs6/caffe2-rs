@@ -32,8 +32,8 @@ pub enum SparseLengthsFusedNBitRowwiseOpTags {
     Lengths,
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseLengthsFusedNBitRowwiseOp<const BIT_RATE: i32,Context,const with_weights: bool,const is_mean: bool> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

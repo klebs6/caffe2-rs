@@ -1,6 +1,6 @@
 crate::ix!();
 
-//USE_OPERATOR_CONTEXT_FUNCTIONS;
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseLengthsFused8BitRowwiseOp<Context, const with_weights: bool, const is_mean: bool> {
 
     /*

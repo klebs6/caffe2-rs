@@ -15,9 +15,9 @@ pub const kSummaryzeOpExtension: &'static str = ".summary";
   | file in the root folder.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SummarizeOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:   OperatorStorage,
     context:   Context,
 

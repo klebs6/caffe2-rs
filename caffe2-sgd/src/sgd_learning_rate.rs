@@ -84,6 +84,7 @@ pub type LearningRateOpFloatCPU = LearningRateOp<f32, CPUContext>;
  |                          policy="step", stepsize=20, gamma=0.9)
  |
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LearningRateOp<T,Context> {
     context: Context,
     functor: Box<dyn LearningRateFunctor<T>>,
@@ -91,7 +92,6 @@ pub struct LearningRateOp<T,Context> {
 }
 
 impl<T,Context> Operator for LearningRateOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
 }
 

@@ -48,9 +48,9 @@ pub struct TensorInfo {
     biases:               Vec<i32>,
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct OnnxifiOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

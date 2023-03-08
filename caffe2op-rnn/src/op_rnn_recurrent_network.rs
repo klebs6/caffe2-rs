@@ -1008,13 +1008,12 @@ impl<Context> AccumulateInputGradientOp<Context> {
 }
 
 ///-------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RNNApplyLinkOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
-
-    offset: i32,
-    window: i32,
+    offset:  i32,
+    window:  i32,
 }
 
 impl<Context> RNNApplyLinkOp<Context> {

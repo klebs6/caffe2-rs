@@ -13,8 +13,8 @@ crate::ix!();
   Operator wrapper for generating int8 quant scheme blob given the 
   preserve sparsity and quantization kind
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Int8QuantSchemeBlobFillOp<Context,Engine> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<Engine>,

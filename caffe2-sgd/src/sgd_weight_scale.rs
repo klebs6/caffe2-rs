@@ -37,6 +37,7 @@ use crate::{
 Every `stepsize` iterations, multiply the weights by a constant `scale`:
     nw = w * scale
 */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct WeightScaleOp<Context> {
     storage: OperatorStorage,
     context: Context,
@@ -128,7 +129,6 @@ output_tags!{
 }
 
 impl<Context> Operator for WeightScaleOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 }
 
 register_cpu_operator![

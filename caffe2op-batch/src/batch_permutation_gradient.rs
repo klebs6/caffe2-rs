@@ -1,7 +1,7 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchPermutationGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<T>,

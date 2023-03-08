@@ -751,15 +751,12 @@ output_tags!{
   | across the row.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RowWiseSparseAdamOp<T, Context> {
     context: Context,
     beta1:   T,
     beta2:   T,
     epsilon: T,
-}
-
-impl<T,Context> Operator for RowWiseSparseAdamOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 }
 
 impl<T,Context> RowWiseSparseAdamOp<T,Context> {

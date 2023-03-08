@@ -59,9 +59,9 @@ crate::ix!();
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/gather_op.h
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GatherOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:      OperatorStorage,
     context:      Context,
 

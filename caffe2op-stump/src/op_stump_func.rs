@@ -9,9 +9,9 @@ crate::ix!();
   | else high_value
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct StumpFuncOp<TIN,TOUT,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:     OperatorStorage,
     context:     Context,
 
@@ -90,9 +90,9 @@ impl StumpFuncOp<f32, f32, CPUContext> {
   | based on the given threshold.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct StumpFuncIndexOp<TIN,TOUT,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

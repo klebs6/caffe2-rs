@@ -26,6 +26,7 @@ use crate::{
     */
 }
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FP16MomentumSGDUpdateOp<T,Context> {
     context: Context,
     momentum:      f32, // default = 0.9
@@ -36,7 +37,6 @@ pub struct FP16MomentumSGDUpdateOp<T,Context> {
 }
 
 impl<T,Context> Operator for FP16MomentumSGDUpdateOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

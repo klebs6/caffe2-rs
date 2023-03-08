@@ -16,9 +16,9 @@ crate::ix!();
   | shape must be provided via "shape" argument
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FillerOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
     storage:        OperatorStorage,
     context:        Context,
@@ -239,9 +239,9 @@ impl<Context> FillerOp<Context> {
  | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/filler_op.cc
  |
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct UniformFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
 
     min: T,
@@ -337,9 +337,9 @@ impl<T, Context> UniformFillOp<T, Context> {
   | you to provide shape via the first input.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct UniqueUniformFillOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
     body: fn(output: *mut Tensor) -> bool,
 }
@@ -579,9 +579,9 @@ impl<Context> UniqueUniformFillOp<Context> {
  |
  | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/filler_op.cc
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConstantFillOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
     body: fn(output: *mut Tensor) -> bool,
 }
@@ -759,9 +759,9 @@ impl<Context> ConstantFillOp<Context> {
   | float, int32, int64, and bool.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct DiagonalFillOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
     body: fn(output: *mut Tensor) -> bool,
 }
@@ -967,9 +967,9 @@ impl DiagonalFillOp<CPUContext> {
  | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/filler_op.h
  | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/filler_op.cc
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GaussianFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base: FillerOp<Context>,
 
     mean: T,
@@ -1093,9 +1093,9 @@ impl<T, Context> GaussianFillOp<T, Context> {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/filler_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct XavierFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base:    FillerOp<Context>,
     phantom: PhantomData<T>,
 }
@@ -1150,9 +1150,9 @@ impl<T,Context> XavierFillOp<T,Context> {
 
 ///--------------------------------------------
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct MSRAFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base:    FillerOp<Context>,
     phantom: PhantomData<T>,
 }
@@ -1198,9 +1198,9 @@ impl<T, Context> MSRAFillOp<T, Context> {
   | to check e.g. reshape operations by allowing
   | one to read the indices more easily.
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RangeFillOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     base:    FillerOp<Context>,
     phantom: PhantomData<T>,
 }
@@ -1281,9 +1281,9 @@ impl RangeFillOp<f32, CPUContext> {
   | - https://github.com/caffe2/caffe2/blob/master/caffe2/operators/filler_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsRangeFillOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

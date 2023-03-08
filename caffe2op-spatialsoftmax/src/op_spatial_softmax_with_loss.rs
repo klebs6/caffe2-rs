@@ -35,9 +35,9 @@ use crate::{
   | x,y position of the input.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SpatialSoftmaxWithLossOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:           OperatorStorage,
     context:           Context,
 
@@ -129,9 +129,9 @@ impl<T,Context> SpatialSoftmaxWithLossOp<T,Context> {
 }
 
 ///--------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SpatialSoftmaxWithLossGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:           OperatorStorage,
     context:           Context,
 

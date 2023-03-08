@@ -11,9 +11,9 @@ crate::ix!();
   | needs to have rank 1.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct GatherFused8BitRowwiseOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 }

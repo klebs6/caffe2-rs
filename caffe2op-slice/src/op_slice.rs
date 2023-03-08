@@ -256,9 +256,9 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/slice_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SliceOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:            OperatorStorage,
     context:            Context,
 
@@ -395,9 +395,9 @@ impl<Context> SliceOp<Context> {
 }
 
 ///------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SliceGradientOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:            OperatorStorage,
     context:            Context,
 

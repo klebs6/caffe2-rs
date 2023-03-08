@@ -18,10 +18,10 @@ use crate::{
   | given by the `ratio` argument.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseDropoutWithReplacementOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
-    storage:            OperatorStorage,
     context:            Context,
 
     ratio:              f32,

@@ -15,8 +15,8 @@ use crate::{
   | its equivalent fixed transformation.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AffineChannelOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:      OperatorStorage,
     context:      Context,
     order:        StorageOrder,
@@ -129,8 +129,8 @@ impl<T,Context> AffineChannelOp<T,Context> {
 
 ///-------------------------------------------------------
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AffineChannelGradientOp<T, Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

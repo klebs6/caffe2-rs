@@ -9,9 +9,9 @@ use crate::{
     StorageOrder,
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConvTransposeUnpoolBase<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

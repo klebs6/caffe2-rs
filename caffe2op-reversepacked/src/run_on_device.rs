@@ -1,50 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    OperatorStorage,
-    GradientMakerBase
-};
-
-/**
-  | Reverse segments in a 3-D tensor (lengths,
-  | segments, embeddings,), leaving paddings
-  | unchanged.
-  | 
-  | This operator is used to reverse input
-  | of a recurrent neural network to make
-  | it a BRNN.
-  |
-  */
-pub struct ReversePackedSegsOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
-    //USE_DISPATCH_HELPER;
-    storage: OperatorStorage,
-    context: Context,
-}
-
-num_inputs!{ReversePackedSegs, 2}
-
-num_outputs!{ReversePackedSegs, 1}
-
-inputs!{ReversePackedSegs, 
-    0 => ("data",    "a 3-D (lengths, segments, embeddings,) tensor."),
-    1 => ("lengths", "length of each segment.")
-}
-
-outputs!{ReversePackedSegs, 
-    0 => ("reversed data", "a (lengths, segments, embeddings,) tensor with each segment reversed and paddings unchanged.")
-}
-
-register_cpu_operator!{ReversePackedSegs, ReversePackedSegsOp<CPUContext>}
-
-input_tags!{
-    ReversePackedSegsOp {
-        Data,
-        Lengths
-    }
-}
-
 impl<Context> ReversePackedSegsOp<Context> {
     
     #[inline] pub fn run_on_device(&mut self) -> bool {
@@ -122,25 +77,3 @@ impl<Context> ReversePackedSegsOp<Context> {
         */
     }
 }
-
-pub struct GetReversePackedSegsGradient<'a> {
-
-    base: GradientMakerStorage<'a>,
-}
-
-impl<'a> GetGradientDefs for GetReversePackedSegsGradient<'a> {
-
-    #[inline] fn get_gradient_defs(&mut self) -> Vec<OperatorDef> {
-        
-        todo!();
-        /*
-            return SingleGradientDef(
-            "ReversePackedSegs",
-            "",
-            vector<string>{GO(0), I(1)},
-            vector<string>{GI(0)});
-        */
-    }
-}
-
-register_gradient!{ReversePackedSegs, GetReversePackedSegsGradient}

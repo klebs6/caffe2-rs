@@ -7,9 +7,9 @@ use crate::{
     CPUContext,
 };
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RoIAlignGradientOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

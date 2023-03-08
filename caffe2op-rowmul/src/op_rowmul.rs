@@ -18,9 +18,9 @@ crate::ix!();
   | RowMul([mat, w], [output])
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RowMulOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_SIMPLE_CTOR_DTOR(RowMulOp);
     storage: OperatorStorage,
     context: Context,
@@ -79,8 +79,8 @@ impl<T,Context> RowMulOp<T,Context> {
   | Reduce the tailing dimensions
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ReduceTailSumOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_SIMPLE_CTOR_DTOR(ReduceTailSumOp);
     storage: OperatorStorage,
     context: Context,

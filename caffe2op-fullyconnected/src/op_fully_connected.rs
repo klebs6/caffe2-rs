@@ -57,9 +57,9 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/fully_connected_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FullyConnectedOp<Context, Engine, const TransposeWeight: bool> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 
@@ -288,9 +288,9 @@ FullyConnectedOp<Context, Engine, TransposeWeight> {
 }
 
 ///-----------------------------------------
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FullyConnectedGradientOp<Context, Engine, const TransposeWeight: bool> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
 

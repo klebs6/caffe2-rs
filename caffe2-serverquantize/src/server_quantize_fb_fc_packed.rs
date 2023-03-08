@@ -40,8 +40,8 @@ crate::ix!();
  |  class Engine = DefaultEngine,
  |  typename T_W = fbgemm::float16>
  */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FbFCPackedOperator<Context,Engine,T_W> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

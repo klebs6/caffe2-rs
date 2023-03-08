@@ -1,11 +1,9 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ResizeNearest3DGradientOp<T,Context> {
-
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage:         OperatorStorage,
     context:         Context,
-
     temporal_scale:  T,
     height_scale:    T,
     width_scale:     T,

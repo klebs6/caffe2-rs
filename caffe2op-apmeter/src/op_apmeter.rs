@@ -15,9 +15,9 @@ type BufferDataType = (f32, i32);
   | class.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct APMeterOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

@@ -73,6 +73,7 @@ use crate::{
   | grad(k-2)).
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LearningRateAdaptionOp<T,Context> {
     context:                Context,
     lr_alpha:               T, /// {1e-2};
@@ -80,7 +81,6 @@ pub struct LearningRateAdaptionOp<T,Context> {
 }
 
 impl<T,Context> Operator for LearningRateAdaptionOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 }
 
 num_inputs!{LearningRateAdaption, 3}

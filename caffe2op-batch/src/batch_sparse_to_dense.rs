@@ -37,9 +37,9 @@ crate::ix!();
   | not have duplicate number.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchSparseToDenseOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

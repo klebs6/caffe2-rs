@@ -12,9 +12,9 @@ use crate::{
   | data tensor scaled element-wise.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ScaleBlobsOp<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:          OperatorStorage,
     context:          Context,
     scale:            f32,

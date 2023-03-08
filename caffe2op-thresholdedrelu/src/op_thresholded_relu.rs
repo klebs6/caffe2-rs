@@ -16,9 +16,9 @@ use crate::{
   | is applied to the tensor elementwise.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ThresholdedReluOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 
@@ -105,9 +105,9 @@ impl ThresholdedReluOp<f32,CPUContext> {
   | the rectified linear function.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ThresholdedReluGradientOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     alpha:   T,

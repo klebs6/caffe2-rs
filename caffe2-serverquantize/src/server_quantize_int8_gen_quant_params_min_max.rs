@@ -13,8 +13,8 @@ use crate::{
   | lower and upper bound of the input tensor
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Int8GenQuantParamsMinMaxOp<Context,Engine> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
     phantom: PhantomData<Engine>,

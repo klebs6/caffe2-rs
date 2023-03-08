@@ -31,13 +31,13 @@ impl<T> FtrlParams<T> {
 
 ///------------------------
 // TODO(dzhulgakov): implement GPU version if necessary
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FtrlOp<T,Context> {
     context: Context,
     params:  FtrlParams<T>,
 }
 
 impl<T,Context> Operator for FtrlOp<T,Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
 
 }
 

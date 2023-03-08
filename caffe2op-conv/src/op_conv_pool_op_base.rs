@@ -26,9 +26,9 @@ use crate::{
   */
 pub const CAFFE2_PAD_HEAD_MORE: bool = false;
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ConvPoolOpBase<Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
     storage: OperatorStorage,
     context: Context,
 

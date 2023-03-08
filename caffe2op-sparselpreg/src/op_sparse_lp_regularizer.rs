@@ -11,9 +11,9 @@ use crate::{
   | Currently only L1 and L2 are implemented.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SparseLpRegularizerOp<T,Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage:     OperatorStorage,
     context:     Context,
 

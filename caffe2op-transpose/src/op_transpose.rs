@@ -49,8 +49,8 @@ use crate::{
   | - https://github.com/pytorch/pytorch/blob/master/caffe2/operators/transpose_op.cc
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TransposeOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     //USE_DISPATCH_HELPER
     storage: OperatorStorage,
     context: Context,

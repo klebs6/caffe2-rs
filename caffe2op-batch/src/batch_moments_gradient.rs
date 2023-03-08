@@ -1,8 +1,8 @@
 crate::ix!();
 
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BatchMomentsGradientOp<T, Context> {
 
-    //USE_OPERATOR_CONTEXT_FUNCTIONS;
 
     storage: OperatorStorage,
     context: Context,
