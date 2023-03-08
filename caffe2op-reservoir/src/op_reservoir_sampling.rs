@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    OperatorDef
-};
-
 /**
   | Collect `DATA` tensor into `RESERVOIR`
   | of size `num_to_collect`. `DATA` is
@@ -22,8 +16,8 @@ use crate::{
   | This operator is thread-safe.
   |
   */
+#[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ReservoirSamplingOp<Context> {
-    //USE_OPERATOR_CONTEXT_FUNCTIONS
     storage: OperatorStorage,
     context: Context,
 

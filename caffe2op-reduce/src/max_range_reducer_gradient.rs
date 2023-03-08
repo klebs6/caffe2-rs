@@ -1,0 +1,41 @@
+crate::ix!();
+
+pub struct MaxRangeReducerGradient<T,Context> {
+    phantomA: PhantomData<T>,
+    phantomB: PhantomData<Context>,
+}
+
+impl<T,Context> MaxRangeReducerGradient<T,Context> {
+    
+    /*
+       const T* segment_grad, // GO
+       T* data_grad, // GI
+       const T* data_in, // I
+       const T* data_out, // O
+       */
+    #[inline] pub fn invoke(&mut self, 
+        block_size:   i64,
+        blocks:       i64,
+        segment_grad: *const T,
+        data_grad:    *mut T,
+        data_in:      *const T,
+        data_out:     *const T,
+        context:      *mut Context)  {
+
+        todo!();
+        /*
+            std::memset(
+            static_cast<void*>(data_grad), 0, blocks * block_size * sizeof(T));
+        for (int j = 0; j < block_size; ++j) {
+          const T out_grad = *(segment_grad++);
+          const T out = data_out[j];
+          for (int i = 0; i < blocks; ++i) {
+            auto idx = i * block_size + j;
+            if (out == data_in[idx]) {
+              data_grad[idx] = out_grad;
+            }
+          }
+        }
+        */
+    }
+}

@@ -169,7 +169,6 @@ members = [
     "caffe2op-multiclass",
     "caffe2op-nanreplace",
     "caffe2op-negative",
-    "caffe2op-negativegradient",
     "caffe2op-ngram",
     "caffe2op-nmsbox",
     "caffe2op-normalize",

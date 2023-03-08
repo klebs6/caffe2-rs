@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    OperatorStorage,
-    Workspace,
-};
-
 /**
   | PrefetchOperator is an operator that
   | prefetches the next batch. It should
@@ -34,7 +28,6 @@ use crate::{
   */
 pub struct PrefetchOperator<Context> {
     base:                     OperatorStorage,
-
     context:                  Context,
     prefetch_access_mutex:    parking_lot::RawMutex,
 
@@ -72,124 +65,9 @@ pub struct PrefetchOperator<Context> {
     no_prefetch:              bool,
 }
 
-impl<Context> Drop for PrefetchOperator<Context> {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-        CHECK(finalize_ || !prefetch_thread_.get())
-            << "YOU MADE A PROGRAMING ERROR: derived class of PrefetchOperator "
-               "should call Finalize() in its destructor so the prefetching "
-               "thread is joined. ";
-       */
-    }
-}
-
 pub trait PrefetchOperatorTrait {
 
     // You will need to implement this instead of the Run function.
     fn prefetch() -> bool;
     fn copy_prefetched() -> bool;
-}
-
-impl<Context> PrefetchOperator<Context> {
-
-    pub fn new(operator_def: &OperatorDef, ws: *mut Workspace) -> Self {
-        todo!();
-        /*
-            : OperatorStorage(operator_def, ws),
-            context_(operator_def.device_option()),
-            prefetched_(false),
-            prefetch_success_(true),
-            finalize_(false),
-            no_prefetch_(GetSingleArgument<bool>("no_prefetch", false)) 
-        context_.SwitchToDevice();
-        */
-    }
-    
-    #[inline] pub fn finalize(&mut self)  {
-        
-        todo!();
-        /*
-            if (prefetch_thread_.get()) {
-          {
-            std::unique_lock<std::mutex> lock(prefetch_access_mutex_);
-            while (!prefetched_)
-              consumer_.wait(lock);
-            finalize_ = true;
-            prefetched_ = false;
-          }
-          producer_.notify_one();
-          prefetch_thread_->join();
-          prefetch_thread_.reset();
-        } else {
-          // If we never initialized the prefetch thread, just set
-          // finalize anyway.
-          finalize_ = true;
-        }
-        */
-    }
-
-    #[inline] pub fn run(&mut self, stream_id: i32) -> bool {
-        
-        todo!();
-        /*
-            if (no_prefetch_) {
-          context_.SwitchToDevice();
-          bool result = Prefetch() && CopyPrefetched();
-          context_.FinishDeviceComputation();
-          return result;
-        }
-        // Note(jiayq): We only start the prefetch_thread at the Run() function
-        // instead of in the constructor, because the prefetch_thread needs to start
-        // after all derived classes' constructors finish.
-        if (!prefetch_thread_) {
-          prefetch_thread_.reset(
-              new std::thread([this] { this->PrefetchWorker(); }));
-        }
-        context_.SwitchToDevice();
-        std::unique_lock<std::mutex> lock(prefetch_access_mutex_);
-        while (!prefetched_)
-          consumer_.wait(lock);
-        if (!prefetch_success_) {
-          LOG(ERROR) << "Prefetching failed.";
-          return false;
-        }
-        if (!CopyPrefetched()) {
-          LOG(ERROR) << "Error when copying prefetched data.";
-          return false;
-        }
-        prefetched_ = false;
-        context_.FinishDeviceComputation();
-        producer_.notify_one();
-        return true;
-        */
-    }
-    
-    #[inline] pub fn prefetch_worker(&mut self)  {
-        
-        todo!();
-        /*
-            context_.SwitchToDevice();
-        std::unique_lock<std::mutex> lock(prefetch_access_mutex_);
-        while (prefetched_)
-          producer_.wait(lock);
-        while (!finalize_) {
-          // We will need to run a FinishDeviceComputation() call because the
-          // prefetcher thread and the main thread are potentially using different
-          // streams (like on GPU).
-          try {
-            prefetch_success_ = Prefetch();
-            context_.FinishDeviceComputation();
-          } catch (const std::exception& e) {
-            // TODO: propagate exception_ptr to the caller side
-            LOG(ERROR) << "Prefetching error " << e.what();
-            prefetch_success_ = false;
-          }
-          prefetched_ = true;
-          consumer_.notify_one();
-          while (prefetched_)
-            producer_.wait(lock);
-        }
-        */
-    }
 }
