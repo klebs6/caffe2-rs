@@ -7,27 +7,8 @@ pub struct CUDARecurrentNetworkExecutor {
     max_cuda_streams:          i32, // default = 2
 }
 
-#[inline] pub fn create_rnnexecutor<CUDAContext>(
-    step_net_def:        &NetDef,
-    recurrent_input_map: &mut HashMap<String,String>,
-    timestep_blob:       String,
-    arg_helper:          ArgumentHelper) -> Box<RecurrentNetworkExecutorBase> {
-    
-    todo!();
-    /*
-        auto* exec = new CUDARecurrentNetworkExecutor(
-          step_net_def, recurrent_input_map, timestep_blob);
-      int max_streams = arg_helper.GetSingleArgument<int>("rnn_executor.max_cuda_streams", 0);
-      if (max_streams > 0) {
-        exec->setMaxStreams(max_streams);
-        LOG(INFO) << "Set max streams:" << max_streams;
-      }
-      std::unique_ptr<RecurrentNetworkExecutorBase> ptr(exec);
-      return ptr;
-    */
-}
-
 impl Drop for CUDARecurrentNetworkExecutor {
+
     fn drop(&mut self) {
         todo!();
         /* 

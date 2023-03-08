@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    CPUContext,
-    StorageOrder
-};
-
 /**
   | Region of Interest (RoI) align operation
   | as used in Mask R-CNN.
