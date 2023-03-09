@@ -1646,3 +1646,108 @@ LAPACK is more commonly used for other linear
 algebra operations such as matrix factorization,
 solving linear systems of equations, and computing
 eigenvalues and eigenvectors of matrices.
+
+1> hello! could you please describe the ten most
+important properties of matrix multiplication?
+
+Sure, here are ten important properties of matrix
+multiplication:
+
+1. Matrix multiplication is associative: (AB)C
+   = A(BC), where A, B, and C are matrices of
+   appropriate sizes.
+
+2. Matrix multiplication is distributive over
+   addition: A(B + C) = AB + AC and (A + B)C = AC
+   + BC, where A, B, and C are matrices of
+   appropriate sizes.
+
+3. Matrix multiplication is not commutative: AB is
+   not necessarily equal to BA, where A and B are
+   matrices of appropriate sizes.
+
+4. The identity matrix I has the property that AI
+   = A and IA = A for any matrix A of appropriate
+   size.
+
+5. Matrix multiplication is closed under
+   composition, which means that if A and B are
+   matrices of appropriate sizes, then AB is also
+   a matrix of appropriate size.
+
+6. Matrix multiplication is often used to
+   transform geometric shapes and vectors in
+   linear algebra.
+
+7. Matrix multiplication can be used to solve
+   systems of linear equations.
+
+8. The transpose of a product of matrices is the
+   product of their transposes in reverse order:
+   (AB)^T = B^T A^T, where A and B are matrices of
+   appropriate sizes.
+
+9. If A is an invertible matrix, then (AB)A^{-1}
+   = B, where B is a matrix of appropriate size.
+
+10. Matrix multiplication can be used to represent
+    linear transformations, and the product of two
+    matrices can be interpreted as the composition
+    of two linear transformations.
+
+2> could you do ten more?
+
+Certainly! Here are ten more important properties
+of matrix multiplication:
+
+1. The determinant of a product of matrices is the
+   product of their determinants: det(AB)
+   = det(A)det(B), where A and B are square
+   matrices of the same size.
+
+2. The inverse of a product of matrices is the
+   product of their inverses in reverse order:
+   (AB)^{-1} = B^{-1}A^{-1}, where A and B are
+   invertible square matrices of the same size.
+
+3. Matrix multiplication can be used to find the
+   eigenvalues and eigenvectors of a square
+   matrix.
+
+4. The trace of a product of matrices is invariant
+   under cyclic permutations: tr(ABC) = tr(BCA)
+   = tr(CAB), where A, B, and C are square
+   matrices of the same size.
+
+5. The rank of a product of matrices is at most
+   the minimum of the ranks of the individual
+   matrices: rank(AB) <= min(rank(A), rank(B)),
+   where A and B are matrices of appropriate
+   sizes.
+
+6. The singular values of a product of matrices
+   are the product of the singular values of the
+   individual matrices: sigma(AB)
+   = sigma(A)sigma(B), where A and B are matrices
+   of appropriate sizes and sigma denotes the
+   singular values.
+
+7. The product of a matrix and its transpose is
+   always a symmetric matrix: (AB)^T = B^T A^T
+   = AB if A and B are square and symmetric.
+
+8. The product of a diagonal matrix and a matrix
+   is equivalent to scaling the rows and columns
+   of the matrix by the diagonal entries:
+   D(A)_{i,j} = d_i A_{i,j}, where D is a diagonal
+   matrix with diagonal entries d_i and A is
+   a matrix.
+
+9. Matrix multiplication can be used to compute
+   the coefficients of a polynomial when given its
+   values at certain points.
+
+10. Matrix multiplication can be used to model and
+    solve many real-world problems, such as
+    traffic flow, population dynamics, and
+    economic systems.
