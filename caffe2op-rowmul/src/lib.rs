@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_rowmul}
+x!{get_gradient}
+x!{reduce_tail_sum}
+x!{rowmul}

@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x![op_sinh];
+x!{get_sinh_gradient}
+x!{sinh}
+x!{sinh_gradient}
+x!{test_sinh}

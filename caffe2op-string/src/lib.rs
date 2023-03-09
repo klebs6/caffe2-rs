@@ -4,5 +4,10 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_string_ops_test}
-x!{op_string_ops}
+x!{config}
+x!{for_each}
+x!{starts_with}
+x!{string_equals}
+x!{string_join}
+x!{string_join_cpu}
+x!{test_string_ops}

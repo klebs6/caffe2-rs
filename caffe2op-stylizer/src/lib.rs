@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_stylizer_ops}
+x!{neon}
+x!{packed}
+x!{register}
+x!{stylizer_deprocess}

@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    OperatorDef,
-};
-
 /**
   | Calculates the tangent of the given
   | input tensor, element-wise.

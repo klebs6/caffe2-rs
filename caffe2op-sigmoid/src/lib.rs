@@ -4,5 +4,9 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_sigmoid_gradient}
-x!{op_sigmoid}
+x!{get_sigmoid_gradient}
+x!{sigmoid}
+x!{sigmoid_cpu}
+x!{sigmoid_gradient}
+x!{sigmoid_gradient_cpu}
+x!{test_sigmoid}

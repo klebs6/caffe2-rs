@@ -1,7 +1,6 @@
 crate::ix!();
 
 pub struct GetSequenceMaskGradient<'a> {
-
     base: GradientMakerStorage<'a>,
 }
 

@@ -6,8 +6,8 @@ crate::ix!();
   | 
   | X2 (Tensor), and label Y (Tensor) to
   | produce the loss (Tensor) where the
-  | loss function, loss(X1, X2, Y) = max(0,
-  | -Y * (X1 - X2) + margin), is applied to
+  | loss function, `loss(X1, X2, Y) = max(0,
+  | -Y * (X1 - X2) + margin)` is applied to
   | the tensor elementwise.
   | 
   | If y == 1 then it assumed the first input
