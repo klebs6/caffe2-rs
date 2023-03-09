@@ -5,3 +5,4 @@ extern crate test;
 use imports::*;
 
 x!{zero_gradient}
+x!{get_gradient}

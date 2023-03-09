@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_weighted_multi_sampling}
+x!{weighted_multi_sampling}
+x!{run_on_device}
+x!{inference}

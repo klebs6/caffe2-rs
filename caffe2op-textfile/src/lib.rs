@@ -4,6 +4,11 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_text_file_reader_utils_test}
-x!{op_text_file_reader_utils}
-x!{op_text_file_reader}
+x!{buffered_tokenizer}
+x!{convert}
+x!{create_text_file_reader}
+x!{file_reader}
+x!{instance}
+x!{reader}
+x!{tests}
+x!{tokenizer}

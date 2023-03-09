@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_weighted_sample}
+x!{weighted_sample}
+x!{run_on_cpu}

@@ -1,18 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    Workspace,
-    OperatorStorage,
-    CPUContext,
-    OpSchemaCost,
-    OperatorDef,
-    TensorShape,
-    TensorPrinter,
-    TensorProto_DataType,
-    Tensor,
-};
-
 /**
   | Identity operator, but checks all values
   | for nan or inf

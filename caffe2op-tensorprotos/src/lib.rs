@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_tensor_protos_db_input}
+x!{tensor_protos_db_input}
+x!{prefetch}
+x!{create}

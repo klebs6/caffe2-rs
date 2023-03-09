@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_unique_ops}
+x!{unique}
+x!{unique_cpu}

@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_tan}
+x!{get_tan_gradient}
+x!{tan}
+x!{tan_gradient}

@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-};
-
 #[inline] pub fn add_const_input(
     shape: &Vec<i64>,
     value: f32,

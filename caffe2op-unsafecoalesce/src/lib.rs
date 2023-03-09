@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_unsafe_coalesce}
+x!{unsafe_coalesce}
+x!{run_on_device}
