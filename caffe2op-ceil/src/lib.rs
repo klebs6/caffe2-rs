@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_ceil}
+x!{ceil}
+x!{test_ceil}

@@ -70,4 +70,3 @@ impl<T> AtomicFetchAddOp<T> {
         */
     }
 }
-

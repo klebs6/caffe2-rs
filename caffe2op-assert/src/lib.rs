@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_assert}
+x!{assert}
+x!{run_on_device}
+x!{test_assert}

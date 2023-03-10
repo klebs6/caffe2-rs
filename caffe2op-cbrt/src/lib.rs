@@ -6,3 +6,4 @@ use imports::*;
 
 x!{cbrt}
 x!{cbrt_gradient}
+x!{get_gradient}

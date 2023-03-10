@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_alias_with_name}
+x!{alias_with_name}
+x!{run_on_device}

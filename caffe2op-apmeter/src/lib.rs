@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_apmeter}
+x!{apmeter}
+x!{apmeter_cpu}

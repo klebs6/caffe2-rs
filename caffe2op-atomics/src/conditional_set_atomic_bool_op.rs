@@ -45,4 +45,3 @@ input_tags!{
         Condition
     }
 }
-

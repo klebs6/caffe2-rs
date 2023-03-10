@@ -4,4 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_abs}
+x!{abs}
+x!{abs_gradient}
+x!{get_gradient}
+x!{test_abs}

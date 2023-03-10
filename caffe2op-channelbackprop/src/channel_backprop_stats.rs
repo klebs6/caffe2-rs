@@ -24,10 +24,8 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct ChannelBackpropStatsOp<Context> {
-
-    storage: OperatorStorage,
-    context: Context,
-
+    storage:         OperatorStorage,
+    context:         Context,
     d_bias_scratch:  Tensor,
     d_scale_scratch: Tensor,
 }

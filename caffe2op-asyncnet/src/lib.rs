@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_async_net_barrier}
+x!{async_net_barrier}
+x!{async_barrier}
+

@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_acos}
+x!{acos}
+x!{acos_gradient}
+x!{get_gradient}

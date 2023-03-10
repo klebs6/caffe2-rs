@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ConvPoolOpBase,
-    Tensor,
-    OperatorDef,
-    Workspace,
-    OpSchema
-};
-
 #[test] fn conv_op_example() {
 
     todo!();

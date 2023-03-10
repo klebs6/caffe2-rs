@@ -13,7 +13,6 @@ crate::ix!();
 pub struct ConditionalOp<Context> {
     storage: OperatorStorage,
     context: Context,
-
 }
 
 register_cpu_operator!{Conditional, ConditionalOp<CPUContext>}

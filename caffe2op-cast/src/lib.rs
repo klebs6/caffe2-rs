@@ -8,3 +8,4 @@ x!{cast}
 x!{cast_cpu}
 x!{cast_gradient}
 x!{cast_helper}
+x!{test_cast}

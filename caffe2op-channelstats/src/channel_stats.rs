@@ -17,7 +17,6 @@ crate::ix!();
 pub struct ChannelStatsOp<Context> {
     storage: OperatorStorage,
     context: Context,
-
     order:   StorageOrder,
 }
 

@@ -4,9 +4,8 @@ crate::ix!();
 pub struct ClipGradientOp<T, Context> {
     storage: OperatorStorage,
     context: Context,
-
-    min: T,
-    max: T,
+    min:     T,
+    max:     T,
 
     // Input: Y, dY; Output: dX
 }
