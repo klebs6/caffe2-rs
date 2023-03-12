@@ -4,4 +4,8 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_flatten}
+x!{flatten}
+x!{get_flatten_gradient}
+x!{inference}
+x!{run_flatten}
+x!{test_flatten}

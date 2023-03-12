@@ -71,4 +71,3 @@ impl<'a> TreeWalkerField<'a> {
         */
     }
 }
-

@@ -30,12 +30,9 @@ crate::ix!();
  */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct BucketizeOp<Context> {
-
-    storage: OperatorStorage,
-    context: Context,
-
-    boundaries: Vec<f32>,
-
+    storage:           OperatorStorage,
+    context:           Context,
+    boundaries:        Vec<f32>,
     boundaries_device: Tensor, //{Context::GetDeviceType()};
 }
 

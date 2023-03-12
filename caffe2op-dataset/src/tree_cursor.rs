@@ -35,9 +35,7 @@ impl TreeCursor {
     }
 }
 
-
 pub type SharedTensorVectorPtr   = Arc<Vec<TensorCPU>>;
 pub type Shared2DTensorVectorPtr = Arc<Vec<Vec<TensorCPU>>>;
 pub type Tensor2DVector          = Vec<Vec<TensorCPU>>;
 pub type TensorVectorPtr         = Box<Vec<Tensor>>;
-

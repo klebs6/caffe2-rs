@@ -1,9 +1,7 @@
 crate::ix!();
 
-///----------------------------------------
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AtomicAppendOp<Context> {
-
     storage: OperatorStorage,
     context: Context,
 }

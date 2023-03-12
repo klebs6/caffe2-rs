@@ -13,9 +13,7 @@ crate::ix!();
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SplitByLengthsOp<Context> {
-
-    context: Context,
-
+    context:                      Context,
     axis:                         i32,
     scaling:                      bool,
     inclusive_scan_buffer:        Tensor, //{Context::GetDeviceType()};

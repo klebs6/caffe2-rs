@@ -28,8 +28,8 @@ crate::ix!();
  | SortAndShuffle is thread safe.
  */
 pub struct SortAndShuffleOp {
-    storage: OperatorStorage,
-    context: CPUContext,
+    storage:           OperatorStorage,
+    context:           CPUContext,
     sort_by_field_idx: i32,
     batch_size:        i32,
     shuffle_size:      i32,

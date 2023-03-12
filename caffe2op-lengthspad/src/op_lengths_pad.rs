@@ -1,44 +1,37 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Tensor,
-};
-
 /**
-| Given DATA tensor of rank r >= 1, and LENGTHS
-| tensor of rank 1, pad each segment in DATA with
-| `value`, so that each segment's length is
-| `target_length`.
-|
-| If will throw, if there is segment of length
-| larger than `target_length`.
-|
-| Example:
-|   DATA  = [
-|       [2.3, 3.4],
-|       [4.5, 5.7],
-|       [6.8, 7.9],
-|   ]
-|   LENGTHS = [0, 1, 1, 1]
-|   and target_length = 2, padding value = -1.0
-|   OUTPUT = [
-|     [-1.0, -1.0],
-|     [-1.0, -1.0],
-|     [2.3, 3.4],
-|     [-1.0, -1.0],
-|     [4.5, 5.7],
-|     [-1.0, -1.0],
-|     [6.8, 7.9],
-|     [-1.0, -1.0],
-|   ]
-*/
+ | Given DATA tensor of rank r >= 1, and LENGTHS
+ | tensor of rank 1, pad each segment in DATA with
+ | `value`, so that each segment's length is
+ | `target_length`.
+ |
+ | If will throw, if there is segment of length
+ | larger than `target_length`.
+ |
+ | Example:
+ |   DATA  = [
+ |       [2.3, 3.4],
+ |       [4.5, 5.7],
+ |       [6.8, 7.9],
+ |   ]
+ |   LENGTHS = [0, 1, 1, 1]
+ |   and target_length = 2, padding value = -1.0
+ |   OUTPUT = [
+ |     [-1.0, -1.0],
+ |     [-1.0, -1.0],
+ |     [2.3, 3.4],
+ |     [-1.0, -1.0],
+ |     [4.5, 5.7],
+ |     [-1.0, -1.0],
+ |     [6.8, 7.9],
+ |     [-1.0, -1.0],
+ |   ]
+ */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct LengthsPadOp<Context> {
-
-    storage: OperatorStorage,
-    context: Context,
-
+    storage:       OperatorStorage,
+    context:       Context,
     padding_value: f64,
     target_length: i32,
     lengths_host:  Tensor, //{CPU};

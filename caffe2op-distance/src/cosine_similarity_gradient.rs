@@ -3,7 +3,6 @@ crate::ix!();
 ///---------------------------------------------------
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct CosineSimilarityGradientOp<T, Context> {
-
     storage: OperatorStorage,
     context: Context,
     aux:     Tensor,

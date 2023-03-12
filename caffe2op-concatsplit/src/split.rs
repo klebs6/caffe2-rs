@@ -19,8 +19,7 @@ pub const kSplitOpInputSize: i32 = 2;
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SplitOp<Context> {
-    context: Context,
-
+    context:  Context,
     axis:     i32,
     add_axis: i32,
     split:    Vec<i32>,

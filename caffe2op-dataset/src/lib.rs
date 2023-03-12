@@ -4,7 +4,7 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{append_op}
+x!{append}
 x!{atomic_append_op}
 x!{check_dataset_consistency_op}
 x!{collect_tensor_op}
@@ -21,6 +21,7 @@ x!{register}
 x!{reset_cursor_op}
 x!{sort_and_shuffle_op}
 x!{tensor_vector_size_op}
+x!{test_append}
 x!{tree_cursor}
 x!{tree_iterator}
 x!{tree_walker}

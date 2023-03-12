@@ -4,6 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_enforce_finite}
-x!{op_ensure_clipped}
-x!{op_ensure_cpu_output}
+x!{enforce_finite}
+x!{ensure_clipped}
+x!{ensure_cpu_output}

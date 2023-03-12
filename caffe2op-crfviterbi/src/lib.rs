@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_crf_viterbi}
+x!{rowwise_max_and_arg}
+x!{swap_best_path}
+x!{viterbi_path}

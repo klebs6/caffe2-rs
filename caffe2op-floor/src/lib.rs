@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_floor}
+x!{floor}
+x!{run_floor}
+x!{test_floor}

@@ -4,5 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_operator_fallback_gpu_test}
-x!{op_operator_fallback_gpu}
+x!{gpu_fallback}
+x!{increment_by_one}
+x!{test_increment}

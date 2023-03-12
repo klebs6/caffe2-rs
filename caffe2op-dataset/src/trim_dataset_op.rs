@@ -11,8 +11,8 @@ crate::ix!();
   |
   */
 pub struct TrimDatasetOp {
-    storage: OperatorStorage,
-    context: CPUContext,
+    storage:     OperatorStorage,
+    context:     CPUContext,
     iterator:    TreeIterator,
     multiple_of: i32,
 }
@@ -65,4 +65,3 @@ impl TrimDatasetOp {
         */
     }
 }
-

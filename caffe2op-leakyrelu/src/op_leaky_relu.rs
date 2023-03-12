@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GradientMakerBase,
-    OperatorStorage,
-    OperatorDef,
-    CPUContext,
-};
-
 #[test] fn leaky_relu_example() {
 
     todo!();

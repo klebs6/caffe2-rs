@@ -4,5 +4,8 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_find}
-x!{op_find_duplicate_elements}
+x!{find}
+x!{find_duplicate_elements}
+x!{run_find}
+x!{run_find_duplicate_elements}
+x!{test_find_duplicate_elements}

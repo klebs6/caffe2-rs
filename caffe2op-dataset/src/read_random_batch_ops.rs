@@ -13,8 +13,8 @@ crate::ix!();
  | ReadRandomBatch is thread safe.
  */
 pub struct ReadRandomBatchOp {
-    storage: OperatorStorage,
-    context: CPUContext,
+    storage:            OperatorStorage,
+    context:            CPUContext,
     batch_size:         i32,
     enforce_batch_size: bool,
     loop_over:          bool,

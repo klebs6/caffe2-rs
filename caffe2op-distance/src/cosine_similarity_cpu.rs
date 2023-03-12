@@ -36,4 +36,3 @@ impl CosineSimilarityOp<f32, CPUContext> {
         */
     }
 }
-

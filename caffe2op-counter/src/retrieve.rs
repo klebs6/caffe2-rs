@@ -50,4 +50,3 @@ impl<T,Context> RetrieveCountOp<T,Context> {
         */
     }
 }
-
