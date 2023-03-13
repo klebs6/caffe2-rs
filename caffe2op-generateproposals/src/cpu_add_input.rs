@@ -2,6 +2,8 @@ crate::ix!();
 
 pub mod cpu {
 
+    use super::*;
+
     #[inline] pub fn add_const_input(
         shape: &Vec<i64>,
         value: f32,

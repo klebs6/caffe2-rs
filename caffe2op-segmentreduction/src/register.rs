@@ -431,14 +431,9 @@ declare_export_caffe2_op_to_c10!{LengthsSum}
 declare_export_caffe2_op_to_c10!{LengthsMean}
 declare_export_caffe2_op_to_c10!{LengthsMax}
 
-/**
-  | Range reducer ops: leverage that input segment
-  | is continuous and allow reducer functors to do
-  | something special
-  |
-  | Note: for now there are no real use cases for
-  | it yet :)
-  |
-  | Also, doesn't support additional arguments for
-  | now
-  */
+// Range reducer ops: leverage that input segment is continuous and allow reducer functors to do
+// something special
+//
+// Note: for now there are no real use cases for it yet :)
+//
+// Also, doesn't support additional arguments for now

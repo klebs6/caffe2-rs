@@ -25,13 +25,3 @@ pub type ConvertFnType<T> = fn(
       }
     */
 }
-
-#[inline] pub fn convertfp_32fp16(dst: *mut f16, src: *const f32, n: usize)  {
-    
-    todo!();
-    /*
-        for (size_t i = 0; i < N; i++) {
-        dst[i] = src[i];
-      }
-    */
-}

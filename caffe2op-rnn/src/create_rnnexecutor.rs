@@ -20,6 +20,7 @@ crate::ix!();
     */
 }
 
+/*
 /**
   | Implementation of RecurrentNetworkExecutor
   | that uses thread pool for multithreaded
@@ -46,3 +47,4 @@ crate::ix!();
       return std::unique_ptr<RecurrentNetworkExecutorBase>(exec);
     */
 }
+*/

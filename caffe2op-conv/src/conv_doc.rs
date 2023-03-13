@@ -1,6 +1,6 @@
 crate::ix!();
 
-pub fn conv_doc_generator(dim: *const u8) -> doc_fn {
+pub fn conv_doc_generator(dim: *const u8) -> DocFn {
 
     todo!();
     /*

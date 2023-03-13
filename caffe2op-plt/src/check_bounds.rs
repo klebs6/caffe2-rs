@@ -8,8 +8,8 @@ impl<T, Context> PiecewiseLinearTransformOp<T, Context> {
         num_bounds_per_group:  i64,
         num_group:             i64) -> bool 
     {
-        
         todo!();
+
         /*
             const T* start = bounds;
         for (int64_t i = 0; i < num_group; i++) {
@@ -32,6 +32,7 @@ impl<T, Context> PiecewiseLinearTransformOp<T, Context> {
     #[inline] pub fn check_trans_param_from_arg(&mut self) -> bool {
         
         todo!();
+
         /*
             int good_param = 0;
         good_param += bounds_from_arg_.size() > 0;

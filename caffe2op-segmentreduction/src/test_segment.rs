@@ -1,4 +1,4 @@
-crate:ix!();
+crate::ix!();
 
 #[test] fn lengths_max_extra_op_example() {
 

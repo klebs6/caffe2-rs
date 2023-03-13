@@ -355,27 +355,3 @@ impl<Context> ConvTransposeUnpoolBase<Context> {
     }
 }
 
-#[macro_export] macro_rules! USE_CONV_TRANSPOSE_UNPOOL_BASE_FUNCTIONS {
-    ($Context:ident) => {
-        todo!();
-        /*
-        USE_OPERATOR_FUNCTIONS(Context);                        
-        using ConvTransposeUnpoolBase<Context>::kernel_;        
-        using ConvTransposeUnpoolBase<Context>::kernel_h;       
-        using ConvTransposeUnpoolBase<Context>::kernel_w;       
-        using ConvTransposeUnpoolBase<Context>::stride_;        
-        using ConvTransposeUnpoolBase<Context>::stride_h;       
-        using ConvTransposeUnpoolBase<Context>::stride_w;       
-        using ConvTransposeUnpoolBase<Context>::pads_;          
-        using ConvTransposeUnpoolBase<Context>::pad_t;          
-        using ConvTransposeUnpoolBase<Context>::pad_l;          
-        using ConvTransposeUnpoolBase<Context>::pad_b;          
-        using ConvTransposeUnpoolBase<Context>::pad_r;          
-        using ConvTransposeUnpoolBase<Context>::adj_;           
-        using ConvTransposeUnpoolBase<Context>::group_;         
-        using ConvTransposeUnpoolBase<Context>::order_;         
-        using ConvTransposeUnpoolBase<Context>::shared_buffer_; 
-        using ConvTransposeUnpoolBase<Context>::ws_
-        */
-    }
-}

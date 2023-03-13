@@ -2,7 +2,7 @@ crate::ix!();
 
 #[USE_RECURRENT_BASE_FUNCTIONS]
 pub struct RecurrentParamAccessOp<T,const mode: RecurrentParamOpMode> {
-    base: RecurrentBaseOp<T>,
+    base:    RecurrentBaseOp<T>,
     phantom: PhantomData<T>,
 }
 

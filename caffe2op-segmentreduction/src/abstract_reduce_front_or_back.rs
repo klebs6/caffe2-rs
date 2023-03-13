@@ -1,4 +1,4 @@
-crate:ix!();
+crate::ix!();
 
 /**
   | @brief
@@ -27,14 +27,12 @@ crate:ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct AbstractReduceFrontOrBackOp<T,Context,Reducer,const FirstDim: bool,InputAccessor> {
-
-    storage: OperatorStorage,
-    context: Context,
-
-    num_reduce_dims:  i32,
-    input_accessor:   InputAccessor,
-    phantom: PhantomData<T>,
-    phantomReducer: PhantomData<Reducer>,
+    storage:         OperatorStorage,
+    context:         Context,
+    num_reduce_dims: i32,
+    input_accessor:  InputAccessor,
+    phantom:         PhantomData<T>,
+    phantomReducer:  PhantomData<Reducer>,
 }
 
 impl<T,Context,R: Reducer,const FirstDim: bool,InputAccessor> 

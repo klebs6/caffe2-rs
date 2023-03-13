@@ -49,4 +49,4 @@ impl<T,Context> ConvGradientOp<T,Context> {
     }
 }
 
-type doc_fn = fn(s: &OpSchema) -> ();
+pub type DocFn = fn(s: &OpSchema) -> ();
