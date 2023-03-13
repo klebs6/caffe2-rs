@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorQuantizationParams,
-    Workspace,
-    OperatorStorage,
-    OperatorDef
-};
 
 pub struct Int8QuantSchemeBlob {
     quantization_kind:  String,

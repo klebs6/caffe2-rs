@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    fuse_activation,
-    Fuser,
-    NNModule,
-    Workspace,
-};
 
 #[cfg(not(caffe2_use_mkldnn))]
 #[inline] pub fn optimize_for_mkldnn<T,U>(

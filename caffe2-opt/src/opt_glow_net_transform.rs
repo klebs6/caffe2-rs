@@ -1,8 +1,3 @@
-use crate::{
-    NetDef,
-    Workspace,
-    ShapeInfoMap
-};
 
 crate::ix!();
 

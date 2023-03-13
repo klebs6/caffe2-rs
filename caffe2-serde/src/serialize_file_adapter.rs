@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IStreamAdapter,
-    ReadAdapterInterface
-};
 
 pub struct FileAdapter<R: Read> {
     file_stream:      std::fs::File,

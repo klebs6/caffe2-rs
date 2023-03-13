@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPTensor,
-    IDEEPTensorDescriptor,
-    IDEEPConvTransposeUnpoolBase,
-    Workspace,
-    OperatorDef
-};
 
 pub struct IDEEPConvTransposeOp {
     //USE_IDEEP_DEF_ALIASES();

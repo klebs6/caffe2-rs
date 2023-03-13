@@ -6,10 +6,6 @@
 
 crate::ix!();
 
-use crate::{
-    SubgraphType,
-    GraphType,
-};
 
 pub struct NodeEqualityDefault<T> {
     phantom: PhantomData<T>,

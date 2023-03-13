@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorStorage,
-    CPUContext,
-    OperatorDef,
-    Workspace
-};
 
 pub struct FtrlParams<T> {
     alpha_inv:  T,

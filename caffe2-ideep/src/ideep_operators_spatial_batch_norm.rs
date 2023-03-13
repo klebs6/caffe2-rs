@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPOperator,
-    OperatorDef,
-    Workspace
-};
 
 pub struct IDEEPSpatialBNOp {
 

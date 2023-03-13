@@ -1,14 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DNNLowPOp,
-    GroupNormOp,
-    TensorQuantizationParams,
-    StorageOrder,
-    OperatorDef,
-    CPUContext,
-    Workspace,
-};
 
 pub type GroupNormFP32Op = GroupNormOp<f32,CPUContext>;
 

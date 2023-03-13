@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorDef,
-    Workspace
-};
 
 /**
   Clips the input tensor by scaling based on the input value and the threshold.

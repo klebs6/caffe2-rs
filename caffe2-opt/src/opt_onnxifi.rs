@@ -1,29 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorStorage,
-    OnnxBackend,
-    OnnxGraph,
-    OnnxBackendGraphMap,
-    OnnxSharedPtrBackendGraphInfo,
-    OnnxTensorDescriptorV1,
-    OnnxStatus,
-    OnnxBackendID,
-    OnnxifiLibrary,
-    Workspace,
-    TensorProto_DataType,
-    Tensor,
-    ExternalTensorDescriptor,
-    TypeMeta,
-    ShapeInfo,
-    QTensorProto,
-    NetDef,
-    OperatorDef,
-    CPUContext,
-    TensorProto,
-    Int8TensorCPU
-};
 
 /**
   | Provides slicing info for the outputs.

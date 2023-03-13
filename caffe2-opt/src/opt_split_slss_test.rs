@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    NetDef
-};
 
 #[inline] pub fn create_test(
     op_type:    &String,

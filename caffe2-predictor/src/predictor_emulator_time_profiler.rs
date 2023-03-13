@@ -2,11 +2,9 @@ crate::ix!();
 
 pub mod emulator {
 
-    use crate::{
-        Profiler
-    };
+    use super::*;
 
-    /**
+       /**
       | A profiler that measures the walltime
       | of a @runnable
       |

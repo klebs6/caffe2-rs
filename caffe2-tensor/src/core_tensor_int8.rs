@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Tensor,
-};
 
 pub struct Int8TensorCPU {
     scale:      f32, // default = 1.0

@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    FunctionSchema,
-    IValue,
-    OperatorHandle,
-    Stack,
-    Tensor,
-};
 
 #[cfg(any(expose_c2_ops, all(not(caffe2_is_xplat_build), not(c10_mobile))))]
 pub const PREALLOCATED_OUTPUT_ARGNAME: &'static str = "_caffe2_preallocated_outputs";

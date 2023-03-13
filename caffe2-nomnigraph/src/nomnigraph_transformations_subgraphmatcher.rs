@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SubgraphType,
-    NomGraph,
-    Graph,
-    GraphType,
-};
 
 pub type Predicate<G: GraphType> = fn(_u0: <G as GraphType>::NodeRef) -> bool;
 

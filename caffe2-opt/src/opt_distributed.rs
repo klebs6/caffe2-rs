@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NNModule,
-    NNGraph_NodeRef,
-    NetDef,
-    DeviceOption
-};
 
 #[inline] pub fn set_device_option(
     n: NNGraph_NodeRef, 

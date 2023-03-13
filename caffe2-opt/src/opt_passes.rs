@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NNModule,
-    Workspace
-};
 
 /**
   | This file sets up the optimization pass

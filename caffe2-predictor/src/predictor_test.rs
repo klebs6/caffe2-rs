@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Predictor,
-    Test,
-    MetaNetDef,
-    NetDef,
-    Blob,
-    CPUContext,
-};
 
 pub const predictSpec: &'static str = "
     name: \"predict\"

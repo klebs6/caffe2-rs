@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    QuantizationErrorMinimization,
-    TensorQuantizationParams,
-    Histogram
-};
 
 /**
   | A quantization scheme that minimizes

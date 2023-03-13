@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Histogram,
-    TensorQuantizationParams,
-};
 
 pub trait QuantizationErrorMinimization {
 

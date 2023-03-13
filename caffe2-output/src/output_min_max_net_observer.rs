@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetObserver,
-    NetBase,
-    OperatorInfo
-};
 
 pub struct OutputMinMaxNetObserver {
     base:           NetObserver,

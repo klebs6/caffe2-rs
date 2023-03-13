@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    LearningRateFunctor,
-    CPUContext
-};
 
 register_cuda_operator!{LearningRate, LearningRateOp<f32, CUDAContext>}
 

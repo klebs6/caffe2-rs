@@ -1,16 +1,5 @@
 crate::ix!();
 
-use crate::{
-    AveragePoolFp320p,
-    PoolOp,
-    MaxPoolFp320p,
-    ConvPoolDNNLowPOpBase,
-    CPUContext,
-    OperatorDef,
-    Workspace,
-    AveragePoolFunctor,
-    MaxPoolFunctor,
-};
 
 pub struct AveragePool<T> { 
     phantom: PhantomData<T>,

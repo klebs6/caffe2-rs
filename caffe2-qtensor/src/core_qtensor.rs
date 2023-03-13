@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DataPtr,
-};
 
 /**
  | @brief Creates a quantized tensor of the given

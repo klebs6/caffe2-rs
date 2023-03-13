@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NNModule,
-    Workspace,
-    NetDef
-};
 
 #[inline] pub fn workspace_optimizations<T,U>(
     nn:    *mut NNModule<T,U>,

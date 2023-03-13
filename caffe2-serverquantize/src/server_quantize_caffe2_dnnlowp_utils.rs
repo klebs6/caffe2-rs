@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef,
-    OperatorStorage,
-    OperatorDef,
-    QuantizationFactory,
-    TensorQuantizationParams,
-};
 
 pub struct QuantizationErrorStats {
     sum_sq:         f32,

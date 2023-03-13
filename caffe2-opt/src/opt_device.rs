@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NNGraph_NodeRef,
-    NNGraph_SubgraphType,
-    NNGraph_EdgeRef,
-    NNGraph,
-    NNModule
-};
 
 #[inline] pub fn get_input_edges(
     sg: &NNGraph_SubgraphType, 

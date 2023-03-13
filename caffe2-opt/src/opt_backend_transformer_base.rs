@@ -1,14 +1,5 @@
 crate::ix!();
 
-use crate::{
-    BoundShapeSpec,
-    TensorProto,
-    QTensorProto,
-    ShapeInfo,
-    Workspace,
-    NetDef,
-    ShapeInfoMap
-};
 
 pub const kNetPos:  &'static str = "net_pos";
 pub const kModelId: &'static str = "model_id";

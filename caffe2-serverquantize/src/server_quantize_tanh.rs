@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorQuantizationParams,
-};
 
 /**
  * We use the 3-region approach described in "Efficient VLSI Implementation of

@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    NetDef
-};
 
 define_bool!{
     fake_fp16_conversion_use_fp16_acc,

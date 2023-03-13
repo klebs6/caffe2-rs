@@ -1,17 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorHandle,
-    List,
-    IValue,
-    OperatorName,
-    OperatorStorage,
-    Argument,
-    Tensor,
-    Workspace,
-    Operator,
-    OperatorDef,
-};
 
 /**
   | To make a c10 operator "C10Add" callable

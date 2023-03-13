@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    RunOnDevice,
-    Workspace,
-    OperatorDef
-};
 
 #[inline] pub unsafe fn adam_ideep_update(
     n:            i32,

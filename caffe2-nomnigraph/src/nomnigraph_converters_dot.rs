@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GraphType,
-};
-
 pub struct DotGenerator<G: GraphType> {
     node_printer: NodePrinter<G>,
     edge_printer: EdgePrinter<G>,

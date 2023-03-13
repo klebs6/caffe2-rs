@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPOperator,
-    Workspace,
-    OperatorDef
-};
 
 pub struct IDEEPDropoutOp {
     //USE_IDEEP_DEF_ALIASES();

@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DeviceOption,
-    TensorShape,
-    TensorFiller,
-    TensorProto_DataType,
-    OperatorDef,
-};
 
 /**
   | @brief

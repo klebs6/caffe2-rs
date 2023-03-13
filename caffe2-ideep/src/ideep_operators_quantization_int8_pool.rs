@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ITensorDescriptor,
-    IAlgo,
-    OperatorDef,
-    Workspace,
-    IDEEPConvPoolOpBase
-};
 
 pub struct IDEEPInt8PoolOp {
     //USE_IDEEP_DEF_ALIASES();

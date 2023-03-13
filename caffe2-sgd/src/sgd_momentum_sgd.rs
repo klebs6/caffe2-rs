@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    Operator,
-    OperatorDef
-};
 
 /**
  | Computes a momentum SGD update for an input

@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef
-};
 
 #[inline] pub fn fake_net() -> NetDef {
     

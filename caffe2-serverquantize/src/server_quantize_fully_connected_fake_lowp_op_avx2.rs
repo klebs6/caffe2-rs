@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Align64,
-};
 
 /**
   | NOTE: clang-format wants to use a different

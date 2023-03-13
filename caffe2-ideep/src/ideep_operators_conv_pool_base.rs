@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPTensorDims,
-    IDEEPTensor,
-    ConvPoolOpBase,
-    Workspace,
-    OperatorDef,
-    IDEEPContext
-};
 
 pub struct IDEEPConvPoolOpBase {
     base: ConvPoolOpBase<IDEEPContext>,

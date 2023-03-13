@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorDef,
-    Workspace,
-    OperatorStorage
-};
 
 pub struct GFtrlParams<T> {
     

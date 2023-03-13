@@ -9,13 +9,6 @@
 
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    NetDef,
-    Tensor,
-    Workspace,
-    TensorCPU,
-};
 
 /**
   | Asserts that the numeric values of a

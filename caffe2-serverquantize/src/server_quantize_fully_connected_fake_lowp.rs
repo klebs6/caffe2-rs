@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    Operator,
-    Tensor,
-    OperatorDef,
-};
 
 /**
   | convert to float16 reducing mantissa,

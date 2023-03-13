@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    OperatorDef,
-    IDEEPOperator
-};
 
 pub struct IDEEPSigmoidOp {
     //USE_IDEEP_DEF_ALIASES();

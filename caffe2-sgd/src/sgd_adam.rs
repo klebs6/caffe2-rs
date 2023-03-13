@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorDef,
-    Workspace
-};
 
 /// Adam
 #[inline] pub fn adam_update<Context>(

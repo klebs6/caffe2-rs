@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    NetDef,
-    NetBase,
-    OperatorStorage,
-};
 
 pub struct IndividualMetrics<'a> {
     setup_time:                        f32, // default = 0.0

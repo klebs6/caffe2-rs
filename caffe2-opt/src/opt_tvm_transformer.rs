@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ShapeInfoMap,
-    BackendTransformerBase,
-    NetDef,
-    Workspace,
-    BackendTransformOptions,
-};
 
 
 pub struct TvmTransformOptions {

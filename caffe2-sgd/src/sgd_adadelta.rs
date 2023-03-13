@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    RunOnDevice,
-    Workspace,
-    Operator,
-    OperatorDef
-};
 
 /**
  | Computes the AdaDelta update

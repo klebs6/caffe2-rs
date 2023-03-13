@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    OperatorStorage,
-    OperatorDef,
-    CPUContext,
-    Operator,
-};
 
 /**
   | A net test dummy op that does nothing

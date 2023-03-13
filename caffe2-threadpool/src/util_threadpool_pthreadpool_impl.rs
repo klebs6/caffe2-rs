@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    legacy_pthreadpool_t,
-    legacy_pthreadpool_function_1d_t, 
-};
 
 // External API
 #[inline] pub fn legacy_pthreadpool_compute_1d(

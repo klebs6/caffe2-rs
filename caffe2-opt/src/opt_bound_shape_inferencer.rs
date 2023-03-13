@@ -1,16 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorBoundShape_DimType,
-    NetDef,
-    Workspace,
-    OpSchema,
-    ShapeInfoMap,
-    OperatorDef,
-    TensorShape,
-    TensorProto_DataType,
-    ShapeInfo
-};
 
 /**
   | This struct stores the max bound size for batch

@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPOperator,
-    OperatorDef,
-    Workspace
-};
 
 pub struct IDEEPTransposeOp {
     //USE_IDEEP_DEF_ALIASES();

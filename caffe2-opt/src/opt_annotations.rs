@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NodeRef,
-    Annotation,
-    OperatorDef,
-    DeviceOption,
-};
-
 pub enum ParallelizationScheme {
     none,
     split_by_batch,

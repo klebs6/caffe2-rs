@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Operator,
-    OperatorDef,
-    Workspace
-};
 
 /**
  | Computes the STORM

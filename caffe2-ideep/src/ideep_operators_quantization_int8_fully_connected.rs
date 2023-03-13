@@ -1,14 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDType,
-    ITensorDescriptor,
-    IScale,
-    ITensor,
-    Workspace,
-    OperatorDef,
-    IDEEPOperator
-};
 
 pub struct IDEEPInt8FullyConnectedOp {
     //USE_IDEEP_DEF_ALIASES();

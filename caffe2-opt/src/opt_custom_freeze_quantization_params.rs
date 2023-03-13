@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    NetDef
-};
 
 /**
   | We have a variant of 2-input Int8Quantize and

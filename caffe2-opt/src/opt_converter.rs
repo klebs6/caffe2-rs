@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NodeRef,
-    NNModule,
-    Argument,
-    NeuralNetOperator,
-    DeviceOption,
-    Caffe2Annotation,
-    OperatorDef,
-    NetDef
-};
 
 
 ///---------------------

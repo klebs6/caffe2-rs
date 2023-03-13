@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NeuralNetOperator
-};
 
 pub struct Relu {
     //NOMNIGRAPH_DEFINE_NN_RTTI(Relu);

@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef
-};
 
 #[test] fn converter_basic() {
     todo!();

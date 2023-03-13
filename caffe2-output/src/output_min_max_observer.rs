@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    OperatorInfo,
-    ObserverBase
-};
 
 pub struct OutputMinMaxObserver {
     base:             ObserverBase<OperatorStorage>,

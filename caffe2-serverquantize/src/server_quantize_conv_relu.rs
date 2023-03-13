@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ConvOp,
-    ConvPoolOpBase,
-    Workspace,
-    OperatorDef,
-    Blob
-};
 
 pub struct ConvReluOp<T,Context> {
     base: ConvPoolOpBase<Context>,

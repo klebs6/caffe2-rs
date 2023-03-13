@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Operator,
-    Tensor,
-    OperatorDef,
-    Workspace
-};
 
 /**
   | YellowFin: An automatic tuner for momentum SGD

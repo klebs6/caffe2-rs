@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    StreamId,
-    BaseContext,
-    Event,
-    Device,
-    TypeMeta,
-    DeviceOption,
-    DeviceType,
-    DataPtr
-};
 
 pub struct IDEEPContext {
 

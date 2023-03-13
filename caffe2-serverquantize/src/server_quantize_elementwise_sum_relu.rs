@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SumOp,
-    OperatorDef,
-    Workspace
-};
 
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct SumReluOp<Context> {

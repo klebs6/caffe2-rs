@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ProfDAGProtos,
-    ProfDAGProto,
-    NetDef,
-    Timer,
-};
 
 pub struct ProfDAGStats {
     sum:     f32,

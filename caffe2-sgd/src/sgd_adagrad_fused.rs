@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Tensor,
-    CPUContext,
-    Workspace,
-    OperatorDef,
-    Operator,
-};
 
 /**
   | Fused operator of

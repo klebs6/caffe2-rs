@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    HIPContext,
-    OperatorDef,
-    MIOPENWrapper,
-    OperatorStorage,
-    Workspace
-};
                                                                                         
 pub struct MIOPENActivationOpBase {
     storage:        OperatorStorage,

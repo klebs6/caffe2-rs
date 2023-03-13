@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    RunOnDevice,
-    Operator,
-    CUDAContext,
-    OperatorDef,
-    Workspace
-};
 
 
 #[inline] pub fn weight_scale_update<T, Context>(

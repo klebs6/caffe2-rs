@@ -1,17 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TestMatchGraph_NodeRef,
-    MatchGraph,
-    MatchPredicate,
-    NNGraph_NodeRef,
-    SubgraphType,
-    NodeRef,
-    NNGraph,
-    ASTExpr,
-    ASTStmt,
-    ASTGraph
-};
 
 pub type Criteria           = String;
 pub type TestMatchGraph     = MatchGraph<NNGraph>;

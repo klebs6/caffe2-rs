@@ -1,6 +1,5 @@
 crate::ix!();
 
-use crate::{Task,WorkersPool};
 
 /**
   | A work-stealing threadpool loosely

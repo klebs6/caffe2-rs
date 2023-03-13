@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetObserver,
-    NetBase
-};
 
 /**
   | Set quantization parameters of operators

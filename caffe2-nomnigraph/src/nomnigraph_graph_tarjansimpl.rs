@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GraphType,
-    Subgraph,
-    NomGraph,
-    EdgeRef,
-    NodeRef,
-    Graph,
-};
 
 pub type EdgeWrapper<T,U>     = <GraphWrapper::<T, U> as HasEdgeWrapper>::EdgeWrapper;
 pub type WrappedGraph<T,U>    = NomGraph::<NodeWrapper<T,U>, EdgeWrapper<T,U>>;

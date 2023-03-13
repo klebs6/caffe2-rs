@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DNNLowPOp,
-    ChannelShuffleOp,
-    CPUContext,
-    StorageOrder,
-    OperatorDef,
-    Workspace
-};
 
 pub type ChannelShuffleFp32Op<Context> = ChannelShuffleOp<f32, Context>;
 

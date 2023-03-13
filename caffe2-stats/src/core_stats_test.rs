@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ExportedStatMap,
-};
 
 pub struct MyCaffeClass {
 

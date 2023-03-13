@@ -1,12 +1,4 @@
-use crate::{
-    TensorBoundShape_DimType
-};
 
-use crate::{
-    ShapeInfoMap,
-    ShapeInfo,
-    TensorProto_DataType
-};
 
 crate::ix!();
 

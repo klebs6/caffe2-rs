@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    IDEEPOperator,
-    OperatorDef
-};
 
 #[inline] pub fn momentum_sgd_update(
     n:         i32,

@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    OperatorStorage,
-    HIPContext,
-    OperatorDef,
-    MIOPENWrapper
-};
 
                                                                                          
 pub struct TensorDescriptors<T> {

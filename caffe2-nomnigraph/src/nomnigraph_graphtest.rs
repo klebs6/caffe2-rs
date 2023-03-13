@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NomGraph,
-    TestClass
-};
 
 type TestGraph = NomGraph<TestClass>;
 

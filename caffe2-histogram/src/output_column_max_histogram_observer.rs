@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ObserverBase,
-    OperatorStorage,
-    HistogramObserverInfo
-};
 
 /**
   | Given min/max, collect histogram of

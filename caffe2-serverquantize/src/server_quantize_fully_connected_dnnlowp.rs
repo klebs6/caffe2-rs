@@ -1,17 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DefaultEngine,
-    GetSigned,
-    RequantizationParams,
-    FullyConnectedOp,
-    Workspace,
-    PackBMatrix,
-    DNNLowPOp,
-    CPUContext,
-    TensorQuantizationParams,
-    OperatorDef,
-};
 
 pub const FCDefaultTransposeWeight: bool = true;
 

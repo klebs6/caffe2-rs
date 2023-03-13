@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    Tensor,
-    OperatorDef,
-    CPUContext,
-    Workspace
-};
 
 /**
   | Implement Layer-wise Adaptive Rate

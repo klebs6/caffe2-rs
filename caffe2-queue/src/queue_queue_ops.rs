@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-    Workspace,
-    Operator,
-    OperatorDef,
-    BlobsQueue,
-    Blob,
-};
 
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]

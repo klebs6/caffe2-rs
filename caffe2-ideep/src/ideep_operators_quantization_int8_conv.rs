@@ -1,18 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ILowpKind,
-    ITensor,
-    FusionType,
-    ITensorDescriptor,
-    IAlgo,
-    IDEEPConvolutionForwardParams,
-    IAttr,
-    IScale,
-    IDEEPConvPoolOpBase,
-    Workspace,
-    OperatorDef
-};
 
 pub struct IDEEPInt8ConvOp {
     //USE_IDEEP_DEF_ALIASES();

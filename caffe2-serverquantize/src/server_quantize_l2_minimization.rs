@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NormMinimization
-};
 
 /**
   | A quantization scheme that minimizes

@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-};
 
 pub struct WorkspaceTestFoo {}
 

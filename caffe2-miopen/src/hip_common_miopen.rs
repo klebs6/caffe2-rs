@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    StorageOrder,
-    ScalingParamType,
-};
 
 pub const MIOPEN_VERSION: usize = 1399;
 

@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Tensor,
-    TensorPrinter
-};
 
 /**
   | This is a wrapper around the TensorPrinter

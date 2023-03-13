@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    RunOnDevice,
-    OperatorStorage,
-    CPUContext,
-    OpSchemaCost,
-    Operator,
-    OperatorDef,
-    TensorShape,
-    Workspace,
-};
 
 #[inline] pub fn adagrad_update<Context>(
     n:            i32,

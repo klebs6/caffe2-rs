@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Conv,
-    NNModule,
-};
 
 #[inline] pub fn addNNPACK<T,U>(nn: *mut NNModule<T,U>, low_memory: Option<bool>)  {
 

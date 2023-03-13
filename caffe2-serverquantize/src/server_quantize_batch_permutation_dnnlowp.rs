@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DNNLowPOp,
-    CopyOp,
-    Workspace,
-    OperatorDef,
-    CPUContext,
-};
 
 // FIXME
 pub type BatchPermutationFP32Op = CopyOp<CPUContext, CPUContext, CPUContext>;

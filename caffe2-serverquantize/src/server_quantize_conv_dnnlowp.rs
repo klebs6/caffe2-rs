@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    RequantizationParams,
-    ConvOp,
-    Tensor,
-    Workspace,
-    OperatorDef,
-    CPUContext,
-    ConvPoolDNNLowPOpBase,
-    TensorQuantizationParams,
-};
 
 pub type ConvFp32Op = ConvOp<f32,CPUContext>;
 

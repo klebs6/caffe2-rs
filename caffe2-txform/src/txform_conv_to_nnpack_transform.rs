@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    SingleOpTransform
-};
-
 pub trait ConvToNNPackTransform : SingleOpTransform {
 
     /**

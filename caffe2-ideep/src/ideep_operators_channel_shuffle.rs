@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    IDEEPConvPoolOpBase,
-    Workspace
-};
 
 pub struct IDEEPChannelShuffleOp<T, Context> {
     base:    IDEEPConvPoolOpBase,

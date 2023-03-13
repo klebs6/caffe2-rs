@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    NetDef,
-    SimpleNet,
-    Blob,
-};
 
 /**
   | SimpleRefcountNet is an implementation

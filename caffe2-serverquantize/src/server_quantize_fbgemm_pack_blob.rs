@@ -1,14 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Tensor,
-    PackedDepthWiseConvMatrix,
-    PackWeightMatrixForGConv,
-    PackWeightMatrixForGConvB,
-    PackBMatrix,
-    TensorQuantizationParams,
-    CompressedSparseColumn,
-};
 
 /**
   | Packed weight matrix for DNNLOWP Int8FC

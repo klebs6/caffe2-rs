@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Blob,
-    TensorProto_DataType,
-    TensorBoundShapes,
-    TensorShape,
-    TensorBoundShape,
-    TensorBoundShape_DimType
-};
 
 #[derive(Default)]
 pub struct QShapeInfo {

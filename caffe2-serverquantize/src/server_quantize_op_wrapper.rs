@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorQuantizationParams,
-    OperatorStorage,
-    Blob,
-    Workspace,
-    QuantizationFactory
-};
 
 /**
   | Wrap a floating-point operator with

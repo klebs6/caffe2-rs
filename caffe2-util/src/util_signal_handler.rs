@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SigAction,
-};
 
 pub enum SignalHandlerAction {
     NONE,

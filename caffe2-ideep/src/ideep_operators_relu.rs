@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    Workspace,
-    IDEEPOperator
-};
 
 pub struct IDEEPReluOp {
     //USE_IDEEP_DEF_ALIASES();

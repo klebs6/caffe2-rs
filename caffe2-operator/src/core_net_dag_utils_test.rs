@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ExecutionChains,
-    OperatorStorage,
-    OperatorNode,
-    NetDef,
-    Workspace,
-    OperatorDef,
-    CPUContext,
-    Operator,
-};
 
 pub struct DummySyncOp {
     storage: OperatorStorage,

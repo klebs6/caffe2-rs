@@ -1,14 +1,6 @@
 crate::ix!();
-use crate::{
-    IDEEPTensorDims
-};
 
 
-use crate::{
-    OperatorDef,
-    IDEEPOperator,
-    Workspace
-};
 
 // Takes a shape and data tensor and reshapes it
 pub struct IDEEPReshapeOp {

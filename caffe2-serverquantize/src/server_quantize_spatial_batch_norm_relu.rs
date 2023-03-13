@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SpatialBNOp,
-    OperatorDef,
-    Workspace,
-    CPUContext
-};
 
 pub struct SpatialBNReluOp {
     base:    SpatialBNOp<CPUContext>,

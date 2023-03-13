@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NomGraph,
-    Graph,
-    TestClass,
-    TopoSort
-};
 
 type GraphT    = NomGraph<TestClass>;
 type TopoSortT = TopoSort<GraphT>;

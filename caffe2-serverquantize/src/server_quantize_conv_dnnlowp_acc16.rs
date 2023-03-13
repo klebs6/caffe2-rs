@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    PackBMatrix,
-    OperatorStorage,
-    OperatorDef,
-    Workspace,
-    ConvDNNLowPOp,
-};
 
 /**
   | Quantized Conv operator with 16-bit

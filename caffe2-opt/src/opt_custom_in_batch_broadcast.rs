@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ShapeInfoMap,
-    NetDef
-};
 
 pub const kFP16_SUFFIX: &'static str = "_fp16";
 pub const kFP32_SUFFIX: &'static str = "_fp32";

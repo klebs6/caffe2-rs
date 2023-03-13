@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NeuralNetOperator,
-    OperatorDef,
-    Converter,
-};
 
 pub struct BatchMatMulConverter {
     base: dyn Converter,

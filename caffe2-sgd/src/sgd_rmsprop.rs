@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext,
-    Operator,
-    OperatorDef,
-    Workspace
-};
 
 pub trait RmsPropUpdate {
 

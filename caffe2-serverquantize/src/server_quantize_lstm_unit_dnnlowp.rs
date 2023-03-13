@@ -1,18 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext,
-    LSTMUnitOp,
-    TensorQuantizationParams,
-    QuantizationFactory,
-    Tanh,
-    TensorCPU,
-    QuantizationErrorStats,
-    OperatorDef,
-    Sigmoid,
-    Workspace,
-    OpWrapper
-};
 
 pub struct LSTMUnitDNNLowPOp<T: PrimInt> {
 

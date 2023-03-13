@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    Workspace,
-    OperatorDef
-};
 
 #[inline] pub fn fp32_momentum_sgd_update<Context>(
     n:            i32,

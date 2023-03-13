@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    PatternMatchType,
-    NetDef,
-    Graph,
-};
 
 /**
   | Determines the type of subgraphs that

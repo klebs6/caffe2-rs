@@ -1,18 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IScale,
-    IAttr,
-    ITensor,
-    IProp,
-    IAlgo,
-    ITensorDescriptor,
-    IDEEPConvolutionForwardParams,
-    FusionType,
-    Workspace,
-    IDEEPConvPoolOpBase,
-    OperatorDef
-};
 
 pub struct IDEEPConvOp {
 

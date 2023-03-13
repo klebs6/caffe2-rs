@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef,
-    OperatorDef
-};
 
 #[inline] pub fn add_conv(net: *mut NetDef, tick: i32)  {
     

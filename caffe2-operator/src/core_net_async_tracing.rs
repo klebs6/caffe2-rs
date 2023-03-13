@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorDef,
-    OperatorStorage,
-    NetBase,
-    Timer,
-};
 
 declare_string!{caffe2_net_async_tracing_filepath}
 declare_string!{caffe2_net_async_names_to_trace}

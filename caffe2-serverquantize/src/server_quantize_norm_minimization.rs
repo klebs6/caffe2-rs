@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorQuantizationParams,
-    NormMinimizationKind,
-    NormMinimization,
-    Histogram
-};
 
 /**
   | Use fp16_min as the small scale cutoff because

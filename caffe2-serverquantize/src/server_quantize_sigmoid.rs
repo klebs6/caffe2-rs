@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    DEFAULT_MAX_ABS_ERR,
-    TensorQuantizationParams,
-    Tanh
-};
 
 /**
   | sigmoid(x) = (tanh(x/2) + 1)/2

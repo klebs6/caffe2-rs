@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Operator,
-    OperatorStorage,
-    Workspace,
-    OperatorDef
-};
 
 ///---------------------------------
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]

@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GraphType,
-    Graph,
-    MatchGraph,
-    NomGraph,
-    MatchPredicate
-};
 
 pub type NodeType           = String;
 pub type Criteria           = String;

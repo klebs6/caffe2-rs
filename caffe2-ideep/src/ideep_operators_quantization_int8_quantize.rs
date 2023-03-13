@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IFormat,
-    IDType,
-    OperatorDef,
-    IScale,
-    IDEEPOperator,
-    Workspace
-};
 
 pub struct IDEEPInt8QuantizeOp {
     //USE_IDEEP_DEF_ALIASES();

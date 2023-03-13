@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GraphType,
-    EdgeRef,
-    NodeRef,
-    NomGraph,
-};
 
 pub struct TestClass { }
 

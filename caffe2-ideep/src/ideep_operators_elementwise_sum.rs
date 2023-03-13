@@ -1,17 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SameTypeAsInput,
-    IDEEPOperator,
-    SumOp,
-    BinaryElementwiseOp,
-    CPUContext,
-    IDEEPFallbackOp,
-    AddFunctor,
-    SkipIndices,
-    Workspace,
-    OperatorDef,
-};
 
 pub type FALLBACK_SUM = IDEEPFallbackOp<SumOp<CPUContext>, dyn SkipIndices<0>>;
 pub type FALLBACK_ADD<N: Num> = 

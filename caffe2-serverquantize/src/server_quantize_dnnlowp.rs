@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Histogram,
-    RequantizationParams,
-    TensorQuantizationParams,
-};
 
 pub enum QuantizationKind {
 

@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetBase,
-    ObserverBase,
-};
 
 /**
   | Thin class that attaches the observer

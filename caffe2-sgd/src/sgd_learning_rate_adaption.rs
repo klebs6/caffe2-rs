@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Workspace,
-    Operator,
-    OperatorDef
-};
 
 #[inline] pub fn lr_update<Context>(
     n:                      i32,

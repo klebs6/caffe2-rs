@@ -1,11 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Transform,
-    Graph,
-    OperatorDef,
-    NetDef
-};
 
 /**
   | PatternNetTransform allows you to

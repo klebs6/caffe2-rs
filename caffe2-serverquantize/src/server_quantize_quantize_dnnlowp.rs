@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext,
-    Operator,
-    OperatorDef,
-    OperatorStorage,
-    QuantizationFactory,
-    Workspace,
-};
 
 pub struct QuantizeDNNLowPOp<T> {
 

@@ -1,23 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OnnxValueInfoProto,
-    OnnxTypeProto,
-    OnnxModelProto,
-    OnnxifiLibrary,
-    OnnxExporter,
-    OnnxBackendID,
-    BackendTransformOptions,
-    NetDef,
-    TensorShape,
-    OperatorDef,
-    ShapeInfo,
-    PartitionInfo,
-    TensorProto_DataType,
-    BackendTransformerBase,
-    Workspace,
-    ShapeInfoMap
-};
 
 pub struct OnnxifiTransformerOptions {
 

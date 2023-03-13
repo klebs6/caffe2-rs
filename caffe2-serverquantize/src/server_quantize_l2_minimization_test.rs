@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TestWithParam,
-};
 
 pub const default_input: [&'static str; 3] = [
     // rage includes 0

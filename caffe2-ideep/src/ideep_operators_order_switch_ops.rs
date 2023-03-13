@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    IDEEPOperator
-};
 
 pub struct IDEEPNHWC2NCHWOp {
     //USE_IDEEP_DEF_ALIASES();

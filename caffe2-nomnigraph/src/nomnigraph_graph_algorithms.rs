@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NomGraph,
-    GraphType,
-};
 
 /// \brief Helper for dominator tree finding.
 #[inline] pub fn reachable<G: GraphType>(

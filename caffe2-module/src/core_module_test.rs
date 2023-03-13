@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    OperatorStorage,
-};
 
 /**
   | An explicitly defined module, testing

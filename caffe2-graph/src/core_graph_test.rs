@@ -1,9 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef,
-    OperatorStorage,
-};
 
 static counter: AtomicI32 = AtomicI32::new(0);
 

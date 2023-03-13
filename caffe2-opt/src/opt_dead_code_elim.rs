@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NNModule
-};
 
 #[inline] pub fn dead_code_elim<T,U>(nn: *mut NNModule<T,U>)  {
     

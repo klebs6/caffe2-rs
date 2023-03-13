@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    TensorProto_DataType,
-    TensorBoundShape_DimType,
-    ShapeInfo,
-    NetDef,
-    ShapeInfoMap
-};
 
 #[inline] pub fn check_net(
     net:          &mut NetDef,

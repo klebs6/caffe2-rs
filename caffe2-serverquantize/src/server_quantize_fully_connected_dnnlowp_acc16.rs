@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CompressedSparseColumn,
-    FullyConnectedDNNLowPOp,
-    PackBMatrix,
-    OperatorDef,
-    Workspace
-};
 
 pub type BaseType = FullyConnectedDNNLowPOp<u8,false>;
 

@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    GraphType,
-};
 
 pub type NodeRefT<G: GraphType> = <G as GraphType>::NodeRef;
 

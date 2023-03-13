@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    NetDef,
-    InferenceGraph,
-    OperatorDef
-};
 
 
 #[inline] pub fn has_input(blob: &String, op: &OperatorDef) -> bool {

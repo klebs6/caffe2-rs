@@ -1,12 +1,5 @@
 crate::ix!();
 
-use crate::{
-    ResizeNearest3DOp,
-    DNNLowPOp,
-    Workspace,
-    OperatorDef,
-    CPUContext
-};
 
 pub type ResizeNearest3DFP32Op = ResizeNearest3DOp<f32,CPUContext>;
 

@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Tensor,
-    OperatorStorage,
-    Operator,
-    CPUContext,
-    OperatorDef,
-    Workspace,
-};
 
 #[inline] pub fn compute_square_average_inlined(a: *const f32, len: i32) -> f32 {
     

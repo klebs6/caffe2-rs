@@ -1,13 +1,5 @@
 crate::ix!();
 
-use crate::{
-    RunOnDevice,
-    Operator,
-    OperatorStorage,
-    OperatorDef,
-    Workspace,
-    CPUContext
-};
 
 /**
   | Operator to compute equalization scale

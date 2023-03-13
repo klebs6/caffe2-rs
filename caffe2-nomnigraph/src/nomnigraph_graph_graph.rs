@@ -16,11 +16,6 @@
   */
 crate::ix!();
 
-use crate::{
-    StorageType,
-    GraphType,
-    Notifier
-};
 
 /// \brief Edge within a NomGraph.
 pub struct Edge<T,U> {

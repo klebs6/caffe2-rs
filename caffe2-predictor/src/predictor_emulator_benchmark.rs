@@ -1,10 +1,5 @@
 crate::ix!();
 
-use crate::{
-    Profiler,
-    OutputFormatter,
-    Emulator
-};
 
 declare_int!{warmup}
 declare_int!{iter}

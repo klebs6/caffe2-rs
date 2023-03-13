@@ -1,15 +1,5 @@
 crate::ix!();
 
-use crate::{
-    SqueezeOp,
-    ExpandDimsOp,
-    CPUContext,
-    IDEEPOperator,
-    Workspace,
-    IDEEPFallbackOp,
-    SkipIndices,
-    OperatorDef
-};
 
 pub trait FallbackOp {
     type Fallback;

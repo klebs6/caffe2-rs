@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    RequantizationParams
-};
 
 #[inline] pub fn segment_moments_avx2<T>(
     n:     i32,

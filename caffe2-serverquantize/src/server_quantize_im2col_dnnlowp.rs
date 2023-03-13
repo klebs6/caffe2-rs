@@ -1,8 +1,5 @@
 crate::ix!();
 
-use crate::{
-    CPUContext
-};
 
 #[inline] pub fn im_2colNCHW<T>(
     channels:   i32,

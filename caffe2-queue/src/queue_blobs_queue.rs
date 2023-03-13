@@ -1,6 +1,5 @@
 crate::ix!();
 
-use crate::{Blob,Workspace};
 
 /**
   | A thread-safe, bounded, blocking queue.
