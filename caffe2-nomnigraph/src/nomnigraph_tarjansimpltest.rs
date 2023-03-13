@@ -1,5 +1,5 @@
 
-#[test] fn Tarjans_Simple() {
+#[test] fn tarjans_simple() {
     todo!();
     /*
   TestClass t1;
@@ -14,7 +14,7 @@
   */
 }
 
-#[test] fn Tarjans_WithEdgeStorage() {
+#[test] fn tarjans_with_edge_storage() {
     todo!();
     /*
   TestClass t1;
@@ -29,7 +29,7 @@
   */
 }
 
-#[test] fn Tarjans_DAG() {
+#[test] fn tarjans_dag() {
     todo!();
     /*
   auto graph = createGraph();
@@ -38,7 +38,7 @@
   */
 }
 
-#[test] fn Tarjans_Cycle() {
+#[test] fn tarjans_cycle() {
     todo!();
     /*
   auto graph = createGraphWithCycle();
@@ -47,7 +47,7 @@
   */
 }
 
-#[test] fn Tarjans_Random() {
+#[test] fn tarjans_random() {
     todo!();
     /*
   nom::Graph<TestClass> g;

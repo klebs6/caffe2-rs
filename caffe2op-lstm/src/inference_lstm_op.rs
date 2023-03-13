@@ -1,8 +1,8 @@
 crate::ix!();
 
 pub struct InferenceLSTMOp<Context> {
-    storage: OperatorStorage,
-    context: Context,
+    storage:       OperatorStorage,
+    context:       Context,
     num_layers:    i64,
     bidirectional: bool,
     has_biases:    bool,

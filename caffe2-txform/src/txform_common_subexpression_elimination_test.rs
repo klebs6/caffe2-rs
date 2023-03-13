@@ -10,7 +10,7 @@ crate::ix!();
  *                    \-->(Relu)
  *
  */
-#[test] fn CommonSubexpressionEliminationTest_TestSimple() {
+#[test] fn common_subexpression_elimination_test_simple() {
     todo!();
     /*
       NetDef netdef;
@@ -61,7 +61,7 @@ crate::ix!();
  *                 \-->(Relu)
  *
  */
-#[test] fn CommonSubexpressionEliminationTest_TestFromExternal() {
+#[test] fn common_subexpression_elimination_test_from_external() {
     todo!();
     /*
       NetDef netdef;

@@ -1,13 +1,13 @@
 crate::ix!();
 
-#[test] fn CUDATest_HasCudaRuntime() {
+#[test] fn cuda_test_has_cuda_runtime() {
     todo!();
     /*
   EXPECT_TRUE(HasCudaRuntime());
   */
 }
 
-#[test] fn CUDAContextTest_TestAllocDealloc() {
+#[test] fn cuda_context_test_alloc_dealloc() {
     todo!();
     /*
   if (!HasCudaGPU()) return;
@@ -18,7 +18,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CUDAContextTest_TestSetGetDeviceWithoutCaffeMode() {
+#[test] fn cuda_context_test_set_get_device_without_caffe_mode() {
     todo!();
     /*
   // For a while, set full device control to be true.
@@ -33,7 +33,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CUDAContextTest_MemoryPoolAllocateDealloc() {
+#[test] fn cuda_context_test_memory_pool_allocate_dealloc() {
     todo!();
     /*
   if (!HasCudaGPU())
@@ -76,7 +76,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CUDAContextTest_TestSameThreadSameObject() {
+#[test] fn cuda_context_test_same_thread_same_object() {
     todo!();
     /*
   if (!HasCudaGPU()) return;
@@ -91,7 +91,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CUDAContextTest_TestSameThreadTempObject() {
+#[test] fn cuda_context_test_same_thread_temp_object() {
     todo!();
     /*
   if (!HasCudaGPU())
@@ -127,7 +127,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CUDAContextTest_TestSameThreadDifferntObjectIfDifferentDevices() {
+#[test] fn cuda_context_test_same_thread_differnt_object_if_different_devices() {
     todo!();
     /*
   if (NumCudaDevices() > 1) {
@@ -160,7 +160,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CUDAContextTest_TestDifferntThreadDifferentobject() {
+#[test] fn cuda_context_test_differnt_thread_differentobject() {
     todo!();
     /*
   if (!HasCudaGPU()) return;

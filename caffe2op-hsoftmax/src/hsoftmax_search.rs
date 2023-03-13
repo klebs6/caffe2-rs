@@ -9,13 +9,10 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HSoftmaxSearchOp<T, Context> {
-
     base:    HSoftmaxOp<T, Context>,
-
     top_n:   i32,
     beam:    f32,
     tree:    TreeProto,
-
     phantom: PhantomData<T>,
 }
 

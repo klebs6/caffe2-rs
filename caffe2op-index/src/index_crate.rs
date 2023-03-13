@@ -10,12 +10,10 @@ crate::ix!();
   |
   */
 pub struct IndexCreateOp<T> {
-    storage: OperatorStorage,
-    context: CPUContext,
-
+    storage:      OperatorStorage,
+    context:      CPUContext,
     max_elements: i64,
-
-    phantom: PhantomData<T>,
+    phantom:      PhantomData<T>,
 }
 
 num_inputs!{IndexCreate, 0}

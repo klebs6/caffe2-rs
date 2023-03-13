@@ -7,7 +7,7 @@ mod arch_arm {
 
     use super::*;
 
-    #[test] fn U8RMAX__NEON_n_lt_16() {
+    #[test] fn u8rmax_neon_n_lt_16() {
         todo!();
         /*
         
@@ -19,7 +19,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8RMAX__NEON_n_eq_16() {
+    #[test] fn u8rmax_neon_n_eq_16() {
         todo!();
         /*
         
@@ -29,7 +29,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8RMAX__NEON_n_div_16() {
+    #[test] fn u8rmax_neon_n_div_16() {
         todo!();
         /*
         
@@ -41,7 +41,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8RMAX__NEON_n_gt_16() {
+    #[test] fn u8rmax_neon_n_gt_16() {
         todo!();
         /*
         
@@ -60,7 +60,7 @@ mod arch_x86 {
 
     use super::*;
 
-    #[test] fn U8RMAX__SSE2_n_lt_16() {
+    #[test] fn u8rmax_sse2_n_lt_16() {
         todo!();
         /*
         
@@ -72,7 +72,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8RMAX__SSE2_n_eq_16() {
+    #[test] fn u8rmax_sse2_n_eq_16() {
         todo!();
         /*
         
@@ -82,7 +82,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8RMAX__SSE2_n_div_16() {
+    #[test] fn u8rmax_sse2_n_div_16() {
         todo!();
         /*
         
@@ -94,7 +94,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8RMAX__SSE2_n_gt_16() {
+    #[test] fn u8rmax_sse2_n_gt_16() {
         todo!();
         /*
         

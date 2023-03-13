@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/add.cc]
 
-#[test] fn ADD_OP_zero_batch() {
+#[test] fn add_op_zero_batch() {
     todo!();
     /*
     
@@ -11,7 +11,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch() {
+#[test] fn add_op_unit_batch() {
     todo!();
     /*
     
@@ -22,7 +22,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_qmin() {
+#[test] fn add_op_unit_batch_with_qmin() {
     todo!();
     /*
     
@@ -38,7 +38,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_qmax() {
+#[test] fn add_op_unit_batch_with_qmax() {
     todo!();
     /*
     
@@ -54,7 +54,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_a_scale() {
+#[test] fn add_op_unit_batch_with_a_scale() {
     todo!();
     /*
     
@@ -72,7 +72,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_b_scale() {
+#[test] fn add_op_unit_batch_with_b_scale() {
     todo!();
     /*
     
@@ -90,7 +90,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_y_scale() {
+#[test] fn add_op_unit_batch_with_y_scale() {
     todo!();
     /*
     
@@ -108,7 +108,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_a_zero_point() {
+#[test] fn add_op_unit_batch_with_a_zero_point() {
     todo!();
     /*
     
@@ -126,7 +126,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_b_zero_point() {
+#[test] fn add_op_unit_batch_with_b_zero_point() {
     todo!();
     /*
     
@@ -144,7 +144,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_unit_batch_with_y_zero_point() {
+#[test] fn add_op_unit_batch_with_y_zero_point() {
     todo!();
     /*
     
@@ -162,7 +162,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch() {
+#[test] fn add_op_small_batch() {
     todo!();
     /*
     
@@ -173,7 +173,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_a_stride() {
+#[test] fn add_op_small_batch_with_a_stride() {
     todo!();
     /*
     
@@ -189,7 +189,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_b_stride() {
+#[test] fn add_op_small_batch_with_b_stride() {
     todo!();
     /*
     
@@ -205,7 +205,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_y_stride() {
+#[test] fn add_op_small_batch_with_y_stride() {
     todo!();
     /*
     
@@ -221,7 +221,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_qmin() {
+#[test] fn add_op_small_batch_with_qmin() {
     todo!();
     /*
     
@@ -237,7 +237,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_qmax() {
+#[test] fn add_op_small_batch_with_qmax() {
     todo!();
     /*
     
@@ -253,7 +253,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_a_scale() {
+#[test] fn add_op_small_batch_with_a_scale() {
     todo!();
     /*
     
@@ -271,7 +271,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_b_scale() {
+#[test] fn add_op_small_batch_with_b_scale() {
     todo!();
     /*
     
@@ -289,7 +289,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_y_scale() {
+#[test] fn add_op_small_batch_with_y_scale() {
     todo!();
     /*
     
@@ -307,7 +307,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_a_zero_point() {
+#[test] fn add_op_small_batch_with_a_zero_point() {
     todo!();
     /*
     
@@ -325,7 +325,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_b_zero_point() {
+#[test] fn add_op_small_batch_with_b_zero_point() {
     todo!();
     /*
     
@@ -343,7 +343,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_small_batch_with_y_zero_point() {
+#[test] fn add_op_small_batch_with_y_zero_point() {
     todo!();
     /*
     
@@ -361,7 +361,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch() {
+#[test] fn add_op_strided_batch() {
     todo!();
     /*
     
@@ -379,7 +379,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_qmin() {
+#[test] fn add_op_strided_batch_with_qmin() {
     todo!();
     /*
     
@@ -398,7 +398,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_qmax() {
+#[test] fn add_op_strided_batch_with_qmax() {
     todo!();
     /*
     
@@ -417,7 +417,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_a_scale() {
+#[test] fn add_op_strided_batch_with_a_scale() {
     todo!();
     /*
     
@@ -438,7 +438,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_b_scale() {
+#[test] fn add_op_strided_batch_with_b_scale() {
     todo!();
     /*
     
@@ -459,7 +459,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_y_scale() {
+#[test] fn add_op_strided_batch_with_y_scale() {
     todo!();
     /*
     
@@ -480,7 +480,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_a_zero_point() {
+#[test] fn add_op_strided_batch_with_a_zero_point() {
     todo!();
     /*
     
@@ -501,7 +501,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_b_zero_point() {
+#[test] fn add_op_strided_batch_with_b_zero_point() {
     todo!();
     /*
     
@@ -522,7 +522,7 @@ crate::ix!();
     */
 }
 
-#[test] fn ADD_OP_strided_batch_with_y_zero_point() {
+#[test] fn add_op_strided_batch_with_y_zero_point() {
     todo!();
     /*
     

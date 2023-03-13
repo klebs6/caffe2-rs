@@ -1,10 +1,8 @@
 crate::ix!();
 
 pub struct Int8AddOp<Activation> {
-
     storage:           OperatorStorage,
     context:           CPUContext,
-
     ws:                *mut Workspace,
 
     /// QNNPACK add operator

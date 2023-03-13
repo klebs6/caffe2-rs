@@ -3,9 +3,7 @@ crate::ix!();
 ///------------------------------------------
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HSoftmaxGradientOp<T, Context> {
-
-    base: HSoftmaxOpBase<T, Context>,
-
+    base:    HSoftmaxOpBase<T, Context>,
     phantom: PhantomData<T>,
 }
 

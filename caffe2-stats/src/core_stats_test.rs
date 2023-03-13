@@ -68,7 +68,7 @@ impl MyCaffeClass {
 }
 
 
-#[test] fn StatsTest_StatsTestClass() {
+#[test] fn stats_test_stats_test_class() {
     todo!();
     /*
       MyCaffeClass a("first");
@@ -91,7 +91,7 @@ impl MyCaffeClass {
 }
 
 
-#[test] fn StatsTest_StatsTestDuration() {
+#[test] fn stats_test_stats_test_duration() {
     todo!();
     /*
       struct TestStats {
@@ -116,7 +116,7 @@ impl MyCaffeClass {
 }
 
 
-#[test] fn StatsTest_StatsTestSimple() {
+#[test] fn stats_test_stats_test_simple() {
     todo!();
     /*
       struct TestStats {
@@ -149,7 +149,7 @@ impl MyCaffeClass {
 }
 
 
-#[test] fn StatsTest_StatsTestStatic() {
+#[test] fn stats_test_stats_test_static() {
     todo!();
     /*
       struct TestStats {

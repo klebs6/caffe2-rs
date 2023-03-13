@@ -9,7 +9,7 @@ crate::ix!();
 }
 
 
-#[test] fn NetAsyncTracingTest_ExtractShardId() {
+#[test] fn net_async_tracing_test_extract_shard_id() {
     todo!();
     /*
       testExtractShardId("ABCDEFshard:1705!!A", 1705);
@@ -24,7 +24,7 @@ crate::ix!();
   */
 }
 
-#[test] fn NetAsyncTracingTest_EveryKIteration() {
+#[test] fn net_async_tracing_test_every_kiteration() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -65,7 +65,7 @@ crate::ix!();
   */
 }
 
-#[test] fn NetAsyncTracingTest_GlobalTimeSlice() {
+#[test] fn net_async_tracing_test_global_time_slice() {
     todo!();
     /*
       const auto spec = R"DOC(

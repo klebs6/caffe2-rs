@@ -7,7 +7,7 @@ mod arch_arm {
 
     use super::*;
 
-    #[test] fn U8CLAMP__NEON_n_eq_8() {
+    #[test] fn u8clamp_neon_n_eq_8() {
         todo!();
         /*
         
@@ -17,7 +17,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_n_div_8() {
+    #[test] fn u8clamp_neon_n_div_8() {
         todo!();
         /*
         
@@ -29,7 +29,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_n_gt_8() {
+    #[test] fn u8clamp_neon_n_gt_8() {
         todo!();
         /*
         
@@ -41,7 +41,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_n_lt_8() {
+    #[test] fn u8clamp_neon_n_lt_8() {
         todo!();
         /*
         
@@ -53,7 +53,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_inplace() {
+    #[test] fn u8clamp_neon_inplace() {
         todo!();
         /*
         
@@ -66,7 +66,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_qmin() {
+    #[test] fn u8clamp_neon_qmin() {
         todo!();
         /*
         
@@ -81,7 +81,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8CLAMP__NEON_qmax() {
+    #[test] fn u8clamp_neon_qmax() {
         todo!();
         /*
         
@@ -102,7 +102,7 @@ mod arch_x86 {
 
     use super::*;
 
-    #[test] fn U8CLAMP__SSE2_n_eq_8() {
+    #[test] fn u8clamp_sse2_n_eq_8() {
         todo!();
         /*
         
@@ -112,7 +112,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_n_div_8() {
+    #[test] fn u8clamp_sse2_n_div_8() {
         todo!();
         /*
         
@@ -124,7 +124,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_n_gt_8() {
+    #[test] fn u8clamp_sse2_n_gt_8() {
         todo!();
         /*
         
@@ -136,7 +136,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_n_lt_8() {
+    #[test] fn u8clamp_sse2_n_lt_8() {
         todo!();
         /*
         
@@ -148,7 +148,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_inplace() {
+    #[test] fn u8clamp_sse2_inplace() {
         todo!();
         /*
         
@@ -161,7 +161,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_qmin() {
+    #[test] fn u8clamp_sse2_qmin() {
         todo!();
         /*
         
@@ -176,7 +176,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8CLAMP__SSE2_qmax() {
+    #[test] fn u8clamp_sse2_qmax() {
         todo!();
         /*
         

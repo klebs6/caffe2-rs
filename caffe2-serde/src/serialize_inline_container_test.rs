@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn PyTorchStreamWriterAndReader_SaveAndLoad() {
+#[test] fn py_torch_stream_writer_and_reader_save_and_load() {
     todo!();
     /*
       int64_t kFieldAlignment = 64L;

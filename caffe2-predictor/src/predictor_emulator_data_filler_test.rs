@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn DataFiller_FillNetInputTest() {
+#[test] fn data_filler_fill_net_input_test() {
     todo!();
     /*
       using namespace caffe2::testing;

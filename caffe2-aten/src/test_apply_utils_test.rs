@@ -151,7 +151,7 @@ pub fn test(
 }
 
 // apply utils test 2-dim
-#[test] fn apply_utils_test__2D() {
+#[test] fn apply_utils_test_2d() {
     todo!();
     /*
     
@@ -162,7 +162,7 @@ pub fn test(
 }
 
 // apply utils test 3-dim
-#[test] fn apply_utils_test__3D() {
+#[test] fn apply_utils_test_3d() {
     todo!();
     /*
     
@@ -184,7 +184,7 @@ pub fn test(
 }
 
 // apply utils test 10-dim
-#[test] fn apply_utils_test__10D() {
+#[test] fn apply_utils_test_10d() {
     todo!();
     /*
     

@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/x8lut.cc]
 
-#[test] fn X8LUT__SCALAR_n_eq_1() {
+#[test] fn x8lut_scalar_n_eq_1() {
     todo!();
     /*
     
@@ -11,7 +11,7 @@ crate::ix!();
     */
 }
 
-#[test] fn X8LUT__SCALAR_small_n() {
+#[test] fn x8lut_scalar_small_n() {
     todo!();
     /*
     
@@ -22,7 +22,7 @@ crate::ix!();
     */
 }
 
-#[test] fn X8LUT__SCALAR_large_n() {
+#[test] fn x8lut_scalar_large_n() {
     todo!();
     /*
     
@@ -33,7 +33,7 @@ crate::ix!();
     */
 }
 
-#[test] fn X8LUT__SCALAR_n_eq_1_inplace() {
+#[test] fn x8lut_scalar_n_eq_1_inplace() {
     todo!();
     /*
     
@@ -42,7 +42,7 @@ crate::ix!();
     */
 }
 
-#[test] fn X8LUT__SCALAR_small_n_inplace() {
+#[test] fn x8lut_scalar_small_n_inplace() {
     todo!();
     /*
     
@@ -53,7 +53,7 @@ crate::ix!();
     */
 }
 
-#[test] fn X8LUT__SCALAR_large_n_inplace() {
+#[test] fn x8lut_scalar_large_n_inplace() {
     todo!();
     /*
     

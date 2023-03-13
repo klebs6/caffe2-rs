@@ -33,7 +33,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_MatchSingleNode() {
+#[test] fn basic_match_single_node() {
     todo!();
     /*
       NNGraph graph;
@@ -60,7 +60,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_SyntaxError() {
+#[test] fn basic_syntax_error() {
     todo!();
     /*
       NNGraph graph;
@@ -80,7 +80,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_Diamond() {
+#[test] fn basic_diamond() {
     todo!();
     /*
       NNGraph graph;
@@ -155,7 +155,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_BadDiamond() {
+#[test] fn basic_bad_diamond() {
     todo!();
     /*
       NNGraph graph;
@@ -231,7 +231,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_StarInputs() {
+#[test] fn basic_star_inputs() {
     todo!();
     /*
       NNGraph graph;
@@ -331,7 +331,7 @@ use crate::{
 }
 
 
-#[test] fn Basic_StarOutputs() {
+#[test] fn basic_star_outputs() {
     todo!();
     /*
       NNGraph graph;
@@ -416,7 +416,7 @@ use crate::{
 }
 
 
-#[test] fn Caffe2ToNQL_Basic() {
+#[test] fn caffe_2tonql_basic() {
     todo!();
     /*
       NNGraph graph;
@@ -452,7 +452,7 @@ use crate::{
 }
 
 
-#[test] fn Caffe2ToNQL_TensorsNameDeduplication() {
+#[test] fn caffe_2tonql_tensors_name_deduplication() {
     todo!();
     /*
       NNGraph graph;

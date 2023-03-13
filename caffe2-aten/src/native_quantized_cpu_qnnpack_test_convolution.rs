@@ -133,7 +133,7 @@ lazy_static!{
 }
 
 
-#[test] fn CONVOLUTION_OP_xzp_1x1() {
+#[test] fn convolution_op_xzp_1x1() {
     todo!();
     /*
     
@@ -151,7 +151,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_qmin() {
+#[test] fn convolution_op_xzp_1x1_with_qmin() {
     todo!();
     /*
     
@@ -170,7 +170,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_qmax() {
+#[test] fn convolution_op_xzp_1x1_with_qmax() {
     todo!();
     /*
     
@@ -189,7 +189,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_input_stride() {
+#[test] fn convolution_op_xzp_1x1_with_input_stride() {
     todo!();
     /*
     
@@ -208,7 +208,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_output_stride() {
+#[test] fn convolution_op_xzp_1x1_with_output_stride() {
     todo!();
     /*
     
@@ -227,7 +227,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_batch() {
+#[test] fn convolution_op_xzp_1x1_with_batch() {
     todo!();
     /*
     
@@ -246,7 +246,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_grouped_xzp_1x1() {
+#[test] fn convolution_op_grouped_xzp_1x1() {
     todo!();
     /*
     
@@ -265,7 +265,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_grouped_xzp_1x1_runtime_quant() {
+#[test] fn convolution_op_grouped_xzp_1x1_runtime_quant() {
     todo!();
     /*
     
@@ -724,7 +724,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_per_channel() {
+#[test] fn convolution_op_xzp_1x1_per_channel() {
     todo!();
     /*
     
@@ -743,7 +743,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_qmin_per_channel() {
+#[test] fn convolution_op_xzp_1x1_with_qmin_per_channel() {
     todo!();
     /*
     
@@ -763,7 +763,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_qmax_per_channel() {
+#[test] fn convolution_op_xzp_1x1_with_qmax_per_channel() {
     todo!();
     /*
     
@@ -783,7 +783,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_input_stride_per_channel() {
+#[test] fn convolution_op_xzp_1x1_with_input_stride_per_channel() {
     todo!();
     /*
     
@@ -803,7 +803,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_output_stride_per_channel() {
+#[test] fn convolution_op_xzp_1x1_with_output_stride_per_channel() {
     todo!();
     /*
     
@@ -823,7 +823,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_xzp_1x1_with_batch_per_channel() {
+#[test] fn convolution_op_xzp_1x1_with_batch_per_channel() {
     todo!();
     /*
     
@@ -843,7 +843,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_grouped_xzp_1x1_per_channel() {
+#[test] fn convolution_op_grouped_xzp_1x1_per_channel() {
     todo!();
     /*
     
@@ -863,7 +863,7 @@ lazy_static!{
     */
 }
 
-#[test] fn CONVOLUTION_OP_grouped_xzp_1x1_runtime_quant_per_channel() {
+#[test] fn convolution_op_grouped_xzp_1x1_runtime_quant_per_channel() {
     todo!();
     /*
     

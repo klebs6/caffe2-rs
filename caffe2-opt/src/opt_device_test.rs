@@ -14,7 +14,7 @@ crate::ix!();
     }
 }
 
-#[test] fn DeviceTest_InsertCopies() {
+#[test] fn device_test_insert_copies() {
     todo!();
     /*
       caffe2::NetDef net;

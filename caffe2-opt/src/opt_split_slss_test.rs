@@ -86,7 +86,7 @@ use crate::{
     */
 }
 
-#[test] fn splitSparseLengthsSumSparse_sweep() {
+#[test] fn split_sparse_lengths_sum_sparse_sweep() {
     todo!();
     /*
       std::vector<bool> has_weights = {true, false};

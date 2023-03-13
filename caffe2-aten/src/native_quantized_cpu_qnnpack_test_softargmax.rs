@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/softargmax.cc]
 
-#[test] fn SOFTARGMAX_OP_zero_batch() {
+#[test] fn softargmax_op_zero_batch() {
     todo!();
     /*
     
@@ -11,7 +11,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_single_class() {
+#[test] fn softargmax_op_single_class() {
     todo!();
     /*
     
@@ -20,7 +20,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_two_classes() {
+#[test] fn softargmax_op_two_classes() {
     todo!();
     /*
     
@@ -29,7 +29,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_many_classes() {
+#[test] fn softargmax_op_many_classes() {
     todo!();
     /*
     
@@ -44,7 +44,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_cifar_classes() {
+#[test] fn softargmax_op_cifar_classes() {
     todo!();
     /*
     
@@ -56,7 +56,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_imagenet_classes() {
+#[test] fn softargmax_op_imagenet_classes() {
     todo!();
     /*
     
@@ -82,7 +82,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_many_channels_with_input_scale() {
+#[test] fn softargmax_op_many_channels_with_input_scale() {
     todo!();
     /*
     
@@ -101,7 +101,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_many_channels_with_input_zero_point() {
+#[test] fn softargmax_op_many_channels_with_input_zero_point() {
     todo!();
     /*
     
@@ -120,7 +120,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_small_batch() {
+#[test] fn softargmax_op_small_batch() {
     todo!();
     /*
     
@@ -135,7 +135,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_small_batch_with_input_stride() {
+#[test] fn softargmax_op_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -151,7 +151,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_small_batch_with_output_stride() {
+#[test] fn softargmax_op_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -167,7 +167,7 @@ crate::ix!();
     */
 }
 
-#[test] fn SOFTARGMAX_OP_strided_batch_with_input_and_output_stride() {
+#[test] fn softargmax_op_strided_batch_with_input_and_output_stride() {
     todo!();
     /*
     

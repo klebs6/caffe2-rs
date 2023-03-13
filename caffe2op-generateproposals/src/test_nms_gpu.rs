@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn UtilsNMSTest_TestNMSGPU() {
+#[test] fn utils_nms_testnmsgpu() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -166,7 +166,7 @@ crate::ix!();
     */
 }
 
-#[test] fn UtilsNMSTest_TestPerfNMS() {
+#[test] fn utils_nms_test_perf_nms() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -287,7 +287,7 @@ crate::ix!();
       */
 }
 
-#[test] fn UtilsNMSTest_GPUEqualsCPUCorrectnessTest() {
+#[test] fn utils_nms_test_gpu_equals_cpu_correctness_test() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -397,7 +397,7 @@ crate::ix!();
       */
 }
 
-#[test] fn UtilsNMSTest_TestNMSGPURotatedAngle0() {
+#[test] fn utils_nms_test_nmsgpu_rotated_angle0() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -489,7 +489,7 @@ crate::ix!();
       */
 }
 
-#[test] fn UtilsNMSTest_TestPerfRotatedNMS() {
+#[test] fn utils_nms_test_perf_rotated_nms() {
     todo!();
     /*
       if (!HasCudaGPU())

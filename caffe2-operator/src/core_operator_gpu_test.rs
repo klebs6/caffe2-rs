@@ -80,7 +80,7 @@ register_cuda_operator!{JustTest, JustTestCUDA}
 
 register_cudnn_operator!{JustTest, JustTestCUDNN}
 
-#[test] fn EnginePrefTest_GPUDeviceDefaultPreferredEngines() {
+#[test] fn engine_pref_test_gpu_device_default_preferred_engines() {
     todo!();
     /*
       if (!HasCudaGPU())

@@ -37,7 +37,7 @@ use crate::{
     */
 }
 
-#[test] fn Converter_DeclareExport() {
+#[test] fn converter_declare_export() {
     todo!();
     /*
       auto net = fakeNet();
@@ -81,7 +81,7 @@ use crate::{
 }
 
 
-#[test] fn Distributed_InsertDeviceOptions() {
+#[test] fn distributed_insert_device_options() {
     todo!();
     /*
       auto net = fakeNet();
@@ -103,7 +103,7 @@ use crate::{
 }
 
 
-#[test] fn Distributed_InsertDeviceOptionsFailureCase() {
+#[test] fn distributed_insert_device_options_failure_case() {
     todo!();
     /*
       auto net = fakeNet();
@@ -122,7 +122,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_InjectDataEdgeIndicators() {
+#[test] fn converter_inject_data_edge_indicators() {
     todo!();
     /*
       auto net = fakeNet();
@@ -162,7 +162,7 @@ use crate::{
 
 
 // Main usage
-#[test] fn Converter_OverloadedConvertToNNModule() {
+#[test] fn converter_overloaded_convert_to_nnm_odule() {
     todo!();
     /*
       auto net = fakeNet();
@@ -182,7 +182,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_OverloadedConvertToNNModuleFailure() {
+#[test] fn converter_overloaded_convert_to_nnm_odule_failure() {
     todo!();
     /*
       auto net = fakeNet();

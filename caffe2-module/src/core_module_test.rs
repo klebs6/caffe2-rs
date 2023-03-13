@@ -38,7 +38,7 @@ impl Caffe2ModuleTestStaticDummyOp {
 
 register_cpu_operator!{Caffe2ModuleTestStaticDummy, Caffe2ModuleTestStaticDummyOp}
 
-#[test] fn ModuleTest_StaticModule() {
+#[test] fn module_test_static_module() {
     todo!();
     /*
       const string name = "caffe2_module_test_static";
@@ -64,7 +64,7 @@ register_cpu_operator!{Caffe2ModuleTestStaticDummy, Caffe2ModuleTestStaticDummyO
 
 
 #[cfg(caffe2_build_shared_libs)]
-#[test] fn ModuleTest_DynamicModule() {
+#[test] fn module_test_dynamic_module() {
     todo!();
     /*
       const string name = "caffe2_module_test_dynamic";

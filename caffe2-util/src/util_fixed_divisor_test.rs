@@ -24,7 +24,7 @@ crate::ix!();
     */
 }
 
-#[test] fn FixedDivisorTest_FixedDivisorInt32Test() {
+#[test] fn fixed_divisor_test_fixed_divisor_int_32test() {
     todo!();
     /*
       constexpr int32_t kMax = int32_t::max;

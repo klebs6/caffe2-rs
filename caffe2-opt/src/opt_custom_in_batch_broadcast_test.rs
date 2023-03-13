@@ -90,7 +90,7 @@ pub fn make_tensor_info(
     */
 }
 
-#[test] fn InBatchBroadcast_main() {
+#[test] fn in_batch_broadcast_main() {
     todo!();
     /*
       NetDef net;
@@ -165,7 +165,7 @@ pub fn make_tensor_info(
       */
 }
 
-#[test] fn InBatchBroadcast_fuse8bit() {
+#[test] fn in_batch_broadcast_fuse8bit() {
     todo!();
     /*
       NetDef net;

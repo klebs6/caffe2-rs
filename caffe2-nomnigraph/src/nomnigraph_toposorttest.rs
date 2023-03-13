@@ -10,7 +10,7 @@ use crate::{
 type GraphT    = NomGraph<TestClass>;
 type TopoSortT = TopoSort<GraphT>;
 
-#[test] fn TopoSort_Simple() {
+#[test] fn topo_sort_simple() {
     todo!();
     /*
   GraphT g;
@@ -25,7 +25,7 @@ type TopoSortT = TopoSort<GraphT>;
   */
 }
 
-#[test] fn TopoSort_DAG() {
+#[test] fn topo_sort_dag() {
     todo!();
     /*
   GraphT g;
@@ -55,7 +55,7 @@ type TopoSortT = TopoSort<GraphT>;
   */
 }
 
-#[test] fn TopoSort_Cycle1() {
+#[test] fn topo_sort_cycle1() {
     todo!();
     /*
   GraphT g;
@@ -69,7 +69,7 @@ type TopoSortT = TopoSort<GraphT>;
   */
 }
 
-#[test] fn TopoSort_Cycle2() {
+#[test] fn topo_sort_cycle2() {
     todo!();
     /*
   GraphT g;

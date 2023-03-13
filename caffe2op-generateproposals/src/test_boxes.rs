@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn UtilsBoxesTest_TestBboxTransformRandom() {
+#[test] fn utils_boxes_test_bbox_transform_random() {
     todo!();
     /*
       using EMatXf = Eigen::MatrixXf;
@@ -35,7 +35,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsBoxesTest_TestBboxTransformRotated() {
+#[test] fn utils_boxes_test_bbox_transform_rotated() {
     todo!();
     /*
       // Test rotated bbox transform w/o angle normalization
@@ -73,7 +73,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsBoxesTest_TestBboxTransformRotatedNormalized() {
+#[test] fn utils_boxes_test_bbox_transform_rotated_normalized() {
     todo!();
     /*
       // Test rotated bbox transform with angle normalization
@@ -112,7 +112,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsBoxesTest_ClipRotatedBoxes() {
+#[test] fn utils_boxes_test_clip_rotated_boxes() {
     todo!();
     /*
       // Test utils::clip_boxes_rotated()

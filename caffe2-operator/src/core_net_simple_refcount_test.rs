@@ -54,7 +54,7 @@ register_cpu_operator!{NetSimpleRefCountTest, NetSimpleRefCountTestOp}
 num_inputs!{NetSimpleRefCountTest, 1}
 num_outputs!{NetSimpleRefCountTest, 1}
 
-#[test] fn NetSimpleRefCountTest_TestCorrectness() {
+#[test] fn net_simple_ref_count_test_correctness() {
     todo!();
     /*
       Workspace ws;

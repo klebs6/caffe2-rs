@@ -216,7 +216,7 @@ crate::ix!();
     */
 }
 
-#[test] fn BatchPermutationTest_CHECKCPUGPUEqualGenericDimension() {
+#[test] fn batch_permutation_test_checkcpugpu_equal_generic_dimension() {
     todo!();
     /*
   auto t0 = std::chrono::high_resolution_clock::now();

@@ -91,7 +91,7 @@ register_blob_deserializer![
     */
 ];
 
-#[test] fn BlobTest_Blob() {
+#[test] fn blob_test_blob() {
     todo!();
     /*
       Blob blob;
@@ -113,7 +113,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobUninitialized() {
+#[test] fn blob_test_blob_uninitialized() {
     todo!();
     /*
       Blob blob;
@@ -121,7 +121,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobWrongType() {
+#[test] fn blob_test_blob_wrong_type() {
     todo!();
     /*
       Blob blob;
@@ -134,7 +134,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobReset() {
+#[test] fn blob_test_blob_reset() {
     todo!();
     /*
       Blob blob;
@@ -145,7 +145,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobMove() {
+#[test] fn blob_test_blob_move() {
     todo!();
     /*
       Blob blob1;
@@ -161,7 +161,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobNonConstructible() {
+#[test] fn blob_test_blob_non_constructible() {
     todo!();
     /*
       Blob blob;
@@ -180,7 +180,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobShareExternalPointer() {
+#[test] fn blob_test_blob_share_external_pointer() {
     todo!();
     /*
       Blob blob;
@@ -192,7 +192,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_BlobShareExternalObject() {
+#[test] fn blob_test_blob_share_external_object() {
     todo!();
     /*
       Blob blob;
@@ -204,7 +204,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn BlobTest_StringSerialization() {
+#[test] fn blob_test_string_serialization() {
     todo!();
     /*
       const std::string kTestString = "Hello world?";
@@ -221,7 +221,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn TensorNonTypedTest_TensorChangeType() {
+#[test] fn tensor_non_typed_test_tensor_change_type() {
     todo!();
     /*
       vector<int> dims(3);
@@ -260,7 +260,7 @@ register_blob_deserializer![
       */
 }
 
-#[test] fn TensorNonTypedTest_NonDefaultConstructible() {
+#[test] fn tensor_non_typed_test_non_default_constructible() {
     todo!();
     /*
       vector<int> dims(3);
@@ -285,7 +285,7 @@ type TensorTypes           = Types<(u8, i32, f32)>;
 typed_test_case![TensorCPUTest,      TensorTypes];
 typed_test_case![TensorCPUDeathTest, TensorTypes];
 
-#[test] fn TensorCPUTest_TensorInitializedEmpty() {
+#[test] fn tensor_cpu_test_tensor_initialized_empty() {
     todo!();
     /*
       Tensor tensor(CPU);
@@ -306,7 +306,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorInitializedNonEmpty() {
+#[test] fn tensor_cpu_test_tensor_initialized_non_empty() {
     todo!();
     /*
       vector<int> dims(3);
@@ -335,7 +335,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorInitializedZeroDim() {
+#[test] fn tensor_cpu_test_tensor_initialized_zero_dim() {
     todo!();
     /*
       vector<int> dims(3);
@@ -352,7 +352,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorResizeZeroDim() {
+#[test] fn tensor_cpu_test_tensor_resize_zero_dim() {
     todo!();
     /*
       vector<int> dims(3);
@@ -382,7 +382,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorInitializedScalar() {
+#[test] fn tensor_cpu_test_tensor_initialized_scalar() {
     todo!();
     /*
       vector<int> dims;
@@ -394,7 +394,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorAlias() {
+#[test] fn tensor_cpu_test_tensor_alias() {
     todo!();
     /*
       vector<int> dims(3);
@@ -415,7 +415,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorShareDataRawPointer() {
+#[test] fn tensor_cpu_test_tensor_share_data_raw_pointer() {
     todo!();
     /*
       vector<int> dims(3);
@@ -435,7 +435,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorShareDataRawPointerWithMeta() {
+#[test] fn tensor_cpu_test_tensor_share_data_raw_pointer_with_meta() {
     todo!();
     /*
       vector<int> dims(3);
@@ -456,7 +456,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_TensorAliasCanUseDifferentShapes() {
+#[test] fn tensor_cpu_test_tensor_alias_can_use_different_shapes() {
     todo!();
     /*
       vector<int> dims(3);
@@ -482,7 +482,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_NoLongerAliassAfterNumelChanges() {
+#[test] fn tensor_cpu_test_no_longer_aliass_after_numel_changes() {
     todo!();
     /*
       vector<int> dims(3);
@@ -502,7 +502,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_NoLongerAliasAfterFreeMemory() {
+#[test] fn tensor_cpu_test_no_longer_alias_after_free_memory() {
     todo!();
     /*
       vector<int> dims(3);
@@ -521,7 +521,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_KeepOnShrink() {
+#[test] fn tensor_cpu_test_keep_on_shrink() {
     todo!();
     /*
       // Set flags (defaults)
@@ -555,7 +555,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUTest_MaxKeepOnShrink() {
+#[test] fn tensor_cpu_test_max_keep_on_shrink() {
     todo!();
     /*
       // Set flags
@@ -584,7 +584,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUDeathTest_CannotAccessRawDataWhenEmpty() {
+#[test] fn tensor_cpu_death_test_cannot_access_raw_data_when_empty() {
     todo!();
     /*
       Tensor tensor(CPU);
@@ -594,7 +594,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorCPUDeathTest_CannotAccessDataWhenEmpty() {
+#[test] fn tensor_cpu_death_test_cannot_access_data_when_empty() {
     todo!();
     /*
       Tensor tensor(CPU);
@@ -604,7 +604,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorTest_TensorNonFundamentalType() {
+#[test] fn tensor_test_tensor_non_fundamental_type() {
     todo!();
     /*
       Tensor tensor(vector<int>{2, 3, 4}, CPU);
@@ -616,7 +616,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorTest_TensorNonFundamentalTypeClone() {
+#[test] fn tensor_test_tensor_non_fundamental_type_clone() {
     todo!();
     /*
       Tensor tensor(vector<int>{2, 3, 4}, CPU);
@@ -643,7 +643,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorTest_Tensor64BitDimension() {
+#[test] fn tensor_test_tensor_64bit_dimension() {
     todo!();
     /*
       // Initialize a large tensor.
@@ -679,7 +679,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorTest_UndefinedTensor() {
+#[test] fn tensor_test_undefined_tensor() {
     todo!();
     /*
       Tensor x;
@@ -687,7 +687,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorTest_CopyAndAssignment() {
+#[test] fn tensor_test_copy_and_assignment() {
     todo!();
     /*
       Tensor x(CPU);
@@ -702,7 +702,7 @@ typed_test_case![TensorCPUDeathTest, TensorTypes];
       */
 }
 
-#[test] fn TensorDeathTest_CannotCastDownLargeDims() {
+#[test] fn tensor_death_test_cannot_cast_down_large_dims() {
     todo!();
     /*
       int64_t large_number =
@@ -789,7 +789,7 @@ test_serialization_with_type!{u8,     int32_data}
 test_serialization_with_type!{u16,    int32_data}
 test_serialization_with_type!{i64,    int64_data}
 
-#[test] fn TensorTest_TensorSerialization_CustomType() {
+#[test] fn tensor_test_tensor_serialization_custom_type() {
     todo!();
     /*
       Blob blob;
@@ -818,7 +818,7 @@ test_serialization_with_type!{i64,    int64_data}
       */
 }
 
-#[test] fn TensorTest_Half() {
+#[test] fn tensor_test_half() {
     todo!();
     /*
       const int64_t kSize = 3000000;
@@ -861,7 +861,7 @@ test_serialization_with_type!{i64,    int64_data}
       */
 }
 
-#[test] fn TensorTest_TensorFactory() {
+#[test] fn tensor_test_tensor_factory() {
     todo!();
     /*
       Tensor a = empty({1, 2, 3}, at::device(CPU).dtype<float>());
@@ -873,7 +873,7 @@ test_serialization_with_type!{i64,    int64_data}
       */
 }
 
-#[test] fn QTensorTest_QTensorSerialization() {
+#[test] fn q_tensor_test_q_tensor_serialization() {
     todo!();
     /*
       Blob blob;
@@ -1068,7 +1068,7 @@ type TensorDataTypes = (f32, bool, f64, i32, i8, i16, u8, u16, i64);
 
 typed_test_case![TypedTensorTest, TensorDataTypes];
 
-#[test] fn TypedTensorTest_BigTensorSerialization() {
+#[test] fn typed_tensor_test_big_tensor_serialization() {
     todo!();
     /*
       int64_t d1 = 2;
@@ -1241,7 +1241,7 @@ register_typed_class!{
     DummyTypeDeserializer
 }
 
-#[test] fn ContentChunks_Serialization() {
+#[test] fn content_chunks_serialization() {
     todo!();
     /*
 
@@ -1295,7 +1295,7 @@ register_typed_class!{
   */
 }
 
-#[test] fn CustomChunkSize_BigTensorSerialization() {
+#[test] fn custom_chunk_size_big_tensor_serialization() {
     todo!();
     /*
 
@@ -1332,7 +1332,7 @@ register_typed_class!{
   */
 }
 
-#[test] fn QTensor_QTensorSizingTest() {
+#[test] fn q_tensor_q_tensor_sizing_test() {
     todo!();
     /*
       vector<int> dims(3);
@@ -1346,7 +1346,7 @@ register_typed_class!{
       */
 }
 
-#[test] fn BlobTest_CastingMessage() {
+#[test] fn blob_test_casting_message() {
     todo!();
     /*
       Blob b;
@@ -1364,7 +1364,7 @@ register_typed_class!{
       */
 }
 
-#[test] fn TensorConstruction_UninitializedCopyTest() {
+#[test] fn tensor_construction_uninitialized_copy_test() {
     todo!();
     /*
       Tensor x(CPU);
@@ -1377,7 +1377,7 @@ register_typed_class!{
       */
 }
 
-#[test] fn TensorConstruction_CopyConstructorTest() {
+#[test] fn tensor_construction_copy_constructor_test() {
     todo!();
     /*
       Tensor x(CPU);
@@ -1396,7 +1396,7 @@ register_typed_class!{
       */
 }
 
-#[test] fn TensorConstruction_MoveAssignmentOpTest() {
+#[test] fn tensor_construction_move_assignment_op_test() {
     todo!();
     /*
       Tensor x(CPU);
@@ -1409,7 +1409,7 @@ register_typed_class!{
       */
 }
 
-#[test] fn TensorSerialization_MistakenlySerializingDtypeUninitializedTensor() {
+#[test] fn tensor_serialization_mistakenly_serializing_dtype_uninitialized_tensor() {
     todo!();
     /*
       // This test preserves a legacy behavior that dtype-unitialized tensors can
@@ -1529,7 +1529,7 @@ register_typed_class!{
     */
 }
 
-#[test] fn TensorSerialization_TestCorrectness() {
+#[test] fn tensor_serialization_test_correctness() {
     todo!();
     /*
       FLAGS_caffe2_serialize_using_bytes_as_holder = true;

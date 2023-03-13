@@ -70,7 +70,7 @@ pub const kInt32DtypeBlob: [u8; 60] = hex!{
     */
 }
 
-#[test] fn TensorSerialization_TestUnknownDType() {
+#[test] fn tensor_serialization_test_unknown_dtype() {
     todo!();
     /*
       // This code was used to generate the blob data listed above.

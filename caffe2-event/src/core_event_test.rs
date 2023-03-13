@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn EventCPUTest_EventBasics() {
+#[test] fn event_cpu_test_event_basics() {
     todo!();
     /*
       DeviceOption device_option;
@@ -21,7 +21,7 @@ crate::ix!();
       */
 }
 
-#[test] fn EventCPUTest_EventErrors() {
+#[test] fn event_cpu_test_event_errors() {
     todo!();
     /*
       DeviceOption device_option;

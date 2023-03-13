@@ -8,7 +8,7 @@ crate::ix!();
   | unsigned 32-bit arithmetics.
   |
   */
-#[test] fn PRECISE__SCALAR_UNSIGNED32_exact_divide_by_po2() {
+#[test] fn precise_scalar_unsigned32_exact_divide_by_po2() {
     todo!();
     /*
     
@@ -20,7 +20,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_exact_divide_by_po2_with_zero_point() {
+#[test] fn precise_scalar_unsigned32_exact_divide_by_po2_with_zero_point() {
     todo!();
     /*
     
@@ -34,7 +34,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_divide_by_po2_with_rounding_up() {
+#[test] fn precise_scalar_unsigned32_divide_by_po2_with_rounding_up() {
     todo!();
     /*
     
@@ -51,7 +51,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_divide_by_po2_with_rounding_down() {
+#[test] fn precise_scalar_unsigned32_divide_by_po2_with_rounding_down() {
     todo!();
     /*
     
@@ -68,7 +68,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_divide_by_po2_with_rounding_away() {
+#[test] fn precise_scalar_unsigned32_divide_by_po2_with_rounding_away() {
     todo!();
     /*
     
@@ -85,7 +85,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_special_cases() {
+#[test] fn precise_scalar_unsigned32_special_cases() {
     todo!();
     /*
     
@@ -95,7 +95,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED32_random_cases() {
+#[test] fn precise_scalar_unsigned32_random_cases() {
     todo!();
     /*
     
@@ -110,7 +110,7 @@ crate::ix!();
   | unsigned 64-bit arithmetics.
   |
   */
-#[test] fn PRECISE__SCALAR_UNSIGNED64_exact_divide_by_po2() {
+#[test] fn precise_scalar_unsigned64_exact_divide_by_po2() {
     todo!();
     /*
     
@@ -122,7 +122,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_exact_divide_by_po2_with_zero_point() {
+#[test] fn precise_scalar_unsigned64_exact_divide_by_po2_with_zero_point() {
     todo!();
     /*
     
@@ -136,7 +136,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_divide_by_po2_with_rounding_up() {
+#[test] fn precise_scalar_unsigned64_divide_by_po2_with_rounding_up() {
     todo!();
     /*
     
@@ -153,7 +153,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_divide_by_po2_with_rounding_down() {
+#[test] fn precise_scalar_unsigned64_divide_by_po2_with_rounding_down() {
     todo!();
     /*
     
@@ -170,7 +170,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_divide_by_po2_with_rounding_away() {
+#[test] fn precise_scalar_unsigned64_divide_by_po2_with_rounding_away() {
     todo!();
     /*
     
@@ -187,7 +187,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_special_cases() {
+#[test] fn precise_scalar_unsigned64_special_cases() {
     todo!();
     /*
     
@@ -197,7 +197,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_UNSIGNED64_random_cases() {
+#[test] fn precise_scalar_unsigned64_random_cases() {
     todo!();
     /*
     
@@ -211,7 +211,7 @@ crate::ix!();
  * Precise scalar implementation using signed 64-bit arithmetics.
  */
 
-#[test] fn PRECISE__SCALAR_SIGNED64_exact_divide_by_po2() {
+#[test] fn precise_scalar_signed64_exact_divide_by_po2() {
     todo!();
     /*
     
@@ -223,7 +223,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_exact_divide_by_po2_with_zero_point() {
+#[test] fn precise_scalar_signed64_exact_divide_by_po2_with_zero_point() {
     todo!();
     /*
     
@@ -237,7 +237,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_divide_by_po2_with_rounding_up() {
+#[test] fn precise_scalar_signed64_divide_by_po2_with_rounding_up() {
     todo!();
     /*
     
@@ -254,7 +254,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_divide_by_po2_with_rounding_down() {
+#[test] fn precise_scalar_signed64_divide_by_po2_with_rounding_down() {
     todo!();
     /*
     
@@ -271,7 +271,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_divide_by_po2_with_rounding_away() {
+#[test] fn precise_scalar_signed64_divide_by_po2_with_rounding_away() {
     todo!();
     /*
     
@@ -288,7 +288,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_special_cases() {
+#[test] fn precise_scalar_signed64_special_cases() {
     todo!();
     /*
     
@@ -298,7 +298,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__SCALAR_SIGNED64_random_cases() {
+#[test] fn precise_scalar_signed64_random_cases() {
     todo!();
     /*
     
@@ -313,7 +313,7 @@ crate::ix!();
   | using lrintf function.
   |
   */
-#[test] fn FP32__SCALAR_LRINTF_random_cases() {
+#[test] fn fp32_scalar_lrintf_random_cases() {
     todo!();
     /*
     
@@ -328,7 +328,7 @@ crate::ix!();
   | using magic trick for FP32->INT32 conversion.
   |
   */
-#[test] fn FP32__SCALAR_MAGIC_random_cases() {
+#[test] fn fp32_scalar_magic_random_cases() {
     todo!();
     /*
     
@@ -342,7 +342,7 @@ crate::ix!();
   | Q31-based scalar implementation.
   |
   */
-#[test] fn Q31__SCALAR_exact_divide_by_po2() {
+#[test] fn q31_scalar_exact_divide_by_po2() {
     todo!();
     /*
     
@@ -354,7 +354,7 @@ crate::ix!();
     */
 }
 
-#[test] fn Q31__SCALAR_exact_divide_by_po2_with_zero_point() {
+#[test] fn q31_scalar_exact_divide_by_po2_with_zero_point() {
     todo!();
     /*
     
@@ -368,7 +368,7 @@ crate::ix!();
     */
 }
 
-#[test] fn Q31__SCALAR_divide_by_po2_with_rounding_up() {
+#[test] fn q31_scalar_divide_by_po2_with_rounding_up() {
     todo!();
     /*
     
@@ -389,7 +389,7 @@ crate::ix!();
   | of upward bias in multiplication
   |
   */
-#[test] fn Q31__SCALAR_divide_by_po2_with_rounding_away() {
+#[test] fn q31_scalar_divide_by_po2_with_rounding_away() {
     todo!();
     /*
     
@@ -405,7 +405,7 @@ crate::ix!();
     */
 }
 
-#[test] fn Q31__SCALAR_special_cases() {
+#[test] fn q31_scalar_special_cases() {
     todo!();
     /*
     
@@ -414,7 +414,7 @@ crate::ix!();
     */
 }
 
-#[test] fn Q31__SCALAR_random_cases() {
+#[test] fn q31_scalar_random_cases() {
     todo!();
     /*
     
@@ -424,7 +424,7 @@ crate::ix!();
     */
 }
 
-#[test] fn Q31__SCALAR_random_match_gemmlowp() {
+#[test] fn q31_scalar_random_match_gemmlowp() {
     todo!();
     /*
     
@@ -439,7 +439,7 @@ crate::ix!();
   | Scalar implementation from gemmlowp.
   |
   */
-#[test] fn GEMMLOWP__SCALAR_random_cases() {
+#[test] fn gemmlowp_scalar_random_cases() {
     todo!();
     /*
     
@@ -454,7 +454,7 @@ crate::ix!();
   | unsigned 32-bit arithmetics.
   |
   */
-#[test] fn PRECISE__PSIMD_exact_divide_by_po2() {
+#[test] fn precise_psimd_exact_divide_by_po2() {
     todo!();
     /*
     
@@ -466,7 +466,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_exact_divide_by_po2_with_zero_point() {
+#[test] fn precise_psimd_exact_divide_by_po2_with_zero_point() {
     todo!();
     /*
     
@@ -480,7 +480,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_divide_by_po2_with_rounding_up() {
+#[test] fn precise_psimd_divide_by_po2_with_rounding_up() {
     todo!();
     /*
     
@@ -497,7 +497,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_divide_by_po2_with_rounding_down() {
+#[test] fn precise_psimd_divide_by_po2_with_rounding_down() {
     todo!();
     /*
     
@@ -514,7 +514,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_divide_by_po2_with_rounding_away() {
+#[test] fn precise_psimd_divide_by_po2_with_rounding_away() {
     todo!();
     /*
     
@@ -531,7 +531,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_special_cases() {
+#[test] fn precise_psimd_special_cases() {
     todo!();
     /*
     
@@ -541,7 +541,7 @@ crate::ix!();
     */
 }
 
-#[test] fn PRECISE__PSIMD_random_cases() {
+#[test] fn precise_psimd_random_cases() {
     todo!();
     /*
     
@@ -556,7 +556,7 @@ crate::ix!();
   | magic trick for FP32->INT32 conversion.
   |
   */
-#[test] fn FP32__PSIMD_random_cases() {
+#[test] fn fp32_psimd_random_cases() {
     todo!();
     /*
     
@@ -576,7 +576,7 @@ mod x86 {
       | floating-point shuffle.
       |
       */
-    #[test] fn PRECISE__SSE2_exact_divide_by_po2() {
+    #[test] fn precise_sse2_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -588,7 +588,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_exact_divide_by_po2_with_zero_point() {
+    #[test] fn precise_sse2_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -602,7 +602,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_divide_by_po2_with_rounding_up() {
+    #[test] fn precise_sse2_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -618,7 +618,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_divide_by_po2_with_rounding_down() {
+    #[test] fn precise_sse2_divide_by_po2_with_rounding_down() {
         todo!();
         /*
         
@@ -635,7 +635,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_divide_by_po2_with_rounding_away() {
+    #[test] fn precise_sse2_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -652,7 +652,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_special_cases() {
+    #[test] fn precise_sse2_special_cases() {
         todo!();
         /*
         
@@ -662,7 +662,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE2_random_cases() {
+    #[test] fn precise_sse2_random_cases() {
         todo!();
         /*
         
@@ -677,7 +677,7 @@ mod x86 {
       | floating-point shuffle.
       |
       */
-    #[test] fn PRECISE__SSSE3_exact_divide_by_po2() {
+    #[test] fn precise_ssse3_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -689,7 +689,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_exact_divide_by_po2_with_zero_point() {
+    #[test] fn precise_ssse3_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -703,7 +703,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_divide_by_po2_with_rounding_up() {
+    #[test] fn precise_ssse3_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -720,7 +720,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_divide_by_po2_with_rounding_down() {
+    #[test] fn precise_ssse3_divide_by_po2_with_rounding_down() {
         todo!();
         /*
         
@@ -737,7 +737,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_divide_by_po2_with_rounding_away() {
+    #[test] fn precise_ssse3_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -754,7 +754,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_special_cases() {
+    #[test] fn precise_ssse3_special_cases() {
         todo!();
         /*
         
@@ -764,7 +764,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSSE3_random_cases() {
+    #[test] fn precise_ssse3_random_cases() {
         todo!();
         /*
         
@@ -779,7 +779,7 @@ mod x86 {
       | static blend instruction.
       |
       */
-    #[test] fn PRECISE__SSE4_exact_divide_by_po2() {
+    #[test] fn precise_sse4_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -791,7 +791,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_exact_divide_by_po2_with_zero_point() {
+    #[test] fn precise_sse4_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -805,7 +805,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_divide_by_po2_with_rounding_up() {
+    #[test] fn precise_sse4_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -821,7 +821,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_divide_by_po2_with_rounding_down() {
+    #[test] fn precise_sse4_divide_by_po2_with_rounding_down() {
         todo!();
         /*
         
@@ -838,7 +838,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_divide_by_po2_with_rounding_away() {
+    #[test] fn precise_sse4_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -855,7 +855,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_special_cases() {
+    #[test] fn precise_sse4_special_cases() {
         todo!();
         /*
         
@@ -865,7 +865,7 @@ mod x86 {
         */
     }
 
-    #[test] fn PRECISE__SSE4_random_cases() {
+    #[test] fn precise_sse4_random_cases() {
         todo!();
         /*
         
@@ -879,7 +879,7 @@ mod x86 {
       | FP32-based x86 SSE2 implementation.
       |
       */
-    #[test] fn FP32__SSE2_random_cases() {
+    #[test] fn fp32_sse2_random_cases() {
         todo!();
         /*
         
@@ -893,7 +893,7 @@ mod x86 {
       | Q31-based x86 SSE2 implementation.
       |
       */
-    #[test] fn Q31__SSE2_exact_divide_by_po2() {
+    #[test] fn q31_sse2_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -905,7 +905,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE2_exact_divide_by_po2_with_zero_point() {
+    #[test] fn q31_sse2_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -919,7 +919,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE2_divide_by_po2_with_rounding_up() {
+    #[test] fn q31_sse2_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -940,7 +940,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn Q31__SSE2_divide_by_po2_with_rounding_away() {
+    #[test] fn q31_sse2_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -956,7 +956,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE2_special_cases() {
+    #[test] fn q31_sse2_special_cases() {
         todo!();
         /*
         
@@ -965,7 +965,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE2_random_cases() {
+    #[test] fn q31_sse2_random_cases() {
         todo!();
         /*
         
@@ -975,7 +975,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE2_random_match_gemmlowp() {
+    #[test] fn q31_sse2_random_match_gemmlowp() {
         todo!();
         /*
         
@@ -990,7 +990,7 @@ mod x86 {
       | Q31-based x86 SSSE3 implementation.
       |
       */
-    #[test] fn Q31__SSSE3_exact_divide_by_po2() {
+    #[test] fn q31_ssse3_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1002,7 +1002,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSSE3_exact_divide_by_po2_with_zero_point() {
+    #[test] fn q31_ssse3_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1016,7 +1016,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSSE3_divide_by_po2_with_rounding_up() {
+    #[test] fn q31_ssse3_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1037,7 +1037,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn Q31__SSSE3_divide_by_po2_with_rounding_away() {
+    #[test] fn q31_ssse3_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1053,7 +1053,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSSE3_special_cases() {
+    #[test] fn q31_ssse3_special_cases() {
         todo!();
         /*
         
@@ -1062,7 +1062,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSSE3_random_cases() {
+    #[test] fn q31_ssse3_random_cases() {
         todo!();
         /*
         
@@ -1072,7 +1072,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSSE3_random_match_gemmlowp() {
+    #[test] fn q31_ssse3_random_match_gemmlowp() {
         todo!();
         /*
         
@@ -1087,7 +1087,7 @@ mod x86 {
       | Q31-based x86 SSE4 implementation.
       |
       */
-    #[test] fn Q31__SSE4_exact_divide_by_po2() {
+    #[test] fn q31_sse4_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1099,7 +1099,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE4_exact_divide_by_po2_with_zero_point() {
+    #[test] fn q31_sse4_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1113,7 +1113,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE4_divide_by_po2_with_rounding_up() {
+    #[test] fn q31_sse4_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1134,7 +1134,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn Q31__SSE4_divide_by_po2_with_rounding_away() {
+    #[test] fn q31_sse4_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1150,7 +1150,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE4_special_cases() {
+    #[test] fn q31_sse4_special_cases() {
         todo!();
         /*
         
@@ -1159,7 +1159,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE4_random_cases() {
+    #[test] fn q31_sse4_random_cases() {
         todo!();
         /*
         
@@ -1169,7 +1169,7 @@ mod x86 {
         */
     }
 
-    #[test] fn Q31__SSE4_random_match_gemmlowp() {
+    #[test] fn q31_sse4_random_match_gemmlowp() {
         todo!();
         /*
         
@@ -1184,7 +1184,7 @@ mod x86 {
       | x86 SSE2 implementation from gemmlowp.
       |
       */
-    #[test] fn GEMMLOWP__SSE2_exact_divide_by_po2() {
+    #[test] fn gemmlowp_sse2_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1196,7 +1196,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE2_exact_divide_by_po2_with_zero_point() {
+    #[test] fn gemmlowp_sse2_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1210,7 +1210,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE2_divide_by_po2_with_rounding_up() {
+    #[test] fn gemmlowp_sse2_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1232,7 +1232,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn GEMMLOWP__SSE2_divide_by_po2_with_rounding_away() {
+    #[test] fn gemmlowp_sse2_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1249,7 +1249,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE2_special_cases() {
+    #[test] fn gemmlowp_sse2_special_cases() {
         todo!();
         /*
         
@@ -1259,7 +1259,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE2_random_cases() {
+    #[test] fn gemmlowp_sse2_random_cases() {
         todo!();
         /*
         
@@ -1273,7 +1273,7 @@ mod x86 {
       | x86 SSSE3 implementation from gemmlowp.
       |
       */
-    #[test] fn GEMMLOWP__SSSE3_exact_divide_by_po2() {
+    #[test] fn gemmlowp_ssse3_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1285,7 +1285,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSSE3_exact_divide_by_po2_with_zero_point() {
+    #[test] fn gemmlowp_ssse3_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1299,7 +1299,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSSE3_divide_by_po2_with_rounding_up() {
+    #[test] fn gemmlowp_ssse3_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1321,7 +1321,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn GEMMLOWP__SSSE3_divide_by_po2_with_rounding_away() {
+    #[test] fn gemmlowp_ssse3_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1338,7 +1338,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSSE3_special_cases() {
+    #[test] fn gemmlowp_ssse3_special_cases() {
         todo!();
         /*
         
@@ -1348,7 +1348,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSSE3_random_cases() {
+    #[test] fn gemmlowp_ssse3_random_cases() {
         todo!();
         /*
         
@@ -1362,7 +1362,7 @@ mod x86 {
       | x86 SSE4 implementation from gemmlowp.
       |
       */
-    #[test] fn GEMMLOWP__SSE4_exact_divide_by_po2() {
+    #[test] fn gemmlowp_sse4_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1374,7 +1374,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE4_exact_divide_by_po2_with_zero_point() {
+    #[test] fn gemmlowp_sse4_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1388,7 +1388,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE4_divide_by_po2_with_rounding_up() {
+    #[test] fn gemmlowp_sse4_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1410,7 +1410,7 @@ mod x86 {
       | of upward bias in multiplication
       |
       */
-    #[test] fn GEMMLOWP__SSE4_divide_by_po2_with_rounding_away() {
+    #[test] fn gemmlowp_sse4_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1427,7 +1427,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE4_special_cases() {
+    #[test] fn gemmlowp_sse4_special_cases() {
         todo!();
         /*
         
@@ -1437,7 +1437,7 @@ mod x86 {
         */
     }
 
-    #[test] fn GEMMLOWP__SSE4_random_cases() {
+    #[test] fn gemmlowp_sse4_random_cases() {
         todo!();
         /*
         
@@ -1458,7 +1458,7 @@ mod arm {
       | Precise ARM NEON implementation.
       |
       */
-    #[test] fn PRECISE__NEON_exact_divide_by_po2() {
+    #[test] fn precise_neon_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1470,7 +1470,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_exact_divide_by_po2_with_zero_point() {
+    #[test] fn precise_neon_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1484,7 +1484,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_divide_by_po2_with_rounding_up() {
+    #[test] fn precise_neon_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1500,7 +1500,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_divide_by_po2_with_rounding_down() {
+    #[test] fn precise_neon_divide_by_po2_with_rounding_down() {
         todo!();
         /*
         
@@ -1517,7 +1517,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_divide_by_po2_with_rounding_away() {
+    #[test] fn precise_neon_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1534,7 +1534,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_special_cases() {
+    #[test] fn precise_neon_special_cases() {
         todo!();
         /*
         
@@ -1544,7 +1544,7 @@ mod arm {
         */
     }
 
-    #[test] fn PRECISE__NEON_random_cases() {
+    #[test] fn precise_neon_random_cases() {
         todo!();
         /*
         
@@ -1558,7 +1558,7 @@ mod arm {
       | FP32-based ARM NEON implementation.
       |
       */
-    #[test] fn FP32__NEON_random_cases() {
+    #[test] fn fp32_neon_random_cases() {
         todo!();
         /*
         
@@ -1572,7 +1572,7 @@ mod arm {
       | Q31-based ARM NEON implementation.
       |
       */
-    #[test] fn Q31__NEON_exact_divide_by_po2() {
+    #[test] fn q31_neon_exact_divide_by_po2() {
         todo!();
         /*
         
@@ -1584,7 +1584,7 @@ mod arm {
         */
     }
 
-    #[test] fn Q31__NEON_exact_divide_by_po2_with_zero_point() {
+    #[test] fn q31_neon_exact_divide_by_po2_with_zero_point() {
         todo!();
         /*
         
@@ -1598,7 +1598,7 @@ mod arm {
         */
     }
 
-    #[test] fn Q31__NEON_divide_by_po2_with_rounding_up() {
+    #[test] fn q31_neon_divide_by_po2_with_rounding_up() {
         todo!();
         /*
         
@@ -1619,7 +1619,7 @@ mod arm {
       | of upward bias in multiplication
       |
       */
-    #[test] fn Q31__NEON_divide_by_po2_with_rounding_away() {
+    #[test] fn q31_neon_divide_by_po2_with_rounding_away() {
         todo!();
         /*
         
@@ -1635,7 +1635,7 @@ mod arm {
         */
     }
 
-    #[test] fn Q31__NEON_special_cases() {
+    #[test] fn q31_neon_special_cases() {
         todo!();
         /*
         
@@ -1644,7 +1644,7 @@ mod arm {
         */
     }
 
-    #[test] fn Q31__NEON_random_cases() {
+    #[test] fn q31_neon_random_cases() {
         todo!();
         /*
         
@@ -1654,7 +1654,7 @@ mod arm {
         */
     }
 
-    #[test] fn Q31__NEON_random_match_gemmlowp() {
+    #[test] fn q31_neon_random_match_gemmlowp() {
         todo!();
         /*
         
@@ -1669,7 +1669,7 @@ mod arm {
       | ARM NEON implementation from gemmlowp.
       |
       */
-    #[test] fn GEMMLOWP__NEON_random_cases() {
+    #[test] fn gemmlowp_neon_random_cases() {
         todo!();
         /*
         

@@ -40,7 +40,7 @@ impl StringJoinOpTest {
     }
 }
 
-#[test] fn StringJoinOpTest_testString1DJoin() {
+#[test] fn string_join_op_test_string1d_join() {
     todo!();
     /*
       std::vector<std::string> input = {"a", "xx", "c"};
@@ -63,7 +63,7 @@ impl StringJoinOpTest {
 }
 
 
-#[test] fn StringJoinOpTest_testString2DJoin() {
+#[test] fn string_join_op_test_string2d_join() {
     todo!();
     /*
       std::vector<std::vector<std::string>> input = {{"aa", "bb", "cc"},
@@ -88,7 +88,7 @@ impl StringJoinOpTest {
 }
 
 
-#[test] fn StringJoinOpTest_testFloat1DJoin() {
+#[test] fn string_join_op_test_float1d_join() {
     todo!();
     /*
       std::vector<float> input = {3.90f, 5.234f, 8.12f};
@@ -111,7 +111,7 @@ impl StringJoinOpTest {
 }
 
 
-#[test] fn StringJoinOpTest_testFloat2DJoin() {
+#[test] fn string_join_op_test_float2d_join() {
     todo!();
     /*
       std::vector<std::vector<float>> input = {{1.23f, 2.45f, 3.56f},
@@ -135,7 +135,7 @@ impl StringJoinOpTest {
   */
 }
 
-#[test] fn StringJoinOpTest_testLong2DJoin() {
+#[test] fn string_join_op_test_long2d_join() {
     todo!();
     /*
       std::vector<std::vector<int64_t>> input = {{100, 200}, {1000, 2000}};

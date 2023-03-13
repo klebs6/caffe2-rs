@@ -131,7 +131,7 @@ pub const kSleepNetDefString: &'static str = "
     */
 }
 
-#[test] fn DAGNetTest_TestDAGNetTiming() {
+#[test] fn dag_net_test_dag_net_timing() {
     todo!();
     /*
       int ms = RunNetAndGetDuration(string(kSleepNetDefString), "dag");
@@ -145,7 +145,7 @@ pub const kSleepNetDefString: &'static str = "
   | since everything has to be sequential.
   |
   */
-#[test] fn SimpleNetTest_TestSimpleNetTiming() {
+#[test] fn simple_net_test_simple_net_timing() {
     todo!();
     /*
       int ms = RunNetAndGetDuration(string(kSleepNetDefString), "simple");
@@ -194,7 +194,7 @@ pub const kSleepNetDefStringReadAfterRead: &'static str = "
         }
       }";
 
-#[test] fn DAGNetTest_TestDAGNetTimingReadAfterRead() {
+#[test] fn dag_net_test_dag_net_timing_read_after_read() {
     todo!();
     /*
       int ms = RunNetAndGetDuration(string(kSleepNetDefStringReadAfterRead), "dag");
@@ -208,7 +208,7 @@ pub const kSleepNetDefStringReadAfterRead: &'static str = "
   | since everything has to be sequential.
   |
   */
-#[test] fn SimpleNetTest_TestSimpleNetTimingReadAfterRead() {
+#[test] fn simple_net_test_simple_net_timing_read_after_read() {
     todo!();
     /*
       int ms =
@@ -258,7 +258,7 @@ const kSleepNetDefStringWriteAfterWrite: &'static str = "
         }
       }";
 
-#[test] fn DAGNetTest_TestDAGNetTimingWriteAfterWrite() {
+#[test] fn dag_net_test_dag_net_timing_write_after_write() {
     todo!();
     /*
       int ms =
@@ -268,7 +268,7 @@ const kSleepNetDefStringWriteAfterWrite: &'static str = "
 }
 
 
-#[test] fn SimpleNetTest_TestSimpleNetTimingWriteAfterWrite() {
+#[test] fn simple_net_test_simple_net_timing_write_after_write() {
     todo!();
     /*
       int ms =
@@ -319,7 +319,7 @@ pub const kSleepNetDefStringWriteAfterRead: &'static str =
         }
       }";
 
-#[test] fn DAGNetTest_TestDAGNetTimingWriteAfterRead() {
+#[test] fn dag_net_test_dag_net_timing_write_after_read() {
     todo!();
     /*
       int ms =
@@ -328,7 +328,7 @@ pub const kSleepNetDefStringWriteAfterRead: &'static str =
   */
 }
 
-#[test] fn SimpleNetTest_TestSimpleNetTimingWriteAfterRead() {
+#[test] fn simple_net_test_simple_net_timing_write_after_read() {
     todo!();
     /*
       int ms =
@@ -377,7 +377,7 @@ pub const kSleepNetDefStringControlDependency: &'static str = "
     }
   }";
 
-#[test] fn DAGNetTest_TestDAGNetTimingControlDependency() {
+#[test] fn dag_net_test_dag_net_timing_control_dependency() {
     todo!();
     /*
       int ms =
@@ -386,7 +386,7 @@ pub const kSleepNetDefStringControlDependency: &'static str = "
   */
 }
 
-#[test] fn SimpleNetTest_TestSimpleNetTimingControlDependency() {
+#[test] fn simple_net_test_simple_net_timing_control_dependency() {
     todo!();
     /*
       int ms = RunNetAndGetDuration(

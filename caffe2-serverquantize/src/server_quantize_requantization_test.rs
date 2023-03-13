@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Requantization_BatchRequantizationUnitTest() {
+#[test] fn requantization_batch_requantization_unit_test() {
     todo!();
     /*
       // generate input data
@@ -61,7 +61,7 @@ crate::ix!();
 }
 
 
-#[test] fn Requantization_RequantizationUnitTest() {
+#[test] fn requantization_requantization_unit_test() {
     todo!();
     /*
       // Rescaling to a random range [min1, max1] to [min2, max2].

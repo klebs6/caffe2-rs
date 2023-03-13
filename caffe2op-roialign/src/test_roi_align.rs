@@ -1,6 +1,7 @@
 crate::ix!();
 
-#[test] fn RoiAlignTest_CheckCPUGPUEqual() { todo!();
+#[test] fn roi_align_test_check_cpugpu_equal() {
+    todo!();
     /*
       if (!caffe2::HasCudaGPU())
         return;

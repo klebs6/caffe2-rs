@@ -506,7 +506,7 @@ pub fn test(ty: &mut DeprecatedTypeProperties)  {
     */
 }
 
-#[test] fn basic_test_testcuda() {
+#[test] fn basic_testcuda() {
     todo!();
     /*
     

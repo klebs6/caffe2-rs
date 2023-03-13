@@ -6,6 +6,6 @@ use imports::*;
 
 x!{create}
 x!{finalize}
-x!{op_prefetch}
+x!{prefetch}
 x!{prefetch_worker}
 x!{run}

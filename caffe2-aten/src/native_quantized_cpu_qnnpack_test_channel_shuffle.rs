@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/channel-shuffle.cc]
 
-#[test] fn CHANNEL_SHUFFLE_OP_zero_batch() {
+#[test] fn channel_shuffle_op_zero_batch() {
     todo!();
     /*
     
@@ -16,7 +16,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_two_groups_unit_batch() {
+#[test] fn channel_shuffle_op_two_groups_unit_batch() {
     todo!();
     /*
     
@@ -32,7 +32,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_three_groups_unit_batch() {
+#[test] fn channel_shuffle_op_three_groups_unit_batch() {
     todo!();
     /*
     
@@ -48,7 +48,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_four_groups_unit_batch() {
+#[test] fn channel_shuffle_op_four_groups_unit_batch() {
     todo!();
     /*
     
@@ -64,7 +64,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_many_groups_unit_batch() {
+#[test] fn channel_shuffle_op_many_groups_unit_batch() {
     todo!();
     /*
     
@@ -82,7 +82,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_two_groups_small_batch() {
+#[test] fn channel_shuffle_op_two_groups_small_batch() {
     todo!();
     /*
     
@@ -98,7 +98,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_three_groups_small_batch() {
+#[test] fn channel_shuffle_op_three_groups_small_batch() {
     todo!();
     /*
     
@@ -114,7 +114,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_four_groups_small_batch() {
+#[test] fn channel_shuffle_op_four_groups_small_batch() {
     todo!();
     /*
     
@@ -130,7 +130,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_many_groups_small_batch() {
+#[test] fn channel_shuffle_op_many_groups_small_batch() {
     todo!();
     /*
     
@@ -148,7 +148,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_two_groups_small_batch_with_input_stride() {
+#[test] fn channel_shuffle_op_two_groups_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -165,7 +165,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_three_groups_small_batch_with_input_stride() {
+#[test] fn channel_shuffle_op_three_groups_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -182,7 +182,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_four_groups_small_batch_with_input_stride() {
+#[test] fn channel_shuffle_op_four_groups_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -199,7 +199,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_many_groups_small_batch_with_input_stride() {
+#[test] fn channel_shuffle_op_many_groups_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -218,7 +218,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_two_groups_small_batch_with_output_stride() {
+#[test] fn channel_shuffle_op_two_groups_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -235,7 +235,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_three_groups_small_batch_with_output_stride() {
+#[test] fn channel_shuffle_op_three_groups_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -252,7 +252,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_four_groups_small_batch_with_output_stride() {
+#[test] fn channel_shuffle_op_four_groups_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -269,7 +269,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_many_groups_small_batch_with_output_stride() {
+#[test] fn channel_shuffle_op_many_groups_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -288,7 +288,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_two_groups_small_batch_with_input_and_output_stride() {
+#[test] fn channel_shuffle_op_two_groups_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     
@@ -306,7 +306,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_three_groups_small_batch_with_input_and_output_stride() {
+#[test] fn channel_shuffle_op_three_groups_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     
@@ -324,7 +324,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_four_groups_small_batch_with_input_and_output_stride() {
+#[test] fn channel_shuffle_op_four_groups_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     
@@ -342,7 +342,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CHANNEL_SHUFFLE_OP_many_groups_small_batch_with_input_and_output_stride() {
+#[test] fn channel_shuffle_op_many_groups_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     

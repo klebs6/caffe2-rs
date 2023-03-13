@@ -70,7 +70,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathUtilGPUTest_testAddStripedBatch() {
+#[test] fn math_util_gpu_test_add_striped_batch() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -129,7 +129,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathUtilGPUTest_testReduceMin() {
+#[test] fn math_util_gpu_test_reduce_min() {
     todo!();
     /*
       executeGpuBinaryOpTest(
@@ -168,7 +168,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathUtilGPUTest_testReduceMax() {
+#[test] fn math_util_gpu_test_reduce_max() {
     todo!();
     /*
       executeGpuBinaryOpTest(
@@ -207,7 +207,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathUtilGPUTest_testCopyVector() {
+#[test] fn math_util_gpu_test_copy_vector() {
     todo!();
     /*
       executeGpuBinaryOpTest(
@@ -348,7 +348,7 @@ impl GemmBatchedGPUTest {
 }
 
 
-#[test] fn GemmBatchedGPUTest_GemmBatchedGPUFloatTest() {
+#[test] fn gemm_batched_gpu_test_gemm_batched_gpu_float_test() {
     todo!();
     /*
       if (!HasCudaGPU()) {
@@ -364,7 +364,7 @@ impl GemmBatchedGPUTest {
 }
 
 
-#[test] fn GemmBatchedGPUTest_GemmStridedBatchedGPUFloatTest() {
+#[test] fn gemm_batched_gpu_test_gemm_strided_batched_gpu_float_test() {
     todo!();
     /*
       if (!HasCudaGPU()) {
@@ -469,7 +469,7 @@ impl TestContext for BroadcastGPUTest {
     
 }
 
-#[test] fn BroadcastGPUTest_BroadcastGPUFloatTest() {
+#[test] fn broadcast_gpu_test_broadcast_gpu_float_test() {
     todo!();
     /*
       if (!HasCudaGPU()) {

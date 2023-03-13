@@ -48,7 +48,7 @@ declare_string!{caffe_test_root}
     */
 }
 
-#[test] fn ReshapeOpGPUTest_testReshapeWithScalar() {
+#[test] fn reshape_op_gpu_test_reshape_with_scalar() {
     todo!();
     /*
       if (!HasCudaGPU())

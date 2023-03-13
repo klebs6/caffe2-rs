@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn MathTest_GemmNoTransNoTrans() {
+#[test] fn math_test_gemm_no_trans_no_trans() {
     todo!();
     /*
       DeviceOption option;
@@ -79,7 +79,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathTest_GemmNoTransTrans() {
+#[test] fn math_test_gemm_no_trans_trans() {
     todo!();
     /*
       DeviceOption option;
@@ -266,7 +266,7 @@ impl GemmBatchedTest {
     }
 }
 
-#[test] fn GemmBatchedTest_GemmBatchedFloatTest() {
+#[test] fn gemm_batched_test_gemm_batched_float_test() {
     todo!();
     /*
       RunGemmBatched(1.0f, 0.0f);
@@ -279,7 +279,7 @@ impl GemmBatchedTest {
 }
 
 
-#[test] fn GemmBatchedTest_GemmStridedBatchedFloatTest() {
+#[test] fn gemm_batched_test_gemm_strided_batched_float_test() {
     todo!();
     /*
       RunGemmStridedBatched(1.0f, 0.0f);
@@ -299,7 +299,7 @@ instantiate_test_case_p!{
     */
 }
 
-#[test] fn MathTest_GemvNoTrans() {
+#[test] fn math_test_gemv_no_trans() {
     todo!();
     /*
       DeviceOption option;
@@ -368,7 +368,7 @@ instantiate_test_case_p!{
   */
 }
 
-#[test] fn MathTest_GemvTrans() {
+#[test] fn math_test_gemv_trans() {
     todo!();
     /*
       DeviceOption option;
@@ -438,7 +438,7 @@ instantiate_test_case_p!{
 }
 
 
-#[test] fn MathTest_FloatToHalfConversion() {
+#[test] fn math_test_float_to_half_conversion() {
     todo!();
     /*
       float a = 1.0f;
@@ -511,7 +511,7 @@ impl BroadcastTest {
     }
 }
 
-#[test] fn BroadcastTest_BroadcastFloatTest() {
+#[test] fn broadcast_test_broadcast_float_test() {
     todo!();
     /*
       RunBroadcastTest({2}, {2}, {1.0f, 2.0f}, {1.0f, 2.0f});
@@ -552,7 +552,7 @@ impl TestContext for RandFixedSumTest {
     //assert_eq!(ctx.value, "Hello, world!");
 }
 
-#[test] fn RandFixedSumTest_UpperBound() {
+#[test] fn rand_fixed_sum_test_upper_bound() {
     todo!();
     /*
       std::vector<int> l(20);

@@ -124,7 +124,7 @@ impl DagUtilTestContext {
     */
 }
 
-#[test] fn DagUtilTest_Empty() {
+#[test] fn dag_util_test_empty() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -139,7 +139,7 @@ impl DagUtilTestContext {
 }
 
 /// 4 sync ops forming a diamond
-#[test] fn DagUtilTest_AllSync() {
+#[test] fn dag_util_test_all_sync() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -178,7 +178,7 @@ impl DagUtilTestContext {
 }
 
 /// 3 async ops forming an L shape
-#[test] fn DagUtilTest_AllAsync() {
+#[test] fn dag_util_test_all_async() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -213,7 +213,7 @@ impl DagUtilTestContext {
 }
 
 /// 3 sync ops and 1 async op (#2) forming a diamond
-#[test] fn DagUtilTest_Mixed0() {
+#[test] fn dag_util_test_mixed0() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -252,7 +252,7 @@ impl DagUtilTestContext {
 }
 
 /// 3 sync ops and 1 async op (#2) forming a Y shape
-#[test] fn DagUtilTest_Mixed1() {
+#[test] fn dag_util_test_mixed1() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -303,7 +303,7 @@ impl DagUtilTestContext {
   |   - -> 8*
   |  7* -/
   */
-#[test] fn DagUtilTest_Mixed2() {
+#[test] fn dag_util_test_mixed2() {
     todo!();
     /*
       const auto spec = R"DOC(

@@ -18,7 +18,7 @@ clog_define_log_warning!{suppressed_log_warning , NULL        , CLOG_ERROR}
 clog_define_log_error!{suppressed_log_error     , NULL        , CLOG_FATAL}
 clog_define_log_fatal!{suppressed_log_fatal     , NULL        , CLOG_NONE}
 
-#[test] fn CLOG_debug() {
+#[test] fn clog_debug() {
     todo!();
     /*
     
@@ -29,7 +29,7 @@ clog_define_log_fatal!{suppressed_log_fatal     , NULL        , CLOG_NONE}
     */
 }
 
-#[test] fn CLOG_info() {
+#[test] fn clog_info() {
     todo!();
     /*
     
@@ -40,7 +40,7 @@ clog_define_log_fatal!{suppressed_log_fatal     , NULL        , CLOG_NONE}
     */
 }
 
-#[test] fn CLOG_warning() {
+#[test] fn clog_warning() {
     todo!();
     /*
     
@@ -51,7 +51,7 @@ clog_define_log_fatal!{suppressed_log_fatal     , NULL        , CLOG_NONE}
     */
 }
 
-#[test] fn CLOG_error() {
+#[test] fn clog_error() {
     todo!();
     /*
     

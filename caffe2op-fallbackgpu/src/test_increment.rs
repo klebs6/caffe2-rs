@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn OperatorFallbackTest_IncrementByOneOp() {
+#[test] fn operator_fallback_test_increment_by_one_op() {
     todo!();
     /*
       OperatorDef op_def = CreateOperatorDef(
@@ -25,7 +25,7 @@ crate::ix!();
   */
 }
 
-#[test] fn OperatorFallbackTest_GPUIncrementByOneOp() {
+#[test] fn operator_fallback_test_gpu_increment_by_one_op() {
     todo!();
     /*
       if (!HasCudaGPU()) return;

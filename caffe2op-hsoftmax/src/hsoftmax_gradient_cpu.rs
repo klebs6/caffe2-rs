@@ -143,4 +143,3 @@ impl HSoftmaxGradientOp<f32, CPUContext> {
         */
     }
 }
-

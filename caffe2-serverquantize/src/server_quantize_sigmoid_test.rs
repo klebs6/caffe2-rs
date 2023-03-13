@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Sigmoid_SigmoidUnitTest() {
+#[test] fn sigmoid_sigmoid_unit_test() {
     todo!();
     /*
       for (double max_abs_err = 0.02; max_abs_err <= 0.1; max_abs_err += 0.01) {

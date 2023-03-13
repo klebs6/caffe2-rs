@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn UtilsNMSTest_TestNMS() {
+#[test] fn utils_nms_test_nms() {
     todo!();
     /*
       Eigen::ArrayXXf input(5, 5);
@@ -57,7 +57,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsNMSTest_TestNMS1() {
+#[test] fn utils_nms_testnms1() {
     todo!();
     /*
       Eigen::ArrayXXf proposals(53, 4);
@@ -113,7 +113,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsNMSTest_TestSoftNMS() {
+#[test] fn utils_nms_test_soft_nms() {
     todo!();
     /*
       Eigen::ArrayXXf input(5, 5);
@@ -239,7 +239,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsNMSTest_TestNMSRotatedAngle0() {
+#[test] fn utils_nms_test_nms_rotated_angle0() {
     todo!();
     /*
       // Same inputs as TestNMS, but in RRPN format with angle 0 for testing
@@ -305,7 +305,7 @@ crate::ix!();
 }
 
 
-#[test] fn UtilsNMSTest_TestSoftNMSRotatedAngle0() {
+#[test] fn utils_nms_test_soft_nms_rotated_angle0() {
     todo!();
     /*
       // Same inputs as TestSoftNMS, but in RRPN format with angle 0 for testing
@@ -439,7 +439,7 @@ crate::ix!();
   */
 }
 
-#[test] fn UtilsNMSTest_RotatedBBoxOverlaps() {
+#[test] fn utils_nms_test_rotated_bbox_overlaps() {
     todo!();
     /*
       {

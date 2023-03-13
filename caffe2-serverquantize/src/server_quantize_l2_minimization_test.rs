@@ -25,7 +25,7 @@ instantiate_test_case_p!{
     */
 }
 
-#[test] fn ChooseQuantizationTest_L2MinimizationTest() {
+#[test] fn choose_quantization_test_l2minimization_test() {
     todo!();
     /*
       bool preserve_sparsity;

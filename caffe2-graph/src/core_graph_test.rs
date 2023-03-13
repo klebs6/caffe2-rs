@@ -77,7 +77,7 @@ allow_inplace!{GraphDummyOp3, vec![(0, 0), (1, 1)]}
     */
 }
 
-#[test] fn GraphTest_TestGenerateGraphChain() {
+#[test] fn graph_test_generate_graph_chain() {
     todo!();
     /*
   Workspace ws;
@@ -104,7 +104,7 @@ allow_inplace!{GraphDummyOp3, vec![(0, 0), (1, 1)]}
   */
 }
 
-#[test] fn GraphTest_TestGenerateGraphChainInPlace() {
+#[test] fn graph_test_generate_graph_chain_in_place() {
     todo!();
     /*
   Workspace ws;
@@ -132,7 +132,7 @@ allow_inplace!{GraphDummyOp3, vec![(0, 0), (1, 1)]}
 }
 
 /// Diamond Graph
-#[test] fn GraphTest_TestGenerateGraphBranch() {
+#[test] fn graph_test_generate_graph_branch() {
     todo!();
     /*
   Workspace ws;
@@ -162,7 +162,7 @@ allow_inplace!{GraphDummyOp3, vec![(0, 0), (1, 1)]}
 }
 
 /// Double Diamond Graph, reused names
-#[test] fn GraphTest_TestReusedInputs() {
+#[test] fn graph_test_reused_inputs() {
     todo!();
     /*
   Workspace ws;
@@ -200,7 +200,7 @@ allow_inplace!{GraphDummyOp3, vec![(0, 0), (1, 1)]}
   */
 }
 
-#[test] fn GraphTest_TestGetPerimeter() {
+#[test] fn graph_test_get_perimeter() {
     todo!();
     /*
   Workspace ws;

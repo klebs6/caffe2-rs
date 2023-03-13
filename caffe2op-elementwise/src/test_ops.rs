@@ -282,7 +282,7 @@ pub fn copy_vector_cpu_context_i32(N: i32, x: *const i32, y: *mut i32) {
     */
 }
 
-#[test] fn ElementwiseCPUTest_And() {
+#[test] fn elementwise_cpu_test_and() {
     todo!();
     /*
       elementwiseAnd<caffe2::CPUContext>();
@@ -290,7 +290,7 @@ pub fn copy_vector_cpu_context_i32(N: i32, x: *const i32, y: *mut i32) {
 }
 
 
-#[test] fn ElementwiseTest_Or() {
+#[test] fn elementwise_test_or() {
     todo!();
     /*
       elementwiseOr<caffe2::CPUContext>();
@@ -298,7 +298,7 @@ pub fn copy_vector_cpu_context_i32(N: i32, x: *const i32, y: *mut i32) {
 }
 
 
-#[test] fn ElementwiseTest_Xor() {
+#[test] fn elementwise_test_xor() {
     todo!();
     /*
       elementwiseXor<caffe2::CPUContext>();
@@ -306,7 +306,7 @@ pub fn copy_vector_cpu_context_i32(N: i32, x: *const i32, y: *mut i32) {
 }
 
 
-#[test] fn ElementwiseTest_Not() {
+#[test] fn elementwise_test_not() {
     todo!();
     /*
       elementwiseNot<caffe2::CPUContext>();
@@ -314,7 +314,7 @@ pub fn copy_vector_cpu_context_i32(N: i32, x: *const i32, y: *mut i32) {
 }
 
 
-#[test] fn ElementwiseTest_EQ() {
+#[test] fn elementwise_test_eq() {
     todo!();
     /*
       elementwiseEQ<caffe2::CPUContext>();

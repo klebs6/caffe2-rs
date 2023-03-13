@@ -166,7 +166,7 @@ impl DummyTransform {
 
 register_transform!{TransformDummySwap, DummyTransform}
 
-#[test] fn TransformTest_TestPatternMatch() {
+#[test] fn transform_test_pattern_match() {
     todo!();
     /*
       Workspace ws;
@@ -191,7 +191,7 @@ register_transform!{TransformDummySwap, DummyTransform}
 }
 
 
-#[test] fn TransformTest_TestReplacePattern() {
+#[test] fn transform_test_replace_pattern() {
     todo!();
     /*
       Workspace ws;
@@ -231,7 +231,7 @@ register_transform!{TransformDummySwap, DummyTransform}
 }
 
 
-#[test] fn TransformTest_TestTransformApply() {
+#[test] fn transform_test_transform_apply() {
     todo!();
     /*
       Workspace ws;
@@ -322,7 +322,7 @@ impl SortedDummyTransform {
 
 register_transform!{SortedTransformDummySwap, SortedDummyTransform}
 
-#[test] fn TransformTest_TestPatternMatchTypeSortedOrder() {
+#[test] fn transform_test_pattern_match_type_sorted_order() {
     todo!();
     /*
       Workspace ws;
@@ -417,7 +417,7 @@ impl GeneralDummyTransform {
 
 register_transform!{GeneralTransformDummySwap, GeneralDummyTransform}
 
-#[test] fn TransformTest_TestPatternMatchTypeGeneral() {
+#[test] fn transform_test_pattern_match_type_general() {
     todo!();
     /*
       Workspace ws;
@@ -584,7 +584,7 @@ impl SlowToFastTransform {
 
 register_transform!{SlowToFast, SlowToFastTransform}
 
-#[test] fn TransformTest_TestApplyTransformIfFasterIsFaster() {
+#[test] fn transform_test_apply_transform_if_faster_is_faster() {
     todo!();
     /*
       NetDef init_netdef;
@@ -606,7 +606,7 @@ register_transform!{SlowToFast, SlowToFastTransform}
   */
 }
 
-#[test] fn TransformTest_TestApplyTransformIfFasterButSlower() {
+#[test] fn transform_test_apply_transform_if_faster_but_slower() {
     todo!();
     /*
       NetDef init_netdef;

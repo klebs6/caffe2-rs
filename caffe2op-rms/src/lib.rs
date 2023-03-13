@@ -5,7 +5,7 @@ extern crate test;
 use imports::*;
 
 x!{get_gradient}
-x!{op_rms_norm}
+x!{rms_norm}
 x!{rms_norm_cpu}
 x!{rms_norm_gradient}
 x!{rms_norm_gradient_cpu}

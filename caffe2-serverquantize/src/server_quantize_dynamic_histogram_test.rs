@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn DynamicHistogram_HistSimilar() {
+#[test] fn dynamic_histogram_hist_similar() {
     todo!();
     /*
       default_random_engine generator;

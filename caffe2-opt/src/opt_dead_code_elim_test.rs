@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn DeadCodeElim_BasicElim() {
+#[test] fn dead_code_elim_basic_elim() {
     todo!();
     /*
       caffe2::NetDef net;
@@ -19,7 +19,7 @@ crate::ix!();
       */
 }
 
-#[test] fn DeadCodeElim_BasicNoElim() {
+#[test] fn dead_code_elim_basic_no_elim() {
     todo!();
     /*
       caffe2::NetDef net;
@@ -39,7 +39,7 @@ crate::ix!();
       */
 }
 
-#[test] fn DeadCodeElim_PartiallyUsedNoElim() {
+#[test] fn dead_code_elim_partially_used_no_elim() {
     todo!();
     /*
       caffe2::NetDef net;

@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn ProtoUtilsTest_IsSameDevice() {
+#[test] fn proto_utils_test_is_same_device() {
     todo!();
     /*
       DeviceOption a;
@@ -20,7 +20,7 @@ crate::ix!();
   */
 }
 
-#[test] fn ProtoUtilsTest_SimpleReadWrite() {
+#[test] fn proto_utils_test_simple_read_write() {
     todo!();
     /*
       string content("The quick brown fox jumps over the lazy dog.");
@@ -32,7 +32,7 @@ crate::ix!();
   */
 }
 
-#[test] fn ProtoUtilsTest_CleanupExternalInputsAndOutputs() {
+#[test] fn proto_utils_test_cleanup_external_inputs_and_outputs() {
     todo!();
     /*
       caffe2::NetDef net;

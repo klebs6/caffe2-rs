@@ -69,7 +69,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_SparseLengthsSum() {
+#[test] fn bound_shape_inference_sparse_lengths_sum() {
     todo!();
     /*
       NetDef net;
@@ -112,7 +112,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_SparseLengthsSumSparseLookup() {
+#[test] fn bound_shape_inference_sparse_lengths_sum_sparse_lookup() {
     todo!();
     /*
       NetDef net;
@@ -173,7 +173,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_SparseLengthsSumFused8BitRowwise() {
+#[test] fn bound_shape_inference_sparse_lengths_sum_fused_8bit_rowwise() {
     todo!();
     /*
       NetDef net;
@@ -222,7 +222,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_SparseLengthsSum8BitRowwiseSparse() {
+#[test] fn bound_shape_inference_sparse_lengths_sum_8bit_rowwise_sparse() {
     todo!();
     /*
       NetDef net;
@@ -283,7 +283,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_SparseLengthsSumFused4BitRowwise() {
+#[test] fn bound_shape_inference_sparse_lengths_sum_fused_4bit_rowwise() {
     todo!();
     /*
       NetDef net;
@@ -332,7 +332,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_LengthsRangeFill() {
+#[test] fn bound_shape_inference_lengths_range_fill() {
     todo!();
     /*
       NetDef net;
@@ -367,7 +367,7 @@ crate::ix!();
 
 
 
-#[test] fn BoundShapeInference_ConstantFill() {
+#[test] fn bound_shape_inference_constant_fill() {
     todo!();
     /*
       NetDef net;
@@ -396,7 +396,7 @@ crate::ix!();
 
 // https://github.com/pytorch/pytorch/issues/40861
 #[cfg(not(target_os = "windows"))]
-#[test] fn BoundShapeInference_Reshape() {
+#[test] fn bound_shape_inference_reshape() {
     todo!();
     /*
       NetDef net;
@@ -452,7 +452,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_ConcatMissingInput() {
+#[test] fn bound_shape_inference_concat_missing_input() {
     todo!();
     /*
       NetDef net;
@@ -489,7 +489,7 @@ crate::ix!();
 
 
 // See https://github.com/pytorch/pytorch/issues/35544
-#[test] fn  BoundShapeInference_Int8QuantizeInferInputBackwards() {
+#[test] fn bound_shape_inference_int_8quantize_infer_input_backwards() {
     todo!();
     /*
       NetDef net;
@@ -550,7 +550,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_ConcatInferInputBackwards() {
+#[test] fn bound_shape_inference_concat_infer_input_backwards() {
     todo!();
     /*
       NetDef net;
@@ -604,7 +604,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_ElementwiseInferInputBackwards() {
+#[test] fn bound_shape_inference_elementwise_infer_input_backwards() {
     todo!();
     /*
       NetDef net;
@@ -655,7 +655,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_ElementwiseOp() {
+#[test] fn bound_shape_inference_elementwise_op() {
     todo!();
     /*
       NetDef net;
@@ -722,7 +722,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Bucketize() {
+#[test] fn bound_shape_inference_bucketize() {
     todo!();
     /*
       NetDef net;
@@ -752,7 +752,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Split() {
+#[test] fn bound_shape_inference_split() {
     todo!();
     /*
       NetDef net;
@@ -840,7 +840,7 @@ crate::ix!();
 
 
 // https://github.com/pytorch/pytorch/issues/41471
-#[test] fn BoundShapeInference_FC() {
+#[test] fn bound_shape_inference_fc() {
     todo!();
     /*
       NetDef net;
@@ -921,7 +921,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_FC3D() {
+#[test] fn bound_shape_inference_fc3d() {
     todo!();
     /*
       NetDef net;
@@ -955,7 +955,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Quantization() {
+#[test] fn bound_shape_inference_quantization() {
     todo!();
     /*
       NetDef net;
@@ -982,7 +982,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Tile() {
+#[test] fn bound_shape_inference_tile() {
     todo!();
     /*
       NetDef net;
@@ -1024,7 +1024,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Combo0() {
+#[test] fn bound_shape_inference_combo0() {
     todo!();
     /*
       NetDef net;
@@ -1077,7 +1077,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_Softmax() {
+#[test] fn bound_shape_inference_softmax() {
     todo!();
     /*
       NetDef net;
@@ -1107,7 +1107,7 @@ crate::ix!();
 }
 
 
-#[test] fn BoundShapeInference_LpNorm() {
+#[test] fn bound_shape_inference_lp_norm() {
     todo!();
     /*
       NetDef net;

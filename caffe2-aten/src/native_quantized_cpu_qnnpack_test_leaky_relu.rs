@@ -3,7 +3,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/leaky-relu.cc]
 
-#[test] fn LEAKY_RELU_OP_zero_batch() {
+#[test] fn leaky_relu_op_zero_batch() {
     todo!();
     /*
     
@@ -12,7 +12,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch() {
+#[test] fn leaky_relu_op_unit_batch() {
     todo!();
     /*
     
@@ -27,7 +27,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_qmin() {
+#[test] fn leaky_relu_op_unit_batch_with_qmin() {
     todo!();
     /*
     
@@ -43,7 +43,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_qmax() {
+#[test] fn leaky_relu_op_unit_batch_with_qmax() {
     todo!();
     /*
     
@@ -59,7 +59,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_negative_slope() {
+#[test] fn leaky_relu_op_unit_batch_with_negative_slope() {
     todo!();
     /*
     
@@ -78,7 +78,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_input_scale() {
+#[test] fn leaky_relu_op_unit_batch_with_input_scale() {
     todo!();
     /*
     
@@ -97,7 +97,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_input_zero_point() {
+#[test] fn leaky_relu_op_unit_batch_with_input_zero_point() {
     todo!();
     /*
     
@@ -116,7 +116,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_output_scale() {
+#[test] fn leaky_relu_op_unit_batch_with_output_scale() {
     todo!();
     /*
     
@@ -135,7 +135,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_unit_batch_with_output_zero_point() {
+#[test] fn leaky_relu_op_unit_batch_with_output_zero_point() {
     todo!();
     /*
     
@@ -154,7 +154,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_small_batch() {
+#[test] fn leaky_relu_op_small_batch() {
     todo!();
     /*
     
@@ -169,7 +169,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_small_batch_with_input_stride() {
+#[test] fn leaky_relu_op_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -185,7 +185,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_small_batch_with_output_stride() {
+#[test] fn leaky_relu_op_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -201,7 +201,7 @@ crate::ix!();
     */
 }
 
-#[test] fn LEAKY_RELU_OP_small_batch_with_input_and_output_stride() {
+#[test] fn leaky_relu_op_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     

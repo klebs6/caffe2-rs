@@ -290,7 +290,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 /// Simple test cases for node matching criteria.
-#[test] fn SubgraphMatcher_IsNodeMatch() {
+#[test] fn subgraph_matcher_is_node_match() {
     todo!();
     /*
       TestGraph g;
@@ -307,7 +307,7 @@ impl Default for DataFlowTestGraphCriteria {
 
 
 /// Test subtree matching with a simple tree graph.
-#[test] fn SubgraphMatcher_IsSubtreeMatch() {
+#[test] fn subgraph_matcher_is_subtree_match() {
     todo!();
     /*
       TestGraph graph;
@@ -368,7 +368,7 @@ impl Default for DataFlowTestGraphCriteria {
   | matching of children is allowed.
   |
   */
-#[test] fn SubgraphMatcher_IsSubtreeMatchRepeated() {
+#[test] fn subgraph_matcher_is_subtree_match_repeated() {
     todo!();
     /*
       TestGraph graph;
@@ -459,7 +459,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 
-#[test] fn SubgraphMatcher_DagMatching() {
+#[test] fn subgraph_matcher_dag_matching() {
     todo!();
     /*
       reset();
@@ -536,7 +536,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 
-#[test] fn SubgraphMatcher_DagMatchingMultiEdges() {
+#[test] fn subgraph_matcher_dag_matching_multi_edges() {
     todo!();
     /*
       reset();
@@ -575,7 +575,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 
-#[test] fn SubgraphMatcher_DagMatchingRandomLargeGraph() {
+#[test] fn subgraph_matcher_dag_matching_random_large_graph() {
     todo!();
     /*
       reset();
@@ -642,7 +642,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 
-#[test] fn SubgraphMatcher_IsSubtreeMatchRealistic() {
+#[test] fn subgraph_matcher_is_subtree_match_realistic() {
     todo!();
     /*
       reset();
@@ -659,7 +659,7 @@ impl Default for DataFlowTestGraphCriteria {
 }
 
 
-#[test] fn SubgraphMatcher_ReplaceGraphRealistic() {
+#[test] fn subgraph_matcher_replace_graph_realistic() {
     todo!();
     /*
       reset();

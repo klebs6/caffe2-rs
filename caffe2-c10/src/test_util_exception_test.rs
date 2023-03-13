@@ -27,7 +27,7 @@ pub fn throw_func() -> bool {
         */
 }
 
-#[test] fn exception_test_TORCH_INTERNAL_ASSERT_DEBUG_ONLY() {
+#[test] fn exception_test_torch_internal_assert_debug_only() {
     todo!();
     /*
     

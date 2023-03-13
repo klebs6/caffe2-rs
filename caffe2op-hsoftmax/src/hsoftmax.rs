@@ -32,9 +32,7 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HSoftmaxOp<T, Context> {
-
     base:    HSoftmaxOpBase<T, Context>,
-
     phantom: PhantomData<T>,
 }
 

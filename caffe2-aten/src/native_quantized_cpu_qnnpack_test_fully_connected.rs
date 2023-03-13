@@ -1,7 +1,7 @@
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/fully-connected.cc]
 
 
-#[test] fn FULLY_CONNECTED_OP_integration_test_static() {
+#[test] fn fully_connected_op_integration_test_static() {
     todo!();
     /*
     
@@ -15,7 +15,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_integration_test_runtime() {
+#[test] fn fully_connected_op_integration_test_runtime() {
     todo!();
     /*
     
@@ -29,7 +29,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_integration_test_dynamic() {
+#[test] fn fully_connected_op_integration_test_dynamic() {
     todo!();
     /*
     
@@ -43,7 +43,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_static() {
+#[test] fn fully_connected_op_zero_batch_static() {
     todo!();
     /*
     
@@ -57,7 +57,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_runtime() {
+#[test] fn fully_connected_op_zero_batch_runtime() {
     todo!();
     /*
     
@@ -71,7 +71,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_dynamic() {
+#[test] fn fully_connected_op_zero_batch_dynamic() {
     todo!();
     /*
     
@@ -85,7 +85,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_static() {
+#[test] fn fully_connected_op_unit_batch_static() {
     todo!();
     /*
     
@@ -99,7 +99,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_runtime() {
+#[test] fn fully_connected_op_unit_batch_runtime() {
     todo!();
     /*
     
@@ -113,7 +113,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_dynamic() {
+#[test] fn fully_connected_op_unit_batch_dynamic() {
     todo!();
     /*
     
@@ -127,7 +127,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_static() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_static() {
     todo!();
     /*
     
@@ -142,7 +142,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_runtime() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_runtime() {
     todo!();
     /*
     
@@ -157,7 +157,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_dynamic() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_dynamic() {
     todo!();
     /*
     
@@ -172,7 +172,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_static() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_static() {
     todo!();
     /*
     
@@ -187,7 +187,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_runtime() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_runtime() {
     todo!();
     /*
     
@@ -202,7 +202,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_dynamic() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_dynamic() {
     todo!();
     /*
     
@@ -217,7 +217,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_static() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_static() {
     todo!();
     /*
     
@@ -232,7 +232,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_runtime() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_runtime() {
     todo!();
     /*
     
@@ -247,7 +247,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_dynamic() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_dynamic() {
     todo!();
     /*
     
@@ -262,7 +262,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_static() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_static() {
     todo!();
     /*
     
@@ -277,7 +277,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_runtime() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_runtime() {
     todo!();
     /*
     
@@ -292,7 +292,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_dynamic() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_dynamic() {
     todo!();
     /*
     
@@ -307,7 +307,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_static() {
+#[test] fn fully_connected_op_small_batch_static() {
     todo!();
     /*
     
@@ -321,7 +321,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_runtime() {
+#[test] fn fully_connected_op_small_batch_runtime() {
     todo!();
     /*
     
@@ -335,7 +335,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_dynamic() {
+#[test] fn fully_connected_op_small_batch_dynamic() {
     todo!();
     /*
     
@@ -349,7 +349,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_static() {
+#[test] fn fully_connected_op_small_batch_with_qmin_static() {
     todo!();
     /*
     
@@ -364,7 +364,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_runtime() {
+#[test] fn fully_connected_op_small_batch_with_qmin_runtime() {
     todo!();
     /*
     
@@ -379,7 +379,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_dynamic() {
+#[test] fn fully_connected_op_small_batch_with_qmin_dynamic() {
     todo!();
     /*
     
@@ -394,7 +394,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax() {
+#[test] fn fully_connected_op_small_batch_with_qmax() {
     todo!();
     /*
     
@@ -409,7 +409,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax_runtime() {
+#[test] fn fully_connected_op_small_batch_with_qmax_runtime() {
     todo!();
     /*
     
@@ -424,7 +424,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax_dynamic() {
+#[test] fn fully_connected_op_small_batch_with_qmax_dynamic() {
     todo!();
     /*
     
@@ -439,7 +439,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_input_stride_static() {
+#[test] fn fully_connected_op_small_batch_with_input_stride_static() {
     todo!();
     /*
     
@@ -475,7 +475,7 @@
 //       .iterations(3)
 //       .testQ8(FullyConnectedOperatorTester::Mode::Dynamic);
 // }
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_output_stride_static() {
+#[test] fn fully_connected_op_small_batch_with_output_stride_static() {
     todo!();
     /*
     
@@ -510,7 +510,7 @@
 //       .iterations(3)
 //       .testQ8(FullyConnectedOperatorTester::Mode::Dynamic);
 // }
-#[test] fn FULLY_CONNECTED_OP_integration_test_static_per_channel() {
+#[test] fn fully_connected_op_integration_test_static_per_channel() {
     todo!();
     /*
     
@@ -525,7 +525,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_integration_test_runtime_per_channel() {
+#[test] fn fully_connected_op_integration_test_runtime_per_channel() {
     todo!();
     /*
     
@@ -540,7 +540,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_integration_test_dynamic_per_channel() {
+#[test] fn fully_connected_op_integration_test_dynamic_per_channel() {
     todo!();
     /*
     
@@ -555,7 +555,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_static_per_channel() {
+#[test] fn fully_connected_op_zero_batch_static_per_channel() {
     todo!();
     /*
     
@@ -570,7 +570,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_runtime_per_channel() {
+#[test] fn fully_connected_op_zero_batch_runtime_per_channel() {
     todo!();
     /*
     
@@ -585,7 +585,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_zero_batch_dynamic_per_channel() {
+#[test] fn fully_connected_op_zero_batch_dynamic_per_channel() {
     todo!();
     /*
     
@@ -600,7 +600,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_static_per_channel() {
+#[test] fn fully_connected_op_unit_batch_static_per_channel() {
     todo!();
     /*
     
@@ -615,7 +615,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_runtime_per_channel() {
+#[test] fn fully_connected_op_unit_batch_runtime_per_channel() {
     todo!();
     /*
     
@@ -630,7 +630,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_dynamic_per_channel() {
+#[test] fn fully_connected_op_unit_batch_dynamic_per_channel() {
     todo!();
     /*
     
@@ -645,7 +645,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_static_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_static_per_channel() {
     todo!();
     /*
     
@@ -661,7 +661,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_runtime_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_runtime_per_channel() {
     todo!();
     /*
     
@@ -677,7 +677,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmin_dynamic_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmin_dynamic_per_channel() {
     todo!();
     /*
     
@@ -693,7 +693,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_static_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_static_per_channel() {
     todo!();
     /*
     
@@ -709,7 +709,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_runtime_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_runtime_per_channel() {
     todo!();
     /*
     
@@ -725,7 +725,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_qmax_dynamic_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_qmax_dynamic_per_channel() {
     todo!();
     /*
     
@@ -741,7 +741,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_static_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_static_per_channel() {
     todo!();
     /*
     
@@ -757,7 +757,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_runtime_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_runtime_per_channel() {
     todo!();
     /*
     
@@ -773,7 +773,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_input_stride_dynamic_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_input_stride_dynamic_per_channel() {
     todo!();
     /*
     
@@ -789,7 +789,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_static_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_static_per_channel() {
     todo!();
     /*
     
@@ -805,7 +805,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_runtime_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_runtime_per_channel() {
     todo!();
     /*
     
@@ -821,7 +821,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_unit_batch_with_output_stride_dynamic_per_channel() {
+#[test] fn fully_connected_op_unit_batch_with_output_stride_dynamic_per_channel() {
     todo!();
     /*
     
@@ -837,7 +837,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_static_per_channel() {
+#[test] fn fully_connected_op_small_batch_static_per_channel() {
     todo!();
     /*
     
@@ -852,7 +852,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_runtime_per_channel() {
+#[test] fn fully_connected_op_small_batch_runtime_per_channel() {
     todo!();
     /*
     
@@ -867,7 +867,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_dynamic_per_channel() {
+#[test] fn fully_connected_op_small_batch_dynamic_per_channel() {
     todo!();
     /*
     
@@ -882,7 +882,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_static_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmin_static_per_channel() {
     todo!();
     /*
     
@@ -898,7 +898,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_runtime_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmin_runtime_per_channel() {
     todo!();
     /*
     
@@ -914,7 +914,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmin_dynamic_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmin_dynamic_per_channel() {
     todo!();
     /*
     
@@ -930,7 +930,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmax_per_channel() {
     todo!();
     /*
     
@@ -946,7 +946,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax_runtime_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmax_runtime_per_channel() {
     todo!();
     /*
     
@@ -962,7 +962,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_qmax_dynamic_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_qmax_dynamic_per_channel() {
     todo!();
     /*
     
@@ -978,7 +978,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_input_stride_static_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_input_stride_static_per_channel() {
     todo!();
     /*
     
@@ -994,7 +994,7 @@
     */
 }
 
-#[test] fn FULLY_CONNECTED_OP_small_batch_with_output_stride_static_per_channel() {
+#[test] fn fully_connected_op_small_batch_with_output_stride_static_per_channel() {
     todo!();
     /*
     

@@ -160,7 +160,7 @@ crate::ix!();
   |
   |  Expected Output: [ 1.0 ]
   */
-#[test] fn BooleanUnmaskTest_Test() {
+#[test] fn boolean_unmask_test() {
     todo!();
     /*
   Workspace ws;

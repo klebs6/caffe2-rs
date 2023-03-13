@@ -184,4 +184,3 @@ impl HSoftmaxSearchOp<f32, CPUContext> {
         */
     }
 }
-

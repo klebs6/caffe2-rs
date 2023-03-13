@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn AlgorithmsCacheTest_CachesCorrectly() {
+#[test] fn algorithms_cache_test_caches_correctly() {
     todo!();
     /*
   AlgorithmsCache<int> cache;
@@ -15,7 +15,7 @@ crate::ix!();
   */
 }
 
-#[test] fn AlgorithmsCacheTest_KeysDifferIfOneVectorIsEmpty() {
+#[test] fn algorithms_cache_test_keys_differ_if_one_vector_is_empty() {
     todo!();
     /*
   AlgorithmsCache<int> cache;
@@ -32,7 +32,7 @@ crate::ix!();
   */
 }
 
-#[test] fn AlgorithmsCacheTest_KeysDifferIfFlagsAreDifferent() {
+#[test] fn algorithms_cache_test_keys_differ_if_flags_are_different() {
     todo!();
     /*
   AlgorithmsCache<int> cache;

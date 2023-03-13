@@ -14,7 +14,7 @@ macro_rules! add_arg {
     }
 }
 
-#[test] fn MobileTest_Convolution() {
+#[test] fn mobile_test_convolution() {
     todo!();
     /*
       caffe2::NetDef net;

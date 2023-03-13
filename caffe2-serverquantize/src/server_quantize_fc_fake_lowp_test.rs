@@ -126,7 +126,7 @@ pub fn mse<const N: usize>(a1: &mut [f32; N], a2: &mut [f32; N]) -> f64 {
     */
 }
 
-#[test] fn FP16Quant_fp32_to_fp16() {
+#[test] fn fp16quant_fp32_to_fp16() {
     todo!();
     /*
       array input, output1, output2;

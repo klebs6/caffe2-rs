@@ -3,7 +3,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/global-average-pooling.cc]
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_zero_batch() {
+#[test] fn global_average_pooling_op_zero_batch() {
     todo!();
     /*
     
@@ -18,7 +18,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width() {
     todo!();
     /*
     
@@ -40,7 +40,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_input_stride() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_input_stride() {
     todo!();
     /*
     
@@ -63,7 +63,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_input_scale() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_input_scale() {
     todo!();
     /*
     
@@ -89,7 +89,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_input_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_input_zero_point() {
     todo!();
     /*
     
@@ -115,7 +115,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_output_scale() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_output_scale() {
     todo!();
     /*
     
@@ -141,7 +141,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_output_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_output_zero_point() {
     todo!();
     /*
     
@@ -167,7 +167,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_output_min() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_output_min() {
     todo!();
     /*
     
@@ -190,7 +190,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_small_width_with_output_max() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_small_width_with_output_max() {
     todo!();
     /*
     
@@ -213,7 +213,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width() {
     todo!();
     /*
     
@@ -236,7 +236,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_input_stride() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_input_stride() {
     todo!();
     /*
     
@@ -260,7 +260,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_input_scale() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_input_scale() {
     todo!();
     /*
     
@@ -287,7 +287,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_input_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_input_zero_point() {
     todo!();
     /*
     
@@ -314,7 +314,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_output_scale() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_output_scale() {
     todo!();
     /*
     
@@ -341,7 +341,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_output_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_output_zero_point() {
     todo!();
     /*
     
@@ -368,7 +368,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_output_min() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_output_min() {
     todo!();
     /*
     
@@ -392,7 +392,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_many_channels_large_width_with_output_max() {
+#[test] fn global_average_pooling_op_unit_batch_many_channels_large_width_with_output_max() {
     todo!();
     /*
     
@@ -416,7 +416,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels() {
     todo!();
     /*
     
@@ -437,7 +437,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_stride() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -459,7 +459,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_scale() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_input_scale() {
     todo!();
     /*
     
@@ -484,7 +484,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_input_zero_point() {
     todo!();
     /*
     
@@ -509,7 +509,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_scale() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_output_scale() {
     todo!();
     /*
     
@@ -534,7 +534,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_zero_point() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_output_zero_point() {
     todo!();
     /*
     
@@ -559,7 +559,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_min() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_output_min() {
     todo!();
     /*
     
@@ -581,7 +581,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_max() {
+#[test] fn global_average_pooling_op_unit_batch_few_channels_with_output_max() {
     todo!();
     /*
     
@@ -603,7 +603,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_width() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_width() {
     todo!();
     /*
     
@@ -625,7 +625,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_width_with_input_stride() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_width_with_input_stride() {
     todo!();
     /*
     
@@ -648,7 +648,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_width_with_output_stride() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_width_with_output_stride() {
     todo!();
     /*
     
@@ -671,7 +671,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_large_width() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_large_width() {
     todo!();
     /*
     
@@ -694,7 +694,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_large_width_with_input_stride() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_large_width_with_input_stride() {
     todo!();
     /*
     
@@ -718,7 +718,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_many_channels_large_width_with_output_stride() {
+#[test] fn global_average_pooling_op_small_batch_many_channels_large_width_with_output_stride() {
     todo!();
     /*
     
@@ -742,7 +742,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_few_channels() {
+#[test] fn global_average_pooling_op_small_batch_few_channels() {
     todo!();
     /*
     
@@ -763,7 +763,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_few_channels_with_input_stride() {
+#[test] fn global_average_pooling_op_small_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -785,7 +785,7 @@ crate::ix!();
 }
 
 
-#[test] fn GLOBAL_AVERAGE_POOLING_OP_small_batch_few_channels_with_output_stride() {
+#[test] fn global_average_pooling_op_small_batch_few_channels_with_output_stride() {
     todo!();
     /*
     

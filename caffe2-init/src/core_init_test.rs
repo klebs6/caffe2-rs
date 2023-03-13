@@ -32,7 +32,7 @@ register_caffe2_init_function!{
     "Just a test to see if GlobalInit invokes registered functions correctly."
 }
 
-#[test] fn InitTest_TestInitFunctionHasRun() {
+#[test] fn init_test_init_function_has_run() {
     todo!();
     /*
       caffe2::GlobalInit(&dummy_argc, &dummy_argv);
@@ -41,7 +41,7 @@ register_caffe2_init_function!{
   */
 }
 
-#[test] fn InitTest_CanRerunGlobalInit() {
+#[test] fn init_test_can_rerun_global_init() {
     todo!();
     /*
       caffe2::GlobalInit(&dummy_argc, &dummy_argv);
@@ -76,7 +76,7 @@ register_caffe2_init_function!{
     */
 }
 
-#[test] fn InitTest_FailLateRegisterInitFunction() {
+#[test] fn init_test_fail_late_register_init_function() {
     todo!();
     /*
       caffe2::GlobalInit(&dummy_argc, &dummy_argv);

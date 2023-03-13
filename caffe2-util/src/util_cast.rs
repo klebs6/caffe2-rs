@@ -44,7 +44,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CastTest_GetCastDataType() {
+#[test] fn cast_test_get_cast_data_type() {
     todo!();
     /*
       auto castOp = [](std::string t) {

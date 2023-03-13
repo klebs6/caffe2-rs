@@ -13,7 +13,7 @@ outputs!{OpSchemaTestOp,
     0 => ("out0", "dummy output.")
 }
 
-#[test] fn OperatorSchemaTest_BasicSchema() {
+#[test] fn operator_schema_test_basic_schema() {
     todo!();
     /*
       const OpSchema* schema = OpSchemaRegistry::Schema("OpSchemaTestOp");
@@ -42,7 +42,7 @@ num_inputs!{OpSchemaSpecifiedInputOutputOp, (2,4)}
 
 num_outputs!{OpSchemaSpecifiedInputOutputOp, (1,3)}
 
-#[test] fn OperatorSchemaTest_SpecifiedInputOutput() {
+#[test] fn operator_schema_test_specified_input_output() {
     todo!();
     /*
       const OpSchema* schema
@@ -73,7 +73,7 @@ num_inputs_outputs!{OpSchemaInputOutputRelationOp,
     }
 }
 
-#[test] fn OperatorSchemaTest_InputOutputRelation() {
+#[test] fn operator_schema_test_input_output_relation() {
     todo!();
     /*
       const OpSchema* schema
@@ -100,7 +100,7 @@ num_inputs_outputs!{OpSchemaInputOutputRelationOp,
 
 same_number_of_output!{OpSchemaSameInputOutputOp}
 
-#[test] fn OperatorSchemaTest_SameInputOutput() {
+#[test] fn operator_schema_test_same_input_output() {
     todo!();
     /*
       const OpSchema* schema =
@@ -130,7 +130,7 @@ num_outputs!{OpSchemaCalculateOutputOp, (2,6)}
 
 output_calculator!{OpSchemaCalculateOutputOp, /*[](int n) { return n + 1; }*/}
 
-#[test] fn OperatorSchemaTest_CalculateOutput() {
+#[test] fn operator_schema_test_calculate_output() {
     todo!();
     /*
       const OpSchema* schema =
@@ -162,7 +162,7 @@ allow_inplace!{OpSchemaInplace, vec![(0, 0)]}
 
 enforce_inplace!{OpSchemaInplace, vec![(1, 1)]}
 
-#[test] fn OperatorSchemaTest_Inplace() {
+#[test] fn operator_schema_test_inplace() {
     todo!();
     /*
       const OpSchema* schema =
@@ -192,7 +192,7 @@ enforce_inplace!{OpSchemaInplace, vec![(1, 1)]}
 
 identical_type_and_shape!{OpSchemaSameInputOutputTensorInference}
 
-#[test] fn OperatorSchemaTest_TensorInferenceIdentical() {
+#[test] fn operator_schema_test_tensor_inference_identical() {
     todo!();
     /*
       const OpSchema* schema =
@@ -226,7 +226,7 @@ tensor_inference_function!{OpSchemaArbitraryTensorInference, /* (
         }) */
 }
 
-#[test] fn OperatorSchemaTest_TensorInferenceArbitrary() {
+#[test] fn operator_schema_test_tensor_inference_arbitrary() {
     todo!();
     /*
       const OpSchema* schema =
@@ -249,7 +249,7 @@ tensor_inference_function!{OpSchemaArbitraryTensorInference, /* (
 }
 
 
-#[test] fn OperatorSchemaTest_TestCastSchema() {
+#[test] fn operator_schema_test_cast_schema() {
     todo!();
     /*
       // This tests a use case of the schema: the Cast op takes in the def and
@@ -293,7 +293,7 @@ cost_inference_function!{OpSchemaCostInference,
 }
 
 
-#[test] fn OperatorSchemaTest_TestCostInference() {
+#[test] fn operator_schema_test_cost_inference() {
     todo!();
     /*
       const OpSchema* schema = OpSchemaRegistry::Schema("OpSchemaCostInference");

@@ -176,4 +176,3 @@ SparseLengthsFused8BitRowwiseOp<Context, with_weights, is_mean> {
         */
     }
 }
-

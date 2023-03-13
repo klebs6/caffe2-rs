@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn DominatorTree_Test1() {
+#[test] fn dominator_tree_test1() {
     todo!();
     /*
       nom::Graph<std::string> graph;
@@ -59,7 +59,7 @@ crate::ix!();
 
 // https://www.seas.harvard.edu/courses/cs252/2011sp/slides/Lec04-SSA.pdf
 // using example on page 24
-#[test] fn DominatorTree_Test2() {
+#[test] fn dominator_tree_test2() {
     todo!();
     /*
       nom::Graph<std::string> graph;
@@ -100,7 +100,7 @@ crate::ix!();
   */
 }
 
-#[test] fn Subgraph_InduceEdges() {
+#[test] fn subgraph_induce_edges() {
     todo!();
     /*
       auto g = createGraph();
@@ -117,7 +117,7 @@ crate::ix!();
   */
 }
 
-#[test] fn Subgraph_InduceEdgesCycle() {
+#[test] fn subgraph_induce_edges_cycle() {
     todo!();
     /*
       auto g = createGraphWithCycle();

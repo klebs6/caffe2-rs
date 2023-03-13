@@ -118,7 +118,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
     */
 }
 
-#[test] fn NetTest_ConstructionNoDeclaredInputOutput() {
+#[test] fn net_test_construction_no_declared_input_output() {
     todo!();
     /*
       Workspace ws;
@@ -130,7 +130,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_ConstructionDeclaredInput() {
+#[test] fn net_test_construction_declared_input() {
     todo!();
     /*
       Workspace ws;
@@ -142,7 +142,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_ConstructionDeclaredOutput() {
+#[test] fn net_test_construction_declared_output() {
     todo!();
     /*
       Workspace ws;
@@ -154,7 +154,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DeclaredInputInsufficient() {
+#[test] fn net_test_declared_input_insufficient() {
     todo!();
     /*
       Workspace ws;
@@ -166,7 +166,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetDeathTest_DeclaredOutputNotMet() {
+#[test] fn net_death_test_declared_output_not_met() {
     todo!();
     /*
       Workspace ws;
@@ -244,7 +244,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_ChainingForLinearModel() {
+#[test] fn net_test_disabled_chaining_for_linear_model() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -267,7 +267,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_ChainingForFork() {
+#[test] fn net_test_disabled_chaining_for_fork() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -324,7 +324,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
   |   checkChainingAndRun(spec, {{0, {0}}, {1, {1}}, {2, {2, 3}}});
   | }
   */
-#[test] fn NetTest_DISABLED_ChainingForForkJoin() {
+#[test] fn net_test_disabled_chaining_for_fork_join() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -358,7 +358,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_ChainingForwardBackward() {
+#[test] fn net_test_disabled_chaining_forward_backward() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -573,7 +573,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_ChainingForHogwildModel() {
+#[test] fn net_test_disabled_chaining_for_hogwild_model() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -616,7 +616,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_FailingOperator() {
+#[test] fn net_test_disabled_failing_operator() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -699,7 +699,7 @@ impl ExecutorHelperDummyOp {
 
 register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 
-#[test] fn NetTest_OperatorWithExecutorHelper() {
+#[test] fn net_test_operator_with_executor_helper() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -721,7 +721,7 @@ register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 }
 
 
-#[test] fn NetTest_DISABLED_OperatorWithDisabledEvent() {
+#[test] fn net_test_disabled_operator_with_disabled_event() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -761,7 +761,7 @@ register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 }
 
 
-#[test] fn NetTest_ExecutorOverride() {
+#[test] fn net_test_executor_override() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -787,7 +787,7 @@ register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 }
 
 
-#[test] fn NetTest_AsyncEmptyNet() {
+#[test] fn net_test_async_empty_net() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -813,7 +813,7 @@ register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 }
 
 
-#[test] fn NetTest_DISABLED_RunAsyncFailure() {
+#[test] fn net_test_disabled_run_async_failure() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -851,7 +851,7 @@ register_cpu_operator!{ExecutorHelperDummy, ExecutorHelperDummyOp}
 }
 
 
-#[test] fn NetTest_NoTypeNet() {
+#[test] fn net_test_no_type_net() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -905,7 +905,7 @@ impl NotFinishingOp {
 
 register_cpu_operator!{NotFinishingOp, NotFinishingOp}
 
-#[test] fn NetTest_PendingOpsAndNetFailure() {
+#[test] fn net_test_pending_ops_and_net_failure() {
     todo!();
     /*
       const auto spec = R"DOC(
@@ -1070,7 +1070,7 @@ register_cpu_operator!{AsyncErrorOp, AsyncErrorOp}
 }
 
 
-#[test] fn NetTest_AsyncErrorOpTest() {
+#[test] fn net_test_async_error_op_test() {
     todo!();
     /*
       Workspace ws;
@@ -1098,7 +1098,7 @@ register_cpu_operator!{AsyncErrorOp, AsyncErrorOp}
 }
 
 
-#[test] fn NetTest_AsyncErrorTimingsTest() {
+#[test] fn net_test_async_error_timings_test() {
     todo!();
     /*
       Workspace ws;
@@ -1239,7 +1239,7 @@ register_cpu_operator!{SyncErrorOp, SyncErrorOp}
 }
 
 
-#[test] fn NetTest_ChainErrorTest() {
+#[test] fn net_test_chain_error_test() {
     todo!();
     /*
       Workspace ws;
@@ -1311,7 +1311,7 @@ register_cpu_operator!{SyncErrorOp, SyncErrorOp}
     */
 }
 
-#[test] fn NetTest_ProfDAGNetErrorTest() {
+#[test] fn net_test_prof_dag_net_error_test() {
     todo!();
     /*
       testProfDAGNetErrorCase(/*test_error=*/false);

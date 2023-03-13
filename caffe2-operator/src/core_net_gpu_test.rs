@@ -125,7 +125,7 @@ allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 }
 
 
-#[test] fn NetTest_DISABLED_ChainingForDifferentDevices() {
+#[test] fn net_test_disabled_chaining_for_different_devices() {
     todo!();
     /*
       const auto spec = R"DOC(

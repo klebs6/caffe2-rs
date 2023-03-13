@@ -190,7 +190,7 @@ impl<T> PredictorTest<T> {
     }
 }
 
-#[test] fn PredictorTest_SimpleBatchSized() {
+#[test] fn predictor_test_simple_batch_sized() {
     todo!();
     /*
       auto inputData = randomTensor({1, 4}, ctx_.get());
@@ -207,7 +207,7 @@ impl<T> PredictorTest<T> {
   */
 }
 
-#[test] fn PredictorTest_SimpleBatchSizedMapInput() {
+#[test] fn predictor_test_simple_batch_sized_map_input() {
     todo!();
     /*
       auto inputData = randomTensor({1, 4}, ctx_.get());

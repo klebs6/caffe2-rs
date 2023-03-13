@@ -6,10 +6,8 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct Im2ColOp<T, Context> {
-
     storage:    OperatorStorage,
     context:    Context,
-
     pad:        i32,
     kernel_h:   i32,
     kernel_w:   i32,

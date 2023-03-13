@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn ConvToNNPackTest_TestSimple() {
+#[test] fn conv_to_nnp_ack_test_simple() {
     todo!();
     /*
       NetDef netdef;

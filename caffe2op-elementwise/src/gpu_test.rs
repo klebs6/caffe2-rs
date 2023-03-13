@@ -16,7 +16,7 @@ pub fn create_operator_def_cuda_context() -> OperatorDef {
     */
 }
 
-#[test] fn ElementwiseGPUTest_And() {
+#[test] fn elementwise_gpu_test_and() {
     todo!();
     /*
       if (!caffe2::HasCudaGPU())
@@ -26,7 +26,7 @@ pub fn create_operator_def_cuda_context() -> OperatorDef {
 }
 
 
-#[test] fn ElementwiseGPUTest_Or() {
+#[test] fn elementwise_gpu_test_or() {
     todo!();
     /*
       if (!caffe2::HasCudaGPU())
@@ -36,7 +36,7 @@ pub fn create_operator_def_cuda_context() -> OperatorDef {
 }
 
 
-#[test] fn ElementwiseGPUTest_Xor() {
+#[test] fn elementwise_gpu_test_xor() {
     todo!();
     /*
       if (!caffe2::HasCudaGPU())
@@ -46,7 +46,7 @@ pub fn create_operator_def_cuda_context() -> OperatorDef {
 }
 
 
-#[test] fn ElementwiseGPUTest_Not() {
+#[test] fn elementwise_gpu_test_not() {
     todo!();
     /*
       if (!caffe2::HasCudaGPU())

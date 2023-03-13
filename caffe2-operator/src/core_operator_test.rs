@@ -126,7 +126,7 @@ register_cpu_operator_with_engine!{JustTest, BAZ, JustTestAndDoesConstruct}
 register_cuda_operator!{JustTest, JustTest}
 register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 
-#[test] fn OperatorTest_DeviceTypeRegistryWorks() {
+#[test] fn operator_test_device_type_registry_works() {
     todo!();
     /*
       EXPECT_EQ(gDeviceTypeRegistry()->count(CPU), 1);
@@ -134,7 +134,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_RegistryWorks() {
+#[test] fn operator_test_registry_works() {
     todo!();
     /*
       OperatorDef op_def;
@@ -154,7 +154,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_RegistryWrongDevice() {
+#[test] fn operator_test_registry_wrong_device() {
     todo!();
     /*
       OperatorDef op_def;
@@ -171,7 +171,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_ExceptionWorks() {
+#[test] fn operator_test_exception_works() {
     todo!();
     /*
       OperatorDef op_def;
@@ -198,7 +198,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_FallbackIfEngineDoesNotBuild() {
+#[test] fn operator_test_fallback_if_engine_does_not_build() {
     todo!();
     /*
       OperatorDef op_def;
@@ -212,7 +212,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_MultipleEngineChoices() {
+#[test] fn operator_test_multiple_engine_choices() {
     todo!();
     /*
       OperatorDef op_def;
@@ -226,7 +226,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_CannotUseUninitializedBlob() {
+#[test] fn operator_test_cannot_use_uninitialized_blob() {
     todo!();
     /*
       Workspace ws;
@@ -240,7 +240,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_TestParameterAccess() {
+#[test] fn operator_test_parameter_access() {
     todo!();
     /*
       OperatorDef op_def;
@@ -270,7 +270,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_CannotAccessParameterWithWrongType() {
+#[test] fn operator_test_cannot_access_parameter_with_wrong_type() {
     todo!();
     /*
       OperatorDef op_def;
@@ -289,7 +289,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 
 
 #[cfg(gtest_has_death_test)]
-#[test] fn OperatorDeathTest_DISABLED_CannotAccessRepeatedParameterWithWrongType() {
+#[test] fn operator_death_test_disabled_cannot_access_repeated_parameter_with_wrong_type() {
     todo!();
     /*
       OperatorDef op_def;
@@ -309,7 +309,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
   */
 }
 
-#[test] fn OperatorTest_TestDefaultValue() {
+#[test] fn operator_test_default_value() {
     todo!();
     /*
       OperatorDef op_def;
@@ -320,7 +320,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_TestSetUp() {
+#[test] fn operator_test_set_up() {
     todo!();
     /*
       Workspace ws;
@@ -337,7 +337,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_TestSetUpInputOutputCount() {
+#[test] fn operator_test_set_up_input_output_count() {
     todo!();
     /*
       Workspace ws;
@@ -365,7 +365,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn OperatorTest_TestOutputValues() {
+#[test] fn operator_test_output_values() {
     todo!();
     /*
       NetDef net_def;
@@ -405,7 +405,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
 }
 
 
-#[test] fn NetTest_TestScaffoldingSimpleNet() {
+#[test] fn net_test_scaffolding_simple_net() {
     todo!();
     /*
       NetDef net_def = GetNetDefForTest();
@@ -421,7 +421,7 @@ register_cpu_operator!{JustTestWithSomeOutput, JustTestWithSomeOutput}
   */
 }
 
-#[test] fn NetTest_TestScaffoldingDAGNet() {
+#[test] fn net_test_scaffolding_dag_net() {
     todo!();
     /*
       NetDef net_def = GetNetDefForTest();
@@ -504,7 +504,7 @@ register_cpu_gradient_operator_with_engine!{
 
 register_gradient!{Foo, GetFooGradient}
 
-#[test] fn OperatorGradientRegistryTest_GradientSimple() {
+#[test] fn operator_gradient_registry_test_gradient_simple() {
     todo!();
     /*
       Argument arg = MakeArgument<int>("arg", 1);
@@ -547,7 +547,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_PerOpEnginePref() {
+#[test] fn engine_pref_test_per_op_engine_pref() {
     todo!();
     /*
       OperatorDef op_def;
@@ -570,7 +570,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_GlobalEnginePref() {
+#[test] fn engine_pref_test_global_engine_pref() {
     todo!();
     /*
       OperatorDef op_def;
@@ -602,7 +602,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_GlobalEnginePrefAndPerOpEnginePref() {
+#[test] fn engine_pref_test_global_engine_pref_and_per_op_engine_pref() {
     todo!();
     /*
       OperatorDef op_def;
@@ -624,7 +624,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_GlobalEnginePrefAndPerOpEnginePrefAndOpDef() {
+#[test] fn engine_pref_test_global_engine_pref_and_per_op_engine_pref_and_op_def() {
     todo!();
     /*
       OperatorDef op_def;
@@ -647,7 +647,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_SetOpEnginePref() {
+#[test] fn engine_pref_test_set_op_engine_pref() {
     todo!();
     /*
       OperatorDef op_def;
@@ -669,7 +669,7 @@ register_gradient!{Foo, GetFooGradient}
 }
 
 
-#[test] fn EnginePrefTest_SetDefaultEngine() {
+#[test] fn engine_pref_test_set_default_engine() {
     todo!();
     /*
       OperatorDef op_def;
@@ -724,7 +724,7 @@ args!{JustTestWithRequiredArg,
     0 => ("test_arg", "this arg is required -- true")
 }
 
-#[test] fn RequiredArg_Basic() {
+#[test] fn required_arg_basic() {
     todo!();
     /*
       OperatorDef op_def;
@@ -787,7 +787,7 @@ args_are_test!{JustTestWithStandardIsTestArg,
     0 => ("this is_test arg is required")
 }
 
-#[test] fn IsTestArg_standard() {
+#[test] fn is_test_arg_standard() {
     todo!();
     /*
       OperatorDef op_def;
@@ -847,7 +847,7 @@ args!{JustTestWithNonStandardIsTestArg,
     0 => ("OpSchema::Arg_IsTest", "this is_test arg is not required")
 }
 
-#[test] fn IsTestArg_non_standard() {
+#[test] fn is_test_arg_non_standard() {
     todo!();
     /*
       OperatorDef op_def;

@@ -1,7 +1,7 @@
 // # vim: ft=none
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/max-pooling.cc]
 
-#[test] fn MAX_POOLING_OP_zero_batch() {
+#[test] fn max_pooling_op_zero_batch() {
     todo!();
     /*
     
@@ -18,7 +18,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_1xm_pool() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_1xm_pool() {
     todo!();
     /*
     
@@ -42,7 +42,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_1xm_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -72,7 +72,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_1xm_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -97,7 +97,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_1xm_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_1xm_pool_with_dilation() {
     todo!();
     /*
     
@@ -122,7 +122,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_mx1_pool() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_mx1_pool() {
     todo!();
     /*
     
@@ -146,7 +146,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_mx1_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -176,7 +176,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_mx1_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -201,7 +201,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_mx1_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_mx1_pool_with_dilation() {
     todo!();
     /*
     
@@ -226,7 +226,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_pool_with_input_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_pool_with_input_stride() {
     todo!();
     /*
     
@@ -260,7 +260,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_pool_with_output_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_pool_with_output_stride() {
     todo!();
     /*
     
@@ -294,7 +294,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_pool_with_qmin() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_pool_with_qmin() {
     todo!();
     /*
     
@@ -328,7 +328,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_small_pool_with_qmax() {
+#[test] fn max_pooling_op_unit_batch_many_channels_small_pool_with_qmax() {
     todo!();
     /*
     
@@ -362,7 +362,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_1xm_pool() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_1xm_pool() {
     todo!();
     /*
     
@@ -387,7 +387,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_1xm_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -417,7 +417,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_1xm_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -443,7 +443,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_1xm_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_1xm_pool_with_dilation() {
     todo!();
     /*
     
@@ -469,7 +469,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_mx1_pool() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_mx1_pool() {
     todo!();
     /*
     
@@ -494,7 +494,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_mx1_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -525,7 +525,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_mx1_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -551,7 +551,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_mx1_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_mx1_pool_with_dilation() {
     todo!();
     /*
     
@@ -577,7 +577,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_pool_with_input_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_pool_with_input_stride() {
     todo!();
     /*
     
@@ -612,7 +612,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_pool_with_output_stride() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_pool_with_output_stride() {
     todo!();
     /*
     
@@ -647,7 +647,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_pool_with_qmin() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_pool_with_qmin() {
     todo!();
     /*
     
@@ -682,7 +682,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_many_channels_large_pool_with_qmax() {
+#[test] fn max_pooling_op_unit_batch_many_channels_large_pool_with_qmax() {
     todo!();
     /*
     
@@ -717,7 +717,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_1xm_pool() {
+#[test] fn max_pooling_op_unit_batch_few_channels_1xm_pool() {
     todo!();
     /*
     
@@ -740,7 +740,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_1xm_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_few_channels_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -769,7 +769,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_1xm_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_few_channels_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -793,7 +793,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_1xm_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_few_channels_1xm_pool_with_dilation() {
     todo!();
     /*
     
@@ -817,7 +817,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_mx1_pool() {
+#[test] fn max_pooling_op_unit_batch_few_channels_mx1_pool() {
     todo!();
     /*
     
@@ -840,7 +840,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_mx1_pool_with_padding() {
+#[test] fn max_pooling_op_unit_batch_few_channels_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -869,7 +869,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_mx1_pool_with_stride() {
+#[test] fn max_pooling_op_unit_batch_few_channels_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -893,7 +893,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_mx1_pool_with_dilation() {
+#[test] fn max_pooling_op_unit_batch_few_channels_mx1_pool_with_dilation() {
     todo!();
     /*
     
@@ -917,7 +917,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_with_input_stride() {
+#[test] fn max_pooling_op_unit_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -950,7 +950,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_with_output_stride() {
+#[test] fn max_pooling_op_unit_batch_few_channels_with_output_stride() {
     todo!();
     /*
     
@@ -983,7 +983,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_with_qmin() {
+#[test] fn max_pooling_op_unit_batch_few_channels_with_qmin() {
     todo!();
     /*
     
@@ -1016,7 +1016,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_unit_batch_few_channels_with_qmax() {
+#[test] fn max_pooling_op_unit_batch_few_channels_with_qmax() {
     todo!();
     /*
     
@@ -1049,7 +1049,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_pool() {
+#[test] fn max_pooling_op_small_batch_many_channels_pool() {
     todo!();
     /*
     
@@ -1081,7 +1081,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_pool_with_input_stride() {
+#[test] fn max_pooling_op_small_batch_many_channels_pool_with_input_stride() {
     todo!();
     /*
     
@@ -1115,7 +1115,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_pool_with_output_stride() {
+#[test] fn max_pooling_op_small_batch_many_channels_pool_with_output_stride() {
     todo!();
     /*
     
@@ -1149,7 +1149,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_large_pool() {
+#[test] fn max_pooling_op_small_batch_many_channels_large_pool() {
     todo!();
     /*
     
@@ -1182,7 +1182,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_large_pool_with_input_stride() {
+#[test] fn max_pooling_op_small_batch_many_channels_large_pool_with_input_stride() {
     todo!();
     /*
     
@@ -1217,7 +1217,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_many_channels_large_pool_with_output_stride() {
+#[test] fn max_pooling_op_small_batch_many_channels_large_pool_with_output_stride() {
     todo!();
     /*
     
@@ -1252,7 +1252,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_few_channels() {
+#[test] fn max_pooling_op_small_batch_few_channels() {
     todo!();
     /*
     
@@ -1283,7 +1283,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_few_channels_with_input_stride() {
+#[test] fn max_pooling_op_small_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -1316,7 +1316,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_small_batch_few_channels_with_output_stride() {
+#[test] fn max_pooling_op_small_batch_few_channels_with_output_stride() {
     todo!();
     /*
     
@@ -1349,7 +1349,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_setup_increasing_batch() {
+#[test] fn max_pooling_op_setup_increasing_batch() {
     todo!();
     /*
     
@@ -1367,7 +1367,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_setup_decreasing_batch() {
+#[test] fn max_pooling_op_setup_decreasing_batch() {
     todo!();
     /*
     
@@ -1385,7 +1385,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_setup_changing_height() {
+#[test] fn max_pooling_op_setup_changing_height() {
     todo!();
     /*
     
@@ -1412,7 +1412,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_setup_changing_width() {
+#[test] fn max_pooling_op_setup_changing_width() {
     todo!();
     /*
     
@@ -1439,7 +1439,7 @@
     */
 }
 
-#[test] fn MAX_POOLING_OP_setup_swap_height_and_width() {
+#[test] fn max_pooling_op_setup_swap_height_and_width() {
     todo!();
     /*
     

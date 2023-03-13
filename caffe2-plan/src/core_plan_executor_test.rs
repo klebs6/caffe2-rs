@@ -9,7 +9,7 @@ use crate::{
     Operator,
 };
 
-#[test] fn PlanExecutorTest_EmptyPlan() {
+#[test] fn plan_executor_test_empty_plan() {
     todo!();
     /*
       PlanDef plan_def;
@@ -408,7 +408,7 @@ impl Drop for HandleExecutorThreadExceptionsGuard {
     }
 }
 
-#[test] fn PlanExecutorTest_ErrorAsyncPlan() {
+#[test] fn plan_executor_test_error_async_plan() {
     todo!();
     /*
       HandleExecutorThreadExceptionsGuard guard;
@@ -423,7 +423,7 @@ impl Drop for HandleExecutorThreadExceptionsGuard {
 
 /// death tests not supported on mobile
 #[cfg(all(not(caffe2_is_xplat_build), not(c10_mobile)))]
-#[test] fn PlanExecutorTest_BlockingErrorPlan() {
+#[test] fn plan_executor_test_blocking_error_plan() {
     todo!();
     /*
       // TSAN doesn't play nicely with death tests
@@ -465,7 +465,7 @@ impl Drop for HandleExecutorThreadExceptionsGuard {
   */
 }
 
-#[test] fn PlanExecutorTest_ErrorPlanWithCancellableStuckNet() {
+#[test] fn plan_executor_test_error_plan_with_cancellable_stuck_net() {
     todo!();
     /*
       HandleExecutorThreadExceptionsGuard guard;
@@ -480,7 +480,7 @@ impl Drop for HandleExecutorThreadExceptionsGuard {
 }
 
 
-#[test] fn PlanExecutorTest_ReporterErrorPlanWithCancellableStuckNet() {
+#[test] fn plan_executor_test_reporter_error_plan_with_cancellable_stuck_net() {
     todo!();
     /*
       HandleExecutorThreadExceptionsGuard guard;
@@ -540,7 +540,7 @@ impl Drop for HandleExecutorThreadExceptionsGuard {
     */
 }
 
-#[test] fn PlanExecutorTest_ShouldStopWithCancel() {
+#[test] fn plan_executor_test_should_stop_with_cancel() {
     todo!();
     /*
       HandleExecutorThreadExceptionsGuard guard;

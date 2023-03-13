@@ -7,7 +7,7 @@ mod arch_arm {
 
     use super::*;
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_mx1_pool() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_mx1_pool() {
         todo!();
         /*
         
@@ -22,7 +22,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_mx1_pool_with_qmin() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_mx1_pool_with_qmin() {
         todo!();
         /*
         
@@ -37,7 +37,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_mx1_pool_with_qmax() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_mx1_pool_with_qmax() {
         todo!();
         /*
         
@@ -52,7 +52,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_1xm_pool() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_1xm_pool() {
         todo!();
         /*
         
@@ -67,7 +67,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_1xm_pool_with_qmin() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_1xm_pool_with_qmin() {
         todo!();
         /*
         
@@ -82,7 +82,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_1xm_pool_with_qmax() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_1xm_pool_with_qmax() {
         todo!();
         /*
         
@@ -97,7 +97,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_small_n() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_small_n() {
         todo!();
         /*
         
@@ -120,7 +120,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_small_n_with_x_stride() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_small_n_with_x_stride() {
         todo!();
         /*
         
@@ -144,7 +144,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_small_n_with_s() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_small_n_with_s() {
         todo!();
         /*
         
@@ -170,7 +170,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_small_n_with_qmin() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_small_n_with_qmin() {
         todo!();
         /*
         
@@ -194,7 +194,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__NEON_kc_lt_16_small_n_with_qmax() {
+    #[test] fn u8maxpool_sub16_neon_kc_lt_16_small_n_with_qmax() {
         todo!();
         /*
         
@@ -1044,7 +1044,7 @@ mod arch_x86 {
 
     use super::*;
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_mx1_pool() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_mx1_pool() {
         todo!();
         /*
         
@@ -1059,7 +1059,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_mx1_pool_with_qmin() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_mx1_pool_with_qmin() {
         todo!();
         /*
         
@@ -1074,7 +1074,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_mx1_pool_with_qmax() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_mx1_pool_with_qmax() {
         todo!();
         /*
         
@@ -1089,7 +1089,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_1xm_pool() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_1xm_pool() {
         todo!();
         /*
         
@@ -1104,7 +1104,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_1xm_pool_with_qmin() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_1xm_pool_with_qmin() {
         todo!();
         /*
         
@@ -1119,7 +1119,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_1xm_pool_with_qmax() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_1xm_pool_with_qmax() {
         todo!();
         /*
         
@@ -1134,7 +1134,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_small_n() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_small_n() {
         todo!();
         /*
         
@@ -1157,7 +1157,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_small_n_with_x_stride() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_small_n_with_x_stride() {
         todo!();
         /*
         
@@ -1181,7 +1181,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_small_n_with_s() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_small_n_with_s() {
         todo!();
         /*
         
@@ -1207,7 +1207,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_small_n_with_qmin() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_small_n_with_qmin() {
         todo!();
         /*
         
@@ -1231,7 +1231,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn U8MAXPOOL_SUB16__SSE2_kc_lt_16_small_n_with_qmax() {
+    #[test] fn u8maxpool_sub16_sse2_kc_lt_16_small_n_with_qmax() {
         todo!();
         /*
         

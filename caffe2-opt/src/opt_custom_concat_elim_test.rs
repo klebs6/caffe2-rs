@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn gatherFuse8BitRowwiseQuantFloatMulLengthsSumElim_Basic() {
+#[test] fn gather_fuse_8bit_rowwise_quant_float_mul_lengths_sum_elim_basic() {
     todo!();
     /*
       using namespace caffe2;
@@ -63,7 +63,7 @@ crate::ix!();
 }
 
 
-#[test] fn gatherFuse8BitRowwiseQuantFloatMulLengthsSumElim_NoFuse() {
+#[test] fn gather_fuse_8bit_rowwise_quant_float_mul_lengths_sum_elim_no_fuse() {
     todo!();
     /*
       using namespace caffe2;
@@ -84,7 +84,7 @@ crate::ix!();
 }
 
 
-#[test] fn ConcatElim_BasicNet() {
+#[test] fn concat_elim_basic_net() {
     todo!();
     /*
       caffe2::NetDef net;
@@ -122,7 +122,7 @@ crate::ix!();
 }
 
 
-#[test] fn ConcatElim_ProdNet() {
+#[test] fn concat_elim_prod_net() {
     todo!();
     /*
       // Test concatElim on a realistic prod model.
@@ -137,7 +137,7 @@ crate::ix!();
 }
 
 
-#[test] fn ConcatAddMulNaNClipElim_BasicNet() {
+#[test] fn concat_add_mul_na_nclip_elim_basic_net() {
     todo!();
     /*
       caffe2::NetDef net;
@@ -176,7 +176,7 @@ crate::ix!();
   */
 }
 
-#[test] fn ConcatAddMulNaNClipElim_ProdNet() {
+#[test] fn concat_add_mul_na_nclip_elim_prod_net() {
     todo!();
     /*
       // Test ConcatAddMulNaNClipElim on a realistic prod model.

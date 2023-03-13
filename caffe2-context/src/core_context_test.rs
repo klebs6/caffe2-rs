@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn CPUContextTest_TestAllocAlignment() {
+#[test] fn cpu_context_test_alloc_alignment() {
     todo!();
     /*
   for (int i = 1; i < 10; ++i) {
@@ -11,7 +11,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CPUContextTest_TestAllocDealloc() {
+#[test] fn cpu_context_test_alloc_dealloc() {
     todo!();
     /*
   auto data_ptr = CPUContext::New(10 * sizeof(float));

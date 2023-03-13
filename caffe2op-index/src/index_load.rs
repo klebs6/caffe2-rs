@@ -8,8 +8,8 @@ crate::ix!();
   |
   */
 pub struct IndexLoadOp {
-    storage: OperatorStorage,
-    context: CPUContext,
+    storage:          OperatorStorage,
+    context:          CPUContext,
     skip_first_entry: bool,
 }
 

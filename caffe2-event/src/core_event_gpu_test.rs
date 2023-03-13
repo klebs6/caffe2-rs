@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn EventCUDATest_EventBasics() {
+#[test] fn event_cuda_test_event_basics() {
     todo!();
     /*
       if (!HasCudaGPU())

@@ -1,7 +1,7 @@
 crate::ix!();
 
 /// Test for the NNGraph subgraph matching APIs.
-#[test] fn NeuralNetGraph_ReplaceGraph() {
+#[test] fn neural_net_graph_replace_graph() {
     todo!();
     /*
       NNGraph graph;

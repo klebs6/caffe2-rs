@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Tanh_TanhUnitTest() {
+#[test] fn tanh_tanh_unit_test() {
     todo!();
     /*
       // For 8bit, we can go down to 0.0145631

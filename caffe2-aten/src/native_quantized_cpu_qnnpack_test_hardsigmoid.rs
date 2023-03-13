@@ -3,7 +3,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/hardsigmoid.cc]
 
-#[test] fn HARDSIGMOID_OP_zero_batch() {
+#[test] fn hardsigmoid_op_zero_batch() {
     todo!();
     /*
     
@@ -12,7 +12,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_unit_batch() {
+#[test] fn hardsigmoid_op_unit_batch() {
     todo!();
     /*
     
@@ -27,7 +27,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_unit_batch_with_qmin() {
+#[test] fn hardsigmoid_op_unit_batch_with_qmin() {
     todo!();
     /*
     
@@ -43,7 +43,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_unit_batch_with_qmax() {
+#[test] fn hardsigmoid_op_unit_batch_with_qmax() {
     todo!();
     /*
     
@@ -59,7 +59,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_unit_batch_with_input_scale() {
+#[test] fn hardsigmoid_op_unit_batch_with_input_scale() {
     todo!();
     /*
     
@@ -78,7 +78,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_unit_batch_with_input_zero_point() {
+#[test] fn hardsigmoid_op_unit_batch_with_input_zero_point() {
     todo!();
     /*
     
@@ -97,7 +97,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch() {
+#[test] fn hardsigmoid_op_small_batch() {
     todo!();
     /*
     
@@ -112,7 +112,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_input_stride() {
+#[test] fn hardsigmoid_op_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -128,7 +128,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_output_stride() {
+#[test] fn hardsigmoid_op_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -144,7 +144,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_qmin() {
+#[test] fn hardsigmoid_op_small_batch_with_qmin() {
     todo!();
     /*
     
@@ -160,7 +160,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_qmax() {
+#[test] fn hardsigmoid_op_small_batch_with_qmax() {
     todo!();
     /*
     
@@ -176,7 +176,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_input_scale() {
+#[test] fn hardsigmoid_op_small_batch_with_input_scale() {
     todo!();
     /*
     
@@ -195,7 +195,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_small_batch_with_input_zero_point() {
+#[test] fn hardsigmoid_op_small_batch_with_input_zero_point() {
     todo!();
     /*
     
@@ -214,7 +214,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_strided_batch() {
+#[test] fn hardsigmoid_op_strided_batch() {
     todo!();
     /*
     
@@ -231,7 +231,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_strided_batch_with_qmin() {
+#[test] fn hardsigmoid_op_strided_batch_with_qmin() {
     todo!();
     /*
     
@@ -249,7 +249,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_strided_batch_with_qmax() {
+#[test] fn hardsigmoid_op_strided_batch_with_qmax() {
     todo!();
     /*
     
@@ -267,7 +267,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_strided_batch_with_input_scale() {
+#[test] fn hardsigmoid_op_strided_batch_with_input_scale() {
     todo!();
     /*
     
@@ -288,7 +288,7 @@ crate::ix!();
     */
 }
 
-#[test] fn HARDSIGMOID_OP_strided_batch_with_input_zero_point() {
+#[test] fn hardsigmoid_op_strided_batch_with_input_zero_point() {
     todo!();
     /*
     

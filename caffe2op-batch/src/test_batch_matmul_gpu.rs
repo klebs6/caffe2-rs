@@ -68,7 +68,7 @@ impl BatchMatMulOpGPUTest {
     }
 }
 
-#[test] fn BatchMatMulOpGPUTest_BatchMatMulOpGPUNormalTest() {
+#[test] fn batch_mat_mul_op_gpu_test_batch_mat_mul_op_gpu_normal_test() {
     todo!();
     /*
   if (!HasCudaGPU()) {
@@ -83,7 +83,7 @@ impl BatchMatMulOpGPUTest {
   */
 }
 
-#[test] fn BatchMatMulOpGPUTest_BatchMatMulOpGPUBroadcastTest() {
+#[test] fn batch_mat_mul_op_gpu_test_batch_mat_mul_op_gpu_broadcast_test() {
     todo!();
     /*
   if (!HasCudaGPU()) {

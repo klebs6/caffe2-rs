@@ -130,7 +130,7 @@ allow_inplace!{ObsTestDummy, vec![(0, 0), (1, 1)]}
     */
 }
 
-#[test] fn ObserverTest_TestNotify() {
+#[test] fn observer_test_notify() {
     todo!();
     /*
       auto count_before = counter.load();
@@ -149,7 +149,7 @@ allow_inplace!{ObsTestDummy, vec![(0, 0), (1, 1)]}
 }
 
 
-#[test] fn ObserverTest_TestUniqueMap() {
+#[test] fn observer_test_unique_map() {
     todo!();
     /*
       auto count_before = counter.load();
@@ -170,7 +170,7 @@ allow_inplace!{ObsTestDummy, vec![(0, 0), (1, 1)]}
 }
 
 
-#[test] fn ObserverTest_TestNotifyAfterDetach() {
+#[test] fn observer_test_notify_after_detach() {
     todo!();
     /*
       auto count_before = counter.load();
@@ -189,7 +189,7 @@ allow_inplace!{ObsTestDummy, vec![(0, 0), (1, 1)]}
 }
 
 
-#[test] fn ObserverTest_TestDAGNetBase() {
+#[test] fn observer_test_dag_net_base() {
     todo!();
     /*
       auto count_before = counter.load();
@@ -211,7 +211,7 @@ allow_inplace!{ObsTestDummy, vec![(0, 0), (1, 1)]}
   | see https://github.com/pytorch/pytorch/issues/9137
   |
   */
-#[test] fn ObserverTest_TestMultipleNetBase() {
+#[test] fn observer_test_multiple_net_base() {
     todo!();
     /*
       Workspace ws;

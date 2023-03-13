@@ -8,7 +8,7 @@ pub struct WorkspaceTestFoo {}
 
 caffe_known_type!{WorkspaceTestFoo}
 
-#[test] fn WorkspaceTest_BlobAccess() {
+#[test] fn workspace_test_blob_access() {
     todo!();
     /*
       Workspace ws;
@@ -56,7 +56,7 @@ caffe_known_type!{WorkspaceTestFoo}
 }
 
 
-#[test] fn WorkspaceTest_RunEmptyPlan() {
+#[test] fn workspace_test_run_empty_plan() {
     todo!();
     /*
       PlanDef plan_def;
@@ -66,7 +66,7 @@ caffe_known_type!{WorkspaceTestFoo}
 }
 
 
-#[test] fn WorkspaceTest_Sharing() {
+#[test] fn workspace_test_sharing() {
     todo!();
     /*
       Workspace parent;
@@ -102,7 +102,7 @@ caffe_known_type!{WorkspaceTestFoo}
 }
 
 
-#[test] fn WorkspaceTest_BlobMapping() {
+#[test] fn workspace_test_blob_mapping() {
     todo!();
     /*
       Workspace parent;
@@ -148,7 +148,7 @@ caffe_known_type!{WorkspaceTestFoo}
     */
 }
 
-#[test] fn WorkspaceTest_ForEach() {
+#[test] fn workspace_test_for_each() {
     todo!();
     /*
       forEachCheck({});

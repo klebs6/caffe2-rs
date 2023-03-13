@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Converter_ClipRangesGatherSigridHashConverter() {
+#[test] fn converter_clip_ranges_gather_sigrid_hash_converter() {
     todo!();
     /*
       OperatorDef op;
@@ -23,7 +23,7 @@ crate::ix!();
   */
 }
 
-#[test] fn Converter_ClipRangesGatherSigridHashV2Converter() {
+#[test] fn converter_clip_ranges_gather_sigrid_hash_v2converter() {
     todo!();
     /*
       OperatorDef op;

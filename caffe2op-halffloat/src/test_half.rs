@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Float16_SimpleTest() {
+#[test] fn float16_simple_test() {
     todo!();
     /*
       Workspace ws;
@@ -56,7 +56,7 @@ crate::ix!();
 }
 
 
-#[test] fn Float16_UniformDistributionTest() {
+#[test] fn float16_uniform_distribution_test() {
     todo!();
     /*
       Workspace ws;

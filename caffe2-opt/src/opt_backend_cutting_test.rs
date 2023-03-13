@@ -51,7 +51,7 @@ use crate::{
 }
 
 /// N0 -> MyConv -> N1
-#[test] fn BackendCuttingTest_unit() {
+#[test] fn backend_cutting_test_unit() {
     todo!();
     /*
         caffe2::NetDef net;
@@ -68,7 +68,7 @@ use crate::{
 }
 
 /// X -> CopyIn -> MyConv -> MyConv -> CopyOut -> Y
-#[test] fn BackendCuttingTest_line() {
+#[test] fn backend_cutting_test_line() {
     todo!();
     /*
         caffe2::NetDef net;
@@ -101,7 +101,7 @@ use crate::{
  |                          > Concat -> CopyOut -> Y
  | N2 -> MyConv -> MyRelu -|
  */
-#[test] fn BackendCuttingTest_convergedPaths() {
+#[test] fn backend_cutting_test_converged_paths() {
     todo!();
     /*
     caffe2::NetDef net;
@@ -140,7 +140,7 @@ use crate::{
  |                |                           |
  | N0 -> MyConv -> MyRelu -> MyConv2 ----------> Concat -> CopyOut -> Y
  */
-#[test] fn BackendCuttingTest_skipPath() {
+#[test] fn backend_cutting_test_skip_path() {
     todo!();
     /*
         caffe2::NetDef net;

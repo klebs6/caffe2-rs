@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/u8lut32norm.cc]
 
-#[test] fn U8LUT32NORM__SCALAR_n_eq_1() {
+#[test] fn u8lut32norm_scalar_n_eq_1() {
     todo!();
     /*
     
@@ -11,7 +11,7 @@ crate::ix!();
     */
 }
 
-#[test] fn U8LUT32NORM__SCALAR_small_n() {
+#[test] fn u8lut32norm_scalar_small_n() {
     todo!();
     /*
     
@@ -22,7 +22,7 @@ crate::ix!();
     */
 }
 
-#[test] fn U8LUT32NORM__SCALAR_large_n() {
+#[test] fn u8lut32norm_scalar_large_n() {
     todo!();
     /*
     
@@ -33,7 +33,7 @@ crate::ix!();
     */
 }
 
-#[test] fn U8LUT32NORM__SCALAR_n_eq_1_inplace() {
+#[test] fn u8lut32norm_scalar_n_eq_1_inplace() {
     todo!();
     /*
     
@@ -43,7 +43,7 @@ crate::ix!();
     */
 }
 
-#[test] fn U8LUT32NORM__SCALAR_small_n_inplace() {
+#[test] fn u8lut32norm_scalar_small_n_inplace() {
     todo!();
     /*
     
@@ -55,7 +55,7 @@ crate::ix!();
     */
 }
 
-#[test] fn U8LUT32NORM__SCALAR_large_n_inplace() {
+#[test] fn u8lut32norm_scalar_large_n_inplace() {
     todo!();
     /*
     

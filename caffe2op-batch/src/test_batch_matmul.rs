@@ -63,7 +63,7 @@ impl BatchMatMulOpTest {
     }
 }
 
-#[test] fn BatchMatMulOpTest_BatchMatMulOpNormalTest() {
+#[test] fn batch_mat_mul_op_test_batch_mat_mul_op_normal_test() {
     todo!();
     /*
   AddConstInput(std::vector<int64_t>{3, 5, 10}, 1.0f, "A");
@@ -75,7 +75,7 @@ impl BatchMatMulOpTest {
   */
 }
 
-#[test] fn BatchMatMulOpTest_BatchMatMulOpBroadcastTest() {
+#[test] fn batch_mat_mul_op_test_batch_mat_mul_op_broadcast_test() {
     todo!();
     /*
   auto* arg = def_.add_arg();

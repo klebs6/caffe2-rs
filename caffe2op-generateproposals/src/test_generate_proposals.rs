@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn GenerateProposalsTest_TestComputeAllAnchors() {
+#[test] fn generate_proposals_test_compute_all_anchors() {
     todo!();
     /*
       ERMatXf anchors(3, 4);
@@ -35,7 +35,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestComputeSortedAnchors() {
+#[test] fn generate_proposals_test_compute_sorted_anchors() {
     todo!();
     /*
       ERMatXf anchors(3, 4);
@@ -88,7 +88,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestComputeAllAnchorsRotated() {
+#[test] fn generate_proposals_test_compute_all_anchors_rotated() {
     todo!();
     /*
       // Similar to TestComputeAllAnchors but for rotated boxes with angle info.
@@ -141,7 +141,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestComputeSortedAnchorsRotated() {
+#[test] fn generate_proposals_test_compute_sorted_anchors_rotated() {
     todo!();
     /*
       // Similar to TestComputeSortedAnchors but for rotated boxes with angle info.
@@ -204,7 +204,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestEmpty() {
+#[test] fn generate_proposals_test_empty() {
     todo!();
     /*
       Workspace ws;
@@ -244,7 +244,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestRealDownSampled() {
+#[test] fn generate_proposals_test_real_down_sampled() {
     todo!();
     /*
       Workspace ws;
@@ -375,7 +375,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestRealDownSampledRotatedAngle0() {
+#[test] fn generate_proposals_test_real_down_sampled_rotated_angle0() {
     todo!();
     /*
       // Similar to TestRealDownSampled but for rotated boxes with angle info.
@@ -550,7 +550,7 @@ crate::ix!();
       */
 }
 
-#[test] fn GenerateProposalsTest_TestRealDownSampledRotated() {
+#[test] fn generate_proposals_test_real_down_sampled_rotated() {
     todo!();
     /*
       // Similar to TestRealDownSampled but for rotated boxes with angle info.

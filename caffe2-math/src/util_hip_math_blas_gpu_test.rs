@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn MathROCBLASTest_GemmNoTransNoTrans() {
+#[test] fn math_rocblas_test_gemm_no_trans_no_trans() {
     todo!();
     /*
       if (!HasHipGPU())
@@ -101,7 +101,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathROCBLASTest_GemmNoTransTrans() {
+#[test] fn math_rocblas_test_gemm_no_trans_trans() {
     todo!();
     /*
       if (!HasHipGPU())
@@ -201,7 +201,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathROCBLASTest_GemvNoTrans() {
+#[test] fn math_rocblas_test_gemv_no_trans() {
     todo!();
     /*
       if (!HasHipGPU())
@@ -292,7 +292,7 @@ crate::ix!();
 }
 
 
-#[test] fn MathROCBLASTest_GemvTrans() {
+#[test] fn math_rocblas_test_gemv_trans() {
     todo!();
     /*
       if (!HasHipGPU())

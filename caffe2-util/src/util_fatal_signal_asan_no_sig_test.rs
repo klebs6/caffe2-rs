@@ -131,7 +131,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
     }
 }
 
-#[test] fn fatalSignalTest_SIGABRT8() {
+#[test] fn fatal_signal_test_sigabrt8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGABRT, "SIGABRT", 8);
@@ -139,7 +139,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
 }
 
 
-#[test] fn fatalSignalTest_SIGINT8() {
+#[test] fn fatal_signal_test_sigint8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGINT, "SIGINT", 8);
@@ -147,7 +147,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
 }
 
 
-#[test] fn fatalSignalTest_SIGILL8() {
+#[test] fn fatal_signal_test_sigill8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGILL, "SIGILL", 8);
@@ -155,7 +155,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
 }
 
 
-#[test] fn fatalSignalTest_SIGFPE8() {
+#[test] fn fatal_signal_test_sigfpe8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGFPE, "SIGFPE", 8);
@@ -163,7 +163,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
 }
 
 
-#[test] fn fatalSignalTest_SIGBUS8() {
+#[test] fn fatal_signal_test_sigbus8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGBUS, "SIGBUS", 8);
@@ -171,7 +171,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
 }
 
 
-#[test] fn fatalSignalTest_SIGSEGV8() {
+#[test] fn fatal_signal_test_sigsegv8() {
     todo!();
     /*
       TEST_FATAL_SIGNAL(SIGSEGV, "SIGSEGV", 8);
@@ -183,7 +183,7 @@ pub fn fork_and_pipe(stderr_buffer: &String, callback: fn() -> () ) -> bool {
   | stack traces then we don't get any.
   |
   */
-#[test] fn fatalSignalTest_SIGABRT8_NOPRINT() {
+#[test] fn fatal_signal_test_sigabrt8_noprint() {
     todo!();
     /*
       TEST_FATAL_SIGNAL_NO_PRINT(SIGABRT, "SIGABRT", 8);

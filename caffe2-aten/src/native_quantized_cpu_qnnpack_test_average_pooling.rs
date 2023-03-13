@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/average-pooling.cc]
 
-#[test] fn AVERAGE_POOLING_OP_zero_batch() {
+#[test] fn average_pooling_op_zero_batch() {
     todo!();
     /*
     
@@ -19,7 +19,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_1xm_pool() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_1xm_pool() {
     todo!();
     /*
     
@@ -43,7 +43,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_1xm_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -73,7 +73,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_1xm_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -98,7 +98,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_mx1_pool() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_mx1_pool() {
     todo!();
     /*
     
@@ -122,7 +122,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_mx1_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -152,7 +152,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_mx1_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -177,7 +177,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_input_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_input_stride() {
     todo!();
     /*
     
@@ -211,7 +211,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_output_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_output_stride() {
     todo!();
     /*
     
@@ -245,7 +245,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_input_scale() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_input_scale() {
     todo!();
     /*
     
@@ -282,7 +282,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_input_zero_point() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_input_zero_point() {
     todo!();
     /*
     
@@ -319,7 +319,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_output_scale() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_output_scale() {
     todo!();
     /*
     
@@ -356,7 +356,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_output_zero_point() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_output_zero_point() {
     todo!();
     /*
     
@@ -393,7 +393,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_qmin() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_qmin() {
     todo!();
     /*
     
@@ -427,7 +427,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_small_pool_with_qmax() {
+#[test] fn average_pooling_op_unit_batch_many_channels_small_pool_with_qmax() {
     todo!();
     /*
     
@@ -461,7 +461,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_1xm_pool() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_1xm_pool() {
     todo!();
     /*
     
@@ -486,7 +486,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_1xm_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -516,7 +516,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_1xm_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -542,7 +542,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_mx1_pool() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_mx1_pool() {
     todo!();
     /*
     
@@ -567,7 +567,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_mx1_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -598,7 +598,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_mx1_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -629,7 +629,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_input_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_input_stride() {
     todo!();
     /*
     
@@ -664,7 +664,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_input_scale() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_input_scale() {
     todo!();
     /*
     
@@ -702,7 +702,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_input_zero_point() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_input_zero_point() {
     todo!();
     /*
     
@@ -740,7 +740,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_output_stride() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_output_stride() {
     todo!();
     /*
     
@@ -775,7 +775,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_output_scale() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_output_scale() {
     todo!();
     /*
     
@@ -813,7 +813,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_output_zero_point() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_output_zero_point() {
     todo!();
     /*
     
@@ -851,7 +851,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_qmin() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_qmin() {
     todo!();
     /*
     
@@ -886,7 +886,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_many_channels_large_pool_with_qmax() {
+#[test] fn average_pooling_op_unit_batch_many_channels_large_pool_with_qmax() {
     todo!();
     /*
     
@@ -921,7 +921,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_1xm_pool() {
+#[test] fn average_pooling_op_unit_batch_few_channels_1xm_pool() {
     todo!();
     /*
     
@@ -944,7 +944,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_1xm_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_few_channels_1xm_pool_with_padding() {
     todo!();
     /*
     
@@ -973,7 +973,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_1xm_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_few_channels_1xm_pool_with_stride() {
     todo!();
     /*
     
@@ -997,7 +997,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_mx1_pool() {
+#[test] fn average_pooling_op_unit_batch_few_channels_mx1_pool() {
     todo!();
     /*
     
@@ -1020,7 +1020,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_mx1_pool_with_padding() {
+#[test] fn average_pooling_op_unit_batch_few_channels_mx1_pool_with_padding() {
     todo!();
     /*
     
@@ -1049,7 +1049,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_mx1_pool_with_stride() {
+#[test] fn average_pooling_op_unit_batch_few_channels_mx1_pool_with_stride() {
     todo!();
     /*
     
@@ -1073,7 +1073,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_stride() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -1106,7 +1106,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_scale() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_input_scale() {
     todo!();
     /*
     
@@ -1142,7 +1142,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_input_zero_point() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_input_zero_point() {
     todo!();
     /*
     
@@ -1178,7 +1178,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_stride() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_output_stride() {
     todo!();
     /*
     
@@ -1211,7 +1211,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_scale() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_output_scale() {
     todo!();
     /*
     
@@ -1247,7 +1247,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_output_zero_point() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_output_zero_point() {
     todo!();
     /*
     
@@ -1283,7 +1283,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_qmin() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_qmin() {
     todo!();
     /*
     
@@ -1316,7 +1316,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_unit_batch_few_channels_with_qmax() {
+#[test] fn average_pooling_op_unit_batch_few_channels_with_qmax() {
     todo!();
     /*
     
@@ -1349,7 +1349,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_pool() {
+#[test] fn average_pooling_op_small_batch_many_channels_pool() {
     todo!();
     /*
     
@@ -1381,7 +1381,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_pool_with_input_stride() {
+#[test] fn average_pooling_op_small_batch_many_channels_pool_with_input_stride() {
     todo!();
     /*
     
@@ -1415,7 +1415,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_pool_with_output_stride() {
+#[test] fn average_pooling_op_small_batch_many_channels_pool_with_output_stride() {
     todo!();
     /*
     
@@ -1449,7 +1449,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_large_pool() {
+#[test] fn average_pooling_op_small_batch_many_channels_large_pool() {
     todo!();
     /*
     
@@ -1482,7 +1482,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_large_pool_with_input_stride() {
+#[test] fn average_pooling_op_small_batch_many_channels_large_pool_with_input_stride() {
     todo!();
     /*
     
@@ -1517,7 +1517,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_many_channels_large_pool_with_output_stride() {
+#[test] fn average_pooling_op_small_batch_many_channels_large_pool_with_output_stride() {
     todo!();
     /*
     
@@ -1552,7 +1552,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_few_channels() {
+#[test] fn average_pooling_op_small_batch_few_channels() {
     todo!();
     /*
     
@@ -1583,7 +1583,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_few_channels_with_input_stride() {
+#[test] fn average_pooling_op_small_batch_few_channels_with_input_stride() {
     todo!();
     /*
     
@@ -1616,7 +1616,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_small_batch_few_channels_with_output_stride() {
+#[test] fn average_pooling_op_small_batch_few_channels_with_output_stride() {
     todo!();
     /*
     
@@ -1649,7 +1649,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_setup_increasing_batch() {
+#[test] fn average_pooling_op_setup_increasing_batch() {
     todo!();
     /*
     
@@ -1667,7 +1667,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_setup_decreasing_batch() {
+#[test] fn average_pooling_op_setup_decreasing_batch() {
     todo!();
     /*
     
@@ -1685,7 +1685,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_setup_changing_height() {
+#[test] fn average_pooling_op_setup_changing_height() {
     todo!();
     /*
     
@@ -1712,7 +1712,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_setup_changing_width() {
+#[test] fn average_pooling_op_setup_changing_width() {
     todo!();
     /*
     
@@ -1739,7 +1739,7 @@ crate::ix!();
     */
 }
 
-#[test] fn AVERAGE_POOLING_OP_setup_swap_height_and_width() {
+#[test] fn average_pooling_op_setup_swap_height_and_width() {
     todo!();
     /*
     

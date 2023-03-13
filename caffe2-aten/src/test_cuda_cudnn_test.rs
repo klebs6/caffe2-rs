@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/test/cuda_cudnn_test.cpp]
 
-#[test] fn cudnn_test_testcuda() {
+#[test] fn cudnn_testcuda() {
     todo!();
     /*
     

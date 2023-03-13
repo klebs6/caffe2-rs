@@ -7,7 +7,7 @@ use crate::{
 
 type TestGraph = NomGraph<TestClass>;
 
-#[test] fn Basic_CreateNodeAndEdge() {
+#[test] fn basic_create_node_and_edge() {
     todo!();
     /*
   TestGraph g;
@@ -19,7 +19,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_DeleteNode() {
+#[test] fn basic_delete_node() {
     todo!();
     /*
   TestGraph g;
@@ -32,7 +32,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_DeleteEdge() {
+#[test] fn basic_delete_edge() {
     todo!();
     /*
   TestGraph g;
@@ -43,7 +43,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_ReplaceEdges() {
+#[test] fn basic_replace_edges() {
     todo!();
     /*
   TestGraph g;
@@ -100,7 +100,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_HasNode() {
+#[test] fn basic_has_node() {
     todo!();
     /*
   TestGraph g;
@@ -140,7 +140,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_Moves() {
+#[test] fn basic_moves() {
     todo!();
     /*
   TestGraph g;
@@ -165,7 +165,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_MoveSubgraph() {
+#[test] fn basic_move_subgraph() {
     todo!();
     /*
   TestGraph g;
@@ -196,7 +196,7 @@ type TestGraph = NomGraph<TestClass>;
   */
 }
 
-#[test] fn Basic_DotGenerator() {
+#[test] fn basic_dot_generator() {
     todo!();
     /*
   TestGraph g;

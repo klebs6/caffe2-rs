@@ -4,4 +4,5 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{op_lengths_pad}
+x!{lengths_pad}
+x!{run_lengths_pad}

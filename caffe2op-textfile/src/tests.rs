@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn TextFileReaderUtilsTest_TokenizeTest() {
+#[test] fn text_file_reader_utils_test_tokenize_test() {
     todo!();
     /*
       TokenizedString tokenized;

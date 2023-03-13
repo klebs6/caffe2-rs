@@ -1,7 +1,7 @@
 // # vim: ft=none
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/hardswish.cc]
 
-#[test] fn HARDSWISH_OP_zero_batch() {
+#[test] fn hardswish_op_zero_batch() {
     todo!();
     /*
     
@@ -10,7 +10,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch() {
+#[test] fn hardswish_op_unit_batch() {
     todo!();
     /*
     
@@ -25,7 +25,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_qmin() {
+#[test] fn hardswish_op_unit_batch_with_qmin() {
     todo!();
     /*
     
@@ -41,7 +41,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_qmax() {
+#[test] fn hardswish_op_unit_batch_with_qmax() {
     todo!();
     /*
     
@@ -57,7 +57,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_input_scale() {
+#[test] fn hardswish_op_unit_batch_with_input_scale() {
     todo!();
     /*
     
@@ -76,7 +76,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_input_zero_point() {
+#[test] fn hardswish_op_unit_batch_with_input_zero_point() {
     todo!();
     /*
     
@@ -95,7 +95,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_output_scale() {
+#[test] fn hardswish_op_unit_batch_with_output_scale() {
     todo!();
     /*
     
@@ -114,7 +114,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_unit_batch_with_output_zero_point() {
+#[test] fn hardswish_op_unit_batch_with_output_zero_point() {
     todo!();
     /*
     
@@ -133,7 +133,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch() {
+#[test] fn hardswish_op_small_batch() {
     todo!();
     /*
     
@@ -148,7 +148,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_input_stride() {
+#[test] fn hardswish_op_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -164,7 +164,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_output_stride() {
+#[test] fn hardswish_op_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -180,7 +180,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_qmin() {
+#[test] fn hardswish_op_small_batch_with_qmin() {
     todo!();
     /*
     
@@ -196,7 +196,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_qmax() {
+#[test] fn hardswish_op_small_batch_with_qmax() {
     todo!();
     /*
     
@@ -212,7 +212,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_input_scale() {
+#[test] fn hardswish_op_small_batch_with_input_scale() {
     todo!();
     /*
     
@@ -231,7 +231,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_small_batch_with_input_zero_point() {
+#[test] fn hardswish_op_small_batch_with_input_zero_point() {
     todo!();
     /*
     
@@ -250,7 +250,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_strided_batch() {
+#[test] fn hardswish_op_strided_batch() {
     todo!();
     /*
     
@@ -267,7 +267,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_strided_batch_with_qmin() {
+#[test] fn hardswish_op_strided_batch_with_qmin() {
     todo!();
     /*
     
@@ -285,7 +285,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_strided_batch_with_qmax() {
+#[test] fn hardswish_op_strided_batch_with_qmax() {
     todo!();
     /*
     
@@ -303,7 +303,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_strided_batch_with_input_scale() {
+#[test] fn hardswish_op_strided_batch_with_input_scale() {
     todo!();
     /*
     
@@ -324,7 +324,7 @@
     */
 }
 
-#[test] fn HARDSWISH_OP_strided_batch_with_input_zero_point() {
+#[test] fn hardswish_op_strided_batch_with_input_zero_point() {
     todo!();
     /*
     

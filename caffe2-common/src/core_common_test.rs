@@ -7,7 +7,7 @@ crate::ix!();
   | extensively as one should be using the std
   | version most of the time.
   */
-#[test] fn CommonTest_TestStoi() {
+#[test] fn common_test_stoi() {
     todo!();
     /*
   EXPECT_TRUE(CAFFE2_TESTONLY_WE_ARE_USING_CUSTOM_STRING_FUNCTIONS);
@@ -18,7 +18,7 @@ crate::ix!();
   */
 }
 
-#[test] fn CommonTest_TestStod() {
+#[test] fn common_test_stod() {
     todo!();
     /*
   // Full string is parsed.

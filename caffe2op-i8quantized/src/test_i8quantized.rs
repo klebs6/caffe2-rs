@@ -14,7 +14,7 @@
 
 crate::ix!();
 
-#[test] fn Int8_ReLU() {
+#[test] fn int8_relu() {
     todo!();
     /*
       auto XQ = q({1, 224, 224, 3});
@@ -44,7 +44,7 @@ crate::ix!();
   | fails buck test xplat/caffe2:caffe2_testAndroid
   |
   */
-#[test] fn Int8_DISABLED_LeakyReLU() {
+#[test] fn int8_disabled_leaky_relu() {
     todo!();
     /*
       auto XQ = q({1, 224, 224, 3});
@@ -72,7 +72,7 @@ crate::ix!();
   */
 }
 
-#[test] fn Int8_Softmax() {
+#[test] fn int8_softmax() {
     todo!();
     /*
       auto XQ = q({1, 2, 1, 3});
@@ -101,7 +101,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Sigmoid() {
+#[test] fn int8_sigmoid() {
     todo!();
     /*
       auto XQ = q({1, 2, 1, 3});
@@ -130,7 +130,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_MaxPool() {
+#[test] fn int8_max_pool() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -163,7 +163,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_AveragePool() {
+#[test] fn int8_average_pool() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -196,7 +196,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_ResizeNearest() {
+#[test] fn int8_resize_nearest() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -232,7 +232,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_ChannelShuffle() {
+#[test] fn int8_channel_shuffle() {
     todo!();
     /*
       auto XQ = q({2, 25, 25, 32});
@@ -274,7 +274,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Concat() {
+#[test] fn int8_concat() {
     todo!();
     /*
       auto XQ0 = q({2, 25, 25, 16});
@@ -317,7 +317,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Add() {
+#[test] fn int8_add() {
     todo!();
     /*
       auto XQ0 = q({1, 10, 10, 20});
@@ -348,7 +348,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_SumRelu() {
+#[test] fn int8_sum_relu() {
     todo!();
     /*
       auto XQ0 = q({1, 10, 10, 20});
@@ -418,7 +418,7 @@ crate::ix!();
   | Use TFLite test vectors to ensure compatibility.
   |
   */
-#[test] fn Int8_Conv() {
+#[test] fn int8_conv() {
     todo!();
     /*
       auto XQ = q({2, 2, 4, 1});
@@ -491,7 +491,7 @@ crate::ix!();
   */
 }
 
-#[test] fn Int8_Grouped1x1Conv() {
+#[test] fn int8_grouped1x_1conv() {
     todo!();
     /*
       auto XQ = q({1, 3, 2, 4});
@@ -561,7 +561,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Conv2() {
+#[test] fn int8_conv2() {
     todo!();
     /*
       auto XQ = q({1, 3, 6, 1});
@@ -621,7 +621,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_DepthwiseConv() {
+#[test] fn int8_depthwise_conv() {
     todo!();
     /*
       auto XQ = q({1, 3, 2, 2});
@@ -683,7 +683,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_DepthwiseConv3x3() {
+#[test] fn int8_depthwise_conv3x3() {
     todo!();
     /*
       auto XQ = q({1, 3, 3, 3});
@@ -748,7 +748,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_DepthwiseConv5x5() {
+#[test] fn int8_depthwise_conv5x5() {
     todo!();
     /*
       auto XQ = q({1, 5, 5, 1});
@@ -813,7 +813,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_ConvTranspose() {
+#[test] fn int8_conv_transpose() {
     todo!();
     /*
       auto XQ = q({1, 3, 6, 1});
@@ -869,7 +869,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_FC() {
+#[test] fn int8_fc() {
     todo!();
     /*
       auto XQ = q({2, 10});
@@ -924,7 +924,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_GivenTensorFill() {
+#[test] fn int8_given_tensor_fill() {
     todo!();
     /*
       vector<int64_t> shape = {1, 25, 25, 16};
@@ -962,7 +962,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_GivenIntTensorFill() {
+#[test] fn int8_given_int_tensor_fill() {
     todo!();
     /*
       vector<int64_t> shape = {32};
@@ -1000,7 +1000,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_QuantDeQuant() {
+#[test] fn int8_quant_de_quant() {
     todo!();
     /*
       vector<int64_t> shape = {1, 25, 25, 16};
@@ -1024,7 +1024,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Reshape() {
+#[test] fn int8_reshape() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -1047,7 +1047,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Flatten() {
+#[test] fn int8_flatten() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -1070,7 +1070,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_Slice() {
+#[test] fn int8_slice() {
     todo!();
     /*
       auto XQ = q({1, 25, 25, 16});
@@ -1109,7 +1109,7 @@ crate::ix!();
 }
 
 
-#[test] fn Int8_DISABLED_Transpose() {
+#[test] fn int8_disabled_transpose() {
     todo!();
     /*
       auto XQ = q({1, 50, 25, 16});

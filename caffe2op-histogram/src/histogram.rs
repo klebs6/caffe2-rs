@@ -15,8 +15,8 @@ crate::ix!();
   |
   */
 pub struct HistogramOp<Context> {
-    storage: OperatorStorage,
-    context: Context,
+    storage:   OperatorStorage,
+    context:   Context,
     bin_edges: Vec<f32>,
 }
 

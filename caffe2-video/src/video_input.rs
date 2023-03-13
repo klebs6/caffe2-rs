@@ -167,6 +167,7 @@ register_cuda_operator!{VideoInput, VideoInputOp<CUDAContext>}
 */
 
 impl<Context> Drop for VideoInputOp<Context> {
+
     fn drop(&mut self) {
         todo!();
         /* 

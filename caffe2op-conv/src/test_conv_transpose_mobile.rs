@@ -13,7 +13,7 @@ crate::ix!();
 
 // TODO(#14383029) cblas_sgemm not yet implemented on limited mobile cases.
 #[cfg(target_feature = "neon")]
-#[test] fn ConvTransposeMobile_Test() {
+#[test] fn conv_transpose_mobile_test() {
     todo!();
     /*
       for (int i = 0; i < 10; ++i) {

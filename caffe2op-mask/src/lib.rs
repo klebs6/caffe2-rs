@@ -16,7 +16,6 @@ x!{get_boolean_mask_gradient}
 x!{get_sequence_mask_gradient}
 x!{lower_functor}
 x!{mask_with_functor}
-x!{op_boolean_unmask_ops}
 x!{repeated_mask_with_functor}
 x!{sequence_functor}
 x!{sequence_mask}

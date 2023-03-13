@@ -9,12 +9,9 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HuffmanTreeHierarchyOp<T, Context> {
-
     storage:     OperatorStorage,
     context:     Context,
-
     num_classes: i32,
-
     phantom:     PhantomData<T>,
 }
 

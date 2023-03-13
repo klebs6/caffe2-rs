@@ -2,15 +2,12 @@ crate::ix!();
 
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct HSoftmaxOpBase<T, Context> {
-
     storage:           OperatorStorage,
     context:           Context,
-
     hierarchy_all_map: HashMap<i32,PathProto>,
     scale:             Option<Tensor>,
     sum_multiplier:    Option<Tensor>,
     bias_multiplier:   Option<Tensor>,
-
     phantom:           PhantomData<T>,
 }
 

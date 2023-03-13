@@ -4,7 +4,7 @@ use crate::{
     NetDef
 };
 
-#[test] fn Converter_Basic() {
+#[test] fn converter_basic() {
     todo!();
     /*
       using namespace caffe2::testing;
@@ -30,7 +30,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_UnknownType() {
+#[test] fn converter_unknown_type() {
     todo!();
     /*
       using namespace caffe2::testing;
@@ -44,7 +44,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_SpecializeConverter() {
+#[test] fn converter_specialize_converter() {
     todo!();
     /*
       using namespace caffe2::testing;
@@ -73,7 +73,7 @@ use crate::{
     */
 }
 
-#[test] fn Converter_ExternalInputs() {
+#[test] fn converter_external_inputs() {
     todo!();
     /*
       auto net = fakeNet();
@@ -88,7 +88,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_ExternalOutputs() {
+#[test] fn converter_external_outputs() {
     todo!();
     /*
       auto net = fakeNet();
@@ -103,7 +103,7 @@ use crate::{
 }
 
 
-#[test] fn Converter_InjectDataEdgeIndicators() {
+#[test] fn converter_inject_data_edge_indicators() {
     todo!();
     /*
       auto net = fakeNet();

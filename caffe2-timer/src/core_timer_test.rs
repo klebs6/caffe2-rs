@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn TimerTest_Test() {
+#[test] fn timer_test() {
     todo!();
     /*
       Timer timer;
@@ -33,7 +33,7 @@ crate::ix!();
       */
 }
 
-#[test] fn TimerTest_TestLatency() {
+#[test] fn timer_test_latency() {
     todo!();
     /*
       constexpr int iter = 1000;

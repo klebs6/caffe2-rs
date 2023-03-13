@@ -60,7 +60,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
  |
  | R = ---> (Op3) ---> (Op3) --->
  */
-#[test] fn PatternNetTransformTest_TestGenerateTransform() {
+#[test] fn pattern_net_transform_test_generate_transform() {
     todo!();
     /*
       Workspace ws;
@@ -122,7 +122,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
  |
  | R = ---> (Op3) ---> (Op3) --->
  */
-#[test] fn PatternNetTransformTest_TestRepeatedTransform() {
+#[test] fn pattern_net_transform_test_repeated_transform() {
     todo!();
     /*
       Workspace ws;
@@ -175,7 +175,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
  |          |_(Op3)-->(Op3)-->(Op2)_|
  |
  */
-#[test] fn PatternNetTransformTest_TestHardTransform() {
+#[test] fn pattern_net_transform_test_hard_transform() {
     todo!();
     /*
       Workspace ws;
@@ -236,7 +236,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
       */
 }
 
-#[test] fn PatternNetTransformTest_TestGeneralStringMatching() {
+#[test] fn pattern_net_transform_test_general_string_matching() {
     todo!();
     /*
       Workspace ws;
@@ -267,7 +267,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
       */
 }
 
-#[test] fn PatternNetTransformTest_TestDeviceOptionMatching() {
+#[test] fn pattern_net_transform_test_device_option_matching() {
     todo!();
     /*
       Workspace ws;
@@ -302,7 +302,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
       */
 }
 
-#[test] fn PatternNetTransformTest_TestEngineMatching() {
+#[test] fn pattern_net_transform_test_engine_matching() {
     todo!();
     /*
       Workspace ws;
@@ -336,7 +336,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
       */
 }
 
-#[test] fn PatternNetTransformTest_TestSingularArgumentMatching() {
+#[test] fn pattern_net_transform_test_singular_argument_matching() {
     todo!();
     /*
       Workspace ws;
@@ -459,7 +459,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
  |
  | It should reduce G to a single operator.
  */
-#[test] fn PatternNetTransformTest_TestNonStrictTopographicTransform() {
+#[test] fn pattern_net_transform_test_non_strict_topographic_transform() {
     todo!();
     /*
       Workspace ws;
@@ -536,7 +536,7 @@ allow_inplace!{DummyCounterOp3, vec![(0, 0), (1, 1)]}
  | So, the pattern should match 4 times, but only
  | be replaced twice.
  */
-#[test] fn PatternNetTransformTest_TestMultiInputOutputTransform() {
+#[test] fn pattern_net_transform_test_multi_input_output_transform() {
     todo!();
     /*
       Workspace ws;

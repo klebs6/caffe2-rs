@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qnnpack/test/clamp.cc]
 
-#[test] fn CLAMP_OP_zero_batch() {
+#[test] fn clamp_op_zero_batch() {
     todo!();
     /*
     
@@ -11,7 +11,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_unit_batch() {
+#[test] fn clamp_op_unit_batch() {
     todo!();
     /*
     
@@ -26,7 +26,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_unit_batch_with_qmin() {
+#[test] fn clamp_op_unit_batch_with_qmin() {
     todo!();
     /*
     
@@ -44,7 +44,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_unit_batch_with_qmax() {
+#[test] fn clamp_op_unit_batch_with_qmax() {
     todo!();
     /*
     
@@ -62,7 +62,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_small_batch() {
+#[test] fn clamp_op_small_batch() {
     todo!();
     /*
     
@@ -77,7 +77,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_small_batch_with_input_stride() {
+#[test] fn clamp_op_small_batch_with_input_stride() {
     todo!();
     /*
     
@@ -93,7 +93,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_small_batch_with_output_stride() {
+#[test] fn clamp_op_small_batch_with_output_stride() {
     todo!();
     /*
     
@@ -109,7 +109,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_small_batch_with_input_and_output_stride() {
+#[test] fn clamp_op_small_batch_with_input_and_output_stride() {
     todo!();
     /*
     
@@ -126,7 +126,7 @@ crate::ix!();
     */
 }
 
-#[test] fn CLAMP_OP_qmin_and_qmax_equal_uint8_max() {
+#[test] fn clamp_op_qmin_and_qmax_equal_uint8_max() {
     todo!();
     /*
     

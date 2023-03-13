@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn GenerateProposalsTest_TestRealDownSampledGPU() {
+#[test] fn generate_proposals_test_real_down_sampled_gpu() {
     todo!();
     /*
       if (!HasCudaGPU())
@@ -159,7 +159,7 @@ crate::ix!();
 }
 
 //#if defined(CV_MAJOR_VERSION) && (CV_MAJOR_VERSION >= 3)
-#[test] fn GenerateProposalsTest_TestRealDownSampledRotatedAngle0GPU() {
+#[test] fn generate_proposals_test_real_down_sampled_rotated_angle0gpu() {
     todo!();
     /*
       // Similar to TestRealDownSampledGPU but for rotated boxes with angle info.
@@ -362,7 +362,7 @@ crate::ix!();
 }
 
 //#if defined(CV_MAJOR_VERSION) && (CV_MAJOR_VERSION >= 3)
-#[test] fn GenerateProposalsTest_TestRealDownSampledRotatedGPU() {
+#[test] fn generate_proposals_test_real_down_sampled_rotated_gpu() {
     todo!();
     /*
       // Similar to TestRealDownSampledGPU but for rotated boxes with angle info.

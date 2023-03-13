@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[test] fn Int8RoIAlign_RoIAlign() {
+#[test] fn int_8ro_ialign_ro_ialign() {
     todo!();
     /*
       const int N = 2;

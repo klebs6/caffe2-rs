@@ -52,7 +52,7 @@ allow_inplace!{SleepOp, vec![(0, 0), (1, 1)]}
     */
 }
 
-#[test] fn TimeObserverTest_Test3Seconds() {
+#[test] fn time_observer_test_3seconds() {
     todo!();
     /*
       Workspace ws;

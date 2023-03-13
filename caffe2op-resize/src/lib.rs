@@ -12,7 +12,7 @@ x!{get_gradient}
 x!{get_gradient_3d}
 x!{gradient}
 x!{gradient_3d}
-x!{op_resize}
-x!{op_resize_3d}
+x!{resize_nearest}
+x!{resize_nearest_3d}
 x!{resize_nearest_3dnchw2x}
 x!{resize_nearest_nchw2x}

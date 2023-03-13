@@ -1,5 +1,5 @@
 
-#[test] fn BinaryMatch_NoMatch() {
+#[test] fn binary_match_no_match() {
     todo!();
     /*
       auto graph = createGraph();
@@ -9,7 +9,7 @@
       */
 }
 
-#[test] fn BinaryMatch_AllMatch() {
+#[test] fn binary_match_all_match() {
     todo!();
     /*
       auto graph = createGraph();
@@ -20,7 +20,7 @@
       */
 }
 
-#[test] fn BinaryMatch_EmptyGraph() {
+#[test] fn binary_match_empty_graph() {
     todo!();
     /*
       nom::Graph<std::string> graph;
@@ -48,7 +48,7 @@
   |   +-----> |   6   |
   |           +-------+
   */
-#[test] fn BinaryMatch_Basic() {
+#[test] fn binary_match_basic() {
     todo!();
     /*
       auto graph = createGraph();
@@ -98,7 +98,7 @@
   |
   | should match as { 4, 2 }, { 6 } not { 4, 2, 6 }
   */
-#[test] fn BinaryMatch_RemovedMiddleNode() {
+#[test] fn binary_match_removed_middle_node() {
     todo!();
     /*
       auto graph = createGraph();

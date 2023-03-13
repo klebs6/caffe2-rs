@@ -1,10 +1,8 @@
 crate::ix!();
 
 pub struct InstanceNormGradientOp<T, Context> {
-
     storage: OperatorStorage,
     context: Context,
-
     epsilon: f32,
     order:   StorageOrder,
     mean:    Tensor,
@@ -15,7 +13,6 @@ pub struct InstanceNormGradientOp<T, Context> {
     c2:      Tensor,
     c3:      Tensor,
     ones:    Tensor,
-
     phantom: PhantomData<T>,
 }
 

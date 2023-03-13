@@ -13,8 +13,7 @@ pub struct Col2ImOp<T, Context> {
     stride_h:    i32,
     stride_w:    i32,
     order:       StorageOrder,
-
-    phantom: PhantomData<T>,
+    phantom:     PhantomData<T>,
 }
 
 num_inputs!{Col2Im, 2}

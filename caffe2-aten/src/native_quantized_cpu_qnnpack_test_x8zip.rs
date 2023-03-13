@@ -7,7 +7,7 @@ mod arch_arm {
 
     use super::*;
 
-    #[test] fn X8ZIP_X2__NEON_n_eq_8() {
+    #[test] fn x8zip_x2_neon_n_eq_8() {
         todo!();
         /*
         
@@ -17,7 +17,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X2__NEON_n_div_16() {
+    #[test] fn x8zip_x2_neon_n_div_16() {
         todo!();
         /*
         
@@ -29,7 +29,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X2__NEON_n_gt_8() {
+    #[test] fn x8zip_x2_neon_n_gt_8() {
         todo!();
         /*
         
@@ -41,7 +41,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X2__NEON_n_lt_8() {
+    #[test] fn x8zip_x2_neon_n_lt_8() {
         todo!();
         /*
         
@@ -53,7 +53,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X3__NEON_n_eq_8() {
+    #[test] fn x8zip_x3_neon_n_eq_8() {
         todo!();
         /*
         
@@ -63,7 +63,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X3__NEON_n_div_8() {
+    #[test] fn x8zip_x3_neon_n_div_8() {
         todo!();
         /*
         
@@ -75,7 +75,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X3__NEON_n_gt_8() {
+    #[test] fn x8zip_x3_neon_n_gt_8() {
         todo!();
         /*
         
@@ -87,7 +87,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X3__NEON_n_lt_8() {
+    #[test] fn x8zip_x3_neon_n_lt_8() {
         todo!();
         /*
         
@@ -99,7 +99,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X4__NEON_n_eq_8() {
+    #[test] fn x8zip_x4_neon_n_eq_8() {
         todo!();
         /*
         
@@ -109,7 +109,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X4__NEON_n_div_8() {
+    #[test] fn x8zip_x4_neon_n_div_8() {
         todo!();
         /*
         
@@ -121,7 +121,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X4__NEON_n_gt_8() {
+    #[test] fn x8zip_x4_neon_n_gt_8() {
         todo!();
         /*
         
@@ -133,7 +133,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_X4__NEON_n_lt_16() {
+    #[test] fn x8zip_x4_neon_n_lt_16() {
         todo!();
         /*
         
@@ -145,7 +145,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_eq_8_m_4() {
+    #[test] fn x8zip_xm_neon_n_eq_8_m_4() {
         todo!();
         /*
         
@@ -155,7 +155,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_eq_8_m_div_4() {
+    #[test] fn x8zip_xm_neon_n_eq_8_m_div_4() {
         todo!();
         /*
         
@@ -167,7 +167,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_eq_8_m_gt_4() {
+    #[test] fn x8zip_xm_neon_n_eq_8_m_gt_4() {
         todo!();
         /*
         
@@ -179,7 +179,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_div_8_m_eq_4() {
+    #[test] fn x8zip_xm_neon_n_div_8_m_eq_4() {
         todo!();
         /*
         
@@ -191,7 +191,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_div_8_m_4() {
+    #[test] fn x8zip_xm_neon_n_div_8_m_4() {
         todo!();
         /*
         
@@ -205,7 +205,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_div_8_m_gt_4() {
+    #[test] fn x8zip_xm_neon_n_div_8_m_gt_4() {
         todo!();
         /*
         
@@ -219,7 +219,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_gt_8_m_eq_4() {
+    #[test] fn x8zip_xm_neon_n_gt_8_m_eq_4() {
         todo!();
         /*
         
@@ -231,7 +231,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_gt_8_m_div_4() {
+    #[test] fn x8zip_xm_neon_n_gt_8_m_div_4() {
         todo!();
         /*
         
@@ -245,7 +245,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_gt_8_m_4() {
+    #[test] fn x8zip_xm_neon_n_gt_8_m_4() {
         todo!();
         /*
         
@@ -259,7 +259,7 @@ mod arch_arm {
         */
     }
 
-    #[test] fn X8ZIP_XM__NEON_n_lt_8() {
+    #[test] fn x8zip_xm_neon_n_lt_8() {
         todo!();
         /*
         
@@ -279,7 +279,7 @@ mod arch_x86 {
 
     use super::*;
 
-    #[test] fn X8ZIP_X2__SSE2_n_eq_16() {
+    #[test] fn x8zip_x2_sse2_n_eq_16() {
         todo!();
         /*
         
@@ -289,7 +289,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X2__SSE2_n_div_16() {
+    #[test] fn x8zip_x2_sse2_n_div_16() {
         todo!();
         /*
         
@@ -301,7 +301,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X2__SSE2_n_gt_16() {
+    #[test] fn x8zip_x2_sse2_n_gt_16() {
         todo!();
         /*
         
@@ -313,7 +313,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X2__SSE2_n_lt_16() {
+    #[test] fn x8zip_x2_sse2_n_lt_16() {
         todo!();
         /*
         
@@ -325,7 +325,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X3__SSE2_n_eq_16() {
+    #[test] fn x8zip_x3_sse2_n_eq_16() {
         todo!();
         /*
         
@@ -335,7 +335,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X3__SSE2_n_div_16() {
+    #[test] fn x8zip_x3_sse2_n_div_16() {
         todo!();
         /*
         
@@ -347,7 +347,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X3__SSE2_n_gt_16() {
+    #[test] fn x8zip_x3_sse2_n_gt_16() {
         todo!();
         /*
         
@@ -359,7 +359,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X3__SSE2_n_lt_16() {
+    #[test] fn x8zip_x3_sse2_n_lt_16() {
         todo!();
         /*
         
@@ -371,7 +371,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X4__SSE2_n_eq_16() {
+    #[test] fn x8zip_x4_sse2_n_eq_16() {
         todo!();
         /*
         
@@ -381,7 +381,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X4__SSE2_n_div_16() {
+    #[test] fn x8zip_x4_sse2_n_div_16() {
         todo!();
         /*
         
@@ -393,7 +393,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X4__SSE2_n_gt_16() {
+    #[test] fn x8zip_x4_sse2_n_gt_16() {
         todo!();
         /*
         
@@ -405,7 +405,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_X4__SSE2_n_lt_16() {
+    #[test] fn x8zip_x4_sse2_n_lt_16() {
         todo!();
         /*
         
@@ -417,7 +417,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_8_m_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_8_m_4() {
         todo!();
         /*
         
@@ -427,7 +427,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_8_m_div_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_8_m_div_4() {
         todo!();
         /*
         
@@ -439,7 +439,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_8_m_gt_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_8_m_gt_4() {
         todo!();
         /*
         
@@ -451,7 +451,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_16_m_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_16_m_4() {
         todo!();
         /*
         
@@ -461,7 +461,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_16_m_div_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_16_m_div_4() {
         todo!();
         /*
         
@@ -473,7 +473,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_eq_16_m_gt_4() {
+    #[test] fn x8zip_xm_sse2_n_eq_16_m_gt_4() {
         todo!();
         /*
         
@@ -485,7 +485,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_div_16_m_eq_4() {
+    #[test] fn x8zip_xm_sse2_n_div_16_m_eq_4() {
         todo!();
         /*
         
@@ -497,7 +497,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_div_16_m_4() {
+    #[test] fn x8zip_xm_sse2_n_div_16_m_4() {
         todo!();
         /*
         
@@ -511,7 +511,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_div_16_m_gt_4() {
+    #[test] fn x8zip_xm_sse2_n_div_16_m_gt_4() {
         todo!();
         /*
         
@@ -525,7 +525,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_gt_16_m_eq_4() {
+    #[test] fn x8zip_xm_sse2_n_gt_16_m_eq_4() {
         todo!();
         /*
         
@@ -537,7 +537,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_gt_16_m_div_4() {
+    #[test] fn x8zip_xm_sse2_n_gt_16_m_div_4() {
         todo!();
         /*
         
@@ -551,7 +551,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_gt_16_m_4() {
+    #[test] fn x8zip_xm_sse2_n_gt_16_m_4() {
         todo!();
         /*
         
@@ -565,7 +565,7 @@ mod arch_x86 {
         */
     }
 
-    #[test] fn X8ZIP_XM__SSE2_n_lt_16() {
+    #[test] fn x8zip_xm_sse2_n_lt_16() {
         todo!();
         /*
         

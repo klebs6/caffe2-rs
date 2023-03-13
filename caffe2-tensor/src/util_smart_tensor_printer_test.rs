@@ -34,7 +34,7 @@ crate::ix!();
 // We need real glog for this test to pass
 #[cfg(caffe2_use_google_glog)]
 #[cfg(not(target_os = "osx"))]
-#[test] fn SmartTensorPrinterTest_SimpleTest() {
+#[test] fn smart_tensor_printer_test_simple_test() {
     todo!();
     /*
       printTensorAndCheck(std::vector<int>{1, 2, 3, 4, 5});
