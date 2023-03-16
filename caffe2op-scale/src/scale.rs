@@ -11,7 +11,7 @@ crate::ix!();
 pub struct ScaleOp<Context> {
     storage: OperatorStorage,
     context: Context,
-    scale:  f32,
+    scale:   f32,
 }
 
 register_cpu_operator!{Scale, ScaleOp<CPUContext>}

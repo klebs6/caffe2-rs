@@ -6,7 +6,6 @@ crate::ix!();
   |
   */
 pub struct RsqrtFunctor<Context> {
-    
     phantom: PhantomData<Context>,
 }
 
