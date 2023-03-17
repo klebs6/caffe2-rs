@@ -1,6 +1,8 @@
 This rust crate provides mathematical operators
 for DSP and machine learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 It includes operations for implementing activation
 functions commonly used in neural networks and
 other machine learning models. The crate provides

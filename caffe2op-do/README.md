@@ -4,6 +4,8 @@ The `caffe2op-do` crate defines an operator used
 in DSP and machine learning computations that
 executes a subnet in a separate workspace.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### Subnet Execution
 
 The `DoOp` operator executes a subnet, which is

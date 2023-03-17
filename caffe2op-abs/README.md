@@ -7,6 +7,8 @@ applications. The crate also includes functions
 for fetching and feeding data to and from tensors,
 and for resetting the workspace.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The mathematical idea behind the absolute value
 function is straightforward: it returns the
 magnitude of a number, without regard to its

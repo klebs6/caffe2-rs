@@ -7,6 +7,8 @@ mathematical operators used in digital signal
 processing (DSP) and machine learning computations
 for counting and tracking various events.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The operators include:
 
 - `ResetCounter`: a function that resets the counter to its initial value.

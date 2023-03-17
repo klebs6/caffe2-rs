@@ -2,6 +2,8 @@ caffe2op-cbrt is a Rust crate that defines
 a mathematical operator used in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 This crate provides functionality for computing
 the cube root of a tensor within a neural
 network. The CbrtFunctor module provides an

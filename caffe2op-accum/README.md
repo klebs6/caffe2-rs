@@ -9,6 +9,8 @@ resulting tensor is returned as the output. The
 `Accumulated` token is used to refer to the output
 tensor.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The operation performed by `AccumulateOp` can be
 represented mathematically as follows:
 

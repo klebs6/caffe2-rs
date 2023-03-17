@@ -12,6 +12,8 @@ a new tensor with the specified rows. The
 `CopyRowsToTensorGradientOp` performs the gradient
 computation for this operation.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Other operators in this crate include
 `CopyCPUToGPUOp`, which copies data from a CPU
 tensor to a GPU tensor, and `CopyGPUToCPUOp`,

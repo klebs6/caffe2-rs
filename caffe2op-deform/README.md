@@ -8,6 +8,8 @@ allows for deformation of convolutional neural
 networks, which enables better feature detection
 in the presence of geometric transformations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The core symbols used in this crate are:
 
 Deformable Convolution is a variation of the

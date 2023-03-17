@@ -4,6 +4,8 @@ Crate for performing mathematical operations
 related to cubing tensors in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes one main symbol:
 
 - `Cube`: Computes the element-wise cube of

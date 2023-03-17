@@ -1,4 +1,3 @@
-
 ## Description for `caffe2op-channelstats` Rust crate
 
 The `caffe2op-channelstats` crate defines
@@ -7,6 +6,8 @@ learning computations. The main purpose of this
 crate is to compute the mean and standard
 deviation of a set of input channels for a given
 tensor.
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
 
 ### ChannelStatsOp
 

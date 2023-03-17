@@ -5,6 +5,8 @@ this crate are the `AsinFunctor` and
 `AsinGradientFunctor`, which enable the
 computation of the arcsine of input values.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `arcsine` function is a fundamental
 mathematical operation that takes an input value
 `x` and returns the corresponding angle `y` in

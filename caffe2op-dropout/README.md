@@ -6,6 +6,8 @@ called the Dropout Operator. This operator is
 commonly used in deep learning models as
 a regularization technique to prevent overfitting.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Dropout
 
 Dropout is a regularization technique that has

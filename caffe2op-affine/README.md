@@ -7,6 +7,8 @@ of a set of vectors or matrices. The affine
 transformation involves scaling, shifting, and
 adding a bias term to each input vector or matrix.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 In this crate, you will find several functions and
 types that implement the affine operator and its
 associated computations. These include:

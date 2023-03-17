@@ -4,6 +4,8 @@ A Rust crate implementing mathematical operators
 for working with dense vectors in deep neural
 network architectures.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Dense vectors, also known as Euclidean vectors or
 geometric vectors, are commonly used in
 mathematics, physics, and engineering to represent

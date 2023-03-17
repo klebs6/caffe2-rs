@@ -7,6 +7,8 @@ Classification (CTC) algorithm, which is commonly
 used in sequence-to-sequence tasks such as speech
 recognition and handwriting recognition.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes implementations for various
 CTC-related operations such as decoding using the
 Greedy algorithm, computing the length of the

@@ -11,6 +11,8 @@ network architectures such as conditional
 generative models, where the output is conditioned
 on some input.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The conditional operator can be defined as
 follows:
 

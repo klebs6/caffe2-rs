@@ -4,6 +4,8 @@ A Rust crate providing a mathematical operator for
 use in dynamic programming and machine learning
 computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ViterbiPathOp` operator is defined within
 this crate, and is used to compute the Viterbi
 path for a given sequence of observations, given

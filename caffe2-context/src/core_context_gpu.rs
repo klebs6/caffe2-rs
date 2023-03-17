@@ -615,5 +615,3 @@ impl Drop for ThreadLocalCUDAObjects {
         */
     }
 }
-
-

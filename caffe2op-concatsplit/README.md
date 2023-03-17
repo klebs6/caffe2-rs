@@ -6,6 +6,8 @@ and digital signal processing (DSP). Specifically,
 this crate provides functionality for
 concatenating and splitting tensors.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Concatenation
 
 Concatenation is the process of joining two or

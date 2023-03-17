@@ -2,6 +2,8 @@ The `caffe2op-channelbackprop` crate defines
 a mathematical operator used in deep learning
 called Channel Backpropagation.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Channel Backpropagation is a technique used to
 calculate the gradient of the input of a neural
 network layer with respect to the loss

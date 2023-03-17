@@ -14,14 +14,13 @@ crate::ix!();
   */
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct RemovePaddingOp<Context> {
-
     storage:                    OperatorStorage,
     context:                    Context,
-
     start_padding_width:        i32,
     end_padding_width:          i32,
 
     /// Scratch space required by the CUDA version
+    ///
     lengths_prefix_sum_buffer:  Tensor, // {Context::GetDeviceType()};
     lengths_prefix_sum:         Tensor, // {Context::GetDeviceType()};
 }

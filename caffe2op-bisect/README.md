@@ -7,6 +7,8 @@ bisecting the dataset and checking the percentile
 of the resulting subsets until the desired `y`
 percentile is reached within a given tolerance.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `BisectPercentile` operator takes as input
 a tensor representing a dataset, a tensor
 representing the percentiles of interest, and an

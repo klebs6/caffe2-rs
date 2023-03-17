@@ -5,6 +5,8 @@ implementation of the exponential mathematical
 operator, which is commonly used in digital signal
 processing and machine learning computations. 
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The exponential function is defined as `exp(x)
 = e^x`, where `e` is the mathematical constant
 known as Euler's number (`e ≈ 2.71828`). The

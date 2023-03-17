@@ -15,6 +15,8 @@ broadcasting and scattering of data across
 nodes. Additionally, the `allreduce` function
 allows for the reduction of data across nodes.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `Communication` module utilizes the concept of
 a `comm` object to manage communication channels
 between nodes. Each `comm` object is associated

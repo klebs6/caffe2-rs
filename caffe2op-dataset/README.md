@@ -8,6 +8,8 @@ symbols used in these fields, such as `TLength`,
 `TOffset`, `TensorVector`, `TreeCursor`,
 `TreeIterator`, and more.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate also includes specific operators, such
 as `SortAndShuffleOp`, `ReadNextBatchOp`,
 `TrimDatasetOp`, `ReadRandomBatchOp`,

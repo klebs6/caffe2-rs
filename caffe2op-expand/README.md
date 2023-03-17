@@ -10,6 +10,8 @@ dimensions, and is implemented through the
 `ExpandGradientOp` and `GetExpandGradient`
 functions.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ExpandGradientOp` function expands the
 dimensions of a given tensor by inserting new
 dimensions of size 1 at the specified

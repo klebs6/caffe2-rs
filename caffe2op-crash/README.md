@@ -3,6 +3,8 @@
 A Rust crate providing a mathematical operator for
 use in debugging software.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `CrashOp` operator is defined within this
 crate, and is used to intentionally crash
 a program in order to identify and debug

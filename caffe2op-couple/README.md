@@ -11,6 +11,8 @@ stream. This operation is useful in many machine
 learning scenarios, such as for data augmentation
 or in multi-modal learning.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `DataCoupleOp` takes in two input tensors of
 equal length and concatenates corresponding
 elements along the specified axis. The resulting

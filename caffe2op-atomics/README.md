@@ -1,4 +1,3 @@
-
 `caffe2op-atomics` is a Rust crate that provides
 efficient and thread-safe mathematical operators
 used in Digital Signal Processing (DSP) and
@@ -6,6 +5,8 @@ Machine Learning computations. The crate provides
 a set of atomic operations that can be used to
 perform read-modify-write operations on shared
 memory locations in a thread-safe manner.
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
 
 The crate includes a variety of operations, such
 as `AtomicFetchAdd` and `CreateMutex`, which allow

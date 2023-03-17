@@ -12,6 +12,8 @@ weights are then used in computations that require
 higher precision, such as convolution and matrix
 multiplication.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ByteWeightDequantOp` operator takes in
 a weight matrix `WI` of shape `(m, n)`, where `m`
 is the number of input channels and `n` is the

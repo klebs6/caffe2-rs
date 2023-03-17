@@ -5,6 +5,8 @@ the ELU (Exponential Linear Unit) activation
 function, a commonly used function in deep neural
 networks for non-linearity.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ELU, or Exponential Linear Unit, is a type of
 activation function used in neural networks. It is
 a non-linear function that can introduce

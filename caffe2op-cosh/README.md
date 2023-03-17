@@ -6,6 +6,8 @@ function, also known as `cosh`. This function is
 used in DSP and machine learning computations to
 transform input data into a nonlinear space.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The hyperbolic cosine function is defined as:
 
 ```

@@ -10,6 +10,8 @@ for computing cosine functions and gradients,
 which are commonly used in similarity measurements
 and loss functions.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes several key components, such as
 `CosFunctor` for computing cosine functions,
 `CosGradient` and `CosGradientFunctor` for

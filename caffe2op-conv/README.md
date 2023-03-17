@@ -13,6 +13,8 @@ includes algorithms to calculate the output size
 and pre-compute the memory layout for tensor
 storage.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes implementations for the
 following operations:
 

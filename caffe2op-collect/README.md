@@ -10,6 +10,8 @@ CollectFpnProposalsOp are other operators in the
 crate that can be used for detecting and modeling
 objects.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes various tokens such as ArgSort,
 BoxesArea, FPN, RoI, RoIs, RPN, and TOP, which are
 used for different mathematical computations. The

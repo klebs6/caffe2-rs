@@ -9,6 +9,8 @@ preprocessing and feature engineering,
 particularly when dealing with continuous
 numerical data.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The BucketizeOp crate provides a high-performance
 implementation of this operation in Rust, suitable
 for use in TensorFlow models. This crate is

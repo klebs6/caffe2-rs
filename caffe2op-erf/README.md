@@ -8,6 +8,8 @@ statistics. In machine learning, the error
 function is used as an activation function in
 neural networks.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The error function is defined as the integral of
 the Gaussian probability distribution function
 from minus infinity to a given point x:

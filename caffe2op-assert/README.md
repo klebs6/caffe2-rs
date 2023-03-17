@@ -3,6 +3,8 @@ provides mathematical operators for efficient DSP
 and machine learning computations, with an
 emphasis on assertion testing and debugging.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The core functionality of this crate is provided
 by the `AssertOp`, which allows developers to
 assert that certain conditions are true during the

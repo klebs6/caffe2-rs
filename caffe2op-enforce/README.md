@@ -6,6 +6,8 @@ learning computations. The crate includes the
 EnforceFinite operator, which is used to enforce
 finiteness of tensor values during computation.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The EnforceFinite operator is typically used in
 situations where numerical stability is important,
 such as in deep neural networks. It takes a tensor

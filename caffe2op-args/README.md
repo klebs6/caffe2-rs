@@ -1,3 +1,5 @@
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `caffe2op-args` crate appears to implement
 various operators and functions related to
 manipulating and processing arrays or tensors,

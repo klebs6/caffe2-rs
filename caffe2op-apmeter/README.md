@@ -8,6 +8,8 @@ defines an `APMeterOp` which is the operator that
 computes the AP value, using the intermediate
 results stored in an `APMeter` instance.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes some utility functions such as
 `BufferPredictions` which is used to hold the
 predicted labels in memory and `Reclaim` which can

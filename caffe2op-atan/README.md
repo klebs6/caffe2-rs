@@ -7,6 +7,8 @@ computing the arctangent function and its
 gradient, which can be used as building blocks for
 various machine learning algorithms.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The arctangent function is a fundamental
 mathematical function that maps values from the
 real number line to the interval [-pi/2,

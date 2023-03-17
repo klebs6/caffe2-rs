@@ -4,6 +4,8 @@ vision applications. Specifically, it provides
 functionality for bounding box detection and
 regression.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate includes methods for clipping bounding
 boxes to image boundaries and for applying
 coordinate transformations (e.g. scaling,

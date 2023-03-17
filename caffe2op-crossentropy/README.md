@@ -14,6 +14,8 @@ including `CrossEntropyOp`, `SoftMax`,
 `WeightedSigmoidCrossEntropyWithLogitsOp`, among
 others.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate also provides gradient computation
 functions for each of these loss functions,
 including `CrossEntropyGradientOp`,

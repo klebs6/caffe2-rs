@@ -6,6 +6,8 @@ another. The `caffe2op-cast` crate provides a Rust
 implementation of this operation, allowing users
 to cast tensors to the desired data type.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate contains a `CastHelper` struct that is
 used to perform the cast operation, along with
 several other related types and functions. The

@@ -7,3 +7,5 @@ memory. This can result in errors or distortions
 in the signals when they are processed, especially
 in the context of downsampling or upsampling
 operations.
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**

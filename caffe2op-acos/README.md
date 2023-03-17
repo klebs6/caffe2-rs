@@ -2,6 +2,8 @@
 operator for calculating the arccosine of input
 values. 
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate defines `AcosFunctor` and
 `AcosGradientFunctor` to perform forward and
 backward computations, respectively. 

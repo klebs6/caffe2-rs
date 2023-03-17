@@ -1,4 +1,3 @@
-
 ## Caffe2Op-ChannelShuffle
 
 This rust crate implements a mathematical operator
@@ -6,6 +5,8 @@ used in deep learning computations called Channel
 Shuffle. The Channel Shuffle operation shuffles
 the channels of a tensor to increase the
 representational capacity of neural networks.
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
 
 ### Channel Shuffle Operation
 

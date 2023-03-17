@@ -9,6 +9,8 @@ addition, subtraction, multiplication, division,
 and logical operators such as AND, OR, XOR, and
 NOT.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate also contains functions for shape
 inference and gradient computation for
 element-wise operations. Mathematical operations
