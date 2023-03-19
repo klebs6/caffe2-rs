@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -50,6 +55,7 @@ Tensor2DVector
 TensorVectorPtr
 TreeCursor
 TreeIteratorFieldDesc
+append_op_example
 ReadRandomBatchOp
 run_on_device
 TensorVectorSizeOp
@@ -62,10 +68,6 @@ should_not_do_gradient
 ComputeOffsetOp
 run_on_device
 CreateTreeCursorOp
-run_on_device
-AppendOp
-append_op_example
-enforce_inplace
 run_on_device
 TreeWalker
 advance
@@ -86,6 +88,9 @@ run_on_device
 GetCursorOffsetOp
 run_on_device
 CollectTensorOp
+enforce_inplace
+run_on_device
+AppendOp
 enforce_inplace
 run_on_device
 PackRecordsOp

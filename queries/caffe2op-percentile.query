@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,9 +31,9 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+run_on_device
 PercentileOp
 declare_export_caffe2_op_to_c10
 export_caffe2_op_to_c10_cpu
 no_gradient
 register_cpu_operator
-run_on_device

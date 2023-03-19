@@ -610,3 +610,59 @@ power-hungry method when high accuracy is
 required. However, the specific choice of method
 depends on the specific application and the
 requirements for accuracy and efficiency.
+
+```python
+def power_hungry(a, b, n):
+    res = 1
+    for _ in range(b):
+        res = (res * a) % n
+    return res
+
+# Montgomery reduction
+def montgomery_reduction(a, n, r, n_prime):
+    t = a * r % n
+    m = (t * n_prime) % r
+    u = (t + m * n) // r
+    if u >= n:
+        return u - n
+    return u
+
+# Barrett reduction
+def barrett_reduction(a, n, mu):
+    k = len(bin(n)) - 2
+    q1 = (1 << (2 * k)) // n
+    q2 = (1 << k) // n
+    r1 = (1 << (2 * k)) % n
+    r2 = (1 << k) % n
+    # Step 1
+    q3 = (q1 * mu) >> (2 * k)
+    # Step 2
+    x = ((a >> k) + q3 * (a - (a >> k) * r1) >> k) - q3 * r2
+    # Step 3
+    if x < 0:
+        x = x + n
+    # Step 4
+    if x >= n:
+        x = x - n
+    return x
+
+a = 57
+b = 5
+n = 63
+r = 2**16
+n_prime = -pow(n, -1, r)
+
+# Compute using power-hungry method
+result_power_hungry = power_hungry(a, b, n)
+print("Result using power-hungry method:", result_power_hungry)
+
+# Compute using Montgomery reduction
+a_bar = (a * r) % n
+result_montgomery = montgomery_reduction(a_bar, n, r, n_prime)
+print("Result using Montgomery reduction:", result_montgomery)
+
+# Compute using Barrett reduction
+mu = (1 << (2 * k)) // n
+result_barrett = barrett_reduction(a, n, mu)
+print("Result using Barrett reduction:", result_barrett)
+```

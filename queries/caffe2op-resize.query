@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,8 +31,6 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-ResizeNearest3DOp
-declare_export_caffe2_op_to_c10
 GetResizeNearest3DGradient
 get_gradient_defs
 register_gradient
@@ -42,6 +45,8 @@ register_ideep_operator
 run_on_device
 run_on_device_with_ordernchw
 run_on_device_with_ordernhwc
+ResizeNearest3DOp
+declare_export_caffe2_op_to_c10
 register_cpu_gradient_operator
 run_on_device
 run_on_device_with_order_nchw
@@ -54,10 +59,10 @@ run_on_device
 run_on_device_with_ordernchw
 GetResizeNearestGradient
 get_gradient_defs
-ResizeNearestOp
-declare_export_caffe2_op_to_c10
-inherit_onnx_schema
 register_cpu_gradient_operator
 run_on_device
 run_on_device_with_ordernchw
+ResizeNearestOp
+declare_export_caffe2_op_to_c10
+inherit_onnx_schema
 resize_nearest_3dnchw2x

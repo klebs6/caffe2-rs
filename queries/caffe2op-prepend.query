@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,13 +31,17 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetPrependDimGradient
-MergeDimOp
-PrependDimOp
 allow_inplace
-get_gradient_defs
-inherit_onnx_schema
 register_cpu_operator
 register_cuda_operator
 register_gradient
+GetPrependDimGradient
+get_gradient_defs
+allow_inplace
+inherit_onnx_schema
+register_cpu_operator
+register_cuda_operator
+PrependDimOp
+run_on_device
+MergeDimOp
 run_on_device

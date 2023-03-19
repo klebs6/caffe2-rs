@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,30 +31,37 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-ConcatOp
-GetConcatGradient
-GetSplitGradient
-OpSchema
+run_on_device
 SplitByLengthsOp
-SplitOp
-concat_op_dev_infer
-concat_op_example1
-concat_op_example2
-cost_inference_for_concat
+device_inference_function
+run_on_device
+ConcatOp
 cost_inference_function
 device_inference_function
-get_gradient_defs
 inherit_onnx_schema
-is
-register_cpu_operator
-register_cuda_operator
-register_gradient
 run_on_device
-split_by_lengths_op_example1
-split_by_lengths_op_example2
-split_op_dev_infer
-split_op_example
-tensor_inference_for_concat
-tensor_inference_for_split
 tensor_inference_function
 we
+register_cpu_operator
+tensor_inference_for_concat
+tensor_inference_for_split
+concat_op_dev_infer
+is
+is
+split_op_dev_infer
+GetConcatGradient
+GetSplitGradient
+get_gradient_defs
+register_cuda_operator
+register_gradient
+concat_op_example1
+concat_op_example2
+split_by_lengths_op_example1
+split_by_lengths_op_example2
+split_op_example
+OpSchema
+cost_inference_for_concat
+SplitOp
+device_inference_function
+inherit_onnx_schema
+tensor_inference_function

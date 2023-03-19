@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,33 +31,31 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetReluGradient
-OpSchema
-ReluFunctor
-ReluGradientFunctor
+ReluNGradientFunctor
 allow_inplace
-cost_inference_for_relu
-cost_inference_function
 forward
-get_gradient_defs
+register_cpu_gradient_operator
+register_cpu_operator
+ReluFunctor
+allow_inplace
+cost_inference_function
 identical_type_and_shape
 inherit_onnx_schema
 invoke
 invoke_f32
-register_cpu_gradient_operator
-register_cpu_operator
-register_gradient
-relu_functor_example
-GetReluNGradient
-OpSchema
-ReluNFunctor
-ReluNGradientFunctor
+ReluGradientFunctor
 allow_inplace
-cost_inference_for_relun
-cost_inference_function
 forward
+GetReluGradient
+GetReluNGradient
 get_gradient_defs
+register_gradient
+OpSchema
+cost_inference_for_relu
+cost_inference_for_relun
+ReluNFunctor
+allow_inplace
+cost_inference_function
 identical_type_and_shape
 invoke
-register_cpu_operator
-register_gradient
+relu_functor_example

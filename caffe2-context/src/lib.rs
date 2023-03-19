@@ -4,9 +4,14 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{core_context_base}
-x!{core_context_gpu_test}
-x!{core_context_gpu}
-x!{core_context_test}
-x!{core_context}
-x!{core_cudnn_wrappers}
+x!{base_context}
+x!{copy_bytes}
+x!{cpu_context}
+x!{cuda_context}
+x!{cudnn_state}
+x!{cudnn_workspace}
+x!{cudnn_wrapper}
+x!{rand}
+x!{test_context}
+x!{test_gpu_context}
+x!{thread_local_cuda_objects}

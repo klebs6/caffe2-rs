@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,16 +31,20 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-BatchToSpaceOp
-GetBatchToSpaceGradient
-GetSpaceToBatchGradient
 SpaceBatchOpBase
-SpaceToBatchOp
-batch_to_space
 batch_to_space_op_example
+GetBatchToSpaceGradient
 get_gradient_defs
-register_cpu_operator
 register_gradient
+space_to_batch_op_example
+SpaceToBatchOp
+register_cpu_operator
 run_on_device
 space_to_batch
-space_to_batch_op_example
+BatchToSpaceOp
+batch_to_space
+register_cpu_operator
+run_on_device
+GetSpaceToBatchGradient
+get_gradient_defs
+register_gradient

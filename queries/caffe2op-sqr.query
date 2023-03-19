@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -29,10 +34,10 @@ here are the tokens:
 GetSqrGradient
 get_gradient_defs
 register_gradient
-sqr_functor_example
 SqrFunctor
 allow_inplace
 identical_type_and_shape
 invoke
 register_cpu_operator
 register_cuda_operator
+sqr_functor_example

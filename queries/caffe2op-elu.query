@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -27,20 +32,24 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 CudnnActivationGradientOpELU
+do_run_with_type
+register_cudnn_operator
+run_on_device
+invoke
+EluGradientFunctor
+allow_inplace
+register_cpu_gradient_operator
+forward
+EluFunctor
+allow_inplace
+identical_type_and_shape
+inherit_onnx_schema
+register_cpu_operator
+GetEluGradient
+get_gradient_defs
+register_gradient
 CudnnActivationOpELU
 do_run_with_type
 register_cudnn_operator
 run_on_device
-EluFunctor
-EluGradientFunctor
-GetEluGradient
-allow_inplace
 elu_functor_example
-forward
-get_gradient_defs
-identical_type_and_shape
-inherit_onnx_schema
-invoke
-register_cpu_gradient_operator
-register_cpu_operator
-register_gradient

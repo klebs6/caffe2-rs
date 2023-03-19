@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -27,23 +32,27 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GetSpatialBNGradient
-OpSchema
+get_gradient_defs
 SpatialBNGradientOp
+do_run_with_type
+run_on_device
 SpatialBNOp
-allow_inplace
 compute_batch_moments
 compute_fused_param
-compute_multi_batch_scale_bias_gradients_and_fused_params
 compute_running_moments_and_fused_param
-compute_scale_bias_gradients_and_fused_params
-compute_xgradient
-cost_inference_for_spatialBN
-cost_inference_function
 do_run_with_type
+run_on_device
+allow_inplace
+cost_inference_function
 enforce_inplace
-get_gradient_defs
 inherit_onnx_schema
 register_cpu_operator
-register_gradient
-run_on_device
 tensor_inference_function
+compute_multi_batch_scale_bias_gradients_and_fused_params
+compute_scale_bias_gradients_and_fused_params
+compute_xgradient
+OpSchema
+cost_inference_for_spatialBN
+allow_inplace
+register_cpu_operator
+register_gradient

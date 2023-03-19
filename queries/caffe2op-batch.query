@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -65,8 +70,8 @@ CachedBuffers
 TypedCachedBuffers
 define_cached_buffers
 BatchMatMulOpGPUTest
-BatchMatMulOpGPUTest_BatchMatMulOpGPUBroadcastTest
-BatchMatMulOpGPUTest_BatchMatMulOpGPUNormalTest
+batch_mat_mul_op_gpu_test_batch_mat_mul_op_gpu_broadcast_test
+batch_mat_mul_op_gpu_test_batch_mat_mul_op_gpu_normal_test
 set_up
 BatchGatherOp
 batch_gather_op_example
@@ -110,8 +115,8 @@ batch_sparse_to_dense_op_example
 run_on_device
 tensor_inference_function
 BatchMatMulOpTest
-BatchMatMulOpTest_BatchMatMulOpBroadcastTest
-BatchMatMulOpTest_BatchMatMulOpNormalTest
+batch_mat_mul_op_test_batch_mat_mul_op_broadcast_test
+batch_mat_mul_op_test_batch_mat_mul_op_normal_test
 set_up
 BatchGatherGradientOp
 GetBatchGatherGradient
@@ -135,7 +140,7 @@ compute_batch_moments_gradientNCHW
 compute_batch_moments_gradientNHWC
 fill_in_dense_values
 register_cpu_operator
-BatchPermutationTest_CHECKCPUGPUEqualGenericDimension
+batch_permutation_test_checkcpugpu_equal_generic_dimension
 check_cpugpuequal
 create_and_run
 create_and_run_gradient

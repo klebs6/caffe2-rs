@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,19 +31,19 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetReshapeGradient
-ReshapeOp
-allow_inplace
 do_run_with_type
 do_run_with_type_impl
-get_gradient_defs
-inherit_onnx_schema
 int64_t
+run_on_device
+declare_string
+reshape_op_example
+reshape_op_gpu_test_reshape_with_scalar
+ReshapeOp
+allow_inplace
+inherit_onnx_schema
 register_cpu_operator
 register_cuda_operator
+GetReshapeGradient
+get_gradient_defs
 register_gradient
-reshape_op_example
-run_on_device
 tensor_inference_function
-ReshapeOpGPUTest_testReshapeWithScalar
-declare_string

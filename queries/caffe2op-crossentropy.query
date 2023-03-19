@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,34 +31,53 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-CrossEntropyGradientOp
-CrossEntropyOp
-GetCrossEntropyGradient
-GetLabelCrossEntropyGradient
+run_f32_on_cpu_device
 GetMakeTwoClassGradient
-GetSigmoidCrossEntropyWithLogitsGradient
-GetWeightedSigmoidCrossEntropyWithLogitsGradient
-LabelCrossEntropyGradientOp
-LabelCrossEntropyOp
-MakeTwoClassGradientOp
-MakeTwoClassOp
-SigmoidCrossEntropyWithLogitsGradientOp
-SigmoidCrossEntropyWithLogitsOp
-WeightedSigmoidCrossEntropyWithLogitsGradientOp
-WeightedSigmoidCrossEntropyWithLogitsOp
-cross_entropy_op_example
 get_gradient_defs
-k_log_threshold
+register_cpu_operator
+SigmoidCrossEntropyWithLogitsOp
+run_on_device
 label_cross_entropy_example
+SigmoidCrossEntropyWithLogitsGradientOp
+CrossEntropyGradientOp
+k_log_threshold
+run_on_device
+LabelCrossEntropyOp
+k_log_threshold
+run_on_device
+cross_entropy_op_example
 register_cpu_operator
 register_gradient
-run_f32_on_cpu_device
 run_on_device
+CrossEntropyOp
+k_log_threshold
+run_on_device
+GetWeightedSigmoidCrossEntropyWithLogitsGradient
+get_gradient_defs
+GetLabelCrossEntropyGradient
+get_gradient_defs
+register_gradient
+run_on_device
+MakeTwoClassGradientOp
+run_on_device
+run_on_device
+WeightedSigmoidCrossEntropyWithLogitsGradientOp
 sigmoid_partition
 sigmoid_xent_backward
 sigmoid_xent_backward_with_log_d_trick
 sigmoid_xent_forward
 sigmoid_xent_forward_with_log_d_trick
-tensor_inference_function
 unjoined_sigmoid_xent_backward
 unjoined_sigmoid_xent_forward
+run_on_device
+LabelCrossEntropyGradientOp
+k_log_threshold
+GetCrossEntropyGradient
+get_gradient_defs
+register_gradient
+MakeTwoClassOp
+register_cpu_operator
+tensor_inference_function
+GetSigmoidCrossEntropyWithLogitsGradient
+get_gradient_defs
+WeightedSigmoidCrossEntropyWithLogitsOp

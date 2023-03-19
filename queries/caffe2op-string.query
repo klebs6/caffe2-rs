@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,23 +31,25 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-EndsWith
 ForEach
-Prefix
-StartsWith
-StrEquals
+invoke
 StringElementwiseOp
 StringJoinOp
-Suffix
-do_run_with_type
-invoke
-register_cpu_operator
 run_on_device
+register_cpu_operator
 should_not_do_gradient
+EndsWith
+StartsWith
+invoke
 StringJoinOpTest
-StringJoinOpTest_testFloat1DJoin
-StringJoinOpTest_testFloat2DJoin
-StringJoinOpTest_testLong2DJoin
-StringJoinOpTest_testString1DJoin
-StringJoinOpTest_testString2DJoin
 run_op
+string_join_op_test_float1d_join
+string_join_op_test_float2d_join
+string_join_op_test_long2d_join
+string_join_op_test_string1d_join
+string_join_op_test_string2d_join
+do_run_with_type
+Prefix
+StrEquals
+Suffix
+invoke

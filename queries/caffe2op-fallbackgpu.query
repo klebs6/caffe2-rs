@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -27,12 +32,12 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 IncrementByOneOp
-OperatorFallbackTest_GPUIncrementByOneOp
-OperatorFallbackTest_IncrementByOneOp
 allow_inplace
 register_cpu_operator
 register_cuda_operator
 run_on_device
+operator_fallback_test_gpu_increment_by_one_op
+operator_fallback_test_increment_by_one_op
 GPUFallbackOp
 GPUFallbackOpEx
 run_on_device

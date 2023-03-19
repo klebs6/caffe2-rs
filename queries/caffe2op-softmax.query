@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,33 +31,39 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetSoftmaxGradient
-SoftmaxGradientOp
-SoftmaxOp
+run_on_device
+run_on_device
+CudnnSoftmaxOp
+do_run_with_type
+drop
+run_on_device
+GetSoftmaxWithLossGradient
 get_gradient_defs
-identical_type_and_shape
-inherit_onnx_schema
-register_cpu_gradient_operator
-register_cpu_operator
+register_gradient
+GetSoftmaxGradient
+get_gradient_defs
 register_gradient
 run_on_device
-softmax_example_op
-softmax_op_example
+run_on_device
 CudnnSoftmaxGradientOp
-CudnnSoftmaxOp
 do_run_with_type
 drop
 register_cudnn_operator
 run_on_device
-caffe2_specialized_softmax_cpu
-softmaxcpu
-GetSoftmaxWithLossGradient
-SoftmaxWithLossGradientOp
-SoftmaxWithLossOp
-get_gradient_defs
+SoftmaxGradientOp
+SoftmaxOp
+identical_type_and_shape
+inherit_onnx_schema
+register_cpu_gradient_operator
 register_cpu_operator
-register_gradient
-run_on_device
+softmax_example_op
+softmax_op_example
 softmax_with_loss_op_example1
 softmax_with_loss_op_example2
+SoftmaxWithLossGradientOp
+register_cpu_operator
+SoftmaxWithLossOp
+register_cpu_operator
 tensor_inference_function
+caffe2_specialized_softmax_cpu
+softmaxcpu

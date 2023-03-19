@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,41 +31,78 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-FloatToFusedRandRowwiseQuantizedOp
+register_cpu_operator
+tensor_inference_function
+FloatToFusedNBitFakeRowwiseQuantizedOp
+is
+run_on_device
+run_on_device
+register_cpu_operator
+tensor_inference_function
 FusedRandRowwiseQuantizedToFloatOp
+no_gradient
+register_cpu_operator
+tensor_inference_function
+no_gradient
+register_cpu_operator
+tensor_inference_function
+ConvertFnType
+convertfp_16fp32
+convertfp_32fp16
+no_gradient
+register_cpu_operator
+tensor_inference_function
+tensor_inference_function
+no_gradient
+register_cpu_operator
+register_cpu_operator_with_engine
+tensor_inference_function
+FloatToFused8BitRowwiseQuantizedOp
+no_gradient
+tensor_inference_function
+register_cpu_operator
+tensor_inference_function
+run_on_device
+no_gradient
+register_cpu_operator
+tensor_inference_function
+FusedNBitRowwiseQuantizedToFloatOp
+Fused8BitRowwiseQuantizedToFloatCPUOp
+Fused8BitRowwiseQuantizedToFloatOp
+register_cpu_operator
+tensor_inference_function
+run_on_device
+register_cpu_operator
+tensor_inference_function
+no_gradient
+register_cpu_operator
+tensor_inference_function
+no_gradient
+register_cpu_operator
+tensor_inference_function
+no_gradient
+register_cpu_operator
+tensor_inference_function
+register_cpu_operator
+tensor_inference_function
+run_on_device
+param_search_greedy
+FloatToFusedRandRowwiseQuantizedOp
 drop
 no_gradient
 register_cpu_operator
-run_on_device
 tensor_inference_function
-ConvertFnType
-FloatToFused8BitRowwiseQuantizedOp
-Fused8BitRowwiseQuantizedToFloatCPUOp
-Fused8BitRowwiseQuantizedToFloatOp
-convertfp_16fp32
-convertfp_32fp16
-no_gradient
-register_cpu_operator
 run_on_device
+no_gradient
+register_cpu_operator_with_engine
 tensor_inference_function
 FloatToFusedNBitRowwiseQuantizedOp
-FusedNBitRowwiseQuantizedToFloatOp
-convertfp_32fp16
+run_on_device
 no_gradient
 register_cpu_operator
-register_cpu_operator_with_engine
-run_on_device
 tensor_inference_function
 ConvertFnType
-FloatToFusedNBitFakeRowwiseQuantizedOp
 compress_uniform_simplified_
 convertfp_16fp32
 convertfp_32fp32
-is
 is_little_endian
-no_gradient
-param_search_greedy
-register_cpu_operator
-register_cpu_operator_with_engine
-run_on_device
-tensor_inference_function

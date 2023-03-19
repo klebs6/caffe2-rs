@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,17 +31,18 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-SigmoidFunctor
 SigmoidGradientFunctor
+allow_inplace
+register_cpu_operator
+invoke
+GetSigmoidGradient
+get_gradient_defs
+register_cudnn_operator
+register_gradient
+forward
+register_cpu_operator
+sigmoid_functor_example
+SigmoidFunctor
 allow_inplace
 identical_type_and_shape
 inherit_onnx_schema
-invoke
-register_cpu_operator
-sigmoid_functor_example
-GetSigmoidGradient
-forward
-get_gradient_defs
-register_cpu_operator
-register_cudnn_operator
-register_gradient

@@ -215,8 +215,6 @@ members = [
     "caffe2op-shape",
     "caffe2op-sigmoid",
     "caffe2op-sin",
-    "caffe2op-sinh",
-    "caffe2op-sinusoid",
     "caffe2op-slice",
     "caffe2op-softmax",
     "caffe2op-softplus",

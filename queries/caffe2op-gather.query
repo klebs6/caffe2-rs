@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,32 +31,32 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GatherOp
-GetGatherGradient
-check_indexarray_range
-do_run_with_type
-gather_impl
-gather_op_example
-get_gradient_defs
-inherit_onnx_schema
-register_cpu_operator
-register_gradient
-run_on_device
-tensor_inference_function
-GatherFused8BitRowwiseOp
-do_run_with_type
-register_cpu_operator
-run_on_device
-tensor_inference_function
-GatherRangesToDenseCPUOp
-GatherRangesToDenseOp
-do_run_with_type
-drop
 gather_ranges_to_dense_example1
 gather_ranges_to_dense_example2
-int64
+do_run_with_type
+drop
 int64_t
+run_on_device
+check_indexarray_range
+GatherFused8BitRowwiseOp
+register_cpu_operator
+tensor_inference_function
+GetGatherGradient
+get_gradient_defs
+register_gradient
+do_run_with_type
+run_on_device
+GatherOp
+inherit_onnx_schema
+register_cpu_operator
+tensor_inference_function
+do_run_with_type
+run_on_device
+GatherRangesToDenseCPUOp
+GatherRangesToDenseOp
+int64
 no_gradient
 register_cpu_operator
-run_on_device
 tensor_inference_function
+gather_impl
+gather_op_example

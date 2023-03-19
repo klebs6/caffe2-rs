@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,15 +31,18 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-CollectAndDistributeFpnRpnProposalsOp
-CollectRpnProposalsOp
-DistributeFpnProposalsOp
-boxes_area
-export_caffe2_op_to_c10_cpu
 map_ro_is_to_fpn_levels
-register_cpu_operator
 rows_where_roi_level_equals
 run_on_cpu_device
-run_on_device
-should_not_do_gradient
 sort_and_limit_ro_is_by_scores
+CollectRpnProposalsOp
+should_not_do_gradient
+boxes_area
+should_not_do_gradient
+export_caffe2_op_to_c10_cpu
+register_cpu_operator
+CollectAndDistributeFpnRpnProposalsOp
+DistributeFpnProposalsOp
+should_not_do_gradient
+run_on_device
+run_on_device

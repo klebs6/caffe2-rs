@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -96,33 +101,33 @@ drop
 identical_type_and_shape
 register_cpu_operator
 run_on_device
-Int8_Add
-Int8_AveragePool
-Int8_ChannelShuffle
-Int8_Concat
-Int8_Conv
-Int8_Conv2
-Int8_ConvTranspose
-Int8_DISABLED_LeakyReLU
-Int8_DISABLED_Transpose
-Int8_DepthwiseConv
-Int8_DepthwiseConv3x3
-Int8_DepthwiseConv5x5
-Int8_FC
-Int8_Flatten
-Int8_GivenIntTensorFill
-Int8_GivenTensorFill
-Int8_Grouped1x1Conv
-Int8_MaxPool
-Int8_QuantDeQuant
-Int8_ReLU
-Int8_Reshape
-Int8_ResizeNearest
-Int8_Sigmoid
-Int8_Slice
-Int8_Softmax
-Int8_SumRelu
 biassetq
+int8_add
+int8_average_pool
+int8_channel_shuffle
+int8_concat
+int8_conv
+int8_conv2
+int8_conv_transpose
+int8_depthwise_conv
+int8_depthwise_conv3x3
+int8_depthwise_conv5x5
+int8_disabled_leaky_relu
+int8_disabled_transpose
+int8_fc
+int8_flatten
+int8_given_int_tensor_fill
+int8_given_tensor_fill
+int8_grouped1x_1conv
+int8_max_pool
+int8_quant_de_quant
+int8_relu
+int8_reshape
+int8_resize_nearest
+int8_sigmoid
+int8_slice
+int8_softmax
+int8_sum_relu
 setq
 Int8ConvOp
 cost_inference_function
@@ -134,7 +139,7 @@ Int8ConvTransposeOp
 drop
 register_cpu_operator
 run_on_device_with_orderNHWC
-Int8RoIAlign_RoIAlign
+int_8ro_ialign_ro_ialign
 Int8SigmoidOp
 drop
 identical_type_and_shape

@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -27,17 +32,20 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 GetLayerNormGradient
+get_gradient_defs
+register_gradient
 LayerNormGradientOp
+do_run_with_type
+register_cpu_operator
+run_on_device
 LayerNormOp
+tensor_inference_function
 compute_fused_params
 compute_internal_gradients
-compute_sigma_and_fused_params
-do_run_with_type
 gamma_beta_backward
-get_gradient_defs
 layer_norm_backward
+compute_sigma_and_fused_params
 layer_norm_forward
 register_cpu_operator
-register_gradient
+do_run_with_type
 run_on_device
-tensor_inference_function

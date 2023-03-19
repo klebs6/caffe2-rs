@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,19 +31,21 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-ChannelShuffleGradientOp
-ChannelShuffleOp
-GetChannelShuffleGradient
-get_gradient_defs
-identical_type_and_shape
-inherit_onnx_schema
-register_cpu_gradient_operator
-register_cpu_operator
-register_gradient
 run_channel_shuffleNCHW
-run_channel_shuffleNHWC
-run_on_device
+register_cpu_gradient_operator
 run_on_device_with_orderNCHW
 run_on_device_with_orderNHWC
+run_channel_shuffleNHWC
+GetChannelShuffleGradient
+get_gradient_defs
+register_gradient
+ChannelShuffleOp
+identical_type_and_shape
+inherit_onnx_schema
+run_on_device
+ChannelShuffleGradientOp
+identical_type_and_shape
+run_on_device
+register_cpu_operator
 run_on_device_with_order_nchw
 run_on_device_with_order_nhwc

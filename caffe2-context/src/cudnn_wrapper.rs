@@ -1,6 +1,4 @@
-crate::ix!();
-
-/**
+/*!
   | Note [What is CudnnWrapper good for?]
   | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Suppose
   | you are writing a kernel that calls into Cudnn,
@@ -65,138 +63,7 @@ crate::ix!();
   | pool.  (which is it's own thing.)
   */
 
-/**
-  | CudnnWorkspace is a wrapper around
-  | a raw cuda pointer that holds the cudnn
-  | scratch space.
-  | 
-  | This struct is meant to be only used in
-  | 
-  | CudnnWrapper to provide a program-wide
-  | scratch space for Cudnn.
-  | 
-  | The reason behind it is that cudnn function
-  | calls are usually very efficient, hence
-  | one probably does not want to run multiple
-  | cudnn calls at the same time.
-  | 
-  | As a result, one should not need more
-  | than one cudnn workspace per device.
-  |
-  */
-pub struct CudnnWorkspace {
-
-    /// {nullptr, nullptr, &NoDelete, at::Device(CUDA)};
-    data: DataPtr,
-
-    /// {0};
-    nbytes: usize,
-}
-
-impl CudnnWorkspace {
-    
-    #[inline] pub fn get(&mut self, nbytes: usize)  {
-        
-        todo!();
-        /*
-            if (nbytes_ < nbytes) {
-                reset();
-                data_ = CUDAContext::New(nbytes);
-                nbytes_ = nbytes;
-            }
-            CAFFE_ENFORCE_GE(nbytes_, nbytes);
-            return data_.get();
-        */
-    }
-    
-    #[inline] pub fn reset(&mut self)  {
-        
-        todo!();
-        /*
-            data_.clear();
-            nbytes_ = 0;
-        */
-    }
-}
-
-/**
-  | CudnnState is the owner of the CudnnWorkspace,
-  | and serializes all executions of operations
-  | that use the state onto it's own stream
-  | (so multiple Net workers can reuse the same workspace
-  | from different threads and CUDA streams).
-  |
-  */
-pub struct CudnnState {
-    cudnn_handle:   CudnnHandle,  // default = nullptr
-    before:         CudaEvent,    // default = nullptr
-    after:          CudaEvent,    // default = nullptr
-    stream:         CudaStream,   // default = nullptr
-    workspace:      CudnnWorkspace,
-    gpu_id:         usize,          // default = 0
-}
-
-impl CudnnState {
-    
-    pub fn new(gpu_id: usize) -> Self {
-    
-        todo!();
-        /*
-            : gpu_id_(gpu_id) 
-
-                CUDAGuard g(gpu_id_);
-                CUDNN_ENFORCE(cudnnCreate(&cudnn_handle_));
-                CUDA_ENFORCE(cudaEventCreate(&before_));
-                CUDA_ENFORCE(cudaEventCreate(&after_));
-                CUDA_ENFORCE(cudaStreamCreate(&stream_));
-                CUDNN_ENFORCE(cudnnSetStream(cudnn_handle_, stream_));
-        */
-    }
-}
-
-impl Drop for CudnnState {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-                CUDAGuard g(gpu_id_);
-                CUDNN_CHECK(cudnnDestroy(cudnn_handle_));
-                CUDA_CHECK(cudaStreamDestroy(stream_));
-                CUDA_CHECK(cudaEventDestroy(after_));
-                CUDA_CHECK(cudaEventDestroy(before_));
-             */
-    }
-}
-
-impl CudnnState {
-    
-    #[inline] pub fn cudnn_handle(&mut self) -> &mut CudnnHandle {
-        
-        todo!();
-        /*
-            return cudnn_handle_;
-        */
-    }
-    
-    #[inline] pub fn workspace(&mut self) -> &mut CudnnWorkspace {
-        
-        todo!();
-        /*
-            return workspace_;
-        */
-    }
-    
-    #[inline] pub fn execute<F>(&mut self, stream: CudaStream, f: F)  {
-    
-        todo!();
-        /*
-            CUDA_ENFORCE(cudaEventRecord(before_, stream));
-                    CUDA_ENFORCE(cudaStreamWaitEvent(stream_, before_, 0));
-                    f(this);
-                    CUDA_ENFORCE(cudaEventRecord(after_, stream_));
-                    CUDA_ENFORCE(cudaStreamWaitEvent(stream, after_, 0));
-        */
-    }
-}
+crate::ix!();
 
 /**
   | CudnnWrapper is a class that wraps the
@@ -294,9 +161,4 @@ impl CudnnWrapper {
       return *p;
         */
     }
-}
-
-pub struct SyncedCudnnState {
-    mutex: parking_lot::RawMutex,
-    state: Box<CudnnState>,
 }

@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,56 +31,94 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+GivenTensorByteStringToUInt8FillOp
+allow_inplace
+extract
+fill
+no_gradient
+register_cpu_operator
+tensor_inference_function
+allow_inplace
+tensor_inference_function
+allow_inplace
+tensor_inference_function
+RangeFillOp
+allow_inplace
+fill
+tensor_inference_function
+allow_inplace
+tensor_inference_function
+UniqueUniformFillOp
+allow_inplace
+check_range
+fill
+fill_with_type
+in
+tensor_inference_function
+LengthsRangeFillOp
+run_on_device
+no_gradient
+register_cpu_operator
+UniformFillOp
+allow_inplace
+fill
+tensor_inference_function
+given_tensor_fill_example
+given_tensor_byte_string_to_uint8_fill_example
+uniform_fill_example_float
+uniform_fill_example_int
+xavier_fill_example
+allow_inplace
+tensor_inference_function
+allow_inplace
+tensor_inference_function
+lengths_range_fill_example
+XavierFillOp
+allow_inplace
+fill
+tensor_inference_function
+constant_fill_example1
+constant_fill_example2
+gaussian_fill_example
+DiagonalFillOp
+allow_inplace
+field
+fill
+fill_with_type
+get_step_size
+in
+is
+of
+tensor_inference_function
+filler_tensor_inference
+MSRAFillOp
+allow_inplace
+fill
+tensor_inference_function
+allow_inplace
+tensor_inference_function
 GivenTensorFillOp
 allow_inplace
 depends
 extract_values
 fill
 fill_with_type
-given_tensor_fill_example
 in
-no_gradient
-register_cpu_operator
 tensor_inference_function
 ConstantFillOp
 DataType
-DiagonalFillOp
-FillerOp
-GaussianFillOp
-LengthsRangeFillOp
-MSRAFillOp
-RangeFillOp
-UniformFillOp
-UniqueUniformFillOp
-XavierFillOp
 allow_inplace
-check_range
-constant_fill_example1
-constant_fill_example2
-field
 fill
 fill_with_string
 fill_with_type
-filler_tensor_inference
-gaussian_fill_example
-get_step_size
 in
-int64_t
 is
-lengths_range_fill_example
-no_gradient
 of
-register_cpu_operator
-run_on_device
 tensor_inference_function
-uniform_fill_example_float
-uniform_fill_example_int
-xavier_fill_example
-GivenTensorByteStringToUInt8FillOp
+FillerOp
+int64_t
+run_on_device
+GaussianFillOp
 allow_inplace
-extract
 fill
-given_tensor_byte_string_to_uint8_fill_example
-no_gradient
-register_cpu_operator
 tensor_inference_function

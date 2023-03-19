@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,13 +31,16 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-ArgMaxReducer
-ArgMinReducer
-ArgOp
-do_run_with_type
-infer_tensor
 invoke
 register_cpu_operator
+ArgMaxReducer
+tensor_inference_function
+invoke
+register_cpu_operator
+ArgOp
+do_run_with_type
 run_on_device
 should_not_do_gradient
+ArgMinReducer
 tensor_inference_function
+infer_tensor

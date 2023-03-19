@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -32,14 +37,14 @@ do_run_with_type
 identical_type_and_shape
 register_cpu_operator
 run_on_device
-GetScaleGradient
+do_run_with_type
+run_on_device
 ScaleOp
 allow_inplace
-do_run_with_type
-get_gradient_defs
 identical_type_and_shape
 register_cpu_operator
-register_cuda_operator
+GetScaleGradient
+get_gradient_defs
 register_gradient
+register_cuda_operator
 run_on_cuda_device
-run_on_device

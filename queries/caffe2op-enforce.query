@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -33,12 +38,6 @@ log_blob_finiteness
 register_cpu_operator
 run_on_device
 should_not_do_gradient
-EnsureClippedOp
-allow_inplace
-do_run_with_type
-register_cpu_operator
-run_on_device
-should_not_do_gradient
 EnsureCPUOutputOp
 copy_with_context
 device_inference_function
@@ -46,3 +45,9 @@ identical_type_and_shape
 no_gradient
 register_cpu_operator
 run_on_device
+EnsureClippedOp
+allow_inplace
+do_run_with_type
+register_cpu_operator
+run_on_device
+should_not_do_gradient

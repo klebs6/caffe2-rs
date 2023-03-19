@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,20 +31,24 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-BatchBucketOneHotOp
+int64_t
+run_on_device
+SegmentOneHotOp
+run_on_device
+no_gradient
+register_cpu_operator
+do_one_hot_op
 BatchOneHotOp
+cost_inference_function
+run_on_device
+tensor_inference_function
+do_run_with_type
+BatchBucketOneHotOp
+tensor_inference_function
 OneHotOp
 OpSchema
-SegmentOneHotOp
 cost_inference_for_batch_one_hot
-cost_inference_function
-do_one_hot_op
-do_run_with_type
-int64_t
-no_gradient
-one_hot_op_example
-register_cpu_operator
-run_on_device
 tensor_inference_for_batch_one_hot
 tensor_inference_for_bucket_batch_one_hot
-tensor_inference_function
+run_on_device
+one_hot_op_example

@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,18 +31,18 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-EigenPowFunctor
+pow_op_example
+do_run_with_type
+run_on_device
 FactorThisShitOut
-GetPowGradient
 PowOp
 SameTypeAsInput
-allow_inplace
-do_run_with_type
-get_gradient_defs
-pow_op_example
-register_cpu_operator
-register_gradient
+EigenPowFunctor
 run
-run_on_device
 run_with_broadcast
 run_with_broadcast2
+allow_inplace
+register_cpu_operator
+GetPowGradient
+get_gradient_defs
+register_gradient

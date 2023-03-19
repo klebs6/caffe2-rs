@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -26,42 +31,42 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
-GetRoIAlignGradient
-RoIAlignGradientCPUOp
-RoIAlignGradientOp
-add
+RoIAlignRotatedGradientOp
+run_on_device
 bilinear_interpolate_gradient
-get_gradient_defs
-register_cpu_operator
-register_gradient
-roi_align_backward_feature
-run_f32_on_cpu_device
+RoIAlignRotatedOp
+declare_export_caffe2_op_to_c10
 run_on_device
-BilinearInterpolationParam
-RoIAlignCPUOp
-RoIAlignOp
-make_bilinear_interpolation_params
-register_cpu_operator
-run_on_device
-run_on_device_with_order_nchw
-run_on_device_with_order_nhwc
-RoiAlignTest_CheckCPUGPUEqual
 TestParams
 create_and_run
-get_device_type
-rand_int
-PreCalc
-RoIAlignRotatedOp
-RoIAlignRotatedOpFloatCPU
-declare_export_caffe2_op_to_c10
-export_caffe2_op_to_c10_cpu
-pre_calc_for_bilinear_interpolate
-register_cpu_operator
-roi_align_rotated_forward
-run_f32_on_cpu_device
+BilinearInterpolationParam
+make_bilinear_interpolation_params
+RoIAlignOp
 run_on_device
+RoIAlignRotatedOpFloatCPU
+export_caffe2_op_to_c10_cpu
+register_cpu_operator
+run_f32_on_cpu_device
 GetRoIAlignRotatedGradient
-RoIAlignRotatedGradientOp
 get_gradient_defs
 register_gradient
+PreCalc
+pre_calc_for_bilinear_interpolate
+add
+rand_int
+GetRoIAlignGradient
+RoIAlignGradientCPUOp
+get_gradient_defs
+register_gradient
+RoIAlignGradientOp
 run_on_device
+roi_align_rotated_forward
+RoIAlignCPUOp
+register_cpu_operator
+run_on_device_with_order_nchw
+run_on_device_with_order_nhwc
+roi_align_backward_feature
+roi_align_test_check_cpugpu_equal
+register_cpu_operator
+run_f32_on_cpu_device
+get_device_type

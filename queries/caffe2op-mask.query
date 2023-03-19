@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -29,13 +34,13 @@ here are the tokens:
 do_run_with_type
 run_on_cpu_device
 run_on_device
-BooleanUnmaskTest_Test
 boolean_mask_lengths_op_example
 boolean_mask_op_example
 boolean_unmask_op_example1
 boolean_unmask_op_example2
 boolean_unmask_op_example3
 boolean_unmask_op_example4
+boolean_unmask_test
 BooleanMaskOpGradient
 no_gradient
 register_cpu_gradient_operator
@@ -50,10 +55,6 @@ register_gradient
 GetSequenceMaskGradient
 get_gradient_defs
 register_gradient
-BooleanUnmaskOp
-as
-no_gradient
-register_cpu_operator
 BooleanMaskLengthsOp
 as
 do_run_with_type
@@ -67,7 +68,6 @@ BooleanUnmaskOp
 as
 no_gradient
 register_cpu_operator
-run_on_device
 SequenceFunctor
 invoke
 do_run_with_type

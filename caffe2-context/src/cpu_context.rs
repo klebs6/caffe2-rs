@@ -1,11 +1,5 @@
 crate::ix!();
 
-#[cfg(all(not(caffe2_is_xplat_build), not(c10_mobile)))]
-pub type RandGenType = CPUGeneratorImpl;
-
-#[cfg(any(caffe2_is_xplat_build, c10_mobile))]
-pub type RandGenType = mersenne_twister::MT19937;
-
 /**
   | The CPU Context, representing the bare
   | minimum of what a Context class in Caffe2
@@ -39,6 +33,7 @@ pub struct CPUContext {
 }
 
 impl From<&DeviceOption> for CPUContext {
+
     fn from(x: &DeviceOption) -> CPUContext {
         todo!();
         /*
@@ -51,6 +46,7 @@ impl From<&DeviceOption> for CPUContext {
 }
 
 impl From<&Device> for CPUContext {
+
     fn from(x: &Device) -> CPUContext {
         todo!();
         /*
@@ -284,74 +280,4 @@ impl CPUContext {
           memcpy(dst, src, nbytes);
         */
     }
-}
-
-/**
-  | A function to generate a random number
-  | seed that is unique in a best-effort
-  | basis, using an ever-incrementing
-  | seed and the current time.
-  |
-  */
-#[inline] pub fn random_number_seed() -> u32 {
-    
-    todo!();
-    /*
-        // Originally copied from folly::randomNumberSeed (at 418ad4)
-      // modified to use chrono instead of sys/time.h
-      static std::atomic<uint32_t> seedInput(0);
-      auto tv = std::chrono::system_clock::now().time_since_epoch();
-      uint64_t usec = static_cast<uint64_t>(
-          std::chrono::duration_cast<std::chrono::microseconds>(tv).count());
-      uint32_t tv_sec = usec / 1000000;
-      uint32_t tv_usec = usec % 1000000;
-      const uint32_t kPrime0 = 51551;
-      const uint32_t kPrime1 = 61631;
-      const uint32_t kPrime2 = 64997;
-      const uint32_t kPrime3 = 111857;
-      return kPrime0 * (seedInput++) + kPrime1 * static_cast<uint32_t>(getpid()) +
-          kPrime2 * tv_sec + kPrime3 * tv_usec;
-    */
-}
-
-#[inline] pub fn copy_bytes_impl(
-    nbytes: usize,
-    src:    *const c_void,
-    dst:    *mut c_void)  
-{
-    todo!();
-    /*
-        if (nbytes == 0) {
-        return;
-      }
-      CAFFE_ENFORCE(src);
-      CAFFE_ENFORCE(dst);
-      memcpy(dst, src, nbytes);
-    */
-}
-
-#[inline] pub fn copy_bytes_wrapper(
-    nbytes:     usize,
-    src:        *const c_void,
-    src_device: Device,
-    dst:        *mut c_void,
-    dst_device: Device)  
-{
-    todo!();
-    /*
-        CopyBytesImpl(nbytes, src, dst);
-    */
-}
-
-register_context!{
-    DeviceType::CPU, 
-    CPUContext
-}
-
-register_copy_bytes_function!{
-    /*
-    DeviceType::CPU,
-    DeviceType::CPU,
-    caffe2::CopyBytesWrapper
-    */
 }

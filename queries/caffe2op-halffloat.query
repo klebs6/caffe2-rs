@@ -15,6 +15,11 @@ Please write the description in the followin format:
 <longer, in depth description and mathematical analysis>
 <END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
 Below are listed some tokens from this crate. 
 
 Please describe the mathematical ideas
@@ -33,8 +38,8 @@ tensor_inference_function
 run_on_device
 register_cpu_operator
 run_on_device
-Float16_SimpleTest
-Float16_UniformDistributionTest
+float16_simple_test
+float16_uniform_distribution_test
 GetFloatToHalfGradient
 get_gradient_defs
 no_gradient

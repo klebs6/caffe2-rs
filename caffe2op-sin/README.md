@@ -23,16 +23,41 @@ signal processing frameworks.
 
 The main components of the crate are:
 
-- `identical_type_and_shape`: Ensures that two tensors have the same type and shape, which is necessary for element-wise operations like the sine function.
-- `register_cpu_operator`: Registers the sine function operator and its gradient with the backend.
-- `SinFunctor`: Computes the sine function for a given tensor. The sine function is represented as `sin(x)` for an input tensor `x`.
-- `invoke`: Invokes the sine function operator and its gradient for the given tensors.
-- `SinGradientFunctor`: Computes the gradient of the sine function with respect to the input tensor. The gradient of the sine function is given by `∂sin(x)/∂x = cos(x)`.
-- `forward`: Performs forward computation of the sine function for the input tensor.
-- `GetSinGradient`: Retrieves the sine gradient definition.
-- `get_gradient_defs`: Registers the gradient definition with the backend.
-- `register_gradient`: Registers the sine gradient operator.
-- `sin_op_example`: An example of using the sine function operator and its gradient in practice.
+- `identical_type_and_shape`: Ensures that two
+  tensors have the same type and shape, which is
+  necessary for element-wise operations like the
+  sine function.
+
+- `register_cpu_operator`: Registers the sine
+  function operator and its gradient with the
+  backend.
+
+- `SinFunctor`: Computes the sine function for
+  a given tensor. The sine function is represented
+  as `sin(x)` for an input tensor `x`.
+
+- `invoke`: Invokes the sine function operator and
+  its gradient for the given tensors.
+
+- `SinGradientFunctor`: Computes the gradient of
+  the sine function with respect to the input
+  tensor. The gradient of the sine function is
+  given by `∂sin(x)/∂x = cos(x)`.
+
+- `forward`: Performs forward computation of the
+  sine function for the input tensor.
+
+- `GetSinGradient`: Retrieves the sine gradient
+  definition.
+
+- `get_gradient_defs`: Registers the gradient
+  definition with the backend.
+
+- `register_gradient`: Registers the sine gradient
+  operator.
+
+- `sin_op_example`: An example of using the sine
+  function operator and its gradient in practice.
 
 By utilizing the components provided by
 `caffe2op-sin`, developers can integrate sine
@@ -247,13 +272,26 @@ in various fields, including mathematics, physics,
 engineering, and computer science. Some common
 applications include:
 
-- Trigonometry: Solving triangles and trigonometric identities
-- Calculus: Integration and differentiation of trigonometric functions
-- Geometry: Studying periodic curves, such as sine and cosine curves
-- Signal processing: Analysis of periodic signals, Fourier series, and Fourier transforms
-- Oscillatory motion: Modeling physical systems, such as pendulums, springs, and waves
-- Electrical engineering: Analyzing alternating current (AC) circuits and electromagnetic waves
-- Computer graphics: Rotation and transformation of points in 2D and 3D space
+- Trigonometry: Solving triangles and
+  trigonometric identities
+
+- Calculus: Integration and differentiation of
+  trigonometric functions
+
+- Geometry: Studying periodic curves, such as sine
+  and cosine curves
+
+- Signal processing: Analysis of periodic signals,
+  Fourier series, and Fourier transforms
+
+- Oscillatory motion: Modeling physical systems,
+  such as pendulums, springs, and waves
+
+- Electrical engineering: Analyzing alternating
+  current (AC) circuits and electromagnetic waves
+
+- Computer graphics: Rotation and transformation
+  of points in 2D and 3D space
 
 The sine function is a fundamental building block
 in mathematics, with a wide range of applications
@@ -3587,7 +3625,7 @@ function plays a critical role:
    light, radio waves, and microwaves, and their
    interactions with matter.
 
-   4. Optics: The sine function is used in the
+4. Optics: The sine function is used in the
    analysis of light propagation, refraction, and
    diffraction, and in the design of optical
    instruments, such as lenses and mirrors.
@@ -3603,8 +3641,7 @@ function plays a critical role:
    precipitation, and other climate variables, and
    to study the impact of climate change.
 
-   7. Meteorology: The sine function is used to
-   model
+7. Meteorology: The sine function is used to model
    atmospheric oscillations, such as the El
    Niño-Southern Oscillation (ENSO), and to
    predict weather patterns.
@@ -3620,8 +3657,7 @@ function plays a critical role:
    such as stress, strain, and fatigue, under
    cyclic loading conditions.
 
-   10. Control theory: The sine function is used
-    to
+10. Control theory: The sine function is used to
     describe the response of dynamic systems to
     sinusoidal inputs and to design feedback
     control systems that ensure stability and
@@ -3669,7 +3705,7 @@ function plays a critical role:
     learning algorithms to model and learn complex
     patterns and relationships in data.
 
-    19. Music theory: The sine function is used to
+19. Music theory: The sine function is used to
     describe the frequencies and harmonics of
     musical notes and to analyze and synthesize
     music.
