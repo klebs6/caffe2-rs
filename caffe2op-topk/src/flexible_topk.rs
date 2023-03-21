@@ -40,9 +40,7 @@ crate::ix!();
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct FlexibleTopKOp<T, Context> {
-
     context: Context,
-
     phantom: PhantomData<T>,
 }
 

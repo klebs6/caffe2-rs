@@ -38,7 +38,6 @@ crate::ix!();
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 #[USE_OPERATOR_CONTEXT_FUNCTIONS]
 pub struct TopKOp<T,Context> {
-
     context: Context,
     k:       i32,
     axis:    i32,

@@ -1233,6 +1233,7 @@ A common boundary value problem is the
 Sturm-Liouville problem, which involves
 a second-order linear differential equation:
 
+
  L[y] = -(p(x) * y'(x))' + q(x) * y(x) = λ * w(x) * y(x)
 
 with boundary conditions y(a) = 0 and y(b) = 0,
