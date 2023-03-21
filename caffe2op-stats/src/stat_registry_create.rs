@@ -46,5 +46,4 @@ impl StatRegistryCreateOp {
     }
 }
 
-
 caffe_known_type!{Box<StatRegistry>}

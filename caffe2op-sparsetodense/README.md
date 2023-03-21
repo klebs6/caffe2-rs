@@ -1746,16 +1746,51 @@ module matrix_mult (
     cache_controller_if cache_controller_if 
 );
 
-// Define the matrix multiplication module logic [31:0] a [0:1023]; logic [31:0] b [0:1023]; logic [31:0] c [0:1023]; logic valid_a; logic
-valid_b; logic valid_c;
+// Define the matrix multiplication module 
+logic [31:0] a [0:1023]; 
+logic [31:0] b [0:1023]; 
+logic [31:0] c [0:1023]; 
+logic valid_a; 
+logic valid_b; 
+logic valid_c;
 
-// Read data from memory always_comb begin cache_controller_if.op = 0; cache_controller_if.read_tag = a_addr; valid_a = cache_controller_if.hit;
-cache_controller_if.read_tag = b_addr; valid_b = cache_controller_if.hit; cache_controller_if.read_tag = c_addr; valid_c =
-cache_controller_if.hit; end
+// Read data from memory 
+always_comb begin 
+cache_controller_if.op = 0; 
+cache_controller_if.read_tag = a_addr; 
+valid_a = cache_controller_if.hit;
+cache_controller_if.read_tag = b_addr; 
+valid_b = cache_controller_if.hit; 
+cache_controller_if.read_tag = c_addr; 
+valid_c = cache_controller_if.hit; 
+end
 
-// Compute matrix multiplication always_ff @(posedge clk) begin if (reset) begin a <= 0; b <= 0; c <= 0; end else if (valid_a && valid_b &&
-!valid_c) begin for (int i = 0; i < 32; i++) begin for (int j = 0; j < 32; j++) begin c[i32+j] = 0; for (int k = 0; k < 32; k++) begin c[i32+j] +=
-a[i32+k] * b[k32+j]; end end end valid_c <= 1; end else if (!valid_a || !valid_b) begin valid_c <= 0; end end
+// Compute matrix multiplication 
+always_ff @(posedge clk) begin 
+
+    if (reset) begin 
+
+        a <= 0; 
+        b <= 0; 
+        c <= 0; 
+
+    end else if (valid_a && valid_b && !valid_c) begin 
+
+        for (int i = 0; i < 32; i++) begin 
+            for (int j = 0; j < 32; j++) begin 
+                c[i32+j] = 0; 
+                for (int k = 0; k < 32; k++) begin 
+                    c[i32+j] += a[i32+k] * b[k32+j]; 
+                end 
+            end 
+        end 
+
+        valid_c <= 1; 
+
+    end else if (!valid_a || !valid_b) begin 
+        valid_c <= 0; 
+    end 
+end
 
 // Write data to memory always_comb begin if (valid_c) begin cache_controller_if.op = 1; cache_controller_if.write_tag_en = 1;
 cache_controller_if.write_tag = c_addr; cache_controller_if.write_data = c; end else begin cache_controller_if.op = 0;
