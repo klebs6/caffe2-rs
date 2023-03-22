@@ -28,11 +28,6 @@ Contributions to this project are welcome and
 encouraged. If you're interested in contributing,
 please take a look at the [contribution guidelines](CONTRIBUTING.md).
 
-New as of 3/1/2023 -- discord server `caffe2-rs`
-launched!
-
-https://discord.gg/CdHsMHJGX8
-
 ## License
 
 Caffe2-rs has a BSD-style license, as found in the
