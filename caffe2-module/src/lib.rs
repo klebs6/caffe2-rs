@@ -4,5 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{core_module_test}
-x!{core_module}
+x!{load_module}
+x!{module_schema}
+x!{test_module}

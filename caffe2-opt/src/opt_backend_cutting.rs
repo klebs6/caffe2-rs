@@ -8,6 +8,7 @@ pub struct GroupAnnotation {
 }
 
 impl GroupAnnotation {
+
     pub fn new(i: i32, g: Option<i32>) -> Self {
         Self {
             group:           g.unwrap_or(-1),

@@ -4,4 +4,6 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{core_memonger}
+x!{compute_blob_recycling_for_dag}
+x!{optimize_inference_net}
+x!{run_schema_check}
