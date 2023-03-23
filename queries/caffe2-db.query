@@ -1,2 +1,80 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-db" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions. also, if there are any mathematical ideas you identify in these symbols, would you please describe them?? thanks!):
+hello! 
 
+I am writing a rust crate called caffe2-db. 
+
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
+MiniDBTransaction
+commit
+drop
+put
+declare_registry
+and
+createDB
+dBExists
+is
+DBReader
+cursor
+from
+initialize_cursor
+move_to_beginning
+open
+open_with_db
+read
+seek_to_first
+MiniDBCursor
+key
+next
+seek
+seek_to_first
+valid
+value
+Mode
+close
+key
+next
+seek
+seek_to_first
+supports_seek
+valid
+value
+MiniDB
+close
+drop
+register_caffe2_db
+DBReaderDeserializer
+DBReaderSerializer
+caffe_known_type
+deserialize
+register_blob_deserializer
+register_blob_serializer
+serialize
+commit
+put

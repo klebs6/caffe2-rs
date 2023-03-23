@@ -1,5 +1,87 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-common" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions. also, if there are any mathematical ideas you identify in these symbols, would you please describe them?? thanks!):
+hello! 
 
+I am writing a rust crate called caffe2-common. 
 
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
+I would like you to help me write a rust crate
+description for it.
 
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
+common_test_stod
+common_test_stoi
+BNParamType
+CudnnDataType
+CudnnFilterDescWrapper
+CudnnTensorDescWrapper
+ScalingParamType
+check_cudnn_versions
+const_assert
+cudnn_compiled_version
+cudnn_get_error_string
+cudnn_runtime_version
+default
+descriptor
+descriptor_create
+drop
+get_cudnn_tensor_format
+impl_cudnn_type_wrapper
+kOne
+kZero
+print_cudnn_info
+register_caffe2_init_function
+values
+CaffeMap
+contains_internal
+dynamic_cast_if_rtti
+get_build_options
+has_cuda_runtime
+has_hip_runtime
+lazy_static
+set_cuda_runtime_flag
+set_hip_runtime_flag
+CAFFE2_CUDA_PTRATTR_MEMTYPE
+CudaDevicePropWrapper
+CudaRuntimeFlagFlipper
+SimpleArray
+caffe_cuda_get_device
+caffe_cuda_set_device
+caffe_get_blocks
+caffe_get_blocks_2d
+cublas_get_error_string
+cuda_version
+curand_get_error_string
+default
+device_query
+get_cuda_peer_access_pattern
+get_defaultGPUID
+get_device_property
+get_gpuid_for_pointer
+has_cuda_gpu
+lazy_static
+num_cuda_devices
+set_defaultGPUID
+tensor_core_available

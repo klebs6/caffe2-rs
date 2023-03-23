@@ -1,67 +1,48 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-mem" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive and as thorough as possible without making too many assumptions) :Add
-Argument
-AsyncIf
-Blobs
-CPU
-Cannot
-Check
-Clear
-Compute
+hello! 
+
+I am writing a rust crate called caffe2-mem. 
+
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
 ComputeBlobRecyclingForDag
-Construct
-CopyFrom
-CopyGPUToCPU
-Could
-Current
-DFS
-DeviceOption
-Do
-Exception
-HashMap
-HashSet
-Here
-Heuristic
-INFO
-Increment
-Input
-Insert
-Invalid
-K
-LOG
-MB
-Memonger
-NOTE
-Net
-NetDef
-Note
-Now
-Only
-Op
-OpSchemaRegistry
-Operator
-OperatorDef
-OptimizeNet
-ParseFromString
-ProtoDebugString
-RNN
-RNNs
-RecurrentNetwork
-RecurrentNetworks
-Recursively
-Remapping
-Rename
-Returns
-Safety
-Schema
-Self
-Special
-Step
-Store
-String
-TextFormat
-The
-To
-V
-VLOG
-Verify
-We
+apply_assignments
+apply_asyncif_blob_assignments
+apply_recurrent_blob_assignments
+can_use_blob
+compute_blob_recycling_for_dag
+get_blob_or_mapped_blob
+get_free_blob
+has_key_in_map
+has_key_in_set
+infer_blob_size
+optimize_inference_net
+optimize_net
+process_op
+run_schema_check

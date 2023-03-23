@@ -1,8 +1,74 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-txform" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions. also, if there are any mathematical ideas you identify in these symbols, would you please describe them?? thanks!):
+hello! 
 
+I am writing a rust crate called caffe2-txform. 
 
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
+I would like you to help me write a rust crate
+description for it.
 
+Please write the description in the following format:
 
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
 
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
 
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
+common_subexpression_elimination_test_from_external
+common_subexpression_elimination_test_simple
+conv_to_nnp_ack_test_simple
+CommonSubexpressionEliminationTransform
+are_nodes_common
+as
+default
+is_allowed
+pattern_rule
+register_transform
+replace_rule
+validator_rule
+match_operator
+register_transform
+replace_operator
+match_operator
+pattern_rule
+replace_operator
+replace_rule
+validator_rule
+DummyCounterOp
+allow_inplace
+lazy_static
+pattern_net_transform_test_device_option_matching
+pattern_net_transform_test_engine_matching
+pattern_net_transform_test_general_string_matching
+pattern_net_transform_test_generate_transform
+pattern_net_transform_test_hard_transform
+pattern_net_transform_test_non_strict_topographic_transform
+pattern_net_transform_test_repeated_transform
+register_cpu_operator
+register_cuda_operator
+run
+PatternNetTransform
+compare_ops
+for
+get_pattern_traversal_order
+pattern_rule
+replace_rule
+transform_blob_wrapper
+validator_rule

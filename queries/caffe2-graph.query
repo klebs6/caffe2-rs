@@ -1,95 +1,58 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-graph" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive and as thorough as possible without making too many assumptions) :AddOp
-AtomicI
-Checks
-CreateBlob
-Diamond
-Double
-EXPECT
-GetNetDef
-GetSubgraphInput
-GetSubgraphOutput
-Graph
+hello! 
+
+I am writing a rust crate called caffe2-graph. 
+
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
 GraphDummyOp
-GraphTest
-INT
-MAX
-NetDef
-OperatorStorage
-TRUE
-TestGenerateGraphBranch
-TestGenerateGraphChain
-TestGenerateGraphChainInPlace
-TestGetPerimeter
-TestReusedInputs
-Workspace
+allow_inplace
+compare_netdefs
+graph_test_generate_graph_branch
+graph_test_generate_graph_chain
+graph_test_generate_graph_chain_in_place
+graph_test_get_perimeter
+register_cpu_operator
+run
 EdgeRef
-GraphType
 NodeRef
 SubgraphType
-A
-Adds
-Alternate
-An
-B
-But
-C
-CHECK
-Complexity
-Conv
-Copy
-Creates
-Currently
-D
-Deactivate
-Default
-E
-Each
-FC
-FROM
-For
-G
-Generates
-GetNetDef
-GetSubgraphPerimeterHelper
-Given
 Graph
-HashMap
-HashSet
-How
-However
-INTO
-If
-In
-Index
-Is
-Keeps
-MatchStrings
-NetDef
-Netdef
-No
 Node
-Nodes
-O
-Opdef
-OperatorDef
-Operators
-Perform
-Representation
-Returns
-SSA
-Self
-Sets
-Sort
-Sorted
-Stores
-String
-TODO
-The
-Then
-There
-This
-Time
-Topological
-Traverse
-We
-When
+add_op
+deactivate_subgraph
+get_net_def
+get_subgraph_perimeter_helper
+is_node_active
+match_strings
+node
+node_mut
+push_node
+resize_nodes
+size

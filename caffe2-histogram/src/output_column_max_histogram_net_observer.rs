@@ -1,8 +1,5 @@
 crate::ix!();
 
-
-
-///-------------------------------
 pub struct OutputColumnMaxHistogramNetObserver {
     base: NetObserver,
 
@@ -15,6 +12,16 @@ pub struct OutputColumnMaxHistogramNetObserver {
 
     /// {op_idx: {output_index: col_hists}}
     hist_infos:  HashMap<i32,HashMap<i32,Arc<HistogramObserverInfo>>>,
+}
+
+impl Drop for OutputColumnMaxHistogramNetObserver {
+
+    fn drop(&mut self) {
+        todo!();
+        /* 
+      DumpAndReset_(out_file_name_, true);
+     */
+    }
 }
 
 impl OutputColumnMaxHistogramNetObserver {
@@ -175,13 +182,3 @@ impl OutputColumnMaxHistogramNetObserver {
         */
     }
 }
-
-impl Drop for OutputColumnMaxHistogramNetObserver {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-      DumpAndReset_(out_file_name_, true);
- */
-    }
-}
-

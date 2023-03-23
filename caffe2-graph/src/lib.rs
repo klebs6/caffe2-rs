@@ -4,6 +4,10 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{core_graph_test}
-x!{core_graph}
+x!{add_op}
+x!{compare_netdefs}
 x!{graph}
+x!{match_arguments}
+x!{match_string}
+x!{node}
+x!{test_graph}

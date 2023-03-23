@@ -1,175 +1,52 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-test" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions):
+hello! 
 
-Add
-AddArgument
-Assertion
-Asserts
-BlobGetMutableTensor
-C
-CPU
-Concise
-Create
-CreateBlob
-Fill
-GE
-Get
-GetBlob
-HasBlob
-IsType
-LE
-LT
-Mismatch
-NetDef
+I am writing a rust crate called caffe2-test. 
+
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
 NetMutator
-New
-OperatorDef
-Option
-Read
-RealType
-Resize
-Self
-Set
-String
-Tensor
-TensorCPU
-These
-They
-Utilities
-Workspace
 WorkspaceMutator
-add
-and
-are
-argument
-assert
-assertNear
-assertTensorEquals
-assertTensorEqualsWithType
-be
-blob
-buffer
-caffe
-can
-cast
-chaining
-class
-close
-concise
-const
-constant
-constantFillTensor
-create
-createOperator
-createTensor
-createTensorAndConstantFill
-createTensorAndFill
-created
-debug
-default
-designed
-device
-dis
-dispatch
-distribution
-double
-easier
-easy
-enforces
-eps
-epsilon
-equal
-equals
-exceeds
-external
-externalInputs
-externalOutputs
-fabs
-fashion
-fill
-fillTensor
-filled
-from
-gen
-generated
-getTensor
-give
-given
-good
-idx
-in
-index
-input
-last
-lastCreatedOp
-let
-list
-long
-make
-max
-may
-messages
-min
-more
-mt
-mutate
-name
-names
-near
-needed
-net
-new
-node
-non
-nullptr
-numbers
-only
-op
-operator
-option
-or
-out
-output
-outputs
-performance
-presented
-production
-ptr
-random
-randomly
-range
-real
-sacrifice
-same
-set
-shape
-should
-size
-static
-tensor
-tensorName
-tensorNames
-tensors
-tests
-that
-this
-threshold
-ty
-type
-types
-uniform
-unit
-unused
-unwrap
-use
-used
-usize
-util
-utils
-value
-values
-will
-with
-within
-workspace
-workspaces
-write
+assert_near
+assert_tensor
+assert_tensor_equals
+assert_tensor_equals_data
+assert_tensor_equals_with_type
+assert_tensor_equals_with_type_f32
+assert_tensor_list_equals
+constant_fill_tensor
+create_operator
+create_tensor
+create_tensor_and_constant_fill
+create_tensor_and_fill
+create_tensor_in_workspace_and_fill
+fill_tensor
+get_tensor
+random_fill
+set_device_option_name

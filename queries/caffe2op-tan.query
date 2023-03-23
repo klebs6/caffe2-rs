@@ -2,13 +2,13 @@ hello!
 
 I am writing a rust crate called caffe2op-tan. 
 
-It defines a mathematical operator used in DSP
-and machine learning computations.
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
 I would like you to help me write a rust crate
 description for it.
 
-Please write the description in the followin format:
+Please write the description in the following format:
 
 <short description tag used in the crate header>
 <double newline>
@@ -31,6 +31,10 @@ thanks!
 please format your response in the Markdown file format.
 
 here are the tokens:
+GetTanhGradient
+get_gradient_defs
+register_cudnn_operator
+register_gradient
 TanFunctor
 call
 identical_type_and_shape
@@ -38,7 +42,20 @@ register_cpu_operator
 GetTanGradient
 get_gradient_defs
 register_gradient
+TanhFunctor
+allow_inplace
+identical_type_and_shape
+inherit_onnx_schema
+invoke
+register_cpu_operator
+tanh_op_example
 TanGradientFunctor
 forward
 identical_type_and_shape
 register_cpu_operator
+forwardf32
+register_cpu_operator
+invoke_f32
+TanhGradientFunctor
+allow_inplace
+forward

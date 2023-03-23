@@ -1,7 +1,5 @@
 crate::ix!();
 
-use crate::*;
-
 /// op schema check
 #[inline] pub fn run_schema_check(net: &NetDef)  {
     

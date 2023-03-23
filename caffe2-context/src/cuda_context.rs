@@ -13,6 +13,7 @@ pub struct CUDAContext {
 }
 
 impl From<DeviceIndex> for CUDAContext {
+
     /// The default cuda context constructor.
     fn from(gpu_id: DeviceIndex) -> CUDAContext {
 
@@ -383,4 +384,3 @@ impl CUDAContext {
         */
     }
 }
-

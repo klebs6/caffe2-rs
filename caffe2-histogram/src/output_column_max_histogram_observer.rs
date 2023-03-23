@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 /**
   | Given min/max, collect histogram of
   | the max value of each column of tensor
@@ -92,5 +91,3 @@ impl OutputColumnMaxHistogramObserver {
         */
     }
 }
-
-

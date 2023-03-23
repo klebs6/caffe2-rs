@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 pub const MIOPEN_VERSION: usize = 1399;
 
 /**

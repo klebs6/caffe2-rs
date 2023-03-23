@@ -1,7 +1,5 @@
 crate::ix!();
 
-use crate::*;
-
 /**
  | MIOpenWorkspace is a wrapper around a raw cuda
  | pointer that holds the miopen scratch

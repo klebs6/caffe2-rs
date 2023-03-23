@@ -67,13 +67,13 @@ sub process-crate($crate) {
 
     I am writing a rust crate called $crate. 
 
-    It defines a mathematical operator used in DSP
-    and machine learning computations.
+    It is part of workspace containing the rust
+    translation of the caffe2 operator library.
 
     I would like you to help me write a rust crate
     description for it.
 
-    Please write the description in the followin format:
+    Please write the description in the following format:
 
     <short description tag used in the crate header>
     <double newline>
@@ -121,7 +121,7 @@ sub process-crate($crate) {
 
 sub MAIN(Bool :$all = False, Str :$name = "caffe2op-isempty") {
 
-    my @crates = ".".IO.dir>>.grep({ /caffe2op*/ }).grep({ .so });
+    my @crates = ".".IO.dir>>.grep({ /caffe2*/ }).grep({ .so });
 
     if $all {
 

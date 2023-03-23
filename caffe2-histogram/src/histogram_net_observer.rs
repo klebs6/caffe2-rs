@@ -1,8 +1,5 @@
 crate::ix!();
 
-
-
-///-----------------------
 pub struct HistogramNetObserver {
     base: NetObserver,
 
@@ -21,6 +18,16 @@ pub struct HistogramNetObserver {
     delimiter:      String,
     out_file_name:  String,
     hist_infos:     Vec<Arc<HistogramObserverInfo>>,
+}
+
+impl Drop for HistogramNetObserver {
+
+    fn drop(&mut self) {
+        todo!();
+        /* 
+      DumpAndReset_(out_file_name_, false);
+     */
+    }
 }
 
 impl HistogramNetObserver {
@@ -202,14 +209,5 @@ impl HistogramNetObserver {
       DumpAndReset_(ost.str());
       return;
         */
-    }
-}
-
-impl Drop for HistogramNetObserver {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-      DumpAndReset_(out_file_name_, false);
- */
     }
 }

@@ -1,9 +1,7 @@
 crate::ix!();
-
-
                                                                                          
 pub struct TensorDescriptors<T> {
-    descs:  Vec<miopenTensorDescriptor_t>,
+    descs:   Vec<miopenTensorDescriptor_t>,
     phantom: PhantomData<T>,
 }
 
@@ -30,9 +28,8 @@ impl<T> TensorDescriptors<T> {
 ///---------------------------------
 pub struct RecurrentBaseOp<T> {
     //USE_OPERATOR_FUNCTIONS(HIPContext);
-    storage: OperatorStorage,
-    context: HIPContext,
-
+    storage:            OperatorStorage,
+    context:            HIPContext,
     miopen_wrapper:     MIOPENWrapper,
     rnn_desc:           miopenRNNDescriptor_t,
     w_desc:             miopenTensorDescriptor_t,
@@ -40,14 +37,12 @@ pub struct RecurrentBaseOp<T> {
     cx_desc:            miopenTensorDescriptor_t,
     hy_desc:            miopenTensorDescriptor_t,
     cy_desc:            miopenTensorDescriptor_t,
-
     x_desc:             Box<TensorDescriptors<T>>,
     y_desc:             Box<TensorDescriptors<T>>,
-
     cached_input_dims:  Vec<i64>,
     reserve_nbytes:     usize,
     miopen_ws_nbytes:   usize,
-    phantom: PhantomData<T>,
+    phantom:            PhantomData<T>,
 }
 
 impl<T> RecurrentBaseOp<T> {
@@ -87,9 +82,9 @@ impl<T> RecurrentBaseOp<T> {
 }
     
 ///------------------------------------
+#[USE_RECURRENT_BASE_FUNCTIONS]
 pub struct RecurrentOp<T> {
-    //USE_RECURRENT_BASE_FUNCTIONS
-    base: RecurrentBaseOp<T>,
+    base:    RecurrentBaseOp<T>,
     phantom: PhantomData<T>,
 }
 
@@ -186,4 +181,3 @@ output_tags!{
         RnnScratchOut
     }
 }
-

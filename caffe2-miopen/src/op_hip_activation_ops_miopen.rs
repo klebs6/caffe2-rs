@@ -1,10 +1,8 @@
 crate::ix!();
 
-                                                                                        
 pub struct MIOPENActivationOpBase {
     storage:        OperatorStorage,
     context:        HIPContext,
-    
     miopen_wrapper: MIOPENWrapper,
     data_desc:      miopenTensorDescriptor_t,
     act_desc:       miopenActivationDescriptor_t,
@@ -97,12 +95,12 @@ impl<Context> MIOPENActivationOp<Context> {
 }
 
 pub struct MIOPENActivationOp<MIOPENActivationMode> {
-    base: MIOPENActivationOpBase,
+    base:                        MIOPENActivationOpBase,
     phantomMIOPENActivationMode: PhantomData<MIOPENActivationMode>,
 }
 
 pub struct MIOPENActivationGradientOp<MIOPENActivationMode> {
-    base: MIOPENActivationOpBase,
+    base:                        MIOPENActivationOpBase,
     phantomMIOPENActivationMode: PhantomData<MIOPENActivationMode>,
 }
 

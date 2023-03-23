@@ -4,5 +4,8 @@ extern crate test;
 #[macro_use] mod imports;
 use imports::*;
 
-x!{core_export_c10_op_to_caffe2}
-x!{core_export_caffe2_op_to_c10}
+x!{call_caffe_op}
+x!{create_opertor_wrapper}
+x!{export_op}
+x!{make_function_schema}
+x!{opertor_wrapper}

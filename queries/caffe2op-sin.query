@@ -2,13 +2,13 @@ hello!
 
 I am writing a rust crate called caffe2op-sin. 
 
-It defines a mathematical operator used in DSP
-and machine learning computations.
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
 I would like you to help me write a rust crate
 description for it.
 
-Please write the description in the followin format:
+Please write the description in the following format:
 
 <short description tag used in the crate header>
 <double newline>
@@ -33,13 +33,29 @@ please format your response in the Markdown file format.
 here are the tokens:
 identical_type_and_shape
 register_cpu_operator
+SinhGradientFunctor
+forward
+register_cpu_operator
 SinFunctor
 invoke
+SinusoidPositionEncodingOp
+do_run_with_type
+register_cpu_operator
+run_on_device
+sinh_op_example
 SinGradientFunctor
 forward
 identical_type_and_shape
 register_cpu_operator
 GetSinGradient
+get_gradient_defs
+register_gradient
+SinhFunctor
+identical_type_and_shape
+inherit_onnx_schema
+invoke
+register_cpu_operator
+GetSinhGradient
 get_gradient_defs
 register_gradient
 sin_op_example

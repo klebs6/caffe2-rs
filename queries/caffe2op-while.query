@@ -2,13 +2,13 @@ hello!
 
 I am writing a rust crate called caffe2op-while. 
 
-It defines a mathematical operator used in DSP
-and machine learning computations.
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
 I would like you to help me write a rust crate
 description for it.
 
-Please write the description in the followin format:
+Please write the description in the following format:
 
 <short description tag used in the crate header>
 <double newline>

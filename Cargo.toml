@@ -236,7 +236,6 @@ members = [
     "caffe2op-summarize",
     "caffe2op-swish",
     "caffe2op-tan",
-    "caffe2op-tanh",
     "caffe2op-tensorprotos",
     "caffe2op-textfile",
     "caffe2op-thresholdedrelu",

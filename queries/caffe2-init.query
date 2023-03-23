@@ -1,6 +1,68 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-init" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions. also, if there are any mathematical ideas you identify in these symbols, would you please describe them?? thanks!):
+hello! 
 
+I am writing a rust crate called caffe2-init. 
 
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
 
+I would like you to help me write a rust crate
+description for it.
 
+Please write the description in the following format:
 
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
+caffe_2check_intrinsics_features
+quit_if_feature_unsupported
+register_caffe2_init_function
+warn_if_feature_unused
+init_test_can_rerun_global_init
+init_test_fail_late_register_init_function
+init_test_init_function_has_run
+late_register_early_init_function
+late_register_fail_init_function
+late_register_init_function
+lazy_static
+register_caffe2_init_function
+test_fail_init_function
+test_init_function
+caffe_2set_mklthreads
+caffe_2set_open_mpthreads
+register_caffe2_init_function
+Caffe2InitializeRegistry
+GlobalInitIsCalledGuard
+InitFunction
+InitRegisterer
+State
+global_init
+global_init_already_run
+global_init_nocmdline
+global_init_state
+register
+registry
+run_named_function
+run_registered_early_init_functions
+run_registered_init_functions
+run_registered_init_functions_internal
+unsafe_run_caffe_2init_function
+caffe_2set_denormals
+register_caffe2_init_function

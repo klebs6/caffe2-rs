@@ -1,165 +1,54 @@
-hello! could you please help me write a crate-description for the rust crate "caffe2-prof" containing the following symbols? not all of the symbols are defined in this crate, but they are used somehow (please do not explicitly list the symbols, or write anything other than a simple description.  no description header is necessary. however, please be descriptive without making too many assumptions):
+hello! 
 
-A
-AddAssign
-Arc
-CaffeMap
-Collects
-CopyFrom
-Cumulative
-Default
-Do
-End
-GT
-HashMap
-INFO
-Incompatible
-Insufficient
-LOG
-Mean
-Measured
-MilliSeconds
-NetDef
-Op
+I am writing a rust crate called caffe2-prof. 
+
+It is part of workspace containing the rust
+translation of the caffe2 operator library.
+
+I would like you to help me write a rust crate
+description for it.
+
+Please write the description in the following format:
+
+<short description tag used in the crate header>
+<double newline>
+<longer, in depth description and mathematical analysis>
+<END>
+
+Please indicate that the crate is in the
+process of being translated from C++ to
+Rust. It is possible some of the function
+bodies are in the process of translation.
+
+Below are listed some tokens from this crate. 
+
+Please describe the mathematical ideas
+identified by this information alongside the
+relevant mathematical equations in unicode.
+
+thanks!
+
+please format your response in the Markdown file format.
+
+here are the tokens:
 ProfDAGCounters
-ProfDAGProto
-ProfDAGProtos
 ProfDAGReport
 ProfDAGStats
-ReportRunStart
-Self
-Start
-String
-Timer
-U
-Verify
-abs
-add
-addition
-all
-and
-are
-around
-as
-assign
-async
-back
-be
-because
-beginning
-buf
-but
-c
-called
-check
-clear
+add_assign
+add_per_op_async_end_time
+add_per_op_end_time
+add_per_op_start_time
 cnt
-compatible
-compute
-computeMoments
-const
-copy
-cost
-count
-counters
-cum
-dag
-debug
-def
+compute_moments
 default
-device
-do
-does
-end
-ended
-endl
-engine
-errors
-execution
-extra
-first
-formatted
-has
-hasStats
-have
-id
-idx
-in
-info
-instance
-invocations
-irange
-item
-kv
-map
-mean
-might
-moments
-ms
-name
-net
-netName
-nets
-network
-new
-not
-nothing
-number
-op
-opIndex
-opType
-operator
-operators
-ops
-option
-ostringstream
-other
-otherwise
-out
-output
-over
+get_operator_stats
+get_per_operator_cost
+get_report
+has_stats
 per
-prematurely
-print
-prof
-profiling
-proto
-protos
-push
-report
-reserve
-resize
-results
-rhs
-runs
-runtime
-s
-second
-set
-setfill
-setw
-simple
-size
+print_stats
+report_run_end
+report_run_start
 sqrsum
-sqrt
-start
-stats
-statsProto
-stddev
-str
+stats_proto
 sum
-that
-this
-time
-timer
-times
-total
-type
-types
-unique
-update
-use
-usize
-valid
-we
-wrapper
