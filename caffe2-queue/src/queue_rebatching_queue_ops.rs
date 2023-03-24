@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 pub type RebatchingQueuePtr = Box<RebatchingQueue>;
 
 caffe_known_type!{RebatchingQueuePtr}
@@ -227,4 +226,3 @@ impl CloseRebatchingQueueOp {
         */
     }
 }
-

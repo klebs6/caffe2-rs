@@ -17,7 +17,6 @@ documentation = "https://docs.rs/caffe2-plan"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-plan"
-readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.4-alpha.0"
 [package.metadata]

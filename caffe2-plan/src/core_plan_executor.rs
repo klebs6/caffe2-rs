@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 pub type ShouldContinue = fn(_u0: i32) -> bool;
 
 define_bool!{

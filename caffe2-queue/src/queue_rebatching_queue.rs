@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 /**
   | TODO: This is a very naive implementation with
   | a single mutex. We can do the atomic index
@@ -8,20 +7,15 @@ crate::ix!();
   | something more heavy-weight later
   */
 pub struct RebatchingQueue {
-    
-
     capacity:     usize,
     num_blobs:    usize,
     mutex:        parking_lot::RawMutex,
-
     is_closed:    bool, // default = false
     head:         u64,  // default = 0
     tail:         u64,  // default = 0
-
     cv_empty:     std::sync::Condvar,
     cv_overflow:  std::sync::Condvar,
     queue:        Vec<Vec<TensorCPU>>,
-
 }
 
 /**

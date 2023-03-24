@@ -1,10 +1,30 @@
 crate::ix!();
 
-
 pub struct OutputMinMaxObserver {
     base:             ObserverBase<OperatorStorage>,
     info:             Arc<OperatorInfo>,
     warning_printed:  bool, // default = false
+}
+
+impl Drop for OutputMinMaxObserver {
+
+    fn drop(&mut self) {
+        todo!();
+        /* 
+      /*#pragma omp critical
+        {
+          for (int i = 0; i < info_->tensor_infos.size(); ++i) {
+            LOG(INFO) <<
+              this << " " << info_->type << " " << i << " " <<
+              info_->tensor_infos[i].name << " " <<
+              info_->tensor_infos[i].min << " " <<
+              info_->tensor_infos[i].max << " " <<
+              min_max_map_[info_->tensor_infos[i].name].first << " " <<
+              min_max_map_[info_->tensor_infos[i].name].second << " ";
+          }
+        }*/
+ */
+    }
 }
 
 impl OutputMinMaxObserver {
@@ -25,9 +45,6 @@ impl OutputMinMaxObserver {
             return info_;
         */
     }
-}
-
-impl OutputMinMaxObserver {
     
     #[inline] pub fn stop(&mut self)  {
         
@@ -97,25 +114,5 @@ impl OutputMinMaxObserver {
 
       return;
         */
-    }
-}
-
-impl Drop for OutputMinMaxObserver {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-      /*#pragma omp critical
-        {
-          for (int i = 0; i < info_->tensor_infos.size(); ++i) {
-            LOG(INFO) <<
-              this << " " << info_->type << " " << i << " " <<
-              info_->tensor_infos[i].name << " " <<
-              info_->tensor_infos[i].min << " " <<
-              info_->tensor_infos[i].max << " " <<
-              min_max_map_[info_->tensor_infos[i].name].first << " " <<
-              min_max_map_[info_->tensor_infos[i].name].second << " ";
-          }
-        }*/
- */
     }
 }

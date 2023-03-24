@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 /**
  | @brief Creates a quantized tensor of the given
  | dimension.

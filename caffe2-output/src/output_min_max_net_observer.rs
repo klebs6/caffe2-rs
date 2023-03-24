@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 pub struct OutputMinMaxNetObserver {
     base:           NetObserver,
     dump_freq:      i32,
@@ -8,6 +7,45 @@ pub struct OutputMinMaxNetObserver {
     out_file_name:  String,
     delimiter:      String,
     min_max_infos:  Vec<Arc<OperatorInfo>>,
+}
+
+impl Drop for OutputMinMaxNetObserver {
+
+    fn drop(&mut self) {
+        todo!();
+        /* 
+      DumpAndReset_(out_file_name_, true);
+
+    #ifdef _OPENMP
+    #pragma omp critical
+    #endif
+      {
+        ofstream f;
+        time_t rawtime;
+        time(&rawtime);
+        struct tm timeinfo;
+        localtime_r(&rawtime, &timeinfo);
+        char buffer[128] = {};
+        strftime(buffer, sizeof(buffer), "%Y-%m-%d-%H-%M-%S", &timeinfo);
+        char buffer2[256] = {};
+        snprintf(buffer2, sizeof(buffer2), "global_%s.minmax", buffer);
+
+        f.open(buffer2);
+        int op_index = 0;
+        for (auto key_value : min_max_map_) {
+          ostringstream ost;
+          assert(key_value.second.first <= key_value.second.second);
+          assert(key_value.second.first < 1e38);
+          ost << op_index << " 0 " << key_value.first << " "
+              << key_value.second.first << " " << key_value.second.second;
+          f << ost.str() << endl;
+
+          ++op_index;
+        }
+        f.close();
+      }
+     */
+    }
 }
 
 impl OutputMinMaxNetObserver {
@@ -115,43 +153,5 @@ impl OutputMinMaxNetObserver {
       }
       f.close();
         */
-    }
-}
-
-impl Drop for OutputMinMaxNetObserver {
-    fn drop(&mut self) {
-        todo!();
-        /* 
-      DumpAndReset_(out_file_name_, true);
-
-    #ifdef _OPENMP
-    #pragma omp critical
-    #endif
-      {
-        ofstream f;
-        time_t rawtime;
-        time(&rawtime);
-        struct tm timeinfo;
-        localtime_r(&rawtime, &timeinfo);
-        char buffer[128] = {};
-        strftime(buffer, sizeof(buffer), "%Y-%m-%d-%H-%M-%S", &timeinfo);
-        char buffer2[256] = {};
-        snprintf(buffer2, sizeof(buffer2), "global_%s.minmax", buffer);
-
-        f.open(buffer2);
-        int op_index = 0;
-        for (auto key_value : min_max_map_) {
-          ostringstream ost;
-          assert(key_value.second.first <= key_value.second.second);
-          assert(key_value.second.first < 1e38);
-          ost << op_index << " 0 " << key_value.first << " "
-              << key_value.second.first << " " << key_value.second.second;
-          f << ost.str() << endl;
-
-          ++op_index;
-        }
-        f.close();
-      }
-     */
     }
 }

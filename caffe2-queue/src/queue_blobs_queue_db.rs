@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 #[inline] pub fn get_string_from_blob<'a>(blob: *mut Blob) -> &'a String {
     
     todo!();

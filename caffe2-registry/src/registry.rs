@@ -64,7 +64,6 @@ register_blob_deserializer!{
     */
 }
 
-
 define_registry!{
     /*
     NetRegistry,
