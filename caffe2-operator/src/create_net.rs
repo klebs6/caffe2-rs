@@ -45,4 +45,3 @@ pub const kSimpleNet: &'static str = "simple";
       return net;
     */
 }
-

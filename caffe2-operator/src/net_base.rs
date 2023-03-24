@@ -3,8 +3,6 @@ crate::ix!();
 pub type NetObserver        = ObserverBase<NetBase>;
 pub type NetObserverCreator = fn(n: *mut NetBase) -> Box<NetObserver>;
 
-pub struct ExecutorHelper { }
-
 declare_registry!{
     NetRegistry,
     NetBase,

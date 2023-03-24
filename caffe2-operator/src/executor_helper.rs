@@ -1,3 +1,7 @@
+crate::ix!();
+
+pub struct ExecutorHelper { }
+
 impl ExecutorHelper {
     
     #[inline] pub fn get_pool(&self, unused: &DeviceOption) -> Arc<dyn TaskThreadPoolBaseInterface> {
