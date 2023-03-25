@@ -37,4 +37,3 @@ pub trait ExternalTensorFunctionsBase {
         todo!();
     }
 }
-

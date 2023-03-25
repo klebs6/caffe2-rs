@@ -1,0 +1,43 @@
+#!/usr/bin/env raku
+
+use Chomper::SnakeCase;
+
+grammar TestHeader {
+
+    rule TOP {
+        <indent>? '#[test]' 'fn' <test-name> '()' '{'
+    }
+
+    token indent {
+        \h+
+    }
+
+    token test-name {
+        <[A..Z a..z _ 0..9]>+
+    }
+}
+
+class TestHeader::Actions {
+
+    method TOP($/) {
+        my $name   = make $<test-name>.made;
+        my $indent = make $<indent>.made;
+
+        make qq:to/END/.chomp
+        {$indent // ""}#[test] fn {$name}() \{
+        END
+    }
+
+    method indent($/) {
+        make $/.Str
+    }
+
+    method test-name($/) {
+        make snake-case($/.Str)
+    }
+}
+
+say TestHeader.parse(
+    $*IN.slurp, 
+    actions => TestHeader::Actions.new
+).made;

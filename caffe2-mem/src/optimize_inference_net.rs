@@ -122,4 +122,3 @@ crate::ix!();
       return optim_net;
     */
 }
-

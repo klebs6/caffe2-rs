@@ -1,0 +1,10 @@
+#!/usr/bin/env raku
+my $in = $*IN.slurp;
+
+$in ~~ s:g/\n\n\n/\n/;
+
+say qq:to/END/;
+crate::ix!();
+
+$in
+END
