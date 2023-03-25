@@ -11,7 +11,6 @@ documentation = "https://docs.rs/caffe2-output"
 edition = "2021"
 license = "BSD-3-Clause"
 name = "caffe2-output"
-readme = "../README.md"
 repository = "https://github.com/kleb6/caffe2-rs"
 version = "0.1.4-alpha.0"
 [package.metadata]

@@ -293,7 +293,6 @@ sub ensure-correct-toml($file, $readme) {
 for %descriptions.keys.sort -> $crate {
 
     my $toml = $crate ~ "/Cargo.toml";
-    my $readme = $crate ~ "/README.md";
 
     ensure-correct-toml($toml,$readme);
 }
