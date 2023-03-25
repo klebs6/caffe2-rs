@@ -13,7 +13,7 @@ crate::ix!();
   | from Operator<Context>.
   |
   */
-#[USE_OPERATOR_FUNCTIONS = "CPUContext"]
+#[USE_CPU_CONTEXT_OPERATOR_FUNCTIONS]
 pub struct NetSimpleRefCountTestOp {
     storage: OperatorStorage,
     context: CPUContext,

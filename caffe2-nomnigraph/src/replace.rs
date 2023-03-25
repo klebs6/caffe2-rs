@@ -1,5 +1,10 @@
 crate::ix!();
 
+/**
+  | Set all consumers of first argument
+  | to consume the second argument
+  |
+  */
 #[inline] pub fn replace_all_uses_with<T,U>(
     old_tensor_node: NodeRef<T,U>, 
     new_tensor_node: NodeRef<T,U>)  {
@@ -21,19 +26,6 @@ crate::ix!();
   |
   */
 #[inline] pub fn replace_producer<T,U>(tensor_node: NodeRef<T,U>, new_producer: NodeRef<T,U>)  {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-/**
-  | Set all consumers of first argument
-  | to consume the second argument
-  |
-  */
-#[inline] pub fn replace_all_uses_with<T,U>(old_tensor_node: NodeRef<T,U>, new_tensor_node: NodeRef<T,U>)  {
     
     todo!();
     /*

@@ -1,6 +1,9 @@
 crate::ix!();
 
-pub struct AxpyImpl<T,Context,const FixedSize: i32> { }
+pub struct AxpyImpl<T,Context,const FixedSize: i32> { 
+    p_x: PhantomData<T>,
+    p_y: PhantomData<Context>,
+}
 
 #[inline] pub fn axpy_fixed_size<T, Context, const FixedSize: i32>(
     n:       i32,
@@ -14,14 +17,14 @@ pub struct AxpyImpl<T,Context,const FixedSize: i32> { }
     */
 }
 
-impl AxpyImpl<T,Context,const FixedSize: i32> {
+impl<T,Context,const FixedSize: i32> AxpyImpl<T,Context,FixedSize> {
     
     #[inline] pub fn invoke(&mut self, 
-    n:       i32,
-    alpha:   f32,
-    x:       *const T,
-    y:       *mut T,
-    context: *mut Context)  
+        n:       i32,
+        alpha:   f32,
+        x:       *const T,
+        y:       *mut T,
+        context: *mut Context)  
     {
         match FixedSize {
             1 => {
@@ -32,7 +35,7 @@ impl AxpyImpl<T,Context,const FixedSize: i32> {
                  */
             }
             _ => {
-                axpy(n, alpha, x, y, context);
+                axpy(n as i64, alpha, x, y, context);
             }
         }
     }

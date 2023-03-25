@@ -13,8 +13,8 @@ version = "0.1.4-alpha.0"
 [dependencies.caffe2-tensor]
 path = "../caffe2-tensor"
 version = "0.1.4-alpha.0"
-[dependencies.caffe2-types]
-path = "../caffe2-types"
+[dependencies.caffe2-common]
+path = "../caffe2-common"
 version = "0.1.4-alpha.0"
 [package]
 authors = [ "klebs <none>" ]

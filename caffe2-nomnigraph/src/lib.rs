@@ -77,7 +77,7 @@ x!{receive}
 x!{relu}
 x!{replace}
 x!{reshape}
-x!{return}
+x!{return_terminator}
 x!{send}
 x!{softmax}
 x!{storage_type}

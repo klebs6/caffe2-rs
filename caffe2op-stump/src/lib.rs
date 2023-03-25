@@ -7,4 +7,3 @@ use imports::*;
 x!{stump_func}
 x!{stump_func_cpu}
 x!{stump_func_index}
-x!{stump_func_index_cpu}

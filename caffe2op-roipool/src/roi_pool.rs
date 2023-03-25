@@ -16,7 +16,6 @@ pub struct RoIPoolOp<T,Context> {
 
     storage:        OperatorStorage,
     context:        Context,
-
     is_test:        bool,
     order:          StorageOrder,
     pooled_height:  i32,

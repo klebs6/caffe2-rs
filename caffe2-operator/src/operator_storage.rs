@@ -2,7 +2,7 @@ crate::ix!();
 
 pub type OperatorObserver = ObserverBase<OperatorStorage>;
 
-const kNoNetPositionSet: i32 = -1;
+pub const kNoNetPositionSet: i32 = -1;
 
 pub struct OperatorInfo {
     tensor_infos:  Vec<TensorInfo>,

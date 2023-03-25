@@ -21,7 +21,7 @@ crate::ix!();
     */
 }
 
-#[inline] pub fn inject_data_edge_indicators<T,U>(nn: *mut NNModule<T,U>)  {
+#[inline] pub fn inject_data_edge_indicators_with_nnmodule<T,U>(nn: *mut NNModule<T,U>)  {
     
     todo!();
     /*

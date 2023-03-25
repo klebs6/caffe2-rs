@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[inline] pub fn make_tensor_info(
+#[inline] pub fn make_tensor_info_with_quantized_flag(
     t:         &Vec<TensorBoundShape_DimType>,
     dims:      &Vec<i64>,
     dtype:     Option<TensorProto_DataType>,

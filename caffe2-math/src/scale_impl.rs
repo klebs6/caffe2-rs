@@ -5,7 +5,10 @@ crate::ix!();
   | limitations for functions
   |
   */
-pub struct ScaleImpl<T,Context,const FixedSize: i32> { }
+pub struct ScaleImpl<T,Context,const FixedSize: i32> { 
+    p_x: PhantomData<T>,
+    p_y: PhantomData<Context>,
+}
 
 #[inline] pub fn scale_fixed_size<T, Context, const FixedSize: i32>(
     n:       i32,
@@ -19,7 +22,7 @@ pub struct ScaleImpl<T,Context,const FixedSize: i32> { }
     */
 }
 
-impl ScaleImpl<T,Context,const FixedSize: i32> {
+impl<T,Context,const FixedSize: i32> ScaleImpl<T,Context,FixedSize> {
     
     #[inline] pub fn invoke(&mut self, 
         n:       i32,
@@ -37,7 +40,7 @@ impl ScaleImpl<T,Context,const FixedSize: i32> {
                 */
             }
             _ => {
-                scale(n, alpha, x, y, context);
+                scale(n as i64, alpha, x, y, context);
             }
         }
     }

@@ -13,36 +13,6 @@ crate::ix!();
     */
 }
 
-/// Create an output tensor node
-///
-#[inline] pub fn create_output<T,U>(
-    nn:       *mut NNModule<T,U>,
-    producer: NodeRef<T,U>,
-    name:     String) -> NodeRef<T,U> {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-#[inline] pub fn get_outputs_from_node<T,U>(n: NodeRef<T,U>) -> Vec<NodeRef<T,U>> {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-
-#[inline] pub fn get_outputs_from_subgraph<T,U>(sg: &NNSubgraph) -> HashSet<NodeRef<T,U>> {
-    
-    todo!();
-    /*
-    
-    */
-}
-
 #[inline] pub fn get_outputs<T,U>(n: NodeRef<T,U>) -> Vec<NodeRef<T,U>> {
     
     todo!();
@@ -79,6 +49,8 @@ crate::ix!();
     */
 }
 
+/// Create an output tensor node
+///
 #[inline] pub fn create_output<T,U>(
     nn:       *mut NNModule<T,U>,
     producer: NodeRef<T,U>,

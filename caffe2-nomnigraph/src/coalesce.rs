@@ -1,13 +1,5 @@
 crate::ix!();
 
-#[inline] pub fn coalesce_inserted_data_dependencies<T,U>(m: *mut NNModule<T,U>)  {
-    
-    todo!();
-    /*
-    
-    */
-}
-
 #[inline] pub fn coalesce_inserted_data_dependencies_helper<T,U>(m: *mut NNModule<T,U>) -> usize {
     
     todo!();

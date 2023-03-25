@@ -1,35 +1,5 @@
 crate::ix!();
 
-/**
-  | The node has a unique consumer (there
-  | may be multiple edges from output to
-  | the single consumer).
-  |
-  */
-#[inline] pub fn has_unique_consumer<T,U>(node_ref: NodeRef<T,U>) -> bool {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-#[inline] pub fn has_consumer<T,U>(n: NodeRef<T,U>) -> bool {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-#[inline] pub fn get_consumers<T,U>(n: NodeRef<T,U>) -> Vec<NodeRef<T,U>> {
-    
-    todo!();
-    /*
-    
-    */
-}
-
 #[inline] pub fn has_consumer<T,U>(n: NodeRef<T,U>) -> bool {
     
     todo!();
@@ -79,6 +49,12 @@ crate::ix!();
     */
 }
 
+/**
+  | The node has a unique consumer (there
+  | may be multiple edges from output to
+  | the single consumer).
+  |
+  */
 #[inline] pub fn has_unique_consumer<T,U>(node_ref: NodeRef<T,U>) -> bool {
     
     todo!();

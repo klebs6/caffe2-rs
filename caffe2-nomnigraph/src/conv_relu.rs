@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[NOMNIGRAPH_DEFINE_NN_RTTI = "ConvRelu"]
+#[NOMNIGRAPH_DEFINE_NN_RTTI("ConvRelu")]
 pub struct ConvRelu {
     base:          NeuralNetOperator,
     kernel_shape:  Vec<i32>,

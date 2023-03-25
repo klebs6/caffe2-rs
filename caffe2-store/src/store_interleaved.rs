@@ -1,3 +1,4 @@
+crate::ix!();
 
 #[cfg(target_feature = "neon")]
 pub fn store_interleaved_arm<const N: i32>(p: *mut f32, v: &[float32x4]) {

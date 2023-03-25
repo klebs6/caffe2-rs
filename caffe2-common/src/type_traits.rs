@@ -1,3 +1,6 @@
+crate::ix!();
+
+pub const kIsLittleEndian: bool = type_eq::<NativeEndian, LittleEndian>();
 
 /// Are `T` and `U` are the same type?
 pub const fn type_eq<T: ?Sized, U: ?Sized>() -> bool {

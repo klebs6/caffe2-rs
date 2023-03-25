@@ -1,22 +1,7 @@
 crate::ix!();
 
 /// NeuralNetData specific helpers.
-#[inline] pub fn has_producer<T,U>(n: NodeRef<T,U>) -> bool {
-    
-    todo!();
-    /*
-    
-    */
-}
-
-#[inline] pub fn get_producer<T,U>(n: NodeRef<T,U>) -> NodeRef<T,U> {
-    
-    todo!();
-    /*
-    
-    */
-}
-
+///
 #[inline] pub fn has_producer<T,U>(n: NodeRef<T,U>) -> bool {
     
     todo!();

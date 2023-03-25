@@ -11,7 +11,7 @@ x!{cuda_context}
 x!{cudnn_state}
 x!{cudnn_workspace}
 x!{cudnn_wrapper}
-x!{rand}
+x!{random}
 x!{test_context}
 x!{test_gpu_context}
 x!{thread_local_cuda_objects}

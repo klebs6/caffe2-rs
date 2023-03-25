@@ -1,3 +1,6 @@
+[dependencies.caffe2-common]
+path = "../caffe2-common"
+version = "0.1.4-alpha.0"
 [dependencies.caffe2-context]
 path = "../caffe2-context"
 version = "0.1.4-alpha.0"
@@ -6,9 +9,6 @@ path = "../caffe2-imports"
 version = "0.1.4-alpha.0"
 [dependencies.caffe2-operator]
 path = "../caffe2-operator"
-version = "0.1.4-alpha.0"
-[dependencies.caffe2-types]
-path = "../caffe2-types"
 version = "0.1.4-alpha.0"
 [package]
 authors = [ "klebs <none>" ]

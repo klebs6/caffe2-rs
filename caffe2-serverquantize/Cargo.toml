@@ -1,6 +1,9 @@
 [dependencies.caffe2-c10]
 path = "../caffe2-c10"
 version = "0.1.4-alpha.0"
+[dependencies.caffe2-common]
+path = "../caffe2-common"
+version = "0.1.4-alpha.0"
 [dependencies.caffe2-context]
 path = "../caffe2-context"
 version = "0.1.4-alpha.0"
@@ -13,14 +16,10 @@ version = "0.1.4-alpha.0"
 [dependencies.caffe2-operator]
 path = "../caffe2-operator"
 version = "0.1.4-alpha.0"
-[dependencies.caffe2-quant]
-path = "../caffe2-quant"
-version = "0.1.4-alpha.0"
+[dependencies.caffe2-qtensor]
+path = "../caffe2-qtensor"
 [dependencies.caffe2-tensor]
 path = "../caffe2-tensor"
-version = "0.1.4-alpha.0"
-[dependencies.caffe2-types]
-path = "../caffe2-types"
 version = "0.1.4-alpha.0"
 [dependencies.caffe2-util]
 path = "../caffe2-util"

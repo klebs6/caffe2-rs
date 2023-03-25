@@ -557,7 +557,6 @@ crate::ix!();
     */
 }
 
-
 #[inline] pub fn axpy<TAlpha, TData, Context>(
     n:       i64,
     alpha:   TAlpha,

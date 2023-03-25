@@ -1,5 +1,10 @@
 crate::ix!();
 
+/**
+  | Get the name of the node regardless of
+  | underlying type.
+  |
+  */
 #[inline] pub fn get_name<T,U>(n: NodeRef<T,U>) -> String {
     
     todo!();
@@ -10,18 +15,5 @@ crate::ix!();
         return nn::get<NeuralNetOperator>(n)->getName();
       }
       return "Unknown";
-    */
-}
-
-/**
-  | Get the name of the node regardless of
-  | underlying type.
-  |
-  */
-#[inline] pub fn get_name<T,U>(n: NodeRef<T,U>) -> String {
-    
-    todo!();
-    /*
-    
     */
 }

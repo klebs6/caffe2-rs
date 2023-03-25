@@ -5,7 +5,6 @@ pub(crate) use caffe2_context::*;
 pub(crate) use caffe2_event::*;
 pub(crate) use caffe2_operator::*;
 pub(crate) use caffe2_tensor::*;
-pub(crate) use caffe2_types::*;
 pub(crate) use caffe2_util::*;
 pub(crate) use caffe2op_concatsplit::*;
 pub(crate) use caffe2op_conv::*;

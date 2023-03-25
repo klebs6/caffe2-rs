@@ -29,5 +29,5 @@ impl Default for StopOnSignal {
     }
 }
 
-type ShouldContinue = fn(i32) -> bool;
+pub type ShouldContinue = fn(i32) -> bool;
 

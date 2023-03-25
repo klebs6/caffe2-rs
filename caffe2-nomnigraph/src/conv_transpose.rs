@@ -1,6 +1,6 @@
 crate::ix!();
 
-#[NOMNIGRAPH_DEFINE_NN_RTTI = "ConvTranspose"]
+#[NOMNIGRAPH_DEFINE_NN_RTTI("ConvTranspose")]
 pub struct ConvTranspose {
     base:          NeuralNetOperator,
     kernel_shape:  Vec<i32>,

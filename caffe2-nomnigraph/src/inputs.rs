@@ -8,14 +8,6 @@ crate::ix!();
     */
 }
 
-#[inline] pub fn has_inputs<T,U>(n: NodeRef<T,U>) -> bool {
-    
-    todo!();
-    /*
-    
-    */
-}
-
 #[inline] pub fn get_inputs_from_node<T,U>(n: NodeRef<T,U>) -> Vec<NodeRef<T,U>> {
     
     todo!();

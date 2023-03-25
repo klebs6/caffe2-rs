@@ -21,7 +21,7 @@ crate::ix!();
     }
 }
 
-#[USE_OPERATOR_FUNCTIONS = "HIPContext"]
+#[USE_OPERATOR_FUNCTIONS("HIPContext")]
 pub struct RecurrentBaseOp<T> {
     storage:            OperatorStorage,
     context:            HIPContext,

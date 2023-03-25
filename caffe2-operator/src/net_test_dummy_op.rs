@@ -81,8 +81,7 @@ impl NetTestDummyOp {
     }
 }
 
-static counter: AtomicI32 = AtomicI32::new(0);
-
+/*
 /**
   | A net test dummy op that does nothing but
   | scaffolding.
@@ -158,4 +157,4 @@ num_outputs!{NetTestDummy2, (0,INT_MAX)}
 
 allow_inplace!{NetTestDummy2, vec![(1, 0)]}
 
-
+*/
