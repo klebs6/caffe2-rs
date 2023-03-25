@@ -1,5 +1,6 @@
 [dependencies.caffe2-common]
 path = "../caffe2-common"
+version = "0.1.5-alpha.0"
 [dependencies.caffe2-context]
 path = "../caffe2-context"
 version = "0.1.5-alpha.0"
