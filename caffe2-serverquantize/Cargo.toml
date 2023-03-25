@@ -18,6 +18,7 @@ path = "../caffe2-operator"
 version = "0.1.5-alpha.0"
 [dependencies.caffe2-qtensor]
 path = "../caffe2-qtensor"
+version = "0.1.5-alpha.0"
 [dependencies.caffe2-tensor]
 path = "../caffe2-tensor"
 version = "0.1.5-alpha.0"
