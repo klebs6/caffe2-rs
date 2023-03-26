@@ -1,5 +1,7 @@
 # `caffe2op-lpnorm`: Crate for LpNorm Operators in Rust
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ---
 
 `LpNormOp`

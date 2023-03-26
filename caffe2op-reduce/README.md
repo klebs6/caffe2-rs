@@ -11,6 +11,8 @@ input tensor. The output tensor has the same rank
 as the input tensor, except for the dimensions
 along which the reduction is performed.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate provides several reduction functions,
 such as sum, mean, max, min, L1-norm, and L2-norm,
 each implemented as a separate operator. These

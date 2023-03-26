@@ -5,6 +5,8 @@ a mathematical operator used in machine learning
 computations, specifically for computing the
 margin ranking loss between two sets of inputs.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The margin ranking loss is a commonly used loss
 function in binary classification problems, where
 the goal is to separate the input data into two

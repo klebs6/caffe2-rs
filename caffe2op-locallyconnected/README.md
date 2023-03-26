@@ -2,6 +2,8 @@ Crate for implementing the Locally Connected
 operator used in Digital Signal Processing and
 Machine Learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate provides the following mathematical
 ideas and functionalities:
 

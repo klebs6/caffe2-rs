@@ -10,6 +10,8 @@ memory. The `ReservoirSamplingOp` operator is
 designed to work with integerd data types (`int32`
 and `int64`).
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Reservoir sampling works by maintaining
 a "reservoir" of a fixed size and randomly
 sampling elements from the input data stream. The

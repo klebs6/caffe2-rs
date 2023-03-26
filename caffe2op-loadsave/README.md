@@ -6,6 +6,8 @@ mathematical operators used in DSP and machine
 learning computations, specifically for loading
 and saving data.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## In Depth Description and Mathematical Analysis
 `caffe2op-loadsave` provides a set of Rust APIs
 for loading and saving data in DSP and machine

@@ -1,18 +1,20 @@
 # Description for `caffe2op-filler`
 
-## Filler Operators for Initializing Neural
-Network Parameters
+## Filler Operators for Initializing Neural Network Parameters
 
 This Rust crate provides a collection of
 mathematical operators, called filler operators,
 used in deep learning and machine learning
 applications to initialize the weights and biases
-of neural network parameters. The initialization
-of neural network parameters is an essential step
-in the training process of deep learning models,
-as it sets the initial values for the weights and
-biases which will be gradually updated during the
-training process.
+of neural network parameters. 
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
+The initialization of neural network parameters is
+an essential step in the training process of deep
+learning models, as it sets the initial values for
+the weights and biases which will be gradually
+updated during the training process.
 
 The crate includes various types of filler
 operators, such as `UniformFillOp`,

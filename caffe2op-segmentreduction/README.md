@@ -13,6 +13,8 @@ be used to reduce data along different axes, such
 as the length of a vector or the segments of
 a matrix.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate also includes specific implementations
 of some of these operations, such as
 `LengthsMaxCPUOp` for finding the maximum values

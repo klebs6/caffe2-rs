@@ -10,6 +10,8 @@ defined by a vector of lengths. This operator can
 be thought of as a generalization of the `split`
 function in many programming languages.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Formally, let `x` be an input tensor of shape `(n,
 d)` where `n` is the number of vectors to be split
 and `d` is the dimensionality of each vector. Let

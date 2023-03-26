@@ -15,6 +15,8 @@ calculation to be performed with a lower
 computational complexity compared to the
 traditional softmax operator.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `HSoftmax` crate includes several
 implementation options that allow for tuning of
 the computational performance and accuracy of the

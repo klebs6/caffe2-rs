@@ -10,6 +10,8 @@ sum of the absolute values of its elements. The
 `NormalizeL1Op` divides each element of the input
 vector by its L1 norm, resulting in a unit vector.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The equation for computing the L1 norm of a vector
 `x` is:
 

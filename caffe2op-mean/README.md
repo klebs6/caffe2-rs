@@ -8,6 +8,8 @@ of a tensor, which is a commonly used mathematical
 operation in DSP and machine learning
 applications.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `MeanOp` computes the mean of a tensor along
 a given axis, and can be used to reduce the
 dimensionality of a tensor. Mathematically, the

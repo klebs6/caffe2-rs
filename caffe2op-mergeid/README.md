@@ -4,6 +4,8 @@
 operator used in DSP and machine learning
 computations for merging multiple lists of IDs.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Description:
 
 `MergeIdListsOp` is a Rust crate that implements

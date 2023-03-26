@@ -8,6 +8,8 @@ a tensor without modifying the underlying data,
 which is a crucial operation in many neural
 network architectures.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ReshapeOp` takes as input a tensor and
 a shape, and returns a new tensor with the given
 shape. The new tensor has the same number of

@@ -9,6 +9,8 @@ learning and digital signal processing
 applications to perform modulo arithmetic, which
 has a variety of uses in these fields.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ModOp` takes two inputs, `x` and `y`, and
 returns the remainder of dividing `x` by `y`. It
 can be expressed mathematically as `x mod y` or `x

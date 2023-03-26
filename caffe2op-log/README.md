@@ -5,6 +5,8 @@ operations and utilities related to computing
 logarithms in digital signal processing and
 machine learning.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## `LogFunctor`
 
 The `LogFunctor` is a mathematical function that

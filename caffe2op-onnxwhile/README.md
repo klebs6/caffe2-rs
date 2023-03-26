@@ -7,6 +7,8 @@ computations. This crate provides an
 implementation of a loop operator, as specified in
 the Open Neural Network Exchange (ONNX) standard.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ONNXWhileOp` allows a graph of operators to
 be iterated over multiple times, using a set of
 loop-carried dependencies (LCD) tensors. These

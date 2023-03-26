@@ -8,6 +8,8 @@ as time series or natural language. This crate
 provides an implementation of the LSTM operator in
 Rust.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The LSTM operator is a neural network layer that
 processes sequential data, such as a sequence of
 words or sensor readings, and produces

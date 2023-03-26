@@ -1,4 +1,10 @@
-Sure! Recurrent Neural Networks (RNNs) are a class
+# caffe2op-rnn 
+
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
+## Recurrent Neural Networks
+
+Recurrent Neural Networks (RNNs) are a class
 of neural networks used to process sequential
 data, such as time-series, speech, and text
 data. The `caffe2op-rnn` crate defines a set of

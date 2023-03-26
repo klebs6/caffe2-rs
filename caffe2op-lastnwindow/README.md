@@ -5,6 +5,8 @@ operator used in DSP and machine learning
 computations to collect and process data in
 a sliding window fashion.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### Description
 
 The `LastNWindowCollectorOp` collects the last

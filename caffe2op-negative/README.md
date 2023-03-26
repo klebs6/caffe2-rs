@@ -5,6 +5,8 @@ a mathematical operator used in DSP and machine
 learning computations called the "Negative
 Functor".
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Mathematical Analysis
 
 The Negative Functor is a unary operator that

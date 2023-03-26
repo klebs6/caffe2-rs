@@ -7,6 +7,8 @@ particular, it provides implementations of the
 `ScaleOp` and `ScaleBlobsOp` operators, which
 scale the input tensors by a scalar factor.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ScaleOp` operator takes a single input tensor
 and a scalar factor, and produces an output tensor
 whose elements are the product of the input

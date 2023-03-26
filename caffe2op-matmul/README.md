@@ -7,6 +7,8 @@ multiplication operation between two input
 matrices `A` and `B` to produce an output matrix
 `C`.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## MatMulOp
 
 The `MatMulOp` takes two input tensors `A` and `B`

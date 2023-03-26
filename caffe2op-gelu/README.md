@@ -5,6 +5,8 @@ function, commonly used in deep learning
 applications for its ability to improve the
 performance of neural networks.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### Gelu activation function
 
 The Gelu activation function is a variant of the

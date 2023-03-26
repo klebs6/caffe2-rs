@@ -8,6 +8,8 @@ a form of element-wise multiplication applied to
 a tensor, with one of the tensor dimensions
 halved.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate provides the ComputeGlu function that
 performs the GLU operation on a given tensor,
 along with the GluOp struct that can be used to

@@ -9,6 +9,8 @@ Half-Precision Floating Point Operators
 all mathematical operators implemented in the
 `caffe2op-halffloat` Rust crate.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Half-precision floating point numbers, represented
 by the IEEE 754-2008 standard, use 16 bits to
 store a floating-point number, with 1 bit for the

@@ -10,6 +10,8 @@ used in object detection and tracking tasks, where
 the goal is to identify and track objects in an
 image or video.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 # `do_run_with_type`
 
 The `do_run_with_type` function is used to execute

@@ -8,6 +8,8 @@ learning computations. In particular, it provides
 three main operators: BatchGatherGradient,
 GatherFused, and GatherRangesToDenseOp.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The BatchGatherGradient operator computes the
 gradients for a BatchGather operator in the
 forward pass, given the inputs and the gradient of

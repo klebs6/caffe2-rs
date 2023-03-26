@@ -5,6 +5,8 @@ in DSP and machine learning computations that
 performs tiling or replication of an input array
 along a specified axis.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Description
 
 The `NumpyTileOp` replicates an input array along

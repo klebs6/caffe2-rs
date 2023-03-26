@@ -7,6 +7,8 @@ mathematical operators used in partitioning and
 gathering data in DSP and machine learning
 computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Longer Description
 
 Partitioning and gathering data is an essential

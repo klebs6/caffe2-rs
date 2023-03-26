@@ -6,6 +6,8 @@ commonly used in machine learning and signal
 processing applications for analyzing the
 distribution of data.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## HistogramOp
 
 The `HistogramOp` struct represents the Histogram

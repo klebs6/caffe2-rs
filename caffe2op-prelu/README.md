@@ -5,6 +5,8 @@ operators used in DSP and machine learning
 computations, specifically related to the PReLU
 activation function.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 PReLU (Parametric Rectified Linear Unit) is an
 activation function commonly used in deep neural
 networks. It is a variation of the ReLU (Rectified

@@ -5,6 +5,8 @@ A crate that provides the `HardSigmoidFunctor` and
 the `GetHardSigmoidGradient` operation, for use in
 DSP and machine learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `HardSigmoidFunctor` function computes the
 hard sigmoid activation function on a given input
 tensor `x` with parameters `alpha` and `beta`. The

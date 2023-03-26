@@ -6,6 +6,8 @@ operator, which is used in DSP and machine
 learning computations to perform fast and
 efficient hash table lookups.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### Mathematical Analysis
 
 In machine learning applications, hash tables are

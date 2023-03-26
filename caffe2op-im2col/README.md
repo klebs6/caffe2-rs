@@ -9,6 +9,8 @@ computations. Specifically, it includes four key
 functions: `Col2ImOp`, `GetCol2ImGradient`,
 `GetIm2ColGradient`, and `Im2ColOp`.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `Col2ImOp` function performs a "column to
 image" operation, which is used in convolutional
 neural networks to convert a matrix of "flattened"

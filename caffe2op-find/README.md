@@ -4,6 +4,8 @@ Crate for finding the `FindOp` operator,
 a mathematical operation used in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `FindOp` operator can be used to efficiently
 search for a set of `Needles` within a larger
 dataset. It operates by taking a `Placeholder`

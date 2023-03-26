@@ -11,6 +11,8 @@ layer normalization, as well as functions for
 computing internal gradients, sigma and fused
 parameters, and gamma-beta backward operations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Layer Normalization 
 Layer normalization is a technique used in machine
 learning to normalize the output of neurons across

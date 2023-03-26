@@ -9,6 +9,8 @@ groups. For example, the median is the 50th
 percentile, which divides the distribution into
 two equally sized groups.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `QuantileOp` takes an input tensor and
 a probability value between 0 and 1, and returns
 the value in the input tensor corresponding to

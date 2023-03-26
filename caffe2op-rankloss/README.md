@@ -9,6 +9,8 @@ particular, the operator computes the pairwise
 ranking loss based on the difference between the
 two inputs.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The pairwise loss is defined as the logarithm of
 the sum of exponentials of the negative
 differences between pairs of scores. This can be

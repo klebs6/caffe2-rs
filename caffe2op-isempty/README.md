@@ -4,6 +4,8 @@ A Rust crate that provides a mathematical operator
 used in DSP and machine learning computations to
 check if a given tensor is empty or not.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Overview
 
 The `IsEmptyOp` operator is a simple yet useful

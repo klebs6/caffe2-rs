@@ -16,6 +16,8 @@ all sequences have the same length. The
 `LengthsTopKGradientOp` operator computes the
 gradients of the `LengthsTopKOp` operator.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Mathematically, let `X` be an input tensor of
 shape `(N, L, d_2, ..., d_r)` where `N` is the
 batch size, `L` is the maximum length of the

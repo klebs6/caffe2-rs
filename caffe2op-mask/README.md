@@ -8,6 +8,8 @@ where the elements of the input tensor corresponding to
 `True` in the mask are preserved and the others are set to
 0.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ```math
 output_{i_1,i_2,...,i_n}=\begin{cases}
 input_{i_1,i_2,...,i_n} & \text{if } mask_{i_1,i_2,...,i_n} \text{ is } True\\

@@ -6,6 +6,8 @@ in deep neural networks. It is based on the Caffe2
 library and is designed to work with DSP and
 machine learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `FullyConnectedGradientOp` operator is used to
 compute the gradient of the loss function with
 respect to the weights and biases of a fully

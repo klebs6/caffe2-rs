@@ -1,5 +1,7 @@
 # `caffe2op-scope`: A Rust crate for Defining Mathematical Operators in DSP and Machine Learning
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ---
 
 `CreateScopeOp`

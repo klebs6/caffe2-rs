@@ -13,6 +13,8 @@ in `X_0`, and the values of `X` at indices where
 useful in various machine learning models, such as
 attention mechanisms and graph neural networks.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Mathematically, the `KeySplitOp` can be defined as
 follows:
 

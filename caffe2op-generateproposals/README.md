@@ -14,6 +14,8 @@ create, transform, and refine object proposals
 generated from image segmentation and object
 detection algorithms.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Some of the important functions defined by this
 crate include `GenerateProposals`, which creates
 object proposals based on the output of

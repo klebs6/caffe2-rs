@@ -10,6 +10,8 @@ operators, which compute the JSD between two
 Bernoulli distributions and their gradients,
 respectively.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ---
 
 **Mathematical Analysis:**

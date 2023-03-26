@@ -5,6 +5,8 @@ implementation of the `LengthsPadOp` mathematical
 operator, which is commonly used in digital signal
 processing and machine learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `LengthsPadOp` operator takes as input
 a tensor of arbitrary shape and a set of lengths,
 and pads the tensor along the specified dimensions

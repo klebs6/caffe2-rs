@@ -7,6 +7,8 @@ crate provides three main functionalities:
 `InstanceNormOp`, `InstanceNormGradientOp`, and
 `GetInstanceNormGradient`.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 `InstanceNormOp` performs instance normalization
 on a given input tensor. This normalization
 technique transforms each feature map in the input

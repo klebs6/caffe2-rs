@@ -7,6 +7,8 @@ crate defines the FreeOp, which frees the contents
 of the output blob, allowing the memory to be
 reused for subsequent computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The FreeOp takes input blobs as arguments, but
 only for the purpose of waiting for them to be
 produced by earlier operators before freeing the

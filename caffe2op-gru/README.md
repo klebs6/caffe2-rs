@@ -8,6 +8,8 @@ processing. The GRU is a type of recurrent neural
 network architecture that can learn long-term
 dependencies in sequential data.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The crate provides several important types,
 including `GRU`, `GRUUnit`, and `GRUUnitOp`, which
 represent the main building blocks of the GRU

@@ -9,6 +9,8 @@ dimensionality of feature maps in convolutional
 neural networks. It is a generalization of the
 traditional max and average pooling operations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Given an input feature map X of size (N, C, H, W),
 the Lp Pooling Operator computes the output Y of
 size (N, C, H', W') as follows:

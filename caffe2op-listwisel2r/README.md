@@ -13,6 +13,8 @@ operates on tensors of size (batch_size,
 list_size) and produces a tensor of size
 (batch_size).
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## LambdaRank and NDCG
 
 The LambdaRank algorithm is a learning-to-rank

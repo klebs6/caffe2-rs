@@ -12,6 +12,8 @@ instance, if the input tensor resides in the CPU
 memory, then the function will be executed on the
 CPU device.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## `MultiClassAccuracyOp`
 
 `MultiClassAccuracyOp` is the name of the

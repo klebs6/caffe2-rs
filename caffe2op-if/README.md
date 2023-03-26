@@ -4,6 +4,8 @@ The `IfOp` crate defines a conditional statement
 operator used in DSP and machine learning
 computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `IfOp` operator takes three inputs: a boolean
 condition, a true value, and a false value. It
 outputs the true value if the condition is true,

@@ -5,6 +5,8 @@ a mathematical operator used in deep learning and
 digital signal processing called Rectified Linear
 Unit (ReLU).
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Rectified Linear Unit (ReLU)
 
 In a neural network, the activation function is

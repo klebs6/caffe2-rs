@@ -11,6 +11,8 @@ fused row-wise quantized values, as well as for
 converting fused row-wise quantized values back to
 floating-point numbers.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Within this crate, you will find functions and
 symbols such as `FUSED`, `DataFloat`,
 `DataFusedQuantized`, `ConvertFn`,

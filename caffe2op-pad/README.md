@@ -10,6 +10,8 @@ operators are particularly useful when working
 with convolutional neural networks (CNNs) that
 require inputs to be of a fixed size.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `PadImageOp` operator takes an input tensor of
 shape `(batch_size, num_channels, height, width)`
 and pads the tensor along its height and/or width

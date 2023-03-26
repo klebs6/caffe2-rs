@@ -6,6 +6,8 @@ A Rust crate for defining the `PercentileOp`,
 a mathematical operator used in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Description
 
 The `PercentileOp` is a mathematical operator that

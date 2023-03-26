@@ -10,6 +10,8 @@ shape and adds them element-wise. The output is
 also an int8 tensor with the same shape as the
 inputs.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### Int8ResizeNearestOp
 
 The `Int8ResizeNearestOp` operator is used to

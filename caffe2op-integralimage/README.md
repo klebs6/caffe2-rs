@@ -12,6 +12,8 @@ region to another. This can be useful in many
 applications, such as object detection and
 tracking.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The gradient of an integral image can be computed
 using the following equation:
 

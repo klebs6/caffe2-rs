@@ -8,6 +8,8 @@ a categorical input signal. The n-grams are
 defined as contiguous subsequences of length `n`
 of the input signal.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 Given an input signal `X` of shape `(T,)` and an
 integer `n`, the `NGramFromCategoricalOp` operator
 outputs a tensor `Y` of shape `(T-n+1, n)`, where

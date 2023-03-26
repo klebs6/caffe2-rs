@@ -8,6 +8,8 @@ learning and computer vision applications to
 optimize the memory layout of data passed through
 the neural network.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ### NCHW2NHWCOp and NHWC2NCHWOp
 
 The `NCHW2NHWCOp` and `NHWC2NCHWOp` operators

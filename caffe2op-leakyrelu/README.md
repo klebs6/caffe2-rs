@@ -10,6 +10,8 @@ signal processing. The Leaky ReLU is a variation
 of the standard Rectified Linear Unit (ReLU)
 function, defined as:
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 $$\text{LeakyReLU}(x) = \begin{cases}x & \text{if } x \geq 0 \\ \alpha x & \text{otherwise}\end{cases}$$
 
 where $\alpha$ is a small positive constant that

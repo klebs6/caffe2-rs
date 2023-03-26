@@ -10,6 +10,8 @@ includes various sparse lengths reduction
 operators that efficiently compute the sum, mean,
 and weighted sum of sparse tensors.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The operators defined in this crate include
 `SparseLengthsSumOp`, `SparseLengthsMeanOp`,
 `SparseLengthsWeightedSumOp`,

@@ -5,6 +5,8 @@ mathematical operators for computing the minimum
 and maximum of a set of values in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Description
 
 The `caffe2op-minmax` crate provides

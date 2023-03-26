@@ -10,6 +10,8 @@ efficient implementation of the `FloorOp`
 operator, which computes the largest integer less
 than or equal to each element in an input tensor.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `FloorOp` operator is commonly used in machine
 learning applications, such as neural network
 models, for various purposes such as normalization

@@ -13,6 +13,8 @@ commonly used in machine learning as a way of
 representing categorical data in a format that is
 easier for neural networks to process.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The one-hot encoding is calculated as follows:
 
 ```

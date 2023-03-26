@@ -5,6 +5,8 @@ implementation of the RowMul operator, which is
 commonly used in machine learning and digital
 signal processing applications.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## RowMul Operator
 
 The RowMul operator takes two input tensors of the

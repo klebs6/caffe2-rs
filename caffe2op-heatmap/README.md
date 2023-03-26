@@ -16,6 +16,8 @@ used in digital signal processing and machine
 learning computations involving image recognition
 tasks.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The HeatmapMaxKeypointOp operator generates
 a heatmap from an input image, where each element
 in the heatmap represents the probability that

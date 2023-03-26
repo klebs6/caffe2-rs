@@ -10,6 +10,8 @@ tensor. Specifically, it provides the
 implement the forward and backward passes of the
 reciprocal operator, respectively.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `ReciprocalFunctor` computes the element-wise
 reciprocal of the input tensor using the following
 formula:

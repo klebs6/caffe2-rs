@@ -4,6 +4,8 @@ A Rust crate implementing the RMACRegionsOp
 mathematical operator used in DSP and machine
 learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## RMACRegionsOp
 
 The RMACRegionsOp is a regional maximum activation

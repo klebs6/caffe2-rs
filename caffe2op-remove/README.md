@@ -7,6 +7,8 @@
 is commonly used in Digital Signal Processing
 (DSP) and Machine Learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `RemoveDataBlocksOp` operator removes specific
 data blocks from an input tensor based on a set of
 specified indices. This operator is useful in

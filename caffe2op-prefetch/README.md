@@ -14,6 +14,8 @@ machine learning, where large datasets are often
 used and data access times can be a bottleneck in
 the computation.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 The `PrefetchOperator` is implemented using Rust's
 multi-threading capabilities to run data
 prefetching operations in parallel with other

@@ -7,6 +7,8 @@ a variety of machine learning and signal
 processing applications, particularly those that
 involve variable-length sequences of data.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## `PackSegmentsOp` and `UnpackSegmentsOp`
 
 The `PackSegmentsOp` and `UnpackSegmentsOp`

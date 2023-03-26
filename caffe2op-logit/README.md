@@ -4,6 +4,8 @@ Crate that implements a mathematical operator used
 in machine learning and signal processing, called
 the logit function.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## Logit Function
 
 The logit function is a sigmoid function that maps

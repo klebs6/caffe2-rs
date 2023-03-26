@@ -4,6 +4,8 @@ Rust crate for computing the reciprocal square
 root function and its gradients, commonly used in
 DSP and machine learning computations.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## `RsqrtFunctor`
 
 A `RsqrtFunctor` is a mathematical operator that

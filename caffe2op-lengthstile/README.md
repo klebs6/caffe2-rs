@@ -8,6 +8,8 @@ operator duplicates each entry of the outermost
 dimension of `DATA` according to `LENGTHS`, and
 concatenates them in an output tensor of rank `r`.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 This operation is useful in cases where we need to
 replicate a subset of a dataset multiple
 times. For example, in natural language

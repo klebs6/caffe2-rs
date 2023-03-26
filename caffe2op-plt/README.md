@@ -12,6 +12,8 @@ works by defining a set of linear functions, each
 with its own domain, that are used to transform
 the input tensor in a piecewise fashion.
 
+**Note: This crate is currently being translated from C++ to Rust, and some function bodies may still be in the process of translation.**
+
 ## PiecewiseLinearTransformOpFloatCPU
 
 The `PiecewiseLinearTransformOpFloatCPU` is
