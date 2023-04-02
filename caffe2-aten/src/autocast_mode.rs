@@ -63,8 +63,8 @@ pub mod autocast {
     #[inline] pub fn prioritize_with_tensor(
             current:     ScalarType,
             next_arg:    &Tensor,
-            device_type: DeviceType) -> ScalarType {
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+            device_type: Option<DeviceType>) -> ScalarType {
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
 
         todo!();
             /*
@@ -103,9 +103,9 @@ pub mod autocast {
     #[inline] pub fn prioritize_with_list(
             current:     ScalarType,
             list:        &TensorList,
-            device_type: DeviceType) -> ScalarType {
+            device_type: Option<DeviceType>) -> ScalarType {
 
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
 
         todo!();
             /*
@@ -124,9 +124,11 @@ pub mod autocast {
     #[inline] pub fn prioritize<T>(
             current:     ScalarType,
             next_arg:    T,
-            device_type: DeviceType) -> ScalarType {
+            device_type: Option<DeviceType>) -> ScalarType {
+
         let device_type: DeviceType =
-                     device_type.unwrap_or(DeviceType_CUDA);
+                     device_type.unwrap_or(DeviceType::Cuda);
+
         todo!();
             /*
                 return current;
@@ -155,7 +157,7 @@ pub mod autocast {
       | Non-Tensor arguments are ignored.
       |
       */
-    #[inline] pub fn promote_type(
+    #[inline] pub fn promote_type<Arg0,Args>(
             current:     ScalarType,
             device_type: DeviceType,
             arg0:        Arg0,
@@ -175,8 +177,9 @@ pub mod autocast {
       */
     #[inline] pub fn is_eligible(
             arg:         &Tensor,
-            device_type: DeviceType) -> bool {
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+            device_type: Option<DeviceType>) -> bool {
+
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
 
         todo!();
             /*
@@ -195,7 +198,7 @@ pub mod autocast {
             arg:         &Option<Tensor>,
             device_type: Option<DeviceType>) -> Option<Tensor> {
 
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
 
         todo!();
             /*
@@ -214,9 +217,9 @@ pub mod autocast {
     #[inline] pub fn cached_cast_overload_for_tensor_lists(
             to_type:     ScalarType,
             arg:         &TensorList,
-            device_type: DeviceType) -> Vec<Tensor> {
+            device_type: Option<DeviceType>) -> Vec<Tensor> {
 
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
 
         todo!();
             /*
@@ -234,9 +237,11 @@ pub mod autocast {
     #[inline] pub fn cached_cast<T>(
             to_type:     ScalarType,
             arg:         T,
-            device_type: DeviceType) -> T {
+            device_type: Option<DeviceType>) -> T {
+
         let device_type: DeviceType =
-                     device_type.unwrap_or(DeviceType_CUDA);
+                     device_type.unwrap_or(DeviceType::Cuda);
+
         todo!();
             /*
                 return arg;
@@ -285,7 +290,7 @@ pub mod autocast {
             */
     }
 
-    #[inline] pub fn firstarg_is_eligible(
+    #[inline] pub fn firstarg_is_eligible<Args>(
             arg:  &Tensor,
             args: Args) -> bool {
         
@@ -295,7 +300,7 @@ pub mod autocast {
             */
     }
 
-    #[inline] pub fn type_from_firstarg(
+    #[inline] pub fn type_from_firstarg<Args>(
             to_type: ScalarType,
             arg:     &Tensor,
             args:    Args) -> ScalarType {
@@ -465,7 +470,7 @@ pub mod autocast {
             arg:         &Tensor,
             device_type: Option<DeviceType>) -> Tensor {
 
-        let device_type: DeviceType = device_type.unwrap_or(DeviceType_CUDA);
+        let device_type: DeviceType = device_type.unwrap_or(DeviceType::Cuda);
         
         todo!();
             /*
@@ -605,11 +610,11 @@ pub mod autocast {
     }
 
 
-    // CastPolicy::fp32_set_opt_dtype DeviceType_CUDA
+    // CastPolicy::fp32_set_opt_dtype DeviceType::Cuda
     lazy_static!{
         /*
         template<class Redispatch, Redispatch* F, class Ret, class... Args>
-                struct WrapFunction_<CastPolicy::fp32_set_opt_dtype, DeviceType_CUDA, Redispatch, F, Ret, guts::typelist::typelist<Args...>> {
+                struct WrapFunction_<CastPolicy::fp32_set_opt_dtype, DeviceType::Cuda, Redispatch, F, Ret, guts::typelist::typelist<Args...>> {
                   static Ret call(Args... args) {
                     impl::ExcludeDispatchKeyGuard no_autocast(DispatchKey::Autocast);
                     if (firstarg_is_eligible(args...)) {
@@ -625,11 +630,11 @@ pub mod autocast {
     }
 
 
-    // CastPolicy::fp32_append_dtype DeviceType_CUDA
+    // CastPolicy::fp32_append_dtype DeviceType::Cuda
     lazy_static!{
         /*
         template<class Redispatch, Redispatch* F, class Ret, class... Args>
-                struct WrapFunction_<CastPolicy::fp32_append_dtype, DeviceType_CUDA, Redispatch, F, Ret, guts::typelist::typelist<Args...>> {
+                struct WrapFunction_<CastPolicy::fp32_append_dtype, DeviceType::Cuda, Redispatch, F, Ret, guts::typelist::typelist<Args...>> {
                   static Ret call(Args... args) {
                     impl::ExcludeDispatchKeyGuard no_autocast(DispatchKey::Autocast);
                     ScalarType out_type = type_from_firstarg(kFloat, args...);
@@ -738,7 +743,7 @@ pub mod autocast {
             /*
             
                   m.impl(TORCH_SELECTIVE_NAME("" REGISTER_NAME), 
-                    &WrapFunction<CastPolicy::POLICY, DeviceType_CUDA, SIGNATURE, SIGNATURE, &FUNC>::type::call);
+                    &WrapFunction<CastPolicy::POLICY, DeviceType::Cuda, SIGNATURE, SIGNATURE, &FUNC>::type::call);
             */
         }
     }
@@ -749,7 +754,7 @@ pub mod autocast {
             /*
             
                   m.impl(TORCH_SELECTIVE_NAME("" REGISTER_NAME), 
-                    &WrapFunction<CastPolicy::POLICY, DeviceType_CUDA, REGISTER_SIGNATURE, REDISPATCH_SIGNATURE, &REDISPATCH_FUNC>::type::call);
+                    &WrapFunction<CastPolicy::POLICY, DeviceType::Cuda, REGISTER_SIGNATURE, REDISPATCH_SIGNATURE, &REDISPATCH_FUNC>::type::call);
             */
         }
     }
@@ -810,32 +815,32 @@ pub mod autocast {
               KERNEL(ADD_NS(linalg_multi_dot), "linalg_multi_dot", Tensor (TensorList), lower_precision_fp)
               // The macro doesn't like these (I think it chokes on commas inside <>) so write them manually
               m.impl(TORCH_SELECTIVE_NAME("_thnn_fused_lstm_cell"),
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              tuple<Tensor,Tensor,Tensor> (const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              tuple<Tensor,Tensor,Tensor> (const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(_thnn_fused_lstm_cell)>::type::call)));
               m.impl("_thnn_fused_gru_cell",
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              tuple<Tensor,Tensor> (const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              tuple<Tensor,Tensor> (const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(_thnn_fused_gru_cell)>::type::call)));
               m.impl("lstm_cell",
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              tuple<Tensor,Tensor> (const Tensor &, TensorList, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              tuple<Tensor,Tensor> (const Tensor &, TensorList, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(lstm_cell)>::type::call)));
               m.impl("gru_cell",
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(gru_cell)>::type::call)));
               m.impl("rnn_tanh_cell", // tanh unary op is executed as a cuda math library call.
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(rnn_tanh_cell)>::type::call)));
               m.impl("rnn_relu_cell",
-                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::lower_precision_fp, DeviceType::Cuda,
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              Tensor (const Tensor &, const Tensor &, const Tensor &, const Tensor &, const optional<Tensor>&, const optional<Tensor>&),
                                              &ADD_NS(rnn_relu_cell)>::type::call)));
@@ -861,7 +866,7 @@ pub mod autocast {
               KERNEL(ADD_NS(layer_norm), "layer_norm", Tensor (const Tensor &, IntArrayRef, const optional<Tensor>&, const optional<Tensor>&, double, bool), fp32)
               // The macro doesn't like this one (I think it chokes on commas inside <>) so write it manually
               m.impl(TORCH_SELECTIVE_NAME("native_layer_norm"),
-                     TORCH_FN((&WrapFunction<CastPolicy::fp32, DeviceType_CUDA,
+                     TORCH_FN((&WrapFunction<CastPolicy::fp32, DeviceType::Cuda,
                                              tuple<Tensor,Tensor,Tensor> (const Tensor&, IntArrayRef, const optional<Tensor>&, const optional<Tensor>&, double),
                                              tuple<Tensor,Tensor,Tensor> (const Tensor&, IntArrayRef, const optional<Tensor>&, const optional<Tensor>&, double),
                                              &ADD_NS(native_layer_norm)>::type::call)));

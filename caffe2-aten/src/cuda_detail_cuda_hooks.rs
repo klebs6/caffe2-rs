@@ -316,7 +316,7 @@ impl CUDAHooks {
       OptionalDeviceGuard device_guard;
       auto primary_ctx_device_index = CUDAHooks::getDevceIndexWithPrimaryContext();
       if (primary_ctx_device_index.has_value()) {
-        device_guard.reset_device(Device(DeviceType_CUDA, *primary_ctx_device_index));
+        device_guard.reset_device(Device(DeviceType::Cuda, *primary_ctx_device_index));
       }
       cudaPointerAttributes attr;
       cudaError_t err = cudaPointerGetAttributes(&attr, data);
@@ -702,7 +702,7 @@ impl CUDAHooks {
         
         todo!();
         /*
-            DeviceGuard device_guard(Device(DeviceType_CUDA, device_index));
+            DeviceGuard device_guard(Device(DeviceType::Cuda, device_index));
       device_synchronize();
         */
     }

@@ -1,14 +1,14 @@
 [dependencies.caffe2-imports]
 path = "../caffe2-imports"
 version = "0.1.5-alpha.0"
-[dependencies.caffe2-util]
-path = "../caffe2-util"
+[dependencies.caffe2-operator]
+path = "../caffe2-operator"
 version = "0.1.5-alpha.0"
 [dependencies.caffe2-tensor]
 path = "../caffe2-tensor"
 version = "0.1.5-alpha.0"
-[dependencies.caffe2-operator]
-path = "../caffe2-operator"
+[dependencies.caffe2-util]
+path = "../caffe2-util"
 version = "0.1.5-alpha.0"
 [package]
 authors = [ "klebs <none>" ]

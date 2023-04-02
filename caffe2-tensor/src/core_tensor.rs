@@ -21,10 +21,12 @@ pub struct Tensor {
     impl_:  TensorImplPtr,
 }
 
-pub type TensorImplPtr = IntrusivePtr<TensorImpl>;
+//NOTE: this was IntrusivePtr in the c++
+pub type TensorImplPtr = Arc<TensorImpl>;
 
 //was called copy_ctor in the c++
 impl Clone for Tensor {
+
     fn clone(&self) -> Self {
         todo!();
         /*
@@ -83,7 +85,7 @@ impl From<DeviceType> for Tensor {
 
 impl Tensor {
     
-    #[inline] pub fn get_intrusive_ptr(&self) -> &IntrusivePtr<TensorImpl> {
+    #[inline] pub fn get_intrusive_ptr(&self) -> &TensorImplPtr {
         
         todo!();
         /*

@@ -9,7 +9,7 @@ CARGO     := env CARGO_MSG_LIMIT=15 \
 			 NUM_JOBS=12 \
 			 cargo 
 
-#ACTIVE := caffe2-aten
+ACTIVE := caffe2-aten
 #ACTIVE := caffe2-c10
 
 #ACTIVE := caffe2-blob

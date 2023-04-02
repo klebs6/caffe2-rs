@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 /**
   | This is a wrapper around the TensorPrinter
   | that doesn't require the user to explicit
@@ -16,7 +15,6 @@ crate::ix!();
 pub struct SmartTensorPrinter<W: Write> {
     tensor_printer: TensorPrinter<W>,
 }
-
 
 impl<W: Write> SmartTensorPrinter<W> {
     

@@ -171,7 +171,7 @@ impl HostAllocator {
         OptionalDeviceGuard device_guard;
         auto primary_ctx_device_index = getCUDAHooks().getDevceIndexWithPrimaryContext();
         if (primary_ctx_device_index.has_value()) {
-          device_guard.reset_device(Device(DeviceType_CUDA, *primary_ctx_device_index));
+          device_guard.reset_device(Device(DeviceType::Cuda, *primary_ctx_device_index));
         }
 
         // note that cudaHostAlloc may not touch pointer if size is 0

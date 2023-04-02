@@ -19,7 +19,7 @@ impl Tensor {
         
         todo!();
         /*
-            return to(options().device(DeviceType_CUDA), /*non_blocking*/ false, /*copy*/ false);
+            return to(options().device(DeviceType::Cuda), /*non_blocking*/ false, /*copy*/ false);
         */
     }
     

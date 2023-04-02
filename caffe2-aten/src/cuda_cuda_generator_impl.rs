@@ -436,7 +436,7 @@ impl CUDAGeneratorImpl {
         
         todo!();
         /*
-            return DeviceType_CUDA;
+            return DeviceType::Cuda;
         */
     }
 

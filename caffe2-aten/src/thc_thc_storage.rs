@@ -29,7 +29,7 @@ pub fn thc_storage_resize_bytes(
         THError("Trying to resize storage that is not resizable");
 
       if (size_bytes == 0) {
-        self->set_data_ptr_noswap(DataPtr(nullptr, Device(DeviceType_CUDA, device)));
+        self->set_data_ptr_noswap(DataPtr(nullptr, Device(DeviceType::Cuda, device)));
         self->set_nbytes(0);
       } else {
         DataPtr data = self->allocator()->allocate(size_bytes);

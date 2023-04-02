@@ -21,7 +21,7 @@ pub enum TensorIndexType {
     Tensor 
 }
 
-pub const NONE: Nullopt = nullopt;
+pub const NONE: Option<()> = None;
 
 #[derive(Default)]
 pub struct EllipsisIndexType {
@@ -49,10 +49,6 @@ impl Slice {
         start_index: Option<i64>,
         stop_index:  Option<i64>,
         step_index:  Option<i64>) -> Self {
-
-        let start_index: Option<i64> = start_index.unwrap_or(nullopt);
-        let stop_index:  Option<i64> = stop_index.unwrap_or(nullopt);
-        let step_index:  Option<i64> = step_index.unwrap_or(nullopt);
 
         todo!();
         /*
@@ -109,16 +105,6 @@ impl Slice {
     }
 }
 
-impl fmt::Display for Slice {
-    
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        todo!();
-        /*
-        
-        */
-    }
-}
-
 /**
   | `TensorIndex` is used for converting
   | C++ tensor indices such as
@@ -161,14 +147,14 @@ pub struct TensorIndex {
     ty:      TensorIndexType,
 }
 
-impl TensorIndex {
+impl Default for TensorIndex {
 
     /**
       | Case 1: `None`
       | 
       |
       */
-    pub fn new(_0: Nullopt) -> Self {
+    fn default() -> Self {
     
         todo!();
         /*
@@ -177,12 +163,15 @@ impl TensorIndex {
         
         */
     }
+}
+
+impl From<EllipsisIndexType> for TensorIndex {
 
     /**
       | Case 2: "..." / `Ellipsis`
       |
       */
-    pub fn new(_0: EllipsisIndexType) -> Self {
+    fn from(_0: EllipsisIndexType) -> Self {
     
         todo!();
         /*
@@ -191,8 +180,11 @@ impl TensorIndex {
         
         */
     }
-    
-    pub fn new(str_: *const u8) -> Self {
+}
+
+impl From<*const u8> for TensorIndex {
+
+    fn from(str_: *const u8) -> Self {
     
         todo!();
         /*
@@ -203,13 +195,16 @@ impl TensorIndex {
           "Expected \"...\" to represent an ellipsis index, but got \"", str, "\"");
         */
     }
+}
+
+impl From<i64> for TensorIndex {
 
     /**
       | Case 3: Integer value
       | 
       |
       */
-    pub fn new(integer: i64) -> Self {
+    fn from(integer: i64) -> Self {
     
         todo!();
         /*
@@ -219,8 +214,11 @@ impl TensorIndex {
         
         */
     }
+}
 
-    pub fn new(integer: i32) -> Self {
+impl From<i32> for TensorIndex {
+
+    fn from(integer: i32) -> Self {
     
         todo!();
         /*
@@ -229,10 +227,12 @@ impl TensorIndex {
             : TensorIndex((i64)integer)
         */
     }
+}
+
+impl From<bool> for TensorIndex {
 
     // Case 4: Boolean value
-    //template <class T, class = typename enable_if<is_same<bool, T>::value>::type >
-    pub fn new(boolean: T) -> Self {
+    fn from(boolean: bool) -> Self {
     
         todo!();
         /*
@@ -242,9 +242,12 @@ impl TensorIndex {
         
         */
     }
+}
+
+impl From<Slice> for TensorIndex {
 
     /// Case 5: Slice represented in `Slice` form
-    pub fn new(slice: Slice) -> Self {
+    fn from(slice: Slice) -> Self {
     
         todo!();
         /*
@@ -254,9 +257,12 @@ impl TensorIndex {
         
         */
     }
+}
+
+impl From<Tensor> for TensorIndex {
 
     /// Case 6: Tensor value
-    pub fn new(tensor: Tensor) -> Self {
+    fn from(tensor: Tensor) -> Self {
     
         todo!();
         /*
@@ -266,6 +272,9 @@ impl TensorIndex {
         
         */
     }
+}
+
+impl TensorIndex {
     
     #[inline] pub fn is_none(&self) -> bool {
         
@@ -344,26 +353,6 @@ impl TensorIndex {
         todo!();
         /*
             return tensor_;
-        */
-    }
-}
-
-impl fmt::Display for TensorIndex {
-    
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        todo!();
-        /*
-        
-        */
-    }
-}
-
-impl fmt::Display for Vec<TensorIndex> {
-    
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        todo!();
-        /*
-        
         */
     }
 }
@@ -497,7 +486,7 @@ impl fmt::Display for Vec<TensorIndex> {
 
 #[inline] pub fn type_convert_indices(
         self_:   &Tensor,
-        indices: Vec<Tensor>) -> List<Option<Tensor>> {
+        indices: Vec<Tensor>) -> LinkedList<Option<Tensor>> {
     
     todo!();
         /*
@@ -596,7 +585,7 @@ impl fmt::Display for Vec<TensorIndex> {
   | 'src'
   |
   */
-#[inline] pub fn slice_prefix1s_size(sizes: &&[i32]) -> &[i32] {
+#[inline] pub fn slice_prefix1s_size<'a>(sizes: &'a &'a [i32]) -> &'a [i32] {
     
     todo!();
         /*
@@ -817,7 +806,7 @@ impl fmt::Display for Vec<TensorIndex> {
 #[inline] pub fn get_item(
     self_:                      &Tensor,
     indices:                    &&[TensorIndex],
-    disable_slice_optimization: bool) -> Tensor {
+    disable_slice_optimization: Option<bool>) -> Tensor {
 
     let disable_slice_optimization: bool = disable_slice_optimization.unwrap_or(false);
 
@@ -883,7 +872,7 @@ impl fmt::Display for Vec<TensorIndex> {
     self_:                      &Tensor,
     indices:                    &&[TensorIndex],
     value:                      &Tensor,
-    disable_slice_optimization: bool)  {
+    disable_slice_optimization: Option<bool>)  {
 
     let disable_slice_optimization: bool = disable_slice_optimization.unwrap_or(false);
 
@@ -944,7 +933,7 @@ impl fmt::Display for Vec<TensorIndex> {
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/TensorIndexing.cpp]
 
-pub const ELLIPSIS: EllipsisIndexType = EllipsisIndexType();
+pub const ELLIPSIS: EllipsisIndexType = EllipsisIndexType {};
 
 impl fmt::Display for Slice {
     
@@ -976,22 +965,6 @@ impl fmt::Display for TensorIndex {
       } else if (tensor_index.is_tensor()) {
         stream << tensor_index.tensor();
       }
-      return stream;
-        */
-    }
-}
-
-impl fmt::Display for Vec<TensorIndex> {
-    
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        todo!();
-        /*
-            stream << "(";
-      for (usize i = 0; i < tensor_indices.size(); i++) {
-        stream << tensor_indices[i];
-        if (i < tensor_indices.size() - 1) stream << ", ";
-      }
-      stream << ")";
       return stream;
         */
     }
@@ -1038,15 +1011,7 @@ impl Tensor {
         */
     }
     
-    pub fn index(&self, indices: InitializerList<TensorIndex>) -> Tensor {
-        
-        todo!();
-        /*
-            return index(ArrayRef<TensorIndex>(indices));
-        */
-    }
-    
-    pub fn index_put(&mut self, 
+    pub fn index_put_tensor(&mut self, 
         indices: &[TensorIndex],
         rhs:     &Tensor) -> &mut Tensor {
         
@@ -1059,7 +1024,7 @@ impl Tensor {
         */
     }
     
-    pub fn index_put(&mut self, 
+    pub fn index_put_scalar(&mut self, 
         indices: &[TensorIndex],
         v:       &Scalar) -> &mut Tensor {
         
@@ -1069,26 +1034,6 @@ impl Tensor {
       OptionalDeviceGuard device_guard(device_of(*this));
       set_item(*this, indices, v);
       return *this;
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: InitializerList<TensorIndex>,
-        rhs:     &Tensor) -> &mut Tensor {
-        
-        todo!();
-        /*
-            return index_put_(ArrayRef<TensorIndex>(indices), rhs);
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: InitializerList<TensorIndex>,
-        v:       &Scalar) -> &mut Tensor {
-        
-        todo!();
-        /*
-            return index_put_(ArrayRef<TensorIndex>(indices), v);
         */
     }
 }

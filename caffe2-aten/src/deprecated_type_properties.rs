@@ -166,7 +166,8 @@ impl DeprecatedTypeProperties {
       | a type and a `device_index`.
       |
       */
-    pub fn options(&self, device_index: i16) -> TensorOptions {
+    pub fn options_with_device_index(&self, device_index: Option<i16>) -> TensorOptions {
+
         let device_index: i16 = device_index.unwrap_or(-1);
 
         todo!();
@@ -216,39 +217,7 @@ impl DeprecatedTypeProperties {
     }
     
     pub fn unsafe_tensor_fromth(&self, 
-        th_pointer: *mut void,
-        retain:     bool) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn unsafe_storage_fromth(&self, 
-        th_pointer: *mut void,
-        retain:     bool) -> Storage {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn copy_(&self, 
-        src:          &Tensor,
-        non_blocking: bool,
-        to_device:    Option<Device>) -> Tensor {
-        let non_blocking: bool = non_blocking.unwrap_or(false);
-
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn unsafe_tensor_fromth(&self, 
-        th_pointer: *mut void,
+        th_pointer: *mut c_void,
         retain:     bool) -> Tensor {
         
         todo!();
@@ -258,7 +227,7 @@ impl DeprecatedTypeProperties {
     }
     
     pub fn unsafe_storage_fromth(&self, 
-        th_pointer: *mut void,
+        th_pointer: *mut c_void,
         retain:     bool) -> Storage {
         
         todo!();
@@ -269,8 +238,10 @@ impl DeprecatedTypeProperties {
     
     pub fn copy_(&self, 
         src:          &Tensor,
-        non_blocking: bool,
+        non_blocking: Option<bool>,
         to_device:    Option<Device>) -> Tensor {
+
+        let non_blocking: bool = non_blocking.unwrap_or(false);
         
         todo!();
         /*

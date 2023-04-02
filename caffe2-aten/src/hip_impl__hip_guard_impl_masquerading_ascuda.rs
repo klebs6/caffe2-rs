@@ -67,7 +67,7 @@ pub mod hip_guarding_impl_masquerading_as_cuda {
 
     use super::*;
 
-    pub const STATIC_TYPE: DeviceType = DeviceType_CUDA;
+    pub const STATIC_TYPE: DeviceType = DeviceType::Cuda;
 }
 
 impl HIPGuardImplMasqueradingAsCUDA {
@@ -78,7 +78,7 @@ impl HIPGuardImplMasqueradingAsCUDA {
         /*
 
 
-            TORCH_INTERNAL_ASSERT(t == DeviceType_CUDA);
+            TORCH_INTERNAL_ASSERT(t == DeviceType::Cuda);
         */
     }
     
@@ -86,7 +86,7 @@ impl HIPGuardImplMasqueradingAsCUDA {
         
         todo!();
         /*
-            return DeviceType_CUDA;
+            return DeviceType::Cuda;
         */
     }
     
@@ -109,7 +109,7 @@ impl HIPGuardImplMasqueradingAsCUDA {
         /*
             int device;
         C10_HIP_CHECK(hipGetDevice(&device));
-        return Device(DeviceType_CUDA, device);
+        return Device(DeviceType::Cuda, device);
         */
     }
     

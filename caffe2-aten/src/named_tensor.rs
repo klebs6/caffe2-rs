@@ -62,9 +62,9 @@ pub fn internal_set_names_inplace(
           }
           auto* meta = get_named_tensor_meta(impl);
           if (meta == nullptr) {
-            impl->set_named_tensor_meta(make_unique<NamedTensorMeta>(NamedTensorMeta::HasNonWildcard, names));
+            impl->set_named_tensor_meta(make_unique<NamedTensorMetaInterface>(NamedTensorMetaInterface::HasNonWildcard, names));
           } else {
-            meta->set_names(NamedTensorMeta::HasNonWildcard, names);
+            meta->set_names(NamedTensorMetaInterface::HasNonWildcard, names);
           }
             */
     }
@@ -147,25 +147,25 @@ pub fn check_names_valid_for(
         */
 }
 
-pub fn get_named_tensor_meta_mut(impl_: *mut TensorImpl) -> *mut NamedTensorMeta {
+pub fn get_named_tensor_meta_mut(impl_: *mut TensorImpl) -> *mut dyn NamedTensorMetaInterface {
     
     todo!();
         /*
             if (!NamesMode::is_enabled()) {
         return nullptr;
       }
-      return static_cast<NamedTensorMeta*>(impl->named_tensor_meta());
+      return static_cast<dyn NamedTensorMetaInterface*>(impl->named_tensor_meta());
         */
 }
 
-pub fn get_named_tensor_meta(impl_: *const TensorImpl) -> *const NamedTensorMeta {
+pub fn get_named_tensor_meta(impl_: *const TensorImpl) -> *const dyn NamedTensorMetaInterface {
     
     todo!();
         /*
             if (!NamesMode::is_enabled()) {
         return nullptr;
       }
-      return static_cast<const NamedTensorMeta*>(impl->named_tensor_meta());
+      return static_cast<const NamedTensorMetaInterface*>(impl->named_tensor_meta());
         */
 }
 
@@ -191,9 +191,9 @@ pub fn internal_set_names_inplace_with_maybe_dimname_list(
       auto* meta = get_named_tensor_meta(impl);
       if (meta == nullptr) {
         // Constructor is private
-        impl->set_named_tensor_meta(make_unique<NamedTensorMeta>(NamedTensorMeta::HasNonWildcard, *names));
+        impl->set_named_tensor_meta(make_unique<NamedTensorMetaInterface>(NamedTensorMetaInterface::HasNonWildcard, *names));
       } else {
-        meta->set_names(NamedTensorMeta::HasNonWildcard, *names);
+        meta->set_names(NamedTensorMetaInterface::HasNonWildcard, *names);
       }
         */
 }

@@ -307,7 +307,7 @@ pub fn thread_fun(cur_thread_stream: &mut Option<CUDAStream>)  {
     
       if (!is_available()) return;
 
-      InlineEvent<CUDAGuardImpl> event{DeviceType_CUDA};
+      InlineEvent<CUDAGuardImpl> event{DeviceType::Cuda};
       Stream stream = getStreamFromPool();
 
       event.record(stream);
@@ -332,7 +332,7 @@ pub fn thread_fun(cur_thread_stream: &mut Option<CUDAStream>)  {
     
       if (!is_available()) return;
 
-      Event event{DeviceType_CUDA};
+      Event event{DeviceType::Cuda};
       Stream stream = getStreamFromPool();
 
       event.recordOnce(stream);

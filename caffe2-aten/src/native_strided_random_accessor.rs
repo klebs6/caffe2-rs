@@ -11,20 +11,6 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/StridedRandomAccessor.h]
 
-lazy_static!{
-    /*
-    template <typename T>
-    struct DefaultPtrTraits {
-      using PtrType = T*;
-    };
-
-    template <typename T>
-    struct RestrictPtrTraits {
-      using PtrType = T* RESTRICT;
-    };
-    */
-}
-
 type Todo                           = i32;
 pub type ConstStridedRandomAccessor = Todo;
 pub type StridedRandomAccessor      = Todo;

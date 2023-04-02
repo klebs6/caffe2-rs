@@ -51,17 +51,8 @@ impl Argument {
 
         let name: String = name.unwrap_or("");
 
-        let ty: TypePtr = ty.unwrap_or(nullptr);
-
-        let N: Option<i32> = N.unwrap_or(nullopt);
-
-        let default_value: Option<IValue> =
-                 default_value.unwrap_or(nullopt);
-
         let kwarg_only: bool = kwarg_only.unwrap_or(false);
 
-        let alias_info: Option<AliasInfo> =
-                 alias_info.unwrap_or(nullopt);
         todo!();
         /*
 
@@ -190,10 +181,10 @@ impl Argument {
       |   value if old arg has one,
       |
       */
-    pub fn is_backward_compatible_with(&self, 
+    pub fn is_backward_compatible_with<W: Write>(
+        &self, 
         old:     &Argument,
-        why_not: *mut std::io::BufWriter) -> bool {
-        let why_not: *mut std::io::BufWriter = why_not.unwrap_or(nullptr);
+        why_not: &mut W) -> bool {
 
         todo!();
         /*

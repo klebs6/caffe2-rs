@@ -631,7 +631,7 @@ pub fn put_a(
             // See note [Writing Nondeterministic Operations]
       // Nondeterministic when index contains duplicate entries and we do not accumulate
       // If we accumulate on GPU, we use atomicGPUAdd, which is non-deterministic
-      if (!accumulate || (accumulate && self.device().type() == DeviceType_CUDA)) {
+      if (!accumulate || (accumulate && self.device().type() == DeviceType::Cuda)) {
         globalContext().alertNotDeterministic("put_");
       }
 
@@ -719,7 +719,7 @@ pub fn index_put_impl(
         }
       }
 
-      if (self.device().type() == DeviceType_CUDA && (accumulate || globalContext().deterministicAlgorithms())) {
+      if (self.device().type() == DeviceType::Cuda && (accumulate || globalContext().deterministicAlgorithms())) {
           TORCH_CHECK(value.device() == self.device(), "expected device ", self.device(), " but got device ",
           value.device(), " for value tensor");
           index_put_with_sort_stub(self.device().type(), self, indices, value, accumulate, unsafe);
@@ -851,7 +851,7 @@ pub fn index_copy_a(
               "index_copy_(): Number of indices (", numIndices, ") should be equal to source.size(dim) (", source.size(dim), ")");
 
       // See Note [Enabling Deterministic Operations]
-      if (self.device().type() == DeviceType_CUDA && globalContext().deterministicAlgorithms()){
+      if (self.device().type() == DeviceType::Cuda && globalContext().deterministicAlgorithms()){
         TorchList<optional<Tensor>> indices;
         indices.reserve(dim + 1);
         for (const auto i: irange(dim)) {
@@ -1593,7 +1593,7 @@ lazy_static!{
         mut_out.copy_(self);
       }
 
-      if (globalContext().deterministicAlgorithms() && self.device().type() == DeviceType_CUDA && self.dim() == 1) {
+      if (globalContext().deterministicAlgorithms() && self.device().type() == DeviceType::Cuda && self.dim() == 1) {
         TORCH_CHECK(index.dim() == 1 && src.dim() == 1, "index and src should be 1D tensors when self is a 1D tensor, "
           "but their dims are ", index.dim(), " and ", src.dim(), ", respectively");
         TORCH_CHECK(index.numel() == src.numel(), "index and src should have same number of elements for 1D tensors, "

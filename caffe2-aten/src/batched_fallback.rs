@@ -135,8 +135,8 @@ pub fn warn_fallback(
   |
   */
 pub fn batched_tensor_inplace_for_loop_fallback(
-        op:    &OperatorHandle,
-        stack: *mut JitStack)  {
+    op:    &OperatorHandle,
+    stack: *mut JitStack)  {
     
     todo!();
         /*
@@ -342,8 +342,8 @@ pub fn safe_stack(tensors: TensorList) -> Tensor {
   |
   */
 pub fn batched_tensor_for_loop_fallback(
-        op:    &OperatorHandle,
-        stack: *mut JitStack)  {
+    op:    &OperatorHandle,
+    stack: *mut JitStack)  {
     
     todo!();
         /*

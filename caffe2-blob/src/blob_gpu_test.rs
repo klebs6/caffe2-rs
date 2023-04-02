@@ -2,7 +2,7 @@ crate::ix!();
 
 type TensorTypes = (u8, i32, f32);
 
-//#[cfg(test)]
+#[cfg(test)]
 pub mod tensor_gpu_test {
 
     use super::*;
@@ -18,7 +18,7 @@ pub mod tensor_gpu_test {
         test_data_points_to_something::<f32>(&tensor);
     }
 
-    //#[test] 
+    #[test] 
     fn tensor_initialized_empty() {
 
         if !has_cuda_gpu() {
@@ -42,7 +42,7 @@ pub mod tensor_gpu_test {
         test_data_points_to_something_for_all_supported_types(&tensor);
     }
 
-    //#[test] 
+    #[test] 
     fn tensor_initialized_nonempty() {
 
         if !has_cuda_gpu() {
@@ -81,7 +81,7 @@ pub mod tensor_gpu_test {
         test_data_points_to_something_for_all_supported_types(&tensor);
     }
 
-    //#[test] 
+    #[test] 
     fn tensor_alias() {
 
         if !has_cuda_gpu() {
@@ -127,7 +127,7 @@ pub mod tensor_gpu_test {
         tensor_alias_test![u8,i32,f32];
     }
 
-    //#[test] 
+    #[test] 
     fn tensor_alias_can_use_different_shapes() {
 
         if !has_cuda_gpu() {
@@ -190,7 +190,7 @@ pub mod tensor_gpu_test {
         tensor_alias_shape_test![u8,i32,f32];
     }
 
-    //#[test] 
+    #[test] 
     fn no_longer_alias_after_numel_changes() {
 
         if !has_cuda_gpu() {
@@ -325,11 +325,12 @@ macro_rules! expect_throw {
     }
 }
 
-//#[cfg(test)]
+#[cfg(test)]
 pub mod tensor_gpu_death_test {
+
     use super::*;
 
-    //#[test] 
+    #[test] 
     fn cannot_access_data_when_empty() {
 
         if !has_cuda_gpu() {
@@ -352,6 +353,8 @@ pub mod tensor_gpu_death_test {
 #[cfg(test)]
 pub mod tensor_construction {
 
+    use super::*;
+
     #[test] fn reinitialize_tensor_test() {
 
         if !has_cuda_gpu() {
@@ -371,12 +374,12 @@ pub mod tensor_construction {
     }
 }
 
-//#[cfg(test)]
+#[cfg(test)]
 pub mod tensor_test {
 
     use super::*;
 
-    //#[test] 
+    #[test] 
     fn tensor_serialization_multiple_devices() {
 
         todo!();

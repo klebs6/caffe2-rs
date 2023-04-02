@@ -76,6 +76,7 @@ pub use rayon::prelude::*;
 
 pub use half::{f16,bf16};
 pub use crossbeam::queue::SegQueue;
+pub use maybe_owned::MaybeOwned;
 
 pub use byteorder::{
     NativeEndian, 

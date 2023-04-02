@@ -55,7 +55,6 @@ pub struct ITensor                                         { }
 pub struct ITensorDescriptor                               { }
 pub struct ITensorDims                                     { }
 pub struct IValue                                          { }
-pub struct IntrusivePtr<T>                                 { phantom: PhantomData<T>, }
 pub struct LabelType                                       { }
 pub struct List<T>                                         { phantom: PhantomData<T>, }
 pub struct MaxPoolFp320p                                   { }

@@ -3055,7 +3055,7 @@ pub fn linalg_vector_norm_impl(
       // give an infinite result
       auto ord = scalar_ord.toDouble();
 
-      TORCH_CHECK(self.device().type() == DeviceType_CPU || self.device().type() == DeviceType_CUDA,
+      TORCH_CHECK(self.device().type() == DeviceType_CPU || self.device().type() == DeviceType::Cuda,
                   "linalg.vector_norm only supports CPU and CUDA device types, but got: ",
                   self.device().type());
       TORCH_CHECK(self.layout() == Layout::Strided,

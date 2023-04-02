@@ -1,6 +1,5 @@
 crate::ix!();
 
-
 pub struct Int8TensorCPU {
     scale:      f32, // default = 1.0
     zero_point: i32, // default = 0

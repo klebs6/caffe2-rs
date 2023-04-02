@@ -1,7 +1,7 @@
 [workspace]
 members = [
     "caffe2-blob",
-    #"caffe2-aten",
+    "caffe2-aten",
     "caffe2-c10",
     "caffe2-common",
     "caffe2-cfg",

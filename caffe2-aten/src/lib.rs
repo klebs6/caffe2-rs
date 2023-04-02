@@ -91,7 +91,7 @@ x!{autocast_mode}
 //x!{cudnn_types}
 //x!{cudnn_utils}
 //x!{custom_class}
-//x!{deprecated_type_properties}
+x!{deprecated_type_properties}
 //x!{deprecated_type_properties_registry}
 //x!{detail_cpu_guard_impl}
 //x!{detail_cuda_hooks_interface}
@@ -101,7 +101,7 @@ x!{autocast_mode}
 //x!{device_guard}
 //x!{dict}
 //x!{dict_inl}
-//x!{dimname}
+x!{dimname}
 //x!{dispatch}
 //x!{dispatch_backend_fallback_test}
 //x!{dispatch_cpp_signature}
@@ -804,7 +804,7 @@ x!{autocast_mode}
 //x!{qualified_name}
 //x!{quantized_q_tensor_impl}
 //x!{quantized_quantizer}
-//x!{quantizer_base}
+x!{quantizer_base}
 //x!{range}
 //x!{record_function}
 //x!{reduction}
@@ -823,13 +823,13 @@ x!{autocast_mode}
 //x!{templates_register_backend_select}
 //x!{templates_register_dispatch_key}
 //x!{templates_register_schema}
-//x!{templates_tensor_body}
+x!{templates_tensor_body}
 //x!{templates_tensor_methods}
 //x!{templates_xla_type_default}
 //x!{tensor}
 //x!{tensor_geometry}
 //x!{tensor_impl_test}
-//x!{tensor_indexing}
+x!{tensor_indexing}
 //x!{tensor_iterator}
 //x!{tensor_iterator_internal}
 //x!{tensor_meta}
@@ -930,8 +930,8 @@ x!{autocast_mode}
 //x!{tracer_mode}
 //x!{transformation_helper}
 //x!{ty}
-//x!{type_default}
-//x!{unknown}
+x!{type_default}
+x!{unknown}
 //x!{unsafe_fromth}
 //x!{utils}
 //x!{variable_fallback_kernel}

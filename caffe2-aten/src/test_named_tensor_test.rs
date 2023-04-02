@@ -33,8 +33,8 @@ pub fn dimname_from_string(str_: &String) -> Dimname {
 }
 
 pub fn dimnames_equal(
-        names: DimnameList,
-        other: DimnameList) -> bool {
+        names: &[Dimname],
+        other: &[Dimname]) -> bool {
     
     todo!();
         /*
@@ -144,8 +144,8 @@ pub fn dimnames_equal(
 }
 
 pub fn tensornames_unify_from_right(
-        names:       DimnameList,
-        other_names: DimnameList) -> Vec<Dimname> {
+        names:       &[Dimname],
+        other_names: &[Dimname]) -> Vec<Dimname> {
     
     todo!();
         /*
@@ -156,9 +156,9 @@ pub fn tensornames_unify_from_right(
 }
 
 pub fn check_unify(
-        names:       DimnameList,
-        other_names: DimnameList,
-        expected:    DimnameList)  {
+        names:       &[Dimname],
+        other_names: &[Dimname],
+        expected:    &[Dimname])  {
     
     todo!();
         /*
@@ -175,8 +175,8 @@ pub fn check_unify(
 }
 
 pub fn check_unify_error(
-        names:       DimnameList,
-        other_names: DimnameList)  {
+        names:       &[Dimname],
+        other_names: &[Dimname])  {
     
     todo!();
         /*

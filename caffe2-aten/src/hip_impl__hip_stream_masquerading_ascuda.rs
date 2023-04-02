@@ -102,7 +102,7 @@ impl HIPStreamMasqueradingAsCUDA {
         todo!();
         /*
             // Unsafely coerce HIP device into CUDA device
-        return Device(DeviceType_CUDA, stream_.device_index());
+        return Device(DeviceType::Cuda, stream_.device_index());
         */
     }
     

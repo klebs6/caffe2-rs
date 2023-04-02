@@ -37,7 +37,7 @@ impl HIPAllocatorMasqueradingAsCUDA {
         todo!();
         /*
             DataPtr r = allocator_->allocate(size);
-        r.unsafe_set_device(Device(DeviceType_CUDA, r.device().index()));
+        r.unsafe_set_device(Device(DeviceType::Cuda, r.device().index()));
         return r;
         */
     }

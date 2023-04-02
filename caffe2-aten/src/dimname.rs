@@ -8,6 +8,11 @@ lazy_static!{
     */
 }
 
+pub struct Dimname {
+    //TODO: this is a scaffold -- what data does this need?
+
+}
+
 impl fmt::Display for Dimname {
     
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -37,7 +42,7 @@ pub fn check_valid_identifier(name: &String)  {
 
 impl Dimname {
     
-    pub fn is_valid_name(&mut self, name: &String) -> bool {
+    pub fn is_valid_name(&mut self, name: &str) -> bool {
         
         todo!();
         /*

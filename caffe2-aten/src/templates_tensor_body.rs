@@ -2,8 +2,49 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/templates/TensorBody.h]
 
-pub type TensorList = &[Tensor];
-pub type Stream     = Stream;
+pub type DefaultIntrusivePtrTag = i32;
+
+pub struct HookReturnVar<T> {
+    phantomA: PhantomData<T>,
+}
+
+pub struct HookReturnVoid<T> {
+    phantomA: PhantomData<T>,
+}
+
+pub struct TorchautogradNode {}
+
+//TODO:
+pub struct GenericPackedTensorAccessor<T,const N: usize,PtrTraits,Index> {
+    phantomA: PhantomData<T>,
+    phantomB: PhantomData<PtrTraits>,
+    phantomC: PhantomData<Index>,
+}
+
+pub struct PackedTensorAccessor64<T,const N: usize,PtrTraits> {
+    phantomA: PhantomData<T>,
+    phantomB: PhantomData<PtrTraits>,
+}
+
+pub struct PackedTensorAccessor32<T,const N: usize,PtrTraits> {
+    phantomA: PhantomData<T>,
+    phantomB: PhantomData<PtrTraits>,
+}
+
+//TODO:
+pub struct TensorAccessor<T,const N: usize> {
+    phantomA: PhantomData<T>, 
+}
+
+pub struct IntrusivePtr<A,Tag = DefaultIntrusivePtrTag> { 
+    phantomA: PhantomData<A>, 
+    phantomB: PhantomData<Tag>, 
+}
+
+pub struct WeakIntrusivePtr<A,Tag = DefaultIntrusivePtrTag> { 
+    phantomA: PhantomData<A>, 
+    phantomB: PhantomData<Tag>, 
+}
 
 #[inline] pub fn variable_excluded_from_dispatch() -> bool {
     
@@ -53,12 +94,26 @@ pub struct UnsafeBorrow {
   | not associated with any underlying TensorImpl,
   | and special care must be taken to handle this.
   */
-#[derive(Default)]
 pub struct Tensor {
     impl_: IntrusivePtr<TensorImpl,UndefinedTensorImpl>,
 }
 
+impl Clone for Tensor {
+
+    fn clone(&self) -> Self {
+        todo!();
+    }
+}
+
+impl Default for Tensor {
+
+    fn default() -> Self {
+        todo!("can do some form of default initialization");
+    }
+}
+
 impl Tensor {
+
 
     /**
       | Create a Tensor with a +0 reference
@@ -68,14 +123,12 @@ impl Tensor {
       |
       | Intended to support MaybeOwnedTraits<Tensor>.
       */
-    pub fn new(
+    pub fn new_from_unsafe_borrow(
         _0:  UnsafeBorrow,
         rhs: &Tensor) -> Self {
     
         todo!();
         /*
-
-
             : impl_(intrusive_ptr<TensorImpl, UndefinedTensorImpl>::reclaim(rhs.impl_.get()))
         */
     }
@@ -132,8 +185,9 @@ impl Tensor {
         */
     }
     
-    pub fn contiguous(&self, memory_format: MemoryFormat) -> Tensor {
-        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat_Contiguous);
+    pub fn contiguous(&self, memory_format: Option<MemoryFormat>) -> Tensor {
+
+        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat::Contiguous);
 
         todo!();
         /*
@@ -160,28 +214,6 @@ impl Tensor {
         */
     }
 
-    /**
-      | Should be used if *this can reasonably be
-      | expected to be contiguous and performance is
-      | important.
-      |
-      | Compared to contiguous, it saves a reference
-      | count increment/decrement if *this is
-      | already contiguous, at the cost in all cases
-      | of an extra pointer of stack usage, an extra
-      | branch to access, and an extra branch at
-      | destruction time.
-      |
-      */
-    pub fn expect_contiguous(&mut self, memory_format: MemoryFormat) -> MaybeOwned<Tensor> {
-        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat_Contiguous);
-
-        todo!();
-        /*
-        
-        */
-    }
-    
     pub fn is_complex(&self) -> bool {
         
         todo!();
@@ -308,7 +340,7 @@ impl Tensor {
       | a non ref-qualified method is eligible for
       | all situations.
       */
-    pub fn assign_from(&mut self, x: &Tensor) -> &mut Tensor {
+    pub fn assign_from_ref(&mut self, x: &Tensor) -> &mut Tensor {
         
         todo!();
         /*
@@ -377,7 +409,7 @@ impl Tensor {
     /// See get_opt_names in ATen/NamedTensor.h
     /// for docs.
     ///
-    pub fn opt_names(&self) -> Option<DimnameList> {
+    pub fn opt_names(&self) -> Option<&[Dimname]> {
         
         todo!();
         /*
@@ -387,7 +419,7 @@ impl Tensor {
 
     /// See get_names in ATen/NamedTensor.h for docs.
     ///
-    pub fn names(&self) -> DimnameList {
+    pub fn names(&self) -> &[Dimname] {
         
         todo!();
         /*
@@ -403,8 +435,9 @@ impl Tensor {
         */
     }
     
-    pub fn is_contiguous(&self, memory_format: MemoryFormat) -> bool {
-        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat_Contiguous);
+    pub fn is_contiguous(&self, memory_format: Option<MemoryFormat>) -> bool {
+
+        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat::Contiguous);
 
         todo!();
         /*
@@ -420,7 +453,8 @@ impl Tensor {
         */
     }
     
-    pub fn suggest_memory_format(&self, channels_last_strides_exact_match: bool) -> MemoryFormat {
+    pub fn suggest_memory_format(&self, channels_last_strides_exact_match: Option<bool>) -> MemoryFormat 
+    {
         let channels_last_strides_exact_match: bool = channels_last_strides_exact_match.unwrap_or(false);
 
         todo!();
@@ -838,19 +872,19 @@ impl Tensor {
     /// Returns a `Tensor`'s dimension names data
     /// structure
     ///
-    pub fn get_named_tensor_meta(&self) -> *const NamedTensorMeta {
+    pub fn get_named_tensor_meta(&self) -> *const dyn NamedTensorMetaInterface {
         
         todo!();
         /*
-            return static_cast<NamedTensorMeta*>(impl_->named_tensor_meta());
+            return static_cast<NamedTensorMetaInterface*>(impl_->named_tensor_meta());
         */
     }
     
-    pub fn get_named_tensor_meta(&mut self) -> *mut NamedTensorMeta {
+    pub fn get_named_tensor_meta_mut(&mut self) -> *mut dyn NamedTensorMetaInterface {
         
         todo!();
         /*
-            return static_cast<NamedTensorMeta*>(impl_->named_tensor_meta());
+            return static_cast<dyn NamedTensorMetaInterface*>(impl_->named_tensor_meta());
         */
     }
 
@@ -875,7 +909,7 @@ impl Tensor {
         */
     }
     
-    pub fn data_ptr<T>(&self) -> *mut T {
+    pub fn data_ptr_mut<T>(&self) -> *mut T {
     
         todo!();
         /*
@@ -883,15 +917,6 @@ impl Tensor {
         */
     }
 
-    #[deprecated = "Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead."]
-    pub fn data<T>(&self) -> *mut T {
-    
-        todo!();
-        /*
-            return data_ptr<T>();
-        */
-    }
-    
     pub fn item<T>(&self) -> T {
     
         todo!();
@@ -941,7 +966,8 @@ impl Tensor {
       | take a corresponding
       | GenericPackedTensorAccessor as an argument.
       */
-    pub fn generic_packed_accessor<T, const N: usize, PtrTraits = DefaultPtrTraits, Index = i64>(&mut self) -> GenericPackedTensorAccessor<T,N,PtrTraits,Index> {
+    pub fn generic_packed_accessor<T, const N: usize, PtrTraits /* = DefaultPtrTraits */, Index /* = i64 */>(&mut self) 
+        -> GenericPackedTensorAccessor<T,N,PtrTraits,Index> {
     
         todo!();
         /*
@@ -951,7 +977,7 @@ impl Tensor {
         */
     }
     
-    pub fn packed_accessor32<T, const N: usize, PtrTraits = DefaultPtrTraits>(&mut self) -> PackedTensorAccessor32<T,N,PtrTraits> {
+    pub fn packed_accessor32<T, const N: usize, PtrTraits /* = DefaultPtrTraits */>(&mut self) -> PackedTensorAccessor32<T,N,PtrTraits> {
     
         todo!();
         /*
@@ -959,20 +985,11 @@ impl Tensor {
         */
     }
     
-    pub fn packed_accessor64<T, const N: usize, PtrTraits = DefaultPtrTraits>(&mut self) -> PackedTensorAccessor64<T,N,PtrTraits> {
+    pub fn packed_accessor64<T, const N: usize, PtrTraits /* = DefaultPtrTraits */>(&mut self) -> PackedTensorAccessor64<T,N,PtrTraits> {
     
         todo!();
         /*
             return generic_packed_accessor<T,N,PtrTraits,i64>();
-        */
-    }
-
-    #[deprecated = "packed_accessor is deprecated, use packed_accessor32 or packed_accessor64 instead"]
-    pub fn packed_accessor<T, const N: usize, PtrTraits = DefaultPtrTraits, Index = i64>(&mut self) -> GenericPackedTensorAccessor<T,N,PtrTraits,Index> {
-    
-        todo!();
-        /*
-            return generic_packed_accessor<T,N,PtrTraits,Index>();
         */
     }
 
@@ -994,62 +1011,6 @@ impl Tensor {
           Tensor operator[](Scalar index) const;
           Tensor operator[](Tensor index) const;
           Tensor operator[](i64 index) const;
-        */
-    }
-    
-    pub fn index(&self, indices: &[TensorIndex]) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn index(&self, indices: InitializerList<TensorIndex>) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: &[TensorIndex],
-        rhs:     &Tensor) -> &mut Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: &[TensorIndex],
-        v:       &Scalar) -> &mut Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: InitializerList<TensorIndex>,
-        rhs:     &Tensor) -> &mut Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn index_put(&mut self, 
-        indices: InitializerList<TensorIndex>,
-        v:       &Scalar) -> &mut Tensor {
-        
-        todo!();
-        /*
-        
         */
     }
     
@@ -1195,15 +1156,13 @@ impl Tensor {
       |
       */
     pub fn backward(&self, 
-        gradient:     &Tensor,
+        gradient:     Option<&Tensor>,
         retain_graph: Option<bool>,
-        create_graph: bool,
+        create_graph: Option<bool>,
         inputs:       Option<TensorList>)  {
 
-        let gradient:     &Tensor            = gradient.unwrap_or(default);
-        let retain_graph: Option<bool>       = retain_graph.unwrap_or(nullopt);
-        let create_graph: bool               = create_graph.unwrap_or(false);
-        let inputs:       Option<TensorList> = inputs.unwrap_or(nullopt);
+        let gradient:     &Tensor = gradient.unwrap_or(&Tensor::default());
+        let create_graph: bool    = create_graph.unwrap_or(false);
 
         todo!();
         /*
@@ -1383,11 +1342,11 @@ impl Tensor {
       */
     #[inline] pub fn to(&self, 
         type_meta:    TypeMeta,
-        non_blocking: bool,
-        copy_:        bool) -> Tensor {
+        non_blocking: Option<bool>,
+        copy_:        Option<bool>) -> Tensor {
 
         let non_blocking: bool = non_blocking.unwrap_or(false);
-        let copy_: bool = copy_.unwrap_or(false);
+        let copy_:        bool = copy_.unwrap_or(false);
 
         todo!();
         /*
@@ -1395,11 +1354,11 @@ impl Tensor {
         */
     }
     
-    #[inline] pub fn to(&self, 
+    #[inline] pub fn to_with_device(&self, 
         device:       Device,
         type_meta:    TypeMeta,
-        non_blocking: bool,
-        copy_:        bool) -> Tensor {
+        non_blocking: Option<bool>,
+        copy_:        Option<bool>) -> Tensor {
 
         let non_blocking: bool = non_blocking.unwrap_or(false);
         let copy_:        bool = copy_.unwrap_or(false);
@@ -1410,9 +1369,9 @@ impl Tensor {
         */
     }
     
-    pub fn m<F, Args>(&self, 
+    pub fn m<F, Args, R>(&self, 
         func:   F,
-        params: Args) -> Auto {
+        params: Args) -> R {
     
         todo!();
         /*
@@ -1547,7 +1506,7 @@ impl Tensor {
       | v.remove_hook(h);  // removes the hook
       | @endcode
       */
-    pub fn register_hook<T>(&self, hook: T) -> HookReturnVoid<T> {
+    pub fn register_hook_return_void<T>(&self, hook: T) -> HookReturnVoid<T> {
     
         todo!();
         /*
@@ -1555,7 +1514,7 @@ impl Tensor {
         */
     }
     
-    pub fn register_hook<T>(&self, hook: T) -> HookReturnVar<T> {
+    pub fn register_hook_return_var<T>(&self, hook: T) -> HookReturnVar<T> {
     
         todo!();
         /*
@@ -1563,7 +1522,7 @@ impl Tensor {
         */
     }
     
-    pub fn register_hook(&self, hook: fn(_0: &Tensor) -> Tensor) -> u32 {
+    pub fn register_hook_return_u32(&self, hook: fn(_0: &Tensor) -> Tensor) -> u32 {
         
         todo!();
         /*
@@ -1607,14 +1566,6 @@ impl Tensor {
         */
     }
     
-    pub fn data(&self) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
     pub fn version(&self) -> i64 {
         
         todo!();
@@ -1639,19 +1590,8 @@ impl Tensor {
         */
     }
     
-    pub fn backward(&self, 
-        inputs:       TensorList,
-        gradient:     &Option<Tensor>,
-        keep_graph:   Option<bool>,
-        create_graph: bool)  {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    pub fn requires_grad(&self, requires_grad: bool) -> &Tensor {
+    pub fn requires_grad_with(&self, requires_grad: Option<bool>) -> &Tensor {
+
         let requires_grad: bool = requires_grad.unwrap_or(true);
 
         todo!();
@@ -1779,7 +1719,7 @@ pub mod maybe_owned_traits_tensor {
 
 impl MaybeOwnedTraitsTensor {
 
-    pub fn create_borrow(from: &OwnedType) -> BorrowType {
+    pub fn create_borrow(from: &maybe_owned_traits_tensor::OwnedType) -> maybe_owned_traits_tensor::BorrowType {
         
         todo!();
         /*
@@ -1798,8 +1738,8 @@ impl MaybeOwnedTraitsTensor {
     }
     
     pub fn assign_borrow(
-        lhs: &mut BorrowType,
-        rhs: &BorrowType)  {
+        lhs: &mut maybe_owned_traits_tensor::BorrowType,
+        rhs: &maybe_owned_traits_tensor::BorrowType)  {
         
         todo!();
         /*
@@ -1810,7 +1750,7 @@ impl MaybeOwnedTraitsTensor {
         */
     }
     
-    pub fn destroy_borrow(to_destroy: &mut BorrowType)  {
+    pub fn destroy_borrow(to_destroy: &mut maybe_owned_traits_tensor::BorrowType)  {
         
         todo!();
         /*
@@ -1818,7 +1758,7 @@ impl MaybeOwnedTraitsTensor {
         */
     }
     
-    pub fn reference_from_borrow(borrow: &BorrowType) -> &OwnedType {
+    pub fn reference_from_borrow(borrow: &maybe_owned_traits_tensor::BorrowType) -> &maybe_owned_traits_tensor::OwnedType {
         
         todo!();
         /*
@@ -1826,7 +1766,7 @@ impl MaybeOwnedTraitsTensor {
         */
     }
     
-    pub fn pointer_from_borrow(borrow: &BorrowType) -> *const OwnedType {
+    pub fn pointer_from_borrow(borrow: &maybe_owned_traits_tensor::BorrowType) -> *const maybe_owned_traits_tensor::OwnedType {
         
         todo!();
         /*
@@ -1834,7 +1774,7 @@ impl MaybeOwnedTraitsTensor {
         */
     }
     
-    pub fn debug_borrow_is_valid(borrow: &BorrowType) -> bool {
+    pub fn debug_borrow_is_valid(borrow: &maybe_owned_traits_tensor::BorrowType) -> bool {
         
         todo!();
         /*
@@ -1860,7 +1800,7 @@ pub mod exclusively_owned_traits_tensor {
 impl ExclusivelyOwnedTraitsTensor {
 
     
-    pub fn null_repr() -> ReprType {
+    pub fn null_repr() -> exclusively_owned_traits_tensor::ReprType {
         
         todo!();
         /*
@@ -1869,7 +1809,7 @@ impl ExclusivelyOwnedTraitsTensor {
     }
     
     
-    pub fn create_in_place<Args>(args: Args) -> ReprType {
+    pub fn create_in_place<Args>(args: Args) -> exclusively_owned_traits_tensor::ReprType {
     
         todo!();
         /*
@@ -1877,7 +1817,7 @@ impl ExclusivelyOwnedTraitsTensor {
         */
     }
     
-    pub fn move_to_repr(x: Tensor) -> ReprType {
+    pub fn move_to_repr(x: Tensor) -> exclusively_owned_traits_tensor::ReprType {
         
         todo!();
         /*
@@ -1919,7 +1859,7 @@ impl ExclusivelyOwnedTraitsTensor {
         */
     }
     
-    pub fn get_impl(x: &mut ReprType) -> PointerType {
+    pub fn get_impl_mut(x: &mut exclusively_owned_traits_tensor::ReprType) -> exclusively_owned_traits_tensor::PointerType {
         
         todo!();
         /*
@@ -1927,7 +1867,7 @@ impl ExclusivelyOwnedTraitsTensor {
         */
     }
     
-    pub fn get_impl(x: &ReprType) -> ConstPointerType {
+    pub fn get_impl(x: &exclusively_owned_traits_tensor::ReprType) -> exclusively_owned_traits_tensor::ConstPointerType {
         
         todo!();
         /*
@@ -1948,15 +1888,30 @@ impl ExclusivelyOwnedTraitsTensor {
 
 impl Tensor {
     
-    #[inline] pub fn expect_contiguous(&mut self, memory_format: MemoryFormat) -> MaybeOwned<Tensor> {
+    /**
+      | Should be used if *this can reasonably be
+      | expected to be contiguous and performance is
+      | important.
+      |
+      | Compared to contiguous, it saves a reference
+      | count increment/decrement if *this is
+      | already contiguous, at the cost in all cases
+      | of an extra pointer of stack usage, an extra
+      | branch to access, and an extra branch at
+      | destruction time.
+      |
+      */
+    #[inline] pub fn expect_contiguous(&mut self, memory_format: Option<MemoryFormat>) -> MaybeOwned<Tensor> {
+
+        let memory_format: MemoryFormat = memory_format.unwrap_or(MemoryFormat::Contiguous);
         
         todo!();
         /*
-            if (is_contiguous(memory_format)) {
-        return MaybeOwned<Tensor>::borrowed(*this);
-      } else {
-        return MaybeOwned<Tensor>::owned(__dispatch_contiguous(memory_format));
-      }
+        if (is_contiguous(memory_format)) {
+          return MaybeOwned<Tensor>::borrowed(*this);
+        } else {
+          return MaybeOwned<Tensor>::owned(__dispatch_contiguous(memory_format));
+        }
         */
     }
 }

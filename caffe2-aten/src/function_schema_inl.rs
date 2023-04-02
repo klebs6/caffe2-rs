@@ -306,6 +306,23 @@ impl FunctionSchema {
           is_varret());
         */
     }
+    
+    #[inline] pub fn is_subtype_of(&self, 
+        rhs:       &FunctionSchema,
+        as_method: bool,
+        why_not:   *mut std::io::BufWriter) -> bool {
+        
+        todo!();
+        /*
+            usize start = as_method ? 1 : 0;
+      // functions are contravariant in arguments but covariant in returns
+      return isSubtypeOfList(
+                 ArrayRef<Argument>(rhs.arguments()).slice(start),
+                 ArrayRef<Argument>(arguments()).slice(start),
+                 why_not) &&
+          isSubtypeOfList(returns(), rhs.returns(), why_not);
+        */
+    }
 }
 
 /**
@@ -336,22 +353,3 @@ impl FunctionSchema {
         */
 }
 
-impl FunctionSchema {
-    
-    #[inline] pub fn is_subtype_of(&self, 
-        rhs:       &FunctionSchema,
-        as_method: bool,
-        why_not:   *mut std::io::BufWriter) -> bool {
-        
-        todo!();
-        /*
-            usize start = as_method ? 1 : 0;
-      // functions are contravariant in arguments but covariant in returns
-      return isSubtypeOfList(
-                 ArrayRef<Argument>(rhs.arguments()).slice(start),
-                 ArrayRef<Argument>(arguments()).slice(start),
-                 why_not) &&
-          isSubtypeOfList(returns(), rhs.returns(), why_not);
-        */
-    }
-}
