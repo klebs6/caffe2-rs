@@ -2,7 +2,7 @@
 
 This library is based on the flexible Caffe2 C++ project. 
 
-It aims to provide a high performance and highly modular rust environment for deep learning.
+It provides a high performance and modular rust environment for deep learning.
 
 As of July 1, 2023, the codebase is under
 construction: it is ready for interface
@@ -17,7 +17,7 @@ The current bottleneck is in the translation of
 c++ statements into rust. It is possible to do
 this manually. However, it is better to do it
 automatically. Some work is being done in this
-domain, but there are several challenges to be
+domain, however there are several challenges to be
 overcome.
 
 For more information, see `chomper`:
@@ -37,13 +37,11 @@ enable name resolution and type inference during
 transpilation (not to mention several performance
 wins).
 
-This productionizing of the transpiler will
-provide a *massive* speedup for the transpilation
-work. Subsequently caffe2-rs development will be free to progress.
+This work will provide a *massive* speedup for the translation. 
+Subsequently, caffe2-rs development will be free to progress.
 
 If there are developers out there who would like to contribute to the c++ to rust transpiler development track, I would love to hear from you.
-Please feel free to reach out. 
-I am sure the rust ecosystem will be grateful. 
+Please feel free to reach out. I am sure the rust ecosystem will be grateful. 
 C++ to Rust transpilation is a major bottleneck for many projects. 
 
 ## Acknowledgments
