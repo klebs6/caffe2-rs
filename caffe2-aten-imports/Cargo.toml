@@ -1,0 +1,10 @@
+[build-dependencies]
+scan-crate-for-typedefs = "0.8.0"
+[dependencies.caffe2-derive]
+path = "../caffe2-derive"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[package]
+edition = "2021"
+name = "caffe2-aten-imports"
+version = "0.1.0"

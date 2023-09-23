@@ -421,7 +421,7 @@ impl TensorOptions {
 
     /// legacy function to support ScalarType
     ///
-    pub fn dtype_with_scalartype(&self, dtype: Option<ScalarType>) -> TensorOptions {
+    pub fn dtype_with_scalartype<'a>(&self, dtype: Option<ScalarType>) -> TensorOptions {
         
         todo!();
         /*

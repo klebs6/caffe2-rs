@@ -39,7 +39,7 @@ impl Default for TensorFiller {
 
 impl TensorFiller {
 
-    #[inline] pub fn fill<Type, Context>(
+    #[inline] pub fn fill<'a,Type, Context>(
         &mut self, 
         tensor:  *mut Tensor,
         context: *mut Context) 
@@ -84,7 +84,7 @@ impl TensorFiller {
         */
     }
     
-    #[inline] pub fn dist(&mut self, dist: FillerDistribution) -> &mut TensorFiller {
+    #[inline] pub fn dist<'a>(&mut self, dist: FillerDistribution) -> &'a mut TensorFiller {
         
         todo!();
         /*
@@ -93,7 +93,7 @@ impl TensorFiller {
         */
     }
 
-    #[inline] pub fn min<Type>(&mut self, min: Type) -> &mut TensorFiller {
+    #[inline] pub fn min<'a,Type>(&mut self, min: Type) -> &'a mut TensorFiller {
         todo!();
         /*
             min_ = (double)min;
@@ -101,7 +101,7 @@ impl TensorFiller {
         */
     }
 
-    #[inline] pub fn max<Type>(&mut self, max: Type) -> &mut TensorFiller {
+    #[inline] pub fn max<'a,Type>(&mut self, max: Type) -> &'a mut TensorFiller {
         todo!();
         /*
             max_ = (double)max;
@@ -109,7 +109,7 @@ impl TensorFiller {
         */
     }
 
-    #[inline] pub fn fixed_sum<Type>(&mut self, fixed_sum: Type) -> &mut TensorFiller {
+    #[inline] pub fn fixed_sum<'a,Type>(&mut self, fixed_sum: Type) -> &'a mut TensorFiller {
         todo!();
         /*
             dist_ = FD_FIXEDSUM;
@@ -125,7 +125,7 @@ impl TensorFiller {
       | We try to pad least one index per batch
       | unless the total_length is 0
       */
-    #[inline] pub fn sparse_lengths<Type>(&mut self, total_length: Type) -> &mut TensorFiller {
+    #[inline] pub fn sparse_lengths<'a,Type>(&mut self, total_length: Type) -> &'a mut TensorFiller {
         todo!();
         /*
             return FixedSum(total_length)
@@ -139,7 +139,7 @@ impl TensorFiller {
       | vector for sparse features
       |
       */
-    #[inline] pub fn sparse_segments<Type>(&mut self, max_segment: Type) -> &mut TensorFiller {
+    #[inline] pub fn sparse_segments<'a,Type>(&mut self, max_segment: Type) -> &'a mut TensorFiller {
         todo!();
         /*
             CAFFE_ENFORCE(dist_ != FD_FIXEDSUM);
@@ -147,7 +147,7 @@ impl TensorFiller {
         */
     }
     
-    #[inline] pub fn shape(&mut self, shape: &Vec<i64>) -> &mut TensorFiller {
+    #[inline] pub fn shape<'a>(&mut self, shape: &Vec<i64>) -> &'a mut TensorFiller {
         
         todo!();
         /*

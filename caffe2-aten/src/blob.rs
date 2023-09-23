@@ -45,6 +45,7 @@ impl Default for Blob {
 }
 
 impl Drop for Blob {
+
     fn drop(&mut self) {
         todo!();
         /*

@@ -109,62 +109,57 @@ register_cpu_operator!{
     UnaryElementwiseOp<NumericTypes, CPUContext, SignFunctor<CPUContext>>
 }
 
-pub mod srl_helper {
+#[inline] pub fn srl_helper_sum2one<T>(x: *const T, y: *mut T, n: usize) {
+    todo!();
+    /*
+        *y = ConstEigenArrayMap<T>(x, n, 1).sum();
+    */
+}
 
-    use super::*;
-
-    #[inline] pub fn sum2one<T>(x: *const T, y: *mut T, n: usize) {
-        todo!();
-        /*
-            *y = ConstEigenArrayMap<T>(x, n, 1).sum();
-        */
-    }
-
-    #[inline] pub fn run_with_broadcast_front<T>(
-        x: *const T,
-        y: *mut T,
-        pre: usize,
-        n: usize,
-        context: *mut CPUContext) 
-    {
-        todo!();
-        /*
-            EigenArrayMap<T>(y, n, 1) = ConstEigenArrayMap<T>(x, n, pre).rowwise().sum();
-        */
-    }
+#[inline] pub fn srl_helper_run_with_broadcast_front<T>(
+    x: *const T,
+    y: *mut T,
+    pre: usize,
+    n: usize,
+    context: *mut CPUContext) 
+{
+    todo!();
+    /*
+        EigenArrayMap<T>(y, n, 1) = ConstEigenArrayMap<T>(x, n, pre).rowwise().sum();
+    */
+}
 
 
-    #[inline] pub fn run_with_broadcast_back<T>(
-        x:       *const T,
-        y:       *mut T,
-        post:    usize,
-        n:       usize,
-        context: *mut CPUContext) 
-    {
-        todo!();
-        /*
-            EigenArrayMap<T>(y, 1, n) = ConstEigenArrayMap<T>(x, post, n).colwise().sum();
-        */
-    }
+#[inline] pub fn srl_helper_run_with_broadcast_back<T>(
+    x:       *const T,
+    y:       *mut T,
+    post:    usize,
+    n:       usize,
+    context: *mut CPUContext) 
+{
+    todo!();
+    /*
+        EigenArrayMap<T>(y, 1, n) = ConstEigenArrayMap<T>(x, post, n).colwise().sum();
+    */
+}
 
-    #[inline] pub fn run_with_broadcast2<T>(
-        a:        *const T,
-        y:        *mut T,
-        pre:      usize,
-        n:        usize,
-        post:     usize,
-        context:  *mut CPUContext) 
-    {
-        todo!();
-        /*
-            for (auto i = 0U; i < n; ++i) {
-            y[i] = 0;
-            for (auto j = 0U; j < pre; ++j) {
-              for (auto k = 0U; k < post; ++k) {
-                y[i] += a[(j * n + i) * post + k];
-              }
-            }
+#[inline] pub fn srl_helper_run_with_broadcast2<T>(
+    a:        *const T,
+    y:        *mut T,
+    pre:      usize,
+    n:        usize,
+    post:     usize,
+    context:  *mut CPUContext) 
+{
+    todo!();
+    /*
+        for (auto i = 0U; i < n; ++i) {
+        y[i] = 0;
+        for (auto j = 0U; j < pre; ++j) {
+          for (auto k = 0U; k < post; ++k) {
+            y[i] += a[(j * n + i) * post + k];
           }
-        */
-    }
+        }
+      }
+    */
 }

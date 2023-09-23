@@ -186,10 +186,10 @@ impl<T> PredictorTest<T> {
     todo!();
     /*
       auto inputData = randomTensor({1, 4}, ctx_.get());
-      Predictor::TensorList input;
+      Predictor::&[Tensor] input;
       auto tensor = BlobGetMutableTensor(inputData.get(), CPU);
       input.emplace_back(tensor->Alias());
-      Predictor::TensorList output;
+      Predictor::&[Tensor] output;
       (*p_)(input, &output);
       EXPECT_EQ(output.size(), 1);
       EXPECT_EQ(output.front().sizes().size(), 2);
@@ -207,7 +207,7 @@ impl<T> PredictorTest<T> {
       auto tensor = BlobGetMutableTensor(inputData.get(), CPU);
       input.emplace("data", tensor->Alias());
 
-      Predictor::TensorList output;
+      Predictor::&[Tensor] output;
       (*p_)(input, &output);
       EXPECT_EQ(output.size(), 1);
       EXPECT_EQ(output.front().sizes().size(), 2);

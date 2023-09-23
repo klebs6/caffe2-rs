@@ -32,13 +32,13 @@ please format your response in the Markdown file format.
 
 here are the tokens:
 C10OperatorWrapper
-TensorList
+&[Tensor]
 call_kernel
 create_c10operator_wrapper
 define_registry
 run_on_device
 CallCaffe2OpFunc
-TensorList
+&[Tensor]
 call_caffe2_op
 call_caffe2_op_from_c10
 call_caffe2_op_from_c10_default_schema

@@ -56,7 +56,7 @@ crate::ix!();
   | Common methods for all generators
   |
   */
-pub trait GeneratorImplInterface:
+pub trait GeneratorInterface:
 SetCurrentSeed
 + CurrentSeed
 + Seed

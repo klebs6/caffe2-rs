@@ -1,0 +1,91 @@
+#!/usr/bin/env raku
+
+use File::Find;
+use Data::Dump::Tree;
+
+sub scan-directory($directory) {
+
+    #say "scanning directory $directory";
+
+    my $file-count = 0;
+    my $total-lines = 0;
+
+    my @rust-files = find(
+        dir       => $directory,
+        name      => /.*\.rs/,
+        type      => 'file',
+    );
+
+    for @rust-files {
+
+        # Skip the file if its name is "lib.rs" or "imports.rs"
+        next if .basename ~~ any('lib.rs', 'imports.rs');
+
+        #say "   processing file: $_";
+
+        # Increment the file count
+        $file-count++;
+
+        # Read the file and count its lines
+        my $line-count = .IO.slurp.lines.elems;
+        $total-lines += $line-count;
+    }
+
+    return ($file-count, $total-lines);
+}
+
+sub rank-remaining {
+
+    my @all = dir(".").list.grep({ 
+
+        my  $aten = $_ ~~ /caffe2\-aten/;
+        my  $qnnp = $_ ~~ /caffe2\-qnnpack/;
+        my $sobol = $_ ~~ /caffe2\-aten\-sobol/;
+
+        ($aten.Bool || $qnnp.Bool) && !$sobol.Bool
+    });
+
+    my @done = [
+        "caffe2-aten-sobol",
+    ];
+
+    my $set1 = set(@all);
+    my $set2 = set(@done);
+
+    my $difference = $set1 (-) $set2; # Set difference
+
+    my @remaining = $difference.keys;
+
+    #my @these = @done;
+    my @these = @remaining;
+
+    my @results;
+
+    for @these -> $crate {
+
+        my $dir = $crate ~ "/src/";
+
+        my ($file-count, $total-lines) = scan-directory($dir);
+
+        if $file-count > 0 {
+            if $total-lines.Num > 10000 {
+                @results.push: { :$dir, :$file-count, :$total-lines };
+            }
+        }
+
+        # Output directory info (Optional)
+        #say "Directory: $dir";
+        #say "  Total files not named 'lib.rs' or 'imports.rs': $file-count";
+        #say "  Total lines in those files: $total-lines";
+    }
+
+    my @sorted-by-lines = @results.sort({ -$_.<total-lines> });
+
+    ddt @sorted-by-lines, :!color;
+
+    for @sorted-by-lines -> $item {
+        say $item<dir>.split("/")[0];
+    }
+}
+
+rank-remaining();

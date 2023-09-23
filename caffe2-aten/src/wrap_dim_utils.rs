@@ -27,12 +27,12 @@ crate::ix!();
 
 #[inline] pub fn maybe_wrap_dim_with_tensor_list(
     dim:     i64,
-    tensors: TensorList) -> i64 {
+    tensors: &[Tensor]) -> i64 {
     
     todo!();
         /*
             if (tensors.size() == 0) {
-        // can't wrap empty TensorList; rely on underlying implementation to throw error if necessary.
+        // can't wrap empty &[Tensor]; rely on underlying implementation to throw error if necessary.
         return dim;
       }
       return maybe_wrap_dim(dim, tensors[0].dim());
@@ -133,7 +133,7 @@ crate::ix!();
 
 #[inline] pub fn legacy_cat_wrap_dim_with_tensors(
     dim:     i64,
-    tensors: TensorList) -> i64 {
+    tensors: &[Tensor]) -> i64 {
     
     todo!();
         /*

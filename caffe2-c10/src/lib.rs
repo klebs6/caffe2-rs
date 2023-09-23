@@ -4,7 +4,7 @@
 #![feature(const_mut_refs)]
 #![feature(adt_const_params)]
 #![feature(const_for)]
-#![feature(const_cmp)]
+//#![feature(const_cmp)]
 #![feature(const_trait_impl)]
 #![feature(derive_const)]
 

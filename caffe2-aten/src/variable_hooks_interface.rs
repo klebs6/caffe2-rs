@@ -157,7 +157,7 @@ pub trait Backward {
     
     fn backward(&self, 
         _0: &Tensor,
-        _1: TensorList,
+        _1: &[Tensor],
         _2: &Option<Tensor>,
         _3: Option<bool>,
         _4: bool);

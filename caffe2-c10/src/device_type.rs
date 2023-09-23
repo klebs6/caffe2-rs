@@ -14,7 +14,7 @@ crate::ix!();
 //-------------------------------------------[.cpp/pytorch/c10/core/DeviceType.h]
 
 #[repr(i8)]
-#[derive(Default,PartialEq,Eq)]
+#[derive(ConstParamTy,Default,PartialEq,Eq)]
 pub enum DeviceType {
 
     #[default]

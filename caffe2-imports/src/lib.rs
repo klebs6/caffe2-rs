@@ -143,6 +143,14 @@ pub type miopenTensorDescriptor_t     = Unknown;
 pub type miopenRNNDescriptor_t        = Unknown;
 pub type miopenActivationDescriptor_t = Unknown;
 
+pub type MiOpenDataType             = miopenDataType_t;
+pub type MiOpenHalf                 = miopenHalf;
+pub type MiOpenHandle               = miopenHandle_t;
+pub type MiOpenStatus               = miopenStatus_t;
+pub type MiOpenTensorDescriptor     = miopenTensorDescriptor_t;
+pub type MiOpenRNNDescriptor        = miopenRNNDescriptor_t;
+pub type MiOpenActivationDescriptor = miopenActivationDescriptor_t;
+
 pub use opencv::core as cv;
 pub use core::cmp::Ordering;
 pub use zmq_sys::zmq_msg_t;

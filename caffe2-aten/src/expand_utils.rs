@@ -97,9 +97,9 @@ impl InferExpandGeometryResult<Container> {
   | a temporary resulting from a function call, but
   | it is still possible to make a mistake.
   */
-#[inline] pub fn expand_inplace(
+#[inline] pub fn expand_inplace<'a>(
     tensor:    &Tensor,
-    to_expand: &Tensor) -> MaybeOwned<Tensor> {
+    to_expand: &Tensor) -> MaybeOwned<'a,Tensor> {
     
     todo!();
         /*
@@ -110,10 +110,10 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_inplace_with_api_name(
+#[inline] pub fn expand_inplace_with_api_name<'a>(
     tensor:    &Tensor,
     to_expand: &Tensor,
-    api_name:  *const u8) -> MaybeOwned<Tensor> {
+    api_name:  *const u8) -> MaybeOwned<'a,Tensor> {
     
     todo!();
         /*
@@ -122,10 +122,10 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_inplace2(
+#[inline] pub fn expand_inplace2<'a>(
     tensor:     &Tensor,
     to_expand1: &Tensor,
-    to_expand2: &Tensor) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+    to_expand2: &Tensor) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
     
     todo!();
         /*
@@ -141,11 +141,11 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_inplace2_with_api_name(
+#[inline] pub fn expand_inplace2_with_api_name<'a>(
     tensor:     &Tensor,
     to_expand1: &Tensor,
     to_expand2: &Tensor,
-    api_name:   *const u8) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+    api_name:   *const u8) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
     
     todo!();
         /*
@@ -155,9 +155,9 @@ impl InferExpandGeometryResult<Container> {
 }
 
 // See NOTE [ ExpandUtils Borrowing ] above for `MaybeOwned` explanation.
-#[inline] pub fn expand_outplace2(
+#[inline] pub fn expand_outplace2<'a>(
         to_expand1: &Tensor,
-        to_expand2: &Tensor) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+        to_expand2: &Tensor) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
     
     todo!();
         /*
@@ -174,10 +174,10 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_outplace_with_api_name(
+#[inline] pub fn expand_outplace_with_api_name<'a>(
     to_expand1: &Tensor,
     to_expand2: &Tensor,
-    api_name:   *const u8) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+    api_name:   *const u8) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
 
     todo!();
         /*
@@ -186,10 +186,10 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_outplace3(
+#[inline] pub fn expand_outplace3<'a>(
     to_expand1: &Tensor,
     to_expand2: &Tensor,
-    to_expand3: &Tensor) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+    to_expand3: &Tensor) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
 
     todo!();
         /*
@@ -209,11 +209,11 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_outplace3_with_api_name(
+#[inline] pub fn expand_outplace3_with_api_name<'a>(
     to_expand1: &Tensor,
     to_expand2: &Tensor,
     to_expand3: &Tensor,
-    api_name:   *const u8) -> (MaybeOwned<Tensor>,MaybeOwned<Tensor>,MaybeOwned<Tensor>) {
+    api_name:   *const u8) -> (MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>,MaybeOwned<'a,Tensor>) {
     
     todo!();
         /*
@@ -222,9 +222,9 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_size(
+#[inline] pub fn expand_size<'a>(
     to_expand: &Tensor,
-    sizes:     &[i32]) -> MaybeOwned<Tensor> {
+    sizes:     &[i32]) -> MaybeOwned<'a,Tensor> {
     
     todo!();
         /*
@@ -236,10 +236,10 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_size_with_api_name(
+#[inline] pub fn expand_size_with_api_name<'a>(
         to_expand: &Tensor,
         sizes:     &[i32],
-        api_name:  *const u8) -> MaybeOwned<Tensor> {
+        api_name:  *const u8) -> MaybeOwned<'a,Tensor> {
     
     todo!();
         /*
@@ -248,7 +248,7 @@ impl InferExpandGeometryResult<Container> {
         */
 }
 
-#[inline] pub fn expand_outplace(to_expand: TensorList) -> Vec<Tensor> {
+#[inline] pub fn expand_outplace(to_expand: &[Tensor]) -> Vec<Tensor> {
     
     todo!();
         /*

@@ -20,11 +20,6 @@ pub struct IfOp<Context> {
     else_net: Box<NetBase>,
 }
 
-register_cpu_operator!{
-    If, 
-    IfOp<CPUContext>
-}
-
 num_inputs!{If, (1,INT_MAX)}
 
 num_outputs!{If, (0,INT_MAX)}
@@ -43,6 +38,11 @@ allow_inplace!{
     |input: i32, output: i32| -> bool {
         true
     }
+}
+
+register_cpu_operator!{
+    If, 
+    IfOp<CPUContext>
 }
 
 register_cuda_operator!{

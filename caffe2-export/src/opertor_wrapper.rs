@@ -36,7 +36,7 @@ pub struct C10OperatorWrapper<Context> {
     /**
       | has_preallocated_outputs_ is true iff the
       | operator schema has a last argument that
-      | is a TensorList and has a name equal to
+      | is a &[Tensor] and has a name equal to
       | with the name equal to
       | detail::PREALLOCATED_OUTPUT_ARGNAME. This
       | argument is then used to pass in
@@ -128,7 +128,7 @@ impl<Context> C10OperatorWrapper<Context> {
                     OptionalType::create(ListType::ofTensors())),
                 "Error in caffe2->c10 wrapper: Operator schema has a parameter named ",
                 detail::PREALLOCATED_OUTPUT_ARGNAME,
-                ", but it's not of type TensorList?");
+                ", but it's not of type &[Tensor]?");
             stack_.emplace_back(preallocated_outputs_());
 
           } else if (argument.type()->isSubtypeOf(TensorType::get())) {
@@ -147,7 +147,7 @@ impl<Context> C10OperatorWrapper<Context> {
           } else if (argument.type()->isSubtypeOf(ListType::ofTensors())) {
             AT_ASSERTM(
                 input_tensor_index == 0,
-                "Error in caffe2->c10 wrapper: Schema can only have either one or more Tensor inputs or one TensorList input.");
+                "Error in caffe2->c10 wrapper: Schema can only have either one or more Tensor inputs or one &[Tensor] input.");
             stack_.emplace_back(array_inputs_());
             input_tensor_index = InputSize();
 

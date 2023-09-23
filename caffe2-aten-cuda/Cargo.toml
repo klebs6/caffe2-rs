@@ -1,0 +1,14 @@
+[dependencies.caffe2-aten-imports]
+path = "../caffe2-aten-imports"
+[dependencies.caffe2-aten-tensor]
+path = "../caffe2-aten-tensor"
+[dependencies.caffe2-c10]
+path = "../caffe2-c10"
+[dependencies.caffe2-derive]
+path = "../caffe2-derive"
+[dependencies.caffe2-imports]
+path = "../caffe2-imports"
+[package]
+edition = "2021"
+name = "caffe2-aten-cuda"
+version = "0.1.0"

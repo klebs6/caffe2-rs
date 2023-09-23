@@ -14,7 +14,7 @@ a serialized `Net`. The `Predictor` struct serves
 as the main interface for loading the network and
 making predictions, and supports different ways of
 passing input and output data, such as
-`TensorList` and `TensorMap`. The crate also
+`&[Tensor]` and `TensorMap`. The crate also
 includes utilities for profiling, benchmarking,
 and data filling, as well as a variety of types
 and structs for managing and manipulating data and

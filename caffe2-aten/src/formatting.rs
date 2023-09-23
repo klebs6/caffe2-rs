@@ -29,12 +29,12 @@ impl fmt::Display for &mut Backend {
   | inside scope
   |
   */
-pub struct FormatGuard {
-    out:   &mut std::io::BufWriter,
+pub struct FormatGuard<'a> {
+    out:   &'a mut std::io::BufWriter,
     saved: ios,
 }
 
-impl FormatGuard {
+impl<'a> FormatGuard<'a> {
     
     pub fn new(out: &mut std::io::BufWriter) -> Self {
     
@@ -48,7 +48,8 @@ impl FormatGuard {
     }
 }
 
-impl Drop for FormatGuard {
+impl<'a> Drop for FormatGuard<'a> {
+
     fn drop(&mut self) {
         todo!();
         /*
@@ -57,7 +58,7 @@ impl Drop for FormatGuard {
     }
 }
 
-impl fmt::Display for &mut DeprecatedTypeProperties {
+impl<'a> fmt::Display for &mut DeprecatedTypeProperties<'a> {
     
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         todo!();
@@ -288,10 +289,10 @@ pub fn print_tensor(
         */
 }
 
-pub fn print(
+pub fn print<'a>(
         stream:   &mut std::io::BufWriter,
         tensor:   &Tensor,
-        linesize: i64) -> &mut std::io::BufWriter {
+        linesize: i64) -> &'a mut std::io::BufWriter {
     
     todo!();
         /*

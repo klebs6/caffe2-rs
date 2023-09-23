@@ -58,7 +58,7 @@ impl<'a,T> Default for MatrixRef<'a,T> {
 
 impl<'a,T> Index<usize> for MatrixRef<'a,T> {
 
-    type Output = &[T];
+    type Output = &'a [T];
     
     #[inline] fn index(&self, index: usize) -> &Self::Output {
         todo!();

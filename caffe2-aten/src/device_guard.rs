@@ -38,12 +38,12 @@ crate::ix!();
 }
 
 /**
-  | Return the Device of a TensorList, if the list
+  | Return the Device of a &[Tensor], if the list
   | is non-empty and the first Tensor is defined.
   | (This function implicitly assumes that all
   | tensors in the list have the same device.)
   */
-#[inline] pub fn device_of_tensor_list(t: TensorList) -> Option<Device> {
+#[inline] pub fn device_of_tensor_list(t: &[Tensor]) -> Option<Device> {
     
     todo!();
         /*

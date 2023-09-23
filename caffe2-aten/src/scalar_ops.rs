@@ -82,9 +82,9 @@ crate::ix!();
   | TensorIterator for now.
   |
   */
-pub fn scalar_fill(
+pub fn scalar_fill<'a>(
     self_: &mut Tensor,
-    value: &Scalar) -> &mut Tensor {
+    value: &Scalar) -> &'a mut Tensor {
     
     todo!();
         /*

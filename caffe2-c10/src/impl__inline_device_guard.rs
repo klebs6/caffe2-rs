@@ -386,7 +386,7 @@ impl<T> InlineOptionalDeviceGuard<T> {
     }
 
     /*
-      | TODO: Consider readding Tensor and TensorList
+      | TODO: Consider readding Tensor and &[Tensor]
       | constructors here, when Tensor moves to c10.
       | (These are only valid on OptionalDeviceGuard,
       | because a Tensor may be undefined, in which

@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/custom_class.cpp]
 
-pub fn custom_classes() -> &mut HashMap<String,ClassTypePtr> {
+pub fn custom_classes<'a>() -> &'a mut HashMap<String,ClassTypePtr> {
     
     todo!();
         /*
@@ -46,7 +46,7 @@ pub fn is_custom_class(v: &IValue) -> bool {
         */
 }
 
-pub fn custom_class_methods() -> &mut Vec<Box<JitFunction>> {
+pub fn custom_class_methods<'a>() -> &'a mut Vec<Box<JitFunction>> {
     
     todo!();
         /*

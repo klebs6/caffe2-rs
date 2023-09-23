@@ -48,10 +48,10 @@ pub type Operation = fn(_0: *mut Stack) -> ();
         */
 }
 
-#[inline] pub fn peek_b(
+#[inline] pub fn peek_b<'a>(
         stack: *mut Stack,
         i:     usize,
-        N:     usize) -> &mut IValue {
+        N:     usize) -> &'a mut IValue {
     
     todo!();
         /*
@@ -70,10 +70,10 @@ pub type Operation = fn(_0: *mut Stack) -> ();
         */
 }
 
-#[inline] pub fn peek_d(
+#[inline] pub fn peek_d<'a>(
     stack: *const Stack,
     i:     usize,
-    N:     usize) -> &IValue {
+    N:     usize) -> &'a IValue {
 
     todo!();
         /*
@@ -111,9 +111,9 @@ pub type Operation = fn(_0: *mut Stack) -> ();
 }
 
 
-#[inline] pub fn last_b(
+#[inline] pub fn last_b<'a>(
         stack: *const Stack,
-        N:     usize) -> &[IValue] {
+        N:     usize) -> &'a [IValue] {
     
     todo!();
         /*

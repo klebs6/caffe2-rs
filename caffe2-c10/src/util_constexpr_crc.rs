@@ -2,8 +2,8 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/c10/util/ConstexprCrc.h]
 
-#[derive(Eq,PartialOrd,Ord)]
-#[derive_const(PartialEq)]
+#[derive(Eq,PartialEq,PartialOrd,Ord)]
+//#[derive_const(PartialEq)]
 pub struct Crc64 {
     id_wrapper: u64,
 }

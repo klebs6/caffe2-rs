@@ -150,7 +150,7 @@ impl<T: PrimInt, const ReluFused: bool> ConvDNNLowPOp<T, ReluFused> {
         */
     }
 
-    #[inline] pub fn acc16(&self) -> bool {
+    #[inline] pub fn acc16<'a>(&self) -> bool {
         
         todo!();
         /*
@@ -158,7 +158,7 @@ impl<T: PrimInt, const ReluFused: bool> ConvDNNLowPOp<T, ReluFused> {
         */
     }
     
-    #[inline] pub fn filter_quantization_params(&mut self, group_id: i32) -> &mut TensorQuantizationParams {
+    #[inline] pub fn filter_quantization_params(&mut self, group_id: i32) -> &'a mut TensorQuantizationParams {
         
         todo!();
         /*

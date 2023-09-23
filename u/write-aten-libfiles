@@ -1,0 +1,105 @@
+#!/usr/bin/env raku
+
+use File::Find;
+
+my @crates = <
+caffe2-aten-adaptive
+caffe2-aten-ao
+caffe2-aten-benchmarks
+caffe2-aten-boxing
+caffe2-aten-cpu
+caffe2-aten-cpuvec256
+caffe2-aten-cuda
+caffe2-aten-cudnn
+caffe2-aten-dispatch
+caffe2-aten-hip
+caffe2-aten-metal
+caffe2-aten-miopen
+caffe2-aten-mkl
+caffe2-aten-mkldnn
+caffe2-aten-native
+caffe2-aten-nnapi
+caffe2-aten-op-registration
+caffe2-aten-qnnpack
+caffe2-aten-qnnpack-bench
+caffe2-aten-qnnpack-q8avgpool
+caffe2-aten-qnnpack-q8conv
+caffe2-aten-qnnpack-q8dwconv
+caffe2-aten-qnnpack-q8gavgpool
+caffe2-aten-qnnpack-q8gemm
+caffe2-aten-qnnpack-q8vadd
+caffe2-aten-qnnpack-requantization
+caffe2-aten-qnnpack-sgemm
+caffe2-aten-qnnpack-test
+caffe2-aten-qnnpack-u8clamp
+caffe2-aten-qnnpack-u8lut
+caffe2-aten-qnnpack-u8maxpool
+caffe2-aten-qnnpack-u8rmax
+caffe2-aten-qnnpack-x8lut
+caffe2-aten-qnnpack-x8zip
+caffe2-aten-quantized
+caffe2-aten-quantized-cpu
+caffe2-aten-sparse
+caffe2-aten-templates
+caffe2-aten-tensor
+caffe2-aten-test
+caffe2-aten-th
+caffe2-aten-upsample
+caffe2-aten-vulkan
+caffe2-aten-xnnpack
+>;
+
+sub write-libfile($crate) {
+    my $srcdir = $crate ~ "/src/";
+    my $libfile = $srcdir ~ "/lib.rs";
+    my @sources = find(dir => $srcdir).grep({$_ !~~ /lib.rs/ and $_ !~~ /imports.rs/});
+
+    my @libfile-lines = $libfile.IO.slurp.lines;
+
+    my @libfile-non-export-lines = @libfile-lines.grep({
+        $_ !~~ /'x!'/
+    });
+
+    my @old-libfile-exports = @libfile-lines.grep({
+        $_ ~~ /^'x!'/
+    }).map({
+        .chomp
+    });
+
+    my @new-libfile-exports = @sources.map({
+        "x!\{" ~ $_.basename.split(".")[0] ~ "\}"
+    });
+
+    my $new-libfile-preamble = @libfile-non-export-lines.join("\n");
+    my $new-libfile-postamble = @new-libfile-exports.join("\n");
+    my $new-libfile = $new-libfile-preamble.chomp ~ "\n\n" ~ $new-libfile-postamble;
+
+    say "-------------------------";
+    say $crate;
+    say $new-libfile;
+    $libfile.IO.spurt: $new-libfile;
+}
+
+sub write-importsfile($crate) {
+    my $srcdir = $crate ~ "/src/";
+    my $importsfile = $srcdir ~ "/imports.rs";
+
+    my @importsfile-lines = $importsfile.IO.slurp.lines.grep({
+        $_ !~~ regex {^ \s* $ }
+    });
+
+    my $new-importsfile = @importsfile-lines.join("\n");
+
+    say $new-importsfile;
+
+    $importsfile.IO.spurt: $new-importsfile;
+}
+
+sub MAIN(:$write) {
+    if $write {
+        for @crates -> $crate {
+            write-libfile($crate);
+            write-importsfile($crate);
+        }
+    }
+}

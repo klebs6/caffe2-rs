@@ -20,7 +20,7 @@ the following key components:
 - `C10OperatorWrapper`: A Rust struct that wraps
   a Caffe2 operator.
 
-- `TensorList`: A Rust struct that represents
+- `&[Tensor]`: A Rust struct that represents
   a list of tensors.
 
 - `call_kernel`: A Rust function that calls the
@@ -46,12 +46,12 @@ the following key components:
 - `call_caffe2_op_from_c10`: A Rust function that
   calls a Caffe2 operator using
   a `C10OperatorWrapper` and input/output
-  `TensorList`s.
+  `&[Tensor]`s.
 
 - `call_caffe2_op_from_c10_default_schema`: A Rust
   function that calls a Caffe2 operator using
   a `C10OperatorWrapper` and input/output
-  `TensorList`s with default schema.
+  `&[Tensor]`s with default schema.
 
 - `macro_rules`: A Rust macro that defines a macro
   for creating a function schema for a Caffe2

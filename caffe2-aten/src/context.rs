@@ -30,7 +30,7 @@ pub struct Context {
 
 impl Context {
     
-    pub fn default_generator(&mut self, device: Device) -> &Generator {
+    pub fn default_generator(&mut self, device: Device) -> &dyn GeneratorInterface {
         
         todo!();
         /*

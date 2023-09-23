@@ -75,7 +75,6 @@ pub struct OnnxTypeProto                                   { }
 pub struct OnnxValueInfoProto                              { }
 pub struct OnnxifiLibrary                                  { }
 pub struct OperatorHandle                                  { }
-pub struct OperatorName                                    { }
 pub struct PackBMatrix<A,B=A>                              { phantomA: PhantomData<A>, phantomB: PhantomData<B>, }
 pub struct PackWeightMatrixForGConv<T>                     { phantomT: PhantomData<T>, }
 pub struct PackWeightMatrixForGConvB<A,B,const N: usize>   { phantomA: PhantomData<A>, phantomB: PhantomData<B>, }

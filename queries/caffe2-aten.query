@@ -2347,7 +2347,7 @@ pytorch_qnnp_operator
 pytorch_qnnp_setup_clamp_nc_u8
 pytorch_qnnp_status
 ConstQuantizerPtr
-TensorList
+&[Tensor]
 SigmoidOperatorTester
 batch_size
 channels
@@ -7079,7 +7079,7 @@ PointerType
 ReprType
 Stream
 Tensor
-TensorList
+&[Tensor]
 UnsafeBorrow
 accessor
 and

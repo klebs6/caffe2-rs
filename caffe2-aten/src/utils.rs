@@ -55,7 +55,7 @@ lazy_static!{
 }
 
 /**
-  | Converts a TensorList (i.e. &[Tensor] to
+  | Converts a &[Tensor] (i.e. &[Tensor] to
   | vector of TensorImpl*)
   |
   | NB: This is ONLY used by legacy TH bindings,
@@ -127,7 +127,7 @@ pub fn check_intlist<const N: usize>(
   | type (CPU/CUDAGeneratorImpl etc.)
   |
   */
-#[inline] pub fn check_generator<T>(gen: Option<Generator>) -> *mut T {
+#[inline] pub fn check_generator<T>(gen: Option<dyn GeneratorInterface>) -> *mut T {
 
     todo!();
         /*
@@ -151,8 +151,10 @@ pub fn check_intlist<const N: usize>(
   |
   */
 #[inline] pub fn get_generator_or_default<T>(
-        gen:         &Option<Generator>,
-        default_gen: &Generator) -> *mut T {
+    gen:         &Option<dyn GeneratorInterface>,
+    default_gen: &dyn GeneratorInterface
+
+) -> *mut T {
 
     todo!();
         /*

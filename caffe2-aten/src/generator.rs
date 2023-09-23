@@ -2,7 +2,7 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/Generator.cpp]
 
-impl Generator {
+impl dyn GeneratorInterface {
     
     pub fn set_state(&mut self, new_state: &Tensor)  {
         

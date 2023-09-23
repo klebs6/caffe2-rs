@@ -2,8 +2,6 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/TypeDefault.h]
 
-pub type TensorList<'a> = &'a [Tensor];
-
 /**
   | This is temporary typedef to enable Quantizer
   | in aten native function API we'll remove them

@@ -15,6 +15,5 @@ x!{quit_if_feature_unsupported}
 x!{register}
 x!{set_denormals}
 x!{set_mklthreads}
-x!{test_init}
 x!{unsafe_run}
 x!{warn_if_feature_unused}

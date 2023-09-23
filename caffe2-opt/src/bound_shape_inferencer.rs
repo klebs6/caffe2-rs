@@ -159,12 +159,12 @@ impl BoundShapeInferencer {
         */
     }
     
-    #[inline] pub fn set_tensor_bound_shape_if_not_exist(&mut self, 
+    #[inline] pub fn set_tensor_bound_shape_if_not_exist<'a>(&mut self, 
         name:         &String,
         t:            &Vec<TensorBoundShape_DimType>,
         bound_dims:   Vec<i64>,
         type_:         TensorProto_DataType,
-        is_quantized: bool) -> &mut TensorShape {
+        is_quantized: bool) -> &'a mut TensorShape {
 
         todo!();
         /*
@@ -179,7 +179,7 @@ impl BoundShapeInferencer {
       | shape to be equal to bound_dims else we
       | enforce them to be equal
       */
-    #[inline] pub fn check_and_set_tensor_bound_shape(&mut self, 
+    #[inline] pub fn check_and_set_tensor_bound_shape<'a>(&mut self, 
         name:                 &String,
         t:                    &Vec<TensorBoundShape_DimType>,
         bound_dims:           Vec<i64>,
@@ -188,7 +188,7 @@ impl BoundShapeInferencer {
         allow_existing_shape: Option<bool>,
         scale:                Option<f32>,
         offset:               Option<i32>,
-        in_place_op:          Option<bool>) -> &mut TensorShape 
+        in_place_op:          Option<bool>) -> &'a mut TensorShape 
     {
         let allow_existing_shape: bool = allow_existing_shape.unwrap_or(false);
         let scale: f32 = scale.unwrap_or(1.0);

@@ -121,7 +121,7 @@ crate::ix!();
   | 
   | - If your operator has a variable number
   | of input tensors, make the first (!)
-  | input an input of type TensorList. There
+  | input an input of type &[Tensor]. There
   | must be no other tensor inputs.
   |
   */

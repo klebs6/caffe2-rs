@@ -1,15 +1,61 @@
 .PHONY: build vendor
 
-HACK_CLANG := env LD_LIBRARY_PATH=/usr/local/opt/llvm/lib/ 
-#HACK_CLANG := 
+#HACK_CLANG := env LD_LIBRARY_PATH=/usr/local/opt/llvm/lib/ 
+HACK_CLANG := 
 RUSTFLAGS := -Awarnings
 #CARGO     := cargo -Z extra-link-arg 
-CARGO     := env CARGO_MSG_LIMIT=15 \
-			 CARGO_BUILD_JOBS=12 \
-			 NUM_JOBS=12 \
-			 cargo 
+
+CARGO := env CARGO_MSG_LIMIT=100 CARGO_BUILD_JOBS=12 NUM_JOBS=12 cargo 
+#CARGO := CARGO_BUILD_JOBS=12 NUM_JOBS=12 cargo 
 
 ACTIVE := caffe2-aten
+#ACTIVE := caffe2-aten-adaptive
+#ACTIVE := caffe2-aten-ao
+#ACTIVE := caffe2-aten-benchmarks
+#ACTIVE := caffe2-aten-boxing
+ACTIVE := caffe2-aten-cpu
+#ACTIVE := caffe2-aten-cpuvec256
+#ACTIVE := caffe2-aten-cuda
+ACTIVE := caffe2-aten-cudnn
+#ACTIVE := caffe2-aten-dispatch
+#ACTIVE := caffe2-aten-hip
+#ACTIVE := caffe2-aten-metal
+#ACTIVE := caffe2-aten-miopen
+#ACTIVE := caffe2-aten-mkl
+#ACTIVE := caffe2-aten-mkldnn
+#ACTIVE := caffe2-aten-native
+#ACTIVE := caffe2-aten-nnapi
+#ACTIVE := caffe2-aten-op-registration
+#ACTIVE := caffe2-aten-qnnpack
+#ACTIVE := caffe2-aten-qnnpack-bench
+#ACTIVE := caffe2-aten-qnnpack-q8avgpool
+#ACTIVE := caffe2-aten-qnnpack-q8conv
+#ACTIVE := caffe2-aten-qnnpack-q8dwconv
+#ACTIVE := caffe2-aten-qnnpack-q8gavgpool
+#ACTIVE := caffe2-aten-qnnpack-q8gemm
+#ACTIVE := caffe2-aten-qnnpack-q8vadd
+#ACTIVE := caffe2-aten-qnnpack-requantization
+#ACTIVE := caffe2-aten-qnnpack-sgemm
+#ACTIVE := caffe2-aten-qnnpack-test
+#ACTIVE := caffe2-aten-qnnpack-u8clamp
+#ACTIVE := caffe2-aten-qnnpack-u8lut
+#ACTIVE := caffe2-aten-qnnpack-u8maxpool
+#ACTIVE := caffe2-aten-qnnpack-u8rmax
+#ACTIVE := caffe2-aten-qnnpack-x8lut
+#ACTIVE := caffe2-aten-qnnpack-x8zip
+#ACTIVE := caffe2-aten-quantized
+#ACTIVE := caffe2-aten-quantized-cpu
+#ACTIVE := caffe2-aten-sparse
+#ACTIVE := caffe2-aten-templates
+#ACTIVE := caffe2-aten-tensor
+#ACTIVE := caffe2-packed-linear-weight
+#ACTIVE := caffe2-aten-test
+#ACTIVE := caffe2-aten-th
+#ACTIVE := caffe2-aten-upsample
+#ACTIVE := caffe2-aten-vulkan
+#ACTIVE := caffe2-aten-xnnpack
+
+#ACTIVE := caffe2-aten-imports
 #ACTIVE := caffe2-c10
 
 #ACTIVE := caffe2-blob
@@ -267,9 +313,9 @@ ACTIVE := caffe2-aten
 #ACTIVE := caffe2op-while
 #ACTIVE := caffe2op-zerog
 
-BUILD := lbuild
+BUILD := build
 
-default: all
+default: build
 
 all:
 	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) 
