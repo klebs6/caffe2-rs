@@ -28,19 +28,24 @@ crate::ix!();
   | combinations.
   |
   */
-pub fn deserialize_tensor_data<Context: BaseContext, const Format: TensorProto_SerializationFormat, T>(
-    params: &DeserializeParams<T,Context>)
-{
-
-    todo!();
+lazy_static!{
     /*
-      CAFFE_ENFORCE(
-          false,
-          "unsupported serialization format ",
-          static_cast<int>(params.tensor_proto.data_format()),
-          " when deserializing float data");
+    pub fn deserialize_tensor_data<Context: BaseContext, const Format: TensorProto_SerializationFormat, T>(
+        params: &DeserializeParams<T,Context>)
+    {
+
+        todo!();
+        /*
+          CAFFE_ENFORCE(
+              false,
+              "unsupported serialization format ",
+              static_cast<int>(params.tensor_proto.data_format()),
+              " when deserializing float data");
+        */
+    }
     */
 }
+
 
 #[macro_export] macro_rules! deserialize_format_case {
     ($format:ident) => {

@@ -58,6 +58,7 @@ ACTIVE := caffe2-aten-cudnn
 #ACTIVE := caffe2-aten-imports
 #ACTIVE := caffe2-c10
 
+ACTIVE := caffe2-blob
 #ACTIVE := caffe2-blob
 #ACTIVE := caffe2-common
 #ACTIVE := caffe2-context
