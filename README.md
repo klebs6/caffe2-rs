@@ -1,7 +1,8 @@
-This library is based on the flexible and robust
-Caffe2 C++ project and aims to provide high
-performance, high modularity, and ease of
-integration into future rust systems.
+# caffe2-rs
+
+This library is based on the flexible Caffe2 C++ project. 
+
+It provides a high performance and modular rust environment for deep learning.
 
 As of July 1, 2023, the codebase is under
 construction: it is ready for interface
@@ -16,7 +17,7 @@ The current bottleneck is in the translation of
 c++ statements into rust. It is possible to do
 this manually. However, it is better to do it
 automatically. Some work is being done in this
-domain, but there are several challenges to be
+domain, however there are several challenges to be
 overcome.
 
 For more information, see `chomper`:
@@ -26,29 +27,22 @@ https://github.com/klebs6/chomper
 
 Greetings! I have a few preliminary work-items to
 attend for a few months. Once these are done,
-I plan to rewrite the `chomper`. 
+I plan to productionize the `chomper`. 
 
 This will include integrations with the
 rust-ecosystem compiler tools. 
 
-By rewriting `chomper` in rust, we will be able to
+During the productionization, we will be able to
 enable name resolution and type inference during
-transpilation (not to mention the performance
+transpilation (not to mention several performance
 wins).
 
-This productionizing of the transpiler ought to
-provide a *massive* speedup for the transpilation
-work. My hope is that it will allow caffe2-rs
-development to get moving.
+This work will provide a *massive* speedup for the translation. 
+Subsequently, caffe2-rs development will be free to progress.
 
-If anybody reading this would like to contribute
-to this c++ to rust transpiler development track,
-that is great! I would love to hear from you.
-Please feel free to reach out. 
-
-I am sure the rust ecosystem will be grateful,
-too. C++ to Rust transpilation seems like a major
-bottleneck in a lot of places. 
+If there are developers out there who would like to contribute to the c++ to rust transpiler development track, I would love to hear from you.
+Please feel free to reach out. I am sure the rust ecosystem will be grateful. 
+C++ to Rust transpilation is a major bottleneck for many projects. 
 
 ## Acknowledgments
 
