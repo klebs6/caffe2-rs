@@ -3,7 +3,7 @@ crate::ix!();
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/conv_packed_params.h]
 
 pub trait ConvPackedParamsBaseInterface<const SPATIAL_DIM: i32 = 2>:
-TorchJitCustomClassHolder
+CustomClassHolder
 + Apply
 + ApplyRelu
 + Unpack

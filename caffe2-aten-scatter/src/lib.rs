@@ -1,3 +1,4 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{scatter_gather_kernel}
+x!{scatter_gather_checks}

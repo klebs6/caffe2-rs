@@ -1,3 +1,4 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{fill_kernel}
+x!{fill}

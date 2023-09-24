@@ -1,5 +1,7 @@
 [dependencies.caffe2-derive]
 path = "../caffe2-derive"
+[dependencies.caffe2-tensor]
+path = "../caffe2-tensor"
 [dependencies.caffe2-imports]
 path = "../caffe2-imports"
 [package]

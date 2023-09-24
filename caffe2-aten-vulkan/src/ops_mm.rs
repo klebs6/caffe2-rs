@@ -14,7 +14,7 @@ pub struct LinearOpContextUnpacked {
 }
 
 pub struct LinearOpContext {
-    base:     TorchJitCustomClassHolder,
+    base:     CustomClassHolder,
     packed:   LinearOpContextPacked,
     unpacked: LinearOpContextUnpacked,
 }

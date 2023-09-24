@@ -1,3 +1,3 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{qnnpack_aligned_allocator}

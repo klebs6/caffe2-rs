@@ -1,3 +1,4 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{sobol_engine_ops_utils}
+x!{sobol_engine_ops}

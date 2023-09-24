@@ -35,7 +35,7 @@ pub struct Conv2dOpContextUnpacked {
 }
 
 pub struct Conv2dOpContext {
-    base:     TorchJitCustomClassHolder,
+    base:     CustomClassHolder,
     packed:   Conv2dOpContextPacked,
     unpacked: Conv2dOpContextUnpacked,
     method:   Conv2dMethod,

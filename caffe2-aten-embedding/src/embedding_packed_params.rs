@@ -3,7 +3,7 @@ crate::ix!();
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/embedding_packed_params.h]
 
 pub trait EmbeddingPackedParamsBaseInterface:
-TorchJitCustomClassHolder
+CustomClassHolder
 + EmbeddingbagByte
 + Embeddingbag4bit
 + Unpack

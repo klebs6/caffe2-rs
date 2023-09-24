@@ -55,7 +55,7 @@ pub type SerializationTypeTransposeConv2dPrePack = (
 );
 
 pub struct LinearOpContext {
-    base:                       TorchJitCustomClassHolder,
+    base:                       CustomClassHolder,
     orig_weight:                Tensor,
     orig_bias:                  Option<Tensor>,
     output_min:                 Option<Scalar>,
@@ -131,7 +131,7 @@ impl XNNPackLinearOpContext {
 }
 
 pub struct Conv2dOpContext {
-    base:                       TorchJitCustomClassHolder,
+    base:                       CustomClassHolder,
     orig_weight:                Tensor,
     orig_bias:                  Option<Tensor>,
     stride:                     Vec<i64>,
@@ -164,7 +164,7 @@ impl Conv2dOpContext {
 }
 
 pub struct TransposeConv2dOpContext {
-    base:                       TorchJitCustomClassHolder,
+    base:                       CustomClassHolder,
     orig_weight:                Tensor,
     orig_bias:                  Option<Tensor>,
     stride:                     Vec<i64>,

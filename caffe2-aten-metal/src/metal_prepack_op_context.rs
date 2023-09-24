@@ -14,7 +14,7 @@ pub type SerializationTypeConv2dPrePack = (
 );
 
 pub struct Conv2dOpContext {
-    base:             TorchJitCustomClassHolder,
+    base:             CustomClassHolder,
 
     weight:           Tensor,
     bias:             Option<Tensor>,
@@ -97,7 +97,7 @@ pub type SerializationTypeLinearPrePack = (
 );
 
 pub struct LinearOpContext {
-    base:             TorchJitCustomClassHolder,
+    base:             CustomClassHolder,
     weight:           Tensor,
     bias:             Option<Tensor>,
     output_min:       Option<Scalar>,

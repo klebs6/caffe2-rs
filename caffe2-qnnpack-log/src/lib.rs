@@ -1,3 +1,5 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{deps_clog}
+x!{deps_clog_test}
+x!{log}

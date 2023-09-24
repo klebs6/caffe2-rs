@@ -1,3 +1,3 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{detail_cpu_guard_impl}

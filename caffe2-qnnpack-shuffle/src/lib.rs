@@ -1,3 +1,4 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{qchannel_shuffle}
+x!{channel_shuffle}

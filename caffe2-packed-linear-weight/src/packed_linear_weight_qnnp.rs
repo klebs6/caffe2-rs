@@ -7,7 +7,7 @@ crate::ix!();
   | quantization utilities.
   |
   */
-#[cfg(USE_PYTORCH_QNNPACK)]
+#[cfg(feature = "qnnpack")]
 pub struct PackedLinearWeightQnnp {
 
     base:                  LinearPackedParamsBase,
@@ -37,9 +37,9 @@ pub struct PackedLinearWeightQnnp {
     sparse_linear_op:      Box<PytorchQnnpOperator,QnnpackOperatorDeleter>, // default = { nullptr }
 }
 
+#[cfg(feature = "qnnpack")]
 impl PackedLinearWeightQnnp {
 
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn new(
         weight:                  &Tensor,
         bias:                    &Option<Tensor>,
@@ -58,7 +58,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply(&mut self, 
         input:             &Tensor,
         output_scale:      f64,
@@ -71,7 +70,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_relu(&mut self, 
         input:             &Tensor,
         output_scale:      f64,
@@ -84,34 +82,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
-    pub fn apply_dynamic(&mut self, input: &Tensor) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    #[cfg(USE_PYTORCH_QNNPACK)]
-    pub fn apply_dynamic_relu(&mut self, input: &Tensor) -> Tensor {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    #[cfg(USE_PYTORCH_QNNPACK)]
-    pub fn unpack(&mut self) -> LinearPackedSerializationType {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn bias(&mut self) -> Option<Tensor> {
         
         todo!();
@@ -120,20 +90,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
-    pub fn prepack(
-        weight:                  &Tensor,
-        bias:                    &Option<Tensor>,
-        out_features_block_size: i64,
-        in_features_block_size:  i64) -> IntrusivePtr<LinearPackedParamsBase> {
-        
-        todo!();
-        /*
-        
-        */
-    }
-    
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_impl<const ReluFused: bool>(&mut self, 
         input:             &Tensor,
         output_scale:      f64,
@@ -145,7 +101,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_dynamic_impl<const ReluFused: bool>(&mut self, input: &Tensor) -> Tensor {
     
         todo!();
@@ -154,7 +109,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_dynamic_impl_true(&mut self, input: &Tensor) -> Tensor {
         
         todo!();
@@ -167,7 +121,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_dynamic_impl_false(&mut self, input: &Tensor) -> Tensor {
         
         todo!();
@@ -287,7 +240,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_dynamic(&mut self, input: &Tensor) -> Tensor {
         
         todo!();
@@ -296,7 +248,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn apply_dynamic_relu(&mut self, input: &Tensor) -> Tensor {
         
         todo!();
@@ -305,7 +256,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn prepack(&mut self, 
         weight:                  &Tensor,
         bias:                    &Option<Tensor>,
@@ -320,7 +270,6 @@ impl PackedLinearWeightQnnp {
         */
     }
 
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn new(
         weight:                  &Tensor,
         bias:                    &Option<Tensor>,
@@ -387,7 +336,6 @@ impl PackedLinearWeightQnnp {
         */
     }
     
-    #[cfg(USE_PYTORCH_QNNPACK)]
     pub fn unpack(&mut self) -> LinearPackedSerializationType {
         
         todo!();

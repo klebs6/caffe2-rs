@@ -1,6 +1,7 @@
 #[macro_use] mod imports; use imports::*;
 
 x!{metal_tensor_impl_storage}
+x!{metal_context}
 x!{metal_tensor_impl}
 x!{mpscnn_mps_image_wrapper}
 x!{metal_tensor_utils}

@@ -1,3 +1,7 @@
 #[macro_use] mod imports; use imports::*;
 
-//x!{modfile}
+x!{complex_kernel}
+x!{polar}
+x!{complex}
+x!{complex_helper}
+x!{zmath}

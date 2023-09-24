@@ -14,7 +14,7 @@ pub type SerializationTypeConv2dPrePack = (
 );
 
 pub struct Conv2dOpContext {
-    base:        TorchJitCustomClassHolder,
+    base:        CustomClassHolder,
     orig_weight: Tensor,
     orig_bias:   Option<Tensor>,
     stride:      Vec<i64>,

@@ -45,7 +45,7 @@ make_smart_ptr!{Compilation}
 make_smart_ptr!{Execution}
 
 pub struct NnapiCompilation {
-    base:        TorchJitCustomClassHolder,
+    base:        CustomClassHolder,
     model:       ModelPtr,
     compilation: CompilationPtr,
     num_inputs:  i32,

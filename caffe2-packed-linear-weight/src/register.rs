@@ -59,7 +59,7 @@ pub fn register_linear_params() -> TorchClass<LinearPackedParamsBase> {
 }
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/ao_sparse/quantized/cpu/fbgemm_utils.cpp]
-pub fn register_linear_params() -> TorchClass<LinearPackedParamsBase> {
+pub fn register_linear_params2() -> TorchClass<LinearPackedParamsBase> {
     
     todo!();
         /*

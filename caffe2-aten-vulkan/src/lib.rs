@@ -15,6 +15,7 @@ x!{api_command}
 x!{api_vk_mem_alloc}
 x!{vulkan_convolution}
 x!{vulkan_op_context}
+x!{vulkan_context}
 x!{vulkan_guard_impl}
 x!{ops_persistent}
 x!{api_cache}

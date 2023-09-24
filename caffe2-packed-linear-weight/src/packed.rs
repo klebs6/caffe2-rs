@@ -1,10 +1,8 @@
 crate::ix!();
 
-/// <Weight, bias, out_features_block_size, in_features_block_size>
-pub type LinearPackedSerializationType = (Tensor,Option<Tensor>,Vec<i64>);
 
 pub struct LinearPackedParamsBase {
-    base:                    TorchJitCustomClassHolder,
+    base:                    CustomClassHolder,
     out_features_block_size: i64,
     in_features_block_size:  i64,
 }
@@ -29,7 +27,7 @@ impl LinearPackedParamsBase {
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/packed_params.h]
 
 pub trait LinearPackedParamsBaseInterface:
-TorchJitCustomClassHolder
+CustomClassHolder
 + Apply
 + ApplyDynamic
 + ApplyDynamicRelu
@@ -39,9 +37,7 @@ TorchJitCustomClassHolder
 + ApplyRelu
 + ApplyReluOut
 + Bias
-+ Bias 
 + SetBias 
-+ SetBiase
 + Unpack
 { }
 
@@ -78,19 +74,6 @@ pub trait ApplyReluOut {
             "apply_relu_out is not implemented for this packed "
             "parameter type");
         return output;
-        */
-    }
-}
-
-pub trait SetBias {
-
-    fn set_bias(&mut self, bias: Option<Tensor>)  {
-        
-        todo!();
-        /*
-            throw runtime_error(
-            "set_bias is not implemented for this packed "
-            "parameter type");
         */
     }
 }
@@ -139,14 +122,15 @@ pub trait ApplyDynamicReluWithReduceRange {
         reduce_range: bool) -> Tensor;
 }
 
-pub trait Unpack {
-    
-    fn unpack(&mut self) -> LinearPackedSerializationType;
-}
+/// <Weight, bias, out_features_block_size, in_features_block_size>
+pub type LinearPackedSerializationType = (Tensor,Option<Tensor>,Vec<i64>);
 
 pub trait Unpack {
+
+    //type Output = (Tensor,Option<Tensor>)
+    type Output = LinearPackedSerializationType;
     
-    fn unpack(&mut self) -> (Tensor,Option<Tensor>);
+    fn unpack(&mut self) -> ;
 }
 
 pub trait Bias {

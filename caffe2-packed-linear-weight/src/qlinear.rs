@@ -7,6 +7,32 @@ pub struct QLinearPackWeightInt8 {
 impl QLinearPackWeightInt8 {
     
     pub fn run(
+        weight: Tensor,
+        bias:   Option<Tensor>) -> IntrusivePtr<LinearPackedParamsBase> {
+        
+        todo!();
+        /*
+            auto& ctx = globalContext();
+
+    #ifdef USE_FBGEMM
+        if (ctx.qEngine() == QEngine::FBGEMM) {
+          return PackedLinearWeight::prepack(move(weight), move(bias));
+        }
+    #endif
+    #ifdef USE_PYTORCH_QNNPACK
+        if (ctx.qEngine() == QEngine::QNNPACK) {
+          return PackedLinearWeightsQnnp::prepack(
+              move(weight), move(bias));
+        }
+    #endif
+        TORCH_CHECK(
+            false,
+            "Didn't find engine for operation quantized::linear_prepack ",
+            toString(ctx.qEngine()));
+        */
+    }
+    
+    pub fn run_with_block_sizes(
         weight:                  &Tensor,
         bias:                    &Option<Tensor>,
         out_features_block_size: i64,
@@ -46,38 +72,6 @@ lazy_static!{
     */
 }
 
-pub struct QLinearPackWeightInt8 {
-
-}
-
-impl QLinearPackWeightInt8 {
-    
-    pub fn run(
-        weight: Tensor,
-        bias:   Option<Tensor>) -> IntrusivePtr<LinearPackedParamsBase> {
-        
-        todo!();
-        /*
-            auto& ctx = globalContext();
-
-    #ifdef USE_FBGEMM
-        if (ctx.qEngine() == QEngine::FBGEMM) {
-          return PackedLinearWeight::prepack(move(weight), move(bias));
-        }
-    #endif
-    #ifdef USE_PYTORCH_QNNPACK
-        if (ctx.qEngine() == QEngine::QNNPACK) {
-          return PackedLinearWeightsQnnp::prepack(
-              move(weight), move(bias));
-        }
-    #endif
-        TORCH_CHECK(
-            false,
-            "Didn't find engine for operation quantized::linear_prepack ",
-            toString(ctx.qEngine()));
-        */
-    }
-}
 
 pub struct QLinearPackWeightFp16 {
 
@@ -206,7 +200,15 @@ pub struct QLinearUnpackWeightInt8 {
 
 impl QLinearUnpackWeightInt8 {
     
-    pub fn run(packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> LinearPackedSerializationType {
+    pub fn run(packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> (Tensor,Option<Tensor>) {
+        
+        todo!();
+        /*
+            return packed_weight->unpack();
+        */
+    }
+
+    pub fn run_with_block_size_output(packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> LinearPackedSerializationType {
         
         todo!();
         /*
@@ -261,6 +263,24 @@ pub struct QLinearInt8<const ReluFused: bool> {
 impl<const ReluFused: bool> QLinearInt8<ReluFused> {
     
     pub fn run(
+        input:             Tensor,
+        packed_weight:     &IntrusivePtr<LinearPackedParamsBase>,
+        output_scale:      f64,
+        output_zero_point: i64) -> Tensor {
+        
+        todo!();
+        /*
+            if (ReluFused) {
+          return packed_weight->apply_relu(
+              move(input), output_scale, output_zero_point);
+        } else {
+          return packed_weight->apply(
+              move(input), output_scale, output_zero_point);
+        }
+        */
+    }
+    
+    pub fn run2(
         input:             &Tensor,
         packed_weight:     &IntrusivePtr<LinearPackedParamsBase>,
         output_scale:      f64,
@@ -279,6 +299,23 @@ impl<const ReluFused: bool> QLinearInt8<ReluFused> {
 
 lazy_static!{
     /*
+    TORCH_LIBRARY_IMPL(quantized, QuantizedCPU, m) {
+      m.impl(TORCH_SELECTIVE_NAME("quantized::linear"), TORCH_FN(QLinearInt8<false>::run));
+      m.impl(TORCH_SELECTIVE_NAME("quantized::linear_relu"), TORCH_FN(QLinearInt8<true>::run));
+    }
+    */
+}
+
+lazy_static!{
+    /*
+    TORCH_LIBRARY_IMPL(_quantized, QuantizedCPU, m) {
+      m.impl(TORCH_SELECTIVE_NAME("_quantized::linear"), TORCH_FN(QLinearInt8<false>::run));
+    }
+    */
+}
+
+lazy_static!{
+    /*
     TORCH_LIBRARY_IMPL(sparse, QuantizedCPU, m) {
       m.impl(
           TORCH_SELECTIVE_NAME("sparse::qlinear"),
@@ -292,48 +329,7 @@ lazy_static!{
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/ao_sparse/quantized/cpu/qlinear_dynamic.cpp]
 
-pub struct QLinearDynamicInt8<const ReluFused: bool> {
 
-}
-
-impl<const ReluFused: bool> QLinearDynamicInt8<ReluFused> {
-    
-    pub fn run(
-        input:         &Tensor,
-        packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> Tensor {
-        
-        todo!();
-        /*
-            auto& ctx = globalContext();
-    #ifdef USE_PYTORCH_QNNPACK
-        if (ctx.qEngine() == QEngine::QNNPACK) {
-          if (ReluFused) {
-            return packed_weight->apply_dynamic_relu(input);
-          } else {
-            return packed_weight->apply_dynamic(input);
-          }
-        }
-    #endif
-        TORCH_CHECK(
-            false,
-            "Didn't find engine for operation ao::sparse::qlinear_dynamic",
-            toString(ctx.qEngine()));
-        */
-    }
-}
-
-lazy_static!{
-    /*
-    TORCH_LIBRARY_IMPL(sparse, CPU, m) {
-      m.impl(
-          TORCH_SELECTIVE_NAME("sparse::qlinear_dynamic"),
-          TORCH_FN(QLinearDynamicInt8<false>::run));
-      m.impl(
-          TORCH_SELECTIVE_NAME("sparse::qlinear_relu_dynamic"),
-          TORCH_FN(QLinearDynamicInt8<true>::run));
-    }
-    */
-}
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/ao_sparse/quantized/cpu/qlinear_prepack.cpp]
 
@@ -372,21 +368,6 @@ pub fn calc_col_offsets_transpose(
 }
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qlinear_unpack.cpp]
-
-pub struct QLinearUnpackWeightInt8 {
-
-}
-
-impl QLinearUnpackWeightInt8 {
-    
-    pub fn run(packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> (Tensor,Option<Tensor>) {
-        
-        todo!();
-        /*
-            return packed_weight->unpack();
-        */
-    }
-}
 
 pub struct QLinearUnpackWeightFp16 {
 
@@ -486,6 +467,29 @@ pub struct QLinearDynamicInt8<const ReluFused: bool> {
 impl<const ReluFused: bool> QLinearDynamicInt8<ReluFused> {
     
     pub fn run(
+        input:         &Tensor,
+        packed_weight: &IntrusivePtr<LinearPackedParamsBase>) -> Tensor {
+        
+        todo!();
+        /*
+            auto& ctx = globalContext();
+    #ifdef USE_PYTORCH_QNNPACK
+        if (ctx.qEngine() == QEngine::QNNPACK) {
+          if (ReluFused) {
+            return packed_weight->apply_dynamic_relu(input);
+          } else {
+            return packed_weight->apply_dynamic(input);
+          }
+        }
+    #endif
+        TORCH_CHECK(
+            false,
+            "Didn't find engine for operation ao::sparse::qlinear_dynamic",
+            toString(ctx.qEngine()));
+        */
+    }
+    
+    pub fn run_with_reduce_range_flag(
         input:         Tensor,
         packed_weight: &IntrusivePtr<LinearPackedParamsBase>,
         reduce_range:  bool) -> Tensor {
@@ -499,6 +503,19 @@ impl<const ReluFused: bool> QLinearDynamicInt8<ReluFused> {
         }
         */
     }
+}
+
+lazy_static!{
+    /*
+    TORCH_LIBRARY_IMPL(sparse, CPU, m) {
+      m.impl(
+          TORCH_SELECTIVE_NAME("sparse::qlinear_dynamic"),
+          TORCH_FN(QLinearDynamicInt8<false>::run));
+      m.impl(
+          TORCH_SELECTIVE_NAME("sparse::qlinear_relu_dynamic"),
+          TORCH_FN(QLinearDynamicInt8<true>::run));
+    }
+    */
 }
 
 pub struct QLinearDynamicFp16<const ReluFused: bool> {
@@ -561,44 +578,4 @@ lazy_static!{
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/qlinear.cpp]
 
-pub struct QLinearInt8<const ReluFused: bool> {
 
-}
-
-impl<const ReluFused: bool> QLinearInt8<ReluFused> {
-    
-    pub fn run(
-        input:             Tensor,
-        packed_weight:     &IntrusivePtr<LinearPackedParamsBase>,
-        output_scale:      f64,
-        output_zero_point: i64) -> Tensor {
-        
-        todo!();
-        /*
-            if (ReluFused) {
-          return packed_weight->apply_relu(
-              move(input), output_scale, output_zero_point);
-        } else {
-          return packed_weight->apply(
-              move(input), output_scale, output_zero_point);
-        }
-        */
-    }
-}
-
-lazy_static!{
-    /*
-    TORCH_LIBRARY_IMPL(quantized, QuantizedCPU, m) {
-      m.impl(TORCH_SELECTIVE_NAME("quantized::linear"), TORCH_FN(QLinearInt8<false>::run));
-      m.impl(TORCH_SELECTIVE_NAME("quantized::linear_relu"), TORCH_FN(QLinearInt8<true>::run));
-    }
-    */
-}
-
-lazy_static!{
-    /*
-    TORCH_LIBRARY_IMPL(_quantized, QuantizedCPU, m) {
-      m.impl(TORCH_SELECTIVE_NAME("_quantized::linear"), TORCH_FN(QLinearInt8<false>::run));
-    }
-    */
-}
