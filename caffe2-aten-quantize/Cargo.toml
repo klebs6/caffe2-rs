@@ -1,3 +1,5 @@
+[dependencies.caffe2-aten-dispatch]
+path = "../caffe2-aten-dispatch"
 [dependencies.caffe2-derive]
 path = "../caffe2-derive"
 [dependencies.caffe2-imports]

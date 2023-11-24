@@ -98,8 +98,6 @@ pub struct Tensor {
     impl_: IntrusivePtr<TensorImpl,UndefinedTensorImpl>,
 }
 
-pub type &[Tensor]<'a> = &'a [Tensor];
-
 impl Clone for Tensor {
 
     fn clone(&self) -> Self {

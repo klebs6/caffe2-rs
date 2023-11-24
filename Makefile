@@ -26,7 +26,7 @@ CARGO := env CARGO_MSG_LIMIT=100 CARGO_BUILD_JOBS=12 NUM_JOBS=12 cargo
 #ACTIVE := caffe2-aten-bucketize
 #ACTIVE := caffe2-aten-cat
 #ACTIVE := caffe2-aten-compare
-#ACTIVE := caffe2-aten-complex
+ACTIVE := caffe2-aten-complex
 #ACTIVE := caffe2-aten-convert
 #ACTIVE := caffe2-aten-convolution
 #ACTIVE := caffe2-aten-copy
@@ -35,7 +35,7 @@ CARGO := env CARGO_MSG_LIMIT=100 CARGO_BUILD_JOBS=12 NUM_JOBS=12 cargo
 #ACTIVE := caffe2-aten-cuda
 #ACTIVE := caffe2-aten-cudnn
 #ACTIVE := caffe2-aten-dict
-#ACTIVE := caffe2-aten-dispatch
+ACTIVE := caffe2-aten-dispatch
 #ACTIVE := caffe2-aten-distributions
 #ACTIVE := caffe2-aten-dlpack
 #ACTIVE := caffe2-aten-dropout
@@ -54,7 +54,7 @@ CARGO := env CARGO_MSG_LIMIT=100 CARGO_BUILD_JOBS=12 NUM_JOBS=12 cargo
 #ACTIVE := caffe2-aten-imports
 #ACTIVE := caffe2-aten-index
 #ACTIVE := caffe2-aten-interned-strings
-#ACTIVE := caffe2-aten-ivalue
+ACTIVE := caffe2-aten-ivalue
 #ACTIVE := caffe2-aten-jit
 #ACTIVE := caffe2-aten-lerp
 #ACTIVE := caffe2-aten-library
@@ -424,7 +424,7 @@ all:
 	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) 
 
 build:
-	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) #-p $(ACTIVE)
+	$(HACK_CLANG) RUSTFLAGS=$(RUSTFLAGS) $(CARGO) $(BUILD) -p $(ACTIVE)
 
 vendor:
 	RUSTFLAGS=$(RUSTFLAGS) $(CARGO) vendor

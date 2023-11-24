@@ -94,7 +94,7 @@ impl DictImpl {
 }
 
 
-impl<K,V> Dict<K,V> {
+impl<Key,Value> Dict<Key,Value> {
 
     pub fn new() -> Self {
     
@@ -128,7 +128,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn new(rhs: Dict) -> Self {
+    pub fn new(rhs: Dict<Key,Value>) -> Self {
     
         todo!();
         /*
@@ -150,7 +150,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn assign_from(&mut self, rhs: Dict) -> &mut Dict<Key,Value> {
+    pub fn assign_from(&mut self, rhs: Dict<Key,Value>) -> &mut Dict<Key,Value> {
         
         todo!();
         /*
@@ -168,7 +168,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn begin(&self) -> DictIterator {
+    pub fn begin(&self) -> DictIterator<Key,Value,dyn Iterator> {
         
         todo!();
         /*
@@ -176,7 +176,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn end(&self) -> DictIterator {
+    pub fn end(&self) -> DictIterator<Key,Value,dyn Iterator> {
         
         todo!();
         /*
@@ -210,7 +210,7 @@ impl<K,V> Dict<K,V> {
     
     pub fn insert<Key_, Value_>(&self, 
         key:   Key,
-        value: Value) -> (DictIterator,bool) {
+        value: Value) -> (DictIterator<Key,Value,dyn Iterator>,bool) {
     
         todo!();
         /*
@@ -225,7 +225,7 @@ impl<K,V> Dict<K,V> {
     
     pub fn insert_or_assign<Key_, Value_>(&self, 
         key:   Key,
-        value: Value) -> (DictIterator,bool) {
+        value: Value) -> (DictIterator<Key,Value,dyn Iterator>,bool) {
     
         todo!();
         /*
@@ -238,7 +238,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn erase<Key, Value>(&self, iter: Iterator)  {
+    pub fn erase(&self, iter: dyn Iterator)  {
     
         todo!();
         /*
@@ -262,7 +262,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn find(&self, key: &Key) -> DictIterator {
+    pub fn find(&self, key: &Key) -> DictIterator<Key,Value,dyn Iterator> {
         
         todo!();
         /*
@@ -318,7 +318,7 @@ impl<K,V> Dict<K,V> {
         */
     }
     
-    pub fn is(&self, rhs: &Dict) -> bool {
+    pub fn is(&self, rhs: &Dict<Key,Value>) -> bool {
         
         todo!();
         /*
@@ -327,9 +327,9 @@ impl<K,V> Dict<K,V> {
     }
 }
 
-impl PartialEq<Dict> for Dict {
+impl<Key,Value> PartialEq<Dict<Key,Value>> for Dict<Key,Value> {
     
-    #[inline] fn eq(&self, other: &Dict) -> bool {
+    #[inline] fn eq(&self, other: &Dict<Key,Value>) -> bool {
         todo!();
         /*
             // Dicts with the same identity trivially compare equal.

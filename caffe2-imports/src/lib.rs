@@ -1,3 +1,5 @@
+#![feature(adt_const_params)]
+
 #[macro_export] macro_rules! x { 
     ($x:ident) => { 
         mod $x; 
@@ -19,8 +21,9 @@
 #[derive(Default)]
 pub struct Unknown {}
 pub type TypeMeta = Unknown;
-pub type Blob = Unknown;
+pub type Blob     = Unknown;
 
+pub use std::marker::ConstParamTy;
 pub use rand::StdRng;
 pub use statrs::distribution::Uniform;
 
@@ -28,6 +31,7 @@ pub use statrs::distribution::Uniform;
 extern crate derive_error;
 
 pub use std::error::Error;
+pub use std::sync::Weak;
 pub use derive_error::*;
 pub use std::iter::Iterator;
 pub use libc;

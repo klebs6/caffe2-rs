@@ -12,7 +12,7 @@ pub const DIM_BITSET_SIZE: usize = 64;
 
 #[inline] pub fn dim_list_to_bitset(
     dims:  &[i32],
-    ndims: i64) -> BitSet<DimBitsetSize> {
+    ndims: i64) -> BitSet<DIM_BITSET_SIZE> {
     
     todo!();
         /*

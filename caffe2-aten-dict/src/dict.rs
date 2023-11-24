@@ -2,7 +2,14 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/Dict.h]
 
-pub type ValidDictKeyTypes = TypeList<i64,String,f64,Complex<f64>,bool,Tensor>;
+pub trait ValidDictKey {}
+
+impl ValidDictKey for i64 { }
+impl ValidDictKey for String { }
+impl ValidDictKey for f64 { }
+impl ValidDictKey for Complex<f64> { }
+impl ValidDictKey for bool { }
+impl ValidDictKey for Tensor { }
 
 pub struct DictKeyHash {
 
@@ -48,12 +55,7 @@ pub struct DictElementTypes {
     value_type: TypePtr,
 }
 
-pub mod dict_impl {
-
-    use super::*;
-
-    pub type DictMapType = OrderPreservingFlatHashMap<IValue,IValue,DictKeyHash,DictKeyEqualTo>;
-}
+pub type DictMapType = OrderPreservingFlatHashMap<IValue,IValue,DictKeyHash,DictKeyEqualTo>;
 
 impl DictImpl {
     
@@ -90,7 +92,7 @@ pub struct DictEntryRef<Key,Value,Iterator> {
     iterator: Iterator,
 }
 
-impl DictEntryRef<Key,Value,Iterator> {
+impl<Key,Value,Iterator> DictEntryRef<Key,Value,Iterator> {
 
     pub fn new(iterator: Iterator) -> Self {
     
@@ -139,11 +141,11 @@ pub struct DictIterator<Key,Value,Iterator> {
     entry_ref: DictEntryRef<Key,Value,Iterator>,
 }
 
-impl Sub<&DictIterator> for DictIterator {
+impl<Key,Value,Iterator> Sub<&DictIterator<Key,Value,Iterator>> for DictIterator<Key,Value,Iterator> {
 
     type Output = usize;
     
-    #[inline]fn sub(self, other: &&DictIterator) -> Self::Output {
+    #[inline]fn sub(self, other: &DictIterator<Key,Value,Iterator>) -> Self::Output {
         todo!();
         /*
             return lhs.entryRef_.iterator_ - rhs.entryRef_.iterator_;
@@ -151,9 +153,9 @@ impl Sub<&DictIterator> for DictIterator {
     }
 }
 
-impl PartialEq<DictIterator> for DictIterator {
+impl<Key,Value,Iterator> PartialEq<DictIterator<Key,Value,Iterator>> for DictIterator<Key,Value,Iterator> {
     
-    #[inline] fn eq(&self, other: &DictIterator) -> bool {
+    #[inline] fn eq(&self, other: &DictIterator<Key,Value,Iterator>) -> bool {
         todo!();
         /*
             return lhs.get_iterator_() == rhs.get_iterator_();
@@ -161,9 +163,9 @@ impl PartialEq<DictIterator> for DictIterator {
     }
 }
 
-impl Ord<DictIterator> for DictIterator {
+impl<Key,Value,Iterator> Ord<DictIterator<Key,Value,Iterator>> for DictIterator<Key,Value,Iterator> {
     
-    #[inline] fn cmp(&self, other: &DictIterator) -> Ordering {
+    #[inline] fn cmp(&self, other: &DictIterator<Key,Value,Iterator>) -> Ordering {
         todo!();
         /*
             return lhs.get_iterator_() < rhs.get_iterator_();
@@ -171,15 +173,16 @@ impl Ord<DictIterator> for DictIterator {
     }
 }
 
-impl PartialOrd<DictIterator> for DictIterator {
-    #[inline] fn partial_cmp(&self, other: &DictIterator) -> Option<Ordering> {
+impl<Key,Value,Iterator> PartialOrd<DictIterator<Key,Value,Iterator>> for DictIterator<Key,Value,Iterator> {
+
+    #[inline] fn partial_cmp(&self, other: &DictIterator<Key,Value,Iterator>) -> Option<Ordering> {
         Some(self.cmp(other))
     }
 }
 
-impl DictIterator<Key,Value,Iterator> {
+impl<Key,Value,Iterator> DictIterator<Key,Value,Iterator> {
     
-    pub fn new(rhs: &DictIterator) -> Self {
+    pub fn new(rhs: &DictIterator<Key,Value,Iterator>) -> Self {
     
         todo!();
         /*
@@ -189,7 +192,7 @@ impl DictIterator<Key,Value,Iterator> {
         */
     }
     
-    pub fn new(rhs: DictIterator) -> Self {
+    pub fn new(rhs: DictIterator<Key,Value,Iterator>) -> Self {
     
         todo!();
         /*
@@ -199,7 +202,7 @@ impl DictIterator<Key,Value,Iterator> {
         */
     }
     
-    pub fn assign_from(&mut self, rhs: &DictIterator) -> &mut DictIterator {
+    pub fn assign_from(&mut self, rhs: &DictIterator<Key,Value,Iterator>) -> &mut DictIterator<Key,Value,Iterator> {
         
         todo!();
         /*
@@ -208,7 +211,7 @@ impl DictIterator<Key,Value,Iterator> {
         */
     }
     
-    pub fn assign_from(&mut self, rhs: DictIterator) -> &mut DictIterator {
+    pub fn assign_from(&mut self, rhs: DictIterator<Key,Value,Iterator>) -> &mut DictIterator<Key,Value,Iterator> {
         
         todo!();
         /*
@@ -217,7 +220,7 @@ impl DictIterator<Key,Value,Iterator> {
         */
     }
     
-    pub fn prefix_increment(&mut self) -> &mut DictIterator {
+    pub fn prefix_increment(&mut self) -> &mut DictIterator<Key,Value,Iterator> {
         
         todo!();
         /*
@@ -226,7 +229,7 @@ impl DictIterator<Key,Value,Iterator> {
         */
     }
     
-    pub fn prefix_increment(&mut self, _0: i32) -> DictIterator {
+    pub fn prefix_increment(&mut self, _0: i32) -> DictIterator<Key,Value,Iterator> {
         
         todo!();
         /*
@@ -332,13 +335,13 @@ pub mod dict {
         */
     }
 
-    pub type KeyType = Key;
-    pub type MappedType = Value;
-    pub type DictSizeType = DictImpl::dict_map_type::size_type;
-    pub type Iterator = DictIterator<Key,Value,DictImpl::dict_map_type::iterator>;
+    pub type DictKeyType    = Key;
+    pub type DictMappedType = Value;
+    pub type DictSizeType   = DictImpl::dict_map_type::size_type;
+    pub type DictIterator   = DictIterator<Key,Value,DictImpl::dict_map_type::iterator>;
 }
 
-impl Dict<Key,Value> {
+impl<Key,Value> Dict<Key,Value> {
     
     pub fn new(impl_: IntrusivePtr<DictImpl>) -> Self {
     
@@ -395,7 +398,7 @@ impl Dict<Key,Value> {
       | original dict or vice versa.
       |
       */
-    pub fn copy_(&self) -> Dict {
+    pub fn copy_(&self) -> Dict<Key,Value> {
         
         todo!();
         /*
@@ -411,7 +414,7 @@ impl Dict<Key,Value> {
       | iterator will be equal to end().
       |
       */
-    pub fn begin(&self) -> Iterator {
+    pub fn begin(&self) -> dyn Iterator {
         
         todo!();
         /*
@@ -428,7 +431,7 @@ impl Dict<Key,Value> {
       | behavior.
       |
       */
-    pub fn end(&self) -> Iterator {
+    pub fn end(&self) -> dyn Iterator {
         
         todo!();
         /*
@@ -502,7 +505,7 @@ impl Dict<Key,Value> {
       */
     pub fn insert<Key_, Value_>(&self, 
         key:   Key,
-        value: Value) -> (Iterator,bool) {
+        value: Value) -> (dyn Iterator,bool) {
     
         todo!();
         /*
@@ -534,7 +537,7 @@ impl Dict<Key,Value> {
       */
     pub fn insert_or_assign<Key_, Value_>(&self, 
         key:   Key,
-        value: Value) -> (Iterator,bool) {
+        value: Value) -> (dyn Iterator,bool) {
     
         todo!();
         /*
@@ -555,7 +558,7 @@ impl Dict<Key,Value> {
       | be used as a value for iter.
       |
       */
-    pub fn erase(&self, iter: Iterator)  {
+    pub fn erase(&self, iter: dyn Iterator)  {
         
         todo!();
         /*
@@ -617,7 +620,7 @@ impl Dict<Key,Value> {
       | (see end()) iterator is returned.
       |
       */
-    pub fn find(&self, key: &Key) -> Iterator {
+    pub fn find(&self, key: &Key) -> dyn Iterator {
         
         todo!();
         /*
@@ -674,7 +677,7 @@ impl Dict<Key,Value> {
       | Dict object as `this`.
       |
       */
-    pub fn is(&self, rhs: &Dict) -> bool {
+    pub fn is(&self, rhs: &Dict<Key,Value>) -> bool {
         
         todo!();
         /*

@@ -1,3 +1,5 @@
+[dependencies.caffe2-aten-names]
+path = "../caffe2-aten-names"
 [dependencies.caffe2-derive]
 path = "../caffe2-derive"
 [dependencies.caffe2-imports]

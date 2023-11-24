@@ -6,8 +6,6 @@ pub struct CustomClassHolder {
     base: IntrusivePtrTarget,
 }
 
-pub type ClassTypePtr = Arc<ClassType>;
-
 /**
   | A comparator that checks ordering of
   | two IValues of same type.
@@ -1426,8 +1424,6 @@ impl IValue {
     
         todo!();
         /*
-
-
         
         */
     }

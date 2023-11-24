@@ -1,3 +1,5 @@
+#![feature(allocator_api)]
+
 #[macro_use] mod imports; use imports::*;
 
 x!{opaque_tensor_impl}

@@ -1,164 +1,233 @@
-// # vim: ft=none
 crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/native/quantized/cpu/quantized_ops.h]
 
-lazy_static!{
-    /*
-    using qrelu_fn = void (*)(const Tensor& /*qx*/, Tensor& /*qy*/);
+pub type QreluFn = fn(qx: &Tensor, qy: &mut Tensor) -> c_void;
 
-    using qrelu_leaky_fn = void (*)(Tensor& /*out*/, const Tensor& /*qx*/, const Scalar& /*negval_*/);
+pub type QreluLeakyFn = fn(
+        out:    &mut Tensor,
+        qx:     &Tensor,
+        negval: &Scalar
+) -> c_void;
 
-    using qsigmoid_fn = void (*)(const Tensor& /*qx*/, Tensor& /*qy*/, double output_scale, i64 output_zero_point);
-    using qhardsigmoid_fn = void (*)(const Tensor& /*qx*/, Tensor& /*qy*/);
-    using qclamp_fn = void (*)(
-        const Tensor& /*qx*/,
-        const Scalar& min,
-        const Scalar& max,
-        Tensor& /*qy*/);
-    using qclamp_minmax_fn = void (*)(
-        const Tensor& /*qx*/,
-        const Scalar& /*min or max*/,
-        Tensor& /*qy*/);
-    using qthreshold_fn = void (*)(
-        const Tensor& /*qx*/,
-        const Scalar& threshold,
-        const Scalar& value,
-        Tensor& /*qy*/);
-    using qtanh_fn = void (*)(const Tensor& /*qx*/, Tensor& /*qy*/);
-    using qelu_fn = void(*)(
-        const Tensor& /*qx*/,
-        const Scalar& /*alpha*/,
-        const Scalar& /*scale*/,
-        const Scalar& /*input_scale*/,
-        Tensor& /*qy*/);
-    using qbinary_fn =
-        void (*)(Tensor& /*out*/, const Tensor& /*self*/, const Tensor& /*other*/);
-    using qadd_scalar_fn =
-        void (*)(Tensor& /*out*/, const Tensor& /*self*/, const Scalar& other /*other*/);
-    using qhardswish_fn = void (*)(const Tensor& /*qx*/, Tensor& /*qy*/);
-    using qmaxpool_2d_fn = void (*)(
-        const Tensor& qx,
-        i64 iC, // input/output channels
-        i64 iH,
-        i64 iW, // input sizes
-        i64 oH,
-        i64 oW, // output sizes
-        i64 kH,
-        i64 kW, // kernel size
-        i64 sH,
-        i64 sW, // strides
-        i64 pH,
-        i64 pW, // padding
-        i64 dH,
-        i64 dW, // dilation
-        Tensor& qy);
-    using qadaptive_avg_pool2d_fn = void (*)(
-        const Tensor& qx,
-        Tensor& qy,
-        i64 b,
-        i64 sizeC,
-        i64 isizeH,
-        i64 isizeW,
-        i64 osizeH,
-        i64 osizeW,
-        i64 istrideB,
-        i64 istrideC,
-        i64 istrideH,
-        i64 istrideW);
-    using qadaptive_avg_pool3d_fn = void (*)(
-        const Tensor& qx,
-        Tensor& qy,
-        i64 b,
-        i64 sizeC,
-        i64 isizeD,
-        i64 isizeH,
-        i64 isizeW,
-        i64 osizeD,
-        i64 osizeH,
-        i64 osizeW,
-        i64 istrideB,
-        i64 istrideC,
-        i64 istrideD,
-        i64 istrideH,
-        i64 istrideW);
-    using qavg_pool2d_fn = void (*)(
-        const Tensor& qx,
-        Tensor& qy,
-        i64 b,
-        i64 nInputPlane,
-        i64 inputWidth,
-        i64 inputHeight,
-        i64 outputWidth,
-        i64 outputHeight,
-        int kW,
-        int kH,
-        int dW,
-        int dH,
-        int padW,
-        int padH,
-        bool count_include_pad,
-        optional<i64> divisor_override);
+pub type QsigmoidFn = fn(
+        qx:                &Tensor,
+        qy:                &mut Tensor,
+        output_scale:      f64,
+        output_zero_point: i64
+) -> c_void;
 
-    using qavg_pool3d_fn = void (*)(
-        const Tensor& qx,
-        Tensor& qy,
-        i64 b,
-        i64 nInputPlane,
-        i64 inputWidth,
-        i64 inputHeight,
-        i64 inputDepth,
-        i64 outputWidth,
-        i64 outputHeight,
-        i64 outputDepth,
-        int kW,
-        int kH,
-        int kD,
-        int dW,
-        int dH,
-        int dD,
-        int padW,
-        int padH,
-        int padD,
-        bool count_include_pad,
-        optional<i64> divisor_override);
+pub type QhardsigmoidFn = fn(qx: &Tensor, qy: &mut Tensor) -> c_void;
 
-    using qupsample_bilinear2d_fn = void (*)(
-        Tensor& output,
-        const Tensor& input,
-        i64 input_height,
-        i64 input_width,
-        i64 output_height,
-        i64 output_width,
-        i64 nbatch,
-        i64 channels,
-        bool align_corners,
-        optional<double> scales_h,
-        optional<double> scales_w);
+pub type QclampFn = fn(
+        qx:  &Tensor,
+        min: &Scalar,
+        max: &Scalar,
+        qy:  &mut Tensor
+) -> c_void;
 
-    using qcat_nhwc_fn = Tensor (*)(
-        const List<Tensor>& qxs,
-        i64 dim,
-        double scale,
-        i64 zero_point);
+pub type QclampMinmaxFn = fn(
+        qx:         &Tensor,
+        min_or_max: &Scalar,
+        qy:         &mut Tensor
+) -> c_void;
 
-    using qtopk_fn = void(*)(Tensor&, Tensor&, const Tensor&, i64, i64, bool, bool);
+pub type QthresholdFn = fn(
+        qx:        &Tensor,
+        threshold: &Scalar,
+        value:     &Scalar,
+        qy:        &mut Tensor
+) -> c_void;
 
-    using qbatch_norm_fn = void(*)(i64, i64, i64, i64, i64, const Tensor&, const Tensor&, const Tensor&, Tensor&);
+pub type QtanhFn = fn(qx: &Tensor, qy: &mut Tensor) -> c_void;
 
-    using qnormalize_fn = void (*)(
-        const Tensor& /* X */,
-        const Tensor& /* gamma */,
-        const Tensor& /* beta */,
-        bool /* affine_per_channel */,
-        int /* num_channels */,
-        int /* num_groups */,
-        i64 /* M */,
-        i64 /* N */,
-        double /* eps */,
-        Tensor* /* Y */);
-    */
-}
+pub type QeluFn = fn(
+        qx:          &Tensor,
+        alpha:       &Scalar,
+        scale:       &Scalar,
+        input_scale: &Scalar,
+        qy:          &mut Tensor
+) -> ();
+
+pub type QbinaryFn = fn(
+        out:   &mut Tensor,
+        self_: &Tensor,
+        other: &Tensor
+) -> c_void;
+
+pub type QaddScalarFn = fn(
+out:    &mut Tensor,
+self_:    &Tensor,
+other: &Scalar
+) -> c_void;
+
+
+pub type QhardswishFn = fn(qx: &Tensor, qy: &mut Tensor) -> c_void;
+
+pub type Qmaxpool2dFn = fn(
+        qx: &Tensor,
+
+        // input_output channels
+        ic: i64,
+        ih: i64,
+
+        // input sizes
+        iw: i64,
+        oh: i64,
+
+        // output sizes
+        ow: i64,
+        kh: i64,
+
+        // kernel size
+        kw: i64,
+        sh: i64,
+
+        // strides
+        sw: i64,
+        ph: i64,
+
+        // padding
+        pw: i64,
+        dh: i64,
+
+        // dilation
+        dw: i64,
+        qy: &mut Tensor
+) -> c_void;
+
+pub type QadaptiveAvgPool2dFn = fn(
+        qx:       &Tensor,
+        qy:       &mut Tensor,
+        b:        i64,
+        sizec:    i64,
+        isizeh:   i64,
+        isizew:   i64,
+        osizeh:   i64,
+        osizew:   i64,
+        istrideb: i64,
+        istridec: i64,
+        istrideh: i64,
+        istridew: i64
+) -> c_void;
+
+pub type QadaptiveAvgPool3dFn = fn(
+        qx:       &Tensor,
+        qy:       &mut Tensor,
+        b:        i64,
+        sizec:    i64,
+        isized:   i64,
+        isizeh:   i64,
+        isizew:   i64,
+        osized:   i64,
+        osizeh:   i64,
+        osizew:   i64,
+        istrideb: i64,
+        istridec: i64,
+        istrided: i64,
+        istrideh: i64,
+        istridew: i64
+) -> c_void;
+
+pub type QavgPool2dFn = fn(
+        qx:                &Tensor,
+        qy:                &mut Tensor,
+        b:                 i64,
+        n_input_plane:     i64,
+        input_width:       i64,
+        input_height:      i64,
+        output_width:      i64,
+        output_height:     i64,
+        kw:                i32,
+        kh:                i32,
+        dw:                i32,
+        dh:                i32,
+        padw:              i32,
+        padh:              i32,
+        count_include_pad: bool,
+        divisor_override:  Option<i64>
+) -> c_void;
+
+pub type QavgPool3dFn = fn(
+        qx:                &Tensor,
+        qy:                &mut Tensor,
+        b:                 i64,
+        n_input_plane:     i64,
+        input_width:       i64,
+        input_height:      i64,
+        input_depth:       i64,
+        output_width:      i64,
+        output_height:     i64,
+        output_depth:      i64,
+        kw:                i32,
+        kh:                i32,
+        kd:                i32,
+        dw:                i32,
+        dh:                i32,
+        dd:                i32,
+        padw:              i32,
+        padh:              i32,
+        padd:              i32,
+        count_include_pad: bool,
+        divisor_override:  Option<i64>
+) -> c_void;
+
+pub type QupsampleBilinear2dFn = fn(
+        output:        &mut Tensor,
+        input:         &Tensor,
+        input_height:  i64,
+        input_width:   i64,
+        output_height: i64,
+        output_width:  i64,
+        nbatch:        i64,
+        channels:      i64,
+        align_corners: bool,
+        scales_h:      Option<f64>,
+        scales_w:      Option<f64>
+) -> c_void;
+
+pub type QcatNhwcFn = fn(
+        qxs:        &List<Tensor>,
+        dim:        i64,
+        scale:      f64,
+        zero_point: i64
+) -> Tensor;
+
+pub type QtopkFn = fn(
+        _0: &mut Tensor,
+        _1: &mut Tensor,
+        _2: &Tensor,
+        _3: i64,
+        _4: i64,
+        _5: bool,
+        _6: bool
+) -> ();
+
+pub type QbatchNormFn = fn(
+        _0: i64,
+        _1: i64,
+        _2: i64,
+        _3: i64,
+        _4: i64,
+        _5: &Tensor,
+        _6: &Tensor,
+        _7: &Tensor,
+        _8: &mut Tensor
+) -> ();
+
+pub type QnormalizeFn = fn(
+        X:                  &Tensor,
+        gamma:              &Tensor,
+        beta:               &Tensor,
+        affine_per_channel: bool,
+        num_channels:       i32,
+        num_groups:         i32,
+        M:                  i64,
+        N:                  i64,
+        eps:                f64,
+        Y:                  *mut Tensor
+) -> c_void;
+
 
 declare_dispatch!{qadaptive_avg_pool2d_fn, qadaptive_avg_pool2d_nhwc_stub}
 declare_dispatch!{qadaptive_avg_pool3d_fn, qadaptive_avg_pool3d_ndhwc_stub}

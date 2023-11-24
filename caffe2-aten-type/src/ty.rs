@@ -1,4 +1,3 @@
-// # vim: ft=none
 crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/type.cpp]
@@ -575,8 +574,9 @@ pub fn unify_types(
 }
 
 pub fn unify_type_list(
-        elements: &[TypePtr],
-        why_not:  &mut std::io::BufWriter) -> Option<TypePtr> {
+    elements: &[TypePtr],
+    why_not:  &mut dyn Write
+) -> Option<TypePtr> {
     
     todo!();
         /*
@@ -812,9 +812,12 @@ pub fn type_kind_to_string(kind: TypeKind) -> *const u8 {
 
 impl Type {
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -1121,9 +1124,12 @@ impl TupleType {
         */
     }
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -1165,9 +1171,12 @@ impl TupleType {
 
 impl ListType {
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -1469,9 +1478,12 @@ impl TensorType {
         */
     }
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -1947,9 +1959,12 @@ impl ClassType {
         */
     }
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -2014,10 +2029,13 @@ impl FunctionType {
 
 impl InterfaceType {
     
-    pub fn is_sub_type_impl(&mut self, 
+    pub fn is_sub_type_impl(
+        &mut self, 
         lhs:     &InterfaceType,
         rhs:     &InterfaceType,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -2054,9 +2072,12 @@ impl InterfaceType {
         */
     }
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+
+    ) -> bool {
         
         todo!();
         /*
@@ -2454,9 +2475,11 @@ impl SymbolicShape {
 
 impl EnumType {
     
-    pub fn is_subtype_of_ext(&self, 
+    pub fn is_subtype_of_ext(
+        &self, 
         rhs:     &TypePtr,
-        why_not: *mut std::io::BufWriter) -> bool {
+        why_not: &mut dyn Write
+    ) -> bool {
         
         todo!();
         /*

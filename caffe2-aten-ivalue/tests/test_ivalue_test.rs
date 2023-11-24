@@ -255,7 +255,8 @@ pub fn make_more_sample_ivalues() -> [IValue; 5] {
       cls->addAttribute("attr1", TensorType::get());
       cls->addAttribute("attr2", TensorType::get());
       auto obj = Object::create(
-          StrongTypePtr(cu, cls), cls->numAttributes());
+          StrongTypePtr(cu, cls), cls->numAttributes()
+      );
       obj->unsafeRemoveAttr("attr1");
       // attr1 is not removed in the type
       ASSERT_TRUE(cls->hasAttribute("attr1"));

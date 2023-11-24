@@ -1,3 +1,9 @@
+[dependencies.caffe2-aten-complex]
+path = "../caffe2-aten-complex"
+[dependencies.caffe2-aten-ivalue]
+path = "../caffe2-aten-ivalue"
+[dependencies.caffe2-c10]
+path = "../caffe2-c10"
 [dependencies.caffe2-derive]
 path = "../caffe2-derive"
 [dependencies.caffe2-imports]

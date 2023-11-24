@@ -100,6 +100,8 @@ pub type ConstTypePtr = Arc<Type>;
   */
 pub type TypePrinter = fn(_0: &ConstTypePtr) -> Option<String>;
 
+pub type TypePtr  = Arc<Type>;
+
 pub struct Type {
     base: EnableSharedFromThis<Type>,
     kind: TypeKind,

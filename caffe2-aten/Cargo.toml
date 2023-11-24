@@ -1,5 +1,15 @@
 [dependencies]
 derive-error = "0.0.5"
+[dependencies.caffe2-aten-function]
+path = "../caffe2-aten-function"
+[dependencies.caffe2-aten-ivalue]
+path = "../caffe2-aten-ivalue"
+[dependencies.caffe2-aten-quantize]
+path = "../caffe2-aten-quantize"
+[dependencies.caffe2-aten-tensor]
+path = "../caffe2-aten-tensor"
+[dependencies.caffe2-aten-th]
+path = "../caffe2-aten-th"
 [dependencies.caffe2-c10]
 path = "../caffe2-c10"
 version = "0.1.5-alpha.0"

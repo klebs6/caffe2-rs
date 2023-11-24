@@ -207,7 +207,8 @@ pub type cufft_Sizeype = i32;
 #[cfg(not(__HIP_PLATFORM_HCC__))]
 pub type cufft_Sizeype = i64;
 
-pub type CuFFTDimVector = SmallVector<CuFFTSizeType,kDimVectorStaticSize>;
+pub type CuFFTDimVector 
+= SmallVector<CuFFTSizeType,kDimVectorStaticSize>;
 
 /**
   | Struct representing a tensor in CuFFT's data

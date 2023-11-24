@@ -5,7 +5,7 @@ crate::ix!();
   | the image applications.
   |
   */
-#[derive(PartialEq,Eq)]
+#[derive(ConstParamTy,PartialEq,Eq)]
 pub enum StorageOrder {
     UNKNOWN = 0,
     NHWC    = 1,

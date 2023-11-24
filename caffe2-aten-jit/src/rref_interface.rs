@@ -2,8 +2,6 @@ crate::ix!();
 
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/rref_interface.h]
 
-pub type TypePtr  = Arc<Type>;
-
 pub type WorkerId = i16;
 
 /**

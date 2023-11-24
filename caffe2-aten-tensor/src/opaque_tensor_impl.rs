@@ -22,7 +22,7 @@ pub struct OpaqueTensorImpl<OpaqueHandle> {
     opaque_handle: OpaqueHandle,
 }
 
-impl OpaqueTensorImpl<OpaqueHandle> {
+impl<OpaqueHandle> OpaqueTensorImpl<OpaqueHandle> {
 
     /// public constructor for now...
     pub fn new(

@@ -53,7 +53,8 @@ pub type VmapPhysicalViewVec = SmallVector<VmapPhysicalView,kVmapTransformStatic
   */
 pub const K_VMAP_STATIC_DIM_VEC_SIZE: i64 = 8;
 
-pub type VmapDimVector = SmallVector<i64,kVmapStaticDimVecSize>;
+pub type VmapDimVector 
+= SmallVector<i64,kVmapStaticDimVecSize>;
 
 /**
   | NOTE: [What is an VmapTransform?]

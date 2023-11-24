@@ -103,7 +103,7 @@ impl Dispatcher {
       | This could be easily adjusted to have
       | a single global hash table.
       */
-    pub fn real_singleton() -> &mut Dispatcher {
+    pub fn real_singleton<'a>() -> &'a mut Dispatcher {
         
         todo!();
         /*
@@ -111,7 +111,7 @@ impl Dispatcher {
         */
     }
     
-    #[inline] pub fn singleton() -> &mut Dispatcher {
+    #[inline] pub fn singleton<'a>() -> &'a mut Dispatcher {
         
         todo!();
         /*
@@ -403,8 +403,9 @@ impl Dispatcher {
       | with this dispatcher.
       |
       */
-    pub fn add_registration_listener(&mut self, listener: Box<OpRegistrationListener>) -> RegistrationHandleRAII {
-        
+    pub fn add_registration_listener(&mut self, listener: Box<dyn OpRegistrationListener>) 
+        -> RegistrationHandleRAII 
+    {
         todo!();
         /*
         
@@ -964,12 +965,14 @@ impl Dispatcher {
 //-------------------------------------------[.cpp/pytorch/aten/src/ATen/core/dispatch/Dispatcher.cpp]
 
 pub struct RegistrationListenerList {
-    listeners: LinkedList<Box<OpRegistrationListener>>,
+    listeners: LinkedList<Box<dyn OpRegistrationListener>>,
 }
 
 impl RegistrationListenerList {
     
-    pub fn add_listener(&mut self, listener: Box<OpRegistrationListener>) -> fn() -> () {
+    pub fn add_listener(&mut self, listener: Box<dyn OpRegistrationListener>) 
+        -> fn() -> () 
+    {
         
         todo!();
         /*
@@ -1354,7 +1357,9 @@ impl Dispatcher {
         */
     }
     
-    pub fn add_registration_listener(&mut self, listener: Box<OpRegistrationListener>) -> RegistrationHandleRAII {
+    pub fn add_registration_listener(&mut self, listener: Box<dyn OpRegistrationListener>) 
+        -> RegistrationHandleRAII 
+    {
         
         todo!();
         /*
