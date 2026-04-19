@@ -1,0 +1,49 @@
+#!/usr/bin/env raku
+
+use Shell::Command;
+use File::Find;
+
+# we can write this file if we don't have it
+my $preamble = q:to/END/;
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{calligra}
+\usepackage{setspace}
+\usepackage{relsize}
+\usepackage{tipa}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+END
+
+sub create-pdf($markdown_file, $output_path) {
+
+    die if not $markdown_file.IO.e;
+
+    if not $output_path.IO.e {
+
+        #--variable mathfont=\"/Users/kleb/Library/Fonts/STIXTwoMath-Regular.otf\" 
+        #--template=custom-template.latex
+        my $cmd = qq:to/END/.split("\n").join(" ");
+        pandoc 
+        --pdf-engine=xelatex 
+        --include-in-header=preamble.tex
+        -V geometry:margin=0.7in $markdown_file -o $output_path
+        END
+
+        say "processing: $output_path";
+
+        shell($cmd);
+    }
+}
+
+create-pdf("caffe-doc.md", "caffe2-doc.pdf");

@@ -1,0 +1,3 @@
+./caffe2op-gather/src/op_gather.rs
+./caffe2op-gather/src/op_gather_fused_8bit_rowwise.rs
+./caffe2op-gather/src/op_gather_ranges_to_dense.rs

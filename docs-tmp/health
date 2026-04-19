@@ -1,0 +1,367 @@
+
+here is the health check:
+
+==============================================================================
+deoplete: health#deoplete#check
+
+deoplete.nvim ~
+- OK exists("v:t_list") was successful
+- OK has("timers") was successful
+- OK has("python3") was successful
+- OK Require Python 3.6.1+ was successful
+- OK Require msgpack 1.0.0+ was successful
+- If you're still having problems, try the following commands:
+  - $ export NVIM_PYTHON_LOG_FILE=/tmp/log
+  - $ export NVIM_PYTHON_LOG_LEVEL=DEBUG
+  - $ nvim
+  - $ cat /tmp/log_{PID}
+  - and then create an issue on github
+
+==============================================================================
+mason: require("mason.health").check()
+
+mason.nvim report ~
+- OK neovim version >= 0.7.0
+- WARNING **Go**: not available
+- OK **cargo**: `cargo 1.70.0-nightly (0e474cfd7 2023-03-31)`
+- OK **luarocks**: `/usr/local/bin/luarocks 3.9.1`
+- OK **Ruby**: `ruby 2.6.8p205 (2021-07-07 revision 67951) [universal.x86_64-darwin21]`
+- OK **RubyGem**: `3.0.3.1`
+- WARNING **Composer**: not available
+- WARNING **PHP**: not available
+- OK **npm**: `9.4.0`
+- OK **node**: `v19.6.0`
+- OK **python3**: `Python 3.10.4`
+- OK **pip3**: `pip 22.3.1 from /Users/kleb/opt/anaconda3/lib/python3.10/site-packages/pip (python 3.10)`
+- OK **javac**: `javac 19.0.2`
+- OK **java**: `openjdk version "19.0.2" 2023-01-17`
+- WARNING **julia**: not available
+- OK **wget**: `GNU Wget 1.21.3 built on darwin13.4.0.`
+- OK **curl**: `curl 7.87.0 (x86_64-apple-darwin13.4.0) libcurl/7.87.0 OpenSSL/1.1.1t zlib/1.2.13 libssh2/1.10.0 nghttp2/1.46.0`
+- OK **gzip**: `Apple gzip 353.100.22`
+- OK **tar**: `bsdtar 3.5.1 - libarchive 3.5.1 zlib/1.2.11 liblzma/5.0.5 bz2lib/1.0.8 `
+- WARNING **pwsh**: not available
+- OK **bash**: `GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin21)`
+- OK **sh**: `Ok`
+- OK GitHub API rate limit. Used: 0. Remaining: 5000. Limit: 5000. Reset: Sun Apr  2 10:27:20 2023.
+
+==============================================================================
+nvim: require("nvim.health").check()
+
+Configuration ~
+- OK no issues found
+
+Runtime ~
+- OK $VIMRUNTIME: /usr/local/share/nvim/runtime
+
+Performance ~
+- OK Build type: Release
+
+Remote Plugins ~
+- OK Up to date
+
+terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=^H`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+- $TERM_PROGRAM="tmux"
+- $COLORTERM="truecolor"
+
+tmux ~
+- OK escape-time: 0
+- OK focus-events: on
+- $TERM: screen-256color
+- WARNING Neither Tc nor RGB capability set. True colors are disabled. |'termguicolors'| won't work properly.
+  - ADVICE:
+    - Put this in your ~/.tmux.conf and replace XXX by your $TERM outside of tmux:
+      set-option -sa terminal-features ',XXX:RGB'
+    - For older tmux versions use this instead:
+      set-option -ga terminal-overrides ',XXX:Tc'
+
+==============================================================================
+nvim-treesitter: require("nvim-treesitter.health").check()
+
+Installation ~
+- OK `tree-sitter` found 0.20.7 (parser generator, only needed for :TSInstallFromGrammar)
+- OK `node` found v19.6.0 (only needed for :TSInstallFromGrammar)
+- OK `git` executable found.
+- OK `cc` executable found. Selected from { vim.NIL, "cc", "gcc", "clang", "cl", "zig" }
+  Version: Apple clang version 13.0.0 (clang-1300.0.29.30)
+- OK Neovim was compiled with tree-sitter runtime ABI version 14 (required >=13). Parsers must be compatible with runtime ABI.
+
+OS Info:
+{
+  machine = "x86_64",
+  release = "21.6.0",
+  sysname = "Darwin",
+  version = "Darwin Kernel Version 21.6.0: Mon Aug 22 20:17:10 PDT 2022; root:xnu-8020.140.49~2/RELEASE_X86_64"
+} ~
+
+  Legend: H[ighlight], L[ocals], F[olds], I[ndents], In[j]ections
+         +) multiple parsers found, only one will be used
+         x) errors found in the query, try to run :TSUpdate {lang} ~
+
+==============================================================================
+provider: health#provider#check
+
+Clipboard (optional) ~
+- OK Clipboard tool found: pbcopy
+
+Python 3 provider (optional) ~
+- pyenv: Path: /usr/local/Cellar/pyenv/2.3.8/libexec/pyenv
+- pyenv: $PYENV_ROOT is not set. Infer from `pyenv root`.
+- pyenv: Root: /Users/kleb/.pyenv
+- `g:python3_host_prog` is not set.  Searching for python3.9 in the environment.
+- WARNING pyenv is not set up optimally.
+  - ADVICE:
+    - Create a virtualenv specifically for Nvim using pyenv, and set `g:python3_host_prog`.  This will avoid the need to install the pynvim module in each version/virtualenv.
+- Executable: /usr/local/bin/python3.9
+- Python version: 3.9.16
+- pynvim version: 0.4.3
+- OK Latest pynvim is installed.
+
+Python virtualenv ~
+- OK no $VIRTUAL_ENV
+
+Ruby provider (optional) ~
+- Ruby: ruby 2.6.8p205 (2021-07-07 revision 67951) [universal.x86_64-darwin21]
+- WARNING `neovim-ruby-host` not found.
+  - ADVICE:
+    - Run `gem install neovim` to ensure the neovim RubyGem is installed.
+    - Run `gem environment` to ensure the gem bin directory is in $PATH.
+    - If you are using rvm/rbenv/chruby, try "rehashing".
+    - See :help |g:ruby_host_prog| for non-standard gem installations.
+    - You may disable this provider (and warning) by adding `let g:loaded_ruby_provider = 0` to your init.vim
+
+Node.js provider (optional) ~
+- Node.js: v19.6.0
+- WARNING Missing "neovim" npm (or yarn, pnpm) package.
+  - ADVICE:
+    - Run in shell: npm install -g neovim
+    - Run in shell (if you use yarn): yarn global add neovim
+    - Run in shell (if you use pnpm): pnpm install -g neovim
+    - You may disable this provider (and warning) by adding `let g:loaded_node_provider = 0` to your init.vim
+
+Perl provider (optional) ~
+- WARNING "Neovim::Ext" cpan module is not installed
+  - ADVICE:
+    - See :help |provider-perl| for more information.
+    - You may disable this provider (and warning) by adding `let g:loaded_perl_provider = 0` to your init.vim
+
+==============================================================================
+telescope: require("telescope.health").check()
+
+Checking for required plugins ~
+- OK plenary installed.
+- OK nvim-treesitter installed.
+
+Checking external dependencies ~
+- OK rg: found ripgrep 13.0.0
+- OK fd: found fd 8.6.0
+
+===== Installed extensions ===== ~
+
+Telescope Extension: `dap` ~
+- No healthcheck provided
+
+Telescope Extension: `env` ~
+- No healthcheck provided
+
+Telescope Extension: `media_files` ~
+- No healthcheck provided
+
+==============================================================================
+vim.lsp: require("vim.lsp.health").check()
+
+- LSP log level : WARN
+- Log path: /Users/kleb/.local/state/nvim/lsp.log
+- Log size: 79258 KB
+
+vim.lsp: Active Clients ~
+- rust_analyzer (id=1, root_dir=/Users/kleb/bethesda/work/repo/caffe2-rs)
+
+==============================================================================
+vim.treesitter: require("vim.treesitter.health").check()
+
+- Nvim runtime ABI version: 14
+- OK Parser: ada        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ada.so
+- OK Parser: agda       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/agda.so
+- OK Parser: arduino    ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/arduino.so
+- OK Parser: astro      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/astro.so
+- OK Parser: awk        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/awk.so
+- OK Parser: bash       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/bash.so
+- OK Parser: beancount  ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/beancount.so
+- OK Parser: bibtex     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/bibtex.so
+- OK Parser: bicep      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/bicep.so
+- OK Parser: blueprint  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/blueprint.so
+- OK Parser: c          ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/c.so
+- OK Parser: capnp      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/capnp.so
+- OK Parser: chatito    ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/chatito.so
+- OK Parser: clojure    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/clojure.so
+- OK Parser: cmake      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/cmake.so
+- OK Parser: comment    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/comment.so
+- OK Parser: commonlisp ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/commonlisp.so
+- OK Parser: cooklang   ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/cooklang.so
+- OK Parser: cpon       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/cpon.so
+- OK Parser: cpp        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/cpp.so
+- OK Parser: css        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/css.so
+- OK Parser: cuda       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/cuda.so
+- OK Parser: c_sharp    ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/c_sharp.so
+- OK Parser: d          ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/d.so
+- OK Parser: dart       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/dart.so
+- OK Parser: devicetree ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/devicetree.so
+- OK Parser: dhall      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/dhall.so
+- OK Parser: diff       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/diff.so
+- OK Parser: dockerfile ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/dockerfile.so
+- OK Parser: dot        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/dot.so
+- OK Parser: ebnf       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ebnf.so
+- OK Parser: eex        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/eex.so
+- OK Parser: elixir     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/elixir.so
+- OK Parser: elm        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/elm.so
+- OK Parser: elsa       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/elsa.so
+- OK Parser: elvish     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/elvish.so
+- OK Parser: embedded_template ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/embedded_template.so
+- OK Parser: erlang     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/erlang.so
+- OK Parser: fennel     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/fennel.so
+- OK Parser: fish       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/fish.so
+- OK Parser: foam       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/foam.so
+- OK Parser: fortran    ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/fortran.so
+- OK Parser: fsh        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/fsh.so
+- OK Parser: func       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/func.so
+- OK Parser: fusion     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/fusion.so
+- OK Parser: gdscript   ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gdscript.so
+- OK Parser: gitattributes ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gitattributes.so
+- OK Parser: gitcommit  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gitcommit.so
+- OK Parser: gitignore  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gitignore.so
+- OK Parser: git_rebase ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/git_rebase.so
+- OK Parser: gleam      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gleam.so
+- OK Parser: glimmer    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/glimmer.so
+- OK Parser: glsl       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/glsl.so
+- OK Parser: go         ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/go.so
+- OK Parser: godot_resource ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/godot_resource.so
+- OK Parser: gomod      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gomod.so
+- OK Parser: gosum      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gosum.so
+- OK Parser: gowork     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/gowork.so
+- OK Parser: graphql    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/graphql.so
+- OK Parser: hack       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/hack.so
+- OK Parser: haskell    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/haskell.so
+- OK Parser: hcl        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/hcl.so
+- OK Parser: heex       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/heex.so
+- OK Parser: help       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/help.so
+- OK Parser: hjson      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/hjson.so
+- OK Parser: hlsl       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/hlsl.so
+- OK Parser: hocon      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/hocon.so
+- OK Parser: html       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/html.so
+- OK Parser: htmldjango ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/htmldjango.so
+- OK Parser: http       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/http.so
+- OK Parser: ini        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ini.so
+- OK Parser: java       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/java.so
+- OK Parser: javascript ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/javascript.so
+- OK Parser: jq         ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/jq.so
+- OK Parser: jsdoc      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/jsdoc.so
+- OK Parser: json       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/json.so
+- OK Parser: json5      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/json5.so
+- OK Parser: jsonc      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/jsonc.so
+- OK Parser: jsonnet    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/jsonnet.so
+- OK Parser: julia      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/julia.so
+- OK Parser: kdl        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/kdl.so
+- OK Parser: kotlin     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/kotlin.so
+- OK Parser: lalrpop    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/lalrpop.so
+- OK Parser: latex      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/latex.so
+- OK Parser: ledger     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ledger.so
+- OK Parser: llvm       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/llvm.so
+- OK Parser: lua        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/lua.so
+- OK Parser: m68k       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/m68k.so
+- OK Parser: make       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/make.so
+- OK Parser: markdown   ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/markdown.so
+- OK Parser: markdown_inline ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/markdown_inline.so
+- OK Parser: matlab     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/matlab.so
+- OK Parser: menhir     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/menhir.so
+- OK Parser: mermaid    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/mermaid.so
+- OK Parser: meson      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/meson.so
+- OK Parser: nickel     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/nickel.so
+- OK Parser: ninja      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ninja.so
+- OK Parser: nix        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/nix.so
+- OK Parser: norg       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/norg.so
+- OK Parser: ocamllex   ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ocamllex.so
+- OK Parser: ocaml_interface ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ocaml_interface.so
+- OK Parser: org        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/org.so
+- OK Parser: pascal     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/pascal.so
+- OK Parser: passwd     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/passwd.so
+- OK Parser: perl       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/perl.so
+- OK Parser: php        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/php.so
+- OK Parser: phpdoc     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/phpdoc.so
+- OK Parser: pioasm     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/pioasm.so
+- OK Parser: po         ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/po.so
+- OK Parser: poe_filter ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/poe_filter.so
+- OK Parser: prisma     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/prisma.so
+- OK Parser: proto      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/proto.so
+- OK Parser: prql       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/prql.so
+- OK Parser: pug        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/pug.so
+- OK Parser: python     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/python.so
+- OK Parser: ql         ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ql.so
+- OK Parser: qmldir     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/qmldir.so
+- OK Parser: qmljs      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/qmljs.so
+- OK Parser: query      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/query.so
+- OK Parser: r          ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/r.so
+- OK Parser: racket     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/racket.so
+- OK Parser: rasi       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/rasi.so
+- OK Parser: regex      ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/regex.so
+- OK Parser: rego       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/rego.so
+- OK Parser: rnoweb     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/rnoweb.so
+- OK Parser: ron        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ron.so
+- OK Parser: rst        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/rst.so
+- OK Parser: ruby       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ruby.so
+- OK Parser: rust       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/rust.so
+- OK Parser: scala      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/scala.so
+- OK Parser: scheme     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/scheme.so
+- OK Parser: scss       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/scss.so
+- OK Parser: slint      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/slint.so
+- OK Parser: smali      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/smali.so
+- OK Parser: smithy     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/smithy.so
+- OK Parser: solidity   ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/solidity.so
+- OK Parser: sparql     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/sparql.so
+- OK Parser: sql        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/sql.so
+- OK Parser: starlark   ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/starlark.so
+- OK Parser: supercollider ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/supercollider.so
+- OK Parser: surface    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/surface.so
+- OK Parser: svelte     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/svelte.so
+- OK Parser: swift      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/swift.so
+- OK Parser: sxhkdrc    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/sxhkdrc.so
+- OK Parser: t32        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/t32.so
+- OK Parser: teal       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/teal.so
+- OK Parser: terraform  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/terraform.so
+- OK Parser: thrift     ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/thrift.so
+- OK Parser: tiger      ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/tiger.so
+- OK Parser: tlaplus    ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/tlaplus.so
+- OK Parser: todotxt    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/todotxt.so
+- OK Parser: toml       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/toml.so
+- OK Parser: tsx        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/tsx.so
+- OK Parser: turtle     ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/turtle.so
+- OK Parser: twig       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/twig.so
+- OK Parser: typescript ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/typescript.so
+- OK Parser: ungrammar  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/ungrammar.so
+- OK Parser: v          ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/v.so
+- OK Parser: vala       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/vala.so
+- OK Parser: verilog    ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/verilog.so
+- OK Parser: vhs        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/vhs.so
+- OK Parser: vim        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/vim.so
+- OK Parser: vue        ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/vue.so
+- OK Parser: wgsl       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/wgsl.so
+- OK Parser: wgsl_bevy  ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/wgsl_bevy.so
+- OK Parser: yaml       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/yaml.so
+- OK Parser: yang       ABI: 13, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/yang.so
+- OK Parser: yuck       ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/yuck.so
+- OK Parser: zig        ABI: 14, path: /Users/kleb/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/zig.so
+- OK Parser: c          ABI: 13, path: /usr/local/lib/nvim/parser/c.so
+- OK Parser: help       ABI: 14, path: /usr/local/lib/nvim/parser/help.so
+- OK Parser: lua        ABI: 13, path: /usr/local/lib/nvim/parser/lua.so
+- OK Parser: vim        ABI: 14, path: /usr/local/lib/nvim/parser/vim.so
+
+==============================================================================
+vimtex: health#vimtex#check
+
+VimTeX ~
+- OK Vim version should have full support!
+- OK General viewer should work properly!
+- OK Compiler should work!
+

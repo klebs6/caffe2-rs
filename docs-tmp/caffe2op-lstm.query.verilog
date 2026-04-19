@@ -1,0 +1,62 @@
+hello! 
+
+I am writing a rust crate called caffe2op-lstm. 
+
+I would like you to help me write a system verilog
+implementation of an LSTM.
+
+Below are listed some tokens from the rust crate
+on which the system verilog implementation will be
+based. 
+
+lstm_impl
+LSTMUnitGradientOp
+do_run_with_type
+register_cpu_operator
+run_on_device
+chunk
+linear
+LayerOutput
+cat
+FullBidirectionalLSTMLayer
+invoke
+reverse
+gather_params
+lstm_unit_gradient
+unbind
+lSTMUnit
+InferenceLSTMOp
+no_gradient
+register_cpu_operator
+run_on_device
+matmul
+LSTMCell
+invoke
+add
+mul
+apply_layer_stack
+pair_vec
+unpair_vec
+GetLSTMUnitGradient
+get_gradient_defs
+register_gradient
+stack
+CellParams
+init_params
+linear_hh
+linear_ih
+LSTMUnitOp
+do_run_with_type
+register_cpu_operator
+run_on_device
+BidirHiddenType
+OutputType
+ParamType
+TensorTuple
+invoke
+FullLSTMLayer
+invoke
+invoke_vec
+transpose
+sigmoid
+tanh

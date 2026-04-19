@@ -1,0 +1,107 @@
+#!/usr/bin/env raku
+
+my @pairs = [
+("caffe2-aten-test/src/test_apply_utils_test.rs",                  "caffe2-aten-apply"),
+("caffe2-aten-test/src/test_broadcast_test.rs",                    "caffe2-aten-tensor"),
+("caffe2-aten-test/src/test_cpu_caching_allocator_test.rs",        "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_cpu_generator_test.rs",                "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_cpu_profiling_allocator_test.rs",      "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_cpu_rng_test.rs",                      "caffe2-aten-rand"),
+("caffe2-aten-test/src/test_cuda_apply_test.rs",                   "caffe2-aten-cuda"),
+("caffe2-aten-test/src/test_cuda_cudnn_test.rs",                   "caffe2-aten-cuda"),
+("caffe2-aten-test/src/test_cuda_dlconvertor_test.rs",             "caffe2-aten-cuda"),
+("caffe2-aten-test/src/test_cuda_stream_test.rs",                  "caffe2-aten-cuda"),
+("caffe2-aten-test/src/test_cuda_tensor_interop_test.rs",          "caffe2-aten-cuda"),
+("caffe2-aten-test/src/test_dict_test.rs",                         "caffe2-aten-dict"),
+("caffe2-aten-test/src/test_dimname_test.rs",                      "caffe2-aten-tensor"),
+("caffe2-aten-test/src/test_dlconvertor_test.rs",                  "caffe2-aten-dlpack"),
+("caffe2-aten-test/src/test_half_test.rs",                         "caffe2-aten-float"),
+("caffe2-aten-test/src/test_ivalue_test.rs",                       "caffe2-aten-ivalue"),
+("caffe2-aten-test/src/test_math_kernel_test.rs",                  "caffe2-aten-math"),
+("caffe2-aten-test/src/test_maybe_owned_test.rs",                  "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_memory_format_test.rs",                "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_memory_overlapping_test.rs",           "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_mobile_memory_cleanup.rs",             "caffe2-aten-memory"),
+("caffe2-aten-test/src/test_named_tensor_test.rs",                 "caffe2-aten-names"),
+("caffe2-aten-test/src/test_pow_test.rs",                          "caffe2-aten-math"),
+("caffe2-aten-test/src/test_quantized_test.rs",                    "caffe2-aten-quantized"),
+("caffe2-aten-test/src/test_reduce_ops_test.rs",                   "caffe2-aten-reduce"),
+("caffe2-aten-test/src/test_rng_test.rs",                          "caffe2-aten-rand"),
+("caffe2-aten-test/src/test_scalar_tensor_test.rs",                "caffe2-aten-scalar"),
+("caffe2-aten-test/src/test_scalar_test.rs",                       "caffe2-aten-scalar"),
+("caffe2-aten-test/src/test_tensor_interop_test.rs",               "caffe2-aten-tensor"),
+("caffe2-aten-test/src/test_tensor_iterator_test.rs",              "caffe2-aten-tensor"),
+("caffe2-aten-test/src/test_test_assert.rs",                       "caffe2-aten-math"),
+("caffe2-aten-test/src/test_test_install_main.rs",                 "caffe2-aten-parallel"),
+("caffe2-aten-test/src/test_test_parallel.rs",                     "caffe2-aten-parallel"),
+("caffe2-aten-test/src/test_test_thread_pool_guard.rs",            "caffe2-aten-parallel"),
+("caffe2-aten-test/src/test_thread_init_test.rs",                  "caffe2-aten-parallel"),
+("caffe2-aten-test/src/test_type_test.rs",                         "caffe2-aten-type"),
+("caffe2-aten-test/src/test_undefined_tensor_test.rs",             "caffe2-aten-tensor"),
+("caffe2-aten-test/src/test_variant_test.rs",                      "caffe2-aten-ivalue"),
+("caffe2-aten-test/src/test_vec_test_all_types.rs",                "caffe2-aten-type"),
+("caffe2-aten-test/src/test_vitals.rs",                            "caffe2-aten-type"),
+("caffe2-aten-test/src/test_vmap_test.rs",                         "caffe2-aten-vmap"),
+("caffe2-aten-test/src/test_vulkan_api_test.rs",                   "caffe2-aten-vulkan"),
+("caffe2-aten-test/src/test_vulkan_test.rs",                       "caffe2-aten-vulkan"),
+("caffe2-aten-test/src/test_weakref_test.rs",                      "caffe2-aten-type"),
+("caffe2-aten-test/src/test_wrapdim_test.rs",                      "caffe2-aten-type"),
+("caffe2-aten-test/src/test_xla_tensor_test.rs",                   "caffe2-aten-xnnpack"),
+("caffe2-aten-test/src/test_xnnpack_test.rs",                      "caffe2-aten-xnnpack"),
+
+];
+           
+my @commands;
+
+for @pairs -> ($src, $crate) {
+
+    die "$src does not exist!" if !$src.IO.e;
+
+    my $basename   = $src.IO.basename;
+    my $target-dir = $crate ~ "/src";
+
+    if !$target-dir.IO.e {
+        qqx/mkdir $target-dir/;
+    }
+
+    my $target     = $target-dir ~ "/$basename";
+
+    if $target.IO.e {
+
+        my $new-target = $target.split(".")[0] ~ "_cuda.rs";
+
+        say "$target already exists!! will rename to $new-target";
+
+        die "$new-target already exists!!! will not overwrite" if $new-target.IO.e;
+
+        $target = $new-target;
+    }
+
+    my $command = "mv $src $target";
+
+    @commands.push: $command;
+}
+
+my @crates = @pairs.map({ $_[1] }).sort.unique;
+my $create = "./u/create-workspace-crate";
+
+for @crates -> $crate {
+
+    if !$crate.IO.e {
+        my $command = "$create $crate";
+        @commands.push: $command;
+    }
+}
+
+sub MAIN(Bool :$write = False) {
+
+    for @commands -> $command {
+
+        say $command;
+
+        if $write {
+            my $output = qqx/$command/;
+            say $output.chomp;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+mv caffe2-aten-qnnpack caffe2-qnnpack
+mv caffe2-aten-qnnpack-bench caffe2-qnnpack-bench
+mv caffe2-aten-qnnpack-q8avgpool caffe2-qnnpack-q8avgpool
+mv caffe2-aten-qnnpack-q8conv caffe2-qnnpack-q8conv
+mv caffe2-aten-qnnpack-q8dwconv caffe2-qnnpack-q8dwconv
+mv caffe2-aten-qnnpack-q8gavgpool caffe2-qnnpack-q8gavgpool
+mv caffe2-aten-qnnpack-q8gemm caffe2-qnnpack-q8gemm
+mv caffe2-aten-qnnpack-q8vadd caffe2-qnnpack-q8vadd
+mv caffe2-aten-qnnpack-requantization caffe2-qnnpack-requantization
+mv caffe2-aten-qnnpack-sgemm caffe2-qnnpack-sgemm
+mv caffe2-aten-qnnpack-test caffe2-qnnpack-test
+mv caffe2-aten-qnnpack-u8clamp caffe2-qnnpack-u8clamp
+mv caffe2-aten-qnnpack-u8lut caffe2-qnnpack-u8lut
+mv caffe2-aten-qnnpack-u8maxpool caffe2-qnnpack-u8maxpool
+mv caffe2-aten-qnnpack-u8rmax caffe2-qnnpack-u8rmax
+mv caffe2-aten-qnnpack-x8lut caffe2-qnnpack-x8lut
+mv caffe2-aten-qnnpack-x8zip caffe2-qnnpack-x8zip

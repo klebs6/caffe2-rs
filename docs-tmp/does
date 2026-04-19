@@ -1,0 +1,6 @@
+
+  /// Given DATA tensor of rank r >= 1, and LENGTHS
+  /// tensor of rank 1, duplicate each entry
+  /// of the outer-most dimension of DATA
+  /// according to LENGTHS, and concatenate
+  /// them in an output tensor of rank r.
